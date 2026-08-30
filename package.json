@@ -9,7 +9,8 @@
     "keys": "node scripts/gen-keys.mjs",
     "notify": "node scripts/send-push.mjs",
     "dry": "node scripts/send-push.mjs --dry-run",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "extension": "node scripts/extension.mjs"
   },
   "dependencies": {
     "web-push": "^3.6.7"
