@@ -20,83 +20,12 @@
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { deflateSync } from "node:zlib";
+import { extraerPanel, reemplazarFuncion } from "./lib/panel-codegen.mjs";
 
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
 const VERSION = "1.1.0";
-
-/* ─────────── 1. sacar el panel de la página ─────────── */
-
-function extraerPanel(html) {
-  const marca = "async function IGPanelPro(){";
-  const desde = html.indexOf(marca);
-  if (desde < 0) throw new Error("no encontré 'async function IGPanelPro('");
-
-  // Se cuentan llaves para encontrar dónde cierra la función. Hay que
-  // saltear las que viven adentro de textos, de expresiones regulares y
-  // de comentarios: el panel tiene CSS en cadenas llenas de llaves, y
-  // contarlas a lo bruto cortaba la función por la mitad.
-  let i = desde + marca.length - 1;   // parado en la llave que abre
-  let nivel = 0;
-  let dentro = null;                  // ' " ` /regex/ // /* */
-  let escapa = false;
-
-  for (; i < html.length; i++) {
-    const c = html[i], sig = html[i + 1], ant = html[i - 1];
-
-    if (escapa) { escapa = false; continue; }
-    if (dentro === "\\") { escapa = true; continue; }
-
-    if (dentro) {
-      if (dentro === "//" && c === "\n") dentro = null;
-      else if (dentro === "/*" && c === "*" && sig === "/") { dentro = null; i++; }
-      else if ((dentro === "'" || dentro === '"' || dentro === "`") && c === "\\") escapa = true;
-      else if (c === dentro && dentro !== "//" && dentro !== "/*") dentro = null;
-      continue;
-    }
-
-    if (c === "'" || c === '"' || c === "`") { dentro = c; continue; }
-    if (c === "/" && sig === "/") { dentro = "//"; i++; continue; }
-    if (c === "/" && sig === "*") { dentro = "/*"; i++; continue; }
-
-    if (c === "{") nivel++;
-    else if (c === "}") {
-      nivel--;
-      if (nivel === 0) return html.slice(desde, i + 1);
-    }
-  }
-  throw new Error("la función no cierra: revisá el HTML");
-}
-
-// Cambia una función entera por otra, buscando dónde cierra con el mismo
-// conteo de llaves que usa extraerPanel. Devuelve null si no la encuentra,
-// para que quien llama pueda cortar en vez de seguir con algo a medias.
-function reemplazarFuncion(fuente, firma, nueva) {
-  const desde = fuente.indexOf(firma);
-  if (desde < 0) return null;
-
-  let i = desde + firma.length - 1;
-  let nivel = 0, dentro = null, escapa = false;
-
-  for (; i < fuente.length; i++) {
-    const c = fuente[i], sig = fuente[i + 1];
-    if (escapa) { escapa = false; continue; }
-    if (dentro) {
-      if (dentro === "//" && c === "\n") dentro = null;
-      else if (dentro === "/*" && c === "*" && sig === "/") { dentro = null; i++; }
-      else if ((dentro === "'" || dentro === '"' || dentro === "`") && c === "\\") escapa = true;
-      else if (c === dentro && dentro !== "//" && dentro !== "/*") dentro = null;
-      continue;
-    }
-    if (c === "'" || c === '"' || c === "`") { dentro = c; continue; }
-    if (c === "/" && sig === "/") { dentro = "//"; i++; continue; }
-    if (c === "/" && sig === "*") { dentro = "/*"; i++; continue; }
-    if (c === "{") nivel++;
-    else if (c === "}") { nivel--; if (nivel === 0) return fuente.slice(0, desde) + nueva + fuente.slice(i + 1); }
-  }
-  return null;
-}
 
 /* ─────────── 2. el guion que corre adentro de Instagram ─────────── */
 

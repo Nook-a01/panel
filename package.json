@@ -10,7 +10,8 @@
     "notify": "node scripts/send-push.mjs",
     "dry": "node scripts/send-push.mjs --dry-run",
     "serve": "node scripts/serve.mjs",
-    "extension": "node scripts/extension.mjs"
+    "extension": "node scripts/extension.mjs",
+    "userscript": "node scripts/userscript.mjs"
   },
   "dependencies": {
     "web-push": "^3.6.7"
