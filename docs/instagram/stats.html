@@ -1,0 +1,531 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Actividad · Panel de Instagram</title>
+<style>
+  :root{
+    --bg:#0b0b10; --surface:#14141c; --surface2:#101017; --border:#242433;
+    --text:#ecebf2; --muted:#8a8a9c; --dim:#5c5c70;
+    --acc:#a78bfa; --acc-soft:rgba(167,139,250,.16);
+    --ok:#34d399; --warn:#fbbf24; --err:#fb7185;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;
+    font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:30px 18px 90px}
+
+  header{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .mark{width:32px;height:32px;border-radius:9px;flex:0 0 auto;
+    background:linear-gradient(140deg,#a78bfa,#f472b6)}
+  h1{font-size:1.3rem;font-weight:700;margin:0;letter-spacing:-.01em}
+  header .sub{color:var(--dim);font-size:.82rem;margin-left:auto;font-variant-numeric:tabular-nums}
+
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:20px;margin:16px 0}
+  .card > h2{font-size:.95rem;font-weight:650;margin:0 0 4px;letter-spacing:-.005em}
+  .card > .hint{color:var(--muted);font-size:.83rem;margin:0 0 16px}
+  .foot{color:var(--dim);font-size:.78rem;margin-top:14px;line-height:1.55}
+
+  /* ---- conexión ---- */
+  .cfg{display:flex;gap:9px;flex-wrap:wrap}
+  input{flex:1;min-width:200px;padding:11px 13px;border-radius:10px;border:1px solid #2b2b3d;
+    background:var(--surface2);color:var(--text);font-size:.95rem;outline:none}
+  input::placeholder{color:var(--dim)}
+  input:focus{border-color:var(--acc)}
+  button{border:none;border-radius:10px;padding:11px 20px;font-weight:650;font-size:.93rem;
+    cursor:pointer;color:#17121f;background:var(--acc)}
+  button.sec{background:transparent;border:1px solid #2b2b3d;color:var(--muted);font-weight:550}
+  button.sec:hover{color:var(--text);border-color:#3a3a52}
+  button:disabled{opacity:.45;cursor:default}
+  button:focus-visible,input:focus-visible,summary:focus-visible
+    {outline:2px solid var(--acc);outline-offset:2px}
+  .err{color:var(--err);font-size:.88rem;margin-top:11px}
+
+  /* ---- indicadores ---- */
+  .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+  .kpi{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+  .kpi .n{font-size:1.9rem;font-weight:700;font-variant-numeric:tabular-nums;
+    letter-spacing:-.02em;line-height:1.1}
+  .kpi .t{font-size:.82rem;font-weight:600;margin-top:5px}
+  .kpi .d{color:var(--dim);font-size:.75rem;margin-top:2px;line-height:1.4}
+
+  /* ---- gráficos ---- */
+  .chart{position:relative;height:150px;margin:6px 0 0;
+    border-bottom:1px solid var(--border);display:flex;align-items:flex-end;gap:3px}
+  .chart .rule{position:absolute;left:0;right:0;border-top:1px dashed #1e1e2b;pointer-events:none}
+  .col{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;
+    align-items:center;position:relative}
+  .col i{width:100%;max-width:26px;border-radius:4px 4px 0 0;
+    background:linear-gradient(180deg,var(--acc),#7c5cf0);display:block;transition:filter .12s}
+  .col.top i{background:linear-gradient(180deg,#f472b6,#c4519c)}
+  .col:hover i{filter:brightness(1.25)}
+  .col b{position:absolute;top:-16px;font-size:.65rem;font-weight:600;color:var(--muted);
+    font-variant-numeric:tabular-nums}
+  .axis{display:flex;gap:3px;margin-top:6px}
+  .axis span{flex:1;min-width:0;text-align:center;font-size:.65rem;color:var(--dim);
+    font-variant-numeric:tabular-nums}
+  .vacio{color:var(--dim);font-size:.85rem;padding:34px 0;text-align:center}
+
+  /* ---- tablas ---- */
+  .scroll{overflow-x:auto;margin:0 -4px;padding:0 4px}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #1d1d29;white-space:nowrap}
+  th{color:var(--dim);font-size:.71rem;text-transform:uppercase;letter-spacing:.06em;font-weight:650}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+  tbody tr.fila{cursor:pointer}
+  tbody tr.fila:hover{background:rgba(255,255,255,.025)}
+  .user{font-weight:650;color:var(--acc);text-decoration:none;cursor:pointer}
+  a.user:hover{text-decoration:underline;filter:brightness(1.15)}
+  .chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.73rem;
+    border:1px solid #2b2b3d;color:var(--muted)}
+  .chip.hoy{border-color:rgba(52,211,153,.45);color:var(--ok)}
+  .flecha{color:var(--dim);width:14px;display:inline-block;font-size:.7rem}
+
+  /* ---- detalle desplegable ---- */
+  .det td{background:var(--surface2);padding:0}
+  .det .inner{padding:6px 14px 14px}
+  .ev{display:flex;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid #191924}
+  .ev:last-child{border-bottom:none}
+  .ev .q{flex:1;font-size:.87rem}
+  .ev .w{color:var(--dim);font-size:.78rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ev .ico{width:18px;text-align:center;flex:0 0 auto}
+
+  /* ---- barras horizontales ---- */
+  .hb{display:grid;grid-template-columns:1fr auto;gap:10px 14px;align-items:center}
+  .hb .l{font-size:.88rem}
+  .hb .v{font-variant-numeric:tabular-nums;font-size:.88rem;color:var(--muted);text-align:right}
+  .hb + .hb{border-top:1px solid #1d1d29;padding-top:9px;margin-top:9px}
+
+  details summary{cursor:pointer;font-size:.95rem;font-weight:650;list-style:none;
+    display:flex;align-items:center;gap:8px}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:'▸';color:var(--dim);font-size:.8rem}
+  details[open] summary::before{content:'▾'}
+
+  @media(max-width:820px){
+    .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{padding:16px}
+  }
+  @media(max-width:480px){
+    .kpis{grid-template-columns:1fr 1fr;gap:9px}
+    .kpi{padding:13px 14px}
+    .kpi .n{font-size:1.5rem}
+    .kpi .d{display:none}
+  }
+
+  /* ---- animaciones ---- */
+  @keyframes aparecer{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes crecer{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes brillo{0%,100%{filter:none}50%{filter:hue-rotate(26deg) saturate(1.15)}}
+  #out > *{animation:aparecer .5s ease both}
+  #out > *:nth-child(2){animation-delay:.06s}
+  #out > *:nth-child(3){animation-delay:.12s}
+  #out > *:nth-child(4){animation-delay:.18s}
+  #out > *:nth-child(5){animation-delay:.24s}
+  #out > *:nth-child(n+6){animation-delay:.30s}
+  .kpi{transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease}
+  .kpi:hover{transform:translateY(-3px);border-color:#3a3a52;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+  .card{transition:border-color .16s ease}
+  .chart .col i{animation:crecer .7s cubic-bezier(.2,.8,.2,1) both;transform-origin:bottom}
+  .col:hover i{filter:brightness(1.25)}
+  .mark{animation:brillo 7s ease-in-out infinite}
+  button{transition:filter .14s ease, transform .1s ease}
+  button:hover:not(:disabled){filter:brightness(1.08)}
+  button:active:not(:disabled){transform:translateY(1px)}
+  @media(prefers-reduced-motion:reduce){
+    #out > *,.chart .col i,.mark{animation:none}
+    .kpi:hover{transform:none}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="mark"></span>
+    <h1>Actividad del Panel</h1>
+    <span class="sub" id="sello"></span>
+  </header>
+
+  <div class="card">
+    <div class="cfg">
+      <input id="url" placeholder="https://wispy-poetry-97f9.hamcqc.workers.dev">
+      <input id="key" type="password" placeholder="clave de administrador">
+      <button id="go">Ver</button>
+      <button class="sec" id="forget">Olvidar</button>
+      <button class="sec" id="borrarViejos" title="Borra lo más viejo que los días que elijas">🧹 Borrar viejos</button>
+      <button class="sec" id="borrarTodo" title="Vacía la base entera" style="color:#fb7185;border-color:rgba(251,113,133,.4)">🗑️ Borrar todo</button>
+    </div>
+    <div class="foot" style="margin-top:11px">Se guardan solo en este navegador. Sin la clave, nadie más puede leer estos datos.<br>
+      Los datos se conservan hasta que los borres a mano: no hay borrado automático.</div>
+    <div id="err" class="err"></div>
+    <div id="msg" class="foot" style="margin-top:6px"></div>
+  </div>
+
+  <div id="out"></div>
+</div>
+
+<script>
+var $=function(id){return document.getElementById(id);};
+var LSU='igppstats_url', LSK='igppstats_key';
+$('url').value=localStorage.getItem(LSU)||'https://wispy-poetry-97f9.hamcqc.workers.dev';
+$('key').value=localStorage.getItem(LSK)||'';
+
+$('forget').onclick=function(){
+  localStorage.removeItem(LSU); localStorage.removeItem(LSK);
+  $('url').value=''; $('key').value=''; $('out').innerHTML='';
+  $('err').textContent=''; $('sello').textContent='';
+};
+$('go').onclick=cargar;
+$('key').addEventListener('keydown',function(e){ if(e.key==='Enter') cargar(); });
+
+// Borrado manual. La clave va por encabezado, igual que al leer las métricas.
+// 'opciones' define el modo: {modo:'todo'} o {modo:'viejos', dias:N}.
+async function borrar(boton, opciones){
+  var base=$('url').value.trim().replace(/\/+$/,'');
+  var key=$('key').value.trim();
+  $('err').textContent=''; $('msg').textContent='';
+  if(!base||!key){ $('err').textContent='Completá la dirección del Worker y la clave.'; return; }
+  boton.disabled=true; var antes=boton.textContent; boton.textContent='Borrando…';
+  try{
+    var r=await fetch(base+'/limpiar',{
+      method:'POST', cache:'no-store',
+      headers:{'X-Admin-Key':key,'Content-Type':'text/plain'},
+      body:JSON.stringify(opciones)
+    });
+    var d=await r.json();
+    if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+    $('msg').innerHTML='✅ Borrado: '+(d.eventos_borrados||0)+' eventos y '+
+      (d.instalaciones_borradas||0)+' fichas.';
+    if($('url').value && $('key').value) cargar(); // refresca los números
+  }catch(e){
+    $('err').textContent='No se pudo borrar: '+e.message;
+  }finally{
+    boton.disabled=false; boton.textContent=antes;
+  }
+}
+
+$('borrarViejos').onclick=function(){
+  var txt=prompt('Borrar lo más viejo que cuántos días (se conserva lo más reciente):','90');
+  if(txt===null) return;
+  var dias=parseInt(txt,10);
+  if(!(dias>=1 && dias<=3650)){ $('err').textContent='Poné un número de días entre 1 y 3650.'; return; }
+  if(!confirm('Se va a borrar todo lo anterior a '+dias+' días. Esto no se puede deshacer. ¿Seguir?')) return;
+  borrar(this,{modo:'viejos',dias:dias});
+};
+
+$('borrarTodo').onclick=function(){
+  if(prompt('Esto vacía la base ENTERA y no se puede deshacer.\nEscribí BORRAR para confirmar:')!=='BORRAR') return;
+  borrar(this,{modo:'todo'});
+};
+
+// Los nombres vienen de la base, o sea de fuera: se escapan siempre antes de pintarlos.
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function fecha(d){ return d? esc(String(d).slice(8,10)+'/'+String(d).slice(5,7)) : '—'; }
+function hhmm(ms){
+  var d=new Date(ms);
+  return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
+}
+function fechaHora(ms){
+  var d=new Date(ms);
+  return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' '+hhmm(ms);
+}
+
+// Qué significa cada evento, en palabras que se entiendan sin conocer el código.
+var EVENTOS={
+  open:     {ico:'🌐', txt:'Visitó la página de instalación'},
+  registro: {ico:'🚪', txt:'Abrió el panel en Instagram'},
+  copia:    {ico:'📋', txt:'Copió el código para instalar'},
+  scan_ok:  {ico:'🔎', txt:'Escaneó su cuenta'},
+  unfollow: {ico:'🚫', txt:'Dejó de seguir cuentas'},
+  tab_analysis:{ico:'👥', txt:'Miró la sección Seguidores'},
+  tab_dms:  {ico:'💬', txt:'Miró la sección Sin respuesta'},
+  tab_stories:{ico:'👁️', txt:'Miró la sección Historias'},
+  tab_stats:{ico:'📈', txt:'Miró la sección Estadísticas'},
+  tab_strategy:{ico:'🎯', txt:'Miró la sección Estrategia'}
+};
+function evento(e){ return EVENTOS[e] || {ico:'•', txt:e}; }
+
+var DISPOSITIVOS={pc:'💻 Computadora',android:'🤖 Android',ios:'🍎 iPhone',
+  movil:'📱 Celular',escritorio:'💻 Computadora',desconocido:'Sin identificar'};
+// El dispositivo exacto viaja en la versión ('1.0-ios') porque el Worker guarda ese
+// campo tal cual; el de plataforma tiene prioridad cuando ya trae el valor preciso.
+function dispositivoDe(p){
+  if(['pc','android','ios'].indexOf(p.plataforma)>-1) return p.plataforma;
+  var m=/-(pc|android|ios)$/.exec(p.version||'');
+  if(m) return m[1];
+  return p.plataforma||'desconocido';
+}
+
+async function cargar(){
+  var base=$('url').value.trim().replace(/\/+$/,'');
+  var key=$('key').value.trim();
+  $('err').textContent='';
+  if(!base||!key){ $('err').textContent='Completá la dirección del Worker y la clave.'; return; }
+  localStorage.setItem(LSU,base); localStorage.setItem(LSK,key);
+  $('go').disabled=true; $('go').textContent='Cargando…';
+  try{
+    // La clave va en un encabezado, no en la URL: así no queda en el historial del
+    // navegador ni en registros del servidor. Provoca un preflight CORS que el
+    // Worker ya responde.
+    var r=await fetch(base+'/stats',{cache:'no-store',headers:{'X-Admin-Key':key}});
+    var d=await r.json();
+    if(!r.ok) throw new Error(d && d.error ? d.error : ('HTTP '+r.status));
+    pintar(d);
+    $('sello').textContent='Actualizado '+hhmm(Date.now());
+  }catch(e){
+    $('err').textContent='No se pudo leer: '+e.message+'. Revisá la dirección, la clave, y que el Worker esté publicado.';
+    $('out').innerHTML='';
+  }finally{
+    $('go').disabled=false; $('go').textContent='Ver';
+  }
+}
+
+// Despliega el detalle de una persona. Global porque las filas se arman como texto.
+function verDetalle(i){
+  var f=document.getElementById('det-'+i);
+  if(!f) return;
+  var abrir=f.hasAttribute('hidden');
+  if(abrir) f.removeAttribute('hidden'); else f.setAttribute('hidden','');
+  var fl=document.getElementById('fl-'+i);
+  if(fl) fl.textContent=abrir?'▾':'▸';
+}
+
+function kpi(n,t,d){
+  return '<div class="kpi"><div class="n">'+n+'</div><div class="t">'+t+'</div>'+
+    '<div class="d">'+d+'</div></div>';
+}
+
+// Gráfico de columnas. Las de valor cero no dibujan barra: con datos escasos, dejar
+// un muñón de 2px en cada una hacía que el gráfico pareciera una fila de guiones.
+function grafico(valores, etiquetas, destacar){
+  var max=Math.max.apply(null,valores);
+  if(max<=0) return '<div class="vacio">Todavía no hay datos para mostrar acá.</div>';
+  var reglas='';
+  [.25,.5,.75,1].forEach(function(f){ reglas+='<div class="rule" style="bottom:'+(f*100)+'%"></div>'; });
+  var cols=valores.map(function(v,i){
+    var alto=v>0 ? Math.max(4, Math.round(v/max*126)) : 0;
+    var top=(destacar||[]).indexOf(i)>-1;
+    return '<div class="col'+(top?' top':'')+'" title="'+esc(etiquetas[i])+' · '+v+'">'+
+      (v>0?'<b>'+v+'</b>':'')+
+      (v>0?'<i style="height:'+alto+'px"></i>':'')+'</div>';
+  }).join('');
+  // En el eje solo se escriben algunas etiquetas (cada 3 horas, cada 5 días): con
+  // las 24 o las 30 puestas se pisan entre sí y no se lee ninguna.
+  var eje=etiquetas.map(function(e){
+    return '<span>'+esc(e.corta!=null?e.corta:String(e))+'</span>';
+  }).join('');
+  return '<div class="chart">'+reglas+cols+'</div><div class="axis">'+eje+'</div>';
+}
+
+function pintar(d){
+  var hoy=new Date().toISOString().slice(0,10);
+  var actividad=Array.isArray(d.actividad)?d.actividad:null;
+
+  var porEvento={};
+  d.secciones.forEach(function(s){ porEvento[s.evento]=s; });
+
+  // Las aperturas del panel son la medida de uso real: cuántas veces alguien entró
+  // a la herramienta. Las visitas a la página de instalación no dicen casi nada.
+  var arranqueHoy=new Date(); arranqueHoy.setHours(0,0,0,0);
+  var aperturasHoy=(actividad||[]).filter(function(e){
+    return e.evento==='registro' && e.ts>=arranqueHoy.getTime();
+  }).length;
+  var aperturas30=(porEvento['registro']||{veces:0}).veces;
+
+  // ---------- agrupar por usuario ----------
+  // Una misma persona puede tener varias instalaciones (computadora + celular).
+  // La tabla es de personas, no de navegadores, así que se juntan por nombre.
+  var porUsuario={}, anonimos=0;
+  d.personas.forEach(function(p){
+    if(!p.usuario){ anonimos++; return; }
+    var g=porUsuario[p.usuario];
+    if(!g){
+      g=porUsuario[p.usuario]={usuario:p.usuario, ids:{}, visitas:0,
+        alta:p.alta, ultimo:p.ultimo, disp:{}};
+      porUsuario[p.usuario]=g;
+    }
+    g.ids[p.id]=true;
+    g.visitas+=p.visitas;
+    if(p.alta && p.alta<g.alta) g.alta=p.alta;
+    if(p.ultimo && p.ultimo>g.ultimo) g.ultimo=p.ultimo;
+    g.disp[dispositivoDe(p)]=true;
+  });
+
+  // Los eventos se reparten por nombre: los de esa persona en cualquiera de sus
+  // navegadores, más los sueltos que ya traen el nombre puesto.
+  var eventosDe={};
+  (actividad||[]).forEach(function(e){
+    var quien=e.usuario;
+    if(!quien){
+      for(var u in porUsuario){ if(porUsuario[u].ids[e.instalacion]){ quien=u; break; } }
+    }
+    if(!quien) return;
+    (eventosDe[quien]=eventosDe[quien]||[]).push(e);
+  });
+
+  var gente=Object.keys(porUsuario).map(function(u){
+    var g=porUsuario[u];
+    var evs=eventosDe[u]||[];
+    g.eventos=evs;
+    g.aperturas=evs.filter(function(e){return e.evento==='registro';}).length;
+    return g;
+  }).sort(function(a,b){
+    if(a.ultimo!==b.ultimo) return a.ultimo<b.ultimo?1:-1;
+    return b.visitas-a.visitas;
+  });
+
+  var filas=gente.length ? gente.map(function(g,i){
+    var disp=Object.keys(g.disp).map(function(k){return DISPOSITIVOS[k]||k;}).join(' · ');
+    var evs=g.eventos;
+    var detalle=!actividad
+      ? '<div class="foot">Para ver el detalle hay que actualizar el Worker en Cloudflare.</div>'
+      : (evs.length
+          ? evs.map(function(e){
+              var m=evento(e.evento);
+              // En las bajas, el detalle es la cuenta que dejó de seguir: se nombra.
+              var texto=(e.evento==='unfollow' && e.detalle)
+                ? 'Dejó de seguir a <a class="user" href="https://www.instagram.com/'+esc(e.detalle)+'" target="_blank" rel="noopener">@'+esc(e.detalle)+'</a>'
+                : esc(m.txt);
+              return '<div class="ev"><span class="ico">'+m.ico+'</span>'+
+                '<span class="q">'+texto+'</span>'+
+                '<span class="w">'+fechaHora(e.ts)+(e.hora==null?'':' · '+e.hora+':00 su hora')+'</span></div>';
+            }).join('')
+          : '<div class="foot">Sin actividad reciente registrada.</div>');
+    return '<tr class="fila" onclick="verDetalle('+i+')">'+
+      '<td><span class="flecha" id="fl-'+i+'">▸</span> '+
+        '<a class="user" href="https://www.instagram.com/'+esc(g.usuario)+'" target="_blank" rel="noopener" '+
+        'onclick="event.stopPropagation()" title="Abrir @'+esc(g.usuario)+' en Instagram">@'+esc(g.usuario)+'</a></td>'+
+      '<td class="n">'+g.aperturas+'</td>'+
+      '<td class="n">'+g.visitas+'</td>'+
+      '<td>'+fecha(g.alta)+'</td>'+
+      '<td>'+(g.ultimo===hoy?'<span class="chip hoy">hoy</span>':fecha(g.ultimo))+'</td>'+
+      '<td><span class="chip">'+esc(disp)+'</span></td>'+
+      '</tr>'+
+      '<tr class="det" id="det-'+i+'" hidden><td colspan="6"><div class="inner">'+detalle+'</div></td></tr>';
+  }).join('') : '<tr><td colspan="6" class="foot" style="margin:0">Todavía nadie tocó Entrar en el panel.</td></tr>';
+
+  // ---------- horas ----------
+  var mejores=d.por_hora.map(function(v,h){return [h,v];})
+    .sort(function(a,b){return b[1]-a[1];}).slice(0,3)
+    .filter(function(x){return x[1]>0;}).map(function(x){return x[0];});
+  var etiqHora=d.por_hora.map(function(v,h){
+    var o=new String(h+':00'); o.corta=(h%3===0?String(h):''); return o;
+  });
+  var gHora=grafico(d.por_hora, etiqHora, mejores);
+  var textoMejores=mejores.length
+    ? 'Se usa sobre todo a las <b style="color:var(--acc)">'+mejores.map(function(h){return h+':00';}).join('</b>, <b style="color:var(--acc)">')+'</b>.'
+    : '';
+
+  // ---------- días ----------
+  var etiqDia=d.serie_30d.map(function(x,i){
+    var o=new String(fecha(x.dia)); o.corta=(i%5===0?fecha(x.dia):''); return o;
+  });
+  var gDia=grafico(d.serie_30d.map(function(x){return x.visitas;}), etiqDia, []);
+
+  // ---------- qué hacen ----------
+  // Siempre las mismas cinco filas, en el mismo orden, aunque alguna esté en cero:
+  // así se ve de un vistazo qué se mide y qué todavía no llegó.
+  var ORDEN=['open','copia','registro','scan_ok','unfollow'];
+  var secc=ORDEN.map(function(k){
+    var s=porEvento[k]||{veces:0,personas:0};
+    var m=evento(k);
+    var cero=s.veces===0;
+    return '<div class="hb"'+(cero?' style="opacity:.45"':'')+'>'+
+      '<div class="l">'+m.ico+' '+esc(m.txt)+'</div>'+
+      '<div class="v">'+s.veces+' <span style="color:var(--dim)">· '+s.personas+
+        (s.personas===1?' persona':' personas')+'</span></div>'+
+    '</div>';
+  }).join('');
+  // Cualquier evento que no esté en la lista fija se agrega al final, para no perderlo.
+  d.secciones.forEach(function(s){
+    if(ORDEN.indexOf(s.evento)>-1) return;
+    var m=evento(s.evento);
+    secc+='<div class="hb"><div class="l">'+m.ico+' '+esc(m.txt)+'</div>'+
+      '<div class="v">'+s.veces+' <span style="color:var(--dim)">· '+s.personas+
+      (s.personas===1?' persona':' personas')+'</span></div></div>';
+  });
+
+  // ---------- últimas visitas, solo con nombre ----------
+  var conNombre=(d.ultimas_visitas||[]).filter(function(v){return !!v.usuario;});
+  var ult=conNombre.length ? conNombre.map(function(v){
+    return '<tr><td><a class="user" href="https://www.instagram.com/'+esc(v.usuario)+'" target="_blank" rel="noopener" title="Abrir @'+esc(v.usuario)+' en Instagram">@'+esc(v.usuario)+'</a></td>'+
+      '<td>'+fechaHora(v.ts)+'</td>'+
+      '<td class="n">'+(v.hora==null?'—':v.hora+':00')+'</td></tr>';
+  }).join('') : '<tr><td colspan="3" class="foot" style="margin:0">Ninguna visita con nombre todavía.</td></tr>';
+
+  $('out').innerHTML=
+    '<div class="kpis">'+
+      kpi(gente.length,'Personas','Con nombre, sin repetir')+
+      kpi(d.activos_hoy,'Activas hoy','Navegadores distintos que entraron hoy')+
+      kpi(d.activos_7d,'Activas 7 días','Distintas en la última semana')+
+      kpi(d.activos_30d,'Activas 30 días','Distintas en el último mes')+
+      kpi(aperturasHoy,'Abrieron el panel hoy','Veces que entraron a la herramienta')+
+      kpi(aperturas30,'Aperturas en 30 días','Uso real del panel en el mes')+
+    '</div>'+
+
+    '<div class="card">'+
+      '<h2>Quiénes usan el panel</h2>'+
+      '<p class="hint">Una fila por persona. Si alguien lo usa en la computadora y en el celular, aparece una sola vez. Tocá una fila para ver todo lo que hizo.</p>'+
+      '<div class="scroll"><table>'+
+        '<thead><tr><th>Persona</th><th class="n">Abrió el panel</th><th class="n">Visitas</th>'+
+        '<th>Desde</th><th>Última vez</th><th>Dispositivo</th></tr></thead>'+
+        '<tbody>'+filas+'</tbody></table></div>'+
+      '<div class="foot">'+
+        (anonimos? 'Además hay <b>'+anonimos+'</b> '+(anonimos===1?'visitante':'visitantes')+' sin nombre: entraron a la página de instalación pero nunca tocaron Entrar dentro del panel, y ahí no hay forma de saber quiénes son.' : 'Todos los visitantes registrados tienen nombre.')+
+      '</div>'+
+    '</div>'+
+
+    '<div class="card">'+
+      '<h2>A qué hora lo usan</h2>'+
+      '<p class="hint">Hora local de cada persona, no la del servidor. Últimos 30 días.</p>'+
+      gHora+
+      (textoMejores?'<div class="foot">'+textoMejores+'</div>':'')+
+    '</div>'+
+
+    '<div class="card">'+
+      '<h2>Últimos 30 días</h2>'+
+      '<p class="hint">Cuántas veces se abrió la página cada día.</p>'+
+      gDia+
+    '</div>'+
+
+    '<div class="card">'+
+      '<h2>Qué hacen</h2>'+
+      '<p class="hint">Cada acción registrada en los últimos 30 días, y cuántas personas distintas la hicieron.</p>'+
+      secc+
+      '<div class="foot">Escanear y dejar de seguir ocurren dentro de Instagram, y desde ahí el panel no puede avisar nada: por eso quedan siempre en cero. Se pueden medir, pero hay que tocar el panel para que los cuente.</div>'+
+    '</div>'+
+
+    '<div class="card">'+
+      '<details><summary>Últimas visitas con nombre ('+conNombre.length+')</summary>'+
+        '<div class="scroll" style="margin-top:14px"><table>'+
+          '<thead><tr><th>Persona</th><th>Cuándo (tu hora)</th><th class="n">Su hora</th></tr></thead>'+
+          '<tbody>'+ult+'</tbody></table></div>'+
+      '</details>'+
+    '</div>';
+
+  animarNumeros();
+}
+
+// Los indicadores cuentan de 0 al valor (suave). Se salta si el sistema pide menos
+// movimiento, para no molestar a quien configuró reduce-motion.
+function animarNumeros(){
+  try{ if(matchMedia('(prefers-reduced-motion:reduce)').matches) return; }catch(e){}
+  Array.prototype.forEach.call(document.querySelectorAll('.kpi .n'),function(el){
+    var fin=parseInt(el.textContent,10);
+    if(!isFinite(fin)||fin<=0) return;
+    var dur=650, t0=null;
+    function paso(t){
+      if(t0===null) t0=t;
+      var k=Math.min(1,(t-t0)/dur);
+      el.textContent=Math.round(fin*(1-Math.pow(1-k,3))); // desaceleración suave
+      if(k<1) requestAnimationFrame(paso);
+    }
+    requestAnimationFrame(paso);
+  });
+}
+
+if($('url').value && $('key').value) cargar();
+</script>

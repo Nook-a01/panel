@@ -1,0 +1,17 @@
+{
+  "name": "panel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Panel: deportes, plata, Instagram y campamento en una sola app",
+  "scripts": {
+    "fetch": "node scripts/fetch.mjs",
+    "keys": "node scripts/gen-keys.mjs",
+    "notify": "node scripts/send-push.mjs",
+    "dry": "node scripts/send-push.mjs --dry-run",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "web-push": "^3.6.7"
+  }
+}

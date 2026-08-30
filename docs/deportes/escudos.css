@@ -1,0 +1,43 @@
+/* ============================================================
+   Escudos sobre placa clara.
+
+   El logo de F1 es rojo y la tarjeta de F1, al activarse, también se
+   pone roja: el logo desaparecía. Lo mismo pasaba con el de UFC sobre
+   el ámbar. En vez de buscar una variante distinta para cada logo —que
+   además no existe para todos— van todos sobre una placa clara.
+
+   Como efecto secundario quedan todos del mismo tamaño aparente, que
+   era el otro reclamo: los logos anchos (F1, UFC) y los redondos
+   (Boca, Inter Miami) ahora ocupan la misma caja.
+   ============================================================ */
+
+.escudo{
+  background:var(--papel);
+  border:2px solid #000;
+  padding:4px;
+  box-shadow:2px 2px 0 rgba(0,0,0,.45);
+}
+
+/* La placa ya da el contraste: el resplandor de color sobraba
+   y ensuciaba los bordes del logo. */
+.ficha .escudo img,
+.tarjeta .escudo img{filter:none}
+.escudo img{filter:none}
+
+/* Cajas por contexto. Todas cuadradas, para que un logo ancho y uno
+   redondo ocupen lo mismo. */
+.escudo.em{width:44px;height:44px;padding:5px}
+.escudo.grande{width:50px;height:50px;padding:5px}
+.escudo.chico{width:22px;height:22px;padding:2px;border-width:1px;box-shadow:1px 1px 0 rgba(0,0,0,.45)}
+.escudo.mini{width:26px;height:26px;padding:3px;border-width:2px;box-shadow:1px 1px 0 rgba(0,0,0,.4)}
+
+/* Cuando la ficha está activa el fondo es del color del deporte:
+   la placa mantiene el logo legible igual. */
+.ficha.activa .escudo{box-shadow:2px 2px 0 rgba(0,0,0,.75)}
+
+/* En la barra de título de la ventana, sobre degradado oscuro. */
+.ventana-barra .escudo{background:#fff;border-color:#fff}
+
+/* El emoji de respaldo, si aparece, va sobre la misma placa. */
+.escudo.sin-img{background:var(--tinta);border-color:var(--papel)}
+.escudo.sin-img .emoji-resp{display:block}

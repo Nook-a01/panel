@@ -1,0 +1,3170 @@
+{
+ "actualizado": "2026-08-30T08:41:41.943Z",
+ "feeds": {
+  "boca": {
+   "compitiendo": [
+    {
+     "nombre": "CONMEBOL Sudamericana",
+     "liga": "conmebol.sudamericana",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "Argentine Liga Profesional de Fútbol",
+     "liga": "arg.1",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "Copa Argentina",
+     "liga": "arg.copa",
+     "ruta": "soccer"
+    }
+   ],
+   "posiciones": {
+    "titulo": "Group A",
+    "tipo": "tabla",
+    "filas": [
+     {
+      "equipo": "Vélez Sarsfield",
+      "abrev": "VEL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+      "pj": "7",
+      "pts": "13",
+      "g": "3",
+      "e": "4",
+      "p": "0",
+      "dg": "+4",
+      "mio": false,
+      "pos": 1
+     },
+     {
+      "equipo": "Instituto (Córdoba)",
+      "abrev": "IACC",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+      "pj": "6",
+      "pts": "13",
+      "g": "4",
+      "e": "1",
+      "p": "1",
+      "dg": "+3",
+      "mio": false,
+      "pos": 2
+     },
+     {
+      "equipo": "Gimnasia (Mendoza)",
+      "abrev": "GMZ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+      "pj": "6",
+      "pts": "12",
+      "g": "4",
+      "e": "0",
+      "p": "2",
+      "dg": "+4",
+      "mio": false,
+      "pos": 3
+     },
+     {
+      "equipo": "Defensa y Justicia",
+      "abrev": "DYJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+      "pj": "6",
+      "pts": "11",
+      "g": "3",
+      "e": "2",
+      "p": "1",
+      "dg": "0",
+      "mio": false,
+      "pos": 4
+     },
+     {
+      "equipo": "Independiente",
+      "abrev": "IND",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+      "pj": "6",
+      "pts": "10",
+      "g": "3",
+      "e": "1",
+      "p": "2",
+      "dg": "+3",
+      "mio": false,
+      "pos": 5
+     },
+     {
+      "equipo": "Newell's Old Boys",
+      "abrev": "NOB",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+      "pj": "6",
+      "pts": "10",
+      "g": "3",
+      "e": "1",
+      "p": "2",
+      "dg": "+2",
+      "mio": false,
+      "pos": 6
+     },
+     {
+      "equipo": "Unión (Santa Fe)",
+      "abrev": "USF",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
+      "pj": "7",
+      "pts": "10",
+      "g": "3",
+      "e": "1",
+      "p": "3",
+      "dg": "+2",
+      "mio": false,
+      "pos": 7
+     },
+     {
+      "equipo": "Boca Juniors",
+      "abrev": "CABJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "pj": "7",
+      "pts": "10",
+      "g": "2",
+      "e": "4",
+      "p": "1",
+      "dg": "-1",
+      "mio": true,
+      "pos": 8
+     },
+     {
+      "equipo": "Deportivo Riestra",
+      "abrev": "RIE",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
+      "pj": "7",
+      "pts": "8",
+      "g": "2",
+      "e": "2",
+      "p": "3",
+      "dg": "+1",
+      "mio": false,
+      "pos": 9
+     },
+     {
+      "equipo": "Platense",
+      "abrev": "PLA",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+      "pj": "6",
+      "pts": "8",
+      "g": "2",
+      "e": "2",
+      "p": "2",
+      "dg": "-3",
+      "mio": false,
+      "pos": 10
+     },
+     {
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "7",
+      "pts": "7",
+      "g": "2",
+      "e": "1",
+      "p": "4",
+      "dg": "-1",
+      "mio": false,
+      "pos": 11
+     },
+     {
+      "equipo": "San Lorenzo",
+      "abrev": "SLO",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+      "pj": "6",
+      "pts": "7",
+      "g": "2",
+      "e": "1",
+      "p": "3",
+      "dg": "-2",
+      "mio": false,
+      "pos": 12
+     },
+     {
+      "equipo": "Central Córdoba (Santiago del Estero)",
+      "abrev": "CTR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
+      "pj": "7",
+      "pts": "7",
+      "g": "2",
+      "e": "1",
+      "p": "4",
+      "dg": "-3",
+      "mio": false,
+      "pos": 13
+     },
+     {
+      "equipo": "Estudiantes de La Plata",
+      "abrev": "EST",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+      "pj": "6",
+      "pts": "6",
+      "g": "2",
+      "e": "0",
+      "p": "4",
+      "dg": "0",
+      "mio": false,
+      "pos": 14
+     },
+     {
+      "equipo": "Talleres (Córdoba)",
+      "abrev": "TALL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
+      "pj": "7",
+      "pts": "5",
+      "g": "1",
+      "e": "2",
+      "p": "4",
+      "dg": "-4",
+      "mio": false,
+      "pos": 15
+     }
+    ]
+   },
+   "plantel": [
+    {
+     "id": "166323",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+     "nombre": "Álvaro Montero",
+     "dorsal": "1",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 31,
+     "pais": "Colombia",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "195663",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Agustín Marchesín",
+     "dorsal": "1",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 38,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "335580",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Leandro Brey",
+     "dorsal": "12",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 23,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "145617",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Javier García",
+     "dorsal": "13",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 39,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "421345",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Fernando Rodríguez",
+     "dorsal": "47",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 21,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "341457",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lautaro Di Lollo",
+     "dorsal": "2",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 22,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "290542",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lautaro Blanco",
+     "dorsal": "3",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "189952",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Jorge Figal",
+     "dorsal": "4",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/189952.png",
+     "lesionado": false
+    },
+    {
+     "id": "338991",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Leandro Lozano",
+     "dorsal": "17",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Uruguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "285026",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Juan Barinaga",
+     "dorsal": "24",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "303633",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Marco Pellegrino",
+     "dorsal": "26",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "286902",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Ayrton Costa",
+     "dorsal": "32",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "400357",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Facundo Herrera",
+     "dorsal": "42",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "403948",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Matías Satas",
+     "dorsal": "46",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 18,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "371485",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Dylan Gorosito",
+     "dorsal": "48",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3103365",
+     "bandera": null,
+     "nombre": "Baltazar Blum Macías",
+     "dorsal": "48",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "404709",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+     "nombre": "Gian Paoli",
+     "dorsal": "51",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "Paraguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "153115",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Leandro Paredes",
+     "dorsal": "5",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "152706",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo Battaglia",
+     "dorsal": "6",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 35,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "202025",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
+     "nombre": "Carlos Palacios",
+     "dorsal": "8",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 26,
+     "pais": "Chile",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "274298",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
+     "nombre": "William Alarcón",
+     "dorsal": "15",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Chile",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "382978",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Milton Delgado",
+     "dorsal": "18",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 21,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "286516",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Alan Velasco",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/286516.png",
+     "lesionado": false
+    },
+    {
+     "id": "290593",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Kevin Zenón",
+     "dorsal": "21",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "233734",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Santiago Ascacibar",
+     "dorsal": "25",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "259166",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Malcom Braida",
+     "dorsal": "27",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "256199",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Tomás Belmonte",
+     "dorsal": "30",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3103366",
+     "bandera": null,
+     "nombre": "Gonzalo Tomás Márquez",
+     "dorsal": "31",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3103368",
+     "bandera": null,
+     "nombre": "Lautaro Mendieta",
+     "dorsal": "33",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "400359",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Tomás Aranda",
+     "dorsal": "36",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "104506",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Camilo Rey",
+     "dorsal": "38",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3103367",
+     "bandera": null,
+     "nombre": "Matias Calegari",
+     "dorsal": "39",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "400358",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Dante Gonzalez",
+     "dorsal": "50",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "297051",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Exequiel Zeballos",
+     "dorsal": "7",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "310767",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Milton Gimenez",
+     "dorsal": "9",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 30,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "260812",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Miguel Merentiel",
+     "dorsal": "16",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 30,
+     "pais": "Uruguay",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "141790",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+     "nombre": "Sebastián Villa",
+     "dorsal": "22",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 30,
+     "pais": "Colombia",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "252629",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+     "nombre": "Adam Bareiro",
+     "dorsal": "28",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 30,
+     "pais": "Paraguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "193634",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+     "nombre": "Ángel Romero",
+     "dorsal": "29",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 34,
+     "pais": "Paraguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "171771",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+     "nombre": "Enner Valencia",
+     "dorsal": "30",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 36,
+     "pais": "Ecuador",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "382976",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Juan Payal",
+     "dorsal": "34",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 21,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3103369",
+     "bandera": null,
+     "nombre": "Franco Sebastián Pérez",
+     "dorsal": "35",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "400360",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Leonel Flores",
+     "dorsal": "44",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 19,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "421348",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo Bacidalupe",
+     "dorsal": "44",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 19,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "421349",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Miguel Ventos",
+     "dorsal": "45",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 21,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "404208",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Joaquín Piñeyro",
+     "dorsal": "49",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 18,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "421351",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Juan Pussetto",
+     "dorsal": "52",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 18,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "392903",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Joaquín Ruíz",
+     "dorsal": "53",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "404539",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Kevin Ferreira",
+     "dorsal": "54",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 18,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    }
+   ],
+   "noticias": [
+    {
+     "titulo": "Colombia earthquake forces postponement of Conmebol, league games",
+     "resumen": "Copa Libertadores, Copa Sudamericana and Colombian domestic league matches scheduled for this week have been postponed following a powerful 7.4 magnitude earthquake that struck western Colombia on Monday.",
+     "fecha": "2026-08-11T03:14:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0810/r1700128_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49577921/colombia-earthquake-forces-postponement-conmebol-league-games"
+    },
+    {
+     "titulo": "Veteran defender Nicolás Otamendi signs with boyhood club River Plate",
+     "resumen": "Veteran defender Nicolás Otamendi has signed a contract with River Plate to return to the Argentine league as a free agent from Benfica.",
+     "fecha": "2026-05-30T01:50:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0530/r1665593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/48915325/world-cup-winner-nicolas-otamendi-signs-boyhood-club-river-plate"
+    },
+    {
+     "titulo": "Laurens: Neymar's situation 'really sad'",
+     "resumen": "Julien Laurens reacts to Neymar's current form and discusses his chances of making Brazil's World Cup squad.",
+     "fecha": "2026-04-24T01:01:22Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0423/dm_260423_COM_SOC_ANALYSIS_Laurens_Neymars_situation_really_sad_2026_4_23/dm_260423_COM_SOC_ANALYSIS_Laurens_Neymars_situation_really_sad_2026_4_23.jpg",
+     "link": "https://www.espn.com/video/clip?id=48575188"
+    },
+    {
+     "titulo": "Boca Juniors plans Bombonera expansion to 80,000 seats",
+     "resumen": "After River Plate presented a project to roof its Monumental Stadium, arch-rival Boca Juniors announced it will expand the capacity of La Bombonera in the stadium's biggest ever makeover.",
+     "fecha": "2026-03-11T20:48:01Z",
+     "imagen": null,
+     "link": "https://www.espn.com/soccer/story/_/id/48176804/boca-juniors-plans-bombonera-expansion-80000-seats"
+    },
+    {
+     "titulo": "Argentine clubs to strike in response to Tapia travel ban",
+     "resumen": "Professional clubs in Argentina have agreed to strike from March 5-8 in protest against what they consider judicial persecution of Argentine Football Association president Claudio Tapia.",
+     "fecha": "2026-02-23T23:11:29Z",
+     "imagen": "https://a.espncdn.com/photo/2024/0530/r1339308_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/48017429/argentine-clubs-strike-response-tapia-travel-ban"
+    },
+    {
+     "titulo": "River Plate expanding iconic Monumental to hold 101,000 fans",
+     "resumen": "River Plate has announced a massive expansion of the Monumental Stadium, increasing its capacity to 101,000 spectators in a move that will make it one of the largest soccer venues in the world.",
+     "fecha": "2026-01-28T01:10:33Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0128/r1606571_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47748338/river-plate-expanding-iconic-monumental-101000-fans"
+    },
+    {
+     "titulo": "World's weirdest soccer leagues: 8 champions? Points for losing?",
+     "resumen": "What happens when leagues shun the traditional round-robin format? Here's some of the weird and wonderful ways titles are won around the world.",
+     "fecha": "2025-12-15T10:25:55Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1211/r1588024_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47264818/worlds-weirdest-soccer-leagues-8-champions-points-losing"
+    },
+    {
+     "titulo": "Danilo's header lifts Flamengo to fourth Copa Libertadores crown",
+     "resumen": "Flamengo secured the 2025 Copa Libertadores title by defeating Palmeiras 1-0 on Saturday, becoming the first Brazilian team to achieve four titles in South America's top club competition.",
+     "fecha": "2025-11-30T02:56:05Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1130/r1582592_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47142896/danilo-header-lifts-flamengo-fourth-copa-libertadores-crown"
+    },
+    {
+     "titulo": "Flamengo lift Copa Libertadores, but Brazil's players look exhausted",
+     "resumen": "Originally billed as the \"final of the century,\" Saturday's Libertadores decider was a war of attrition -- mainly because Brazil's two top clubs are struggling to contend with a ridiculous match schedule.",
+     "fecha": "2025-11-30T01:14:56Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1130/r1582556_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47143318/flamengo-lift-copa-libertadores-brazils-players-look-exhausted"
+    },
+    {
+     "titulo": "Rosario Central, Ángel Di María handed surprise Argentine title",
+     "resumen": "Seemingly out of nowhere, Argentina's soccer association on Thursday declared Rosario Central the \"league champion\" for 2025 in a newly established title.",
+     "fecha": "2025-11-21T19:25:26Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1120/r1578409_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47039747/rosario-central-angel-di-maria-argentine-title"
+    },
+    {
+     "titulo": "Marcotti: Thankfully Oscar's heart condition has been dealt with",
+     "resumen": "Gab Marcotti reflects on Oscar's career now the Brazilian is set to retire due to a heart condition.",
+     "fecha": "2025-11-13T12:44:29Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2025/1113/dm_251113_COM_SOC_Analysis_Marcotti_Thankfully_Oscars_heart_condition_has_been_dealt_with_GLOBAL_20251113/dm_251113_COM_SOC_Analysis_Marcotti_Thankfully_Oscars_heart_condition_has_been_dealt_with_GLOBAL_20251113.jpg",
+     "link": "https://www.espn.com/video/clip?id=46952300"
+    },
+    {
+     "titulo": "Palmeiras overcomes 3-0 deficit to seal all-Brazilian Libertadores final",
+     "resumen": "Palmeiras completed an epic comeback Thursday evening, smashing LDU 4-0 to overturn a 3-goal aggregate deficit and advance into the 2025 Copa Conmebol Libertadores Final against Brazil rivals Flamengo.",
+     "fecha": "2025-10-31T04:26:24Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1031/r1568599_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/46788278/palmeiras-overcomes-3-0-deficit-seal-all-brazilian-libertadores-final"
+    }
+   ],
+   "resultados": null,
+   "peleadores": null
+  },
+  "argentina": {
+   "compitiendo": [],
+   "posiciones": {
+    "titulo": "Group J",
+    "tipo": "tabla",
+    "filas": [
+     {
+      "equipo": "Argentina",
+      "abrev": "ARG",
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+      "pj": "3",
+      "pts": "9",
+      "g": "3",
+      "e": "0",
+      "p": "0",
+      "dg": "+7",
+      "mio": true,
+      "pos": 1
+     },
+     {
+      "equipo": "Austria",
+      "abrev": "AUT",
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+      "pj": "3",
+      "pts": "4",
+      "g": "1",
+      "e": "1",
+      "p": "1",
+      "dg": "0",
+      "mio": false,
+      "pos": 2
+     },
+     {
+      "equipo": "Algeria",
+      "abrev": "ALG",
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
+      "pj": "3",
+      "pts": "4",
+      "g": "1",
+      "e": "1",
+      "p": "1",
+      "dg": "-2",
+      "mio": false,
+      "pos": 3
+     },
+     {
+      "equipo": "Jordan",
+      "abrev": "JOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
+      "pj": "3",
+      "pts": "0",
+      "g": "0",
+      "e": "0",
+      "p": "3",
+      "dg": "-5",
+      "mio": false,
+      "pos": 4
+     }
+    ]
+   },
+   "plantel": [
+    {
+     "id": "177927",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Juan Musso",
+     "dorsal": "1",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "167192",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gerónimo Rulli",
+     "dorsal": "12",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 34,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/167192.png",
+     "lesionado": false
+    },
+    {
+     "id": "158626",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Emiliano Martínez",
+     "dorsal": "23",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 33,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "233945",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Marcos Senesi",
+     "dorsal": "2",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233945.png",
+     "lesionado": false
+    },
+    {
+     "id": "145190",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nicolás Tagliafico",
+     "dorsal": "3",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 33,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/145190.png",
+     "lesionado": false
+    },
+    {
+     "id": "228262",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gonzalo Montiel",
+     "dorsal": "4",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "233937",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lisandro Martínez",
+     "dorsal": "6",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233937.png",
+     "lesionado": false
+    },
+    {
+     "id": "96970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Cristian Romero",
+     "dorsal": "13",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "119289",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nicolás Otamendi",
+     "dorsal": "19",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 38,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "249663",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Facundo Medina",
+     "dorsal": "25",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "164826",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nahuel Molina",
+     "dorsal": "26",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "153115",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Leandro Paredes",
+     "dorsal": "5",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "174466",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo De Paul",
+     "dorsal": "7",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "320760",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Valentín Barco",
+     "dorsal": "8",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 22,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "207343",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Giovani Lo Celso",
+     "dorsal": "11",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 30,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "228393",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Exequiel Palacios",
+     "dorsal": "14",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "277208",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Thiago Almada",
+     "dorsal": "16",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/277208.png",
+     "lesionado": false
+    },
+    {
+     "id": "337970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nico Paz",
+     "dorsal": "18",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 21,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "249299",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Alexis Mac Allister",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "285450",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Enzo Fernández",
+     "dorsal": "24",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "277206",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Julián Álvarez",
+     "dorsal": "9",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 26,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "45843",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lionel Messi",
+     "dorsal": "10",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
+     "lesionado": false
+    },
+    {
+     "id": "76017",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nico González",
+     "dorsal": "15",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "323838",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Giuliano Simeone",
+     "dorsal": "17",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 23,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "311743",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "José Manuel López",
+     "dorsal": "21",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "219713",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lautaro Martínez",
+     "dorsal": "22",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    }
+   ],
+   "noticias": [
+    {
+     "titulo": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
+     "resumen": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
+     "fecha": "2026-08-30T02:32:28Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0829/ss_20260829_214626533_3641024/ss_20260829_214626533_3641024.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49768137/lionel-messi-4-goal-performance-leads-inter-miami-big-win"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-08-30T02:11:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "USMNT's Richards puts World Cup heartbreak behind him",
+     "resumen": "Playing in this World Cup was Chris Richards' lifelong dream, but its abrupt end gave him little time to grieve before returning to the Premier League.",
+     "fecha": "2026-08-28T15:43:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0826/r1707191_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49732248/that-lifelong-dream-done-usmnt-chris-richards-puts-world-cup-heartbreak-focus-palace-premier-league"
+    },
+    {
+     "titulo": "Chris Richards admits feeling like he let the U.S. down after Belgium defeat",
+     "resumen": "Chris Richards admits feeling like he let the U.S. down after Belgium defeat",
+     "fecha": "2026-08-28T15:33:38Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0828/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49753414/chris-richards-admits-feeling-let-us-belgium-defeat"
+    },
+    {
+     "titulo": "Entire Nigeria FA board resigns after World Cup (x2), WAFCON flops",
+     "resumen": "Nigeria Football Federation president Ibrahim Musa Gusau, general secretary Mohammed Sanusi, and the entire NFF executive committee resigned Thursday, amid mounting public pressure following a series of failures.",
+     "fecha": "2026-08-28T09:46:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0828/r1708022_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/49750811/entire-nigeria-fa-board-resigns-world-cup-x2-wafcon-flops"
+    },
+    {
+     "titulo": "Champions League draw becomes UEFA's latest stand against FIFA president Infantino",
+     "resumen": "Thursday saw the UEFA Champions League draw take place in Monaco, but the big news beyond the pots involved Europe taking their battle with FIFA president Gianni Infantino into criminal court.",
+     "fecha": "2026-08-28T08:19:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0827/r1707747_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49744909/uefa-fifa-world-cup-champions-league-gianni-infantino-lawsuits-gab-marcotti"
+    },
+    {
+     "titulo": "Xavi addresses van Dijk's national team future at unveiling",
+     "resumen": "Xavi addresses van Dijk's national team future at unveiling.",
+     "fecha": "2026-08-25T15:36:54Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0825/dm_260825_Xavi_addresses_van_Dijks_national_team_future_at_unveiling/dm_260825_Xavi_addresses_van_Dijks_national_team_future_at_unveiling.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49722859/xavi-addresses-van-dijk-national-team-future-unveiling"
+    },
+    {
+     "titulo": "Would a combined UEFA, Concacaf Nations League benefit the USMNT?",
+     "resumen": "Would a combined UEFA, Concacaf Nations League benefit the USMNT?",
+     "fecha": "2026-08-25T09:18:38Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0825/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49720082/would-combined-uefa-concacaf-nations-league-benefit-usmnt"
+    },
+    {
+     "titulo": "Hislop: Pochettino should name Cavan Sullivan on next USMNT roster",
+     "resumen": "Hislop: Pochettino should name Cavan Sullivan on next USMNT roster",
+     "fecha": "2026-08-21T08:22:13Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0821/dm_260821_COM_SOC_Analysis_Hislop_Pochettino_should_name_Cavan_Sullivan_on_next_USMNT_roster_20260821_GLO/dm_260821_COM_SOC_Analysis_Hislop_Pochettino_should_name_Cavan_Sullivan_on_next_USMNT_roster_20260821_GLO.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49678510/pochettino-name-cavan-sullivan-next-usmnt-roster"
+    },
+    {
+     "titulo": "Simeone: Alvarez is one of the best players Atlético have, if not the best",
+     "resumen": "Simeone: Alvarez is one of the best players Atlético have, if not the best",
+     "fecha": "2026-08-19T15:58:30Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0819/dm_260819_Simeone_Alvarez_is_one_of_the_best_players_Atletico_have_if_not_the_best/dm_260819_Simeone_Alvarez_is_one_of_the_best_players_Atletico_have_if_not_the_best.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49659966/alvarez-one-best-players-atletico-not-best"
+    },
+    {
+     "titulo": "Forlán: If Suárez is available for selection, why not?",
+     "resumen": "Forlán: If Suárez is available for selection, why not?",
+     "fecha": "2026-08-11T13:55:09Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0811/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49582283/suarez-available-selection-why-not"
+    },
+    {
+     "titulo": "Thailand seal top spot after making Myanmar pay the penalty",
+     "resumen": "Two penalty kicks in either half were enough for Thailand to finish top of Group B in the ASEAN Championship with a 2-0 victory over Myanmar.",
+     "fecha": "2026-08-08T17:00:35Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0808/dm_260808_ASEAN_CHAMPIONSHIPS_THAvsMYA_HLs_ESPN/dm_260808_ASEAN_CHAMPIONSHIPS_THAvsMYA_HLs_ESPN.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49561248/thailand-seal-top-spot-making-myanmar-pay-penalty"
+    }
+   ],
+   "resultados": null,
+   "peleadores": null
+  },
+  "intermiami": {
+   "compitiendo": [
+    {
+     "nombre": "MLS",
+     "liga": "usa.1",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "Leagues Cup",
+     "liga": "concacaf.leagues.cup",
+     "ruta": "soccer"
+    }
+   ],
+   "posiciones": {
+    "titulo": "Eastern Conference",
+    "tipo": "tabla",
+    "filas": [
+     {
+      "equipo": "Nashville SC",
+      "abrev": "NSH",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
+      "pj": "22",
+      "pts": "52",
+      "g": "16",
+      "e": "4",
+      "p": "2",
+      "dg": "+30",
+      "mio": false,
+      "pos": 1
+     },
+     {
+      "equipo": "Inter Miami CF",
+      "abrev": "MIA",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "pj": "22",
+      "pts": "42",
+      "g": "12",
+      "e": "6",
+      "p": "4",
+      "dg": "+15",
+      "mio": true,
+      "pos": 2
+     },
+     {
+      "equipo": "Chicago Fire FC",
+      "abrev": "CHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "pj": "21",
+      "pts": "37",
+      "g": "11",
+      "e": "4",
+      "p": "6",
+      "dg": "+11",
+      "mio": false,
+      "pos": 3
+     },
+     {
+      "equipo": "Charlotte FC",
+      "abrev": "CLT",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+      "pj": "22",
+      "pts": "35",
+      "g": "10",
+      "e": "5",
+      "p": "7",
+      "dg": "+8",
+      "mio": false,
+      "pos": 4
+     },
+     {
+      "equipo": "New England Revolution",
+      "abrev": "NE",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "pj": "21",
+      "pts": "34",
+      "g": "10",
+      "e": "4",
+      "p": "7",
+      "dg": "+7",
+      "mio": false,
+      "pos": 5
+     },
+     {
+      "equipo": "FC Cincinnati",
+      "abrev": "CIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "pj": "22",
+      "pts": "31",
+      "g": "8",
+      "e": "7",
+      "p": "7",
+      "dg": "-2",
+      "mio": false,
+      "pos": 6
+     },
+     {
+      "equipo": "New York City FC",
+      "abrev": "NYC",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "pj": "22",
+      "pts": "28",
+      "g": "7",
+      "e": "7",
+      "p": "8",
+      "dg": "+5",
+      "mio": false,
+      "pos": 7
+     },
+     {
+      "equipo": "Red Bull New York",
+      "abrev": "RBNY",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "pj": "22",
+      "pts": "26",
+      "g": "7",
+      "e": "5",
+      "p": "10",
+      "dg": "-14",
+      "mio": false,
+      "pos": 8
+     },
+     {
+      "equipo": "Toronto FC",
+      "abrev": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "pj": "22",
+      "pts": "25",
+      "g": "5",
+      "e": "10",
+      "p": "7",
+      "dg": "-6",
+      "mio": false,
+      "pos": 9
+     },
+     {
+      "equipo": "D.C. United",
+      "abrev": "DC",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
+      "pj": "22",
+      "pts": "25",
+      "g": "5",
+      "e": "10",
+      "p": "7",
+      "dg": "-8",
+      "mio": false,
+      "pos": 10
+     },
+     {
+      "equipo": "Orlando City SC",
+      "abrev": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "pj": "22",
+      "pts": "25",
+      "g": "7",
+      "e": "4",
+      "p": "11",
+      "dg": "-17",
+      "mio": false,
+      "pos": 11
+     },
+     {
+      "equipo": "Philadelphia Union",
+      "abrev": "PHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+      "pj": "22",
+      "pts": "24",
+      "g": "6",
+      "e": "6",
+      "p": "10",
+      "dg": "-5",
+      "mio": false,
+      "pos": 12
+     },
+     {
+      "equipo": "Atlanta United FC",
+      "abrev": "ATL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+      "pj": "22",
+      "pts": "21",
+      "g": "6",
+      "e": "3",
+      "p": "13",
+      "dg": "-13",
+      "mio": false,
+      "pos": 13
+     },
+     {
+      "equipo": "CF Montréal",
+      "abrev": "MTL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+      "pj": "22",
+      "pts": "21",
+      "g": "5",
+      "e": "6",
+      "p": "11",
+      "dg": "-16",
+      "mio": false,
+      "pos": 14
+     },
+     {
+      "equipo": "Columbus Crew",
+      "abrev": "CLB",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+      "pj": "21",
+      "pts": "20",
+      "g": "5",
+      "e": "5",
+      "p": "11",
+      "dg": "-6",
+      "mio": false,
+      "pos": 15
+     }
+    ]
+   },
+   "plantel": [
+    {
+     "id": "256444",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Luis Barraza",
+     "dorsal": "13",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 29,
+     "pais": "USA",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/256444.png",
+     "lesionado": false
+    },
+    {
+     "id": "297047",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rocco Ríos Novo",
+     "dorsal": "34",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "231059",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+     "nombre": "Dayne St. Clair",
+     "dorsal": "97",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 29,
+     "pais": "Canada",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/231059.png",
+     "lesionado": false
+    },
+    {
+     "id": "315617",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gonzalo Luján",
+     "dorsal": "2",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "231241",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+     "nombre": "Sergio Reguilón",
+     "dorsal": "3",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Spain",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "285473",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Facundo Mura",
+     "dorsal": "4",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "402696",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+     "nombre": "Fricio Caicedo",
+     "dorsal": "15",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 18,
+     "pais": "Ecuador",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "314952",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "nombre": "Micael",
+     "dorsal": "16",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 26,
+     "pais": "Brazil",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/314952.png",
+     "lesionado": false
+    },
+    {
+     "id": "316269",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
+     "nombre": "Ian Fray",
+     "dorsal": "17",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 23,
+     "pais": "Jamaica",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
+     "lesionado": false
+    },
+    {
+     "id": "364401",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Tyler Hall",
+     "dorsal": "26",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "316344",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
+     "nombre": "Noah Allen",
+     "dorsal": "32",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 22,
+     "pais": "Greece",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316344.png",
+     "lesionado": false
+    },
+    {
+     "id": "310279",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Maximiliano Falcón",
+     "dorsal": "37",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Uruguay",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "359239",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png",
+     "nombre": "Israel Boatwright",
+     "dorsal": "62",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 21,
+     "pais": "Dominican Republic",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "401415",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Daniel Sumalla",
+     "dorsal": "70",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399951",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Cesar Abadia-Reda",
+     "dorsal": "76",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "173666",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "nombre": "Casemiro",
+     "dorsal": "5",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 34,
+     "pais": "Brazil",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "174466",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo De Paul",
+     "dorsal": "7",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "315594",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
+     "nombre": "Telasco Segovia",
+     "dorsal": "8",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 23,
+     "pais": "Venezuela",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "290715",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "David Ayala",
+     "dorsal": "22",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
+     "lesionado": false
+    },
+    {
+     "id": "229289",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hon.png",
+     "nombre": "David Ruiz",
+     "dorsal": "41",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 22,
+     "pais": "Honduras",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "329025",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+     "nombre": "Yannick Bright",
+     "dorsal": "42",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 24,
+     "pais": "Italy",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399971",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Ian Urkidi",
+     "dorsal": "55",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "401414",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Preston Plambeck",
+     "dorsal": "59",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399922",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Joseph Convers",
+     "dorsal": "66",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "406938",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Alexander Shaw",
+     "dorsal": "88",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 18,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "125088",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Luis Suárez",
+     "dorsal": "9",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Uruguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "45843",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lionel Messi",
+     "dorsal": "10",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
+     "lesionado": false
+    },
+    {
+     "id": "228394",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "nombre": "Germán Berterame",
+     "dorsal": "19",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 27,
+     "pais": "Mexico",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "315801",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Tadeo Allende",
+     "dorsal": "21",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "387661",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Mateo Silvetti",
+     "dorsal": "24",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "401418",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Diego Rey",
+     "dorsal": "52",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "359953",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+     "nombre": "Lovens Delinois",
+     "dorsal": "54",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 21,
+     "pais": "Haiti",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Dániel Pintér",
+     "dorsal": "56",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    }
+   ],
+   "noticias": [
+    {
+     "titulo": "Minnesota United FC vs. Orlando City SC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Minnesota United FC vs. Orlando City SC, 08/29/2026",
+     "fecha": "2026-08-30T05:10:02Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0830/5f172329-8a35-4afa-9468-e672ca65423c/5f172329-8a35-4afa-9468-e672ca65423c.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49768659/minnesota-united-fc-vs-orlando-city-sc-game-highlights"
+    },
+    {
+     "titulo": "Cavan Sullivan scores for second straight game for Philly",
+     "resumen": "Cavan Sullivan scores for second straight game for Philly",
+     "fecha": "2026-08-30T04:17:51Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0830/ss_20260830_000218771_3641262/ss_20260830_000218771_3641262.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49769131/cavan-sullivan-scores-second-straight-game-philly"
+    },
+    {
+     "titulo": "U.S. teen Cavan Sullivan makes MLS history with latest goal",
+     "resumen": "Philadelphia Union rising star Cavan Sullivan found the net for the second straight match to become the first 16-year-old in MLS history with goal contributions in four consecutive matches.",
+     "fecha": "2026-08-30T04:09:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0830/r1708841_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49768706/cavan-sullivan-philadelphia-union-mls-history"
+    },
+    {
+     "titulo": "Müller and White score in Whitecaps win over SKC",
+     "resumen": "Thomas Müller had a goal and an assist, Brian White and Rayan Elloumi each added a goal and the Vancouver Whitecaps beat Sporting Kansas City 3-0 on Saturday night.",
+     "fecha": "2026-08-30T03:20:06Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761762.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761762"
+    },
+    {
+     "titulo": "Orlando strike late to salvage 3-3 draw with Minnesota United",
+     "resumen": "Tyrese Spicer scored three minutes into second-half stoppage time and Orlando City salvaged a 3-3 draw with Minnesota United after blowing a two-goal lead on Saturday night.",
+     "fecha": "2026-08-30T03:19:18Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761763.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761763"
+    },
+    {
+     "titulo": "Nashville routs Cincinnati, continues best start in MLS history",
+     "resumen": "Sam Surridge scored his 13th goal this season and added an assist, Hany Mukhtar also had a goal and an assist, and Nashville SC beat FC Cincinnati 4-0 on Saturday night for its fourth consecutive win.",
+     "fecha": "2026-08-30T03:18:19Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761764.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761764"
+    },
+    {
+     "titulo": "Herrington focused on world cup amid Barcelona interest",
+     "resumen": "Socceroos defender Lucas Herrington is not focused on speculation linking him with a move to Spanish giants Barcelona, trying to stay 'present' at the World Cup.",
+     "fecha": "2026-06-28T21:34:52Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0628/dm_260628_Soccer_PressConference_Herrington_focused_on_world_cup_amid_Barcelona_interest_20260828/dm_260628_Soccer_PressConference_Herrington_focused_on_world_cup_amid_Barcelona_interest_20260828.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49209984/herrington-focused-world-cup-amid-barcelona-interest"
+    },
+    {
+     "titulo": "Irvine -  \"Clear line on the rule\"",
+     "resumen": "Ahead of Australia's final Group D matchup against Paraguay, Socceroos midfielder Jackson Irvine weighed on the controversial new red card offence for covering your mouth during play.",
+     "fecha": "2026-06-21T01:38:47Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0620/dm_260620_Soccer_PressConference_Irvine_clear_line_on_the_rule_20260620/dm_260620_Soccer_PressConference_Irvine_clear_line_on_the_rule_20260620.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49131127/irvine-clear-line-rule"
+    },
+    {
+     "titulo": "Should Casemiro join Inter Miami or LA Galaxy?",
+     "resumen": "Gab & Juls debate Casemiro's links with a move to Major League Soccer.",
+     "fecha": "2026-05-21T11:39:18Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0521/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/48834114/should-casemiro-join-inter-miami-la-galaxy"
+    },
+    {
+     "titulo": "Why has Javier Mascherano left Inter Miami?",
+     "resumen": "Lizzy Becherano reacts to Javier Mascherano's departure from Inter Miami.",
+     "fecha": "2026-04-14T18:06:05Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0414/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip?id=48485505"
+    },
+    {
+     "titulo": "Magic of the Cup: 14-year-old rewrites U.S. Open Cup history",
+     "resumen": "The U.S. Open Cup is a 113-year-old competition, and 14-year-old Braiden Kalonji wrote his name in history by becoming its youngest-ever goal scorer.",
+     "fecha": "2026-03-19T14:53:11Z",
+     "imagen": "https://a.espncdn.com/photo/2022/0917/r1063199_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/48248748/magic-cup-14-year-old-braiden-kalonji-rewrites-us-open-cup-history"
+    },
+    {
+     "titulo": "Could James Rodríguez join Minnesota United?",
+     "resumen": "Gab & Juls discuss reports linking James Rodríguez with a move to Major League Soccer.",
+     "fecha": "2026-02-05T12:53:52Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0205/dm_260205_COM_SOC_Analysis_Could_James_Rodriguez_join_Minnesota_United__20260205_GLOBAL/dm_260205_COM_SOC_Analysis_Could_James_Rodriguez_join_Minnesota_United__20260205_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip?id=47836990"
+    }
+   ],
+   "resultados": null,
+   "peleadores": null
+  },
+  "pumas": {
+   "compitiendo": [
+    {
+     "nombre": "International Test Match",
+     "liga": "289234",
+     "ruta": "rugby"
+    }
+   ],
+   "posiciones": null,
+   "plantel": null,
+   "noticias": [
+    {
+     "titulo": "'Two good XVs': Why rotation isn't a dirty word for Les Kiss' Wallabies",
+     "resumen": "Les Kiss has pledged to continue tinkering with his Wallabies matchday squads in a bid to build \"two good XVs\" for next year's Rugby World Cup, after the Queenslander handed prop Isaac Kailea a first Test start since 2024.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/0828/r1707946_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/49747952/wallabies-two-good-xvs-why-rotation-dirty-word-les-kiss"
+    },
+    {
+     "titulo": "'I'll put my hand up for the World Cup': Wallabies' James Slipper not ruling out record fifth World Cup",
+     "resumen": "Recently retired Wallabies prop James Slipper is in line to make a shock return to the gold jersey less than a year after he farewelled the group through a front-row injury crisis, with a record fifth World Cup not ruled out.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674537_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/49088851/put-my-hand-world-cup-wallabies-james-slipper-not-ruling-record-fifth-rugby-world-cup"
+    },
+    {
+     "titulo": "Wallabies to face Ireland in 2027, will play seven Tests before Rugby World Cup",
+     "resumen": "The Wallabies will return to Canberra for a Test match for the first time in 10 years after Rugby Australia confirmed a final Rugby World Cup warmup match against Ireland next year.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/0330/r1636151_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/48350306/wallabies-face-ireland-2027-play-seven-tests-rugby-world-cup"
+    },
+    {
+     "titulo": "Andy Farrell not talking to RFU about England role 'at present' -- Bill Sweeney",
+     "resumen": "Rugby Football Union chief executive Bill Sweeney insists there has been no contact with Andy Farrell as part of England's succession planning for the time beyond next year's World Cup.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2025/0618/r1508156_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/48321020/andy-farrell-not-talking-rfu-england-role-present-bill-sweeney"
+    },
+    {
+     "titulo": "Argentina working towards 2035 Rugby World Cup bid",
+     "resumen": "Argentina will bid to stage the 2035 World Cup as part of a wider South American tournament that will also include Brazil, Chile and Uruguay.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/0318/r1630421_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/48243560/argentina-working-towards-2035-rugby-world-cup-bid"
+    },
+    {
+     "titulo": "Historic Rennie appointment to add World Cup intrigue",
+     "resumen": "Axed Wallabies coach Dave Rennie's high road to a belated Rugby World Cup chance will come with New Zealand and add another layer to the rivalry when the side's meet at next year's showpiece in Sydney.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/media/motion/2026/0305/dm_260305_INET_RUGBY_INTERVIEW_Jordie_Barrett_Rennies_signing_big_news_for_NZ_rugby_202635_AUS_ONLY/dm_260305_INET_RUGBY_INTERVIEW_Jordie_Barrett_Rennies_signing_big_news_for_NZ_rugby_202635_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/48096677/rugby-world-cup-2027-historic-dave-rennie-appointment-add-intrigue-new-zealand-all-blacks-australia-wallabies"
+    }
+   ],
+   "resultados": null,
+   "peleadores": null
+  },
+  "f1": {
+   "compitiendo": [
+    {
+     "nombre": "Fórmula 1 2026",
+     "liga": null,
+     "ruta": null
+    }
+   ],
+   "posiciones": {
+    "titulo": "Temporada 2026 · tras 12 carreras",
+    "tipo": "f1",
+    "filas": [
+     {
+      "pos": 1,
+      "equipo": "Andrea Kimi Antonelli",
+      "abrev": "ANT",
+      "detalle": "Mercedes",
+      "pts": "242",
+      "g": "6",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "nacionalidad": "Italian",
+      "color": "#00D2BE",
+      "numero": "12",
+      "driverId": "antonelli",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 2,
+      "equipo": "George Russell",
+      "abrev": "RUS",
+      "detalle": "Mercedes",
+      "pts": "183",
+      "g": "2",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#00D2BE",
+      "numero": "63",
+      "driverId": "russell",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5503.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 3,
+      "equipo": "Lewis Hamilton",
+      "abrev": "HAM",
+      "detalle": "Ferrari",
+      "pts": "183",
+      "g": "1",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#DC0000",
+      "numero": "44",
+      "driverId": "hamilton",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/868.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 4,
+      "equipo": "Lando Norris",
+      "abrev": "NOR",
+      "detalle": "McLaren",
+      "pts": "159",
+      "g": "2",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#FF8700",
+      "numero": "1",
+      "driverId": "norris",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5579.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 5,
+      "equipo": "Charles Leclerc",
+      "abrev": "LEC",
+      "detalle": "Ferrari",
+      "pts": "155",
+      "g": "1",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
+      "nacionalidad": "Monegasque",
+      "color": "#DC0000",
+      "numero": "16",
+      "driverId": "leclerc",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5498.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 6,
+      "equipo": "Max Verstappen",
+      "abrev": "VER",
+      "detalle": "Red Bull",
+      "pts": "112",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+      "nacionalidad": "Dutch",
+      "color": "#00327D",
+      "numero": "3",
+      "driverId": "max_verstappen",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 7,
+      "equipo": "Oscar Piastri",
+      "abrev": "PIA",
+      "detalle": "McLaren",
+      "pts": "104",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+      "nacionalidad": "Australian",
+      "color": "#FF8700",
+      "numero": "81",
+      "driverId": "piastri",
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 8,
+      "equipo": "Isack Hadjar",
+      "abrev": "HAD",
+      "detalle": "Red Bull",
+      "pts": "68",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#00327D",
+      "numero": "6",
+      "driverId": "hadjar",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 9,
+      "equipo": "Liam Lawson",
+      "abrev": "LAW",
+      "detalle": "RB F1 Team",
+      "pts": "49",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+      "nacionalidad": "New Zealander",
+      "color": "#6692FF",
+      "numero": "30",
+      "driverId": "lawson",
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 10,
+      "equipo": "Pierre Gasly",
+      "abrev": "GAS",
+      "detalle": "Alpine F1 Team",
+      "pts": "44",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#FFF500",
+      "numero": "10",
+      "driverId": "gasly",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5501.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 11,
+      "equipo": "Arvid Lindblad",
+      "abrev": "LIN",
+      "detalle": "RB F1 Team",
+      "pts": "23",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#6692FF",
+      "numero": "41",
+      "driverId": "arvid_lindblad",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 12,
+      "equipo": "Franco Colapinto",
+      "abrev": "COL",
+      "detalle": "Alpine F1 Team",
+      "pts": "19",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+      "nacionalidad": "Argentine",
+      "color": "#FFF500",
+      "numero": "43",
+      "driverId": "colapinto",
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 13,
+      "equipo": "Oliver Bearman",
+      "abrev": "BEA",
+      "detalle": "Haas F1 Team",
+      "pts": "18",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#5A5A5A",
+      "numero": "87",
+      "driverId": "bearman",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg/330px-2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 14,
+      "equipo": "Gabriel Bortoleto",
+      "abrev": "BOR",
+      "detalle": "Audi",
+      "pts": "10",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "nacionalidad": "Brazilian",
+      "color": "#FF2D00",
+      "numero": "5",
+      "driverId": "bortoleto",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "logo": null,
+      "mio": false,
+      "fotoDeWiki": true
+     },
+     {
+      "pos": 15,
+      "equipo": "Nico Hülkenberg",
+      "abrev": "HUL",
+      "detalle": "Audi",
+      "pts": "6",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "nacionalidad": "German",
+      "color": "#FF2D00",
+      "numero": "27",
+      "driverId": "hulkenberg",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 16,
+      "equipo": "Carlos Sainz",
+      "abrev": "SAI",
+      "detalle": "Williams",
+      "pts": "6",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "nacionalidad": "Spanish",
+      "color": "#FFFFFF",
+      "numero": "55",
+      "driverId": "sainz",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4686.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 17,
+      "equipo": "Alexander Albon",
+      "abrev": "ALB",
+      "detalle": "Williams",
+      "pts": "5",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/tha.png",
+      "nacionalidad": "Thai",
+      "color": "#FFFFFF",
+      "numero": "23",
+      "driverId": "albon",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5592.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 18,
+      "equipo": "Esteban Ocon",
+      "abrev": "OCO",
+      "detalle": "Haas F1 Team",
+      "pts": "3",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#5A5A5A",
+      "numero": "31",
+      "driverId": "ocon",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4678.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 19,
+      "equipo": "Fernando Alonso",
+      "abrev": "ALO",
+      "detalle": "Aston Martin",
+      "pts": "3",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "nacionalidad": "Spanish",
+      "color": "#006F62",
+      "numero": "14",
+      "driverId": "alonso",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/348.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 20,
+      "equipo": "Yuki Tsunoda",
+      "abrev": "TSU",
+      "detalle": "RB F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+      "nacionalidad": "Japanese",
+      "color": "#6692FF",
+      "numero": "22",
+      "driverId": "tsunoda",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5652.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 21,
+      "equipo": "Lance Stroll",
+      "abrev": "STR",
+      "detalle": "Aston Martin",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+      "nacionalidad": "Canadian",
+      "color": "#006F62",
+      "numero": "18",
+      "driverId": "stroll",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4775.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 22,
+      "equipo": "Valtteri Bottas",
+      "abrev": "BOT",
+      "detalle": "Cadillac F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fin.png",
+      "nacionalidad": "Finnish",
+      "color": "#A2AAAD",
+      "numero": "77",
+      "driverId": "bottas",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4520.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 23,
+      "equipo": "Sergio Pérez",
+      "abrev": "PER",
+      "detalle": "Cadillac F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+      "nacionalidad": "Mexican",
+      "color": "#A2AAAD",
+      "numero": "11",
+      "driverId": "perez",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
+      "logo": null,
+      "mio": false
+     }
+    ],
+    "escuderias": [
+     {
+      "pos": 1,
+      "equipo": "Mercedes",
+      "detalle": "German",
+      "pts": "425",
+      "g": "8",
+      "color": "#00D2BE",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 2,
+      "equipo": "Ferrari",
+      "detalle": "Italian",
+      "pts": "338",
+      "g": "2",
+      "color": "#DC0000",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 3,
+      "equipo": "McLaren",
+      "detalle": "British",
+      "pts": "263",
+      "g": "2",
+      "color": "#FF8700",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 4,
+      "equipo": "Red Bull",
+      "detalle": "Austrian",
+      "pts": "186",
+      "g": "0",
+      "color": "#00327D",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 5,
+      "equipo": "RB F1 Team",
+      "detalle": "Italian",
+      "pts": "66",
+      "g": "0",
+      "color": "#6692FF",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 6,
+      "equipo": "Alpine F1 Team",
+      "detalle": "French",
+      "pts": "63",
+      "g": "0",
+      "color": "#FFF500",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 7,
+      "equipo": "Haas F1 Team",
+      "detalle": "American",
+      "pts": "21",
+      "g": "0",
+      "color": "#5A5A5A",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 8,
+      "equipo": "Audi",
+      "detalle": "German",
+      "pts": "16",
+      "g": "0",
+      "color": "#FF2D00",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 9,
+      "equipo": "Williams",
+      "detalle": "British",
+      "pts": "11",
+      "g": "0",
+      "color": "#FFFFFF",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 10,
+      "equipo": "Aston Martin",
+      "detalle": "British",
+      "pts": "3",
+      "g": "0",
+      "color": "#006F62",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 11,
+      "equipo": "Cadillac F1 Team",
+      "detalle": "American",
+      "pts": "0",
+      "g": "0",
+      "color": "#A2AAAD",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+      "logo": null,
+      "mio": false
+     }
+    ]
+   },
+   "plantel": null,
+   "noticias": [
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-08-30T06:44:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
+     "titulo": "Lando Norris signs new contract to stay at McLaren until at least 2030",
+     "resumen": "Reigning world champion Lando Norris has committed his long-term future to McLaren after signing a new contract to remain at the team until at least 2030.",
+     "fecha": "2026-08-29T13:48:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0828/r1708263_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49755604/lando-norris-signs-new-contract-stay-mclaren-least-2030"
+    },
+    {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-08-29T09:36:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
+     "titulo": "Mercedes positive next big upgrade will close performance deficit to rivals Ferrari and McLaren",
+     "resumen": "Mercedes remains confident that its next major upgrade will recover the performance deficit its rivals have opened up at recent races.",
+     "fecha": "2026-08-28T13:17:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0828/r1708049_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49751971/mercedes-positive-next-big-upgrade-close-performance-deficit-rivals-ferrari-mclaren"
+    },
+    {
+     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
+     "fecha": "2026-08-28T08:53:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
+     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
+     "fecha": "2026-08-28T06:11:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
+    }
+   ],
+   "resultados": null,
+   "peleadores": null
+  },
+  "ufc": {
+   "compitiendo": [
+    {
+     "nombre": "Ultimate Fighting Championship",
+     "liga": "ufc",
+     "ruta": "mma"
+    }
+   ],
+   "posiciones": null,
+   "plantel": null,
+   "noticias": [
+    {
+     "titulo": "Song Yadong KO's Umar Nurmagomedov in massive UFC upset",
+     "resumen": "Song Yadong pulled off a massive upset by knocking out heavily favored Umar Nurmagomedov in the men's bantamweight main event of UFC Fight Night in Shanghai.",
+     "fecha": "2026-08-29T16:49:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0829/r1708497_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49762250/song-yadong-kos-umar-nurmagomedov-massive-ufc-upset-shanghai"
+    },
+    {
+     "titulo": "Gregory Rodrigues stands his ground, enters middleweight top 10",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-08-29T13:59:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706358_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
+    {
+     "titulo": "Injured UFC champion Ulberg hopes to return 'early next year'",
+     "resumen": "UFC light heavyweight champion Carlos Ulberg, who is recovering from an ACL tear, hopes to return to the Octagon \"early next year,\" he says.",
+     "fecha": "2026-08-27T17:30:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0412/r1642214_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49743588/injured-ufc-champion-ulberg-hopes-return-early-next-year"
+    },
+    {
+     "titulo": "Cris Cyborg is still going strong as a force in women's P4P top 10",
+     "resumen": "At age 41, PFL women's featherweight champion continues win streak to secure spot in ESPN P4P top 10.",
+     "fecha": "2026-08-26T14:12:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0825/r1706696_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
+    {
+     "titulo": "Alex Apodaca stuns MMA prodigy Bella Mir to earn UFC deal",
+     "resumen": "Alex Apodaca beat MMA prodigy Bella Mir in the biggest upset in Contender Series history Tuesday to earn a UFC contract.",
+     "fecha": "2026-08-26T13:55:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0826/r1706977_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49727305/alex-apodaca-stuns-mma-prodigy-bella-mir-earn-ufc-deal"
+    },
+    {
+     "titulo": "'Right now, I could be UFC champion': Bella Mir is the future face of fighting",
+     "resumen": "With Dana White as her mentor, the daughter of heavyweight champ Frank grapples for an NCAA title this weekend.",
+     "fecha": "2026-08-25T18:22:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0303/mma_bella-mir_16x9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/48113442/bella-mir-daughter-ufc-champion-frank-mir-ncaa-women-college-wrestling"
+    }
+   ],
+   "resultados": [
+    {
+     "titulo": "UFC Fight Night: Nurmagomedov vs. Song",
+     "fecha": "2026-08-29T07:00Z",
+     "marcador": null,
+     "sede": "Shanghai Oriental Sports Center"
+    },
+    {
+     "titulo": "UFC Fight Night: Hernandez vs. Rodrigues",
+     "fecha": "2026-08-22T21:00Z",
+     "marcador": null,
+     "sede": "Golden 1 Center"
+    },
+    {
+     "titulo": "UFC 330: Makhachev vs. Machado Garry",
+     "fecha": "2026-08-15T21:30Z",
+     "marcador": null,
+     "sede": "Xfinity Mobile Arena"
+    },
+    {
+     "titulo": "UFC Fight Night: Gamrot vs Salkilld",
+     "fecha": "2026-08-08T21:00Z",
+     "marcador": null,
+     "sede": "Meta APEX"
+    },
+    {
+     "titulo": "UFC Fight Night: Medić vs. Rodriguez",
+     "fecha": "2026-08-01T14:00Z",
+     "marcador": null,
+     "sede": "Belgrade Arena"
+    }
+   ],
+   "peleadores": [
+    {
+     "id": "2502364",
+     "nombre": "King Green",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Lightweight",
+     "record": "36-17-1",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5074121",
+     "nombre": "Alessandro Costa",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Flyweight",
+     "record": "17-5-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5157667",
+     "nombre": "Quillan Salkilld",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+     "categoria": "Lightweight",
+     "record": "13-1-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5216713",
+     "nombre": "Navajo Stirling",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+     "categoria": "Light Heavyweight",
+     "record": "11-0-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "4049391",
+     "nombre": "Josh Hokit",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Heavyweight",
+     "record": "10-0-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "3093653",
+     "nombre": "Sean Strickland",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Middleweight",
+     "record": "31-7-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3022345",
+     "nombre": "Justin Gaethje",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Lightweight",
+     "record": "28-5-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3151289",
+     "nombre": "Song Yadong",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
+     "categoria": "Bantamweight",
+     "record": "24-9-1",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4423264",
+     "nombre": "Tofiq Musayev",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
+     "categoria": "Lightweight",
+     "record": "24-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4336757",
+     "nombre": "Kai Asakura",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+     "categoria": "Bantamweight",
+     "record": "23-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4375156",
+     "nombre": "Charles Johnson",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Catch Weight",
+     "record": "20-9-0",
+     "peleas": 4,
+     "gano": 2
+    },
+    {
+     "id": "4205093",
+     "nombre": "Sean O'Malley",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Bantamweight",
+     "record": "20-3-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4405109",
+     "nombre": "Sumudaerji",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
+     "categoria": "Flyweight",
+     "record": "20-7-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4690541",
+     "nombre": "Gregory Rodrigues",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Middleweight",
+     "record": "20-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5099679",
+     "nombre": "Marcio Barbosa",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Featherweight",
+     "record": "19-2-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4410868",
+     "nombre": "Mario Bautista",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Bantamweight",
+     "record": "18-3-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4397782",
+     "nombre": "Joselyne Edwards",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+     "categoria": "W Bantamweight",
+     "record": "18-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4566308",
+     "nombre": "Ketlen Souza",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "W Strawweight",
+     "record": "17-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5016786",
+     "nombre": "Farid Basharat",
+     "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
+     "categoria": "Bantamweight",
+     "record": "16-0-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5204223",
+     "nombre": "Kaan Ofli",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+     "categoria": "Featherweight",
+     "record": "15-4-1",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4694832",
+     "nombre": "Cam Rowston",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+     "categoria": "Middleweight",
+     "record": "15-3-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "5289841",
+     "nombre": "Daniil Donchenko",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
+     "categoria": "Welterweight",
+     "record": "15-2-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "5085291",
+     "nombre": "Manoel Sousa",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Lightweight",
+     "record": "15-1-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5060483",
+     "nombre": "Vitor Petrino",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Heavyweight",
+     "record": "15-2-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4848674",
+     "nombre": "Christian Leroy Duncan",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+     "categoria": "Middleweight",
+     "record": "15-2-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5075992",
+     "nombre": "Alexia Thainara",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "W Strawweight",
+     "record": "15-1-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5122238",
+     "nombre": "Mauricio Ruffy",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Lightweight",
+     "record": "14-2-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4001837",
+     "nombre": "Rizvan Kuniev",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+     "categoria": "Heavyweight",
+     "record": "14-3-1",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4685870",
+     "nombre": "Uroš Medić",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ser.png",
+     "categoria": "Welterweight",
+     "record": "14-3-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5076027",
+     "nombre": "Édgar Cháirez",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "categoria": "Flyweight",
+     "record": "14-6-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "5146696",
+     "nombre": "Luke Riley",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+     "categoria": "Featherweight",
+     "record": "14-0-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5099732",
+     "nombre": "Alden Coria",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Flyweight",
+     "record": "13-3-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4686237",
+     "nombre": "Robert Valentin",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+     "categoria": "Middleweight",
+     "record": "13-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5213352",
+     "nombre": "Diyar Nurgozhay",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
+     "categoria": "Light Heavyweight",
+     "record": "12-2-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5223435",
+     "nombre": "Jose Miguel Delgado",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "categoria": "Featherweight",
+     "record": "12-2-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "5137012",
+     "nombre": "Rei Tsuruya",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+     "categoria": "Flyweight",
+     "record": "12-1-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5218421",
+     "nombre": "Ateba Gautier",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/cmr.png",
+     "categoria": "Middleweight",
+     "record": "11-1-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "4629138",
+     "nombre": "Jean-Paul Lebosnoyani",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Welterweight",
+     "record": "11-2-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5212849",
+     "nombre": "Tommy McMillen",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Featherweight",
+     "record": "11-0-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
+     "id": "5236142",
+     "nombre": "Jonathan Micallef",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+     "categoria": "Welterweight",
+     "record": "10-1-0",
+     "peleas": 2,
+     "gano": 2
+    }
+   ]
+  }
+ }
+}

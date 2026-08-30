@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Panel</title>
+<meta name="description" content="Deportes, plata, Instagram y campamento. Todo en un lugar.">
+<meta name="theme-color" content="#0d0d10">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Panel">
+<link rel="apple-touch-icon" href="iconos/panel-180.png">
+<link rel="icon" href="iconos/panel-32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="hub.css?v=1">
+</head>
+<body>
+
+<!-- El fondo: una grilla que respira. Se apaga sola si pediste menos movimiento. -->
+<canvas id="fondo" aria-hidden="true"></canvas>
+
+<header class="cabecera">
+  <h1 class="marca">Panel</h1>
+  <p class="fecha" id="fecha"></p>
+</header>
+
+<main class="tiras" id="tiras">
+
+  <a class="tira" href="deportes/" data-lado="deportes" style="--t:#6cbdf2; --t2:#f2c400; --fondo:#0b1020; --texto:#eef2ff; --tenue:#8b93b5">
+    <span class="num">01</span>
+    <div class="cuerpo">
+      <h2>Deportes</h2>
+      <p class="que">Boca, la Selección, Inter Miami, la Fórmula 1, los Pumas y el UFC. Con avisos antes de cada partido.</p>
+      <p class="vivo" id="vivo-deportes"></p>
+    </div>
+    <span class="flecha" aria-hidden="true">→</span>
+  </a>
+
+  <a class="tira claro" href="plata/" data-lado="plata" style="--t:#0A7A6C; --t2:#B3801A; --fondo:#EBEDEF; --texto:#141C24; --tenue:#4B5966">
+    <span class="num">02</span>
+    <div class="cuerpo">
+      <h2>Plata en Mano</h2>
+      <p class="que">Cuánto entra, cuánto sale y cuánto queda libre. Sueldos, cuotas y gastos fijos.</p>
+      <p class="vivo" id="vivo-plata"></p>
+    </div>
+    <span class="flecha" aria-hidden="true">→</span>
+  </a>
+
+  <a class="tira" href="instagram/" data-lado="instagram" style="--t:#c13584; --t2:#f56040; --fondo:#08080c; --texto:#f4f4f8; --tenue:#8f8fa3">
+    <span class="num">03</span>
+    <div class="cuerpo">
+      <h2>Instagram</h2>
+      <p class="que">El panel de la cuenta: qué publicar, cuándo, y cómo viene rindiendo cada posteo.</p>
+      <p class="vivo">Calendario, ideas y números <span class="mini">de la cuenta</span></p>
+    </div>
+    <span class="flecha" aria-hidden="true">→</span>
+  </a>
+
+  <a class="tira" href="campamento/" data-lado="campamento" style="--t:#ff9a4d; --t2:#b48cff; --fondo:#121216; --texto:#f2f0eb; --tenue:#b9b6ad">
+    <span class="num">04</span>
+    <div class="cuerpo">
+      <h2>Campamento</h2>
+      <p class="que">El plan de 30 días, semana por semana, con lo que toca hacer cada día.</p>
+      <p class="vivo" id="vivo-campamento"></p>
+    </div>
+    <span class="flecha" aria-hidden="true">→</span>
+  </a>
+
+</main>
+
+<footer class="pie">
+  <span>Todo se guarda en tu teléfono y en tu cuenta de GitHub.</span>
+</footer>
+
+<script src="hub.js?v=1" type="module"></script>
+</body>
+</html>

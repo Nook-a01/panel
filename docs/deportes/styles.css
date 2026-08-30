@@ -1,0 +1,477 @@
+/* ============================================================
+   MIS DEPORTES — maximalismo retro
+   Referencias: Cameron's World (collage, estrellas, densidad),
+   Metronomy/Because (ruido, capas), con las curvas de animación
+   de Studio Size y waaark.
+   ============================================================ */
+
+:root{
+  --negro:#05010f;
+  --tinta:#0d0524;
+  --papel:#f4ecd8;          /* papel viejo, para las "ventanas" */
+  --papel2:#e6d9bd;
+  --borde:#000;
+
+  --chrome1:#dfe0e8;        /* biselado tipo Win95 */
+  --chrome2:#9a9aa8;
+  --chrome3:#5a5a68;
+
+  --futbol:#00e05a;
+  --rugby:#38d0ff;
+  --f1:#ff2d2d;
+  --ufc:#ffb300;
+  --magenta:#ff00c8;
+  --cian:#00fff0;
+  --amarillo:#ffe600;
+
+  /* curvas sacadas de las referencias */
+  --ease:cubic-bezier(.51,.01,.2,1);
+  --ease-fuerte:cubic-bezier(.77,0,.175,1);
+
+  --pixel:"Press Start 2P", "Courier New", monospace;
+  --term:"VT323", "Courier New", monospace;
+  --sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--negro);
+  color:var(--papel);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.45;
+  overflow-x:hidden;
+  min-height:100vh;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M3 2 L3 19 L7.5 15 L10.5 21.5 L13.5 20 L10.5 13.8 L16.5 13.5 Z' fill='%23fff' stroke='%23000' stroke-width='1.6'/%3E%3C/svg%3E") 2 2, auto;
+}
+
+/* ---------- fondo ---------- */
+#estrellas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#scanlines{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%);
+  mix-blend-mode:multiply;
+  opacity:.5;
+}
+
+/* ---------- carga ---------- */
+#cargando{
+  position:fixed;inset:0;z-index:200;background:var(--negro);
+  display:grid;place-items:center;
+  transition:opacity .5s var(--ease), visibility .5s;
+}
+#cargando.fuera{opacity:0;visibility:hidden}
+.carga-marco{text-align:center;padding:20px}
+.carga-logo{
+  font-family:var(--pixel);font-size:22px;line-height:1.8;
+  color:var(--amarillo);
+  text-shadow:3px 3px 0 var(--magenta), 6px 6px 0 var(--cian);
+  animation:tiembla .35s steps(2) infinite;
+}
+.carga-barra{
+  width:min(260px,70vw);height:18px;margin:22px auto 10px;
+  border:3px solid var(--papel);background:#000;
+  box-shadow:4px 4px 0 var(--magenta);
+}
+.carga-barra i{
+  display:block;height:100%;width:0;
+  background:repeating-linear-gradient(90deg,var(--cian) 0 8px,var(--amarillo) 8px 16px);
+  animation:carga 1.1s var(--ease) forwards;
+}
+.carga-txt{font-family:var(--pixel);font-size:9px;letter-spacing:.1em;color:var(--cian)}
+@keyframes carga{to{width:100%}}
+@keyframes tiembla{0%,100%{transform:translate(0,0)}50%{transform:translate(-1px,1px)}}
+
+/* ---------- ticker ---------- */
+#ticker{
+  position:relative;z-index:10;
+  background:var(--amarillo);color:#000;
+  border-bottom:4px solid #000;
+  overflow:hidden;height:30px;display:flex;align-items:center;
+}
+#ticker-pista{
+  display:flex;width:max-content;
+  font-family:var(--pixel);font-size:9px;
+  animation:corre 55s linear infinite;
+}
+#ticker-pista > span{white-space:nowrap;padding-right:38px}
+#ticker-pista b{color:#c1006e}
+/* Se desplaza justo la mitad: la segunda copia queda donde estaba la primera. */
+@keyframes corre{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- cabecera ---------- */
+#top{
+  position:relative;z-index:10;
+  display:flex;align-items:center;gap:10px;
+  padding:calc(10px + env(safe-area-inset-top)) 12px 10px;
+  max-width:900px;margin:0 auto;
+}
+.marca{
+  flex:1;text-align:left;background:none;border:none;padding:0;
+  cursor:inherit;font-family:inherit;
+}
+.marca-txt{
+  display:block;
+  font-family:var(--pixel);font-size:clamp(15px,5.2vw,26px);
+  color:var(--papel);
+  text-shadow:2px 2px 0 var(--magenta), 4px 4px 0 var(--cian);
+  letter-spacing:.02em;
+}
+.marca-sub{
+  display:block;margin-top:6px;
+  font-family:var(--term);font-size:15px;color:var(--cian);letter-spacing:.14em;
+}
+.parpadea{animation:parpadeo 1s steps(1) infinite;color:var(--f1)}
+@keyframes parpadeo{50%{opacity:0}}
+
+/* ---------- botón biselado tipo 95 ---------- */
+.btn3d{
+  font-family:var(--pixel);font-size:8px;letter-spacing:.04em;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 11px;color:#000;
+  background:var(--chrome1);
+  border:2px solid #000;
+  box-shadow:inset -2px -2px 0 var(--chrome3), inset 2px 2px 0 #fff, 3px 3px 0 #000;
+  cursor:inherit;
+  transition:transform .09s var(--ease), box-shadow .09s var(--ease);
+}
+.btn3d:active{
+  transform:translate(3px,3px);
+  box-shadow:inset 2px 2px 0 var(--chrome3), inset -2px -2px 0 #fff, 0 0 0 #000;
+}
+.btn3d.on{background:var(--futbol);box-shadow:inset -2px -2px 0 #068a38, inset 2px 2px 0 #b6ffd4, 3px 3px 0 #000}
+.btn3d[disabled]{opacity:.5}
+
+/* ---------- anillo de navegación ---------- */
+#anillo{
+  position:relative;z-index:10;
+  display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
+  padding:4px 12px 14px;max-width:900px;margin:0 auto;
+  -webkit-overflow-scrolling:touch;
+}
+#anillo::-webkit-scrollbar{display:none}
+.ficha{
+  flex:0 0 auto;position:relative;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  width:78px;padding:8px 4px;
+  background:var(--tinta);
+  border:3px solid var(--c,var(--papel));
+  color:var(--papel);cursor:inherit;font-family:inherit;
+  box-shadow:4px 4px 0 var(--c,#000);
+  transition:transform .18s var(--ease-fuerte), box-shadow .18s var(--ease-fuerte);
+}
+.ficha:active{transform:translate(4px,4px);box-shadow:0 0 0 #000}
+.ficha .em{font-size:22px;line-height:1;filter:drop-shadow(0 0 6px var(--c))}
+.ficha .nom{font-family:var(--pixel);font-size:6.5px;text-align:center;line-height:1.5}
+.ficha .cnt{
+  position:absolute;top:-9px;right:-9px;
+  background:var(--f1);color:#fff;border:2px solid #000;
+  font-family:var(--pixel);font-size:7px;padding:2px 4px;
+}
+.ficha.activa{
+  background:var(--c);color:#000;
+  animation:late 1.6s var(--ease) infinite;
+}
+.ficha.activa .nom{color:#000}
+@keyframes late{0%,100%{box-shadow:4px 4px 0 #000}50%{box-shadow:4px 4px 0 #000, 0 0 18px var(--c)}}
+
+/* ---------- contenedor ---------- */
+main{
+  position:relative;z-index:5;
+  max-width:900px;margin:0 auto;
+  padding:0 12px calc(40px + env(safe-area-inset-bottom));
+}
+
+/* ---------- ventana tipo sistema operativo viejo ---------- */
+.ventana{
+  background:var(--papel);color:#111;
+  border:3px solid #000;
+  box-shadow:7px 7px 0 #000;
+  margin-bottom:22px;
+}
+.ventana-barra{
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,var(--c,#2a1a5e),#000);
+  color:#fff;padding:6px 8px;border-bottom:3px solid #000;
+}
+.ventana-barra .tit{
+  flex:1;font-family:var(--pixel);font-size:8px;letter-spacing:.05em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.ventana-barra .bolas{display:flex;gap:4px}
+.ventana-barra .bolas i{
+  width:12px;height:12px;background:var(--chrome1);
+  border:2px solid #000;display:block;
+}
+.ventana-cuerpo{padding:14px}
+
+/* ---------- pestañas ---------- */
+.pestanas{
+  display:flex;gap:4px;flex-wrap:wrap;
+  padding:10px 10px 0;background:var(--papel2);
+  border-bottom:3px solid #000;
+}
+.pest{
+  font-family:var(--pixel);font-size:7.5px;
+  padding:8px 9px;background:var(--chrome2);color:#000;
+  border:2px solid #000;border-bottom:none;cursor:inherit;
+  position:relative;top:3px;
+  transition:background .15s var(--ease), top .15s var(--ease);
+}
+.pest.on{background:var(--papel);top:0;padding-bottom:11px}
+.pest[disabled]{opacity:.4}
+
+/* ---------- próximo evento ---------- */
+.destacado{
+  background:#000;color:var(--papel);
+  border:3px solid var(--c,var(--amarillo));
+  box-shadow:0 0 0 3px #000, 8px 8px 0 var(--c,var(--amarillo));
+  padding:16px;margin-bottom:22px;position:relative;overflow:hidden;
+}
+.destacado::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(255,255,255,.03) 10px 20px);
+  pointer-events:none;
+}
+.destacado .etiqueta{
+  font-family:var(--pixel);font-size:8px;color:var(--c,var(--amarillo));
+  letter-spacing:.14em;margin-bottom:10px;
+}
+.destacado h2{
+  font-family:var(--pixel);font-size:clamp(12px,3.8vw,17px);
+  line-height:1.7;margin-bottom:8px;
+}
+.destacado .meta{font-family:var(--term);font-size:18px;color:var(--cian);line-height:1.3}
+
+/* odómetro estilo contador de visitas */
+.odometro{display:flex;gap:3px;margin-top:14px;flex-wrap:wrap;align-items:flex-end}
+.odo-grupo{display:flex;gap:2px}
+.odo-d{
+  background:#000;color:var(--futbol);
+  border:2px solid var(--futbol);
+  font-family:var(--term);font-size:30px;line-height:1;
+  padding:2px 6px;min-width:26px;text-align:center;
+  text-shadow:0 0 8px var(--futbol);
+}
+.odo-sep{font-family:var(--term);font-size:24px;color:var(--papel);padding:0 2px;align-self:center}
+.odo-lbl{font-family:var(--pixel);font-size:6px;color:var(--papel);opacity:.7;margin-top:4px;text-align:center;width:100%}
+
+/* ---------- listas de eventos ---------- */
+.mes{
+  font-family:var(--pixel);font-size:9px;color:#000;
+  background:var(--c,var(--amarillo));
+  display:inline-block;padding:5px 8px;border:2px solid #000;
+  margin:16px 0 10px;box-shadow:3px 3px 0 #000;
+}
+.ev{
+  display:flex;gap:10px;align-items:center;
+  background:#fff;border:2px solid #000;
+  padding:9px;margin-bottom:7px;
+  box-shadow:3px 3px 0 rgba(0,0,0,.35);
+  transition:transform .16s var(--ease), box-shadow .16s var(--ease);
+}
+.ev:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,0,0,.5)}
+.ev.jugado{opacity:.55;background:var(--papel2)}
+.ev.hoy{border-color:var(--f1);box-shadow:3px 3px 0 var(--f1);background:#fff8d6}
+.ev .dia{
+  flex:0 0 44px;text-align:center;border-right:2px solid #000;padding-right:8px;
+}
+.ev .dia b{display:block;font-family:var(--term);font-size:26px;line-height:1}
+.ev .dia i{display:block;font-family:var(--pixel);font-size:6px;font-style:normal;margin-top:2px}
+.ev .cuerpo{flex:1;min-width:0}
+.ev .cuerpo .t{font-weight:700;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ev .cuerpo .s{font-family:var(--term);font-size:15px;color:#444;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ev .hora{font-family:var(--term);font-size:22px;flex:0 0 auto;text-align:right}
+.ev .marc{
+  font-family:var(--pixel);font-size:10px;background:#000;color:var(--amarillo);
+  padding:5px 7px;border:2px solid var(--amarillo);
+}
+
+/* ---------- tabla de posiciones ---------- */
+.tabla{width:100%;border-collapse:collapse;font-family:var(--term);font-size:17px}
+.tabla th{
+  font-family:var(--pixel);font-size:7px;background:#000;color:var(--amarillo);
+  padding:7px 4px;text-align:left;
+}
+.tabla td{padding:6px 4px;border-bottom:2px solid rgba(0,0,0,.15)}
+.tabla tr.mio{background:var(--amarillo);font-weight:700}
+.tabla tr.mio td{border-bottom-color:#000}
+.tabla .num{text-align:center;width:26px}
+.tabla .eq{display:flex;align-items:center;gap:6px}
+.tabla .eq img{width:18px;height:18px;object-fit:contain}
+.tabla .pts{text-align:right;font-weight:700}
+
+/* ---------- plantel ---------- */
+.grupo-pos{
+  font-family:var(--pixel);font-size:8px;margin:14px 0 8px;
+  background:#000;color:var(--papel);display:inline-block;padding:4px 7px;
+}
+.plantel{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.jug{
+  background:#fff;border:2px solid #000;padding:8px;
+  display:flex;gap:8px;align-items:center;
+  box-shadow:3px 3px 0 rgba(0,0,0,.3);
+}
+.jug .dor{
+  font-family:var(--term);font-size:26px;line-height:1;
+  background:#000;color:var(--amarillo);padding:3px 6px;min-width:34px;text-align:center;
+}
+.jug .info{min-width:0}
+.jug .info b{display:block;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jug .info span{font-family:var(--term);font-size:14px;color:#555}
+.jug.lesionado{background:#ffe2e2}
+.jug.lesionado::after{content:"✚";color:var(--f1);font-weight:700;margin-left:auto}
+
+/* ---------- noticias ---------- */
+.nota{
+  display:block;background:#fff;border:2px solid #000;
+  padding:10px;margin-bottom:8px;text-decoration:none;color:#111;
+  box-shadow:3px 3px 0 rgba(0,0,0,.3);
+  transition:transform .16s var(--ease);
+}
+.nota:hover{transform:translate(-2px,-2px)}
+.nota b{display:block;font-size:14px;line-height:1.35;margin-bottom:4px}
+.nota p{font-family:var(--term);font-size:15px;color:#444;line-height:1.25}
+.nota time{font-family:var(--pixel);font-size:6.5px;color:#888;display:block;margin-top:6px}
+
+/* ---------- en construcción ---------- */
+.obra{
+  text-align:center;padding:26px 14px;
+  background:repeating-linear-gradient(45deg,#000 0 14px,var(--amarillo) 14px 28px);
+  border:3px solid #000;
+}
+.obra .cartel{
+  background:var(--papel);border:3px solid #000;padding:14px;
+  display:inline-block;box-shadow:5px 5px 0 #000;
+}
+.obra .icono{font-size:32px;animation:balanceo 2.2s var(--ease) infinite}
+.obra b{display:block;font-family:var(--pixel);font-size:9px;margin:8px 0 6px;color:#000}
+.obra span{font-family:var(--term);font-size:16px;color:#333;display:block;max-width:280px}
+@keyframes balanceo{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
+
+/* ---------- fichas de la portada ---------- */
+.mosaico{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:6px}
+.tarjeta{
+  background:var(--tinta);border:3px solid var(--c);
+  box-shadow:5px 5px 0 var(--c);
+  padding:12px;text-align:left;cursor:inherit;color:var(--papel);
+  font-family:inherit;
+  transition:transform .2s var(--ease-fuerte), box-shadow .2s var(--ease-fuerte);
+}
+.tarjeta:active{transform:translate(5px,5px);box-shadow:0 0 0}
+.tarjeta .em{font-size:30px;display:block;filter:drop-shadow(0 0 8px var(--c))}
+.tarjeta .nom{font-family:var(--pixel);font-size:9px;margin:8px 0 6px;display:block;line-height:1.6}
+.tarjeta .dato{font-family:var(--term);font-size:16px;color:var(--cian);display:block;line-height:1.25}
+.tarjeta .comp{font-family:var(--term);font-size:14px;color:var(--papel);opacity:.7;display:block;margin-top:4px}
+
+/* ---------- pie ---------- */
+#pie{
+  position:relative;z-index:5;text-align:center;
+  padding:24px 12px calc(30px + env(safe-area-inset-bottom));
+  border-top:3px solid var(--tinta);
+}
+.contador{
+  display:inline-flex;gap:2px;margin-bottom:10px;
+}
+.contador i{
+  font-family:var(--term);font-size:20px;font-style:normal;
+  background:#000;color:var(--futbol);border:2px solid var(--futbol);
+  padding:1px 5px;
+}
+#pie-txt{font-family:var(--term);font-size:16px;color:var(--cian)}
+.pie-mini{font-family:var(--pixel);font-size:6px;color:#5b5470;margin-top:8px;line-height:2}
+
+/* ---------- aviso flotante ---------- */
+#aviso{
+  position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));
+  max-width:520px;margin:0 auto;z-index:150;
+  background:var(--papel);color:#111;border:3px solid #000;
+  box-shadow:7px 7px 0 var(--magenta);
+  padding:13px 15px;font-size:14px;line-height:1.4;
+}
+#aviso b{display:block;font-family:var(--pixel);font-size:8px;margin-bottom:7px}
+#aviso code{background:#000;color:var(--amarillo);padding:1px 4px;font-size:12px}
+#aviso.err{box-shadow:7px 7px 0 var(--f1)}
+#aviso.ok{box-shadow:7px 7px 0 var(--futbol)}
+
+/* ---------- revelado al hacer scroll ----------
+   Por defecto TODO se ve. Sólo cuando el JS confirma que puede animar
+   agrega .anim al <html> y entonces esconde para revelar. Si el JS
+   falla o tarda, el contenido igual está a la vista. */
+.rev{opacity:1;transform:none}
+html.anim .rev{opacity:0;transform:translateY(26px)}
+html.anim .rev.visible{
+  opacity:1;transform:none;
+  transition:opacity .55s var(--ease), transform .55s var(--ease-fuerte);
+}
+
+/* fundido al cambiar de sección */
+#vista{transition:opacity .13s var(--ease)}
+#vista.saliendo{opacity:0}
+
+.vacio{
+  font-family:var(--term);font-size:18px;text-align:center;
+  padding:30px 16px;color:#555;
+}
+
+/* ---------- accesibilidad / rendimiento ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  .rev{opacity:1;transform:none}
+  #ticker-pista{animation:none;padding-left:0}
+}
+
+@media (max-width:380px){
+  .marca-txt{font-size:14px}
+  .plantel{grid-template-columns:1fr}
+}
+
+/* Evento en curso: reemplaza al contador */
+.jugando{
+  font-family:var(--pixel);font-size:12px;color:var(--f1);
+  text-shadow:0 0 12px var(--f1);
+  /* Pulsa, no parpadea: es un dato importante y no puede
+     quedar invisible la mitad del tiempo. */
+  animation:pulso 1.4s var(--ease) infinite;
+  display:inline-block;padding-top:6px;
+}
+@keyframes pulso{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* ---------- escudos ----------
+   El <img> se apila encima del emoji de respaldo. Si la imagen no carga,
+   el script la borra y queda el emoji, sin dejar un hueco. */
+.escudo{position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;flex:0 0 auto;vertical-align:middle}
+.escudo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 0 5px rgba(0,0,0,.65))}
+/* El emoji solo aparece si la imagen fallo: si estuviera siempre,
+   se transparentaria a traves de los logos con fondo calado. */
+.escudo .emoji-resp{display:none;font-size:22px;line-height:1}
+.escudo.sin-img .emoji-resp{display:block}
+.emoji-resp{display:inline-block}
+
+/* tamaños según dónde aparece */
+.escudo.em{width:40px;height:40px}
+.escudo.em .emoji-resp{font-size:26px}
+.escudo.grande{width:46px;height:46px;margin-right:4px}
+.escudo.grande .emoji-resp{font-size:30px}
+.escudo.chico{width:18px;height:18px}
+.escudo.chico .emoji-resp{font-size:13px}
+.escudo.mini{width:20px;height:20px;margin-right:2px}
+.escudo.mini .emoji-resp{font-size:14px}
+
+/* en las fichas y tarjetas el escudo ya no necesita el resplandor del emoji */
+.ficha .escudo img,.tarjeta .escudo img{filter:drop-shadow(0 0 7px var(--c))}
+.tarjeta .escudo{margin-bottom:2px}
+
+/* las filas de evento alinean escudo + texto en una sola línea */
+.ev .cuerpo .t{display:flex;align-items:center;gap:5px}
+.ev .cuerpo .t > span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

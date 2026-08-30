@@ -1,0 +1,284 @@
+/* ─────────────────────────────────────────────────────────────
+   El hub: cuatro tiras, cada una pintada con los colores exactos
+   de la página a la que lleva. Así entrar en una sección no es un
+   salto: el color que tocaste es el color que te recibe.
+
+   Las curvas de movimiento están tomadas de las páginas que
+   pasaste de referencia, medidas una por una:
+     .51,.01,.2,1   → studio-size.com (300 ms, el deslizamiento)
+     .77,0,.175,1   → waaark.com      (paneles grandes)
+     .4,0,.6,1      → apple.com       (apariciones al bajar)
+   ───────────────────────────────────────────────────────────── */
+
+:root{
+  --papel:#0d0d10;
+  --tinta:#f2f2f4;
+  --tenue-hub:#75757f;
+  --linea:#22222a;
+
+  --size:cubic-bezier(.51,.01,.2,1);
+  --waaark:cubic-bezier(.77,0,.175,1);
+  --apple:cubic-bezier(.4,0,.6,1);
+
+  --display:'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:var(--display);
+  -webkit-font-smoothing:antialiased;
+  display:flex;
+  flex-direction:column;
+  overflow-x:hidden;
+}
+
+#fondo{
+  position:fixed; inset:0;
+  width:100%; height:100%;
+  z-index:0;
+  opacity:.5;
+  pointer-events:none;
+}
+
+/* ── cabecera ─────────────────────────────────────────────── */
+.cabecera{
+  position:relative; z-index:2;
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:1rem;
+  padding:max(1.4rem, env(safe-area-inset-top)) 1.5rem .9rem;
+}
+.marca{
+  margin:0;
+  font-size:clamp(1.5rem, 4.5vw, 2.1rem);
+  font-weight:900;
+  letter-spacing:-.045em;
+  line-height:1;
+}
+/* El punto que sigue a la palabra: el guiño editorial de pollen.design */
+.marca::after{
+  content:"";
+  display:inline-block;
+  width:.28em; height:.28em;
+  margin-left:.16em;
+  border-radius:50%;
+  background:currentColor;
+  vertical-align:baseline;
+  animation:latido 3.2s var(--apple) infinite;
+}
+@keyframes latido{
+  0%,72%,100%{ transform:scale(1);   opacity:1 }
+  82%        { transform:scale(.45); opacity:.35 }
+}
+.fecha{
+  margin:0;
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--tenue-hub);
+  text-align:right;
+}
+
+/* ── las cuatro tiras ─────────────────────────────────────── */
+.tiras{
+  position:relative; z-index:2;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:0 .75rem .75rem;
+  min-height:0;
+}
+
+.tira{
+  position:relative;
+  flex:1 1 0;
+  display:flex;
+  align-items:center;
+  gap:clamp(.8rem, 3vw, 1.6rem);
+  padding:clamp(.9rem, 2.6vw, 1.6rem) clamp(1rem, 3vw, 1.9rem);
+  border-radius:14px;
+  background:var(--fondo);
+  color:var(--texto);
+  text-decoration:none;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid transparent;
+
+  /* Entrada escalonada. El retraso lo pone el JS por orden. */
+  opacity:0;
+  transform:translateY(18px);
+  transition:
+    flex-grow .42s var(--size),
+    transform .42s var(--size),
+    opacity   .42s var(--apple),
+    border-color .3s var(--apple);
+}
+.tira.entro{ opacity:1; transform:none }
+
+/* El barrido de color: la marca de la casa de waaark. Sale del
+   borde izquierdo y cruza la tira cuando la tocás. */
+.tira::before{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(102deg, var(--t) 0%, var(--t2) 100%);
+  opacity:0;
+  transform:translateX(-101%);
+  transition:transform .5s var(--waaark), opacity .3s var(--apple);
+}
+/* El contenido va por encima del barrido, siempre. Si el texto quedara
+   abajo habría que invertirle el color a mitad de camino, y durante ese
+   medio segundo el título se vuelve ilegible: el barrido tapó la
+   izquierda pero todavía no la derecha. Ya nos pasó. Ahora el barrido
+   entra tenue por detrás y el texto no se toca. */
+.num, .cuerpo, .flecha{ position:relative; z-index:1 }
+/* La línea de color pegada al borde: siempre visible, para que
+   cada tira se reconozca sin tener que tocarla. */
+.tira::after{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:3px;
+  background:var(--t);
+  transition:width .35s var(--size), background .35s var(--apple);
+}
+
+.num{
+  font-family:var(--mono);
+  font-size:.68rem;
+  letter-spacing:.12em;
+  color:var(--tenue);
+  flex:none;
+  align-self:flex-start;
+  padding-top:.28em;
+  transition:color .3s var(--apple), transform .35s var(--size);
+}
+
+.cuerpo{ flex:1; min-width:0 }
+
+.tira h2{
+  margin:0 0 .28rem;
+  font-size:clamp(1.35rem, 5.2vw, 2.3rem);
+  font-weight:800;
+  letter-spacing:-.038em;
+  line-height:1.02;
+  transition:transform .42s var(--size);
+}
+
+.que{
+  margin:0;
+  font-size:clamp(.78rem, 2.5vw, .89rem);
+  line-height:1.45;
+  color:var(--tenue);
+  max-width:46ch;
+  transition:color .3s var(--apple);
+}
+
+/* La línea de abajo: el dato vivo (próximo partido, plata libre…). */
+.vivo{
+  margin:.5rem 0 0;
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.02em;
+  color:var(--t);
+  min-height:1em;
+  display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+  transition:color .3s var(--apple);
+}
+.vivo:empty{ display:none }
+
+.mini{
+  display:inline-block;
+  padding:.18em .55em;
+  border:1px solid currentColor;
+  border-radius:100px;
+  font-size:.94em;
+  opacity:.85;
+}
+
+.flecha{
+  flex:none;
+  font-size:1.4rem;
+  color:var(--t);
+  opacity:.55;
+  transition:transform .35s var(--size), opacity .3s var(--apple), color .3s var(--apple);
+}
+
+/* ── al tocar / apuntar ───────────────────────────────────── */
+@media (hover:hover){
+  .tira:hover{ flex-grow:1.75; border-color:var(--t) }
+
+  /* Tenue a propósito: el color se nota, y el texto encima se sigue
+     leyendo en todos los cuadros de la animación, no sólo al final. */
+  .tira:hover::before{ transform:translateX(0); opacity:.16 }
+
+  /* La línea del borde engorda en vez de desaparecer. */
+  .tira:hover::after{ width:6px }
+
+  /* El título toma el color de la sección. Los cuatro acentos tienen
+     contraste de sobra sobre su propio fondo, así que gana fuerza sin
+     perder legibilidad en ningún momento. */
+  .tira:hover h2{ transform:translateX(6px); color:var(--t) }
+  .tira:hover .que{ color:var(--texto); opacity:.92 }
+  .tira:hover .num{ transform:translateY(-2px); color:var(--t) }
+  .tira:hover .flecha{ transform:translateX(7px); opacity:1 }
+}
+
+/* Teclado: mismo trato que el puntero, sin depender del hover. */
+.tira:focus-visible{
+  outline:2px solid var(--t);
+  outline-offset:3px;
+  flex-grow:1.75;
+}
+
+/* El apretón de anime.js: corto, 110 ms, y vuelve. */
+.tira:active{ transform:scale(.988); transition-duration:.11s }
+
+/* ── pie ──────────────────────────────────────────────────── */
+.pie{
+  position:relative; z-index:2;
+  padding:.15rem 1.5rem max(1rem, env(safe-area-inset-bottom));
+  font-family:var(--mono);
+  font-size:.62rem;
+  letter-spacing:.05em;
+  color:var(--tenue-hub);
+  text-align:center;
+}
+
+/* ── pantalla ancha: las tiras se paran en columnas ───────── */
+@media (min-width:900px) and (min-height:520px){
+  .tiras{ flex-direction:row; gap:3px; padding:0 1rem 1rem }
+  .tira{
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-end;
+    padding:1.8rem 1.5rem;
+  }
+  .tira::after{ left:0; right:0; top:auto; bottom:0; width:auto; height:3px; transition:height .35s var(--size) }
+  @media (hover:hover){
+    .tira:hover::after{ width:auto; height:6px }
+    .tira:hover h2{ transform:translateY(-4px) }
+    .tira:hover .flecha{ transform:translate(7px,-4px) }
+  }
+  .num{ align-self:flex-start; padding-top:0; margin-bottom:auto }
+  .cuerpo{ flex:none; width:100% }
+  .flecha{ position:absolute; top:1.6rem; right:1.5rem }
+  .que{ max-width:30ch }
+}
+
+/* ── si pediste menos movimiento, se apaga todo ───────────── */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .tira{ opacity:1; transform:none }
+  #fondo{ display:none }
+}

@@ -1,0 +1,52 @@
+name: Enviar avisos
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # cada 15 minutos
+  workflow_dispatch:
+    inputs:
+      prueba:
+        description: "Mandar una notificación de prueba en vez de revisar el calendario"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Si un envío todavía está corriendo, el siguiente espera.
+# Así nunca hay dos procesos escribiendo el estado a la vez.
+concurrency:
+  group: avisos
+  cancel-in-progress: false
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Revisar el calendario y notificar
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+        run: node scripts/send-push.mjs ${{ inputs.prueba && '--test' || '' }}
+
+      - name: Recordar lo ya enviado
+        if: ${{ !inputs.prueba }}
+        run: |
+          git config user.name  "Avisos automáticos"
+          git config user.email "actions@github.com"
+          git add estado/enviados.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Avisos enviados"
+          # Otro envío pudo haber escrito mientras tanto: reintentamos sobre lo último.
+          git pull --rebase --autostash || true
+          git push

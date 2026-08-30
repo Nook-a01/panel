@@ -1,0 +1,159 @@
+/* ============================================================
+   IDENTIDAD POR CLUB
+
+   No alcanza con cambiar un acento: cada club cambia el papel de
+   las ventanas, el color de los bordes, la trama del fondo y el
+   tono de los rótulos. Al pasar de Boca a Inter Miami la página
+   se siente otra.
+
+   La transición usa la curva de Apple a 600 ms.
+   ============================================================ */
+
+:root{
+  --papel-club:var(--papel);
+  --papel2-club:var(--papel2);
+  --borde-club:#000;
+  --trama:none;
+  --trama-op:.06;
+}
+
+/* Todo lo que cambia de club, con la misma transición. */
+.ventana,.ev,.jug,.jm,.pf,.clip,.nota,.dg,.forma,.pelea,
+.pestanas,.pest,.tabla th,.grupo-pos,.semana{
+  transition:background-color .6s var(--apple),
+             border-color .6s var(--apple),
+             color .6s var(--apple);
+}
+
+.ventana{background:var(--papel-club);border-color:var(--borde-club)}
+.pestanas{background:var(--papel2-club);border-bottom-color:var(--borde-club)}
+.ev,.jug,.jm,.pf,.clip,.nota,.dg,.forma,.pelea{border-color:var(--borde-club)}
+.pelea-res{background:var(--papel2-club)}
+.sc-barra{background:var(--papel2-club)}
+
+/* Trama de fondo propia de cada club, sobre el papel. */
+.ventana-cuerpo{position:relative}
+.ventana-cuerpo::before{
+  content:"";position:absolute;inset:0;
+  background:var(--trama);
+  opacity:var(--trama-op);
+  pointer-events:none;
+}
+.ventana-cuerpo > *{position:relative}
+
+/* ------------------------------------------------------------
+   BOCA — azul y oro. Papel cálido, bordes azul marino,
+   franja horizontal como la camiseta.
+   ------------------------------------------------------------ */
+[data-equipo="boca"]{
+  --papel-club:#fbf3dc;
+  --papel2-club:#f0e2b8;
+  --borde-club:#0b2d6b;
+  --trama:repeating-linear-gradient(0deg,
+    transparent 0 26px, rgba(11,45,107,.5) 26px 34px);
+  --trama-op:.05;
+}
+[data-equipo="boca"] .grupo-pos{background:#0b2d6b;color:#f2c400}
+[data-equipo="boca"] .tabla th{background:#0b2d6b;color:#f2c400}
+[data-equipo="boca"] .semana{background:#0b2d6b;border-color:#0b2d6b}
+[data-equipo="boca"] .jm-dor,[data-equipo="boca"] .fc-dorsal{background:#0b2d6b;color:#f2c400}
+
+/* ------------------------------------------------------------
+   SELECCIÓN — celeste y blanco, franjas verticales.
+   ------------------------------------------------------------ */
+[data-equipo="argentina"]{
+  --papel-club:#f6fbff;
+  --papel2-club:#dceefb;
+  --borde-club:#1d5f96;
+  --trama:repeating-linear-gradient(90deg,
+    transparent 0 30px, rgba(108,189,242,.6) 30px 60px);
+  --trama-op:.14;
+}
+[data-equipo="argentina"] .grupo-pos{background:#1d5f96;color:#fff}
+[data-equipo="argentina"] .tabla th{background:#1d5f96;color:#fff}
+[data-equipo="argentina"] .semana{background:#1d5f96;border-color:#1d5f96}
+[data-equipo="argentina"] .jm-dor,[data-equipo="argentina"] .fc-dorsal{background:#1d5f96;color:#fff}
+
+/* ------------------------------------------------------------
+   INTER MIAMI — rosa y negro, trama diagonal fina.
+   ------------------------------------------------------------ */
+[data-equipo="intermiami"]{
+  --papel-club:#fff6f9;
+  --papel2-club:#fbdde7;
+  --borde-club:#231f20;
+  --trama:repeating-linear-gradient(135deg,
+    transparent 0 7px, rgba(247,181,205,.9) 7px 14px);
+  --trama-op:.3;
+}
+[data-equipo="intermiami"] .grupo-pos{background:#231f20;color:#f7b5cd}
+[data-equipo="intermiami"] .tabla th{background:#231f20;color:#f7b5cd}
+[data-equipo="intermiami"] .semana{background:#231f20;border-color:#231f20}
+[data-equipo="intermiami"] .jm-dor,[data-equipo="intermiami"] .fc-dorsal{background:#231f20;color:#f7b5cd}
+
+/* ------------------------------------------------------------
+   LOS PUMAS — celeste sobre blanco frío.
+   ------------------------------------------------------------ */
+[data-equipo="pumas"]{
+  --papel-club:#f4fbff;
+  --papel2-club:#d6eefa;
+  --borde-club:#0f3d56;
+  --trama:repeating-linear-gradient(45deg,
+    transparent 0 18px, rgba(56,208,255,.7) 18px 22px);
+  --trama-op:.16;
+}
+[data-equipo="pumas"] .grupo-pos{background:#0f3d56;color:#38d0ff}
+[data-equipo="pumas"] .tabla th{background:#0f3d56;color:#38d0ff}
+[data-equipo="pumas"] .semana{background:#0f3d56;border-color:#0f3d56}
+[data-equipo="pumas"] .jm-dor,[data-equipo="pumas"] .fc-dorsal{background:#0f3d56;color:#38d0ff}
+
+/* ------------------------------------------------------------
+   FÓRMULA 1 — gris asfalto y rojo, damero de meta.
+   ------------------------------------------------------------ */
+[data-equipo="f1"]{
+  --papel-club:#f2f2f4;
+  --papel2-club:#dcdce2;
+  --borde-club:#15151e;
+  --trama:
+    repeating-conic-gradient(#000 0 25%, transparent 0 50%) 0 0/22px 22px;
+  --trama-op:.05;
+}
+[data-equipo="f1"] .grupo-pos{background:#15151e;color:#ff2d2d}
+[data-equipo="f1"] .tabla th{background:#15151e;color:#ff2d2d}
+[data-equipo="f1"] .semana{background:#15151e;border-color:#15151e}
+[data-equipo="f1"] .jm-dor,[data-equipo="f1"] .fc-dorsal{background:#15151e;color:#ff2d2d}
+
+/* ------------------------------------------------------------
+   UFC — negro y ámbar, trama de octógono.
+   ------------------------------------------------------------ */
+[data-equipo="ufc"]{
+  --papel-club:#f7f2e6;
+  --papel2-club:#e8dcc2;
+  --borde-club:#1a1a1a;
+  --trama:repeating-linear-gradient(60deg,
+      transparent 0 14px, rgba(255,179,0,.9) 14px 16px),
+    repeating-linear-gradient(-60deg,
+      transparent 0 14px, rgba(255,179,0,.9) 14px 16px);
+  --trama-op:.14;
+}
+[data-equipo="ufc"] .grupo-pos{background:#1a1a1a;color:#ffb300}
+[data-equipo="ufc"] .tabla th{background:#1a1a1a;color:#ffb300}
+[data-equipo="ufc"] .semana{background:#1a1a1a;border-color:#1a1a1a}
+[data-equipo="ufc"] .jm-dor,[data-equipo="ufc"] .fc-dorsal{background:#1a1a1a;color:#ffb300}
+
+/* ------------------------------------------------------------
+   La ventana entra con un empujón desde el color del club.
+   Curva de waaark: sale lento y aterriza firme.
+   ------------------------------------------------------------ */
+#vista .ventana{
+  animation:entraVentana .5s cubic-bezier(.77,0,.175,1) both;
+}
+@keyframes entraVentana{
+  from{opacity:0;transform:translateY(18px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+
+@media (prefers-reduced-motion: reduce){
+  #vista .ventana{animation:none}
+  .ventana,.ev,.jug,.jm,.pf,.clip,.nota,.dg,.forma,.pelea,
+  .pestanas,.pest,.tabla th,.grupo-pos,.semana{transition:none}
+}

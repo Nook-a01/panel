@@ -1,0 +1,55 @@
+name: Resumen de la mañana
+
+on:
+  schedule:
+    # 11:37 UTC ≈ 08:37 en Argentina.
+    #
+    # El minuto 37 no es capricho: GitHub demora más las tareas que caen
+    # en punto, porque es cuando más carga tiene. Y este aviso es el que
+    # mejor tolera la demora: si sale a las 8 o a las 10, sirve igual.
+    #
+    # Se programa dos veces por las dudas: si GitHub saltea la primera,
+    # la segunda cubre. El propio aviso no se repite porque lleva la
+    # misma etiqueta y el celular reemplaza el anterior.
+    - cron: "37 11 * * *"
+    - cron: "37 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resumen-diario
+  cancel-in-progress: false
+
+jobs:
+  resumen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Mandar los partidos de hoy
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+        run: node scripts/send-push.mjs --diario
+
+      # Deja constancia de que el resumen de hoy ya salió, para que la
+      # segunda corrida del día no lo repita.
+      - name: Recordar que ya se mandó
+        run: |
+          git config user.name  "Resumen diario"
+          git config user.email "actions@github.com"
+          git add estado/enviados.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Resumen diario enviado"
+          git pull --rebase --autostash || true
+          git push
