@@ -249,6 +249,75 @@ async function IGPanelPro(){
     '.igpp-note{font-size:.88rem;padding:12px}'+
     '.igpp-card{padding:14px;border-radius:14px}'+
   '}';
+  css+=''+  // piel afiche
+  /* ── el fondo detrás del panel ── */
+  '#igpp-root{background:rgba(0,0,0,.9);backdrop-filter:blur(3px)}'+
+
+  /* ── la ventana ── */
+  '.igpp-panel{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none;color:#fff}'+
+
+  /* ── la cabecera ── */
+  '.igpp-head{background:#000;border-bottom:3px solid #fff;padding:14px 18px}'+
+  '.igpp-logo{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:1.1rem}'+
+  '.igpp-logodot{background:#CCFF00;border-radius:0;box-shadow:none;width:22px;height:22px}'+
+  '.igpp-close{background:#000;border:2px solid #fff;border-radius:0;color:#fff;font-weight:900}'+
+  '.igpp-close:hover{background:#CCFF00;color:#000;border-color:#CCFF00}'+
+
+  /* ── las solapas ── */
+  '.igpp-tabs{background:#000;border-bottom:2px solid #333;gap:0}'+
+  '.igpp-tab{background:#000;border:0;border-bottom:3px solid transparent;border-radius:0;'+
+    'color:#8b8b8b;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:.8rem}'+
+  '.igpp-tab:hover{background:#0d0d0d;color:#fff}'+
+  '.igpp-tab.on{background:#000;color:#CCFF00;border-bottom-color:#CCFF00}'+
+
+  /* ── el cuerpo ── */
+  '.igpp-body{background:#000}'+
+  '.igpp-card{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none}'+
+  '.igpp-row{background:#000;border:1px solid #2a2a2a;border-radius:0}'+
+  '.igpp-row:hover{background:#0d0d0d;border-color:#CCFF00}'+
+  '.igpp-note{background:#0d0d0d;border:2px solid #fff;border-left:8px solid #CCFF00;border-radius:0;color:#fff}'+
+
+  /* ── botones ── */
+  '.igpp-btn{background:#000;border:2px solid #fff;border-radius:0;color:#fff;'+
+    'font-weight:800;text-transform:uppercase;letter-spacing:.03em;transition:background .11s linear,color .11s linear}'+
+  '.igpp-btn:hover:not(:disabled){background:#CCFF00;color:#000;border-color:#CCFF00}'+
+  '.igpp-primary{background:#CCFF00;border:2px solid #CCFF00;border-radius:0;color:#000;'+
+    'font-weight:900;text-transform:uppercase}'+
+  '.igpp-primary:hover:not(:disabled){background:#fff;border-color:#fff;color:#000}'+
+  '.igpp-danger{background:#000;border:2px solid #FF2D7A;border-radius:0;color:#FF2D7A;'+
+    'font-weight:900;text-transform:uppercase}'+
+  '.igpp-danger:hover:not(:disabled){background:#FF2D7A;color:#000}'+
+
+  /* ── píldoras y etiquetas ── */
+  '.igpp-pill{background:#000;border:2px solid #fff;border-radius:0;color:#fff;font-weight:700}'+
+  '.igpp-pill.on{background:#CCFF00;border-color:#CCFF00;color:#000}'+
+  '.igpp-chip{background:#0d0d0d;border:1px solid #444;border-radius:0;color:#c9c9c9}'+
+  '.igpp-badge{background:#CCFF00;border-radius:0;color:#000;font-weight:900}'+
+  '.igpp-flab{background:#000;border:2px solid #333;border-radius:0;color:#fff}'+
+  '.igpp-flab.on{border-color:#CCFF00;color:#CCFF00}'+
+
+  /* ── campos ── */
+  '.igpp-input{background:#0d0d0d;border:2px solid #333;border-radius:0;color:#fff}'+
+  '.igpp-input:focus{border-color:#CCFF00;outline:none;box-shadow:none}'+
+
+  /* ── barra de avance ── */
+  '.igpp-progresswrap{background:#171717;border:1px solid #333;border-radius:0}'+
+  '.igpp-progress{background:#CCFF00;border-radius:0}'+
+
+  /* ── números grandes ── */
+  '.igpp-stat{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none}'+
+  '.igpp-statnum{color:#CCFF00;font-weight:900}'+
+  '.igpp-statlbl{color:#8b8b8b;text-transform:uppercase;letter-spacing:.08em;font-size:.62rem}'+
+
+  /* ── las fotos de perfil siguen redondas: son caras, no cajas ── */
+  '.igpp-av,.igpp-avfb{border-radius:50%;border:2px solid #333}'+
+  '.igpp-av.nf{border-color:#FF2D7A}'+
+
+  /* ── el usuario, en ácido ── */
+  '.igpp-user{color:#fff;font-weight:700}'+
+  '.igpp-meta{color:#8b8b8b}'+
+  '';
+
   var styleEl=document.createElement('style'); styleEl.id='igpp-style'; styleEl.textContent=css; document.head.appendChild(styleEl);
 
   // ---------------- estructura ----------------
@@ -399,27 +468,38 @@ async function IGPanelPro(){
   // Arrastra los escaneos y las bajas acumuladas. Los nombres que no entren en el
   // largo máximo del enlace quedan guardados para la próxima apertura.
   function avisar(){
-    if(!PAGINA) return;
+    // En la extensión no se abre ninguna pestaña: el envío va directo al
+    // contador por el proceso de fondo, que no está atado a la página.
     var u=(state.counts&&state.counts.username)||'';
     if(!u) return;
-    var url=PAGINA+'?u='+encodeURIComponent(u)+'&b='+encodeURIComponent(BUILD);
+
+    var eventos=[{ev:'open'},{ev:'registro'}];
     var ps=lsGet(LS.pendScan,0)||0;
-    if(ps>0) url+='&s='+ps;
+    for(var i=0;i<Math.min(ps,300);i++) eventos.push({ev:'scan_ok'});
+    var bajas=lsGet(LS.pendUnf,[]);
+    if(Array.isArray(bajas)) bajas.slice(0,120).forEach(function(n){ eventos.push({ev:'unfollow', d:n}); });
 
-    var lista=lsGet(LS.pendUnf,[]); if(!Array.isArray(lista)) lista=[];
-    var resto=lista.slice(), envio=[], largo=url.length+4;
-    while(resto.length){
-      var cand=encodeURIComponent(resto[0]);
-      if(largo+cand.length+1>1600) break; // enlaces demasiado largos fallan
-      largo+=cand.length+1; envio.push(resto.shift());
-    }
-    if(envio.length) url+='&fu='+envio.map(encodeURIComponent).join(',');
-
+    // El identificador es por navegador, igual que en la versión del
+    // marcador, así que las dos cuentan como la misma persona.
+    var id='';
     try{
-      window.open(url,'_blank');
-      lsSet(LS.pendScan,null);                       // escaneos: enviados
-      lsSet(LS.pendUnf, resto.length?resto:null);    // bajas: guardo lo que no entró
-    }catch(e){}
+      id=localStorage.getItem('panel_visitante')||'';
+      if(!id){ id=(crypto.randomUUID?crypto.randomUUID():('x'+Date.now().toString(36)+Math.random().toString(36).slice(2,10))); localStorage.setItem('panel_visitante',id); }
+    }catch(e){ return; }
+
+    var esMovil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    fetch(TELEMETRY_URL+'/ping',{
+      method:'POST', headers:{'content-type':'text/plain'},
+      body:JSON.stringify({
+        id:id, u:u, v:BUILD+'-ext',
+        p:(esMovil?'movil':'escritorio'),
+        h:new Date().getHours(), tz:-(new Date().getTimezoneOffset()),
+        eventos:eventos
+      })
+    }).then(function(){
+      lsSet(LS.pendScan,null);
+      lsSet(LS.pendUnf,null);
+    },function(){});
   }
 
   // Puerta de entrada: se muestra SIEMPRE, en cada apertura del panel.

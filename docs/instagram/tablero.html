@@ -263,6 +263,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       </table>
     </div>
     <p class="nota" id="personas-nota"></p>
+    <p class="nota" id="solo-miraron"></p>
 
     <h2>Qué parte usan</h2>
     <div class="barras sec" id="secciones"></div>
@@ -491,7 +492,22 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       `Es el número que más dice: si crece, el problema está en el primer uso.`;
   }
 
-  function personas(lista, actividad) {
+  function personas(todos, actividad) {
+    /* Dos cosas distintas que estaban mezcladas:
+
+       - quien USÓ el panel: tiene aperturas registradas
+       - quien sólo MIRÓ la página de instalación: no abrió nada
+
+       Los segundos aparecían en la tabla como "sin nombre", porque la
+       página de instalación no sabe quién sos (ahí no hay sesión de
+       Instagram) y contaba cada visita como si fuera una apertura. Eso
+       ensuciaba el número que importa. Ahora van aparte. */
+    const lista = todos.filter(p => (p.visitas || 0) > 0 || p.usuario);
+    const soloMiraron = todos.length - lista.length;
+    $("solo-miraron").textContent = soloMiraron
+      ? `Además, ${soloMiraron} ${soloMiraron === 1 ? "persona miró" : "personas miraron"} la página de instalación sin llegar a usar el panel.`
+      : "";
+
     if (!lista.length) { $("personas").innerHTML = '<tr><td colspan="7" class="vacio">Todavía no hay nadie.</td></tr>'; return; }
 
     // La actividad viene toda junta; se agrupa por persona una sola vez.
@@ -539,7 +555,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
     }).join("");
 
     $("personas-nota").textContent =
-      `${lista.length} personas. "Veces" es cuántas veces abrió el panel; "Días", en cuántos días distintos. ` +
+      `${lista.length} personas usaron el panel. "Veces" es cuántas veces abrió el panel; "Días", en cuántos días distintos. ` +
       `Tocá "ver" para desplegar qué hizo cada uno.`;
   }
 
