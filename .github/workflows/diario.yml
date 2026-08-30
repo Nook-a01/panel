@@ -1,5 +1,7 @@
 name: Resumen de la mañana
 
+# Corre sobre el repo panel (antes vivia en mis-deportes).
+
 on:
   schedule:
     # 11:37 UTC ≈ 08:37 en Argentina.
