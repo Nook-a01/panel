@@ -1,0 +1,293 @@
+/* ─────────────────────────────────────────────────────────────
+   El detalle del partido: los goleadores, la cancha, los cambios
+   y la tabla del torneo.
+
+   La disposición está tomada de la app de Deportes de Apple. El
+   vestido no: acá manda el lenguaje que ya tiene la sección —
+   papel crema, fichas blancas, bordes negros de 2 px y sombra
+   dura sin difuminar. El vidrio esmerilado y los degradados de
+   Apple quedarían pegoteados encima de otra cosa.
+
+   Un ojo con el color: --tema es el color del club (el rosa de
+   Inter Miami, el amarillo de Boca) y sobre papel crema no se lee.
+   Sirve para rellenos y bordes, nunca para texto chico. El texto
+   va en --tinta, como el resto de la ficha.
+   ───────────────────────────────────────────────────────────── */
+
+/* ═══ quién hizo los goles, abajo del marcador ═══ */
+.goleadores{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:start;
+  gap:.7rem;
+  margin:.2rem 0 .9rem;
+  padding:.75rem .8rem;
+  background:#fff;
+  border:2px solid #000;
+  box-shadow:2px 2px 0 rgba(0,0,0,.28);
+}
+.goleadores ul{ margin:0; padding:0; list-style:none; text-align:right }
+.goleadores ul.der{ text-align:left }
+.goleadores li{
+  font-size:.82rem;
+  line-height:1.55;
+  color:var(--tinta);
+}
+.goleadores li b{ font-weight:700 }
+/* Los minutos, más apagados que el nombre pero legibles: es el dato
+   secundario del renglón, no un adorno. */
+.goleadores li span{
+  color:#5b5470;
+  font-variant-numeric:tabular-nums;
+}
+.gol-ico{ font-size:1.05rem; line-height:1.55 }
+
+/* ═══ la cancha ═══
+   Es la única pieza oscura de la ficha, y a propósito: una cancha
+   es verde. Con el borde negro grueso se lee como una pantalla
+   metida adentro del papel, no como un cuerpo extraño. */
+.cancha{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  gap:.5rem;
+  padding:1.1rem .45rem;
+  margin:.3rem 0 .9rem;
+  border:2px solid #000;
+  box-shadow:2px 2px 0 rgba(0,0,0,.28);
+  overflow:hidden;
+  /* El corte del césped en franjas, muy apagado: encima va texto y
+     lo que tiene que leerse es el texto. */
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.03) 0 44px,
+      rgba(255,255,255,0)  44px 88px),
+    linear-gradient(to bottom, #123a26, #0c2717);
+  min-height:calc(var(--lineas, 4) * 94px);
+}
+
+/* Las rayas de la cancha, en su propia capa para no pelearle el
+   sitio a los jugadores. */
+.c-dibujo{
+  position:absolute;
+  inset:7px;
+  border:2px solid rgba(255,255,255,.16);
+  pointer-events:none;
+}
+.c-dibujo::before{           /* el círculo del medio */
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width:76px; height:76px;
+  margin:-38px 0 0 -38px;
+  border:2px solid rgba(255,255,255,.16);
+  border-radius:50%;
+}
+.c-dibujo::after{            /* la línea del medio */
+  content:"";
+  position:absolute;
+  left:0; right:0; top:50%;
+  border-top:2px solid rgba(255,255,255,.16);
+}
+
+.c-linea{
+  position:relative;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:flex-start;
+  gap:.2rem;
+  flex:1;
+}
+
+/* ═══ cada jugador parado en la cancha ═══ */
+.cj{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.24rem;
+  padding:.1rem;
+  min-width:0;
+  max-width:5.4rem;
+  background:none;
+  border:0;
+  color:inherit;
+  font-family:inherit;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .18s var(--ease, ease);
+}
+.cj:not([data-jug]){ cursor:default }
+.cj:hover{ transform:translateY(-2px) }
+.cj:active{ transform:scale(.95); transition-duration:.11s }
+.cj:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+
+.cj-cara{
+  position:relative;
+  width:40px; height:40px;
+  border-radius:50%;
+  border:2px solid #fff;
+  background:#0b1f14;
+  display:grid;
+  place-items:center;
+  flex:none;
+}
+.cj-cara img{
+  width:100%; height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+}
+/* Cuando la fuente no tiene la foto —que es lo más común: en un
+   partido cualquiera hay cara de cinco de cada veinte— van las
+   iniciales. Un muñeco genérico repetido once veces es peor que
+   una letra, y no inventa una cara que no es. */
+.cj-ini{
+  font-family:var(--pixel, monospace);
+  font-size:9px;
+  letter-spacing:.5px;
+  color:#fff;
+}
+.cj-dor{
+  position:absolute;
+  right:-6px; bottom:-5px;
+  min-width:18px;
+  padding:1px 3px;
+  background:#fff;
+  color:#000;
+  font-family:var(--pixel, monospace);
+  font-size:7px;
+  line-height:1.6;
+  text-align:center;
+  border:2px solid #000;
+}
+.cj-nom{
+  font-size:.63rem;
+  line-height:1.2;
+  text-align:center;
+  color:#fff;
+  max-width:100%;
+  overflow-wrap:break-word;
+}
+.cj-marcas{
+  display:flex;
+  gap:3px;
+  align-items:center;
+  line-height:1;
+}
+.cj-marcas i{ font-style:normal; font-size:.6rem; color:#fff }
+.m-ec{ opacity:.6; filter:grayscale(1) }
+.m-amar, .m-roja{
+  display:inline-block;
+  width:7px; height:10px;
+  border:1px solid rgba(0,0,0,.55);
+}
+.m-amar{ background:#ffcc00 }
+.m-roja{ background:#ff2d2d }
+.m-sale{ color:#ff9a9a; font-size:.55rem }
+
+/* ═══ los cambios ═══ */
+.cambios{
+  list-style:none;
+  margin:.2rem 0 .9rem;
+  padding:0;
+  display:grid;
+  gap:.35rem;
+}
+.cambios li{
+  display:grid;
+  grid-template-columns:2.8rem 1fr 1fr;
+  align-items:center;
+  gap:.5rem;
+  padding:.5rem .6rem;
+  background:#fff;
+  border:2px solid #000;
+  box-shadow:2px 2px 0 rgba(0,0,0,.28);
+  font-size:.78rem;
+}
+.cb-min{
+  font-family:var(--pixel, monospace);
+  font-size:8px;
+  color:var(--tinta);
+}
+.cb-entra{ color:#0a6b3d; font-weight:600 }
+.cb-sale{ color:#96311f }
+
+/* ═══ la tabla del torneo ═══ */
+.tabla-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:.2rem 0 .9rem;
+  background:#fff;
+  border:2px solid #000;
+  box-shadow:2px 2px 0 rgba(0,0,0,.28);
+}
+.tabla-pos{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.78rem;
+  min-width:23rem;
+}
+.tabla-pos th{
+  font-family:var(--pixel, monospace);
+  font-size:7px;
+  letter-spacing:.5px;
+  color:var(--tinta);
+  text-align:center;
+  padding:.55rem .3rem;
+  border-bottom:2px solid #000;
+  white-space:nowrap;
+}
+.tabla-pos td{
+  padding:.45rem .3rem;
+  text-align:center;
+  border-bottom:1px solid rgba(0,0,0,.14);
+  color:var(--tinta);
+  font-variant-numeric:tabular-nums;
+}
+.tabla-pos tr:last-child td{ border-bottom:0 }
+.tabla-pos .tp-eq{ text-align:left; padding-left:.55rem }
+.tabla-pos th.tp-eq{ text-align:left }
+.tabla-pos .tp-n{ color:#5b5470; width:1.7rem }
+
+/* Los dos del partido, resaltados con el color del club: si no, hay
+   que leer los quince renglones para encontrarlos. Acá el color va
+   de relleno, no de letra, así que no compromete la lectura. */
+.tabla-pos .tp-mio td{
+  background:var(--tema, #ffe08a);
+  border-bottom-color:rgba(0,0,0,.3);
+}
+.tabla-pos .tp-mio .tp-eq{ font-weight:700 }
+.tabla-pos .tp-mio .tp-n{ color:var(--tinta) }
+
+/* ═══ pantallas chicas ═══ */
+@media (max-width:460px){
+  /* Con ocho columnas la tabla no entra en un celular y los PUNTOS
+     quedaban afuera de la pantalla, que es justo el dato que se
+     busca. Se saca la diferencia de gol, que es la que menos se
+     mira, y entra todo sin tener que arrastrar de costado. */
+  .tabla-pos{ min-width:0; font-size:.72rem }
+  .tabla-pos .tp-dg{ display:none }
+  .tabla-pos td, .tabla-pos th{ padding-left:.15rem; padding-right:.15rem }
+  .tabla-pos .tp-eq{ padding-left:.4rem }
+}
+
+@media (max-width:420px){
+  .cancha{ padding:.9rem .2rem; min-height:calc(var(--lineas, 4) * 86px) }
+  .cj{ max-width:4.3rem }
+  .cj-cara{ width:34px; height:34px }
+  .cj-nom{ font-size:.57rem }
+  .goleadores{ gap:.4rem; padding:.6rem }
+  .goleadores li{ font-size:.75rem }
+  /* Con tres columnas, "entró" y "salió" quedaban de dos letras de
+     ancho. Se apilan y cada uno se lee entero. */
+  .cambios li{ grid-template-columns:2.4rem 1fr; row-gap:.15rem }
+  .cb-sale{ grid-column:2 }
+}
+
+/* ═══ si pediste menos movimiento ═══ */
+@media (prefers-reduced-motion:reduce){
+  .cj{ transition:none }
+  .cj:hover, .cj:active{ transform:none }
+}

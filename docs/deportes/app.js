@@ -1,8 +1,8 @@
 import { marcadores, detallePartido, fichaJugador, detalleGP, carteleraUFC, infoTorneo,
          historialPeleador, jugadasRugby, formaReciente,
-         fichaPiloto, accionesPelea } from "./api.js?v=3";
+         fichaPiloto, accionesPelea } from "./api.js?v=6";
 import { banderaDePiloto as banderaPorNacionalidad,
-         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=3";
+         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=6";
 
 let DATOS = null, EXTRA = null;
 
@@ -820,7 +820,10 @@ async function htmlDetallePartido(e) {
     ${lado(d.visitante)}
   </div>`;
 
+  out += goleadoresHTML(d);
+
   const ficha = [
+    d.fecha && `${esc(fechaLarga(d.fecha))}`,
     d.sede && `Estadio: <b>${esc(d.sede)}</b>`,
     d.publico && `Público: <b>${esc(d.publico)}</b>`,
     d.arbitros.length && `Árbitro: <b>${esc(d.arbitros[0])}</b>`,
@@ -990,15 +993,216 @@ async function htmlDetallePartido(e) {
       // Si tampoco hay dorsales útiles, mostramos todo junto.
       if (!titulares.length) { titulares = f.jugadores; banca = []; }
     }
-    out += `<div class="grupo-pos">${esc(rotulo(f.equipo))}${f.formacion ? " · " + esc(f.formacion) : ""}</div>
-      <div class="once">`;
-    for (const j of titulares) out += fichaJugadorMini(j, e);
-    out += `</div>`;
+    out += `<div class="grupo-pos">${esc(rotulo(f.equipo))}${f.formacion ? " · " + esc(f.formacion) : ""}</div>`;
+
+    // Si sabemos en qué puesto juega cada uno, se los para en una cancha.
+    // Si no —pasa en rugby, y en partidos que todavía no arrancaron—,
+    // queda la lista de siempre, que sigue sirviendo.
+    const puedeCancha = e.sport !== "rugby" && titulares.filter(j => j.lugar > 0).length >= 7;
+    if (puedeCancha) out += canchaHTML(titulares, e);
+    else {
+      out += `<div class="once">`;
+      for (const j of titulares) out += fichaJugadorMini(j, e);
+      out += `</div>`;
+    }
+
     if (banca.length) {
       out += `<p class="sub-rotulo">Suplentes</p><div class="once banca">`;
       for (const j of banca) out += fichaJugadorMini(j, e);
       out += `</div>`;
     }
+    out += cambiosHTML(f);
+  }
+
+  out += posicionesPartidoHTML(d);
+  return out;
+}
+
+
+/* ═══════════════ el detalle del partido, por partes ═══════════════ */
+
+// La fecha del partido, escrita como la decís.
+function fechaLarga(iso) {
+  const t = new Date(iso);
+  if (isNaN(t)) return "";
+  return new Intl.DateTimeFormat("es-AR", {
+    weekday: "long", day: "numeric", month: "long",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+    timeZone: "America/Argentina/Buenos_Aires",
+  }).format(t);
+}
+
+// Quién hizo los goles, de cada lado, como en la ficha de un diario.
+// Si uno hizo varios, van juntos en un renglón: "Messi 40', 52', 83'"
+// en vez de tres renglones con el mismo apellido.
+function goleadoresHTML(d) {
+  const goles = (d.jugadas || []).filter(j => j.esGol);
+  if (!goles.length) return "";
+
+  const armar = equipo => {
+    const mios = goles.filter(g => g.equipo === equipo);
+    if (!mios.length) return "";
+    const porJugador = new Map();
+    for (const g of mios) {
+      const enContra = /own goal/i.test(g.texto || "");
+      const quien = (g.quien || "").split(",")[0].trim() || "gol";
+      const clave = quien + (enContra ? " (e/c)" : "");
+      if (!porJugador.has(clave)) porJugador.set(clave, []);
+      if (g.minuto) porJugador.get(clave).push(g.minuto);
+    }
+    return [...porJugador].map(([quien, minutos]) =>
+      `<li><b>${esc(quien)}</b>${minutos.length ? ` <span>${esc(minutos.join(", "))}</span>` : ""}</li>`
+    ).join("");
+  };
+
+  const a = armar(d.local?.nombre), b = armar(d.visitante?.nombre);
+  if (!a && !b) return "";
+  return `
+  <div class="goleadores">
+    <ul>${a}</ul>
+    <span class="gol-ico" aria-hidden="true">⚽</span>
+    <ul class="der">${b}</ul>
+  </div>`;
+}
+
+// En qué línea juega, leído del puesto que manda la fuente.
+//   G                → arquero
+//   RB, LB, CD-R, D  → defensa
+//   CM, RM, LM, DM   → medio
+//   F, LF, RF, ST    → delantero
+function lineaDe(puesto) {
+  const p = (puesto || "").toUpperCase();
+  if (/^G/.test(p)) return 0;
+  if (/^(C?D|[LRC]?B)/.test(p)) return 1;
+  if (/M/.test(p)) return 2;
+  return 3;
+}
+
+// Dónde se para a lo ancho. El lateral va más afuera que el central,
+// por eso son cinco valores y no tres: sin esa diferencia los dos
+// centrales y los dos laterales se mezclaban y quedaban en cualquier
+// orden dentro de la línea.
+function costadoDe(puesto) {
+  const p = (puesto || "").toUpperCase();
+  if (/^L/.test(p)) return -2;
+  if (/^R/.test(p)) return 2;
+  if (/-L$/.test(p)) return -1;
+  if (/-R$/.test(p)) return 1;
+  return 0;
+}
+
+// La cancha, mirada desde atrás del arco propio: el arquero abajo y los
+// delanteros arriba, como se ve por televisión.
+function canchaHTML(titulares, e) {
+  const lineas = [[], [], [], []];
+  for (const j of titulares) lineas[lineaDe(j.posicion)].push(j);
+
+  // Si algún equipo juega sin delanteros netos, la línea vacía no se
+  // dibuja: quedaría una franja de pasto sola en el medio.
+  const conGente = lineas.filter(l => l.length);
+
+  let dentro = "";
+  // Se recorre al revés para que el arquero quede abajo de todo.
+  for (const linea of [...conGente].reverse()) {
+    linea.sort((a, b) => costadoDe(a.posicion) - costadoDe(b.posicion) || a.lugar - b.lugar);
+    dentro += `<div class="c-linea">${linea.map(j => jugadorEnCancha(j, e)).join("")}</div>`;
+  }
+
+  return `<div class="cancha" style="--lineas:${conGente.length}">
+    <div class="c-dibujo" aria-hidden="true"></div>
+    ${dentro}
+  </div>`;
+}
+
+// Cada jugador: la cara si la fuente la tiene, y si no las iniciales.
+// No se inventa una foto: en un partido cualquiera hay foto de cinco de
+// cada veinte, y un muñeco genérico repetido once veces es peor que una
+// letra.
+function jugadorEnCancha(j, e) {
+  const clic = j.id ? ` data-jug="${esc(e.ruta)}/${esc(e.liga)}/${esc(j.id)}"` : "";
+
+  const iniciales = (j.nombre || "")
+    .split(/\s+/).filter(Boolean).slice(0, 2)
+    .map(p => p[0]).join("").toUpperCase();
+
+  const cara = j.foto
+    ? `<img src="${esc(j.foto)}" alt="" loading="lazy">`
+    : `<span class="cj-ini">${esc(iniciales || "?")}</span>`;
+
+  // Las marcas del partido: goles, en contra, amarilla y roja.
+  let marcas = "";
+  if (j.goles > 0) marcas += `<i class="m-gol">⚽${j.goles > 1 ? j.goles : ""}</i>`;
+  if (j.enContra > 0) marcas += `<i class="m-ec" title="En contra">⚽</i>`;
+  if (j.rojas > 0) marcas += `<i class="m-roja"></i>`;
+  else if (j.amarillas > 0) marcas += `<i class="m-amar"></i>`;
+  if (j.salio) marcas += `<i class="m-sale" title="Salió">▼</i>`;
+
+  return `
+  <button class="cj"${clic} title="${esc(j.nombre)}${j.posicion ? " · " + esc(j.posicion) : ""}">
+    <span class="cj-cara">${cara}<span class="cj-dor">${esc(j.dorsal || "–")}</span></span>
+    <span class="cj-nom">${esc(apellidoDe(j.nombre))}${j.capitan ? " ©" : ""}</span>
+    ${marcas ? `<span class="cj-marcas">${marcas}</span>` : ""}
+  </button>`;
+}
+
+// En la cancha no entra el nombre completo: se muestra el apellido, que
+// es como se lo nombra igual.
+function apellidoDe(nombre) {
+  const partes = (nombre || "").trim().split(/\s+/);
+  return partes.length > 1 ? partes.slice(1).join(" ") : (partes[0] || "");
+}
+
+// Los cambios, con el minuto y por quién entró cada uno.
+function cambiosHTML(f) {
+  const entraron = (f.jugadores || []).filter(j => j.entro && j.cambioCon);
+  if (!entraron.length) return "";
+
+  const orden = j => {
+    const m = parseInt(j.minutoCambio, 10);
+    return Number.isFinite(m) ? m : 999;
+  };
+  entraron.sort((a, b) => orden(a) - orden(b));
+
+  return `<p class="sub-rotulo">Cambios</p>
+  <ul class="cambios">${entraron.map(j => `
+    <li>
+      <span class="cb-min">${esc(j.minutoCambio || "")}</span>
+      <span class="cb-entra">▲ ${esc(j.nombre)}</span>
+      <span class="cb-sale">▼ ${esc(j.cambioCon)}</span>
+    </li>`).join("")}</ul>`;
+}
+
+// La tabla del torneo, con los dos equipos del partido resaltados para
+// encontrarlos sin leer los quince renglones.
+function posicionesPartidoHTML(d) {
+  const grupos = d.posiciones || [];
+  if (!grupos.length) return "";
+
+  const mios = [d.local?.nombre, d.visitante?.nombre].filter(Boolean);
+  const esMio = nombre => mios.some(m =>
+    m === nombre || m.includes(nombre) || nombre.includes(m));
+
+  let out = "";
+  for (const g of grupos) {
+    // El título viene en inglés desde la fuente ("MLS Standings",
+    // "Premier League Table"). No hace falta traducirlo: estando
+    // adentro del partido ya se sabe de qué torneo es la tabla.
+    out += `<div class="grupo-pos">${rotulo("Posiciones")}${
+      grupos.length > 1 && g.titulo ? " · " + esc(g.titulo) : ""}</div>
+    <div class="tabla-scroll"><table class="tabla-pos">
+      <thead><tr>
+        <th></th><th class="tp-eq">Equipo</th>
+        <th>PJ</th><th>G</th><th>E</th><th>P</th><th class="tp-dg">DG</th><th>PTS</th>
+      </tr></thead><tbody>`;
+    for (const r of g.filas) {
+      out += `<tr class="${esMio(r.equipo) ? "tp-mio" : ""}">
+        <td class="tp-n">${esc(r.puesto)}</td>
+        <td class="tp-eq">${esc(r.equipo)}</td>
+        <td>${esc(r.pj)}</td><td>${esc(r.g)}</td><td>${esc(r.e)}</td>
+        <td>${esc(r.p)}</td><td class="tp-dg">${esc(r.dg)}</td><td><b>${esc(r.pts)}</b></td>
+      </tr>`;
+    }
+    out += `</tbody></table></div>`;
   }
   return out;
 }

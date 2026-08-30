@@ -14,15 +14,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
-<link rel="stylesheet" href="styles.css?v=3">
-<link rel="stylesheet" href="detalle.css?v=3">
-<link rel="stylesheet" href="escudos.css?v=3">
-<link rel="stylesheet" href="extras.css?v=3">
-<link rel="stylesheet" href="movimiento.css?v=3">
-<link rel="stylesheet" href="iphone.css?v=3">
-<link rel="stylesheet" href="semana.css?v=3">
-<link rel="stylesheet" href="tema.css?v=3">
-<link rel="stylesheet" href="clubes.css?v=3">
+<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="detalle.css?v=6">
+<link rel="stylesheet" href="escudos.css?v=6">
+<link rel="stylesheet" href="extras.css?v=6">
+<link rel="stylesheet" href="movimiento.css?v=6">
+<link rel="stylesheet" href="iphone.css?v=6">
+<link rel="stylesheet" href="semana.css?v=6">
+<link rel="stylesheet" href="tema.css?v=6">
+<link rel="stylesheet" href="clubes.css?v=6">
+<link rel="stylesheet" href="partido.css?v=6">
 </head>
 <body>
 
@@ -66,8 +67,8 @@
 <div id="destello" aria-hidden="true"></div>
 <div id="aviso" role="status" hidden></div>
 
-<script src="fx.js?v=3" defer></script>
-<script type="module" src="app.js?v=3"></script>
+<script src="fx.js?v=6" defer></script>
+<script type="module" src="app.js?v=6"></script>
 
 <style id="volver-al-panel">
   .volver-panel{
@@ -94,5 +95,34 @@
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
+
+<style id="volver-se-aparta">
+  .volver-panel{ transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease }
+  .volver-panel.escondido{ transform:translateY(160%); opacity:0; pointer-events:none }
+  @media (prefers-reduced-motion:reduce){
+    .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+  }
+</style>
+<script>
+(() => {
+  const b = document.querySelector(".volver-panel");
+  if (!b) return;
+  let ultimo = window.scrollY, pendiente = false;
+  const revisar = () => {
+    pendiente = false;
+    const y = window.scrollY;
+    // Arriba de todo siempre se muestra, y los movimientos de menos de
+    // 6 px se ignoran: si no, el boton tiembla con el rebote del dedo.
+    if (y < 60) b.classList.remove("escondido");
+    else if (Math.abs(y - ultimo) > 6) b.classList.toggle("escondido", y > ultimo);
+    ultimo = y;
+  };
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>
