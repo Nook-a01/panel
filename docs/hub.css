@@ -13,7 +13,7 @@
 :root{
   --papel:#0d0d10;
   --tinta:#f2f2f4;
-  --tenue-hub:#75757f;
+  --tenue-hub:#8a8a95;
   --linea:#22222a;
 
   --size:cubic-bezier(.51,.01,.2,1);
@@ -162,6 +162,46 @@ body{
 
 .cuerpo{ flex:1; min-width:0 }
 
+/* ── la imagen de cada tira ───────────────────────────────────
+   Un dibujo por sección: la cancha, el grabado del billete, la
+   trama de puntos, el piano roll. Va apagada y con un velo encima
+   que se oscurece justo debajo del texto, porque lo que tiene que
+   leerse es el texto; la imagen dice de qué va la sección de un
+   vistazo y nada más. Al apuntar sube un poco, sin llegar nunca a
+   pelearle al título. */
+.tira .arte{
+  position:absolute; inset:0;
+  z-index:0;
+  background-image:var(--img);
+  background-size:cover;
+  background-position:var(--img-pos, center);
+  background-repeat:no-repeat;
+  opacity:var(--img-op, .22);
+  transition:opacity .45s var(--apple), transform .6s var(--size);
+  transform:scale(1.04);
+  pointer-events:none;
+}
+/* El velo: transparente arriba, opaco abajo, que es donde cae el
+   título. En la tira clara el velo es claro; en las oscuras, oscuro. */
+.tira .arte::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,
+    color-mix(in srgb, var(--fondo) 45%, transparent) 0%,
+    color-mix(in srgb, var(--fondo) 72%, transparent) 42%,
+    color-mix(in srgb, var(--fondo) 93%, transparent) 100%);
+}
+/* Si el navegador no entiende color-mix, el velo sólido de respaldo:
+   se pierde el degradado pero nunca la legibilidad. */
+@supports not (color: color-mix(in srgb, red, blue)){
+  .tira .arte{ opacity:calc(var(--img-op, .22) * .6) }
+  .tira .arte::after{ background:none }
+}
+
+@media (hover:hover){
+  .tira:hover .arte{ opacity:var(--img-op2, .38); transform:scale(1) }
+}
+
 .tira h2{
   margin:0 0 .28rem;
   font-size:clamp(1.35rem, 5.2vw, 2.3rem);
@@ -186,7 +226,9 @@ body{
   font-family:var(--mono);
   font-size:.7rem;
   letter-spacing:.02em;
-  color:var(--t);
+  /* No usa --t sino --t-txt: en texto chico el acento puro se
+     quedaba corto de contraste en dos de las cuatro tiras. */
+  color:var(--t-txt, var(--t));
   min-height:1em;
   display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
   transition:color .3s var(--apple);

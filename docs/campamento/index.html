@@ -725,5 +725,201 @@ updateProgress();
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+<style id="piel-cuaderno">
+:root{
+  --bg:#E7DEC9;
+  --surface:#FBF6E9; --surface2:#F3ECDA;
+  --border:#241C13;
+  --ink:#1F180F; --ink2:#5A4E3C; --ink3:#6D6150;
+  --accent:#9C3D10; --accent-ink:#FFF7EC;
+  --w1:#9C3D10; --w2:#6B4FA8; --w3:#2E7D5B; --w4:#C43B6B;
+  --good:#2E7D5B;
+  --resalte:#F5D547;
+  --radius:16px;
+  --f-tit:'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme:light;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  /* El renglón del cuaderno, muy tenue. */
+  background-image:repeating-linear-gradient(
+    to bottom, transparent 0 33px, rgba(36,28,19,.055) 33px 34px);
+}
+
+/* ── títulos con la palo seco gorda ───────────────────────────── */
+h1, h2, h3, .day-title, .kicker, .dnum, .tab{
+  font-family:var(--f-tit);
+  letter-spacing:-.02em;
+}
+h1{ font-weight:800; font-size:clamp(1.8rem, 7vw, 2.9rem); line-height:1 }
+h2{ font-weight:700 }
+.kicker{
+  font-weight:700; text-transform:uppercase; letter-spacing:.12em;
+  font-size:.7rem; color:var(--accent);
+}
+
+/* ── todo bloque es una calcomanía: borde grueso y sombra dura ── */
+.card, .res, .win, .note-grid > *, .day-head, section > div[class]{
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:4px 4px 0 var(--border);
+}
+
+/* ── la cabecera ──────────────────────────────────────────────────
+   Traía un degradado que arrancaba casi negro y terminaba en el color
+   de fondo. Con el fondo oscuro de antes era una transición; con el
+   papel arena queda una mancha oscura arriba y el título ilegible.
+   Se reemplaza por el mismo papel, con un filete abajo que separa. */
+header{
+  background-image:none;
+  background-color:var(--bg);
+  border-bottom:2px solid var(--border);
+}
+
+/* ── el día de hoy, resaltado con marcador ────────────────────── */
+.day-head{ background:var(--surface2) }
+/* El resaltador va sobre el nombre del día, no sobre el bloque entero:
+   .day-title es el contenedor de dos líneas, y pintarlo marcaba la de
+   abajo. El trazo es una franja detrás del texto, no un recuadro, para
+   que se lea como marcado a mano. */
+.day-title .n{
+  font-weight:800;
+  background:linear-gradient(to top, var(--resalte) 0 42%, transparent 42%);
+  display:inline;
+  padding:0 .12em;
+  color:var(--ink);
+}
+.day-title .g{ color:var(--ink2) }
+.dnum{
+  background:var(--accent);
+  color:var(--accent-ink);
+  border:2px solid var(--border);
+  border-radius:12px;
+  font-weight:800;
+  box-shadow:3px 3px 0 var(--border);
+}
+
+/* ── la barra de solapas ──────────────────────────────────────────
+   Tenía el gris escrito a mano, no por variable, así que no lo tocaba
+   el cambio de paleta y quedaba una franja negra cruzando el papel. */
+nav{
+  background:var(--surface);
+  border-bottom:2px solid var(--border);
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+}
+
+/* ── las solapas: botones gordos con relieve ──────────────────── */
+.tabs{ gap:.55rem }
+.tab{
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:100px;
+  color:var(--ink);
+  font-weight:700;
+  padding:.5em 1.05em;
+  box-shadow:3px 3px 0 var(--border);
+  transition:transform .13s cubic-bezier(.51,.01,.2,1), box-shadow .13s ease;
+}
+/* Al apretarlo se hunde: la sombra se achica y el botón baja. Es el
+   gesto de un botón físico, que es de lo que va todo el cuaderno. */
+.tab:hover{ transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--border) }
+.tab:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
+.tab.on, .tab.active{
+  background:var(--accent);
+  color:var(--accent-ink);
+}
+
+/* ── la barra de avance: un termómetro con borde ──────────────── */
+.progress-row .prog, .prog{
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:100px;
+  overflow:hidden;
+  box-shadow:3px 3px 0 var(--border);
+}
+.prog > *, .prog .bar{ background:var(--accent) }
+.day-chip{
+  background:var(--accent);
+  color:var(--accent-ink);
+  border:2px solid var(--border);
+  border-radius:100px;
+  font-family:var(--f-tit);
+  font-weight:800;
+  box-shadow:3px 3px 0 var(--border);
+}
+
+/* ── las etiquetas de color de cada semana ────────────────────── */
+.pill, .week-dot{
+  border:2px solid var(--border);
+  border-radius:100px;
+  font-family:var(--f-tit);
+  font-weight:700;
+  font-size:.7rem;
+}
+
+/* ── el monoespaciado de las notas musicales, como una etiqueta ─ */
+.mono{
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:.1em .38em;
+  color:var(--ink);
+}
+
+/* ── el recuadro de victoria del día ──────────────────────────── */
+.win{
+  background:#EAF3EC;
+  border-color:var(--good);
+  box-shadow:4px 4px 0 var(--good);
+  color:var(--ink);
+}
+
+.muted{ color:var(--ink2) }
+
+/* ── el botón de volver, con el mismo relieve ─────────────────── */
+.volver-panel{
+  background:var(--surface);
+  border:2px solid var(--border);
+  color:var(--accent);
+  font-family:var(--f-tit);
+  font-weight:800;
+  box-shadow:3px 3px 0 var(--border);
+}
+.volver-panel:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
+</style>
 </body>
 </html>

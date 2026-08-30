@@ -169,7 +169,7 @@ body{
 .ficha .nom{font-family:var(--pixel);font-size:6.5px;text-align:center;line-height:1.5}
 .ficha .cnt{
   position:absolute;top:-9px;right:-9px;
-  background:var(--f1);color:#fff;border:2px solid #000;
+  background:#cc1414;color:#fff;border:2px solid #000;
   font-family:var(--pixel);font-size:7px;padding:2px 4px;
 }
 .ficha.activa{
@@ -384,7 +384,7 @@ main{
   padding:1px 5px;
 }
 #pie-txt{font-family:var(--term);font-size:16px;color:var(--cian)}
-.pie-mini{font-family:var(--pixel);font-size:6px;color:#5b5470;margin-top:8px;line-height:2}
+.pie-mini{font-family:var(--pixel);font-size:6px;color:#837b9e;margin-top:8px;line-height:2}
 
 /* ---------- aviso flotante ---------- */
 #aviso{

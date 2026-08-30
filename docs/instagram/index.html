@@ -2028,3 +2028,148 @@ if(usuarioPanel || esSyncTab){ setTimeout(cerrarUnaVez,9000); } // red de seguri
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="piel-afiche">
+:root{
+  --bg:#000; --card:#000; --chip:#0d0d0d;
+  --text:#fff; --muted:#8b8b8b;
+  --border:#fff;
+  --g1:#CCFF00; --g2:#CCFF00; --g3:#FF2D7A;
+  --red:#FF2D7A; --green:#CCFF00;
+  --acido:#CCFF00; --shock:#FF2D7A;
+  --f-tit:ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --f-mono:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme:dark;
+}
+
+/* Nada redondeado, nada difuminado: todo canto vivo. */
+*, *::before, *::after{ border-radius:0 !important; box-shadow:none !important }
+
+body{ background:#000; color:#fff }
+
+/* ── títulos: mayúsculas, peso máximo, apretados ──────────────── */
+/* El párrafo de entrada queda afuera de este grupo: un texto largo en
+   mayúsculas no se lee, se descifra. Las mayúsculas son para lo que se
+   mira, no para lo que se lee. */
+h1, h2, h3, .big{
+  font-family:var(--f-tit);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+  font-stretch:condensed;
+  color:#fff;
+  /* Se anula el degradado del título original: ahora el color es plano. */
+  background:none;
+  -webkit-background-clip:border-box;
+  background-clip:border-box;
+  -webkit-text-fill-color:#fff;
+}
+h1{ font-size:clamp(2rem, 8vw, 3.4rem); line-height:.92 }
+h2{
+  font-size:clamp(1.1rem, 4vw, 1.5rem);
+  border-bottom:3px solid #fff;
+  padding-bottom:.3rem;
+  margin-bottom:.9rem;
+}
+h3{ font-size:1rem; color:var(--acido) }
+
+/* ── las tarjetas se vuelven bloques con borde duro ───────────── */
+.card{
+  background:#000;
+  border:2px solid #fff;
+  padding:1.1rem;
+}
+
+/* ── etiquetas al pie, en monoespaciada ───────────────────────── */
+.muted, .kbd, .dot, small{
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  color:var(--muted);
+  text-transform:none;
+}
+.kbd{ border:1px solid #fff; color:#fff; padding:.1em .4em }
+
+/* ── botones: bloque negro que se da vuelta al tocarlo ────────── */
+.btn, button, .seg > *{
+  background:#000;
+  border:2px solid #fff;
+  color:#fff;
+  font-family:var(--f-tit);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  padding:.55em 1.05em;
+  transition:background .11s linear, color .11s linear;
+}
+.btn:hover, button:hover, .seg > *:hover{ background:var(--acido); color:#000 }
+.btn:active, button:active{ background:var(--shock); color:#000 }
+
+/* El seleccionado va invertido: negro sobre ácido, sin medias tintas.
+   Ojo con .plat.on: NO es una solapa, es el panel de contenido que se
+   muestra debajo. Pintarlo dejaba media pantalla verde fosforescente. */
+.seg button.on, .seg button.active, .tab.on{
+  background:var(--acido);
+  background-image:none;
+  color:#000;
+  border-color:var(--acido);
+}
+.lead{
+  font-family:var(--f-tit);
+  font-weight:500;
+  color:var(--muted);
+  max-width:62ch;
+}
+
+/* ── el botón grande de instalar: pierde el degradado ─────────── */
+.bm, .bookmarklet, a[class*="bm"]{
+  background:var(--acido) !important;
+  color:#000 !important;
+  border:2px solid var(--acido);
+  font-family:var(--f-tit);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+
+/* ── avisos: barra de color plano al costado ──────────────────── */
+.warn, .tip, .safe{
+  background:#0d0d0d;
+  border:2px solid #fff;
+  border-left:8px solid var(--shock);
+  color:#fff;
+}
+.tip{ border-left-color:var(--acido) }
+
+/* ── el punto de estado ───────────────────────────────────────── */
+.dot{ background:var(--acido) }
+
+/* ── enlaces: subrayado grueso, sin sutilezas ─────────────────── */
+a{ color:var(--acido); text-decoration-thickness:2px; text-underline-offset:3px }
+
+/* ── el botón de volver, invertido ────────────────────────────── */
+.volver-panel{
+  background:#000;
+  border:2px solid var(--acido);
+  color:var(--acido);
+  font-family:var(--f-tit);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.volver-panel:hover{ background:var(--acido); color:#000 }
+</style>
