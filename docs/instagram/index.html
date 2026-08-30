@@ -365,6 +365,75 @@ async function IGPanelPro(){
     '.igpp-note{font-size:.88rem;padding:12px}'+
     '.igpp-card{padding:14px;border-radius:14px}'+
   '}';
+  css+=''+  // piel afiche
+  /* ── el fondo detrás del panel ── */
+  '#igpp-root{background:rgba(0,0,0,.9);backdrop-filter:blur(3px)}'+
+
+  /* ── la ventana ── */
+  '.igpp-panel{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none;color:#fff}'+
+
+  /* ── la cabecera ── */
+  '.igpp-head{background:#000;border-bottom:3px solid #fff;padding:14px 18px}'+
+  '.igpp-logo{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;font-size:1.1rem}'+
+  '.igpp-logodot{background:#CCFF00;border-radius:0;box-shadow:none;width:22px;height:22px}'+
+  '.igpp-close{background:#000;border:2px solid #fff;border-radius:0;color:#fff;font-weight:900}'+
+  '.igpp-close:hover{background:#CCFF00;color:#000;border-color:#CCFF00}'+
+
+  /* ── las solapas ── */
+  '.igpp-tabs{background:#000;border-bottom:2px solid #333;gap:0}'+
+  '.igpp-tab{background:#000;border:0;border-bottom:3px solid transparent;border-radius:0;'+
+    'color:#8b8b8b;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:.8rem}'+
+  '.igpp-tab:hover{background:#0d0d0d;color:#fff}'+
+  '.igpp-tab.on{background:#000;color:#CCFF00;border-bottom-color:#CCFF00}'+
+
+  /* ── el cuerpo ── */
+  '.igpp-body{background:#000}'+
+  '.igpp-card{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none}'+
+  '.igpp-row{background:#000;border:1px solid #2a2a2a;border-radius:0}'+
+  '.igpp-row:hover{background:#0d0d0d;border-color:#CCFF00}'+
+  '.igpp-note{background:#0d0d0d;border:2px solid #fff;border-left:8px solid #CCFF00;border-radius:0;color:#fff}'+
+
+  /* ── botones ── */
+  '.igpp-btn{background:#000;border:2px solid #fff;border-radius:0;color:#fff;'+
+    'font-weight:800;text-transform:uppercase;letter-spacing:.03em;transition:background .11s linear,color .11s linear}'+
+  '.igpp-btn:hover:not(:disabled){background:#CCFF00;color:#000;border-color:#CCFF00}'+
+  '.igpp-primary{background:#CCFF00;border:2px solid #CCFF00;border-radius:0;color:#000;'+
+    'font-weight:900;text-transform:uppercase}'+
+  '.igpp-primary:hover:not(:disabled){background:#fff;border-color:#fff;color:#000}'+
+  '.igpp-danger{background:#000;border:2px solid #FF2D7A;border-radius:0;color:#FF2D7A;'+
+    'font-weight:900;text-transform:uppercase}'+
+  '.igpp-danger:hover:not(:disabled){background:#FF2D7A;color:#000}'+
+
+  /* ── píldoras y etiquetas ── */
+  '.igpp-pill{background:#000;border:2px solid #fff;border-radius:0;color:#fff;font-weight:700}'+
+  '.igpp-pill.on{background:#CCFF00;border-color:#CCFF00;color:#000}'+
+  '.igpp-chip{background:#0d0d0d;border:1px solid #444;border-radius:0;color:#c9c9c9}'+
+  '.igpp-badge{background:#CCFF00;border-radius:0;color:#000;font-weight:900}'+
+  '.igpp-flab{background:#000;border:2px solid #333;border-radius:0;color:#fff}'+
+  '.igpp-flab.on{border-color:#CCFF00;color:#CCFF00}'+
+
+  /* ── campos ── */
+  '.igpp-input{background:#0d0d0d;border:2px solid #333;border-radius:0;color:#fff}'+
+  '.igpp-input:focus{border-color:#CCFF00;outline:none;box-shadow:none}'+
+
+  /* ── barra de avance ── */
+  '.igpp-progresswrap{background:#171717;border:1px solid #333;border-radius:0}'+
+  '.igpp-progress{background:#CCFF00;border-radius:0}'+
+
+  /* ── números grandes ── */
+  '.igpp-stat{background:#000;border:2px solid #fff;border-radius:0;box-shadow:none}'+
+  '.igpp-statnum{color:#CCFF00;font-weight:900}'+
+  '.igpp-statlbl{color:#8b8b8b;text-transform:uppercase;letter-spacing:.08em;font-size:.62rem}'+
+
+  /* ── las fotos de perfil siguen redondas: son caras, no cajas ── */
+  '.igpp-av,.igpp-avfb{border-radius:50%;border:2px solid #333}'+
+  '.igpp-av.nf{border-color:#FF2D7A}'+
+
+  /* ── el usuario, en ácido ── */
+  '.igpp-user{color:#fff;font-weight:700}'+
+  '.igpp-meta{color:#8b8b8b}'+
+  '';
+
   var styleEl=document.createElement('style'); styleEl.id='igpp-style'; styleEl.textContent=css; document.head.appendChild(styleEl);
 
   // ---------------- estructura ----------------
@@ -1976,7 +2045,12 @@ var contado={};
 function contar(ev){ if(contado[ev]) return; contado[ev]=1; enviarLote([{ev:ev}]); }
 
 // Armado del lote de esta carga.
-var eventos=[{ev:'open'}]; contado['open']=1;
+// Sólo cuenta como apertura del panel si viene con el usuario: eso quiere
+// decir que la abrió el panel para mandar sus datos. Una visita suelta a esta
+// página es otra cosa —alguien mirando cómo instalarlo— y va con su propio
+// nombre. Mezclarlas era lo que llenaba el tablero de gente "sin nombre".
+var eventos=[{ev: usuarioPanel ? 'open' : 'visita_pagina'}];
+contado[usuarioPanel ? 'open' : 'visita_pagina']=1;
 if(usuarioPanel){
   eventos.push({ev:'registro'}); contado['registro']=1;
   var nEsc=Math.min(pendScan|0,300);
@@ -1987,6 +2061,10 @@ var envio=enviarLote(eventos);
 
 // ---- cierre coordinado + puente de sincronización ----
 var _cerrado=false, _cerrarT=null;
+// Mientras se sincroniza entre dispositivos NO se puede cerrar: el ida y
+// vuelta con el panel tarda más que el envío de los datos de uso, y si la
+// pestaña se va antes, la sincronización se pierde a mitad de camino.
+var sincronizando=false;
 function cerrarUnaVez(){ if(_cerrado) return; _cerrado=true; try{ window.close(); }catch(e){} }
 function programarCierre(ms){ if(_cerrado) return; if(_cerrarT) clearTimeout(_cerrarT); _cerrarT=setTimeout(cerrarUnaVez,ms); }
 var esSyncTab=/[?&]sync=1/.test(location.search);
@@ -2003,6 +2081,7 @@ if(window.opener){
     var origenPanel=e.origin; // responderle a este mismo
     var d=e.data||{};
     if(d.type==='igpp-sync-push' && d.clave){
+      sincronizando=true;
       if(_cerrarT) clearTimeout(_cerrarT); // no cerrar mientras sincroniza
       fetch(CONTADOR+'/sync',{method:'POST',headers:{'content-type':'text/plain'},body:JSON.stringify({clave:d.clave,data:d.data})})
         .then(function(r){ return r.json(); })
@@ -2015,20 +2094,25 @@ if(window.opener){
   try{ window.opener.postMessage({type:'igpp-sync-ready'},'https://instagram.com'); }catch(e){}
 }
 
-if(usuarioPanel){
+if(usuarioPanel || esSyncTab){
+  // Sin cartel y sin espera. Instagram no deja otra salida que abrir esta
+  // pestaña, así que va a aparecer sí o sí; lo que sí se puede es que no se
+  // note. Antes mostraba "¡Listo, @usuario!" durante 2,5 segundos: está bien
+  // la primera vez y molesta todas las demás.
   var w=document.querySelector('.wrap');
-  if(w){
-    w.innerHTML='<div style="text-align:center;padding:70px 20px">'+
-      '<div style="font-size:2.8rem">💜</div>'+
-      '<h2 style="margin:16px 0 8px;border:0;padding:0">¡Listo, @'+usuarioPanel+'!</h2>'+
-      '<p class="muted">Ya podés volver al panel.<br>Esta pestaña se cierra sola.</p></div>';
-  }
-  programarCierre(2500); // se posterga solo si arranca una sincronización
-} else if(esSyncTab){
-  var w2=document.querySelector('.wrap');
-  if(w2) w2.innerHTML='<div style="text-align:center;padding:70px 20px"><div style="font-size:2.8rem">🔄</div>'+
-    '<h2 style="margin:16px 0 8px;border:0;padding:0">Sincronizando…</h2>'+
-    '<p class="muted">Esta pestaña se cierra sola.</p></div>';
+  if(w) w.innerHTML='';
+  document.title='…';
+
+  // Se cierra apenas termina de mandar, no a los 2,5 segundos fijos.
+  // Se define ANTES de usarla: una función declarada adentro de un bloque
+  // no está garantizada arriba del bloque en todos los navegadores.
+  // Si hay una sincronización en curso, el cierre lo maneja ella (espera a
+  // terminar y recién ahí programa los 700 ms). Acá no se toca nada.
+  var cerrarPronto=function(){ if(sincronizando) return; programarCierre(80); };
+  envio.then(cerrarPronto, cerrarPronto);
+  // Tope por si el envío queda colgado. Se revisa antes de disparar: si
+  // arrancó una sincronización, manda ella.
+  setTimeout(function(){ if(!sincronizando) programarCierre(1); }, 1500);
 }
 if(usuarioPanel || esSyncTab){ setTimeout(cerrarUnaVez,9000); } // red de seguridad absoluta
 </script>
@@ -2057,7 +2141,8 @@ if(usuarioPanel || esSyncTab){ setTimeout(cerrarUnaVez,9000); } // red de seguri
   @media print{ .volver-panel{ display:none } }
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
-<a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
+<!-- El botón de volver al Panel no va acá: esta página la ve gente de
+       afuera y no tiene por qué llegar a tus otras secciones. -->
 
 
 
@@ -2079,15 +2164,8 @@ if(usuarioPanel || esSyncTab){ setTimeout(cerrarUnaVez,9000); } // red de seguri
 
 
 
-<div id="ir-al-tablero" style="max-width:820px;margin:2.5rem auto 0;padding:0 1rem 1rem">
-  <a href="tablero.html" style="display:flex;align-items:center;gap:.7rem;padding:.9rem 1.1rem;
-     border:2px solid #333;background:#000;color:#8b8b8b;text-decoration:none;
-     font-family:ui-sans-serif,system-ui,sans-serif;font-size:.85rem">
-    <span style="font-size:1.1rem">📊</span>
-    <span><b style="color:#CCFF00;text-transform:uppercase;letter-spacing:.04em">Tablero</b>
-    &nbsp;— quién usa el panel, cuándo y qué mira. <i>Sólo para vos: pide clave.</i></span>
-  </a>
-</div>
+<!-- El enlace al Tablero se sacó a propósito: es tuyo, no de quien
+     instala el panel. Se entra por la dirección directa. -->
 <!-- piel: piel-afiche -->
 <style id="piel-afiche">
 :root{

@@ -1,8 +1,8 @@
 import { marcadores, detallePartido, fichaJugador, detalleGP, carteleraUFC, infoTorneo,
          historialPeleador, jugadasRugby, formaReciente,
-         fichaPiloto, accionesPelea } from "./api.js?v=8";
+         fichaPiloto, accionesPelea } from "./api.js?v=9";
 import { banderaDePiloto as banderaPorNacionalidad,
-         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=8";
+         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=9";
 
 let DATOS = null, EXTRA = null;
 

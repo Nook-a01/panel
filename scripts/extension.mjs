@@ -24,7 +24,7 @@ import { deflateSync } from "node:zlib";
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.0.1";
+const VERSION = "1.1.0";
 
 /* ─────────── 1. sacar el panel de la página ─────────── */
 
@@ -67,6 +67,35 @@ function extraerPanel(html) {
     }
   }
   throw new Error("la función no cierra: revisá el HTML");
+}
+
+// Cambia una función entera por otra, buscando dónde cierra con el mismo
+// conteo de llaves que usa extraerPanel. Devuelve null si no la encuentra,
+// para que quien llama pueda cortar en vez de seguir con algo a medias.
+function reemplazarFuncion(fuente, firma, nueva) {
+  const desde = fuente.indexOf(firma);
+  if (desde < 0) return null;
+
+  let i = desde + firma.length - 1;
+  let nivel = 0, dentro = null, escapa = false;
+
+  for (; i < fuente.length; i++) {
+    const c = fuente[i], sig = fuente[i + 1];
+    if (escapa) { escapa = false; continue; }
+    if (dentro) {
+      if (dentro === "//" && c === "\n") dentro = null;
+      else if (dentro === "/*" && c === "*" && sig === "/") { dentro = null; i++; }
+      else if ((dentro === "'" || dentro === '"' || dentro === "`") && c === "\\") escapa = true;
+      else if (c === dentro && dentro !== "//" && dentro !== "/*") dentro = null;
+      continue;
+    }
+    if (c === "'" || c === '"' || c === "`") { dentro = c; continue; }
+    if (c === "/" && sig === "/") { dentro = "//"; i++; continue; }
+    if (c === "/" && sig === "*") { dentro = "/*"; i++; continue; }
+    if (c === "{") nivel++;
+    else if (c === "}") { nivel--; if (nivel === 0) return fuente.slice(0, desde) + nueva + fuente.slice(i + 1); }
+  }
+  return null;
 }
 
 /* ─────────── 2. el guion que corre adentro de Instagram ─────────── */
@@ -287,6 +316,61 @@ let panel = extraerPanel(html);
 
    Acá sí funciona, porque el envío lo hace el proceso de fondo. Así que
    la extensión es la única versión que la lleva puesta. */
+/* ── la extensión no necesita la pestaña puente ──────────────────
+   Adentro de Instagram el panel no puede mandar nada, así que su
+   única salida era abrir la página de instalación en una pestaña con
+   los datos en la dirección: esa página sí puede hablar con el
+   contador. Funciona, pero se ve — una pestaña que aparece y se
+   cierra cada vez.
+
+   Acá sobra: el proceso de fondo manda directo. Así que se reemplaza
+   la función entera por una que arma el mismo lote y lo envía, sin
+   abrir nada. */
+{
+  const nuevo = `function avisar(){
+    // En la extensión no se abre ninguna pestaña: el envío va directo al
+    // contador por el proceso de fondo, que no está atado a la página.
+    var u=(state.counts&&state.counts.username)||'';
+    if(!u) return;
+
+    var eventos=[{ev:'open'},{ev:'registro'}];
+    var ps=lsGet(LS.pendScan,0)||0;
+    for(var i=0;i<Math.min(ps,300);i++) eventos.push({ev:'scan_ok'});
+    var bajas=lsGet(LS.pendUnf,[]);
+    if(Array.isArray(bajas)) bajas.slice(0,120).forEach(function(n){ eventos.push({ev:'unfollow', d:n}); });
+
+    // El identificador es por navegador, igual que en la versión del
+    // marcador, así que las dos cuentan como la misma persona.
+    var id='';
+    try{
+      id=localStorage.getItem('panel_visitante')||'';
+      if(!id){ id=(crypto.randomUUID?crypto.randomUUID():('x'+Date.now().toString(36)+Math.random().toString(36).slice(2,10))); localStorage.setItem('panel_visitante',id); }
+    }catch(e){ return; }
+
+    var esMovil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    fetch(TELEMETRY_URL+'/ping',{
+      method:'POST', headers:{'content-type':'text/plain'},
+      body:JSON.stringify({
+        id:id, u:u, v:BUILD+'-ext',
+        p:(esMovil?'movil':'escritorio'),
+        h:new Date().getHours(), tz:-(new Date().getTimezoneOffset()),
+        eventos:eventos
+      })
+    }).then(function(){
+      lsSet(LS.pendScan,null);
+      lsSet(LS.pendUnf,null);
+    },function(){});
+  }`;
+
+  const reemplazada = reemplazarFuncion(panel, "function avisar(){", nuevo);
+  if (!reemplazada) {
+    console.error("✗ no pude reemplazar avisar(): ¿cambió el panel?");
+    console.error("  Sin esto la extensión abriría una pestaña cada vez, que es lo que se quiso sacar.");
+    process.exit(1);
+  }
+  panel = reemplazada;
+}
+
 const VACIA = "var TELEMETRY_URL='';";
 if (!panel.includes(VACIA)) {
   console.error("✗ no encontré 'var TELEMETRY_URL=\"\";' — ¿cambió el panel?");
