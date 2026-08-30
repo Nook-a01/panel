@@ -1,0 +1,43 @@
+Panel de Instagram — extensión para Chrome, Edge, Brave y Opera
+================================================================
+
+CÓMO INSTALARLA (una sola vez, dos minutos)
+
+  1. Descomprimí este archivo en una carpeta y NO la borres:
+     el navegador la lee de ahí cada vez que arranca.
+
+  2. Abrí tu navegador y entrá a:
+       Chrome / Brave / Opera →  chrome://extensions
+       Edge                   →  edge://extensions
+
+  3. Arriba a la derecha, activá "Modo de desarrollador".
+
+  4. Tocá "Cargar descomprimida" y elegí la carpeta del paso 1.
+
+  5. Listo. Va a aparecer un ícono verde en la barra del navegador.
+     Si no lo ves, tocá la piecita 🧩 y fijalo.
+
+CÓMO USARLA
+
+  Entrá a instagram.com con tu sesión abierta y tocá el ícono.
+  Tocalo de nuevo para cerrar el panel.
+
+SI ALGO NO ANDA
+
+  · "No pasa nada al tocar el ícono": recargá la pestaña de Instagram.
+    Las pestañas abiertas de antes de instalar no tienen el panel.
+
+  · "Desactivá las extensiones en modo de desarrollador": es un aviso
+    normal de Chrome. Tocá "Cancelar" y seguí. No rompe nada.
+
+  · Si borrás o movés la carpeta, la extensión deja de funcionar.
+
+QUÉ SE ENVÍA
+
+  Cuando aceptás el aviso que aparece la primera vez, el panel avisa
+  quién lo está usando (tu @usuario), cuándo lo abrís y qué secciones
+  mirás. Nada más: no salen tus seguidores, ni tus mensajes, ni tus
+  historias, ni ningún contenido de tu cuenta, y la contraseña no se
+  pide nunca. Podés cambiar de idea desde el pie del panel.
+
+Versión 1.0.0
