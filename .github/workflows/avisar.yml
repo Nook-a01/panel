@@ -1,5 +1,7 @@
 name: Enviar avisos
 
+# Corre sobre el repo panel (antes vivia en mis-deportes).
+
 on:
   schedule:
     - cron: "*/15 * * * *"   # cada 15 minutos

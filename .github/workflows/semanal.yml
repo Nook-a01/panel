@@ -1,5 +1,7 @@
 name: Resumen del domingo
 
+# Corre sobre el repo panel (antes vivia en mis-deportes).
+
 on:
   schedule:
     # Domingos 12:00 UTC = 09:00 en Argentina.
