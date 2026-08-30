@@ -1702,8 +1702,16 @@ async function IGPanelPro(){
 
   // El panel no arranca solo: espera a que toques el botón de la barra.
   // Meterse en pantalla sin que nadie lo pida sería peor que el marcador.
-  chrome.runtime.onMessage.addListener(msg => {
+  chrome.runtime.onMessage.addListener((msg, _remitente, responder) => {
     if (!msg || msg.tipo !== "abrir") return;
+
+    // Contestar NO es un detalle: si este guion no responde, Chrome da el
+    // mensaje por perdido y el proceso de fondo cree que la pestaña no
+    // tiene el panel cargado. Al creerlo, la recargaba — y el panel se
+    // abría y desaparecía en el acto. Se responde primero, antes de
+    // cualquier otra cosa.
+    responder({ ok: true });
+
     const yaEsta = document.getElementById("igpp-root");
     if (yaEsta) { yaEsta.remove(); return; }   // segundo toque: se cierra
     if (abriendo) return;
