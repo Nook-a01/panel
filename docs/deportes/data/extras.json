@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-30T08:41:41.943Z",
+ "actualizado": "2026-08-30T15:19:50.253Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -292,9 +290,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -437,9 +434,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -654,9 +650,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -703,9 +698,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "382976",
@@ -1037,8 +1031,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1061,7 +1056,7 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
      "lesionado": false,
      "fotoDeWiki": true
     },
@@ -1111,9 +1106,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1137,9 +1131,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1162,9 +1155,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1187,9 +1179,8 @@
      "posCorta": "M",
      "edad": 21,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1212,8 +1203,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1639,9 +1631,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1751,9 +1742,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1788,9 +1778,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1839,18 +1828,6 @@
      "edad": 24,
      "pais": "Argentina",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
-     "lesionado": false
-    },
-    {
-     "id": "229289",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hon.png",
-     "nombre": "David Ruiz",
-     "dorsal": "41",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 22,
-     "pais": "Honduras",
-     "foto": null,
      "lesionado": false
     },
     {
@@ -1974,6 +1951,18 @@
      "lesionado": false
     },
     {
+     "id": "229289",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+     "nombre": "David Ruiz",
+     "dorsal": "41",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 28,
+     "pais": "Spain",
+     "foto": null,
+     "lesionado": false
+    },
+    {
      "id": "401418",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "nombre": "Diego Rey",
@@ -2012,11 +2001,11 @@
    ],
    "noticias": [
     {
-     "titulo": "Minnesota United FC vs. Orlando City SC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Minnesota United FC vs. Orlando City SC, 08/29/2026",
-     "fecha": "2026-08-30T05:10:02Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0830/5f172329-8a35-4afa-9468-e672ca65423c/5f172329-8a35-4afa-9468-e672ca65423c.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49768659/minnesota-united-fc-vs-orlando-city-sc-game-highlights"
+     "titulo": "Every time Messi scored 4 goals for Barcelona, Inter Miami, Argentina",
+     "resumen": "Lionel Messi grabbed the headlines on Saturday by scoring four goals in Inter Miami's 7-1 win over Montréal. But the feat is nothing new for the GOAT.",
+     "fecha": "2026-08-30T12:48:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0830/r1708907_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49770739/every-lionel-messi-scored-4-goals-more-barcelona-inter-miami-argentina"
     },
     {
      "titulo": "Cavan Sullivan scores for second straight game for Philly",
@@ -2277,10 +2266,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2294,10 +2282,9 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 9,
@@ -2311,10 +2298,9 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 10,
@@ -2344,10 +2330,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2378,10 +2363,9 @@
       "color": "#5A5A5A",
       "numero": "87",
       "driverId": "bearman",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg/330px-2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 14,
@@ -2395,10 +2379,9 @@
       "color": "#FF2D00",
       "numero": "5",
       "driverId": "bortoleto",
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 15,
