@@ -756,6 +756,16 @@ updateProgress();
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
+
+
+
+<!-- piel: piel-cuaderno -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
 <style id="piel-cuaderno">
 :root{
   --bg:#E7DEC9;
@@ -920,6 +930,64 @@ nav{
   box-shadow:3px 3px 0 var(--border);
 }
 .volver-panel:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
+
+body{
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
+}
+body::before{
+  content:"";
+  position:fixed; top:0; left:0; right:0;
+  height:env(safe-area-inset-top);
+  background:var(--bg);
+  z-index:9998;
+  pointer-events:none;
+}
+
+/* La barra que queda pegada arriba tiene que frenar debajo del reloj,
+   no en el borde de la pantalla. */
+nav{ top:env(safe-area-inset-top) }
+
+/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
+   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
+   Instagram cubría el botón de elegir plataforma, que hay que poder
+   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
+   cuando lo estás buscando. */
+.volver-panel{
+  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+}
+.volver-panel.escondido{
+  transform:translateY(160%);
+  opacity:0;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+}
 </style>
-</body>
+
+<script>
+(() => {
+  const b = document.querySelector(".volver-panel");
+  if (!b) return;
+  let ultimo = window.scrollY, pendiente = false;
+
+  const revisar = () => {
+    pendiente = false;
+    const y = window.scrollY;
+    // Arriba de todo siempre se muestra, y los movimientos de menos de
+    // 6 px se ignoran: si no, el botón tiembla con el rebote del dedo.
+    if (y < 60) b.classList.remove("escondido");
+    else if (Math.abs(y - ultimo) > 6) b.classList.toggle("escondido", y > ultimo);
+    ultimo = y;
+  };
+
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  }, { passive: true });
+})();
+</script>
+<!-- /piel: piel-cuaderno --></body>
 </html>

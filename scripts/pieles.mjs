@@ -99,9 +99,12 @@ nav.tabs a.on, nav.tabs a.active, nav.tabs .on, .tabs .tab.on{
 .hero{
   background:transparent;
   border:0; border-top:3px double var(--ink); border-bottom:1px solid var(--line);
-  /* Sin el recuadro original el texto quedaba pegado al filete: hace
-     falta el aire que antes daba el borde de la tarjeta. */
-  padding:1.5rem 0 1.7rem .2rem;
+  /* El aire de la izquierda no es capricho: el bloque tiene una barra
+     de color de 4 px pegada al borde (.hero::before, que marca si vas
+     bien o mal de plata). Con menos relleno que eso, el texto arranca
+     ABAJO de la barra y las primeras letras de cada renglón se ven
+     tapadas, como si estuvieran cortadas. */
+  padding:1.5rem 0 1.7rem 1.1rem;
 }
 .hero .big{
   font-family:var(--f-display);
@@ -266,7 +269,21 @@ h1, h2, h3, .big{
   background-clip:border-box;
   -webkit-text-fill-color:#fff;
 }
-h1{ font-size:clamp(2rem, 8vw, 3.4rem); line-height:.92 }
+/* El título venía como fila flex sin permiso de cortar. Eso partía
+   el texto en dos piezas sueltas: "Panel de" se acomodaba en dos
+   renglones mientras "Instagram" seguía entero al costado, pegado al
+   borde. Como bloque, el texto fluye como texto y corta donde toca. */
+h1{
+  display:block;
+  font-size:clamp(1.55rem, 7.4vw, 3.4rem);
+  line-height:.94;
+}
+h1 .dot{
+  display:inline-block;
+  vertical-align:-.08em;
+  margin-right:.3em;
+  width:.7em; height:.7em;
+}
 h2{
   font-size:clamp(1.1rem, 4vw, 1.5rem);
   border-bottom:3px solid #fff;
@@ -306,6 +323,17 @@ h3{ font-size:1rem; color:var(--acido) }
 }
 .btn:hover, button:hover, .seg > *:hover{ background:var(--acido); color:#000 }
 .btn:active, button:active{ background:var(--shock); color:#000 }
+
+/* Las tres casillas de plataforma se reparten el ancho en partes
+   iguales, así que en el celular cada una tiene unos 115 px. Con el
+   espaciado de letras de los botones grandes, "COMPUTADORA" no entraba
+   y quedaba cortada. Acá el texto manda sobre el estilo. */
+.seg button{
+  letter-spacing:0;
+  font-size:clamp(.62rem, 3.1vw, .82rem);
+  padding:.6em .25em;
+  min-width:0;
+}
 
 /* El seleccionado va invertido: negro sobre ácido, sin medias tintas.
    Ojo con .plat.on: NO es una solapa, es el panel de contenido que se
@@ -544,30 +572,145 @@ nav{
 
 /* ─────────────────────────────────────────────────────────────── */
 
+/* ═══════════════════════════════════════════════════════════════
+   Lo que necesitan las tres por igual: el borde de la pantalla.
+   ═══════════════════════════════════════════════════════════════
+   Instalado en el iPhone, el Panel ocupa la pantalla entera y el
+   reloj y la batería quedan ENCIMA de la página, no arriba. Sin
+   contemplarlo, el título de la sección aparece abajo del reloj.
+   Deportes ya lo tenía resuelto; estas tres no.
+
+   Son dos cosas distintas y hacen falta las dos:
+     · el relleno, para que el contenido arranque más abajo
+     · la franja fija, porque el relleno se va con el desplazamiento
+       y sin ella el texto vuelve a pasar por debajo del reloj
+
+   Abajo pasa lo mismo con la barra del gesto de inicio, y encima
+   está el botón de volver, que es fijo: por eso el relleno inferior
+   suma su altura. */
+const ZONA_SEGURA = (fondo, opciones = {}) => `
+body{
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
+}
+body::before{
+  content:"";
+  position:fixed; top:0; left:0; right:0;
+  height:env(safe-area-inset-top);
+  background:${fondo};
+  z-index:9998;
+  pointer-events:none;
+}
+${opciones.pegajoso ? `
+/* La barra que queda pegada arriba tiene que frenar debajo del reloj,
+   no en el borde de la pantalla. */
+${opciones.pegajoso}{ top:env(safe-area-inset-top) }
+` : ""}
+/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
+   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
+   Instagram cubría el botón de elegir plataforma, que hay que poder
+   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
+   cuando lo estás buscando. */
+.volver-panel{
+  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+}
+.volver-panel.escondido{
+  transform:translateY(160%);
+  opacity:0;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+}
+`;
+
+/* El poquito de código que lo mueve. Va aparte del CSS porque hace
+   falta saber para qué lado se está desplazando, y eso no se puede
+   preguntar desde una hoja de estilos. */
+const GUION_VOLVER = `
+<script>
+(() => {
+  const b = document.querySelector(".volver-panel");
+  if (!b) return;
+  let ultimo = window.scrollY, pendiente = false;
+
+  const revisar = () => {
+    pendiente = false;
+    const y = window.scrollY;
+    // Arriba de todo siempre se muestra, y los movimientos de menos de
+    // 6 px se ignoran: si no, el botón tiembla con el rebote del dedo.
+    if (y < 60) b.classList.remove("escondido");
+    else if (Math.abs(y - ultimo) > 6) b.classList.toggle("escondido", y > ultimo);
+    ultimo = y;
+  };
+
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  }, { passive: true });
+})();
+</script>
+`;
+
 const PIELES = [
-  { archivo: "docs/plata/index.html",      marca: "piel-diario",   css: PLATA,      nombre: "02 Plata → diario" },
-  { archivo: "docs/instagram/index.html",  marca: "piel-afiche",   css: INSTAGRAM,  nombre: "03 Instagram → afiche" },
-  { archivo: "docs/campamento/index.html", marca: "piel-cuaderno", css: CAMPAMENTO, nombre: "04 Campamento → cuaderno" },
+  { archivo: "docs/plata/index.html",      marca: "piel-diario",   css: PLATA,      nombre: "02 Plata → diario",
+    fondo: "var(--bg)" },
+  { archivo: "docs/instagram/index.html",  marca: "piel-afiche",   css: INSTAGRAM,  nombre: "03 Instagram → afiche",
+    fondo: "#000" },
+  { archivo: "docs/campamento/index.html", marca: "piel-cuaderno", css: CAMPAMENTO, nombre: "04 Campamento → cuaderno",
+    fondo: "var(--bg)", pegajoso: "nav" },
 ];
 
 for (const p of PIELES) {
   let html = readFileSync(p.archivo, "utf8");
 
-  // Idempotente: si ya está puesta, se reemplaza en vez de duplicarse.
-  const abre = html.indexOf(`<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<style id="${p.marca}">`);
-  const soloEstilo = html.indexOf(`<style id="${p.marca}">`);
-  if (soloEstilo >= 0) {
-    const desde = abre >= 0 ? abre : soloEstilo;
-    const cierra = html.indexOf("</style>", soloEstilo) + "</style>".length;
-    html = html.slice(0, desde) + html.slice(cierra);
+  // La piel es varias cosas seguidas: la fuente, los estilos y un poco
+  // de código. Se envuelve entre dos comentarios para poder sacarla
+  // entera y volver a ponerla sin que se duplique. Antes se buscaba
+  // sólo el <style>, y todo lo que viniera después quedaba pegado dos
+  // veces cada vez que se corría esto.
+  const ABRE  = `<!-- piel: ${p.marca} -->`;
+  const CIERRA = `<!-- /piel: ${p.marca} -->`;
+
+  const i = html.indexOf(ABRE), j = html.indexOf(CIERRA);
+  if (i >= 0 && j > i) {
+    html = html.slice(0, i) + html.slice(j + CIERRA.length);
+  } else {
+    // Limpieza de la versión anterior, la que se ponía sin marcadores.
+    // Sin esto, la primera corrida con el sistema nuevo dejaría las dos
+    // pegadas una atrás de la otra.
+    const e = html.indexOf(`<style id="${p.marca}">`);
+    if (e >= 0) {
+      let desde = e;
+      const link = html.lastIndexOf("<link rel=\"preconnect\"", e);
+      if (link >= 0 && e - link < 400) desde = link;   // la fuente venía justo antes
+
+      let hasta = html.indexOf("</style>", e) + "</style>".length;
+      // Plata traía además un <script> pegado atrás.
+      const resto = html.slice(hasta, hasta + 300);
+      const s = resto.indexOf("<script>");
+      if (s >= 0 && s < 5) hasta = html.indexOf("</script>", hasta) + "</script>".length;
+
+      html = html.slice(0, desde) + html.slice(hasta);
+      console.log(`  · ${p.nombre}: saqué la versión anterior`);
+    }
   }
+
+  // Las reglas del borde de la pantalla entran adentro del mismo
+  // <style>, justo antes de cerrarlo.
+  const cuerpo = p.css.replace(
+    "</style>",
+    ZONA_SEGURA(p.fondo, { pegajoso: p.pegajoso }) + "</style>"
+  ) + GUION_VOLVER;
 
   // Va al final del documento: así gana por orden, sin llenar de
   // !important reglas que ya estaban bien.
+  const bloque = ABRE + cuerpo + CIERRA;
   const cierre = html.lastIndexOf("</body>");
   html = cierre >= 0
-    ? html.slice(0, cierre) + p.css + html.slice(cierre)
-    : html + p.css;
+    ? html.slice(0, cierre) + bloque + html.slice(cierre)
+    : html + bloque;
 
   writeFileSync(p.archivo, html);
   console.log(`✓ ${p.nombre}`);

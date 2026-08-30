@@ -1917,6 +1917,28 @@ $('#wipe').onclick = ()=>{
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
+
+<script>
+  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
+  // documento como claro se desactivan de una las reglas nocturnas que
+  // traía la app, en vez de ir peleándolas una por una.
+  document.documentElement.dataset.theme = "light";
+</script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
+
+<script>
+  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
+  // documento como claro se desactivan de una las reglas nocturnas que
+  // traía la app, en vez de ir peleándolas una por una.
+  document.documentElement.dataset.theme = "light";
+</script>
+
+
+<!-- piel: piel-diario -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
 <style id="piel-diario">
 :root, :root[data-theme], :root:not([data-theme]){
   --bg:#F1ECE0;
@@ -1984,9 +2006,12 @@ nav.tabs a.on, nav.tabs a.active, nav.tabs .on, .tabs .tab.on{
 .hero{
   background:transparent;
   border:0; border-top:3px double var(--ink); border-bottom:1px solid var(--line);
-  /* Sin el recuadro original el texto quedaba pegado al filete: hace
-     falta el aire que antes daba el borde de la tarjeta. */
-  padding:1.5rem 0 1.7rem .2rem;
+  /* El aire de la izquierda no es capricho: el bloque tiene una barra
+     de color de 4 px pegada al borde (.hero::before, que marca si vas
+     bien o mal de plata). Con menos relleno que eso, el texto arranca
+     ABAJO de la barra y las primeras letras de cada renglón se ven
+     tapadas, como si estuvieran cortadas. */
+  padding:1.5rem 0 1.7rem 1.1rem;
 }
 .hero .big{
   font-family:var(--f-display);
@@ -2092,6 +2117,36 @@ tr:hover td{ background:var(--surface-2) }
   font-family:var(--f-mono);
   font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
 }
+
+body{
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
+}
+body::before{
+  content:"";
+  position:fixed; top:0; left:0; right:0;
+  height:env(safe-area-inset-top);
+  background:var(--bg);
+  z-index:9998;
+  pointer-events:none;
+}
+
+/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
+   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
+   Instagram cubría el botón de elegir plataforma, que hay que poder
+   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
+   cuando lo estás buscando. */
+.volver-panel{
+  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+}
+.volver-panel.escondido{
+  transform:translateY(160%);
+  opacity:0;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+}
 </style>
 <script>
   // El diario es siempre de papel: no tiene modo oscuro. Marcando el
@@ -2099,5 +2154,29 @@ tr:hover td{ background:var(--surface-2) }
   // traía la app, en vez de ir peleándolas una por una.
   document.documentElement.dataset.theme = "light";
 </script>
-</body>
+
+<script>
+(() => {
+  const b = document.querySelector(".volver-panel");
+  if (!b) return;
+  let ultimo = window.scrollY, pendiente = false;
+
+  const revisar = () => {
+    pendiente = false;
+    const y = window.scrollY;
+    // Arriba de todo siempre se muestra, y los movimientos de menos de
+    // 6 px se ignoran: si no, el botón tiembla con el rebote del dedo.
+    if (y < 60) b.classList.remove("escondido");
+    else if (Math.abs(y - ultimo) > 6) b.classList.toggle("escondido", y > ultimo);
+    ultimo = y;
+  };
+
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  }, { passive: true });
+})();
+</script>
+<!-- /piel: piel-diario --></body>
 </html>
