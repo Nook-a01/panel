@@ -2043,6 +2043,12 @@ if(usuarioPanel || esSyncTab){ setTimeout(cerrarUnaVez,9000); } // red de seguri
 
 
 
+
+
+
+
+
+<!-- piel: piel-afiche -->
 <style id="piel-afiche">
 :root{
   --bg:#000; --card:#000; --chip:#0d0d0d;
@@ -2078,7 +2084,21 @@ h1, h2, h3, .big{
   background-clip:border-box;
   -webkit-text-fill-color:#fff;
 }
-h1{ font-size:clamp(2rem, 8vw, 3.4rem); line-height:.92 }
+/* El título venía como fila flex sin permiso de cortar. Eso partía
+   el texto en dos piezas sueltas: "Panel de" se acomodaba en dos
+   renglones mientras "Instagram" seguía entero al costado, pegado al
+   borde. Como bloque, el texto fluye como texto y corta donde toca. */
+h1{
+  display:block;
+  font-size:clamp(1.55rem, 7.4vw, 3.4rem);
+  line-height:.94;
+}
+h1 .dot{
+  display:inline-block;
+  vertical-align:-.08em;
+  margin-right:.3em;
+  width:.7em; height:.7em;
+}
 h2{
   font-size:clamp(1.1rem, 4vw, 1.5rem);
   border-bottom:3px solid #fff;
@@ -2118,6 +2138,17 @@ h3{ font-size:1rem; color:var(--acido) }
 }
 .btn:hover, button:hover, .seg > *:hover{ background:var(--acido); color:#000 }
 .btn:active, button:active{ background:var(--shock); color:#000 }
+
+/* Las tres casillas de plataforma se reparten el ancho en partes
+   iguales, así que en el celular cada una tiene unos 115 px. Con el
+   espaciado de letras de los botones grandes, "COMPUTADORA" no entraba
+   y quedaba cortada. Acá el texto manda sobre el estilo. */
+.seg button{
+  letter-spacing:0;
+  font-size:clamp(.62rem, 3.1vw, .82rem);
+  padding:.6em .25em;
+  min-width:0;
+}
 
 /* El seleccionado va invertido: negro sobre ácido, sin medias tintas.
    Ojo con .plat.on: NO es una solapa, es el panel de contenido que se
@@ -2172,4 +2203,59 @@ a{ color:var(--acido); text-decoration-thickness:2px; text-underline-offset:3px 
   letter-spacing:.06em;
 }
 .volver-panel:hover{ background:var(--acido); color:#000 }
+
+body{
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
+}
+body::before{
+  content:"";
+  position:fixed; top:0; left:0; right:0;
+  height:env(safe-area-inset-top);
+  background:#000;
+  z-index:9998;
+  pointer-events:none;
+}
+
+/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
+   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
+   Instagram cubría el botón de elegir plataforma, que hay que poder
+   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
+   cuando lo estás buscando. */
+.volver-panel{
+  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+}
+.volver-panel.escondido{
+  transform:translateY(160%);
+  opacity:0;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+}
 </style>
+
+<script>
+(() => {
+  const b = document.querySelector(".volver-panel");
+  if (!b) return;
+  let ultimo = window.scrollY, pendiente = false;
+
+  const revisar = () => {
+    pendiente = false;
+    const y = window.scrollY;
+    // Arriba de todo siempre se muestra, y los movimientos de menos de
+    // 6 px se ignoran: si no, el botón tiembla con el rebote del dedo.
+    if (y < 60) b.classList.remove("escondido");
+    else if (Math.abs(y - ultimo) > 6) b.classList.toggle("escondido", y > ultimo);
+    ultimo = y;
+  };
+
+  addEventListener("scroll", () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  }, { passive: true });
+})();
+</script>
+<!-- /piel: piel-afiche -->

@@ -205,6 +205,8 @@ body{
 .tira h2{
   margin:0 0 .28rem;
   font-size:clamp(1.35rem, 5.2vw, 2.3rem);
+  /* Red de seguridad: antes que salirse de la tira, que se parta. */
+  overflow-wrap:break-word;
   font-weight:800;
   letter-spacing:-.038em;
   line-height:1.02;
@@ -311,6 +313,10 @@ body{
   .num{ align-self:flex-start; padding-top:0; margin-bottom:auto }
   .cuerpo{ flex:none; width:100% }
   .flecha{ position:absolute; top:1.6rem; right:1.5rem }
+  /* El tamaño se ata al ancho de la columna, no al de la pantalla.
+     Antes usaba 5.2vw: a ~950 px las columnas quedan de unos 230 px
+     pero el título ya medía 37 px, y "Campamento" se cortaba. */
+  .tira h2{ font-size:clamp(1.15rem, 2.5vw, 2.05rem) }
   .que{ max-width:30ch }
 }
 
