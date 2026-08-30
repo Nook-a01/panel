@@ -24,7 +24,7 @@ import { deflateSync } from "node:zlib";
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 /* ─────────── 1. sacar el panel de la página ─────────── */
 
@@ -116,8 +116,16 @@ ${panel}
 
   // El panel no arranca solo: espera a que toques el botón de la barra.
   // Meterse en pantalla sin que nadie lo pida sería peor que el marcador.
-  chrome.runtime.onMessage.addListener(msg => {
+  chrome.runtime.onMessage.addListener((msg, _remitente, responder) => {
     if (!msg || msg.tipo !== "abrir") return;
+
+    // Contestar NO es un detalle: si este guion no responde, Chrome da el
+    // mensaje por perdido y el proceso de fondo cree que la pestaña no
+    // tiene el panel cargado. Al creerlo, la recargaba — y el panel se
+    // abría y desaparecía en el acto. Se responde primero, antes de
+    // cualquier otra cosa.
+    responder({ ok: true });
+
     const yaEsta = document.getElementById("igpp-root");
     if (yaEsta) { yaEsta.remove(); return; }   // segundo toque: se cierra
     if (abriendo) return;
@@ -146,12 +154,20 @@ const CONTADOR = ${JSON.stringify(CONTADOR)};
 chrome.action.onClicked.addListener(tab => {
   if (!tab || !tab.id) return;
   chrome.tabs.sendMessage(tab.id, { tipo: "abrir" }, () => {
-    // Si la pestaña no tiene el guion cargado (por ejemplo, estaba
-    // abierta desde antes de instalar la extensión), se avisa en vez
-    // de no hacer nada, que es lo que más desconcierta.
-    if (chrome.runtime.lastError) {
-      chrome.tabs.reload(tab.id);
-    }
+    const err = chrome.runtime.lastError;
+    if (!err) return;
+
+    // Sólo se recarga cuando el error dice que NO HAY NADIE del otro
+    // lado, que es el caso real: la pestaña estaba abierta desde antes
+    // de instalar la extensión y no tiene el guion.
+    //
+    // Antes se recargaba ante cualquier error, y eso rompía el uso
+    // normal: si el guion abría el panel pero no contestaba a tiempo,
+    // Chrome avisaba "el canal se cerró", y la recarga se llevaba
+    // puesto el panel que se acababa de abrir.
+    const sinNadie = /Receiving end does not exist|Could not establish connection/i
+      .test(err.message || "");
+    if (sinNadie) chrome.tabs.reload(tab.id);
   });
 });
 

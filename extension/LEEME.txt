@@ -40,4 +40,4 @@ QUÉ SE ENVÍA
   historias, ni ningún contenido de tu cuenta, y la contraseña no se
   pide nunca. Podés cambiar de idea desde el pie del panel.
 
-Versión 1.0.0
+Versión 1.0.1
