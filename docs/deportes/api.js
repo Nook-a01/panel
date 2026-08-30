@@ -115,6 +115,13 @@ export async function detallePartido(ruta, liga, idEvento) {
       esCambio: /substitut/i.test(k.type?.text || ""),
     }));
 
+  // Cuántas veces hizo cada cosa, sacado de sus números del partido.
+  const dato = (p, nombre) => {
+    const s = (p.stats || []).find(x => x.name === nombre);
+    const v = parseInt(s?.value ?? s?.displayValue ?? "0", 10);
+    return Number.isFinite(v) ? v : 0;
+  };
+
   const formaciones = (d.rosters || []).map(r => ({
     equipo: r.team?.displayName || "",
     logo: r.team?.logo || null,
@@ -128,8 +135,50 @@ export async function detallePartido(ruta, liga, idEvento) {
       capitan: !!p.captain,
       entro: !!p.subbedIn,
       salio: !!p.subbedOut,
+
+      // El puesto en la formación, de 1 a 11 empezando por el arquero.
+      // Es lo que permite dibujarlos parados en la cancha en vez de en
+      // una lista. Los suplentes vienen con 0.
+      lugar: parseInt(p.formationPlace, 10) || 0,
+
+      // ESPN tiene la foto de pocos jugadores: en este partido, 5 de 20
+      // de un equipo y 8 de 20 del otro. Cuando no está, la vista pone
+      // las iniciales; no se inventa una cara.
+      foto: p.athlete?.headshot?.href || null,
+
+      goles: dato(p, "totalGoals"),
+      enContra: dato(p, "ownGoals"),
+      asistencias: dato(p, "goalAssists"),
+      amarillas: dato(p, "yellowCards"),
+      rojas: dato(p, "redCards"),
+
+      // Con quién se cambió y en qué minuto.
+      cambioCon: p.subbedInFor?.athlete?.displayName
+              || p.subbedOutFor?.athlete?.displayName || null,
+      minutoCambio: (p.plays || [])
+        .map(x => x.clock?.displayValue).filter(Boolean)[0] || null,
     })),
   }));
+
+  // La tabla de posiciones del torneo, tal como la muestra la app de
+  // Apple abajo del partido. Viene en el mismo pedido, así que no
+  // cuesta nada traerla.
+  const posiciones = (d.standings?.groups || []).map(g => ({
+    titulo: g.header || d.standings?.header || "",
+    filas: (g.standings?.entries || []).map(en => {
+      const n = clave => {
+        const s = (en.stats || []).find(x => x.name === clave);
+        return s?.displayValue ?? "";
+      };
+      return {
+        puesto: n("rank"),
+        equipo: typeof en.team === "string" ? en.team : (en.team?.displayName || ""),
+        id: en.id || null,
+        pj: n("gamesPlayed"), g: n("wins"), e: n("ties"), p: n("losses"),
+        dg: n("pointDifferential"), pts: n("points"),
+      };
+    }),
+  })).filter(g => g.filas.length);
 
   // ESPN publica clips por jugada en las ligas donde transmite (MLS sí,
   // la liga argentina no). Se los engancha al gol por el apellido del que
@@ -184,7 +233,8 @@ export async function detallePartido(ruta, liga, idEvento) {
     ciudad: d.gameInfo?.venue?.address?.city || "",
     publico: d.gameInfo?.attendance || null,
     arbitros: (d.gameInfo?.officials || []).map(o => o.displayName || o.fullName).filter(Boolean),
-    jugadas, formaciones, estadisticas, videos,
+    fecha: cab.date || null,
+    jugadas, formaciones, estadisticas, videos, posiciones,
   };
 }
 
