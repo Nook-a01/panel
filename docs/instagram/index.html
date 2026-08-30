@@ -1932,6 +1932,15 @@ try{ new Function(code); }catch(e){ code=crudo; }
 // Son dos textos distintos y mezclarlos es el motivo habitual de que "no pase nada".
 var urlMarcador='javascript:'+encodeURIComponent(code);
 
+// La app Atajos exige que el script llame a completion() cuando termina;
+// si no, corta con "El script debe invocar la funcion completion(result)".
+// El marcador NO lo lleva: ahi esa funcion no existe y romperia.
+// Se llama enseguida, sin esperar al panel: el panel es asincronico y se
+// queda abierto esperandote, asi que aguardar a que "termine" dejaria la
+// accion colgada para siempre. Lo que importa es que quedo inyectado.
+// 'code' ya termina en punto y coma, así que se pega directo sin salto.
+var codigoAtajo=code+'try{completion();}catch(e){}';
+
 document.getElementById('bm').href=urlMarcador;
 // El cuadro con el código completo ya no está en la página. Se busca igual por si
 // vuelve algún día, pero sin él esta línea tiraba error y dejaba el botón sin código.
@@ -1983,7 +1992,7 @@ function alCopiar(id,texto){
 }
 alCopiar('copyBmA',urlMarcador);   // Android → marcador
 alCopiar('copyBmI',urlMarcador);   // iPhone  → marcador
-alCopiar('copyRawI',code);         // iPhone  → app Atajos
+alCopiar('copyRawI',codigoAtajo);  // iPhone  → app Atajos (lleva completion)
 
 // ---- mostrar de entrada la plataforma que corresponde ----
 var ua=navigator.userAgent;
