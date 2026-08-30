@@ -39,10 +39,29 @@ const $ = s => document.querySelector(s);
   });
   setTimeout(() => {
     for (const t of tiras) {
-      t.classList.add("entro");
+      // El orden importa y es la parte que se puede hacer mal: primero se
+      // apaga la transición, recién después se fija el estado final.
+      //
+      // Al revés no sirve de nada. Asignar la opacidad con la transición
+      // todavía puesta no la fija: arranca una transición NUEVA hacia ese
+      // valor. Y si el motivo por el que hizo falta el rescate era que las
+      // transiciones estaban frenadas — la pestaña quedó de fondo, el
+      // teléfono se bloqueó —, esa transición nueva se frena igual que la
+      // anterior y la tira sigue invisible. La red de seguridad se anula
+      // sola. Apagándola primero, el valor se aplica de una y no depende
+      // de que el reloj de animaciones esté corriendo.
+      t.style.transition = "none";
       t.style.transitionDelay = "";
+      t.classList.add("entro");
       t.style.opacity = "1";
+      // El transform se limpia en vez de fijarse: la clase .entro ya lo
+      // deja en su lugar, y puesto en línea le ganaría al hundido de
+      // :active, que es el que da la sensación de botón al tocar.
       t.style.transform = "";
+
+      // Devuelta la transición en el cuadro siguiente, para que el resto
+      // de la página (el ensanchado al apuntar) siga animando normal.
+      requestAnimationFrame(() => { t.style.transition = ""; });
     }
   }, 1000);
 }
