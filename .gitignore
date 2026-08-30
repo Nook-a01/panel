@@ -1,0 +1,9 @@
+node_modules/
+
+# Secretos: nunca se suben.
+# Ojo: los comentarios sólo valen al principio de la línea. Si se ponen
+# al final, pasan a formar parte del patrón y el archivo queda expuesto.
+.vapid.json
+.subscriptions.json
+.env
+/tmp/

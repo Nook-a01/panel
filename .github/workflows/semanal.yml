@@ -1,0 +1,31 @@
+name: Resumen del domingo
+
+on:
+  schedule:
+    # Domingos 12:00 UTC = 09:00 en Argentina.
+    # Si cambiás la zona horaria en config.mjs, ajustá también esta hora.
+    - cron: "0 12 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  resumen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Mandar el calendario de la semana
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+        run: node scripts/send-push.mjs --semanal

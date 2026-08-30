@@ -1,0 +1,143 @@
+/* ============================================================
+   Banderas, colores de escudería y acceso a los torneos.
+   ============================================================ */
+
+/* ---------- banderas ---------- */
+.bandera{
+  width:24px;height:16px;object-fit:cover;
+  border:1px solid rgba(0,0,0,.35);
+  flex:0 0 auto;
+  vertical-align:middle;
+}
+.tabla .eq .bandera{width:26px;height:17px}
+.jug .info span .bandera{margin-right:5px}
+
+/* ---------- color de escudería ----------
+   ESPN no publica logos de las escuderías de F1, pero sí el color
+   oficial de cada una. La pastilla hace de identificador. */
+.pastilla{
+  display:inline-block;width:10px;height:10px;
+  border:1px solid rgba(0,0,0,.5);
+  margin-right:5px;vertical-align:middle;flex:0 0 auto;
+}
+.pastilla.grande{width:6px;height:20px;margin-right:8px}
+.escuderia{display:flex;align-items:center;color:#666;font-size:12px}
+
+/* ---------- plantel clicable ---------- */
+.jug{
+  width:100%;text-align:left;cursor:inherit;font-family:inherit;
+  transition:transform .13s var(--ease), box-shadow .13s var(--ease);
+}
+.jug[data-jug]:hover{background:#fffbe8}
+.jug[data-jug]:active{transform:translate(3px,3px);box-shadow:0 0 0}
+.jug .info span{display:flex;align-items:center}
+
+/* ---------- competencias ---------- */
+.compite{
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+  margin-bottom:14px;
+}
+.compite > span{
+  font-family:var(--sans);font-size:12.5px;color:#666;
+  margin-right:2px;
+}
+.torneo-chip{
+  font-family:var(--sans);font-size:12.5px;font-weight:650;
+  background:var(--papel2);color:#111;
+  border:2px solid #000;padding:5px 9px;
+  cursor:inherit;box-shadow:2px 2px 0 rgba(0,0,0,.35);
+  transition:transform .12s var(--ease), box-shadow .12s var(--ease), background .12s var(--ease);
+}
+.torneo-chip:hover{background:var(--amarillo)}
+.torneo-chip:active{transform:translate(2px,2px);box-shadow:0 0 0}
+.torneo-chip.sin{
+  box-shadow:none;border-style:dashed;opacity:.7;cursor:default;
+  font-weight:500;
+}
+
+/* ---------- historial de peleador ---------- */
+.historial{list-style:none;margin-bottom:6px}
+.hp{
+  display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;
+  align-items:center;padding:9px 8px;
+  border-bottom:2px solid rgba(0,0,0,.09);
+}
+.hp-res{
+  font-family:var(--sans);font-size:14px;font-weight:800;
+  width:26px;height:26px;display:grid;place-items:center;
+  background:#999;color:#fff;
+}
+.hp.gano .hp-res{background:#0a7c33}
+.hp.perdio .hp-res{background:#c02626}
+.hp-rival{font-family:var(--sans);font-size:14.5px;font-weight:650}
+.hp-fecha{font-family:var(--sans);font-size:12px;color:#888;white-space:nowrap}
+.hp-ev{
+  grid-column:2/-1;font-family:var(--sans);font-size:12px;color:#777;
+  margin-top:-2px;
+}
+.hp-titulo{
+  background:var(--amarillo);color:#000;font-size:9px;
+  padding:1px 4px;font-weight:800;margin-left:4px;
+}
+/* el peleador de la cartelera ahora es un botón */
+.pel{background:none;border:none;font-family:inherit;cursor:inherit;padding:0}
+.pel[data-jug]:hover .pel-nom{text-decoration:underline}
+
+/* ---------- piloto: ganancia o pérdida de posiciones ---------- */
+.tabla tr.clicable{cursor:inherit}
+.tabla tr.clicable:hover{background:rgba(255,230,0,.18)}
+.sube{color:#0a7c33;font-weight:800;font-size:11px;display:block}
+.baja{color:#c02626;font-weight:800;font-size:11px;display:block}
+
+/* ---------- forma reciente ---------- */
+.formas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:6px}
+.forma{background:#fff;border:2px solid #000;padding:10px;box-shadow:3px 3px 0 rgba(0,0,0,.3)}
+.forma-eq{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.forma-eq img{width:24px;height:24px;object-fit:contain}
+.forma-eq b{font-family:var(--sans);font-size:13.5px}
+.forma-bolas{display:flex;gap:4px;margin-bottom:8px}
+.fb{
+  width:22px;height:22px;display:grid;place-items:center;
+  font-family:var(--sans);font-size:11px;font-weight:800;color:#fff;
+  background:#999;
+}
+.fb.g{background:#0a7c33}
+.fb.p{background:#c02626}
+.fb.e{background:#9a8f00}
+.forma-lista{list-style:none}
+.forma-lista li{
+  display:flex;justify-content:space-between;gap:8px;
+  font-family:var(--sans);font-size:12px;color:#555;
+  padding:3px 0;border-top:1px solid rgba(0,0,0,.08);
+}
+.forma-lista b{color:#111}
+
+/* marcador corriendo dentro de una jugada */
+.j-marc{
+  font-family:var(--sans);font-size:13px;font-weight:800;
+  background:#000;color:var(--amarillo);padding:2px 6px;white-space:nowrap;
+}
+
+/* ---------- lista de peleadores ---------- */
+.peleadores{display:flex;flex-direction:column;gap:6px}
+.pf{
+  display:flex;align-items:center;gap:10px;text-align:left;
+  background:#fff;border:2px solid #000;padding:9px 10px;
+  cursor:inherit;font-family:inherit;
+  box-shadow:2px 2px 0 rgba(0,0,0,.3);
+  transition:transform .13s var(--ease), box-shadow .13s var(--ease);
+}
+.pf:active{transform:translate(2px,2px);box-shadow:0 0 0}
+.pf:hover{background:#fffbe8}
+.pf-pos{
+  font-family:var(--sans);font-size:14px;font-weight:800;
+  min-width:26px;height:26px;display:grid;place-items:center;
+  background:#000;color:var(--ufc);
+}
+.pf-bandera{width:26px;height:17px;object-fit:cover;border:1px solid rgba(0,0,0,.3);flex:0 0 auto}
+.pf-info{flex:1;min-width:0}
+.pf-info b{display:block;font-family:var(--sans);font-size:14px;font-weight:700;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-info small{font-family:var(--sans);font-size:11.5px;color:#777}
+.pf-rec{text-align:right;font-family:var(--sans);font-size:14px;font-weight:750;white-space:nowrap}
+.pf-rec small{display:block;font-size:10.5px;font-weight:400;color:#888}

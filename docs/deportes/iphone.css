@@ -1,0 +1,129 @@
+/* ============================================================
+   Arreglos de diseño en el iPhone.
+
+   La app se declara `viewport-fit=cover`, así que ocupa toda la
+   pantalla —incluida la franja del reloj y la batería—. Sin una
+   barrera, el contenido pasa por debajo y se mezcla con la hora.
+   ============================================================ */
+
+/* Franja opaca fija sobre el área de la barra de estado. Cubre
+   cualquier cosa que pase por debajo al hacer scroll. */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;right:0;
+  height:env(safe-area-inset-top);
+  background:var(--negro);
+  z-index:300;              /* por encima de todo, incluso del ticker */
+  pointer-events:none;
+}
+
+/* La cinta de titulares baja lo justo para no quedar tapada. */
+#ticker{margin-top:env(safe-area-inset-top)}
+
+/* El encabezado ya no necesita compensar: lo hace la cinta. */
+#top{padding-top:12px}
+
+/* Los avisos flotantes y la ventana de carga también respetan la franja. */
+#cargando{padding-top:env(safe-area-inset-top)}
+
+/* ------------------------------------------------------------
+   Títulos de partido cortados
+
+   En una fila entran: fecha + dos escudos + título + hora. En un
+   celular angosto el título quedaba en "Vélez Sarsfield v...".
+   Se permite una segunda línea en vez de cortar.
+   ------------------------------------------------------------ */
+/* .t quedó como contenedor flex de cuando el escudo iba adentro; eso
+   convierte al span en elemento flexible y anula el recorte por líneas.
+   Vuelve a ser un bloque normal. */
+.ev .cuerpo .t{display:block;white-space:normal}
+
+/* Se repite el selector para ganarle en especificidad a la regla vieja
+   `.ev .cuerpo .t > span:last-child{white-space:nowrap}`. */
+.ev .cuerpo .t > span,
+.ev .cuerpo .t > span:last-child{
+  white-space:normal;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  text-overflow:unset;
+  line-height:1.25;
+}
+.ev .cuerpo .s{
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+  white-space:normal;
+}
+
+/* Con dos líneas posibles, la fila necesita alinearse arriba. */
+.ev{align-items:stretch}
+.ev .dia,.ev .escudos,.ev .hora,.ev .marc{align-self:center}
+
+/* En pantallas angostas achicamos lo accesorio para darle aire
+   al título, que es lo que de verdad se lee. */
+@media (max-width:430px){
+  .ev{gap:8px;padding:9px 8px}
+  .ev .dia{flex:0 0 38px;padding-right:7px}
+  .ev .dia b{font-size:23px}
+  .escudo.mini{width:23px;height:23px;padding:2px}
+  .ev .cuerpo .t{font-size:15px}
+  .ev .hora{font-size:16px}
+}
+
+/* Muy angostas: un solo escudo, el del rival, que es el dato nuevo.
+   El propio ya lo sabés por la sección en la que estás. */
+@media (max-width:360px){
+  .escudos .escudo:not(.rival){display:none}
+}
+
+/* ------------------------------------------------------------
+   Barra de título de la ventana
+   "GIMNASIA (MENDOZA) VS BOCA JUNIORS" no entra en una línea.
+   ------------------------------------------------------------ */
+.ventana-barra .tit{
+  white-space:normal;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  line-height:1.6;
+}
+
+/* El marcador de un partido sin jugar mostraba "- -" suelto. */
+.mp-cifras b:empty::after{content:"–"}
+
+
+/* ------------------------------------------------------------
+   Escudos: nunca un hueco en blanco
+
+   Son 89 imágenes y el navegador las sirve de a poco. El emoji se
+   ve desde el arranque y desaparece cuando llega la imagen.
+   ------------------------------------------------------------ */
+.escudo .emoji-resp{display:block}
+.escudo.cargado .emoji-resp{display:none}
+.escudo img{opacity:0;transition:opacity .2s var(--apple)}
+.escudo.cargado img{opacity:1}
+
+/* ------------------------------------------------------------
+   Título del evento destacado
+
+   En tipografía de píxeles, "Vélez Sarsfield vs Boca Juniors" se
+   partía en cuatro líneas y era ilegible. Va en fuente normal.
+   ------------------------------------------------------------ */
+.destacado h2,
+.destacado-link h2{
+  font-family:var(--sans);
+  font-size:clamp(20px,5.6vw,27px);
+  font-weight:800;
+  letter-spacing:-.025em;
+  line-height:1.12;
+}
+.destacado .etiqueta{margin-bottom:12px}
+
+/* ------------------------------------------------------------
+   Títulos de fila: tres líneas antes de cortar
+   ------------------------------------------------------------ */
+.ev .cuerpo .t > span,
+.ev .cuerpo .t > span:last-child{-webkit-line-clamp:3}

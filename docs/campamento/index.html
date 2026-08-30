@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nook · Campamento de 30 días</title>
+<style>
+  :root{
+    --bg:#121216; --surface:#1b1b21; --surface2:#232330; --border:#2e2e3a;
+    --ink:#f2f0eb; --ink2:#b9b6ad; --ink3:#807d75;
+    --accent:#ff9a4d; --accent-ink:#1a0e02;
+    --w1:#ff9a4d; --w2:#b48cff; --w3:#4fd1a5; --w4:#ff7eb0;
+    --good:#4fd1a5;
+    --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; padding-bottom:80px;
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px;}
+
+  /* ---------- header ---------- */
+  header{
+    padding:34px 0 18px; border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg,#1a1a22 0%, var(--bg) 100%);
+  }
+  .kicker{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:700;}
+  h1{font-size:30px; font-weight:800; letter-spacing:-.02em; margin:6px 0 4px;}
+  .sub{color:var(--ink2); font-size:15px; max-width:640px;}
+  .progress-row{display:flex; gap:12px; align-items:center; margin-top:18px; flex-wrap:wrap;}
+  .day-chip{
+    background:var(--accent); color:var(--accent-ink); font-weight:800;
+    border-radius:999px; padding:6px 16px; font-size:14px; white-space:nowrap;
+  }
+  .bar{flex:1; min-width:180px; height:8px; background:var(--surface2); border-radius:99px; overflow:hidden;}
+  .bar > div{height:100%; background:var(--accent); border-radius:99px; width:0%;}
+  .bar-label{font-size:13px; color:var(--ink3); white-space:nowrap;}
+
+  /* ---------- tabs ---------- */
+  nav{
+    position:sticky; top:0; z-index:20; background:rgba(18,18,22,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
+  }
+  .tabs{display:flex; gap:4px; overflow-x:auto; padding:10px 0;}
+  .tab{
+    background:none; border:1px solid transparent; color:var(--ink2);
+    font-size:14px; font-weight:600; padding:8px 16px; border-radius:999px;
+    cursor:pointer; white-space:nowrap; font-family:inherit;
+  }
+  .tab:hover{color:var(--ink); background:var(--surface);}
+  .tab.active{background:var(--surface2); color:var(--ink); border-color:var(--border);}
+  section.panel{display:none; padding-top:26px;}
+  section.panel.active{display:block;}
+
+  /* ---------- cards ---------- */
+  .card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); padding:20px 22px; margin-bottom:16px;
+  }
+  h2{font-size:20px; font-weight:800; letter-spacing:-.01em; margin-bottom:8px;}
+  h3{font-size:16px; font-weight:700; margin:18px 0 6px;}
+  p{color:var(--ink2); font-size:14.5px; margin-bottom:10px;}
+  p strong, li strong{color:var(--ink);}
+  .muted{color:var(--ink3); font-size:13px;}
+
+  /* ---------- day cards ---------- */
+  .week-h{
+    display:flex; align-items:center; gap:10px; margin:26px 0 12px;
+  }
+  .week-dot{width:12px; height:12px; border-radius:4px; flex:none;}
+  .week-h .t{font-size:15px; font-weight:800; letter-spacing:.02em;}
+  .week-h .d{font-size:13px; color:var(--ink3);}
+  .day{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); margin-bottom:10px; overflow:hidden;
+  }
+  .day.today-hl{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent);}
+  .day-head{
+    display:flex; align-items:center; gap:12px; padding:14px 16px;
+    cursor:pointer; user-select:none;
+  }
+  .day-head:hover{background:var(--surface2);}
+  .dnum{
+    flex:none; width:40px; height:40px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:14px; color:var(--accent-ink);
+  }
+  .day-title{flex:1;}
+  .day-title .n{font-weight:700; font-size:15px;}
+  .day-title .g{font-size:12.5px; color:var(--ink3); margin-top:1px;}
+  .chev{color:var(--ink3); font-size:12px; transition:transform .15s;}
+  .day.open .chev{transform:rotate(90deg);}
+  .day-body{display:none; padding:2px 18px 16px; border-top:1px solid var(--border);}
+  .day.open .day-body{display:block;}
+  .blk{margin-top:12px;}
+  .blk .lbl{
+    font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    font-weight:800; color:var(--ink3); margin-bottom:4px;
+  }
+  .blk p, .blk li{font-size:14px; color:var(--ink2);}
+  .blk ul{padding-left:18px; margin:4px 0;}
+  .blk li{margin-bottom:4px;}
+  .constraint{
+    margin-top:14px; background:var(--surface2); border-radius:10px;
+    padding:10px 14px; font-size:13.5px; color:var(--ink2);
+    border-left:3px solid var(--accent);
+  }
+  .constraint b{color:var(--ink);}
+  .win{margin-top:10px; font-size:13.5px; color:var(--good); font-weight:600;}
+
+  .check{
+    flex:none; width:26px; height:26px; border-radius:8px; border:2px solid var(--border);
+    background:none; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    color:transparent; font-size:15px; font-weight:900; font-family:inherit;
+  }
+  .check.on{background:var(--good); border-color:var(--good); color:#062018;}
+
+  /* ---------- theory ---------- */
+  .note-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:8px; margin:10px 0;
+  }
+  .prog{
+    background:var(--surface2); border-radius:10px; padding:10px 12px;
+    font-size:13.5px;
+  }
+  .prog .name{font-weight:800; color:var(--ink); font-size:13px;}
+  .prog .notes{color:var(--accent); font-weight:600; margin-top:2px;}
+  .prog .use{color:var(--ink3); font-size:12px; margin-top:2px;}
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin:8px 0;}
+  th{
+    text-align:left; color:var(--ink3); font-size:11px; text-transform:uppercase;
+    letter-spacing:.1em; padding:6px 10px; border-bottom:1px solid var(--border);
+  }
+  td{padding:8px 10px; border-bottom:1px solid var(--border); color:var(--ink2); vertical-align:top;}
+  td b{color:var(--ink);}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.5px; color:var(--accent);}
+
+  /* rhythm grid */
+  .rgrid{display:grid; grid-template-columns:88px repeat(16,1fr); gap:3px; margin:8px 0 14px; align-items:center;}
+  .rgrid .rl{font-size:11.5px; color:var(--ink3); font-weight:700; text-transform:uppercase; letter-spacing:.06em;}
+  .cell{height:20px; border-radius:4px; background:var(--surface2);}
+  .cell.on{background:var(--accent);}
+  .cell.on.alt{background:var(--w2);}
+  .beatnums{display:grid; grid-template-columns:88px repeat(16,1fr); gap:3px; margin-bottom:2px;}
+  .beatnums span{font-size:10px; color:var(--ink3); text-align:center;}
+
+  .pill{
+    display:inline-block; background:var(--surface2); border-radius:999px;
+    padding:3px 10px; font-size:12px; color:var(--ink2); margin:2px 4px 2px 0;
+  }
+  .callout{
+    background:var(--surface2); border-radius:10px; padding:12px 16px;
+    font-size:14px; color:var(--ink2); margin:10px 0; border-left:3px solid var(--w2);
+  }
+  .callout b{color:var(--ink);}
+
+  /* resources */
+  .res{display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border);}
+  .res:last-child{border-bottom:none;}
+  .res .ic{flex:none; width:38px; height:38px; border-radius:10px; background:var(--surface2);
+    display:flex; align-items:center; justify-content:center; font-size:17px;}
+  .res .rn{font-weight:700; font-size:14.5px;}
+  .res .rd{font-size:13.5px; color:var(--ink2);}
+
+  footer{margin-top:40px; text-align:center; color:var(--ink3); font-size:12.5px;}
+  @media (max-width:600px){
+    h1{font-size:24px;}
+    .rgrid{grid-template-columns:64px repeat(16,1fr);}
+    .beatnums{grid-template-columns:64px repeat(16,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Nook · Productor</div>
+    <h1>Campamento de 30 días</h1>
+    <p class="sub">Teoría aplicada + práctica diaria en FL Studio, 30–45 min por día. Reggaetón, trap, afrobeats y house estilo Claptone — todo con los plugins y librerías que ya tenés.</p>
+    <div class="progress-row">
+      <div class="day-chip" id="dayChip">Día 1 de 30</div>
+      <div class="bar"><div id="barFill"></div></div>
+      <div class="bar-label" id="barLabel"></div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap"><div class="tabs">
+  <button class="tab active" data-tab="hoy">🎧 Hoy</button>
+  <button class="tab" data-tab="plan">📅 Plan de 30 días</button>
+  <button class="tab" data-tab="teoria">🎹 Teoría</button>
+  <button class="tab" data-tab="recursos">🧰 Tus recursos</button>
+</div></div></nav>
+
+<div class="wrap">
+
+<!-- ================= HOY ================= -->
+<section class="panel active" id="panel-hoy">
+  <div id="todayCard"></div>
+
+  <div class="card">
+    <h2>Las 5 reglas del juego</h2>
+    <p><strong>1. Terminado &gt; perfecto.</strong> Un loop feo terminado te enseña más que una idea perfecta que nunca hiciste. Cada día tiene una meta chica y alcanzable.</p>
+    <p><strong>2. La página en blanco no existe acá.</strong> Cada día te dice el BPM, la tonalidad y qué pack usar. Vos no decidís por dónde empezar: solo ejecutás. Decidir es lo que agobia; el plan decide por vos.</p>
+    <p><strong>3. Compará con tu yo de ayer.</strong> Bad Bunny tiene un equipo de 10 productores con 15 años de experiencia. Tu única competencia es el Nook del día anterior. Guardá todos tus loops: en el día 30 vas a escuchar el del día 1 y no lo vas a poder creer.</p>
+    <p><strong>4. 35 minutos y listo.</strong> Cuando termina el ejercicio, podés seguir si tenés ganas — pero no es obligación. El hábito se construye con sesiones cortas que siempre ganás, no con maratones que te queman.</p>
+    <p><strong>5. Robá como artista.</strong> Tus remakes (Weltita, La Plena, Nonstop) son el mejor ejercicio que existe. La diferencia ahora: vas a entender <em>por qué</em> funcionan, no solo copiarlos.</p>
+  </div>
+
+  <div class="card">
+    <h2>Cómo usar esto</h2>
+    <p>La página calcula sola en qué día del plan estás (día 1 completado el 28 de julio; reseteado el 14 de agosto de 2026 para retomar en el día 2). Abrí la pestaña <strong>Hoy</strong>, hacé el ejercicio en FL Studio, y listo. Si un día no podés, no pasa nada: retomá donde ibas, los días no se vencen.</p>
+    <p class="muted">Los tics de las casillas son visuales y se reinician al recargar la página — tu progreso real vive en tus .flp. Guardá cada ejercicio como proyecto: <span class="mono">D01 - dembow.flp</span>, <span class="mono">D02 - escala.flp</span>, etc. Esa carpeta va a ser tu diario de progreso.</p>
+  </div>
+</section>
+
+<!-- ================= PLAN ================= -->
+<section class="panel" id="panel-plan">
+  <div id="planList"></div>
+</section>
+
+<!-- ================= TEORIA ================= -->
+<section class="panel" id="panel-teoria">
+
+  <div class="card">
+    <h2>Guía de teoría para productores (sin solfeo)</h2>
+    <p>Todo lo que necesitás para producir urbano, afro y house, explicado en idioma piano roll. No hay partituras, no hay solfeo: hay notas que se pintan y reglas que se escuchan. Volvé a esta pestaña cada vez que un día del plan te mande acá.</p>
+  </div>
+
+  <div class="card">
+    <h2>1. El piano roll es tu mapa</h2>
+    <p>Solo existen <strong>12 notas</strong> y después se repiten más agudas o más graves: <span class="mono">C, C#, D, D#, E, F, F#, G, G#, A, A#, B</span>. Cada repetición es una <strong>octava</strong>: A3, A4 y A5 son "la misma nota" en distintas alturas.</p>
+    <p>Equivalencia con los nombres en español: <span class="mono">C=Do · D=Re · E=Mi · F=Fa · G=Sol · A=La · B=Si</span>. Las teclas negras son los sostenidos (#).</p>
+    <div class="callout"><b>Truco FL Studio:</b> en el piano roll, andá a <span class="mono">Helpers → Scale highlighting</span> y elegí "A Minor". FL te pinta las notas correctas y nunca más pifiás una nota fuera de escala.</div>
+  </div>
+
+  <div class="card">
+    <h2>2. Escalas: tu zona segura</h2>
+    <p>Una escala es un <strong>grupo de 7 notas que combinan entre sí</strong>. Si todas tus melodías, acordes y 808s usan notas de la misma escala, todo suena "bien" automáticamente. Esa es la respuesta a "¿por qué mi beat suena raro?": casi siempre hay una nota fuera de la escala.</p>
+    <h3>La escala menor: tu casa</h3>
+    <p>El 90% del reggaetón, trap, afro y deep house está en escala <strong>menor</strong> (suena emotiva/oscura; la mayor suena alegre, se usa menos en estos géneros). Tu escala base para todo el plan:</p>
+    <div class="prog" style="margin-bottom:8px;"><div class="name">La menor (Am) — solo teclas blancas</div><div class="notes">A · B · C · D · E · F · G</div><div class="use">Empezá acá siempre. Cuando la domines, movete a otras.</div></div>
+    <table>
+      <tr><th>Escala</th><th>Notas</th><th>La escuchás en</th></tr>
+      <tr><td><b>Am</b> (La menor)</td><td class="mono">A B C D E F G</td><td>Todos lados. Tu punto de partida.</td></tr>
+      <tr><td><b>Em</b> (Mi menor)</td><td class="mono">E F# G A B C D</td><td>Trap, reggaetón. Una sola tecla negra (F#).</td></tr>
+      <tr><td><b>Dm</b> (Re menor)</td><td class="mono">D E F G A A# C</td><td>House, afro. Cálida.</td></tr>
+      <tr><td><b>Fm</b> (Fa menor)</td><td class="mono">F G G# A# C C# D#</td><td>Trap oscuro, drill.</td></tr>
+      <tr><td><b>Am armónica</b></td><td class="mono">A B C D E F <b style="color:var(--accent)">G#</b></td><td>Trap árabe/dark. Una nota cambia todo (día 8).</td></tr>
+    </table>
+    <div class="callout"><b>¿En qué escala está un sample?</b> Arrastralo al playlist, abrilo con el ícono de onda y fijate si el nombre trae la tonalidad (ej: "142 BPM D Min" = Re menor). Si no la trae: tocá notas de Am por encima hasta encontrar la que "encaja" como tónica — o usá un MIDI del mismo pack y mirá qué notas usa.</div>
+  </div>
+
+  <div class="card">
+    <h2>3. Tonalidad: qué significa "estar en Am"</h2>
+    <p>La tonalidad es el <strong>hogar</strong> del tema: la nota donde todo tiende a resolver. Un tema "en Am" usa las notas de la escala de Am, sus acordes salen de esas notas, y cuando la melodía cae en A se siente "en casa".</p>
+    <p>Dato útil: <strong>Am y C mayor usan las mismas teclas blancas</strong> (son relativas). Por eso un MIDI "en C" te sirve igual para tu beat en Am. Cada escala mayor tiene su relativa menor: C↔Am, G↔Em, F↔Dm.</p>
+  </div>
+
+  <div class="card">
+    <h2>4. Acordes: 3 o 4 notas salteadas</h2>
+    <p>La receta universal: <strong>elegí una nota de la escala, salteá una, agarrá la siguiente, salteá otra, agarrá la siguiente.</strong> Eso es una triada (acorde de 3 notas). En Am: A (salto B) + C (salto D) + E = <strong>Am</strong>.</p>
+    <p>Cada escala genera 7 acordes, uno por nota. Los de Am (los únicos que necesitás por ahora):</p>
+    <div class="note-grid">
+      <div class="prog"><div class="name">Am</div><div class="notes">A + C + E</div><div class="use">tu acorde base (menor)</div></div>
+      <div class="prog"><div class="name">C</div><div class="notes">C + E + G</div><div class="use">mayor, brillante</div></div>
+      <div class="prog"><div class="name">Dm</div><div class="notes">D + F + A</div><div class="use">menor, melancólico</div></div>
+      <div class="prog"><div class="name">Em</div><div class="notes">E + G + B</div><div class="use">menor, tenso</div></div>
+      <div class="prog"><div class="name">F</div><div class="notes">F + A + C</div><div class="use">mayor, cálido</div></div>
+      <div class="prog"><div class="name">G</div><div class="notes">G + B + D</div><div class="use">mayor, empuja de vuelta a Am</div></div>
+    </div>
+    <h3>Séptimas y novenas: el color caro</h3>
+    <p>Seguí salteando y sumá una 4ª nota → acorde de séptima. Sumá una 5ª → novena. Más notas = más suave y sofisticado (afro, R&B, deep house).</p>
+    <div class="note-grid">
+      <div class="prog"><div class="name">Am7</div><div class="notes">A+C+E+G</div><div class="use">suave (afro/R&B)</div></div>
+      <div class="prog"><div class="name">Fmaj7</div><div class="notes">F+A+C+E</div><div class="use">soñador</div></div>
+      <div class="prog"><div class="name">Am9</div><div class="notes">A+C+E+G+B</div><div class="use">deep house</div></div>
+      <div class="prog"><div class="name">Dm9</div><div class="notes">D+F+A+C+E</div><div class="use">deep house</div></div>
+    </div>
+    <div class="callout"><b>Truco FL Studio:</b> en el piano roll, <span class="mono">stamp tool</span> (el sellito arriba) trae acordes listos: elegís "minor 7th" y pintás el acorde entero con un click.</div>
+  </div>
+
+  <div class="card">
+    <h2>5. Progresiones por género (recetas probadas)</h2>
+    <p>Una progresión es una ronda de 3-4 acordes que se repite. Estas son las que suenan en los géneros que producís — todas en Am para que las pruebes ya mismo, un acorde por compás:</p>
+    <h3 style="color:var(--w1)">Reggaetón / urbano</h3>
+    <div class="note-grid">
+      <div class="prog"><div class="name">La clásica</div><div class="notes">Am → F → C → G</div><div class="use">cientos de hits. Empezá acá.</div></div>
+      <div class="prog"><div class="name">La emotiva</div><div class="notes">Am → G → F → E</div><div class="use">bajada dramática (La Plena vibes)</div></div>
+      <div class="prog"><div class="name">La circular</div><div class="notes">Am → C → G → Dm</div><div class="use">nunca descansa, hipnótica</div></div>
+    </div>
+    <h3 style="color:var(--w2)">Trap / drill</h3>
+    <div class="note-grid">
+      <div class="prog"><div class="name">La oscura</div><div class="notes">Am → E</div><div class="use">2 acordes, tensión pura (E usa G#)</div></div>
+      <div class="prog"><div class="name">La flotante</div><div class="notes">Am → F → G → Am</div><div class="use">melódico, tipo Travis</div></div>
+      <div class="prog"><div class="name">La mínima</div><div class="notes">Am → Dm</div><div class="use">deja espacio total al 808</div></div>
+    </div>
+    <h3 style="color:var(--w3)">Afrobeats / dancehall</h3>
+    <div class="note-grid">
+      <div class="prog"><div class="name">La suave</div><div class="notes">Am7 → Fmaj7 → Cmaj7 → G7</div><div class="use">séptimas, sol y playa</div></div>
+      <div class="prog"><div class="name">La riddim</div><div class="notes">Am7 → Dm7</div><div class="use">2 acordes en stabs cortos</div></div>
+    </div>
+    <h3 style="color:var(--w4)">House / deep (Claptone)</h3>
+    <div class="note-grid">
+      <div class="prog"><div class="name">La deep</div><div class="notes">Am9 → Dm9 → Fmaj7 → E7</div><div class="use">stabs en contratiempo</div></div>
+      <div class="prog"><div class="name">La hipnótica</div><div class="notes">Am9 → Fmaj7</div><div class="use">2 acordes que ruedan infinito</div></div>
+    </div>
+    <p class="muted">¿Y si quiero otra tonalidad? Subí o bajá TODAS las notas la misma cantidad de semitonos (en FL: seleccioná todo y Shift+flecha arriba/abajo). La progresión sigue funcionando igual.</p>
+  </div>
+
+  <div class="card">
+    <h2>6. Melodía: pocas notas, mucha intención</h2>
+    <p><strong>Regla 1 — Notas del acorde primero.</strong> Si abajo suena Am (A-C-E), una melodía con A, C y E siempre encaja. Las otras notas de la escala son "de paso": usalas para conectar, no para aterrizar.</p>
+    <p><strong>Regla 2 — Repetición 2+2.</strong> Repetí 2 compases igual, variá los 2 siguientes. El cerebro ama reconocer y sorprenderse en ese orden.</p>
+    <p><strong>Regla 3 — El espacio es música.</strong> Las mejores melodías urbanas tienen más silencio que notas. Si dudás, borrá notas.</p>
+    <p><strong>Regla 4 — Pregunta y respuesta.</strong> Frase que "pregunta" (termina en nota que no es A) + frase que "responde" (termina en A o E). Escuchá el hook de Weltita con esta idea en mente.</p>
+    <p><strong>El bajo:</strong> toca la fundamental de cada acorde (Am→A, F→F...) en octava grave. El groove del bajo importa más que sus notas: copiale el ritmo al kick y después sacale o sumale un golpe.</p>
+  </div>
+
+  <div class="card">
+    <h2>7. Ritmo: los 4 patrones que tenés que saber</h2>
+    <p>El grid: cada compás tiene 16 casillas (pasos). Los beats fuertes son 1, 5, 9 y 13.</p>
+    <h3 style="color:var(--w1)">Dembow (reggaetón · ~95 BPM)</h3>
+    <div class="beatnums"><span></span><span>1</span><span></span><span></span><span></span><span>2</span><span></span><span></span><span></span><span>3</span><span></span><span></span><span></span><span>4</span><span></span><span></span><span></span></div>
+    <div class="rgrid">
+      <div class="rl">Kick</div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Snare</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div>
+    </div>
+    <h3 style="color:var(--w2)">Trap (~140 BPM)</h3>
+    <div class="rgrid">
+      <div class="rl">Kick</div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Snare</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Hats</div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell on"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell on"></div><div class="cell on"></div><div class="cell on"></div>
+    </div>
+    <h3 style="color:var(--w3)">Afrobeats (~105 BPM)</h3>
+    <div class="rgrid">
+      <div class="rl">Kick</div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Rim</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Shaker</div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div>
+    </div>
+    <h3 style="color:var(--w4)">House 4x4 (~124 BPM)</h3>
+    <div class="rgrid">
+      <div class="rl">Kick</div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Clap</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on alt"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="rl">Open hat</div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell on"></div><div class="cell"></div>
+    </div>
+    <p><strong>Síncopa:</strong> notas que caen entre los beats fuertes. Es lo que separa "correcto" de "que te mueve". Truco: mové notas 1 casilla (1/16) antes del beat y escuchá.</p>
+  </div>
+
+  <div class="card">
+    <h2>8. Estructura: de loop a canción</h2>
+    <p>Las canciones se arman en <strong>bloques de 8 compases</strong>. La regla de oro: <strong>cada 8 compases, algo entra o algo sale.</strong></p>
+    <table>
+      <tr><th>Sección</th><th>Compases</th><th>Qué suena</th></tr>
+      <tr><td><b>Intro</b></td><td>8</td><td>1-2 elementos (drums solos, o acordes solos). Genera expectativa.</td></tr>
+      <tr><td><b>Verso / Sección A</b></td><td>16</td><td>Casi todo, menos 1-2 elementos que guardás.</td></tr>
+      <tr><td><b>Hook / Drop</b></td><td>8-16</td><td>TODO junto. La mejor parte del tema. Acá explota.</td></tr>
+      <tr><td><b>Sección B</b></td><td>16</td><td>Como A pero con una variación (otra melodía, sin hats...).</td></tr>
+      <tr><td><b>Hook 2</b></td><td>8-16</td><td>Repetí el hook (podés sumarle una capa extra).</td></tr>
+      <tr><td><b>Outro</b></td><td>8</td><td>Vas apagando elementos hasta cerrar.</td></tr>
+    </table>
+    <p class="muted">En house la lógica es la misma pero más estirada (bloques de 16-32) y el "hook" se llama drop.</p>
+  </div>
+
+  <div class="card">
+    <h2>9. Chuleta rápida</h2>
+    <span class="pill">Reggaetón: 88-100 BPM</span>
+    <span class="pill">Dancehall: 95-105 BPM</span>
+    <span class="pill">Afrobeats: 100-112 BPM</span>
+    <span class="pill">House: 120-126 BPM</span>
+    <span class="pill">Trap: 130-150 BPM</span>
+    <span class="pill">Drill: 140-150 BPM</span>
+    <p style="margin-top:10px"><strong>Si suena mal, revisá en este orden:</strong> 1) ¿hay una nota fuera de escala? 2) ¿el 808/bajo está afinado a la tonalidad? 3) ¿kick y bajo se pisan? (sidechain o mové el bajo) 4) ¿demasiadas cosas a la vez? (mute test: silenciá de a una).</p>
+    <p><strong>Atajos FL que valen oro:</strong> <span class="mono">Ctrl+B</span> duplicar selección · <span class="mono">Shift+↑/↓</span> transponer semitono · <span class="mono">Ctrl+↑/↓</span> transponer octava · <span class="mono">Alt+arrastrar</span> mover libre sin grid · <span class="mono">Ctrl+R</span> exportar.</p>
+  </div>
+</section>
+
+<!-- ================= RECURSOS ================= -->
+<section class="panel" id="panel-recursos">
+
+  <div class="card">
+    <h2>No te faltan herramientas. Te sobra arsenal.</h2>
+    <p>Revisé tu carpeta completa. Esto es lo que tenés y para qué sirve cada cosa. Muchos productores con hits usan la mitad de esto. El problema nunca fue el equipamiento: era saber cuándo usar qué. El plan de 30 días usa TODO lo de esta lista.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎛️ Instrumentos (para crear sonidos)</h2>
+    <div class="res"><div class="ic">🌊</div><div><div class="rn">Serum</div><div class="rd">Tu fábrica de bajos y 808s. Úsalo para: 808s de trap, bajos redondos de house, leads y plucks. Tenés el Electronic Music Bundle con presets listos: no diseñes sonidos de cero todavía, elegí presets y tocá notas.</div></div></div>
+    <div class="res"><div class="ic">🪐</div><div><div class="rn">Omnisphere v3 + Core Library</div><div class="rd">Tu paleta de texturas: pads, teclas, plucks, coros, sonidos cinematográficos. Cuando un beat suena "vacío", un pad suave de Omnisphere al fondo lo llena. Buscá por palabra: "pluck", "pad", "keys", "dark".</div></div></div>
+    <div class="res"><div class="ic">🎹</div><div><div class="rn">Arturia Analog Lab + V Collection (pianos)</div><div class="rd">Tus teclados "reales": pianos, Rhodes, Wurlitzer, órganos. Base de acordes para TODO: reggaetón emotivo, afro con séptimas, stabs de deep house. Si dudás con qué tocar acordes: Arturia.</div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>🎚️ Efectos (para pulir)</h2>
+    <div class="res"><div class="ic">📈</div><div><div class="rn">FabFilter Total Bundle</div><div class="rd">El estándar de la industria. Los 3 que importan ahora: <b>Pro-Q</b> (EQ: restar frecuencias que sobran), <b>Pro-C</b> (compresor y sidechain), <b>Pro-L</b> (limiter para el master). El resto lo vas descubriendo después.</div></div></div>
+    <div class="res"><div class="ic">🏔️</div><div><div class="rn">Valhalla Bundle</div><div class="rd">Los reverbs y delays favoritos de internet. <b>VintageVerb</b> para dar espacio a melodías y vocales, <b>Delay</b> para ecos rítmicos, <b>Supermassive</b> (¡es gratis y enorme!) para ambientes infinitos.</div></div></div>
+    <div class="res"><div class="ic">☁️</div><div><div class="rn">FL Cloud Mastering + Edison Declipper + Stem Extractor</div><div class="rd">Tu kit de cierre: masterizá el export final con FL Cloud, separá vocales de cualquier tema con Stem Extractor (ya lo usaste con La Plena y Bad Bunny), y rescatá audios saturados con Declipper.</div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>📦 Librerías (tu profesor escondido)</h2>
+    <div class="res"><div class="ic">🎼</div><div><div class="rn">Colecciones MIDI de Cymatics (GOLD, Dynasty, Kingdom, Monarch RnB, Anarchy, Visions, Waves, Fractals, Anniversary, 2000 MIDIs Astrolis)</div><div class="rd">Tu recurso más valioso y el que menos estabas usando. Cada MIDI es una clase de teoría: arrastralo al piano roll y mirá cómo un profesional arma acordes y melodías. Días 6 y 11 del plan te enseñan el método.</div></div></div>
+    <div class="res"><div class="ic">🥁</div><div><div class="rn">Drill Essential Kit · Gems Vol 15 (Dark Trap) · Gems Vol 17 (Drill) · Frenzy · Paradox 2</div><div class="rd">Tus drums y melodías de trap/drill. Semana 2 vive de estos packs.</div></div></div>
+    <div class="res"><div class="ic">🌍</div><div><div class="rn">Yoruba Vol 2 (Afrobeats Strumming) · Dancehall Vibes · Finest Roots Reggae · Jazzfeezy Joya</div><div class="rd">Tu semana 3: guitarras afro, percusión dancehall, vibras jamaiquinas y texturas jazz para R&B.</div></div></div>
+    <div class="res"><div class="ic">⚡</div><div><div class="rn">1000 Loops · 1100 Kicks · 6000 One-Shots · 500 Effects (Electronic Collection)</div><div class="rd">Tu semana 4 (house) y tus transiciones: kicks de electrónica, FX, risers y sweeps. El día 27 saquea el pack de 500 Effects.</div></div></div>
+    <div class="res"><div class="ic">🔥</div><div><div class="rn">Cymatics Diablo + Illusion (plugins)</div><div class="rd">Diablo: potenciador de drums (pegada instantánea en kicks y 808s). Illusion: efectos de espacio creativos. Úsalos cuando el beat ya esté armado, no antes.</div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>📁 Tus proyectos: el material de estudio perfecto</h2>
+    <div class="res"><div class="ic">🐰</div><div><div class="rn">Weltita · Voy a llevarte pa PR · Bad Bunny</div><div class="rd">Tus remakes de Bad Bunny. Ejercicio nuevo: abrilos y ponele NOMBRE a lo que hiciste de oído: ¿qué progresión es? ¿dónde está el dembow? Vas a ver cuánto ya sabías sin saberlo.</div></div></div>
+    <div class="res"><div class="ic">🌴</div><div><div class="rn">La Plena (remake) · Afropop</div><div class="rd">Tu base para las semanas 1 y 3: ya tenés los samples de percusión perfectos ahí adentro (shakers, congas, tambores) y los stems de vocales para los días de chops.</div></div></div>
+    <div class="res"><div class="ic">🦉</div><div><div class="rn">Drake - Nonstop · Techo · Chill tema</div><div class="rd">Nonstop trae el Cymatics Conflict (142 BPM D Min: ¡ya sabés leer eso!) y el Grumble 808 en C que usás el día 9.</div></div></div>
+  </div>
+</section>
+
+</div>
+
+<footer>Hecho para Nook · Julio 2026 · Terminado &gt; perfecto 🧡</footer>
+
+<script>
+// =============== DATA: 30 DAYS ===============
+const WEEKS = [
+  {n:1, color:"var(--w1)", title:"Semana 1 · Fundamentos + Reggaetón", desc:"Piano roll, escala menor, dembow. Tu casa: el urbano latino."},
+  {n:2, color:"var(--w2)", title:"Semana 2 · Trap y Drill", desc:"808s, hi-hats, melodías oscuras. Tus packs Cymatics entran en acción."},
+  {n:3, color:"var(--w3)", title:"Semana 3 · Afrobeats y Dancehall", desc:"Síncopa, percusión en capas, acordes con séptima, flips de vocales."},
+  {n:4, color:"var(--w4)", title:"Semana 4 · House estilo Claptone + Terminar", desc:"Groove 4x4, acordes deep, vocal chops — y convertir un loop en canción."}
+];
+const DAYS = [
+// ---------- SEMANA 1 ----------
+{d:1,w:1,t:"Tu mapa: el piano roll y la escala de La menor",g:"Entender dónde están las notas 'seguras'",
+ teoria:["Leé en la pestaña Teoría: <b>1. El piano roll es tu mapa</b> y <b>2. Escalas</b> (10 min).","Idea clave: La menor (Am) usa solo teclas blancas: A-B-C-D-E-F-G. Si te quedás ahí, nada suena 'mal'."],
+ practica:["Abrí FL Studio, proyecto nuevo, 92 BPM.","Cargá un piano de <b>Arturia Analog Lab</b> (buscá 'Piano' en los presets).","En el piano roll, tocá/pintá las notas A4, B4, C5, D5, E5, F5, G5, A5 subiendo y bajando. Escuchala: esa es tu escala.","Ahora jugá 10 minutos: pintá notas SOLO blancas, en el orden que quieras, y escuchá. Todo combina entre sí."],
+ constraint:"<b>Regla de hoy:</b> solo teclas blancas, solo un piano, 92 BPM. Nada de baterías todavía.",
+ win:"✅ Victoria: guardaste D01.flp con 4 compases de notas que elegiste vos."},
+{d:2,w:1,t:"El dembow: el ritmo que mueve el reggaetón",g:"Programar el patrón de batería más importante del urbano",
+ teoria:["Leé en Teoría: <b>7. Ritmo</b>, sección dembow (5 min).","El dembow es kick constante + snare en el patrón '3-3-2': suena 'bum-CHA-bum-bum-CHA'."],
+ practica:["Abrí D01.flp y guardalo como D02.","En el Channel Rack, cargá un kick y un snare (usá los de tu proyecto La Plena: MM_chunk_ass_kick y snare_perc).","Kick en los pasos 1, 5, 9, 13 (cada negra).","Snare en los pasos 4, 8, 12, 16... no: probá el dembow real: snare en pasos <b>4, 7, 12, 15</b>. Compará ambos y escuchá la diferencia.","Sumá un hat cerrado en todos los pasos pares."],
+ constraint:"<b>Regla de hoy:</b> solo 3 sonidos (kick, snare, hat). El groove sale del patrón, no de la cantidad.",
+ win:"✅ Victoria: tenés un dembow que te mueve la cabeza solo."},
+{d:3,w:1,t:"Tu primera melodía con 4 notas",g:"Menos notas = más pegadizo",
+ teoria:["Leé en Teoría: <b>6. Melodía</b> (8 min).","Idea clave: las melodías que se te pegan usan pocas notas y mucha repetición. Regla 2+2: repetí 2 compases, variá 2."],
+ practica:["Seguí en D02, guardá como D03.","Elegí SOLO 4 notas de Am (probá: A4, C5, D5, E5).","Escribí 2 compases de melodía con esas 4 notas sobre tu dembow. Dejá espacios: el silencio también es música.","Copiá esos 2 compases y cambiá solo las últimas 3-4 notas (eso es la variación).","Probá el mismo patrón con un sonido de <b>Omnisphere</b> (buscá 'pluck' o 'bell')."],
+ constraint:"<b>Regla de hoy:</b> máximo 4 notas distintas. Si querés agregar una quinta, primero borrá una.",
+ win:"✅ Victoria: una melodía de 4 compases que podés tararear."},
+{d:4,w:1,t:"Acordes: tu primera progresión (la del 90% del reggaetón)",g:"Tocar Am–F–C–G y entender por qué funciona",
+ teoria:["Leé en Teoría: <b>4. Acordes</b> y <b>5. Progresiones por género</b> (10 min).","Un acorde = 3 notas de la escala salteando una: A+C+E = Am. Así de simple."],
+ practica:["Proyecto nuevo, 94 BPM, guardá como D04.","Con el piano de Arturia, pintá en el piano roll estos 4 acordes, uno por compás:","<span class='mono'>Am = A3+C4+E4 · F = F3+A3+C4 · C = C4+E4+G4 · G = G3+B3+D4</span>","Escuchá el loop completo. Esa progresión (i–VI–III–VII) está en cientos de hits del género.","Bonus: sumale tu dembow del día 2 abajo."],
+ constraint:"<b>Regla de hoy:</b> un acorde por compás, notas largas (que duren el compás entero). Nada de melodía todavía.",
+ win:"✅ Victoria: reconocés Am–F–C–G. La vas a escuchar en TODOS lados a partir de hoy."},
+{d:5,w:1,t:"El bajo: la nota fundamental",g:"Un bajo que sigue los acordes sin pensar",
+ teoria:["Idea clave (2 min): el bajo casi siempre toca la <b>nota más grave del acorde</b> (la fundamental). Am→toca A, F→toca F, C→toca C, G→toca G. Eso es todo el secreto.","Leé en Teoría la parte de bajo en <b>6. Melodía</b>."],
+ practica:["Abrí D04, guardá como D05.","Cargá un bajo de <b>Serum</b> (preset tipo 'Bass' del Electronic Music Bundle).","Debajo de cada acorde, pintá su fundamental en octava grave: A2, F2, C2, G2.","Ritmo: en vez de una nota larga, probá el patrón del dembow (nota en 1, 5, 9, 13... y una extra en el 7 o el 15).","Escuchá cómo el bajo 'pega' todo: acordes + drums + bajo = ya es un beat."],
+ constraint:"<b>Regla de hoy:</b> el bajo solo toca fundamentales. Una sola nota por acorde, jugá solo con el ritmo.",
+ win:"✅ Victoria: tu primer beat completo de reggaetón (drums + acordes + bajo)."},
+{d:6,w:1,t:"Robar con estilo: analizá un MIDI profesional",g:"Aprender a leer lo que hacen los pros",
+ teoria:["Hoy la teoría es al revés: primero mirás, después entendés.","Vas a usar tus librerías Cymatics como profesor: cada archivo MIDI trae acordes y melodías de productores profesionales."],
+ practica:["Abrí tu carpeta <span class='mono'>Librerias/Cymatics GOLD MIDI Collection</span> (o Kingdom, o Monarch RnB).","Arrastrá un MIDI de acordes al piano roll sobre un piano de Arturia.","Detective mode: ¿cuántas notas tiene cada acorde? ¿3 o 4? ¿Los acordes suben o bajan? ¿Qué notas se repiten entre acordes?","Cambiale el ritmo: cortá las notas largas en notas cortas repetidas, o al revés.","Cambiá 2 notas de la melodía. Ya no es de Cymatics: es tuyo."],
+ constraint:"<b>Regla de hoy:</b> no crear desde cero. Solo analizar y modificar. Los MIDIs son material de estudio, no trampa.",
+ win:"✅ Victoria: entendiste un acorde que no conocías y lo hiciste tuyo."},
+{d:7,w:1,t:"Mini-reto: tu loop de reggaetón completo",g:"Juntar todo lo de la semana en 8 compases",
+ teoria:["Sin teoría nueva. Hoy se ejecuta.","Repaso mental (2 min): escala Am → acordes de 3 notas → bajo en fundamentales → dembow 3-3-2 → melodía de pocas notas."],
+ practica:["Proyecto nuevo, 90-97 BPM (elegí vos), tonalidad Am.","Armá en este orden: 1) dembow, 2) progresión de acordes (la del día 4 u otra de la pestaña Teoría), 3) bajo en fundamentales, 4) melodía de 4-5 notas arriba.","Sumá UN detalle extra: una percusión de tu pack La Plena (shaker, conga) o un FX del pack 500 EFFECTS.","Exportá a MP3 (Ctrl+R) y escuchalo en el celular o auriculares."],
+ constraint:"<b>Regla de hoy:</b> tenés 45 minutos máximo. Lo que salga, sale. Exportar es obligatorio: terminado > perfecto.",
+ win:"🏆 Victoria de la semana: tu primer beat hecho 100% entendiendo lo que hiciste. Escuchá el D01 y comparalo."},
+// ---------- SEMANA 2 ----------
+{d:8,w:2,t:"El sonido oscuro del trap: menor armónica",g:"Una nota cambiada = todo suena más dark",
+ teoria:["Leé en Teoría: <b>5. Progresiones</b>, sección trap (8 min).","Truco: agarrá la escala de Am y subí el G a G# (sol sostenido). Eso es 'menor armónica' y es EL sonido del trap oscuro."],
+ practica:["Proyecto nuevo, 140 BPM (¡el trap va al doble de tempo!). Guardá como D08.","Con Omnisphere (buscá 'dark', 'pluck' o 'keys'), tocá: A4, B4, C5, D5, E5, F5, <b>G#5</b>, A5. Escuchá ese sabor árabe/oscuro.","Armá una melodía de 4 compases usando A, C, E, F y G#. El G# usalo poco: es la especia, no el plato.","Probá la progresión Am → E (E = E3+G#3+B3). Ese cambio es tensión pura."],
+ constraint:"<b>Regla de hoy:</b> 140 BPM, tonalidad Am armónica. Sin batería: hoy es melodía y clima.",
+ win:"✅ Victoria: sabés hacer que algo suene 'dark' a propósito, no de casualidad."},
+{d:9,w:2,t:"El 808: bajo y bombo a la vez",g:"Afinar 808s a la tonalidad (el error #1 de los beats caseros)",
+ teoria:["Idea clave: el 808 es una nota, no un golpe. Si tu beat está en Am y el 808 toca C#, suena sucio aunque no sepas por qué.","En FL: cargá el 808 en el Channel Rack y usalo desde el piano roll como un instrumento."],
+ practica:["Abrí D08, guardá como D09.","Cargá <span class='mono'>Cymatics - Grumble 808 - C.wav</span> (lo tenés en el proyecto Drake) o uno del Drill Essential Kit.","Ese sample está en C: en el piano roll, la nota C5 lo reproduce afinado. Para tocar A, pintá la nota A4.","Escribí el patrón de 808 siguiendo tus acordes: A y E (los graves de Am y E).","Activá 'Portamento/slide' en dos notas pegadas para el glide clásico de trap."],
+ constraint:"<b>Regla de hoy:</b> el 808 solo toca notas de la escala. Verificalo nota por nota.",
+ win:"✅ Victoria: tu 808 está afinado. Ya suena más pro que la mitad de los beats de YouTube."},
+{d:10,w:2,t:"Hi-hats con vida: rolls y velocidades",g:"El hi-hat es el flow del beat",
+ teoria:["Idea clave: en trap, el hat marca 1/8 constante, y los 'rolls' (ráfagas de 1/16, 1/32) crean el flow.","Segundo truco: bajale la velocity (fuerza) a los hats intermedios para que respire."],
+ practica:["Seguí en D09, guardá como D10.","Hat cerrado del <b>Drill Essential Kit</b> en el piano roll: pintá 1/8 constantes (2 por beat).","Elegí 2 lugares por cada 4 compases y meté un roll: notas de 1/16 o 1/32 seguidas.","Abrí el editor de velocity (abajo del piano roll) y bajá la fuerza de los hats que no caen en el beat.","Sumá un open hat en el 'y' del beat 4 de cada 2 compases."],
+ constraint:"<b>Regla de hoy:</b> trabajá SOLO en los hats 25 minutos. Sí, solo hats. Así se nota la diferencia.",
+ win:"✅ Victoria: tus hats tienen flow. Compará con los del día 2: otra liga."},
+{d:11,w:2,t:"Flip de MIDI: melodía trap a tu manera",g:"De MIDI ajeno a melodía propia en 30 minutos",
+ teoria:["Repasá la regla 2+2 del día 3 (repetición + variación).","Hoy usás <span class='mono'>Cymatics - Dynasty Trap MIDI Collection</span> o <span class='mono'>Gems Vol 15 - Dark Trap</span> (samples de referencia)."],
+ practica:["Proyecto nuevo, 140-150 BPM. Guardá como D11.","Arrastrá un MIDI de melodía de Dynasty al piano roll con un sonido de Omnisphere o Serum (probá 'bell', 'flute' o 'choir').","Detectá la escala: ¿qué notas usa? ¿Hay algún G# o D#? (pestaña Teoría, sección 3, te dice cómo).","Transformala: cambiá el ritmo, invertí un salto, borrá la mitad de las notas. Hacela irreconocible.","Sumale tu 808 (día 9) y tus hats (día 10)."],
+ constraint:"<b>Regla de hoy:</b> la melodía final tiene que ser tan distinta que nadie reconozca el MIDI original.",
+ win:"✅ Victoria: tenés un método infinito para nunca más quedarte sin melodías."},
+{d:12,w:2,t:"Drill: el primo agresivo del trap",g:"Batería drill + 808 con slides",
+ teoria:["Idea clave: el drill (145 BPM) se distingue por el snare que cae 'tarde' (en el 3er tiempo y medio) y los 808 que se deslizan entre notas.","Escuchá 1 tema de drill antes de empezar (Central Cee, Eladio Carrión) y prestá atención SOLO al snare."],
+ practica:["Proyecto nuevo, 145 BPM. Guardá como D12.","Usá <span class='mono'>Cymatics - Gems Vol 17 - Drill</span> y el Drill Essential Drum Kit.","Kick: patrón espaciado e irregular (no 4x4). Snare: en el paso 7 y 15 de cada compás (ese 'atraso' es el drill).","808 con slides largos entre A, C y E.","Melodía mínima: 3 notas con mucho espacio, algo de reverb Valhalla."],
+ constraint:"<b>Regla de hoy:</b> el snare NUNCA cae en el lugar 'obvio' (pasos 5 y 13). Drill = desplazamiento.",
+ win:"✅ Victoria: distinguís trap de drill de oído y sabés programar ambos."},
+{d:13,w:2,t:"Espacio y profundidad: reverb, delay y automación",g:"Que tu beat suene grande, no plano",
+ teoria:["Idea clave: la diferencia entre un beat casero y uno pro no son las notas, es el ESPACIO. Reverb = qué tan lejos está algo. Delay = eco rítmico.","Regla de oro: reverb en melodías y snares, NUNCA en el kick ni el 808."],
+ practica:["Abrí tu mejor beat de la semana (D11 o D12), guardá como D13.","Mandá la melodía a un canal del mixer, insertá <b>ValhallaVintageVerb</b>. Probá presets, dejá el mix en 15-25%.","Insertá <b>ValhallaDelay</b> en otra melodía o vocal FX: probá 1/4 o 1/8 de tempo sync.","Automatizá algo: click derecho en el knob de 'mix' del reverb → 'Create automation clip' → dibujá una subida antes del cambio de sección.","Comparación A/B: apagá los efectos (bypass) y volvé a prenderlos. Escuchá la diferencia."],
+ constraint:"<b>Regla de hoy:</b> máximo 2 efectos por canal. Más reverb no es mejor: es sopa.",
+ win:"✅ Victoria: tu beat tiene profundidad. Adelante/atrás, no solo izquierda/derecha."},
+{d:14,w:2,t:"Mini-reto: beat de trap o drill completo",g:"16 compases, de cero, en 45 minutos",
+ teoria:["Repaso mental: menor armónica para el clima, 808 afinado, hats con velocity, espacio con Valhalla."],
+ practica:["Proyecto nuevo. Elegí: trap (140) o drill (145). Tonalidad: Am o Em (¡probá una nueva!).","Orden sugerido: melodía (MIDI flip o propia) → 808 → kick/snare → hats → FX y espacio.","Estructura mínima: 8 compases 'llenos' + 8 compases donde sacás algo (sin hats, o sin 808). Eso ya es un arreglo.","Exportá a MP3. Ponele nombre y fecha."],
+ constraint:"<b>Regla de hoy:</b> 45 minutos, timer puesto. Exportar es obligatorio aunque no te convenza.",
+ win:"🏆 Victoria de la semana: dos beats exportados en dos semanas. Escuchá el del día 7 y medí la distancia."},
+// ---------- SEMANA 3 ----------
+{d:15,w:3,t:"Afrobeats: el groove que respira",g:"La batería afro no golpea: fluye",
+ teoria:["Idea clave: en afrobeats el kick NO va constante como el dembow. Va sincopado: cae en lugares inesperados y deja huecos.","La percusión (shakers, congas) rellena esos huecos. El groove nace del diálogo entre ambos."],
+ practica:["Proyecto nuevo, 105 BPM. Guardá como D15.","Kick: probá pasos 1, 4, 7, 11 (jugá hasta que 'camine' solo).","Snare/rim suave en 5 y 13.","Shaker constante en 1/8 (usá AV - Shaker 2 de tu carpeta Afropop) y una conga (CConga_1) respondiendo al kick.","Escuchá tu proyecto Afropop de referencia: ¿qué tiene su groove que le falta al tuyo?"],
+ constraint:"<b>Regla de hoy:</b> solo batería y percusión. Si el loop no te mueve sin melodía, todavía no está.",
+ win:"✅ Victoria: un groove afro que camina solo, sin una sola nota melódica."},
+{d:16,w:3,t:"Acordes con séptima: el color suave",g:"De acordes de 3 notas a acordes de 4",
+ teoria:["Leé en Teoría: <b>4. Acordes</b>, sección séptimas (8 min).","Fórmula: a cualquier triada sumale una nota más, salteando una. Am (A+C+E) → Am7 (A+C+E+G). Suena más suave, más caro."],
+ practica:["Seguí en D15, guardá como D16.","Con un piano eléctrico de Arturia (buscá 'Rhodes' o 'EP'), tocá y compará: Am vs Am7, F vs Fmaj7. Escuchá el 'color' extra.","Progresión afro para hoy: <span class='mono'>Am7 (A+C+E+G) → Fmaj7 (F+A+C+E) → Cmaj7 (C+E+G+B) → G7 (G+B+D+F)</span>, un acorde por compás sobre tu groove.","Probá tocar los acordes con ritmo sincopado (cortitos, siguiendo el kick) en vez de notas largas."],
+ constraint:"<b>Regla de hoy:</b> todos los acordes con 4 notas. Volvé a 3 solo si entendés qué perdés.",
+ win:"✅ Victoria: escuchás la diferencia entre un acorde 'plano' y uno con séptima."},
+{d:17,w:3,t:"Síncopa: el arte de correrse del beat",g:"Melodías que bailan en vez de marchar",
+ teoria:["Idea clave: síncopa = notas que caen ENTRE los beats, no sobre ellos. Es el ADN del afro, el dancehall y el reggaetón.","Truco práctico: escribí la melodía 'cuadrada' y después movela media casilla (1/16) a la izquierda o derecha en puntos clave."],
+ practica:["Seguí en D16, guardá como D17.","Escribí una melodía simple de 4 notas sobre tus acordes (todo en el grid, cuadrado).","Ahora agarrá la mitad de las notas y movelas 1/16 antes del beat. Escuchá cómo 'baila'.","Usá el pack <span class='mono'>Yoruba Vol 2 Afrobeats Strumming</span>: arrastrá un loop de guitarra y fijate DÓNDE caen sus notas (casi nunca en el beat).","Ajustá tu melodía inspirándote en ese loop."],
+ constraint:"<b>Regla de hoy:</b> al menos la mitad de tus notas fuera del beat. Cuadrado = robot; corrido = groove.",
+ win:"✅ Victoria: entendés el secreto rítmico que separa el afro de todo lo demás."},
+{d:18,w:3,t:"Dancehall riddim",g:"El primo jamaiquino del dembow",
+ teoria:["Idea clave: el dancehall moderno usa el mismo esqueleto 3-3-2 del dembow pero más espaciado y grave, ~100 BPM, con más aire.","Dembow: constante y denso. Dancehall: espacioso y pesado."],
+ practica:["Proyecto nuevo, 100 BPM. Guardá como D18.","Explorá tu pack <span class='mono'>Dancehall Vibes</span>: elegí kick, snare/rim y percusiones.","Kick en 1 y en el 'y' de 2 (pasos 1, 4, 7... probá variantes 3-3-2). Rim/snare seco en el paso 7 y 15.","Bajo grave y simple (Serum) siguiendo el kick: 2 notas máximo (A y G, o A y F).","Acordes en 'stabs' cortos: Am7 en contratiempo, estilo reggae/dancehall."],
+ constraint:"<b>Regla de hoy:</b> menos es más. Si dudás entre agregar o no agregar: no agregues.",
+ win:"✅ Victoria: tenés dembow, afro y dancehall en tu vocabulario. Ya son 3 dialectos del mismo idioma."},
+{d:19,w:3,t:"Percusión en capas + humanizar",g:"Que suene tocado por humanos, no por una máquina",
+ teoria:["Idea clave: los grooves pro tienen 3-5 capas de percusión, cada una simple. La riqueza está en la SUMA, no en cada parte.","Humanizar = variar velocity y micro-mover algunas notas para que no suene robótico."],
+ practica:["Abrí D15 o D18, guardá como D19.","Sumá 2-3 capas: shaker en 1/8, conga respondiendo al kick, un tambourine o clave cada 2 compases (todo de tus packs Dancehall Vibes / Afropop / 6000 One Shots).","Velocity: ninguna capa de percusión al 100%. Variá cada golpe entre 60-90%.","Panning: shaker un poco a la izquierda, conga un poco a la derecha. El centro es para kick, snare y bajo.","Mute test: silenciá cada capa y escuchá qué aporta. Si no se extraña, se borra."],
+ constraint:"<b>Regla de hoy:</b> cada capa nueva debe poder tararearse sola. Si es ruido random, afuera.",
+ win:"✅ Victoria: tu percusión suena viva. Este es el paso que casi nadie hace."},
+{d:20,w:3,t:"Flip de vocal: tu primer chop",g:"Convertir una vocal en un instrumento",
+ teoria:["Idea clave: cortar una vocal en pedazos y re-ordenarlos es LA técnica del afro moderno, el house y el reggaetón actual.","Ya tenés las herramientas: tus stems separados (vocals de La Plena, Yeah mami, Weltita) y Edison."],
+ practica:["Proyecto nuevo, 102 BPM. Guardá como D20.","Cargá <span class='mono'>W Sound 05 LA PLENA..._vocals.wav</span> (carpeta Afropop) en Edison o directo al playlist.","Elegí 2-3 sílabas o palabras que suenen bien. Cortalas (en playlist: 'slice tool', o en Edison seleccioná y arrastrá).","Meté los pedazos en el Channel Rack y tocalos desde el piano roll: cambiales el pitch a notas de Am.","Armá un patrón rítmico con los chops sobre un groove simple. Sumale Valhalla reverb."],
+ constraint:"<b>Regla de hoy:</b> máximo 3 chops distintos. La magia está en el ritmo y el pitch, no en la cantidad.",
+ win:"✅ Victoria: hiciste tu primer vocal chop. Esto va a ser clave en la semana Claptone."},
+{d:21,w:3,t:"Mini-reto: loop afropop o dancehall completo",g:"Todo lo de la semana en un loop que fluya",
+ teoria:["Repaso: groove sincopado, capas de percusión humanizadas, acordes con séptima, melodía corrida del beat, un vocal chop."],
+ practica:["Proyecto nuevo, 100-108 BPM, tonalidad a elección (probá Em: mismas reglas que Am pero arrancando en E, solo teclas blancas).","Armá: groove afro (batería + 2 capas perc) → acordes m7 con piano eléctrico → bajo simple → vocal chop o melodía sincopada.","Exportá a MP3.","Escuchá los 3 exports juntos (D07, D14, D21): ese es tu progreso real en 3 semanas."],
+ constraint:"<b>Regla de hoy:</b> 45 minutos. El loop debe 'caminar' solo: si lo escuchás 4 veces seguidas sin aburrirte, está.",
+ win:"🏆 Victoria de la semana: tres estilos dominados. Semana que viene: house y CERRAR canciones."},
+// ---------- SEMANA 4 ----------
+{d:22,w:4,t:"House: el groove 4x4",g:"El latido constante de la electrónica",
+ teoria:["Idea clave: house = kick en LOS 4 beats (4x4), 120-126 BPM, hats abiertos en los contratiempos ('y'), clap en 2 y 4.","Claptone es deep/tech house: groove hipnótico, bajos redondos, vocales misteriosas."],
+ practica:["Proyecto nuevo, 124 BPM. Guardá como D22.","Kick 4x4: pasos 1, 5, 9, 13 (usá tu pack <b>1100 KICKS Electronic Collection</b> — buscá uno redondo, no un 808).","Clap/snare en 5 y 13 (encima del kick). Open hat en 3, 7, 11, 15 (los contratiempos).","Shaker o hat cerrado en 1/16 con velocities variadas.","Escuchá un tema de Claptone (No Eyes, Heartbeat) y compará tu groove: ¿qué le falta al tuyo?"],
+ constraint:"<b>Regla de hoy:</b> solo batería, 25 minutos. El 4x4 parece fácil: el arte está en los hats y el swing (probá el knob 'swing' arriba del Channel Rack).",
+ win:"✅ Victoria: tenés el esqueleto del house. Todo lo demás se cuelga de acá."},
+{d:23,w:4,t:"Acordes deep: novenas y voicings",g:"El sonido 'caro' del deep house",
+ teoria:["Leé en Teoría: <b>5. Progresiones</b>, sección house (8 min).","Fórmula del deep: acordes m7 y m9 tocados en 'stabs' cortos y sincopados. Am9 = A+C+E+G+B (¡5 notas!)."],
+ practica:["Seguí en D22, guardá como D23.","Sonido: piano eléctrico o organ de <b>Arturia</b> (probá 'Wurli', 'Organ'), o un pad corto de Omnisphere.","Progresión: <span class='mono'>Am9 → Dm9 (D+F+A+C+E) → Fmaj7 → E7</span>. Notas CORTAS, en contratiempos (nunca junto al kick).","Bajo Serum: redondo y simple (fundamentales, jugando en los off-beats).","Dejá que el loop ruede 2 minutos. El house es hipnosis: repetición con micro-cambios."],
+ constraint:"<b>Regla de hoy:</b> los acordes NUNCA caen junto con el kick. Contratiempo o nada.",
+ win:"✅ Victoria: ese sonido 'lounge caro' que escuchás en Claptone ahora sabés de dónde sale."},
+{d:24,w:4,t:"Sidechain: el bombeo de la electrónica",g:"El efecto que hace 'respirar' al house",
+ teoria:["Idea clave: sidechain = cada vez que pega el kick, el resto de los sonidos se agacha y vuelve. Ese 'bombeo' es el 60% del sonido house.","En FL: Fruity Limiter (comp + sidechain) o tu <b>FabFilter Pro-C</b>."],
+ practica:["Seguí en D23, guardá como D24.","Ruteá el kick al mixer (canal 1) y bajo+acordes+pads a otros canales.","En el canal del bajo: insertá Fruity Limiter → pestaña COMP. En el mixer, click derecho sobre la ruta del kick hacia ese canal → 'sidechain to this track'. En el limiter elegí el sidechain source.","Ajustá hasta escuchar el bombeo: el bajo se hunde con cada kick y vuelve enseguida.","Repetí en acordes/pads con menos intensidad."],
+ constraint:"<b>Regla de hoy:</b> exagerá primero (para escucharlo bien claro) y después bajalo a la mitad.",
+ win:"✅ Victoria: tu house respira. Compará con ayer: es otro tema."},
+{d:25,w:4,t:"Vocal chop estilo Claptone",g:"La vocal misteriosa que es firma del deep house",
+ teoria:["Idea clave: Claptone usa vocales graves, con reverb, cortadas y repetidas como mantras. Vos ya sabés choppear (día 20): hoy lo aplicás al house.","Fuentes: tus stems de vocales, o tu <b>Stem Extractor</b> sobre cualquier acapella."],
+ practica:["Seguí en D24, guardá como D25.","Agarrá una vocal tuya ya separada (Yeah-yeah_vocals, o la de Weltita) y elegí UNA frase corta.","Choppeala y bajale el pitch 2-4 semitonos (que suene grave y misteriosa). Pitch a notas de Am.","Patrón: repetila como mantra cada 2 compases, con ValhallaVintageVerb generoso y un delay 1/4.","Filtrala con <b>FabFilter Pro-Q</b>: cortá agudos y graves (que suene 'de lejos', tipo teléfono viejo)."],
+ constraint:"<b>Regla de hoy:</b> una sola frase vocal. El misterio está en la repetición, no en la variedad.",
+ win:"✅ Victoria: tu loop tiene identidad Claptone. Esto ya es un track esperando nacer."},
+{d:26,w:4,t:"De loop a canción: el arreglo",g:"El paso que nunca diste: estructura",
+ teoria:["Leé en Teoría: <b>8. Estructura</b> (10 min).","Idea clave: arreglar = decidir qué elementos suenan en cada momento. La canción es un viaje de tensión y descanso, en bloques de 8 compases."],
+ practica:["Abrí tu MEJOR loop del mes (el que más te guste, de cualquier semana). Guardá como D26.","En el playlist, pintá esta estructura por bloques de 8: <b>Intro</b> (solo drums o solo acordes) → <b>Sección A</b> (casi todo) → <b>Hook</b> (TODO) → <b>Sección B</b> (sacá 1-2 elementos) → <b>Hook</b> → <b>Outro</b> (vas apagando).","Regla de oro: cada 8 compases algo ENTRA o algo SALE. Nunca 16 compases idénticos.","No busques perfección: buscá que dure 2+ minutos y tenga viaje."],
+ constraint:"<b>Regla de hoy:</b> prohibido tocar el loop (ni una nota nueva). Solo copiar, pegar y silenciar bloques.",
+ win:"✅ Victoria: por primera vez tenés una CANCIÓN, no un loop. Este era el muro; ya lo saltaste."},
+{d:27,w:4,t:"Transiciones: pegamento entre secciones",g:"Que los cambios se sientan naturales",
+ teoria:["Idea clave: las transiciones avisan que algo viene. Herramientas: risers (subidas), sweeps (barridos), silencio de 1 beat antes del hook, redoble de snare, y automatización de filtro."],
+ practica:["Seguí en D26, guardá como D27.","Del pack <span class='mono'>500 EFFECTS Electronic Music Collection</span>: elegí 1 riser y 1 impact/crash. Poné el riser terminando justo donde empieza el hook, y el impact en el primer beat del hook.","Silencio dramático: borrá TODO en el último medio compás antes del hook. Ese hueco hace que el hook explote.","Automatización de filtro: FabFilter Pro-Q en el master de acordes+melodía → automatizá un low-pass que se abre al llegar al hook.","Snare roll: redoble creciendo en los últimos 2 compases de la sección A."],
+ constraint:"<b>Regla de hoy:</b> máximo 2 transiciones distintas, bien puestas. FX por todos lados = feria.",
+ win:"✅ Victoria: tu tema fluye de principio a fin sin costuras."},
+{d:28,w:4,t:"Mezcla básica: niveles, paneo y EQ",g:"Que todo se escuche claro sin pelearse",
+ teoria:["Idea clave: mezclar = cada sonido tiene su lugar en volumen (niveles), izquierda-derecha (paneo) y graves-agudos (EQ).","Regla del 80%: niveles bien puestos es el 80% de la mezcla. EQ es para RESTAR lo que sobra, no para sumar."],
+ practica:["Seguí en D27, guardá como D28.","Niveles desde cero: bajá todos los faders y subilos en orden: kick → 808/bajo → snare → resto de drums → acordes → melodía → vocal/FX. Cada uno hasta que se escuche SIN tapar lo anterior.","Paneo: kick, bajo, snare y vocal al centro. Percusiones y melodías secundarias abiertas a los lados.","<b>FabFilter Pro-Q</b> en el bajo: cortá todo debajo de 30 Hz. En acordes/melodías: cortá debajo de 150-200 Hz (ese lugar es del bajo).","En el master: <b>FabFilter Pro-L</b>, subí hasta que pegue sin distorsionar. O probá tu <b>FL Cloud Mastering</b>."],
+ constraint:"<b>Regla de hoy:</b> escuchá en DOS lugares (auriculares + celular). Si suena bien en ambos, va.",
+ win:"✅ Victoria: tu tema suena limpio y fuerte. Listo para el paso final."},
+{d:29,w:4,t:"Terminar: la habilidad más rara del mundo",g:"Exportar la versión final. FINAL final.",
+ teoria:["Idea clave: 'terminado' es una decisión, no un estado. Los pros no terminan cuando está perfecto: terminan cuando está BIEN y siguen con el próximo.","El productor que termina 10 temas buenos crece más que el que pule 1 tema 'perfecto' por año."],
+ practica:["Última pasada a D28 (30 min máximo, timer puesto): ajustá SOLO lo que te moleste de verdad al escucharlo entero 2 veces.","Chequeo final: ¿el hook es la mejor parte? ¿la intro no es muy larga? ¿el final cierra o simplemente se corta?","Exportá en WAV y MP3. Nombralo con título real (no 'proyecto final 2 ahora sí').","Escuchalo entero una vez, sin tocar nada, como oyente. Anotá qué mejorarías EN EL PRÓXIMO tema (no en este: este ya está)."],
+ constraint:"<b>Regla de hoy:</b> después de exportar, prohibido reabrir el proyecto por 48 horas.",
+ win:"✅ Victoria: TERMINASTE UNA CANCIÓN. Sos oficialmente el productor que termina cosas."},
+{d:30,w:4,t:"Compartir y elegir tu próximo ciclo",g:"Cerrar el círculo y arrancar el siguiente",
+ teoria:["Idea clave: la música no existe hasta que alguien más la escucha. Compartir da miedo SIEMPRE (a todos, a los grandes también). Se comparte igual.","Segundo: el hábito ya está construido. 30 días seguidos sentándote a producir con dirección. Eso ya nadie te lo saca."],
+ practica:["Mandale tu tema terminado al menos a UNA persona (amigo, grupo, o subilo a SoundCloud/Instagram). Hoy. Sin excusas.","Retrospectiva (15 min): escuchá D07, D14, D21 y el tema final en orden. Anotá: ¿qué estilo te salió más natural? ¿qué día te divertiste más?","Elegí tu próximo ciclo: (a) repetir el plan con tonalidades nuevas y metas más altas, (b) especializarte 30 días en TU estilo favorito, o (c) 30 días de un tema terminado por semana.","Escribime cuando llegues acá y armamos el ciclo 2 a medida de lo que descubriste."],
+ constraint:"<b>Regla de hoy:</b> compartir no es opcional. Es el ejercicio.",
+ win:"🏆 VICTORIA FINAL: 30 días, 4 estilos, 1 canción terminada y compartida. El Nook del día 1 no te reconocería."}
+];
+</script>
+<script>
+// =============== LOGIC ===============
+const START = new Date(2026, 7, 13); // 13 de agosto de 2026 (día 1) — reseteado el 14/8: hoy es Día 2
+const MS_DAY = 86400000;
+function todayNum(){
+  const now = new Date();
+  const t0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const diff = Math.floor((t0 - START) / MS_DAY) + 1;
+  return Math.min(30, Math.max(1, diff));
+}
+const TODAY = todayNum();
+const done = new Set(); // in-memory only
+
+function weekOf(d){ return WEEKS[d.w-1]; }
+
+function dayCard(day, opts={}){
+  const wk = weekOf(day);
+  const el = document.createElement('div');
+  el.className = 'day' + (opts.open ? ' open' : '') + (day.d === TODAY && opts.highlight ? ' today-hl' : '');
+  el.innerHTML = `
+    <div class="day-head">
+      <div class="dnum" style="background:${wk.color}">D${day.d}</div>
+      <div class="day-title">
+        <div class="n">${day.t}</div>
+        <div class="g">${day.g}</div>
+      </div>
+      <button class="check" aria-label="Marcar día ${day.d} como hecho">✓</button>
+      <span class="chev">▶</span>
+    </div>
+    <div class="day-body">
+      <div class="blk"><div class="lbl">📖 Teoría (10 min)</div><ul>${day.teoria.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="lbl">🎹 Práctica en FL Studio (25 min)</div><ul>${day.practica.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="constraint">${day.constraint}</div>
+      <div class="win">${day.win}</div>
+    </div>`;
+  el.querySelector('.day-head').addEventListener('click', (e)=>{
+    if(e.target.classList.contains('check')) return;
+    el.classList.toggle('open');
+  });
+  const chk = el.querySelector('.check');
+  if(done.has(day.d)) chk.classList.add('on');
+  chk.addEventListener('click', ()=>{
+    if(done.has(day.d)){ done.delete(day.d); chk.classList.remove('on'); }
+    else{ done.add(day.d); chk.classList.add('on'); }
+    document.querySelectorAll(`.day .check`).forEach(c=>{}); // no-op, single instance per list
+    updateProgress();
+  });
+  return el;
+}
+
+function updateProgress(){
+  const pct = Math.round((TODAY-1)/30*100);
+  document.getElementById('dayChip').textContent = `Día ${TODAY} de 30`;
+  // Le dejamos el día a la portada del Panel, para que lo muestre sin
+  // tener que repetir esta cuenta. Acá está la única fecha de arranque.
+  try{ localStorage.setItem('campamento-dia', String(TODAY)); }catch(e){}
+  document.getElementById('barFill').style.width = Math.max(3,pct) + '%';
+  const wk = WEEKS[DAYS[TODAY-1].w-1];
+  document.getElementById('barLabel').textContent = wk.title.split('·')[1].trim();
+}
+
+// ---- render Hoy ----
+(function(){
+  const day = DAYS[TODAY-1];
+  const wk = weekOf(day);
+  const wrap = document.getElementById('todayCard');
+  const intro = document.createElement('div');
+  intro.className = 'week-h';
+  intro.innerHTML = `<div class="week-dot" style="background:${wk.color}"></div>
+    <div><div class="t">${wk.title}</div><div class="d">${wk.desc}</div></div>`;
+  wrap.appendChild(intro);
+  wrap.appendChild(dayCard(day, {open:true, highlight:true}));
+  const nxt = document.createElement('p');
+  nxt.className = 'muted';
+  nxt.style.margin = '6px 4px 20px';
+  nxt.textContent = day.d < 30
+    ? `Mañana: Día ${day.d+1} — ${DAYS[day.d].t}`
+    : 'Último día del ciclo. Después de hoy, escribime y armamos el ciclo 2.';
+  wrap.appendChild(nxt);
+})();
+
+// ---- render Plan ----
+(function(){
+  const list = document.getElementById('planList');
+  let lastWeek = 0;
+  DAYS.forEach(day=>{
+    if(day.w !== lastWeek){
+      lastWeek = day.w;
+      const wk = weekOf(day);
+      const h = document.createElement('div');
+      h.className = 'week-h';
+      h.innerHTML = `<div class="week-dot" style="background:${wk.color}"></div>
+        <div><div class="t">${wk.title}</div><div class="d">${wk.desc}</div></div>`;
+      list.appendChild(h);
+    }
+    list.appendChild(dayCard(day, {open:false, highlight:true}));
+  });
+})();
+
+// ---- tabs ----
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('section.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+    window.scrollTo({top:0});
+  });
+});
+
+updateProgress();
+</script>
+
+<style id="volver-al-panel">
+  .volver-panel{
+    position:fixed; z-index:9999;
+    left:max(.7rem, env(safe-area-inset-left));
+    bottom:max(.7rem, env(safe-area-inset-bottom));
+    display:inline-flex; align-items:center; gap:.45em;
+    padding:.5em .85em .5em .7em;
+    border:1px solid var(--border);
+    border-radius:100px;
+    background:var(--surface);
+    -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    color:var(--accent);
+    font:600 .78rem/1 system-ui,-apple-system,'Segoe UI',sans-serif;
+    text-decoration:none;
+    box-shadow:0 2px 14px rgba(0,0,0,.28);
+    transition:transform .3s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+    opacity:.82;
+  }
+  .volver-panel:hover,.volver-panel:focus-visible{ opacity:1; transform:translateY(-2px) }
+  .volver-panel:active{ transform:scale(.96); transition-duration:.11s }
+  .volver-panel span{ font-size:1.05em; line-height:0 }
+  @media print{ .volver-panel{ display:none } }
+  @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
+</style>
+<a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
+</body>
+</html>

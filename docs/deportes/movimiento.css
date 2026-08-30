@@ -1,0 +1,139 @@
+/* ============================================================
+   MOVIMIENTO Y LEGIBILIDAD
+
+   Las curvas y los tiempos salen de medir las cuatro referencias,
+   no de inventarlos:
+
+     Apple iPhone 17 Pro  cubic-bezier(.4,0,.6,1)   240 / 320 / 400 ms
+     Studio Size          cubic-bezier(.51,.01,.2,1)      300 ms
+     waaark               cubic-bezier(.77,0,.175,1)
+     anime.js             micro-interacciones de 100-125 ms,
+                          interlineado muy ajustado en los títulos
+
+   La idea: Apple para todo lo que se mueve solo, anime.js para lo
+   que responde al dedo (tiene que sentirse inmediato), y waaark
+   para las entradas con carácter.
+   ============================================================ */
+
+:root{
+  --apple:cubic-bezier(.4,0,.6,1);
+  --toque:cubic-bezier(.2,.9,.3,1);
+  --entrada:cubic-bezier(.77,0,.175,1);
+
+  --t-rapido:.12s;    /* responde al dedo */
+  --t-medio:.24s;     /* cambios de estado */
+  --t-lento:.4s;      /* entradas grandes */
+}
+
+/* ------------------------------------------------------------
+   LEGIBILIDAD
+   La queja era que no se lee bien. Tres causas: la tipografía de
+   píxeles usada en textos largos, el gris claro sobre papel, y el
+   interlineado apretado. Se corrigen las tres.
+   ------------------------------------------------------------ */
+
+body{font-size:17px;line-height:1.55;letter-spacing:.005em}
+
+/* Los grises de antes (#666, #777, #888) quedaban flojos sobre el
+   papel. Se oscurecen para que se lean de verdad. */
+.ev .cuerpo .s,
+.nota p,
+.jug .info span,
+.sc-nom,
+.jm-pos,
+.pf-info small,
+.forma-lista li{color:#4a4438}
+
+.ficha-partido,
+.fc-sub,
+.compite > span,
+.hp-ev{color:#413c31}
+
+.nota-fuente,
+.hp-fecha,
+.pf-rec small,
+.dg span{color:#5a5348}
+
+.vacio{color:#4a4438;font-size:15.5px;line-height:1.6}
+
+/* Títulos: más grandes y con el interlineado ajustado de anime.js. */
+.fc-datos h3{font-size:23px;line-height:1.08;letter-spacing:-.025em}
+.mp-cifras b{line-height:.9;letter-spacing:-.04em}
+.destacado h2{line-height:1.5}
+.vivo-marcador b{line-height:.9;letter-spacing:-.04em}
+
+/* Los datos numéricos, más grandes: son lo que mirás de reojo. */
+.dg b{font-size:16px}
+.tabla{font-size:15px}
+.tabla .pts{font-size:16px}
+.j-txt{font-size:15px}
+.j-min{font-size:13.5px}
+
+/* Área de toque cómoda en el celular. */
+.jm,.jug,.pf,.torneo-chip,.ev{min-height:46px}
+
+/* ------------------------------------------------------------
+   MOVIMIENTO
+   ------------------------------------------------------------ */
+
+/* Todo lo que responde al dedo usa el tiempo corto: si tarda más,
+   se siente lento aunque sea más "suave". */
+.ev,.jug,.jm,.pf,.tarjeta,.ficha,.torneo-chip,.btn3d,.volver,.pest{
+  transition:transform var(--t-rapido) var(--toque),
+             box-shadow var(--t-rapido) var(--toque),
+             background var(--t-medio) var(--apple);
+}
+
+/* Hundido al tocar, como una tecla. */
+.ev:active,.jug:active,.jm:active,.pf:active{
+  transform:translate(2px,2px) scale(.995);
+}
+
+/* Las pestañas cambian con la curva de Apple. */
+.pest{transition:background var(--t-medio) var(--apple), top var(--t-medio) var(--apple)}
+
+/* Entradas: la curva de waaark, que arranca lento y llega decidida. */
+html.anim .rev.visible{
+  transition:opacity var(--t-lento) var(--apple),
+             transform var(--t-lento) var(--entrada);
+}
+
+/* Las barras de estadística se llenan con la curva de Apple. */
+.sc-barra i{transition:width .7s var(--apple)}
+
+/* El marcador en vivo late apenas cuando cambia. */
+@keyframes marcaCambio{
+  0%{transform:scale(1)}
+  40%{transform:scale(1.12)}
+  100%{transform:scale(1)}
+}
+.vivo-marcador b.cambio,.marc.vivo.cambio{
+  animation:marcaCambio .5s var(--apple);
+}
+
+/* Revelado por scroll nativo donde el navegador lo soporta:
+   se mueve con el dedo en vez de dispararse de golpe. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference){
+    html.anim .rev:not(.visible){
+      animation:entra linear both;
+      animation-timeline:view();
+      animation-range:entry 5% cover 22%;
+      opacity:1;
+    }
+    @keyframes entra{
+      from{opacity:0;transform:translateY(28px)}
+      to{opacity:1;transform:none}
+    }
+  }
+}
+
+/* La cinta de titulares se frena si la tocás, para poder leerla. */
+#ticker:hover #ticker-pista,
+#ticker:active #ticker-pista{animation-play-state:paused}
+
+/* Nada de esto se aplica si pediste menos movimiento. */
+@media (prefers-reduced-motion: reduce){
+  .ev:active,.jug:active,.jm:active,.pf:active{transform:none}
+  html.anim .rev:not(.visible){animation:none;opacity:1}
+}

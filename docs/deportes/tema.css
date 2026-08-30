@@ -1,0 +1,106 @@
+/* ============================================================
+   TEMA POR EQUIPO
+
+   La página entera toma el color del club o deporte en el que
+   estás. No es sólo el borde de una tarjeta: cambian el fondo,
+   el resplandor, la cinta de titulares y los acentos.
+
+   La transición usa la curva de Apple —cubic-bezier(.4,0,.6,1)—
+   medida en su página del iPhone 17 Pro, a 400 ms: lo bastante
+   lenta para notarse, lo bastante rápida para no estorbar.
+   ============================================================ */
+
+:root{
+  --tema:#5b8cff;          /* acento del equipo actual */
+  --tema-fondo:#05010f;    /* fondo teñido */
+  --tema-brillo:rgba(91,140,255,.16);
+}
+
+body{
+  background:var(--tema-fondo);
+  transition:background 1s var(--apple);
+}
+
+/* Halo de color detrás de todo, que sigue al equipo elegido. */
+body::after{
+  content:"";
+  position:fixed;inset:0;
+  z-index:0;pointer-events:none;
+  background:
+    radial-gradient(120% 70% at 50% -10%, var(--tema-brillo), transparent 60%),
+    radial-gradient(90% 50% at 50% 110%, var(--tema-brillo), transparent 55%);
+  transition:background 1s var(--apple);
+}
+
+/* ---------- elementos que siguen el tema ---------- */
+#ticker{
+  background:var(--tema);
+  transition:background .6s var(--apple);
+}
+#ticker-pista b{color:#000}
+
+.marca-txt{
+  text-shadow:2px 2px 0 var(--tema), 4px 4px 0 var(--cian);
+  transition:text-shadow .6s var(--apple);
+}
+.marca-sub{color:var(--tema);transition:color .6s var(--apple)}
+
+.semana.actual{
+  background:var(--tema);
+  box-shadow:3px 3px 0 #000;
+}
+.semana.actual .sem-cant{color:#000;opacity:.75}
+
+.volver{box-shadow:3px 3px 0 var(--tema)}
+.torneo-chip:hover{background:var(--tema)}
+.mes{background:var(--tema)}
+
+/* El escudo del equipo actual, en la ficha activa, late con su color. */
+.ficha.activa{
+  box-shadow:4px 4px 0 #000, 0 0 24px var(--tema);
+}
+
+/* ---------- entrada del contenido al cambiar de sección ----------
+   La curva de waaark: arranca lento y llega decidida. */
+#vista{animation:entraSeccion .45s cubic-bezier(.77,0,.175,1) both}
+@keyframes entraSeccion{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:none}
+}
+
+/* ---------- el anillo marca el equipo activo ----------
+   Micro-interacción de 120 ms, como en anime.js. */
+.ficha{transition:transform .12s var(--toque), box-shadow .18s var(--apple)}
+.ficha.activa{transform:translateY(-3px)}
+
+/* ---------- barra de color bajo el encabezado ---------- */
+#anillo::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:6px;height:3px;
+  background:linear-gradient(90deg, transparent, var(--tema), transparent);
+  opacity:.55;
+  transition:background .6s var(--apple);
+}
+
+/* ---------- destello al cambiar de equipo ----------
+   Un barrido corto del color nuevo, para que el cambio se sienta. */
+#destello{
+  position:fixed;inset:0;z-index:120;pointer-events:none;
+  background:linear-gradient(100deg, transparent 35%, var(--tema) 50%, transparent 65%);
+  opacity:0;
+  transform:translateX(-40%);
+}
+#destello.pasa{
+  animation:barrido .55s cubic-bezier(.4,0,.6,1);
+}
+@keyframes barrido{
+  0%{opacity:0;transform:translateX(-40%)}
+  35%{opacity:.28}
+  100%{opacity:0;transform:translateX(40%)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  body,body::after,#ticker,.marca-txt,.marca-sub{transition:none}
+  #vista{animation:none}
+  #destello.pasa{animation:none}
+}

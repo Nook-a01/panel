@@ -1,0 +1,43 @@
+name: Actualizar datos
+
+on:
+  schedule:
+    - cron: "17 * * * *"     # cada hora (minuto 17, para no competir con el pico)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Bajar calendario, posiciones, planteles y noticias
+        run: node scripts/fetch.mjs
+
+      # Sella los archivos con la versión del service worker, para que el
+      # navegador no siga sirviendo los viejos después de publicar.
+      - name: Sellar la versión de los archivos
+        run: node scripts/versionar.mjs
+
+      # fetch.mjs sólo reescribe los archivos si el contenido cambió de
+      # verdad, así que la mayoría de las corridas no generan commit.
+      - name: Guardar los cambios
+        run: |
+          git config user.name  "Datos automáticos"
+          git config user.email "actions@github.com"
+          git add docs/deportes/data/events.json docs/deportes/data/extras.json docs/index.html docs/deportes/index.html docs/deportes/app.js
+          git diff --staged --quiet && echo "Sin cambios que guardar" && exit 0
+          git commit -m "Datos actualizados $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash || true
+          git push
