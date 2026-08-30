@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300" width="900" height="1300" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <pattern id="trama" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(22)">
+    <circle cx="11.5" cy="11.5" r="8.4" fill="#c13584"/>
+    <circle cx="34.5" cy="34.5" r="8.4" fill="#f56040"/>
+    <circle cx="34.5" cy="11.5" r="4" fill="#f56040"/>
+    <circle cx="11.5" cy="34.5" r="4" fill="#c13584"/>
+  </pattern>
+  <radialGradient id="relieve" cx="34%" cy="26%" r="86%">
+    <stop offset="0" stop-color="#000" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#000" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".8"/>
+  </radialGradient>
+</defs>
+<rect width="900" height="1300" fill="url(#trama)"/>
+<rect width="900" height="1300" fill="url(#relieve)"/>
+</svg>
