@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tablero · Panel de Instagram</title>
+<meta name="robots" content="noindex,nofollow">
+<!-- Esta página maneja la clave de administrador, así que se cierra igual que
+     el panel: nada externo, sólo lo que está acá adentro y el contador. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://wispy-poetry-97f9.hamcqc.workers.dev; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#000000">
+<style>
+:root{
+  --acido:#CCFF00;
+  --shock:#FF2D7A;
+  --tinta:#fff;
+  --apagado:#8b8b8b;
+  --linea:#fff;
+  --f:ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --m:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+body{
+  background:#000;
+  color:var(--tinta);
+  font-family:var(--f);
+  font-size:16px;
+  line-height:1.5;
+  padding:max(1rem, env(safe-area-inset-top)) 1rem calc(env(safe-area-inset-bottom) + 4rem);
+}
+.hoja{max-width:1100px;margin:0 auto}
+
+h1{
+  font-size:clamp(1.5rem,6vw,2.6rem);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+  line-height:.95;
+}
+h2{
+  font-size:clamp(.95rem,3.4vw,1.2rem);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-.01em;
+  border-bottom:3px solid var(--linea);
+  padding-bottom:.3rem;
+  margin:2.2rem 0 1rem;
+}
+.punto{display:inline-block;width:.7em;height:.7em;background:var(--acido);vertical-align:-.05em;margin-right:.35em}
+
+/* ── conexión ── */
+.conexion{
+  border:2px solid var(--linea);
+  padding:1rem;
+  margin:1.2rem 0 0;
+  display:grid;
+  gap:.6rem;
+}
+@media (min-width:640px){ .conexion{grid-template-columns:1fr 1fr auto;align-items:end} }
+label{
+  display:block;
+  font-family:var(--m);
+  font-size:.66rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--apagado);
+  margin-bottom:.3rem;
+}
+input{
+  width:100%;
+  background:#0d0d0d;
+  border:2px solid #333;
+  color:var(--tinta);
+  font-family:var(--m);
+  font-size:.82rem;
+  padding:.6rem .7rem;
+}
+input:focus{outline:none;border-color:var(--acido)}
+button{
+  background:#000;
+  border:2px solid var(--linea);
+  color:var(--tinta);
+  font-family:var(--f);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  font-size:.82rem;
+  padding:.65em 1.1em;
+  cursor:pointer;
+  transition:background .11s linear, color .11s linear;
+}
+button:hover:not(:disabled){background:var(--acido);color:#000}
+button:disabled{opacity:.45;cursor:default}
+button.fuerte{background:var(--acido);color:#000;border-color:var(--acido)}
+button.peligro{border-color:var(--shock);color:var(--shock)}
+button.peligro:hover:not(:disabled){background:var(--shock);color:#000}
+
+.aviso{margin-top:.8rem;font-family:var(--m);font-size:.76rem}
+.aviso.mal{color:var(--shock)}
+.aviso.bien{color:var(--acido)}
+
+/* ── números grandes ── */
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:2px;
+  background:var(--linea);
+  border:2px solid var(--linea);
+}
+.kpi{background:#000;padding:.9rem}
+.kpi .n{
+  font-size:clamp(1.6rem,5vw,2.4rem);
+  font-weight:900;
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.kpi .n.ac{color:var(--acido)}
+.kpi .r{
+  font-family:var(--m);
+  font-size:.62rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--apagado);
+  margin-top:.4rem;
+}
+.kpi .p{font-size:.74rem;color:var(--apagado);margin-top:.15rem}
+
+/* ── barras ── */
+.barras{display:grid;gap:.5rem}
+.barra{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:center}
+.barra .et{font-size:.85rem;min-width:0;overflow-wrap:break-word}
+.barra .vl{font-family:var(--m);font-size:.8rem;font-weight:600;white-space:nowrap}
+.barra .pista{grid-column:1/-1;height:10px;background:#171717;border:1px solid #333}
+.barra .pista i{display:block;height:100%;background:var(--acido)}
+.barra.sec .pista i{background:var(--shock)}
+
+/* ── gráfico de días ── */
+.grafico{border:2px solid var(--linea);padding:.9rem;overflow-x:auto}
+.grafico svg{display:block;width:100%;min-width:420px;height:170px}
+
+/* ── horas ── */
+.horas{display:flex;align-items:flex-end;gap:2px;height:110px;border:2px solid var(--linea);padding:.6rem}
+.horas .h{flex:1;background:#222;position:relative;min-height:2px}
+.horas .h.pico{background:var(--acido)}
+.horas .h span{
+  position:absolute;bottom:-1.15rem;left:50%;transform:translateX(-50%);
+  font-family:var(--m);font-size:.52rem;color:var(--apagado);
+}
+.horas-pie{margin-top:1.3rem;font-family:var(--m);font-size:.66rem;color:var(--apagado)}
+
+/* ── tabla de personas ── */
+.tabla-caja{border:2px solid var(--linea);overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:38rem}
+th{
+  font-family:var(--m);
+  font-size:.6rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--apagado);
+  text-align:left;
+  padding:.6rem .5rem;
+  border-bottom:2px solid var(--linea);
+  white-space:nowrap;
+}
+td{padding:.55rem .5rem;border-bottom:1px solid #222;vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--m);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+a{color:var(--acido);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--shock)}
+.anon{color:var(--apagado);font-style:italic}
+.eti{
+  display:inline-block;font-family:var(--m);font-size:.58rem;letter-spacing:.06em;
+  text-transform:uppercase;padding:.14em .4em;border:1px solid currentColor;
+}
+.eti.vivo{color:var(--acido)}
+.eti.frio{color:#e8b33a}
+.eti.ido{color:var(--shock)}
+.eti.plat{color:var(--apagado)}
+.abrir{
+  background:none;border:0;color:var(--apagado);font-family:var(--m);
+  font-size:.7rem;padding:.2rem .3rem;text-transform:none;letter-spacing:0;
+}
+.abrir:hover{background:none;color:var(--acido)}
+tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
+.linea-ev{
+  display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;
+  font-family:var(--m);font-size:.72rem;padding:.22rem 0;
+  border-bottom:1px solid #1a1a1a;
+}
+.linea-ev:last-child{border-bottom:0}
+.linea-ev .cuando{color:var(--apagado);white-space:nowrap}
+.linea-ev .que{color:var(--tinta)}
+.linea-ev .quien{color:var(--acido);white-space:nowrap}
+
+.vacio{color:var(--apagado);font-size:.9rem;padding:1.4rem 0;text-align:center}
+.nota{color:var(--apagado);font-size:.78rem;margin-top:.6rem;line-height:1.5}
+
+.zona-riesgo{border:2px solid var(--shock);padding:1rem;margin-top:2.5rem}
+.zona-riesgo h2{border-bottom-color:var(--shock);color:var(--shock);margin-top:0}
+.riesgo-botones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
+
+#panel{display:none}
+
+.volver{
+  position:fixed;z-index:99;
+  left:max(.7rem,env(safe-area-inset-left));
+  bottom:max(.7rem,env(safe-area-inset-bottom));
+  display:inline-flex;align-items:center;gap:.45em;
+  padding:.5em .85em .5em .7em;
+  border:2px solid var(--acido);background:#000;color:var(--acido);
+  font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+  text-decoration:none;
+}
+.volver:hover{background:var(--acido);color:#000}
+</style>
+</head>
+<body>
+<div class="hoja">
+
+  <h1><span class="punto"></span>Tablero</h1>
+  <p class="nota">Quién usa el Panel de Instagram, cuándo y qué mira.</p>
+
+  <div class="conexion">
+    <div>
+      <label for="url">Dirección del contador</label>
+      <input id="url" spellcheck="false" autocomplete="off">
+    </div>
+    <div>
+      <label for="key">Clave de administrador</label>
+      <input id="key" type="password" autocomplete="current-password" placeholder="••••••••••••">
+    </div>
+    <button id="entrar" class="fuerte">Ver</button>
+  </div>
+  <p class="nota">
+    La clave se guarda sólo en este navegador y viaja en un encabezado, no en la
+    dirección: así no queda en el historial ni en registros del servidor.
+  </p>
+  <p id="aviso" class="aviso"></p>
+
+  <div id="panel">
+
+    <h2>De un vistazo</h2>
+    <div class="kpis" id="kpis"></div>
+    <p class="nota" id="cuando"></p>
+
+    <h2>Cómo viene creciendo</h2>
+    <div class="grafico" id="grafico"></div>
+    <p class="nota">Últimos 30 días. La línea llena es cuánta gente distinta entró cada día; la fina, cuántas aperturas hubo en total.</p>
+
+    <h2>¿Lo siguen usando?</h2>
+    <div class="barras" id="retencion"></div>
+    <p class="nota" id="retencion-nota"></p>
+
+    <h2>Quiénes usan el panel</h2>
+    <div class="tabla-caja">
+      <table>
+        <thead><tr>
+          <th>Persona</th><th>Dónde</th><th class="num">Veces</th>
+          <th class="num">Días</th><th>Desde</th><th>Última vez</th><th></th>
+        </tr></thead>
+        <tbody id="personas"></tbody>
+      </table>
+    </div>
+    <p class="nota" id="personas-nota"></p>
+
+    <h2>Qué parte usan</h2>
+    <div class="barras sec" id="secciones"></div>
+
+    <h2>A qué hora lo usan</h2>
+    <div class="horas" id="horas"></div>
+    <p class="horas-pie" id="horas-pie"></p>
+
+    <div class="zona-riesgo">
+      <h2>Borrar datos</h2>
+      <p class="nota">No hay borrado automático: lo que se ve acá se guarda hasta que vos lo borres. Esto no se puede deshacer.</p>
+      <div class="riesgo-botones">
+        <button class="peligro" id="borrar-viejos">Borrar lo anterior a 90 días</button>
+        <button class="peligro" id="borrar-todo">Borrar todo</button>
+      </div>
+      <p id="aviso-borrar" class="aviso"></p>
+    </div>
+
+  </div>
+</div>
+
+<a class="volver" href="../">← Panel</a>
+
+<script>
+(() => {
+  "use strict";
+
+  const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
+  const LS_URL = "igtablero_url", LS_KEY = "igtablero_key";
+  const $ = id => document.getElementById(id);
+
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  /* ── nombres de los eventos ──────────────────────────────────
+     La base guarda el nombre interno ('tab_analysis'). Acá se
+     traduce. Si aparece uno que no conocemos se muestra tal cual:
+     en un tablero privado es mejor ver un nombre raro que perder
+     el dato. */
+  const NOMBRES = {
+    open: "Abrió el panel",
+    scan_ok: "Escaneo completo",
+    tab_analysis: "Miró Seguidores",
+    tab_lost: "Miró Te dejaron",
+    tab_dms: "Miró Sin respuesta",
+    tab_stories: "Miró Historias",
+    tab_stats: "Miró Estadísticas",
+    tab_strategy: "Miró Estrategia",
+    unfollow: "Dejó de seguir a alguien",
+    sync: "Sincronizó dispositivos",
+  };
+  const nombreEvento = e => NOMBRES[e] || e;
+
+  const DONDE = { pc: "Computadora", android: "Android", ios: "iPhone",
+                  movil: "Celular", escritorio: "Computadora" };
+
+  /* ── fechas ─────────────────────────────────────────────── */
+  const HOY = new Date();
+  const dia = d => d.toISOString().slice(0, 10);
+  const diasEntre = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000);
+  const fecha = iso => {
+    if (!iso) return "—";
+    const [a, m, d] = String(iso).slice(0, 10).split("-");
+    return d && m ? `${d}/${m}` : iso;
+  };
+  const hace = iso => {
+    if (!iso) return "—";
+    const n = diasEntre(iso, dia(HOY));
+    if (n <= 0) return "hoy";
+    if (n === 1) return "ayer";
+    if (n < 30) return "hace " + n + " d";
+    if (n < 365) return "hace " + Math.round(n / 30) + " m";
+    return "hace " + Math.round(n / 365) + " a";
+  };
+  const reloj = ts => {
+    const d = new Date(ts);
+    return d.toLocaleString("es-AR", {
+      day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit",
+      hour12: false, timeZone: "America/Argentina/Buenos_Aires",
+    });
+  };
+
+  /* ── traer los datos ────────────────────────────────────── */
+  let DATOS = null;
+
+  async function pedir() {
+    const base = $("url").value.trim().replace(/\/+$/, "");
+    const key = $("key").value.trim();
+    const av = $("aviso");
+    av.className = "aviso"; av.textContent = "";
+
+    if (!base || !key) {
+      av.className = "aviso mal";
+      av.textContent = "Faltan la dirección y la clave.";
+      return;
+    }
+
+    $("entrar").disabled = true;
+    $("entrar").textContent = "Cargando…";
+    try {
+      const r = await fetch(base + "/stats", {
+        cache: "no-store",
+        headers: { "X-Admin-Key": key },
+      });
+      const d = await r.json();
+      if (!r.ok) throw new Error(d && d.error ? d.error : "HTTP " + r.status);
+
+      localStorage.setItem(LS_URL, base);
+      localStorage.setItem(LS_KEY, key);
+      DATOS = d;
+      pintar(d);
+      $("panel").style.display = "block";
+    } catch (e) {
+      av.className = "aviso mal";
+      av.textContent = "No se pudo leer: " + e.message;
+      $("panel").style.display = "none";
+    } finally {
+      $("entrar").disabled = false;
+      $("entrar").textContent = "Ver";
+    }
+  }
+
+  /* ── pintar todo ────────────────────────────────────────── */
+  function pintar(d) {
+    kpis(d);
+    grafico(d.serie_30d || []);
+    retencion(d.personas || []);
+    personas(d.personas || [], d.actividad || []);
+    secciones(d.secciones || []);
+    horas(d.por_hora || []);
+    $("cuando").textContent = "Datos al " + reloj(d.generado);
+  }
+
+  function kpis(d) {
+    const nuevos = (d.personas || []).filter(p =>
+      p.alta && diasEntre(p.alta, dia(HOY)) <= 7).length;
+
+    const filas = [
+      { n: d.usuarios_total, r: "Personas", p: (d.usuarios_con_nombre || 0) + " con @usuario" },
+      { n: d.activos_7d, r: "Activos 7 días", p: "de " + d.usuarios_total, ac: true },
+      { n: d.activos_hoy, r: "Activos hoy", p: (d.visitas_hoy || 0) + " aperturas" },
+      { n: nuevos, r: "Nuevos esta semana", p: "se sumaron", ac: nuevos > 0 },
+      { n: d.visitas_total, r: "Aperturas totales", p: "desde el arranque" },
+    ];
+    $("kpis").innerHTML = filas.map(f => `
+      <div class="kpi">
+        <div class="n${f.ac ? " ac" : ""}">${esc(f.n ?? 0)}</div>
+        <div class="r">${esc(f.r)}</div>
+        <div class="p">${esc(f.p)}</div>
+      </div>`).join("");
+  }
+
+  /* El gráfico se dibuja a mano en SVG. No hace falta una librería
+     para dos líneas, y la política de contenido de esta página no
+     deja traer nada de afuera igual. */
+  function grafico(serie) {
+    if (!serie.length) { $("grafico").innerHTML = '<p class="vacio">Todavía no hay días con actividad.</p>'; return; }
+
+    const W = 900, H = 170, mI = 34, mD = 8, mA = 12, mB = 26;
+    const ancho = W - mI - mD, alto = H - mA - mB;
+    const tope = Math.max(1, ...serie.map(s => Math.max(s.visitas, s.personas)));
+
+    const x = i => mI + (serie.length === 1 ? ancho / 2 : (i / (serie.length - 1)) * ancho);
+    const y = v => mA + alto - (v / tope) * alto;
+    const linea = campo => serie.map((s, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(s[campo]).toFixed(1)).join(" ");
+    const area = "M" + x(0).toFixed(1) + " " + (mA + alto) + " " +
+      serie.map((s, i) => "L" + x(i).toFixed(1) + " " + y(s.personas).toFixed(1)).join(" ") +
+      " L" + x(serie.length - 1).toFixed(1) + " " + (mA + alto) + " Z";
+
+    // Sólo unas pocas fechas abajo: con treinta no se lee ninguna. La última
+    // siempre va, y se descarta la anterior si le queda encima — si no, los
+    // días 29 y 30 se pisan y se lee "30/0830/08".
+    const ultima = serie.length - 1;
+    const marcas = serie.map((s, i) => ({ s, i }))
+      .filter(({ i }) => i === ultima || (i % 7 === 0 && ultima - i >= 4));
+
+    $("grafico").innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Uso de los últimos 30 días">
+      <line x1="${mI}" y1="${mA + alto}" x2="${W - mD}" y2="${mA + alto}" stroke="#333" stroke-width="1"/>
+      <line x1="${mI}" y1="${mA}" x2="${W - mD}" y2="${mA}" stroke="#1c1c1c" stroke-width="1"/>
+      <text x="4" y="${mA + 5}" fill="#8b8b8b" font-size="11" font-family="monospace">${tope}</text>
+      <text x="4" y="${mA + alto}" fill="#8b8b8b" font-size="11" font-family="monospace">0</text>
+      <path d="${area}" fill="#CCFF00" opacity=".13"/>
+      <path d="${linea("visitas")}" fill="none" stroke="#FF2D7A" stroke-width="1.5" opacity=".85"/>
+      <path d="${linea("personas")}" fill="none" stroke="#CCFF00" stroke-width="2.5"/>
+      ${marcas.map(({ s, i }) =>
+        `<text x="${x(i).toFixed(1)}" y="${H - 8}" fill="#8b8b8b" font-size="11"
+           font-family="monospace" text-anchor="middle">${fecha(s.dia)}</text>`).join("")}
+    </svg>`;
+  }
+
+  /* ¿Siguen usándolo o lo probaron y lo dejaron? Es la pregunta que
+     dice si la herramienta sirve. Se responde con la última vez que
+     entró cada uno. */
+  function retencion(personas) {
+    if (!personas.length) { $("retencion").innerHTML = '<p class="vacio">Todavía no hay nadie.</p>'; return; }
+
+    const hoyStr = dia(HOY);
+    const grupo = p => {
+      if (!p.ultimo) return "nunca";
+      const n = diasEntre(p.ultimo, hoyStr);
+      if (n <= 7) return "vivo";
+      if (n <= 30) return "frio";
+      return "ido";
+    };
+    const cuenta = { vivo: 0, frio: 0, ido: 0, nunca: 0 };
+    for (const p of personas) cuenta[grupo(p)]++;
+
+    const unaVez = personas.filter(p => (p.visitas || 0) <= 1).length;
+    const total = personas.length;
+
+    const filas = [
+      { et: "Lo usaron esta semana", v: cuenta.vivo },
+      { et: "Enfriándose (8 a 30 días)", v: cuenta.frio },
+      { et: "Lo dejaron (más de 30 días)", v: cuenta.ido + cuenta.nunca },
+    ];
+    $("retencion").innerHTML = filas.map(f => `
+      <div class="barra">
+        <span class="et">${esc(f.et)}</span>
+        <span class="vl">${f.v} · ${total ? Math.round(f.v / total * 100) : 0}%</span>
+        <span class="pista"><i style="width:${total ? (f.v / total * 100).toFixed(1) : 0}%"></i></span>
+      </div>`).join("");
+
+    $("retencion-nota").textContent =
+      `${unaVez} de ${total} entraron una sola vez y no volvieron. ` +
+      `Es el número que más dice: si crece, el problema está en el primer uso.`;
+  }
+
+  function personas(lista, actividad) {
+    if (!lista.length) { $("personas").innerHTML = '<tr><td colspan="7" class="vacio">Todavía no hay nadie.</td></tr>'; return; }
+
+    // La actividad viene toda junta; se agrupa por persona una sola vez.
+    const porPersona = new Map();
+    for (const a of actividad) {
+      if (!porPersona.has(a.instalacion)) porPersona.set(a.instalacion, []);
+      porPersona.get(a.instalacion).push(a);
+    }
+
+    const hoyStr = dia(HOY);
+    $("personas").innerHTML = lista.map((p, i) => {
+      const n = p.ultimo ? diasEntre(p.ultimo, hoyStr) : 999;
+      const est = n <= 7 ? ["vivo", "Activo"] : n <= 30 ? ["frio", "Enfriándose"] : ["ido", "Lo dejó"];
+
+      // El @usuario va enlazado a su perfil. Si no dio permiso para
+      // mandarlo, queda el identificador anónimo: no se inventa nada.
+      const quien = p.usuario
+        ? `<a href="https://www.instagram.com/${encodeURIComponent(p.usuario)}/"
+             target="_blank" rel="noopener noreferrer">@${esc(p.usuario)}</a>`
+        : `<span class="anon">sin nombre · ${esc(String(p.id).slice(0, 8))}</span>`;
+
+      const suyos = porPersona.get(p.id) || [];
+
+      return `
+      <tr>
+        <td>${quien}<br><span class="eti ${est[0]}">${est[1]}</span></td>
+        <td><span class="eti plat">${esc(DONDE[p.plataforma] || p.plataforma || "?")}</span></td>
+        <td class="num">${esc(p.visitas ?? 0)}</td>
+        <td class="num">${esc(p.dias ?? 0)}</td>
+        <td>${esc(fecha(p.alta))}</td>
+        <td>${esc(hace(p.ultimo))}</td>
+        <td>${suyos.length ? `<button class="abrir" data-abrir="${i}">ver ${suyos.length} ▾</button>` : ""}</td>
+      </tr>
+      ${suyos.length ? `
+      <tr class="detalle" id="det-${i}" hidden><td colspan="7">
+        ${suyos.slice(0, 60).map(a => `
+          <div class="linea-ev">
+            <span class="cuando">${esc(reloj(a.ts))}</span>
+            <span class="que">${esc(nombreEvento(a.evento))}${
+              a.detalle ? " · " + esc(a.detalle) : ""}</span>
+            <span class="quien">${a.hora != null ? esc(a.hora) + "h suyas" : ""}</span>
+          </div>`).join("")}
+        ${suyos.length > 60 ? `<p class="nota">…y ${suyos.length - 60} más.</p>` : ""}
+      </td></tr>` : ""}`;
+    }).join("");
+
+    $("personas-nota").textContent =
+      `${lista.length} personas. "Veces" es cuántas veces abrió el panel; "Días", en cuántos días distintos. ` +
+      `Tocá "ver" para desplegar qué hizo cada uno.`;
+  }
+
+  function secciones(lista) {
+    const utiles = lista.filter(s => s.evento !== "open");
+    if (!utiles.length) { $("secciones").innerHTML = '<p class="vacio">Todavía nadie tocó ninguna sección.</p>'; return; }
+    const tope = Math.max(...utiles.map(s => s.veces));
+    $("secciones").innerHTML = utiles.map(s => `
+      <div class="barra">
+        <span class="et">${esc(nombreEvento(s.evento))}</span>
+        <span class="vl">${s.veces} · ${s.personas} pers.</span>
+        <span class="pista"><i style="width:${(s.veces / tope * 100).toFixed(1)}%"></i></span>
+      </div>`).join("");
+  }
+
+  function horas(porHora) {
+    const total = porHora.reduce((a, b) => a + b, 0);
+    if (!total) { $("horas").innerHTML = '<p class="vacio">Sin datos de horario todavía.</p>'; $("horas-pie").textContent = ""; return; }
+    const tope = Math.max(...porHora);
+    $("horas").innerHTML = porHora.map((v, h) => `
+      <div class="h${v === tope ? " pico" : ""}" style="height:${Math.max(2, v / tope * 100)}%"
+           title="${h}:00 · ${v} aperturas">${h % 6 === 0 ? `<span>${h}</span>` : ""}</div>`).join("");
+
+    const pico = porHora.indexOf(tope);
+    $("horas-pie").textContent =
+      `Hora local de cada persona, no la del servidor. El pico es a las ${pico}:00 (${tope} aperturas).`;
+  }
+
+  /* ── borrado ────────────────────────────────────────────── */
+  async function borrar(boton, opciones, confirmacion) {
+    if (!confirm(confirmacion)) return;
+    const base = $("url").value.trim().replace(/\/+$/, "");
+    const key = $("key").value.trim();
+    const av = $("aviso-borrar");
+    av.className = "aviso"; av.textContent = "";
+    boton.disabled = true;
+    const antes = boton.textContent;
+    boton.textContent = "Borrando…";
+    try {
+      const r = await fetch(base + "/limpiar", {
+        method: "POST",
+        headers: { "X-Admin-Key": key, "Content-Type": "text/plain" },
+        body: JSON.stringify(opciones),
+      });
+      const d = await r.json();
+      if (!r.ok) throw new Error(d && d.error ? d.error : "HTTP " + r.status);
+      av.className = "aviso bien";
+      av.textContent = `Borrado: ${d.eventos_borrados || 0} eventos y ${d.instalaciones_borradas || 0} fichas.`;
+      pedir();
+    } catch (e) {
+      av.className = "aviso mal";
+      av.textContent = "No se pudo borrar: " + e.message;
+    } finally {
+      boton.disabled = false;
+      boton.textContent = antes;
+    }
+  }
+
+  /* ── arranque ───────────────────────────────────────────── */
+  $("url").value = localStorage.getItem(LS_URL) || CONTADOR;
+  $("key").value = localStorage.getItem(LS_KEY) || "";
+
+  $("entrar").addEventListener("click", pedir);
+  for (const id of ["url", "key"])
+    $(id).addEventListener("keydown", e => { if (e.key === "Enter") pedir(); });
+
+  // Desplegar la actividad de una persona.
+  $("personas").addEventListener("click", e => {
+    const b = e.target.closest("[data-abrir]");
+    if (!b) return;
+    const fila = $("det-" + b.dataset.abrir);
+    if (!fila) return;
+    fila.hidden = !fila.hidden;
+    b.textContent = b.textContent.replace(fila.hidden ? "▴" : "▾", fila.hidden ? "▾" : "▴");
+  });
+
+  $("borrar-viejos").addEventListener("click", e =>
+    borrar(e.target, { modo: "viejos", dias: 90 },
+      "¿Borrar todo lo anterior a 90 días? No se puede deshacer."));
+  $("borrar-todo").addEventListener("click", e =>
+    borrar(e.target, { modo: "todo" },
+      "¿Borrar TODO? Se pierden todas las personas y toda la actividad. No se puede deshacer."));
+
+  // Si la clave ya estaba guardada, se entra solo.
+  if ($("url").value && $("key").value) pedir();
+})();
+</script>
+</body>
+</html>
