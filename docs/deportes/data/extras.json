@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-31T17:03:27.414Z",
+ "actualizado": "2026-08-31T21:53:47.888Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -959,9 +959,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -984,9 +983,8 @@
      "posCorta": "G",
      "edad": 33,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1267,18 +1265,25 @@
    ],
    "noticias": [
     {
+     "titulo": "Argentina legend Lionel Messi announces international retirement",
+     "resumen": "Lionel Messi on Monday announced his retirement from international soccer with a heartfelt Instagram post.",
+     "fecha": "2026-08-31T21:45:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709546_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49266819/lionel-messi-argentina-international-retirement-world-cup-copa-america"
+    },
+    {
      "titulo": "Lionel Messi's Argentina career: the stats, records and how he compares to Cristiano Ronaldo",
      "resumen": "After Lionel Messi announced his international retirement, ESPN takes a look at the numbers behind his storied Argentina career.",
-     "fecha": "2026-08-31T16:57:55Z",
+     "fecha": "2026-08-31T19:49:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0831/r1709497_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49784066/lionel-messi-argentina-career-stats-records-how-compares-cristiano-ronaldo"
     },
     {
-     "titulo": "Argentina legend Lionel Messi announces international retirement",
-     "resumen": "Lionel Messi on Monday announced his retirement from international soccer with a heartfelt Instagram post.",
-     "fecha": "2026-08-31T16:40:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0703/r1684044_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49266819/lionel-messi-argentina-international-retirement-world-cup-copa-america"
+     "titulo": "Lionel Messi's Argentina career in numbers",
+     "resumen": "Lionel Messi's Argentina career in numbers",
+     "fecha": "2026-08-31T17:15:28Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Lionel_Messis_Argentina_career_in_numbers/dm_260831_Lionel_Messis_Argentina_career_in_numbers.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49784295/lionel-messi-argentina-career-numbers"
     },
     {
      "titulo": "Ogden: Balogun is one to watch on deadline day",
@@ -1307,13 +1312,6 @@
      "fecha": "2026-08-30T02:11:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Chris Richards admits feeling like he let the U.S. down after Belgium defeat",
-     "resumen": "Chris Richards admits feeling like he let the U.S. down after Belgium defeat",
-     "fecha": "2026-08-28T15:33:38Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0828/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49753414/chris-richards-admits-feeling-let-us-belgium-defeat"
     },
     {
      "titulo": "Xavi addresses van Dijk's national team future at unveiling",
@@ -1590,8 +1588,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1614,8 +1613,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1626,8 +1626,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1638,8 +1639,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1710,8 +1712,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1980,6 +1983,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Sources: Southampton loans USMNT's Downs to St. Louis",
+     "resumen": "St. Louis City SC is set to acquire United States forward Damion Downs on loan from English Championship side Southampton, a source with direct knowledge of the deal confirmed to ESPN.",
+     "fecha": "2026-08-31T19:28:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709606_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49785118/southampton-loans-usmnt-downs-st-louis"
+    },
+    {
+     "titulo": "MLS Power Rankings: Nashville continue top, Miami bounce back",
+     "resumen": "Lionel Messi's four goals put Miami back on track, while Nashville continue to dominate. All that and more in this week's edition of ESPN's MLS Power Rankings.",
+     "fecha": "2026-08-31T18:53:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709551_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49783673/mls-power-rankings-nashville-sc-continue-top-inter-miami-bounce-back"
+    },
+    {
      "titulo": "St. Louis CITY SC vs. FC Dallas - Game Highlights",
      "resumen": "Watch the Game Highlights from St. Louis CITY SC vs. FC Dallas, 08/30/2026",
      "fecha": "2026-08-31T01:26:16Z",
@@ -2001,25 +2018,11 @@
      "link": "https://www.espn.com/video/clip/_/id/49769131/cavan-sullivan-scores-second-straight-game-philly"
     },
     {
-     "titulo": "U.S. teen Cavan Sullivan makes MLS history with latest goal",
-     "resumen": "Philadelphia Union rising star Cavan Sullivan found the net for the second straight match to become the first 16-year-old in MLS history with goal contributions in four consecutive matches.",
-     "fecha": "2026-08-30T04:09:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0830/r1708841_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49768706/cavan-sullivan-philadelphia-union-mls-history"
-    },
-    {
      "titulo": "Müller and White score in Whitecaps win over SKC",
      "resumen": "Thomas Müller had a goal and an assist, Brian White and Rayan Elloumi each added a goal and the Vancouver Whitecaps beat Sporting Kansas City 3-0 on Saturday night.",
      "fecha": "2026-08-30T03:20:06Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761762.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761762"
-    },
-    {
-     "titulo": "Orlando strike late to salvage 3-3 draw with Minnesota United",
-     "resumen": "Tyrese Spicer scored three minutes into second-half stoppage time and Orlando City salvaged a 3-3 draw with Minnesota United after blowing a two-goal lead on Saturday night.",
-     "fecha": "2026-08-30T03:19:18Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761763.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761763"
     },
     {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
@@ -2632,6 +2635,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton takes ownership of iconic Ferrari F40 road car",
+     "resumen": "Lewis Hamilton has taken ownership of a Ferrari F40 road car after it sat dormant in a garage for over 30 years.",
+     "fecha": "2026-08-31T20:41:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709652_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49786314/lewis-hamilton-takes-ownership-iconic-ferrari-f40-road-car"
+    },
+    {
      "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
      "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
      "fecha": "2026-08-31T07:07:17Z",
@@ -2665,13 +2675,6 @@
      "fecha": "2026-08-28T08:53:12Z",
      "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
-     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
-     "fecha": "2026-08-28T06:11:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
     }
    ],
    "resultados": null,
