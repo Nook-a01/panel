@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Panel de Instagram — iPhone</title>
+<meta name="theme-color" content="#000000">
+<!-- Nada de afuera: esta página es sólo texto y dos enlaces. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<style>
+:root{
+  --acido:#CCFF00;
+  --shock:#FF2D7A;
+  --apagado:#8b8b8b;
+  --f:ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --m:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+body{
+  background:#000; color:#fff;
+  font-family:var(--f); font-size:17px; line-height:1.55;
+  padding:max(1.4rem, env(safe-area-inset-top)) 1.1rem calc(env(safe-area-inset-bottom) + 3rem);
+  max-width:34rem; margin:0 auto;
+}
+h1{
+  font-size:clamp(1.7rem,8vw,2.4rem);
+  font-weight:900; text-transform:uppercase; letter-spacing:-.025em; line-height:.95;
+}
+.punto{display:inline-block;width:.62em;height:.62em;background:var(--acido);vertical-align:-.02em;margin-right:.3em}
+.bajada{color:var(--apagado);font-size:.95rem;margin:.7rem 0 2rem}
+
+/* ── cada paso ── */
+.paso{border:2px solid #333;padding:1.1rem;margin-bottom:1.1rem}
+.paso.hecho{border-color:var(--acido)}
+.n{
+  display:inline-block;
+  background:var(--acido); color:#000;
+  font-weight:900; font-size:.72rem; letter-spacing:.06em;
+  padding:.22em .6em; margin-bottom:.7rem;
+}
+.paso h2{font-size:1.12rem;font-weight:800;margin-bottom:.5rem;line-height:1.25}
+.paso p{color:var(--apagado);font-size:.92rem;margin-bottom:.9rem}
+.paso p:last-child{margin-bottom:0}
+
+.boton{
+  display:block; text-align:center;
+  background:var(--acido); color:#000;
+  border:2px solid var(--acido);
+  font-weight:900; text-transform:uppercase; letter-spacing:.02em;
+  font-size:1rem; padding:.85em 1em;
+  text-decoration:none;
+}
+.boton.linea{background:#000;color:var(--acido)}
+
+.ruta{
+  display:block;
+  background:#0d0d0d; border:1px solid #333;
+  font-family:var(--m); font-size:.82rem; color:#fff;
+  padding:.7rem .8rem; margin:.2rem 0 .9rem;
+  line-height:1.7;
+}
+.ruta b{color:var(--acido);font-weight:600}
+
+.usar{border:2px solid var(--acido);padding:1.1rem;margin-top:2rem}
+.usar h2{font-size:1.05rem;font-weight:900;text-transform:uppercase;margin-bottom:.6rem}
+.usar p{font-size:.95rem;margin-bottom:.6rem}
+.usar p:last-child{margin-bottom:0}
+.fab{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:1.7em;height:1.7em;border-radius:50%;
+  background:#000;border:2px solid var(--acido);color:var(--acido);
+  font-family:var(--m);vertical-align:-.5em;
+}
+
+.nota{color:var(--apagado);font-size:.82rem;line-height:1.6;margin-top:1.6rem}
+.nota b{color:#fff}
+a{color:var(--acido)}
+</style>
+</head>
+<body>
+
+<h1><span class="punto"></span>Panel en tu iPhone</h1>
+<p class="bajada">Tres pasos, una sola vez. Después es un botón adentro de Instagram.</p>
+
+<div class="paso">
+  <span class="n">Paso 1</span>
+  <h2>Instalá Userscripts</h2>
+  <p>Es una extensión de Safari, gratis y de código abierto. Es lo que le permite
+     al panel funcionar adentro de Instagram.</p>
+  <a class="boton" href="https://apps.apple.com/app/userscripts/id1463298887">Abrir en la App Store</a>
+</div>
+
+<div class="paso">
+  <span class="n">Paso 2</span>
+  <h2>Activala en Safari</h2>
+  <p>iOS deja las extensiones apagadas hasta que las prendés a mano. Andá a:</p>
+  <span class="ruta">
+    Ajustes → Safari → <b>Extensiones</b><br>
+    → Userscripts → <b>activar</b><br>
+    → Permisos → <b>Permitir siempre</b>
+  </span>
+  <p>Sin el «Permitir siempre», el panel no va a aparecer en Instagram.</p>
+</div>
+
+<div class="paso">
+  <span class="n">Paso 3</span>
+  <h2>Instalá el panel</h2>
+  <p>Tocá el botón. Safari te va a mostrar el código como texto —
+     <b style="color:#fff">eso está bien</b>, no es un error.</p>
+  <a class="boton" href="panel.user.js">Instalar el panel</a>
+  <p style="margin-top:.9rem">Después, en esa pantalla de código, tocá el ícono que está
+     <b style="color:#fff">a la izquierda de la dirección</b> (abajo) → elegí
+     <b style="color:#fff">Userscripts</b> → confirmá.</p>
+</div>
+
+<div class="usar">
+  <h2>Cómo se usa</h2>
+  <p>Entrá a <b>instagram.com</b> en Safari, con tu sesión iniciada.</p>
+  <p>Abajo a la derecha aparece un botón <span class="fab">◐</span> — tocalo para abrir
+     el panel, tocalo de nuevo para cerrarlo.</p>
+  <p style="color:var(--apagado);font-size:.88rem">Si ya tenías Instagram abierto, recargá la página.</p>
+</div>
+
+<p class="nota">
+  <b>Tiene que ser Safari, no la app de Instagram.</b> El panel lee tu sesión del navegador;
+  adentro de la app no hay forma de que llegue.
+</p>
+
+<p class="nota">
+  <b>¿Estás en una computadora?</b> Ahí es más fácil todavía —
+  <a href="./">mirá acá</a>.
+</p>
+
+</body>
+</html>

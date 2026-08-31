@@ -129,61 +129,24 @@
     </div>
 
     <div class="plat" id="p-ios">
-      <p class="muted" style="margin:0 0 16px">Tenés que tener la sesión abierta en <b>Safari</b> (instagram.com), no en la app de Instagram.</p>
-
-      <div style="border:2px solid #CCFF00;padding:14px;margin-bottom:18px">
-        <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.5rem">
-          <span style="background:#CCFF00;color:#000;font-weight:900;font-size:.6rem;letter-spacing:.1em;padding:.2em .5em">Recomendado</span>
-          <b>Con la app Userscripts</b>
-        </div>
-        <p class="muted" style="margin:0 0 12px;font-size:.9rem">
-          Es una extensión de Safari de verdad, gratis y de código abierto, hecha justo para esto.
-          Se instala una vez y después es un botón flotante en Instagram.
+      <div style="border:2px solid #CCFF00;padding:16px;text-align:center">
+        <b style="display:block;font-size:1.1rem;margin-bottom:.5rem">Tres pasos, una sola vez</b>
+        <p class="muted" style="margin:0 0 14px;font-size:.92rem">
+          En iPhone va con Userscripts, una extensión gratis de la App Store.
+          Los pasos están todos en una página aparte, escritos para el celular.
         </p>
-        <ol style="margin-top:16px">
-          <li>Instalá <b>Userscripts</b> desde la App Store (buscala por ese nombre, o
-              <a href="https://apps.apple.com/app/userscripts/id1463298887" target="_blank" rel="noopener noreferrer">tocá acá</a>). Es gratis.</li>
-          <li>Andá a <code>Ajustes → Safari → Extensiones → Userscripts</code>, activala, y elegí
-              <b>Permitir siempre</b> para todos los sitios web.</li>
-          <li>Abrí la app <b>Userscripts</b> una vez (para que arme su carpeta) y volvé a Safari.</li>
-          <li>Entrá a esta misma página en Safari y tocá:
-              <br><a class="btn" href="panel.user.js" style="display:inline-block;margin-top:8px">📲 Instalar el userscript</a></li>
-          <li>Va a aparecer un cartel de instalación de la extensión. Confirmalo.</li>
-        </ol>
-        <p class="tip" style="margin-top:14px">
-          <b>Para usarlo:</b> entrá a instagram.com con tu sesión iniciada. Va a aparecer un
-          <b>botón redondo ◐</b> flotando en la esquina inferior derecha. Tocalo para abrir el panel,
-          tocalo de nuevo para cerrarlo.
-        </p>
+        <a class="big" href="iphone.html" style="display:block;text-decoration:none">📱 Cómo instalarlo en el iPhone</a>
       </div>
 
-      <details>
-        <summary>Otras opciones (Atajos, marcador) — pueden no andar en tu Safari</summary>
+      <details style="margin-top:18px">
+        <summary>Otras opciones (Atajos, marcador) — probablemente no anden</summary>
         <p class="muted" style="margin:12px 0;font-size:.85rem;line-height:1.6">
-          En versiones nuevas de Safari, estos dos métodos quedaron bloqueados contra Instagram:
-          probamos a fondo con un iPhone real —permisos activados, reinicios incluidos— y ninguno
-          de los dos corrió ni una vez. Los dejamos igual por si tu Safari se comporta distinto.
+          En Safari moderno estos dos quedaron bloqueados contra Instagram: probados a fondo
+          con un iPhone real, con todos los permisos activados y reinicios incluidos, y ninguno
+          corrió ni una vez. Se dejan por si tu Safari se comporta distinto.
         </p>
-
-        <p style="margin:16px 0 6px"><b>Con la app Atajos</b></p>
-        <p style="margin:0 0 10px"><button class="btn" id="copyRawI">📋 Copiar el código</button></p>
-        <ol>
-          <li>Abrí la app <b>Atajos</b> y tocá <b>+</b> arriba a la derecha.</li>
-          <li>Tocá <b>Añadir acción</b>, buscá <code>JavaScript</code> y elegí <b>Ejecutar JavaScript en la página web</b>.</li>
-          <li>Tocá el recuadro del código, borrá lo que diga, y <b>pegá</b> lo que copiaste arriba.</li>
-          <li>Tocá el botón <b>ⓘ</b> de la <b>barra de abajo</b> y activá <b>Mostrar en el menú Compartir</b>.</li>
-          <li>Ponele de nombre <code>Panel</code> (flechita ⌄ → Renombrar) y tocá <b>Listo</b>.</li>
-        </ol>
-
-        <p style="margin:20px 0 6px"><b>Como marcador</b></p>
-        <p style="margin:0 0 10px"><button class="btn" id="copyBmI">📋 Copiar el código del marcador</button></p>
-        <ol>
-          <li>En Safari, entrá a cualquier página, tocá <b>compartir</b> y elegí <b>"Añadir marcador"</b>. Guardalo.</li>
-          <li>Tocá el ícono de <b>marcadores 📖</b>, después <b>Editar</b>, y elegí el que creaste.</li>
-          <li>Borrá la dirección, pegá el código, y ponele de nombre <code>panel</code>.</li>
-          <li>Entrá a instagram.com, escribí <code>panel</code> en la barra de direcciones y tocá el marcador que aparece.</li>
-        </ol>
-        <p class="tip"><b>Lo que más falla:</b> el código tiene que empezar con <code>javascript:</code>. Si al pegar te lo borra, escribilo a mano justo antes de lo que pegaste.</p>
+        <p style="margin:0 0 10px"><button class="btn" id="copyRawI">📋 Código para Atajos</button></p>
+        <p style="margin:0 0 10px"><button class="btn" id="copyBmI">📋 Código para marcador</button></p>
       </details>
     </div>
   </div>
