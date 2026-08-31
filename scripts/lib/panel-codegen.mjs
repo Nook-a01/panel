@@ -48,6 +48,49 @@ export function extraerPanel(html) {
   throw new Error("la función no cierra: revisá el HTML");
 }
 
+// La función avisar() reescrita para que mande los datos DIRECTO al
+// contador, sin abrir la pestaña puente.
+//
+// El original abre la página de instalación en una pestaña con los datos
+// en la dirección, porque adentro de Instagram el panel no puede hablar
+// con nadie. La extensión y el userscript sí pueden —cada uno por su
+// camino— así que ahí esa pestaña sobra y sólo molesta.
+//
+// El envío se hace con fetch(); quien la use tiene que haber declarado
+// antes un fetch propio que sepa llegar al contador.
+export const AVISAR_DIRECTO = `function avisar(){
+    var u=(state.counts&&state.counts.username)||'';
+    if(!u) return;
+
+    var eventos=[{ev:'open'},{ev:'registro'}];
+    var ps=lsGet(LS.pendScan,0)||0;
+    for(var i=0;i<Math.min(ps,300);i++) eventos.push({ev:'scan_ok'});
+    var bajas=lsGet(LS.pendUnf,[]);
+    if(Array.isArray(bajas)) bajas.slice(0,120).forEach(function(n){ eventos.push({ev:'unfollow', d:n}); });
+
+    // El identificador es por navegador, igual que en la versión del
+    // marcador, así que las dos cuentan como la misma persona.
+    var id='';
+    try{
+      id=localStorage.getItem('panel_visitante')||'';
+      if(!id){ id=(crypto.randomUUID?crypto.randomUUID():('x'+Date.now().toString(36)+Math.random().toString(36).slice(2,10))); localStorage.setItem('panel_visitante',id); }
+    }catch(e){ return; }
+
+    var esMovil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    fetch(TELEMETRY_URL+'/ping',{
+      method:'POST', headers:{'content-type':'text/plain'},
+      body:JSON.stringify({
+        id:id, u:u, v:BUILD+'-'+CANAL,
+        p:(esMovil?'movil':'escritorio'),
+        h:new Date().getHours(), tz:-(new Date().getTimezoneOffset()),
+        eventos:eventos
+      })
+    }).then(function(){
+      lsSet(LS.pendScan,null);
+      lsSet(LS.pendUnf,null);
+    },function(){});
+  }`;
+
 // Cambia una función entera por otra, buscando dónde cierra con el mismo
 // conteo de llaves. Devuelve null si no la encuentra, para que quien
 // llama pueda cortar en vez de seguir con algo a medias.
