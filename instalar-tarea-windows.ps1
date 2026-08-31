@@ -20,8 +20,23 @@ if (-not $node) {
   exit 1
 }
 
+# Las tareas NO ejecutan node directamente. node.exe es un programa de
+# consola: Windows le abre una ventana negra cada vez, aunque el programa
+# no imprima nada. Corriendo cada hora, esa ventana aparecia sola en el
+# medio de lo que estuvieras haciendo.
+#
+# En su lugar corren wscript.exe —que no es de consola y no abre ventana—
+# contra silencioso.vbs, que a su vez lanza node oculto.
+$lanzador = Join-Path $PSScriptRoot "silencioso.vbs"
+if (-not (Test-Path $lanzador)) {
+  Write-Host "Falta silencioso.vbs en la carpeta del proyecto." -ForegroundColor Red
+  exit 1
+}
+$wscript = Join-Path $env:WINDIR "System32\wscript.exe"
+
 Write-Host "Proyecto: $PSScriptRoot"
 Write-Host "Node:     $node"
+Write-Host "Lanzador: $lanzador  (sin ventana)"
 Write-Host ""
 
 # Sin la suscripción no hay a quién avisar desde la PC.
@@ -42,10 +57,13 @@ function Nueva-Tarea {
     [string]$Argumento = ""
   )
 
-  $args = """$PSScriptRoot\scripts\$Script"""
-  if ($Argumento) { $args = "$args $Argumento" }
+  # Queda:  wscript.exe "...\silencioso.vbs" "scripts\loquesea.mjs" ["--arg"]
+  # El .vbs se encarga de pararse en la carpeta del proyecto y de lanzar
+  # node con la ventana oculta.
+  $args = """$lanzador"" ""scripts\$Script"""
+  if ($Argumento) { $args = "$args ""$Argumento""" }
 
-  $accion = New-ScheduledTaskAction -Execute $node -Argument $args -WorkingDirectory $PSScriptRoot
+  $accion = New-ScheduledTaskAction -Execute $wscript -Argument $args -WorkingDirectory $PSScriptRoot
 
   # Que corra aunque la PC estuviera apagada a esa hora, y sin exigir
   # que la laptop esté enchufada.
