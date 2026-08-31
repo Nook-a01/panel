@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-31T01:22:13.127Z",
+ "actualizado": "2026-08-31T08:37:59.266Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -328,18 +327,6 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "285026",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Juan Barinaga",
-     "dorsal": "24",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 25,
-     "pais": "Argentina",
      "foto": null,
      "lesionado": false
     },
@@ -971,8 +958,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1018,7 +1006,7 @@
      "dorsal": "3",
      "posicion": "Defender",
      "posCorta": "D",
-     "edad": 33,
+     "edad": 34,
      "pais": "Argentina",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/145190.png",
      "lesionado": false
@@ -1056,8 +1044,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1068,8 +1057,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1128,9 +1118,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1201,9 +1190,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1250,8 +1238,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1280,6 +1269,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Socceroos transfer tracker: Where Australia's stars will play in 2026-27",
+     "resumen": "There's nothing like a World Cup to put young stars in the shop window! With that in mind, ESPN has assembled a list of all the Socceroos' post-tournament transfers, all in one place.",
+     "fecha": "2026-08-31T02:44:13Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709316_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49466177/socceroos-transfer-tracker-where-australias-stars-play-2026-27"
+    },
+    {
      "titulo": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
      "resumen": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
      "fecha": "2026-08-30T02:32:28Z",
@@ -1292,13 +1288,6 @@
      "fecha": "2026-08-30T02:11:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "USMNT's Richards puts World Cup heartbreak behind him",
-     "resumen": "Playing in this World Cup was Chris Richards' lifelong dream, but its abrupt end gave him little time to grieve before returning to the Premier League.",
-     "fecha": "2026-08-28T15:43:25Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0826/r1707191_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49732248/that-lifelong-dream-done-usmnt-chris-richards-puts-world-cup-heartbreak-focus-palace-premier-league"
     },
     {
      "titulo": "Chris Richards admits feeling like he let the U.S. down after Belgium defeat",
@@ -1603,7 +1592,7 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
      "lesionado": false,
      "fotoDeWiki": true
     },
@@ -1628,9 +1617,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1641,9 +1629,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1688,7 +1675,7 @@
      "dorsal": "17",
      "posicion": "Defender",
      "posCorta": "D",
-     "edad": 23,
+     "edad": 24,
      "pais": "Jamaica",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
      "lesionado": false
@@ -1996,6 +1983,13 @@
    ],
    "noticias": [
     {
+     "titulo": "St. Louis CITY SC vs. FC Dallas - Game Highlights",
+     "resumen": "Watch the Game Highlights from St. Louis CITY SC vs. FC Dallas, 08/30/2026",
+     "fecha": "2026-08-31T01:26:16Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0831/06ee5928-ec02-4850-8f8d-0241503fde79/06ee5928-ec02-4850-8f8d-0241503fde79.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49778459/st-louis-city-sc-vs-fc-dallas-game-highlights"
+    },
+    {
      "titulo": "Every time Messi scored 4 goals for Barcelona, Inter Miami, Argentina",
      "resumen": "Lionel Messi grabbed the headlines on Saturday by scoring four goals in Inter Miami's 7-1 win over Montréal. But the feat is nothing new for the GOAT.",
      "fecha": "2026-08-30T12:48:39Z",
@@ -2029,13 +2023,6 @@
      "fecha": "2026-08-30T03:19:18Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761763.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761763"
-    },
-    {
-     "titulo": "Nashville routs Cincinnati, continues best start in MLS history",
-     "resumen": "Sam Surridge scored his 13th goal this season and added an assist, Hany Mukhtar also had a goal and an assist, and Nashville SC beat FC Cincinnati 4-0 on Saturday night for its fourth consecutive win.",
-     "fecha": "2026-08-30T03:18:19Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761764.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761764"
     },
     {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
@@ -2650,7 +2637,7 @@
     {
      "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
      "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-08-30T06:44:54Z",
+     "fecha": "2026-08-31T07:07:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
     },
