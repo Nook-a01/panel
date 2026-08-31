@@ -1,10 +1,15 @@
 // ==UserScript==
 // @name         Panel de Instagram
-// @description  Seguidores, historias, sin respuesta, estadísticas y estrategia — desde tu iPhone.
+// @description  Seguidores, historias, sin respuesta, estadísticas y estrategia — desde el celular.
+// @namespace    https://nook-a01.github.io/panel/
 // @match        https://www.instagram.com/*
 // @match        https://instagram.com/*
 // @run-at       document-idle
-// @version      1.0.0
+// @grant        GM_info
+// @inject-into  content
+// @version      1.1.0
+// @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
+// @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
 
 (() => {

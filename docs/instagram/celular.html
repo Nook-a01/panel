@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Panel de Instagram — en tu celular</title>
+<meta name="theme-color" content="#000000">
+<!-- Sólo texto, dos enlaces y un poco de código para elegir la solapa. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<style>
+:root{
+  --acido:#CCFF00;
+  --apagado:#8b8b8b;
+  --f:ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --m:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+body{
+  background:#000; color:#fff;
+  font-family:var(--f); font-size:17px; line-height:1.55;
+  padding:max(1.4rem, env(safe-area-inset-top)) 1.1rem calc(env(safe-area-inset-bottom) + 3rem);
+  max-width:34rem; margin:0 auto;
+}
+h1{
+  font-size:clamp(1.65rem,7.5vw,2.3rem);
+  font-weight:900; text-transform:uppercase; letter-spacing:-.025em; line-height:.95;
+}
+.punto{display:inline-block;width:.62em;height:.62em;background:var(--acido);vertical-align:-.02em;margin-right:.3em}
+.bajada{color:var(--apagado);font-size:.95rem;margin:.7rem 0 1.4rem}
+
+/* ── elegir el teléfono ── */
+.tabs{display:flex;gap:2px;margin-bottom:1.6rem}
+.tabs button{
+  flex:1; background:#000; border:2px solid #333; color:var(--apagado);
+  font-family:var(--f); font-weight:800; font-size:.92rem;
+  padding:.75em .4em; cursor:pointer;
+}
+.tabs button.on{background:var(--acido);border-color:var(--acido);color:#000}
+.pantalla{display:none}
+.pantalla.on{display:block}
+
+/* ── cada paso ── */
+.paso{border:2px solid #333;padding:1.1rem;margin-bottom:1.1rem}
+.n{
+  display:inline-block;
+  background:var(--acido); color:#000;
+  font-weight:900; font-size:.72rem; letter-spacing:.06em;
+  padding:.22em .6em; margin-bottom:.7rem;
+}
+.paso h2{font-size:1.12rem;font-weight:800;margin-bottom:.5rem;line-height:1.25}
+.paso p{color:var(--apagado);font-size:.92rem;margin-bottom:.9rem}
+.paso p:last-child{margin-bottom:0}
+.paso b{color:#fff}
+
+.boton{
+  display:block; text-align:center;
+  background:var(--acido); color:#000;
+  border:2px solid var(--acido);
+  font-weight:900; text-transform:uppercase; letter-spacing:.02em;
+  font-size:1rem; padding:.85em 1em;
+  text-decoration:none;
+}
+
+.ruta{
+  display:block;
+  background:#0d0d0d; border:1px solid #333;
+  font-family:var(--m); font-size:.82rem; color:#fff;
+  padding:.7rem .8rem; margin:.2rem 0 .9rem;
+  line-height:1.7;
+}
+.ruta b{color:var(--acido);font-weight:600}
+
+.usar{border:2px solid var(--acido);padding:1.1rem;margin-top:1.6rem}
+.usar h2{font-size:1.05rem;font-weight:900;text-transform:uppercase;margin-bottom:.6rem}
+.usar p{font-size:.95rem;margin-bottom:.6rem}
+.usar p:last-child{margin-bottom:0}
+.fab{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:1.7em;height:1.7em;border-radius:50%;
+  background:#000;border:2px solid var(--acido);color:var(--acido);
+  font-family:var(--m);vertical-align:-.5em;
+}
+
+.nota{color:var(--apagado);font-size:.82rem;line-height:1.6;margin-top:1.5rem}
+.nota b{color:#fff}
+a{color:var(--acido)}
+</style>
+</head>
+<body>
+
+<h1><span class="punto"></span>Panel en tu celular</h1>
+<p class="bajada">Tres pasos, una sola vez. Después es un botón adentro de Instagram.</p>
+
+<div class="tabs">
+  <button id="t-ios" data-p="ios">🍎 iPhone</button>
+  <button id="t-android" data-p="android">🤖 Android</button>
+</div>
+
+<!-- ═══════════ iPhone ═══════════ -->
+<div class="pantalla" id="p-ios">
+
+  <div class="paso">
+    <span class="n">Paso 1</span>
+    <h2>Instalá Userscripts</h2>
+    <p>Es una extensión de Safari, gratis y de código abierto. Es lo que le permite
+       al panel funcionar adentro de Instagram.</p>
+    <a class="boton" href="https://apps.apple.com/app/userscripts/id1463298887">Abrir en la App Store</a>
+  </div>
+
+  <div class="paso">
+    <span class="n">Paso 2</span>
+    <h2>Activala en Safari</h2>
+    <p>iOS deja las extensiones apagadas hasta que las prendés a mano. Andá a:</p>
+    <span class="ruta">
+      Ajustes → Safari → <b>Extensiones</b><br>
+      → Userscripts → <b>activar</b><br>
+      → Permisos → <b>Permitir siempre</b>
+    </span>
+    <p>Sin el «Permitir siempre», el panel no va a aparecer.</p>
+  </div>
+
+  <div class="paso">
+    <span class="n">Paso 3</span>
+    <h2>Instalá el panel</h2>
+    <p>Tocá el botón. Safari te va a mostrar el código como texto —
+       <b>eso está bien</b>, no es un error.</p>
+    <a class="boton" href="panel.user.js">Instalar el panel</a>
+    <p style="margin-top:.9rem">Después, en esa pantalla de código, tocá el ícono que está
+       <b>a la izquierda de la dirección</b> (abajo) → elegí <b>Userscripts</b> → confirmá.</p>
+  </div>
+
+  <div class="usar">
+    <h2>Cómo se usa</h2>
+    <p>Entrá a <b>instagram.com</b> en <b>Safari</b>, con tu sesión iniciada.</p>
+    <p>Abajo a la derecha aparece un botón <span class="fab">◐</span> — tocalo para abrir
+       el panel, tocalo de nuevo para cerrarlo.</p>
+    <p style="color:var(--apagado);font-size:.88rem">Si ya tenías Instagram abierto, recargá la página.</p>
+  </div>
+
+  <p class="nota">
+    <b>Tiene que ser Safari, no la app de Instagram.</b> El panel lee tu sesión del navegador;
+    adentro de la app no hay forma de que llegue.
+  </p>
+</div>
+
+<!-- ═══════════ Android ═══════════ -->
+<div class="pantalla" id="p-android">
+
+  <div class="paso">
+    <span class="n">Paso 1</span>
+    <h2>Usá Firefox</h2>
+    <p>Chrome en Android no admite extensiones — es una limitación de Chrome, no nuestra.
+       Firefox sí, y es el único camino que funciona.</p>
+    <a class="boton" href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Abrir en Google Play</a>
+    <p style="margin-top:.9rem">Si ya lo tenés, saltá al paso 2.</p>
+  </div>
+
+  <div class="paso">
+    <span class="n">Paso 2</span>
+    <h2>Agregá Violentmonkey</h2>
+    <p><b>Abrí este mismo paso desde Firefox</b>, no desde Chrome. Después tocá el botón
+       y confirmá <b>Agregar</b>.</p>
+    <a class="boton" href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Agregar Violentmonkey</a>
+    <p style="margin-top:.9rem">También se puede desde el menú <b>⋮ → Extensiones</b> de Firefox,
+       buscando «Violentmonkey».</p>
+  </div>
+
+  <div class="paso">
+    <span class="n">Paso 3</span>
+    <h2>Instalá el panel</h2>
+    <p>Con Violentmonkey ya puesto, tocá el botón. Va a aparecer una pantalla de
+       instalación con el nombre del script.</p>
+    <a class="boton" href="panel.user.js">Instalar el panel</a>
+    <p style="margin-top:.9rem">Tocá <b>Instalar</b> o <b>Confirmar</b>.</p>
+  </div>
+
+  <div class="usar">
+    <h2>Cómo se usa</h2>
+    <p>Entrá a <b>instagram.com</b> en <b>Firefox</b>, con tu sesión iniciada.</p>
+    <p>Abajo a la derecha aparece un botón <span class="fab">◐</span> — tocalo para abrir
+       el panel, tocalo de nuevo para cerrarlo.</p>
+    <p style="color:var(--apagado);font-size:.88rem">Si ya tenías Instagram abierto, recargá la página.</p>
+  </div>
+
+  <p class="nota">
+    <b>Tiene que ser Firefox, no la app de Instagram ni Chrome.</b> El panel lee tu sesión
+    del navegador, y sólo Firefox admite las extensiones que lo hacen posible.
+  </p>
+</div>
+
+<p class="nota">
+  <b>Se actualiza solo.</b> Cuando saquemos una versión nueva del panel, el gestor la baja
+  por su cuenta. No hay que reinstalar nada.
+</p>
+
+<p class="nota">
+  <b>¿Estás en una computadora?</b> Ahí es más fácil todavía — <a href="./">mirá acá</a>.
+</p>
+
+<script>
+(() => {
+  const ua = navigator.userAgent;
+  const esIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const esAndroid = /Android/.test(ua);
+
+  const mostrar = p => {
+    for (const k of ["ios", "android"]) {
+      document.getElementById("p-" + k).className = "pantalla" + (k === p ? " on" : "");
+      document.getElementById("t-" + k).className = (k === p ? "on" : "");
+    }
+  };
+
+  for (const b of document.querySelectorAll(".tabs button"))
+    b.addEventListener("click", () => mostrar(b.dataset.p));
+
+  // Se abre en la solapa del teléfono desde el que estás leyendo. En una
+  // computadora se muestra iPhone, que es el caso más común de alguien
+  // mirando esto antes de pasárselo a otra persona.
+  mostrar(esAndroid ? "android" : "ios");
+})();
+</script>
+
+</body>
+</html>

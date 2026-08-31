@@ -33,7 +33,7 @@ import { extraerPanel } from "./lib/panel-codegen.mjs";
 
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "docs/instagram/panel.user.js";
-const VERSION = "1.0.0";
+const VERSION = "1.1.0";
 
 const html = readFileSync(ORIGEN, "utf8");
 const panel = extraerPanel(html);
@@ -43,17 +43,43 @@ const panel = extraerPanel(html);
 try { new Function(panel + "\nreturn IGPanelPro;"); }
 catch (e) { console.error("✗ lo extraído no es válido: " + e.message); process.exit(1); }
 
-// El encabezado que "Userscripts" necesita para saber en qué sitios
-// correr esto y cuándo. @match cubre las dos formas del dominio; el
-// panel ya valida el subdominio exacto por su cuenta y avisa si hace
-// falta ir a www.instagram.com.
+// El encabezado. @match cubre las dos formas del dominio; el panel ya
+// valida el subdominio exacto por su cuenta y avisa si hace falta ir a
+// www.instagram.com.
+//
+// Las dos líneas que parecen de más son las que hacen que esto funcione:
+//
+//   @grant GM_info
+//     No es que necesitemos esa API. Es que Tampermonkey y Violentmonkey
+//     (los gestores de Android), cuando un script NO declara ningún
+//     @grant, lo inyectan directo en la página — y ahí vuelve a regir la
+//     política de seguridad de Instagram, que es exactamente lo que nos
+//     bloqueó el marcador y Atajos. Declarar cualquier @grant los obliga
+//     a correrlo en su propio ámbito aislado, que es donde sí anda.
+//     Se elige GM_info porque los tres gestores lo soportan y no hace
+//     nada: es sólo metadatos.
+//
+//   @inject-into content
+//     Lo mismo, dicho de la forma que entienden Violentmonkey y el
+//     Userscripts de iPhone. Redundante a propósito: son gestores
+//     distintos y no quiero depender de que uno solo interprete bien.
+//
+// @downloadURL y @updateURL cierran el otro problema: con el marcador y
+// con Atajos, el código viajaba adentro y la única forma de actualizar
+// era rehacer la instalación a mano. Acá el gestor mira esa dirección
+// cada tanto y se actualiza solo.
 const cabecera = `// ==UserScript==
 // @name         Panel de Instagram
-// @description  Seguidores, historias, sin respuesta, estadísticas y estrategia — desde tu iPhone.
+// @description  Seguidores, historias, sin respuesta, estadísticas y estrategia — desde el celular.
+// @namespace    https://nook-a01.github.io/panel/
 // @match        https://www.instagram.com/*
 // @match        https://instagram.com/*
 // @run-at       document-idle
+// @grant        GM_info
+// @inject-into  content
 // @version      ${VERSION}
+// @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
+// @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
 `;
 
