@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-31T08:37:59.266Z",
+ "actualizado": "2026-08-31T17:03:27.414Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1044,9 +1045,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1057,9 +1057,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1238,9 +1237,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1269,6 +1267,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Lionel Messi's Argentina career: the stats, records and how he compares to Cristiano Ronaldo",
+     "resumen": "After Lionel Messi announced his international retirement, ESPN takes a look at the numbers behind his storied Argentina career.",
+     "fecha": "2026-08-31T16:57:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709497_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49784066/lionel-messi-argentina-career-stats-records-how-compares-cristiano-ronaldo"
+    },
+    {
+     "titulo": "Argentina legend Lionel Messi announces international retirement",
+     "resumen": "Lionel Messi on Monday announced his retirement from international soccer with a heartfelt Instagram post.",
+     "fecha": "2026-08-31T16:40:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0703/r1684044_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49266819/lionel-messi-argentina-international-retirement-world-cup-copa-america"
+    },
+    {
+     "titulo": "Ogden: Balogun is one to watch on deadline day",
+     "resumen": "Ogden: Balogun is one to watch on deadline day",
+     "fecha": "2026-08-31T15:16:48Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49783354/balogun-one-watch-deadline-day"
+    },
+    {
      "titulo": "Socceroos transfer tracker: Where Australia's stars will play in 2026-27",
      "resumen": "There's nothing like a World Cup to put young stars in the shop window! With that in mind, ESPN has assembled a list of all the Socceroos' post-tournament transfers, all in one place.",
      "fecha": "2026-08-31T02:44:13Z",
@@ -1295,20 +1314,6 @@
      "fecha": "2026-08-28T15:33:38Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0828/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat/dm_260828_Chris_Richards_admits_feeling_like_he_let_the_US_down_after_Belgium_defeat.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49753414/chris-richards-admits-feeling-let-us-belgium-defeat"
-    },
-    {
-     "titulo": "Entire Nigeria FA board resigns after World Cup (x2), WAFCON flops",
-     "resumen": "Nigeria Football Federation president Ibrahim Musa Gusau, general secretary Mohammed Sanusi, and the entire NFF executive committee resigned Thursday, amid mounting public pressure following a series of failures.",
-     "fecha": "2026-08-28T09:46:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0828/r1708022_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/49750811/entire-nigeria-fa-board-resigns-world-cup-x2-wafcon-flops"
-    },
-    {
-     "titulo": "Champions League draw becomes UEFA's latest stand against FIFA president Infantino",
-     "resumen": "Thursday saw the UEFA Champions League draw take place in Monaco, but the big news beyond the pots involved Europe taking their battle with FIFA president Gianni Infantino into criminal court.",
-     "fecha": "2026-08-28T08:19:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0827/r1707747_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49744909/uefa-fifa-world-cup-champions-league-gianni-infantino-lawsuits-gab-marcotti"
     },
     {
      "titulo": "Xavi addresses van Dijk's national team future at unveiling",
@@ -1344,13 +1349,6 @@
      "fecha": "2026-08-11T13:55:09Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0811/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49582283/suarez-available-selection-why-not"
-    },
-    {
-     "titulo": "Thailand seal top spot after making Myanmar pay the penalty",
-     "resumen": "Two penalty kicks in either half were enough for Thailand to finish top of Group B in the ASEAN Championship with a 2-0 victory over Myanmar.",
-     "fecha": "2026-08-08T17:00:35Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0808/dm_260808_ASEAN_CHAMPIONSHIPS_THAvsMYA_HLs_ESPN/dm_260808_ASEAN_CHAMPIONSHIPS_THAvsMYA_HLs_ESPN.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49561248/thailand-seal-top-spot-making-myanmar-pay-penalty"
     }
    ],
    "resultados": null,
@@ -1592,9 +1590,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
