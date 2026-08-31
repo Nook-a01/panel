@@ -116,16 +116,23 @@
     </div>
 
     <div class="plat" id="p-android">
-      <p class="muted" style="margin:0 0 14px">Tenés que tener la sesión abierta en <b>el navegador</b> (instagram.com), no en la app de Instagram.</p>
-      <button class="big" id="copyBmA">📋 Copiar el código</button>
-      <ol style="margin-top:18px">
-        <li>Copiá el código con el botón de arriba.</li>
-        <li>En Chrome, entrá a cualquier página y guardala como marcador (la estrella ☆).</li>
-        <li>Abrí <b>⋮ → Marcadores</b>, buscá el que acabás de crear y tocá el lápiz para <b>editarlo</b>.</li>
-        <li>Borrá lo que haya en <b>Dirección URL</b>, pegá el código, y ponele de nombre <code>panel</code>.</li>
-        <li>Entrá a instagram.com, escribí <code>panel</code> en la barra de direcciones y tocá el marcador que aparece.</li>
-      </ol>
-      <p class="tip"><b>Lo que más falla:</b> el código tiene que empezar con <code>javascript:</code>. Algunas versiones de Chrome lo borran solas al pegar. Fijate que esté, y si no, escribilo a mano justo antes de lo que pegaste.</p>
+      <div style="border:2px solid #CCFF00;padding:16px;text-align:center">
+        <b style="display:block;font-size:1.1rem;margin-bottom:.5rem">Tres pasos, una sola vez</b>
+        <p class="muted" style="margin:0 0 14px;font-size:.92rem">
+          En Android va con Firefox y Violentmonkey, los dos gratis. Chrome en Android
+          no admite extensiones, así que por ahí no hay forma.
+        </p>
+        <a class="big" href="celular.html" style="display:block;text-decoration:none">📱 Cómo instalarlo en Android</a>
+      </div>
+
+      <details style="margin-top:18px">
+        <summary>Otra opción: como marcador — probablemente no ande</summary>
+        <p class="muted" style="margin:12px 0;font-size:.85rem;line-height:1.6">
+          Los marcadores con código quedaron bloqueados contra Instagram en los navegadores
+          nuevos. Se deja por si el tuyo se comporta distinto.
+        </p>
+        <p style="margin:0 0 10px"><button class="btn" id="copyBmA">📋 Código para marcador</button></p>
+      </details>
     </div>
 
     <div class="plat" id="p-ios">
@@ -135,7 +142,7 @@
           En iPhone va con Userscripts, una extensión gratis de la App Store.
           Los pasos están todos en una página aparte, escritos para el celular.
         </p>
-        <a class="big" href="iphone.html" style="display:block;text-decoration:none">📱 Cómo instalarlo en el iPhone</a>
+        <a class="big" href="celular.html" style="display:block;text-decoration:none">📱 Cómo instalarlo en el iPhone</a>
       </div>
 
       <details style="margin-top:18px">
