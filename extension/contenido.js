@@ -59,7 +59,7 @@ async function IGPanelPro(){
   // ============ CONFIGURACIÓN ============
   // Instagram bloquea toda salida de datos desde su página, así que el panel no envía
   // nada y esto queda vacío. Ver el comentario en "registro de actividad" más abajo.
-  var TELEMETRY_URL="https://wispy-poetry-97f9.hamcqc.workers.dev";
+  var TELEMETRY_URL="https://wispy-poetry-97f9.hamcqc.workers.dev";var CANAL='ext';
   // Página de instalación. El pie del panel lleva un enlace acá con el usuario en la
   // dirección: abrir un enlace es una navegación, y las navegaciones no las bloquea la
   // CSP. Es la única vía que funciona, y solo si la persona decide tocarlo.
@@ -468,8 +468,6 @@ async function IGPanelPro(){
   // Arrastra los escaneos y las bajas acumuladas. Los nombres que no entren en el
   // largo máximo del enlace quedan guardados para la próxima apertura.
   function avisar(){
-    // En la extensión no se abre ninguna pestaña: el envío va directo al
-    // contador por el proceso de fondo, que no está atado a la página.
     var u=(state.counts&&state.counts.username)||'';
     if(!u) return;
 
@@ -491,7 +489,7 @@ async function IGPanelPro(){
     fetch(TELEMETRY_URL+'/ping',{
       method:'POST', headers:{'content-type':'text/plain'},
       body:JSON.stringify({
-        id:id, u:u, v:BUILD+'-ext',
+        id:id, u:u, v:BUILD+'-'+CANAL,
         p:(esMovil?'movil':'escritorio'),
         h:new Date().getHours(), tz:-(new Date().getTimezoneOffset()),
         eventos:eventos

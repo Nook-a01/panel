@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Panel de Instagram — en tu celular</title>
+<title>Panel de Instagram — instalar</title>
 <meta name="theme-color" content="#000000">
 <!-- Sólo texto, dos enlaces y un poco de código para elegir la solapa. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
@@ -89,12 +89,49 @@ a{color:var(--acido)}
 </head>
 <body>
 
-<h1><span class="punto"></span>Panel en tu celular</h1>
-<p class="bajada">Tres pasos, una sola vez. Después es un botón adentro de Instagram.</p>
+<h1><span class="punto"></span>Instalar el panel</h1>
+<p class="bajada">Dos o tres pasos, una sola vez. Después es un botón adentro de Instagram.</p>
 
 <div class="tabs">
+  <button id="t-pc" data-p="pc">💻 Computadora</button>
   <button id="t-ios" data-p="ios">🍎 iPhone</button>
   <button id="t-android" data-p="android">🤖 Android</button>
+</div>
+
+<!-- ═══════════ Computadora ═══════════ -->
+<div class="pantalla" id="p-pc">
+
+  <div class="paso">
+    <span class="n">Paso 1</span>
+    <h2>Agregá Violentmonkey</h2>
+    <p>Es una extensión gratis de la tienda oficial de Chrome. Sirve para
+       Chrome, Brave, Edge y Opera.</p>
+    <a class="boton" href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag">Agregar desde la tienda</a>
+    <p style="margin-top:.9rem">Tocá <b>Agregar a Chrome</b> y confirmá.</p>
+  </div>
+
+  <div class="paso">
+    <span class="n">Paso 2</span>
+    <h2>Instalá el panel</h2>
+    <p>Con Violentmonkey ya puesto, tocá el botón. Se abre una pantalla de
+       instalación con el nombre del script.</p>
+    <a class="boton" href="panel.user.js">Instalar el panel</a>
+    <p style="margin-top:.9rem">Tocá <b>Instalar</b>. Listo, no hay paso 3.</p>
+  </div>
+
+  <div class="usar">
+    <h2>Cómo se usa</h2>
+    <p>Entrá a <b>instagram.com</b> con tu sesión iniciada.</p>
+    <p>Abajo a la derecha aparece un botón <span class="fab">◐</span> — tocalo para abrir
+       el panel, tocalo de nuevo para cerrarlo.</p>
+    <p style="color:var(--apagado);font-size:.88rem">Si ya tenías Instagram abierto, recargá la página.</p>
+  </div>
+
+  <p class="nota">
+    <b>¿Tenías la extensión vieja instalada a mano?</b> Sacala desde
+    <code>chrome://extensions</code> para que no queden dos botones. Esta se actualiza sola;
+    aquella había que rehacerla cada vez.
+  </p>
 </div>
 
 <!-- ═══════════ iPhone ═══════════ -->
@@ -206,7 +243,7 @@ a{color:var(--acido)}
   const esAndroid = /Android/.test(ua);
 
   const mostrar = p => {
-    for (const k of ["ios", "android"]) {
+    for (const k of ["pc", "ios", "android"]) {
       document.getElementById("p-" + k).className = "pantalla" + (k === p ? " on" : "");
       document.getElementById("t-" + k).className = (k === p ? "on" : "");
     }
@@ -215,10 +252,8 @@ a{color:var(--acido)}
   for (const b of document.querySelectorAll(".tabs button"))
     b.addEventListener("click", () => mostrar(b.dataset.p));
 
-  // Se abre en la solapa del teléfono desde el que estás leyendo. En una
-  // computadora se muestra iPhone, que es el caso más común de alguien
-  // mirando esto antes de pasárselo a otra persona.
-  mostrar(esAndroid ? "android" : "ios");
+  // Se abre en la solapa del aparato desde el que estás leyendo.
+  mostrar(esAndroid ? "android" : esIOS ? "ios" : "pc");
 })();
 </script>
 

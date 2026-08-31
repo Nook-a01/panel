@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-30T06:06:20.879Z",
+ "actualizado": "2026-08-31T00:34:56.954Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 21,
+   "total": 20,
    "proximos": 12
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401874164",
-   "miLado": "visitante",
-   "idEspn": "401874164",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "O'Higgins vs Boca Juniors",
-   "inicio": "2026-07-31T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Estadio El Teniente",
-   "local": "O'Higgins",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/6072.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
   {
    "id": "espn-600059339",
    "miLado": null,

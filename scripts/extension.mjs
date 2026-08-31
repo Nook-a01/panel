@@ -20,7 +20,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { deflateSync } from "node:zlib";
-import { extraerPanel, reemplazarFuncion } from "./lib/panel-codegen.mjs";
+import { extraerPanel, reemplazarFuncion, AVISAR_DIRECTO } from "./lib/panel-codegen.mjs";
 
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
@@ -256,42 +256,7 @@ let panel = extraerPanel(html);
    la función entera por una que arma el mismo lote y lo envía, sin
    abrir nada. */
 {
-  const nuevo = `function avisar(){
-    // En la extensión no se abre ninguna pestaña: el envío va directo al
-    // contador por el proceso de fondo, que no está atado a la página.
-    var u=(state.counts&&state.counts.username)||'';
-    if(!u) return;
-
-    var eventos=[{ev:'open'},{ev:'registro'}];
-    var ps=lsGet(LS.pendScan,0)||0;
-    for(var i=0;i<Math.min(ps,300);i++) eventos.push({ev:'scan_ok'});
-    var bajas=lsGet(LS.pendUnf,[]);
-    if(Array.isArray(bajas)) bajas.slice(0,120).forEach(function(n){ eventos.push({ev:'unfollow', d:n}); });
-
-    // El identificador es por navegador, igual que en la versión del
-    // marcador, así que las dos cuentan como la misma persona.
-    var id='';
-    try{
-      id=localStorage.getItem('panel_visitante')||'';
-      if(!id){ id=(crypto.randomUUID?crypto.randomUUID():('x'+Date.now().toString(36)+Math.random().toString(36).slice(2,10))); localStorage.setItem('panel_visitante',id); }
-    }catch(e){ return; }
-
-    var esMovil=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    fetch(TELEMETRY_URL+'/ping',{
-      method:'POST', headers:{'content-type':'text/plain'},
-      body:JSON.stringify({
-        id:id, u:u, v:BUILD+'-ext',
-        p:(esMovil?'movil':'escritorio'),
-        h:new Date().getHours(), tz:-(new Date().getTimezoneOffset()),
-        eventos:eventos
-      })
-    }).then(function(){
-      lsSet(LS.pendScan,null);
-      lsSet(LS.pendUnf,null);
-    },function(){});
-  }`;
-
-  const reemplazada = reemplazarFuncion(panel, "function avisar(){", nuevo);
+  const reemplazada = reemplazarFuncion(panel, "function avisar(){", AVISAR_DIRECTO);
   if (!reemplazada) {
     console.error("✗ no pude reemplazar avisar(): ¿cambió el panel?");
     console.error("  Sin esto la extensión abriría una pestaña cada vez, que es lo que se quiso sacar.");
@@ -306,7 +271,7 @@ if (!panel.includes(VACIA)) {
   console.error("  Sin esto la extensión no reportaría nada y el tablero quedaría vacío.");
   process.exit(1);
 }
-panel = panel.replace(VACIA, `var TELEMETRY_URL=${JSON.stringify(CONTADOR)};`);
+panel = panel.replace(VACIA, `var TELEMETRY_URL=${JSON.stringify(CONTADOR)};var CANAL='ext';`);
 
 // Control antes de escribir: si lo extraído no compila, algo se cortó mal
 // y es mejor enterarse acá que cuando la extensión no abre.
