@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-01T11:42:26.789Z",
+ "actualizado": "2026-09-01T16:38:14.496Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -959,8 +957,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1020,8 +1019,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1044,8 +1044,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1081,8 +1082,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1105,8 +1107,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1268,6 +1271,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
+     "resumen": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
+     "fecha": "2026-09-01T14:42:23Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
+    },
+    {
      "titulo": "Ogden: Balogun is one to watch on deadline day",
      "resumen": "Ogden: Balogun is one to watch on deadline day",
      "fecha": "2026-09-01T09:04:25Z",
@@ -1303,13 +1313,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/49466177/socceroos-transfer-tracker-where-australias-stars-play-2026-27"
     },
     {
-     "titulo": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
-     "resumen": "Lionel Messi's 4-goal performance leads Inter Miami to big win",
-     "fecha": "2026-08-30T02:32:28Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0829/ss_20260829_214626533_3641024/ss_20260829_214626533_3641024.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49768137/lionel-messi-4-goal-performance-leads-inter-miami-big-win"
-    },
-    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-08-30T02:11:50Z",
@@ -1343,13 +1346,6 @@
      "fecha": "2026-08-19T15:58:30Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0819/dm_260819_Simeone_Alvarez_is_one_of_the_best_players_Atletico_have_if_not_the_best/dm_260819_Simeone_Alvarez_is_one_of_the_best_players_Atletico_have_if_not_the_best.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49659966/alvarez-one-best-players-atletico-not-best"
-    },
-    {
-     "titulo": "Forlán: If Suárez is available for selection, why not?",
-     "resumen": "Forlán: If Suárez is available for selection, why not?",
-     "fecha": "2026-08-11T13:55:09Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0811/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11/dm_260811_COM_SOC_Analysis_ForlC3A1n3A_If_SuC3A1rez_is_available_for_selection2C_why_not3F__GLOBAL_2026-08-11.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49582283/suarez-available-selection-why-not"
     }
    ],
    "resultados": null,
@@ -1616,8 +1612,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1628,8 +1625,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1640,8 +1638,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1712,9 +1711,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1774,8 +1772,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1811,6 +1810,18 @@
      "edad": 24,
      "pais": "Argentina",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
+     "lesionado": false
+    },
+    {
+     "id": "229289",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hon.png",
+     "nombre": "David Ruiz",
+     "dorsal": "41",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 22,
+     "pais": "Honduras",
+     "foto": null,
      "lesionado": false
     },
     {
@@ -1934,18 +1945,6 @@
      "lesionado": false
     },
     {
-     "id": "229289",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-     "nombre": "David Ruiz",
-     "dorsal": "41",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 28,
-     "pais": "Spain",
-     "foto": null,
-     "lesionado": false
-    },
-    {
      "id": "401418",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "nombre": "Diego Rey",
@@ -1984,6 +1983,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
+     "resumen": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
+     "fecha": "2026-09-01T14:42:23Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
+    },
+    {
      "titulo": "Sources: Southampton loans USMNT's Downs to St. Louis",
      "resumen": "St. Louis City SC is set to acquire United States forward Damion Downs on loan from English Championship side Southampton, a source with direct knowledge of the deal confirmed to ESPN.",
      "fecha": "2026-08-31T19:28:32Z",
@@ -2017,13 +2023,6 @@
      "fecha": "2026-08-30T04:17:51Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0830/ss_20260830_000218771_3641262/ss_20260830_000218771_3641262.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49769131/cavan-sullivan-scores-second-straight-game-philly"
-    },
-    {
-     "titulo": "Müller and White score in Whitecaps win over SKC",
-     "resumen": "Thomas Müller had a goal and an assist, Brian White and Rayan Elloumi each added a goal and the Vancouver Whitecaps beat Sporting Kansas City 3-0 on Saturday night.",
-     "fecha": "2026-08-30T03:20:06Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761762.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761762"
     },
     {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
@@ -2248,9 +2247,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2693,18 +2693,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Song Yadong rises in divisional rankings after shocking KO",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-09-01T14:47:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709592_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
+    {
      "titulo": "Song Yadong KO's Umar Nurmagomedov in massive UFC upset",
      "resumen": "Song Yadong pulled off a massive upset by knocking out heavily favored Umar Nurmagomedov in the men's bantamweight main event of UFC Fight Night in Shanghai.",
      "fecha": "2026-08-29T16:49:12Z",
      "imagen": "https://a.espncdn.com/photo/2026/0829/r1708497_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49762250/song-yadong-kos-umar-nurmagomedov-massive-ufc-upset-shanghai"
-    },
-    {
-     "titulo": "Gregory Rodrigues stands his ground, enters middleweight top 10",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-08-29T13:59:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706358_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     },
     {
      "titulo": "Injured UFC champion Ulberg hopes to return 'early next year'",
