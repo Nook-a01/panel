@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-01T01:17:00.207Z",
+ "actualizado": "2026-09-01T06:16:08.766Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -24,6 +24,19 @@
     "tipo": "tabla",
     "filas": [
      {
+      "equipo": "Instituto (Córdoba)",
+      "abrev": "IACC",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+      "pj": "7",
+      "pts": "16",
+      "g": "5",
+      "e": "1",
+      "p": "1",
+      "dg": "+4",
+      "mio": false,
+      "pos": 1
+     },
+     {
       "equipo": "Gimnasia (Mendoza)",
       "abrev": "GMZ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
@@ -34,7 +47,7 @@
       "p": "2",
       "dg": "+7",
       "mio": false,
-      "pos": 1
+      "pos": 2
      },
      {
       "equipo": "Defensa y Justicia",
@@ -47,7 +60,7 @@
       "p": "1",
       "dg": "+1",
       "mio": false,
-      "pos": 2
+      "pos": 3
      },
      {
       "equipo": "Vélez Sarsfield",
@@ -59,19 +72,6 @@
       "e": "4",
       "p": "0",
       "dg": "+4",
-      "mio": false,
-      "pos": 3
-     },
-     {
-      "equipo": "Instituto (Córdoba)",
-      "abrev": "IACC",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-      "pj": "6",
-      "pts": "13",
-      "g": "4",
-      "e": "1",
-      "p": "1",
-      "dg": "+3",
       "mio": false,
       "pos": 4
      },
@@ -183,12 +183,12 @@
       "equipo": "San Lorenzo",
       "abrev": "SLO",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "6",
+      "pj": "7",
       "pts": "7",
       "g": "2",
       "e": "1",
-      "p": "3",
-      "dg": "-2",
+      "p": "4",
+      "dg": "-3",
       "mio": false,
       "pos": 13
      },
@@ -959,9 +959,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -984,9 +983,8 @@
      "posCorta": "G",
      "edad": 33,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1081,9 +1079,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1272,7 +1269,7 @@
     {
      "titulo": "Argentina legend Lionel Messi announces international retirement",
      "resumen": "Lionel Messi on Monday announced his retirement from international soccer with a heartfelt Instagram post.",
-     "fecha": "2026-08-31T22:17:05Z",
+     "fecha": "2026-09-01T01:36:54Z",
      "imagen": "https://a.espncdn.com/photo/2026/0831/r1709546_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49266819/lionel-messi-argentina-international-retirement-world-cup-copa-america"
     },
@@ -1643,8 +1640,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
