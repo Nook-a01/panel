@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-01T06:16:08.766Z",
+ "actualizado": "2026-09-01T11:42:26.789Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -983,8 +983,9 @@
      "posCorta": "G",
      "edad": 33,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1055,8 +1056,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1103,9 +1105,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1236,8 +1237,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1260,12 +1262,18 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
+    {
+     "titulo": "Ogden: Balogun is one to watch on deadline day",
+     "resumen": "Ogden: Balogun is one to watch on deadline day",
+     "fecha": "2026-09-01T09:04:25Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49783354/balogun-one-watch-deadline-day"
+    },
     {
      "titulo": "Argentina legend Lionel Messi announces international retirement",
      "resumen": "Lionel Messi on Monday announced his retirement from international soccer with a heartfelt Instagram post.",
@@ -1286,13 +1294,6 @@
      "fecha": "2026-08-31T17:15:28Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Lionel_Messis_Argentina_career_in_numbers/dm_260831_Lionel_Messis_Argentina_career_in_numbers.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49784295/lionel-messi-argentina-career-numbers"
-    },
-    {
-     "titulo": "Ogden: Balogun is one to watch on deadline day",
-     "resumen": "Ogden: Balogun is one to watch on deadline day",
-     "fecha": "2026-08-31T15:16:48Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49783354/balogun-one-watch-deadline-day"
     },
     {
      "titulo": "Socceroos transfer tracker: Where Australia's stars will play in 2026-27",
@@ -1627,9 +1628,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1640,9 +1640,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1713,8 +1712,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1725,8 +1725,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1773,9 +1774,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2248,10 +2248,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2637,18 +2636,25 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Ferrari to run Michael Schumacher tribute livery at Italian Grand Prix",
+     "resumen": "Ferrari will mark the 30-year anniversary of Michael Schumacher's arrival at Maranello by running a special livery at this weekend's Italian Grand Prix.",
+     "fecha": "2026-09-01T09:25:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0901/r1709872_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49791864/ferrari-run-michael-schumacher-tribute-livery-italian-grand-prix"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-01T06:57:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Lewis Hamilton takes ownership of iconic Ferrari F40 road car",
      "resumen": "Lewis Hamilton has taken ownership of a Ferrari F40 road car after it sat dormant in a garage for over 30 years.",
      "fecha": "2026-08-31T20:41:45Z",
      "imagen": "https://a.espncdn.com/photo/2026/0831/r1709652_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49786314/lewis-hamilton-takes-ownership-iconic-ferrari-f40-road-car"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-08-31T07:07:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
     },
     {
      "titulo": "Lando Norris signs new contract to stay at McLaren until at least 2030",
@@ -2670,13 +2676,6 @@
      "fecha": "2026-08-28T13:17:52Z",
      "imagen": "https://a.espncdn.com/photo/2026/0828/r1708049_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49751971/mercedes-positive-next-big-upgrade-close-performance-deficit-rivals-ferrari-mclaren"
-    },
-    {
-     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-08-28T08:53:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     }
    ],
    "resultados": null,
