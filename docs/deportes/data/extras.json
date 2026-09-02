@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-01T22:36:16.202Z",
+ "actualizado": "2026-09-02T01:01:08.360Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1085,8 +1086,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1122,8 +1124,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1345,13 +1348,13 @@
   "intermiami": {
    "compitiendo": [
     {
-     "nombre": "MLS",
-     "liga": "usa.1",
+     "nombre": "Leagues Cup",
+     "liga": "concacaf.leagues.cup",
      "ruta": "soccer"
     },
     {
-     "nombre": "Leagues Cup",
-     "liga": "concacaf.leagues.cup",
+     "nombre": "MLS",
+     "liga": "usa.1",
      "ruta": "soccer"
     }
    ],
@@ -1752,8 +1755,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -2751,12 +2755,6 @@
      "fecha": "2026-08-08T21:00Z",
      "marcador": null,
      "sede": "Meta APEX"
-    },
-    {
-     "titulo": "UFC Fight Night: Medić vs. Rodriguez",
-     "fecha": "2026-08-01T14:00Z",
-     "marcador": null,
-     "sede": "Belgrade Arena"
     }
    ],
    "peleadores": [

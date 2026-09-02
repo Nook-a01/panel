@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-31T00:34:56.954Z",
+ "actualizado": "2026-09-02T01:01:08.360Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 20,
+   "total": 19,
    "proximos": 12
   },
   {
@@ -72,54 +72,10 @@
    "ruta": "mma",
    "liga": "ufc",
    "total": 16,
-   "proximos": 11
+   "proximos": 12
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600059339",
-   "miLado": null,
-   "idEspn": "600059339",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Medić vs. Rodriguez",
-   "inicio": "2026-08-01T14:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Belgrade Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
-  {
-   "id": "espn-761701",
-   "miLado": "local",
-   "idEspn": "761701",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs Columbus Crew",
-   "inicio": "2026-08-02T00:10Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "Columbus Crew",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
-  },
   {
    "id": "espn-401841473",
    "miLado": "visitante",
@@ -1250,6 +1206,28 @@
    "sesion": "Clasificación",
    "titulo": "GP Singapore · Clasificación",
    "inicio": "2026-10-10T13:00:00.000Z"
+  },
+  {
+   "id": "espn-600061541",
+   "miLado": null,
+   "idEspn": "600061541",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Allen vs. Duncan",
+   "inicio": "2026-10-10T21:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Meta APEX",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
   },
   {
    "id": "espn-761847",
