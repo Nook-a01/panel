@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-02T01:01:08.360Z",
+ "actualizado": "2026-09-02T05:48:17.655Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -973,9 +972,8 @@
      "posCorta": "G",
      "edad": 33,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1010,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1073,9 +1070,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1086,9 +1082,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1099,9 +1094,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1185,8 +1179,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1258,12 +1253,18 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
+    {
+     "titulo": "Socceroos transfer tracker: Where Australia's stars will play in 2026-27",
+     "resumen": "Transfer deadlines are hitting across the globe and, with it, bringing to an end a window that has seen a remarkable surge in interest in players who represented the Socceroos at the FIFA World Cup.",
+     "fecha": "2026-09-02T01:17:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710219_1295x729_16-9.png",
+     "link": "https://www.espn.com/soccer/story/_/id/49466177/socceroos-transfer-tracker-where-australias-stars-play-2026-27"
+    },
     {
      "titulo": "Kushner says he regrets role in FIFA's World Cup sell-off plan",
      "resumen": "FIFA's intended investment partner, Josh Kushner, said he regrets getting involved in Gianni Infantino's failed World Cup sell-off plan.",
@@ -1305,13 +1306,6 @@
      "fecha": "2026-08-31T17:15:28Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Lionel_Messis_Argentina_career_in_numbers/dm_260831_Lionel_Messis_Argentina_career_in_numbers.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49784295/lionel-messi-argentina-career-numbers"
-    },
-    {
-     "titulo": "Socceroos transfer tracker: Where Australia's stars will play in 2026-27",
-     "resumen": "There's nothing like a World Cup to put young stars in the shop window! With that in mind, ESPN has assembled a list of all the Socceroos' post-tournament transfers, all in one place.",
-     "fecha": "2026-08-31T02:44:13Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709316_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49466177/socceroos-transfer-tracker-where-australias-stars-play-2026-27"
     },
     {
      "titulo": "Xavi addresses van Dijk's national team future at unveiling",
@@ -1755,9 +1749,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1768,9 +1761,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2243,10 +2235,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
