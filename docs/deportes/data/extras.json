@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-02T11:16:25.487Z",
+ "actualizado": "2026-09-02T15:07:59.120Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -424,9 +422,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1084,9 +1081,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1109,9 +1105,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1122,9 +1117,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1257,8 +1251,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1579,8 +1574,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1603,8 +1599,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1615,8 +1612,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1711,8 +1709,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1969,6 +1968,13 @@
    ],
    "noticias": [
     {
+     "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
+     "resumen": "All 27 United States-based MLS teams will compete in the 2027 edition of the U.S. Open Cup for the first time since 2023.",
+     "fecha": "2026-09-02T12:02:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0901/r1710028_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49795119/us-mls-teams-make-full-return-open-cup-2027"
+    },
+    {
      "titulo": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
      "resumen": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
      "fecha": "2026-09-01T14:42:23Z",
@@ -2004,13 +2010,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/49770739/every-lionel-messi-scored-4-goals-more-barcelona-inter-miami-argentina"
     },
     {
-     "titulo": "Cavan Sullivan scores for second straight game for Philly",
-     "resumen": "Cavan Sullivan scores for second straight game for Philly",
-     "fecha": "2026-08-30T04:17:51Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0830/ss_20260830_000218771_3641262/ss_20260830_000218771_3641262.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49769131/cavan-sullivan-scores-second-straight-game-philly"
-    },
-    {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
      "resumen": "Socceroos defender Lucas Herrington is not focused on speculation linking him with a move to Spanish giants Barcelona, trying to stay 'present' at the World Cup.",
      "fecha": "2026-06-28T21:34:52Z",
@@ -2044,13 +2043,6 @@
      "fecha": "2026-03-19T14:53:11Z",
      "imagen": "https://a.espncdn.com/photo/2022/0917/r1063199_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/48248748/magic-cup-14-year-old-braiden-kalonji-rewrites-us-open-cup-history"
-    },
-    {
-     "titulo": "Could James Rodríguez join Minnesota United?",
-     "resumen": "Gab & Juls discuss reports linking James Rodríguez with a move to Major League Soccer.",
-     "fecha": "2026-02-05T12:53:52Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0205/dm_260205_COM_SOC_Analysis_Could_James_Rodriguez_join_Minnesota_United__20260205_GLOBAL/dm_260205_COM_SOC_Analysis_Could_James_Rodriguez_join_Minnesota_United__20260205_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip?id=47836990"
     }
    ],
    "resultados": null,
@@ -2621,6 +2613,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Liam Lawson to drive Red Bull again at Italian GP with Isack Hadjar ruled out",
+     "resumen": "Liam Lawson will once again deputise for Isack Hadjar at the Italian Grand Prix after Red Bull confirmed the Frenchman is still recovering from a wrist injury.",
+     "fecha": "2026-09-02T14:26:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710395_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49803442/liam-lawson-red-bull-again-italian-grand-prix-isack-hadjar-max-verstappen"
+    },
+    {
      "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
      "fecha": "2026-09-02T06:55:59Z",
@@ -2647,13 +2646,6 @@
      "fecha": "2026-08-31T20:41:45Z",
      "imagen": "https://a.espncdn.com/photo/2026/0831/r1709652_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49786314/lewis-hamilton-takes-ownership-iconic-ferrari-f40-road-car"
-    },
-    {
-     "titulo": "Lando Norris signs new contract to stay at McLaren until at least 2030",
-     "resumen": "Reigning world champion Lando Norris has committed his long-term future to McLaren after signing a new contract to remain at the team until at least 2030.",
-     "fecha": "2026-08-29T13:48:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0828/r1708263_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49755604/lando-norris-signs-new-contract-stay-mclaren-least-2030"
     },
     {
      "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
