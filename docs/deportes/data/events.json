@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-02T01:01:08.360Z",
+ "actualizado": "2026-09-03T00:14:27.625Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 20,
+   "total": 19,
    "proximos": 12
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841473",
-   "miLado": "visitante",
-   "idEspn": "401841473",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Newell's Old Boys vs Boca Juniors",
-   "inicio": "2026-08-02T20:00Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Marcelo Bielsa",
-   "local": "Newell's Old Boys",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
-  },
   {
    "id": "espn-401841460",
    "miLado": "local",
