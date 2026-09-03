@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-03T00:14:27.625Z",
+ "actualizado": "2026-09-03T04:34:35.899Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 19,
+   "total": 20,
    "proximos": 12
   },
   {
@@ -598,8 +598,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 0"
   },
   {
    "feedId": "f1",
@@ -1032,6 +1032,28 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401912726",
+   "miLado": "visitante",
+   "idEspn": "401912726",
+   "liga": "arg.copa",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Racing Club vs Boca Juniors",
+   "inicio": "2026-09-27T18:00Z",
+   "horaConfirmada": false,
+   "competicion": "Copa Argentina",
+   "sede": "",
+   "local": "Racing Club",
+   "visitante": "Boca Juniors",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "finalizado": false,
    "marcador": null
   },
