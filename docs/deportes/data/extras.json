@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-03T04:34:35.899Z",
+ "actualizado": "2026-09-03T09:47:42.721Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -1069,8 +1071,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1117,8 +1120,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1572,9 +1576,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1609,9 +1612,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1622,9 +1624,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1695,9 +1696,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1802,7 +1802,7 @@
      "dorsal": "42",
      "posicion": "Midfielder",
      "posCorta": "M",
-     "edad": 24,
+     "edad": 25,
      "pais": "Italy",
      "foto": null,
      "lesionado": false
@@ -1966,6 +1966,13 @@
    ],
    "noticias": [
     {
+     "titulo": "América vs. Monterrey - Game Highlights",
+     "resumen": "América vs. Monterrey - Game Highlights",
+     "fecha": "2026-09-03T06:09:04Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0903/fc5677bd-5d74-482d-aa8a-7de9250c0823/fc5677bd-5d74-482d-aa8a-7de9250c0823.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49810751/america-vs-monterrey-game-highlights"
+    },
+    {
      "titulo": "Toluca vs. León - Game Highlights",
      "resumen": "Watch the Game Highlights from Toluca vs. León, 09/02/2026",
      "fecha": "2026-09-03T03:56:30Z",
@@ -1999,13 +2006,6 @@
      "fecha": "2026-09-01T14:42:23Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
-    },
-    {
-     "titulo": "Sources: Southampton loans USMNT's Downs to St. Louis",
-     "resumen": "St. Louis City SC is set to acquire United States forward Damion Downs on loan from English Championship side Southampton, a source with direct knowledge of the deal confirmed to ESPN.",
-     "fecha": "2026-08-31T19:28:32Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709606_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49785118/southampton-loans-usmnt-downs-st-louis"
     },
     {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
@@ -2611,6 +2611,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
+     "fecha": "2026-09-03T09:42:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Why does the Italian GP trophy look like a pile of washing up?",
+     "resumen": "The winner of this weekend's Italian Grand Prix will receive a trophy that looks like a pile of washing up after Pirelli commissioned two artists to come up with the design.",
+     "fecha": "2026-09-03T06:52:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710765_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/story/_/id/49810864/italian-grand-prix-2026-f1-trophy-washing-dishes"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-03T06:17:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Lando Norris announces junior racing team 'LN4 Fusion'",
      "resumen": "Defending Formula 1 world champion Lando Norris has co-founded a junior racing team which will compete in several of the sport's leading developmental categories from 2027 onwards.",
      "fecha": "2026-09-02T18:00:17Z",
@@ -2630,27 +2651,6 @@
      "fecha": "2026-09-02T14:26:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/0902/r1710395_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49803442/liam-lawson-red-bull-again-italian-grand-prix-isack-hadjar-max-verstappen"
-    },
-    {
-     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-09-02T06:55:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-09-02T06:55:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "Ferrari to run Michael Schumacher tribute livery at Italian Grand Prix",
-     "resumen": "Ferrari will mark the 30-year anniversary of Michael Schumacher's arrival at Maranello by running a special livery at this weekend's Italian Grand Prix.",
-     "fecha": "2026-09-01T09:25:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0901/r1709872_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49791864/ferrari-run-michael-schumacher-tribute-livery-italian-grand-prix"
     }
    ],
    "resultados": null,
