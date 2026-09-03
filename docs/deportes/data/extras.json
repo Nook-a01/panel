@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-03T14:33:42.851Z",
+ "actualizado": "2026-09-03T18:37:41.220Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -972,9 +972,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1009,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1047,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1060,9 +1057,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1073,9 +1069,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1578,8 +1573,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1602,8 +1598,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1614,8 +1611,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1626,8 +1624,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1698,8 +1697,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1710,8 +1710,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1968,6 +1969,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Matías Galarza joins Inter Miami from River Plate",
+     "resumen": "Matías Galarza has joined Inter Miami CF from Argentinian side River Plate.",
+     "fecha": "2026-09-03T17:27:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710661_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49808396/matias-galarza-joins-inter-miami-river-plate"
+    },
+    {
+     "titulo": "Inter Miami signs Riquelme from Palmeiras through 2030",
+     "resumen": "Inter Miami has signed Riquelme Fillipi from Brazilian team Palmeiras through the conclusion of the 2029-30 MLS season, with an extension option for the 2030-31 season.",
+     "fecha": "2026-09-03T17:08:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710451_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49805093/inter-miami-signs-riquelme-palmeiras-2030"
+    },
+    {
+     "titulo": "South Africa's Lyle Foster joins Dynamo on loan from Burnley",
+     "resumen": "South Africa's Lyle Foster joined the Houston Dynamo on loan from Burnley on Thursday through summer of 2027.",
+     "fecha": "2026-09-03T15:41:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0627/r1680394_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49814986/south-africa-lyle-foster-joins-dynamo-loan-burnley"
+    },
+    {
      "titulo": "Rangers close to signing Portland Timbers striker Kevin Kelsy",
      "resumen": "Rangers are pursuing options on the final day of the Scottish Premiership transfer window as they close in on the signing of striker Kevin Kelsy.",
      "fecha": "2026-09-03T13:19:06Z",
@@ -1987,20 +2009,6 @@
      "fecha": "2026-09-03T03:56:30Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0903/428eb0bc-94d1-40b2-a89f-6a43c0b3fa2b/428eb0bc-94d1-40b2-a89f-6a43c0b3fa2b.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49809826/toluca-vs-leon-game-highlights"
-    },
-    {
-     "titulo": "Source: Matías Galarza joins Inter Miami from River Plate",
-     "resumen": "Matías Galarza is joining Inter Miami CF from Argentinian side River Plate, a source told ESPN.",
-     "fecha": "2026-09-03T01:02:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710661_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49808396/matias-galarza-joins-inter-miami-river-plate"
-    },
-    {
-     "titulo": "Inter Miami signs Riquelme from Palmeiras through 2030",
-     "resumen": "Inter Miami has signed Riquelme Fillipi from Brazilian team Palmeiras through the conclusion of the 2029-30 MLS season, with an extension option for the 2030-31 season.",
-     "fecha": "2026-09-02T19:18:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710451_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49805093/inter-miami-signs-riquelme-palmeiras-2030"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2613,46 +2621,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Why Lewis Hamilton brought his dream Ferrari F40 road car and his iconic arrival at Italian GP",
+     "resumen": "Lewis Hamilton shares the story behind buying his dream Ferrari F40 road car.",
+     "fecha": "2026-09-03T17:10:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710860_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49815730/lewis-hamilton-ferrari-f40-road-car-iconic-arrival-italian-grand-prix"
+    },
+    {
+     "titulo": "Norris: I want to help drivers achieve their dream",
+     "resumen": "Norris: I want to help drivers achieve their dream.",
+     "fecha": "2026-09-03T17:03:14Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0903/dm_260903_Norris_I_want_to_help_drivers_achieve_their_dream/dm_260903_Norris_I_want_to_help_drivers_achieve_their_dream.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49815884/want-help-drivers-achieve-their-dream"
+    },
+    {
+     "titulo": "Hamilton arrives in 'iconic' Ferrari F40 for Italian Grand Prix weekend",
+     "resumen": "Hamilton arrives in 'iconic' Ferrari F40 for Italian Grand Prix weekend",
+     "fecha": "2026-09-03T17:02:58Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0903/dm_260903_Hamilton_arrives_in_iconic_Ferrari_F40_for_Italian_Grand_Prix_weekend/dm_260903_Hamilton_arrives_in_iconic_Ferrari_F40_for_Italian_Grand_Prix_weekend.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49815866/hamilton-arrives-iconic-ferrari-f40-italian-grand-prix-weekend"
+    },
+    {
+     "titulo": "Lando Norris says he would be 'proud' if he finished his F1 career with McLaren",
+     "resumen": "Lando Norris has said his McLaren contract extension was an easy decision to make while the team is enjoying such success, suggesting he would be happy to eventually retire from Formula 1 as a one-team man.",
+     "fecha": "2026-09-03T16:24:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710916_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813099/lando-norris-says-proud-finished-formula-1-career-mclaren-italian-grand-prix-monza"
+    },
+    {
+     "titulo": "Italian Grand Prix declared heat hazard; second race this season",
+     "resumen": "The Italian Grand Prix has been declared a heat hazard by the FIA as temperatures soar in Monza.",
+     "fecha": "2026-09-03T15:44:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710903_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813095/italian-grand-prix-declared-heat-hazard-second-race-season-formula-1-monza"
+    },
+    {
      "titulo": "Fernando Alonso uncertain on future: 'This is not the Formula 1 we grew up with'",
      "resumen": "Fernando Alonso has said his decision on whether to keep racing into 2027 with Aston Martin is still not made because \"this is not the Formula 1 we grew up with.\"",
      "fecha": "2026-09-03T13:32:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1710844_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813079/fernando-alonso-uncertain-future-not-formula-1-grew-italian-grand-prix-monza"
-    },
-    {
-     "titulo": "Lightning McQueen to make F1 debut at Italian GP as safety car also gets Cars makeover",
-     "resumen": "Lightning McQueen will make an appearance at this weekend's Italian Grand Prix, with the Cars character set to take an honorary lap around Monza.",
-     "fecha": "2026-09-03T12:03:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710826_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813101/lightning-mcqueen-make-f1-debut-italian-gp-safety-car-gets-cars-makeover"
-    },
-    {
-     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-09-03T09:42:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Why does the Italian GP trophy look like a pile of washing up?",
-     "resumen": "The winner of this weekend's Italian Grand Prix will receive a trophy that looks like a pile of washing up after Pirelli commissioned two artists to come up with the design.",
-     "fecha": "2026-09-03T06:52:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710765_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/story/_/id/49810864/italian-grand-prix-2026-f1-trophy-washing-dishes"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-09-03T06:17:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "Lando Norris announces junior racing team 'LN4 Fusion'",
-     "resumen": "Defending Formula 1 world champion Lando Norris has co-founded a junior racing team which will compete in several of the sport's leading developmental categories from 2027 onwards.",
-     "fecha": "2026-09-02T18:00:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710436_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49804150/lando-norris-announces-junior-racing-team-ln4-fusion"
     }
    ],
    "resultados": null,
