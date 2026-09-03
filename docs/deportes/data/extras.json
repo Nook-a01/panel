@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-03T09:47:42.721Z",
+ "actualizado": "2026-09-03T14:33:42.851Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1009,8 +1009,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1059,8 +1060,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1120,9 +1122,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1181,8 +1182,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1966,6 +1968,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Rangers close to signing Portland Timbers striker Kevin Kelsy",
+     "resumen": "Rangers are pursuing options on the final day of the Scottish Premiership transfer window as they close in on the signing of striker Kevin Kelsy.",
+     "fecha": "2026-09-03T13:19:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710853_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49813789/rangers-close-signing-portland-timbers-striker-kevin-kelsy"
+    },
+    {
      "titulo": "América vs. Monterrey - Game Highlights",
      "resumen": "América vs. Monterrey - Game Highlights",
      "fecha": "2026-09-03T06:09:04Z",
@@ -1999,13 +2008,6 @@
      "fecha": "2026-09-02T12:02:00Z",
      "imagen": "https://a.espncdn.com/photo/2026/0901/r1710028_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49795119/us-mls-teams-make-full-return-open-cup-2027"
-    },
-    {
-     "titulo": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
-     "resumen": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
-     "fecha": "2026-09-01T14:42:23Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
     },
     {
      "titulo": "Herrington focused on world cup amid Barcelona interest",
@@ -2611,6 +2613,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Fernando Alonso uncertain on future: 'This is not the Formula 1 we grew up with'",
+     "resumen": "Fernando Alonso has said his decision on whether to keep racing into 2027 with Aston Martin is still not made because \"this is not the Formula 1 we grew up with.\"",
+     "fecha": "2026-09-03T13:32:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710844_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813079/fernando-alonso-uncertain-future-not-formula-1-grew-italian-grand-prix-monza"
+    },
+    {
+     "titulo": "Lightning McQueen to make F1 debut at Italian GP as safety car also gets Cars makeover",
+     "resumen": "Lightning McQueen will make an appearance at this weekend's Italian Grand Prix, with the Cars character set to take an honorary lap around Monza.",
+     "fecha": "2026-09-03T12:03:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710826_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813101/lightning-mcqueen-make-f1-debut-italian-gp-safety-car-gets-cars-makeover"
+    },
+    {
      "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
      "fecha": "2026-09-03T09:42:05Z",
@@ -2637,20 +2653,6 @@
      "fecha": "2026-09-02T18:00:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/0902/r1710436_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49804150/lando-norris-announces-junior-racing-team-ln4-fusion"
-    },
-    {
-     "titulo": "Monza personifies the passion that enticed Leclerc to commit his future to Ferrari",
-     "resumen": "Ferrari hasn't been a title contender in some time, but Charles Leclerc is confident that will change. Until then, he's enjoying being an icon in Italy.",
-     "fecha": "2026-09-02T16:30:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710471_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/story/_/id/49804238/formula-1-italian-grand-prix-monza-personifies-passion-enticed-charles-leclerc-commit-future-ferrari"
-    },
-    {
-     "titulo": "Liam Lawson to drive Red Bull again at Italian GP with Isack Hadjar ruled out",
-     "resumen": "Liam Lawson will once again deputise for Isack Hadjar at the Italian Grand Prix after Red Bull confirmed the Frenchman is still recovering from a wrist injury.",
-     "fecha": "2026-09-02T14:26:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710395_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49803442/liam-lawson-red-bull-again-italian-grand-prix-isack-hadjar-max-verstappen"
     }
    ],
    "resultados": null,
