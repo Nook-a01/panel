@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04T09:37:55.730Z",
+ "actualizado": "2026-09-04T14:20:53.644Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -641,8 +640,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1034,9 +1034,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1047,9 +1046,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1072,9 +1070,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1122,9 +1119,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1256,11 +1252,19 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "Maresca: Enzo Fernandez is 'a winner'",
+     "resumen": "Maresca: Enzo Fernandez is 'a winner'",
+     "fecha": "2026-09-04T13:35:35Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0904/dm_260904_Maresca_Enzo_Fernandez_is_a_winner/dm_260904_Maresca_Enzo_Fernandez_is_a_winner.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49824937/enzo-fernandez-winner"
+    },
     {
      "titulo": "FIFA accuses UEFA of 'smear campaign' in opposing discovery request",
      "resumen": "FIFA accused European soccer body UEFA of a \"smear campaign\" in a court filing Thursday concerning FIFA president Gianni Infantino's failed plan to sell stakes in the World Cup and other competitions.",
@@ -1309,13 +1313,6 @@
      "fecha": "2026-08-31T19:49:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0831/r1709497_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49784066/lionel-messi-argentina-career-stats-records-how-compares-cristiano-ronaldo"
-    },
-    {
-     "titulo": "Lionel Messi's Argentina career in numbers",
-     "resumen": "Lionel Messi's Argentina career in numbers",
-     "fecha": "2026-08-31T17:15:28Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Lionel_Messis_Argentina_career_in_numbers/dm_260831_Lionel_Messis_Argentina_career_in_numbers.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49784295/lionel-messi-argentina-career-numbers"
     },
     {
      "titulo": "Xavi addresses van Dijk's national team future at unveiling",
@@ -1578,9 +1575,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1603,9 +1599,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1690,9 +1685,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1703,9 +1697,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1764,9 +1757,8 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "199032",
@@ -1861,9 +1853,8 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "125088",
@@ -2240,9 +2231,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2272,9 +2264,10 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 10,
@@ -2628,6 +2621,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Alpine's Pierre Gasly stripped of Monaco GP podium after McLaren and Red Bull win appeal",
+     "resumen": "Pierre Gasly's penalties from the Monaco Grand Prix have been reinstated 89 days after the race, meaning he has lost the podium to Isack Hadjar a second time.",
+     "fecha": "2026-09-04T13:23:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711243_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813150/alpine-pierre-gasly-stripped-monaco-gp-podium-mclaren-red-bull-win-appeal"
+    },
+    {
+     "titulo": "F1 to launch 2027 season with Milan festival featuring drivers, all 11 teams",
+     "resumen": "Formula 1 will launch its 2027 season with a three-day fan festival in Milan, culminating in a major live show featuring the drivers and team principals from all 11 teams.",
+     "fecha": "2026-09-04T13:03:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711280_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813151/formula-1-launch-2027-season-milan-festival-featuring-drivers-all-11-teams"
+    },
+    {
+     "titulo": "Italian Grand Prix: Charles Leclerc leads Lewis Hamilton to a Ferrari one-two in first practice",
+     "resumen": "Charles Leclerc topped the timesheets in first practice at the Italian Grand Prix, marking a perfect start to Ferrari's weekend on home soil.",
+     "fecha": "2026-09-04T12:19:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711254_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813148/charles-leclerc-leads-lewis-hamilton-ferrari-one-two-first-practice-italian-grand-prix-formula-1-monza"
+    },
+    {
      "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
      "fecha": "2026-09-04T06:21:34Z",
@@ -2647,27 +2661,6 @@
      "fecha": "2026-09-03T17:10:53Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1710860_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49815730/lewis-hamilton-ferrari-f40-road-car-iconic-arrival-italian-grand-prix"
-    },
-    {
-     "titulo": "Norris: I want to help drivers achieve their dream",
-     "resumen": "Norris: I want to help drivers achieve their dream.",
-     "fecha": "2026-09-03T17:03:14Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0903/dm_260903_Norris_I_want_to_help_drivers_achieve_their_dream/dm_260903_Norris_I_want_to_help_drivers_achieve_their_dream.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49815884/want-help-drivers-achieve-their-dream"
-    },
-    {
-     "titulo": "Hamilton arrives in 'iconic' Ferrari F40 for Italian Grand Prix weekend",
-     "resumen": "Hamilton arrives in 'iconic' Ferrari F40 for Italian Grand Prix weekend",
-     "fecha": "2026-09-03T17:02:58Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0903/dm_260903_Hamilton_arrives_in_iconic_Ferrari_F40_for_Italian_Grand_Prix_weekend/dm_260903_Hamilton_arrives_in_iconic_Ferrari_F40_for_Italian_Grand_Prix_weekend.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49815866/hamilton-arrives-iconic-ferrari-f40-italian-grand-prix-weekend"
-    },
-    {
-     "titulo": "Lando Norris says he would be 'proud' if he finished his F1 career with McLaren",
-     "resumen": "Lando Norris has said his McLaren contract extension was an easy decision to make while the team is enjoying such success, suggesting he would be happy to eventually retire from Formula 1 as a one-team man.",
-     "fecha": "2026-09-03T16:24:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710916_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813099/lando-norris-says-proud-finished-formula-1-career-mclaren-italian-grand-prix-monza"
     }
    ],
    "resultados": null,
