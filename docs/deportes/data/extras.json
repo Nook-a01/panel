@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04T04:30:35.582Z",
+ "actualizado": "2026-09-04T09:37:55.730Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -621,6 +621,18 @@
      "lesionado": false
     },
     {
+     "id": "171771",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+     "nombre": "Enner Valencia",
+     "dorsal": "13",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 36,
+     "pais": "Ecuador",
+     "foto": null,
+     "lesionado": false
+    },
+    {
      "id": "260812",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
      "nombre": "Miguel Merentiel",
@@ -667,19 +679,6 @@
      "pais": "Paraguay",
      "foto": null,
      "lesionado": false
-    },
-    {
-     "id": "171771",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
-     "nombre": "Enner Valencia",
-     "dorsal": "30",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 36,
-     "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
     },
     {
      "id": "382976",
@@ -1073,8 +1072,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1098,9 +1098,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1691,8 +1690,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1740,9 +1740,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1753,9 +1752,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1766,8 +1764,9 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "199032",
@@ -1862,8 +1861,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "125088",
@@ -2628,6 +2628,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
+     "fecha": "2026-09-04T06:21:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-04T06:21:13Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Why Lewis Hamilton brought his dream Ferrari F40 road car and his iconic arrival at Italian GP",
      "resumen": "Lewis Hamilton shares the story behind buying his dream Ferrari F40 road car.",
      "fecha": "2026-09-03T17:10:53Z",
@@ -2654,20 +2668,6 @@
      "fecha": "2026-09-03T16:24:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1710916_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813099/lando-norris-says-proud-finished-formula-1-career-mclaren-italian-grand-prix-monza"
-    },
-    {
-     "titulo": "Italian Grand Prix declared heat hazard; second race this season",
-     "resumen": "The Italian Grand Prix has been declared a heat hazard by the FIA as temperatures soar in Monza.",
-     "fecha": "2026-09-03T15:44:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710903_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813095/italian-grand-prix-declared-heat-hazard-second-race-season-formula-1-monza"
-    },
-    {
-     "titulo": "Fernando Alonso uncertain on future: 'This is not the Formula 1 we grew up with'",
-     "resumen": "Fernando Alonso has said his decision on whether to keep racing into 2027 with Aston Martin is still not made because \"this is not the Formula 1 we grew up with.\"",
-     "fecha": "2026-09-03T13:32:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710844_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813079/fernando-alonso-uncertain-future-not-formula-1-grew-italian-grand-prix-monza"
     }
    ],
    "resultados": null,
