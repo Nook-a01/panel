@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04T14:20:53.644Z",
+ "actualizado": "2026-09-04T18:23:23.854Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -628,8 +629,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -640,9 +642,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1034,8 +1035,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1046,8 +1048,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1070,8 +1073,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1095,8 +1099,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1119,8 +1124,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1179,8 +1185,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1327,13 +1334,6 @@
      "fecha": "2026-08-25T09:18:38Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0825/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49720082/would-combined-uefa-concacaf-nations-league-benefit-usmnt"
-    },
-    {
-     "titulo": "Hislop: Pochettino should name Cavan Sullivan on next USMNT roster",
-     "resumen": "Hislop: Pochettino should name Cavan Sullivan on next USMNT roster",
-     "fecha": "2026-08-21T08:22:13Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0821/dm_260821_COM_SOC_Analysis_Hislop_Pochettino_should_name_Cavan_Sullivan_on_next_USMNT_roster_20260821_GLO/dm_260821_COM_SOC_Analysis_Hislop_Pochettino_should_name_Cavan_Sullivan_on_next_USMNT_roster_20260821_GLO.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49678510/pochettino-name-cavan-sullivan-next-usmnt-roster"
     }
    ],
    "resultados": null,
@@ -1575,8 +1575,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1599,8 +1600,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1685,8 +1687,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1697,8 +1700,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1745,8 +1749,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1757,8 +1762,9 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "199032",
@@ -1853,8 +1859,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "125088",
@@ -1967,18 +1974,18 @@
    ],
    "noticias": [
     {
+     "titulo": "Tata Martino warns Atlanta vs. Miami: No way to neutralize Messi",
+     "resumen": "Atlanta United FC head coach Gerardo \"Tata\" Martino warned his players of Lionel Messi's capabilities on the field ahead of the MLS regular season clash against Inter Miami CF on Saturday at Nu Stadium.",
+     "fecha": "2026-09-04T14:38:38Z",
+     "imagen": "https://a.espncdn.com/photo/2023/1219/r1268260_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49825369/tata-martino-warns-atlanta-vs-miami-no-way-neutralize-messi"
+    },
+    {
      "titulo": "Matías Galarza joins Inter Miami from River Plate",
      "resumen": "Matías Galarza has joined Inter Miami CF from Argentinian side River Plate.",
      "fecha": "2026-09-03T17:27:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1710661_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49808396/matias-galarza-joins-inter-miami-river-plate"
-    },
-    {
-     "titulo": "Inter Miami signs Riquelme from Palmeiras through 2030",
-     "resumen": "Inter Miami has signed Riquelme Fillipi from Brazilian team Palmeiras through the conclusion of the 2029-30 MLS season, with an extension option for the 2030-31 season.",
-     "fecha": "2026-09-03T17:08:52Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0902/r1710451_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49805093/inter-miami-signs-riquelme-palmeiras-2030"
     },
     {
      "titulo": "South Africa's Lyle Foster joins Dynamo on loan from Burnley",
@@ -2231,10 +2238,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2621,6 +2627,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Flavio Briatore takes aim at McLaren and 'nasty' judge after Pierre Gasly ruling",
+     "resumen": "Flavio Briatore has accused a \"nasty\" FIA judge of having a \"working relationship\" with McLaren in an extraordinary outburst against the British team on the eve of Sunday's Italian Grand Prix.",
+     "fecha": "2026-09-04T16:24:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711350_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813153/flavio-briatore-takes-aim-mclaren-nasty-judge-pierre-gasly-ruling"
+    },
+    {
+     "titulo": "George Russell fastest in second practice at Italian Grand Prix, Charles Leclerc behind",
+     "resumen": "George Russell landed a timely world championship boost by finishing fastest in practice for the Italian Grand Prix.",
+     "fecha": "2026-09-04T16:00:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711247_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813152/george-russell-fastest-second-practice-italian-grand-prix-charles-leclerc-formula-1-monza"
+    },
+    {
      "titulo": "Alpine's Pierre Gasly stripped of Monaco GP podium after McLaren and Red Bull win appeal",
      "resumen": "Pierre Gasly's penalties from the Monaco Grand Prix have been reinstated 89 days after the race, meaning he has lost the podium to Isack Hadjar a second time.",
      "fecha": "2026-09-04T13:23:54Z",
@@ -2642,25 +2662,11 @@
      "link": "https://www.espn.com/f1/story/_/id/49813148/charles-leclerc-leads-lewis-hamilton-ferrari-one-two-first-practice-italian-grand-prix-formula-1-monza"
     },
     {
-     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-09-04T06:21:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
      "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
      "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
      "fecha": "2026-09-04T06:21:13Z",
      "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "Why Lewis Hamilton brought his dream Ferrari F40 road car and his iconic arrival at Italian GP",
-     "resumen": "Lewis Hamilton shares the story behind buying his dream Ferrari F40 road car.",
-     "fecha": "2026-09-03T17:10:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710860_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49815730/lewis-hamilton-ferrari-f40-road-car-iconic-arrival-italian-grand-prix"
     }
    ],
    "resultados": null,
