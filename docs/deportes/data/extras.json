@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T16:03:25.707Z",
+ "actualizado": "2026-09-05T18:16:53.422Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1046,9 +1046,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1095,9 +1094,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1180,9 +1178,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1569,9 +1566,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1594,9 +1590,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1607,9 +1602,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1620,9 +1614,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1693,9 +1686,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1742,9 +1734,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1755,9 +1746,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1768,9 +1758,8 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290715",
@@ -2120,7 +2109,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 12 carreras",
+    "titulo": "Temporada 2026 · tras 13 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2619,11 +2608,39 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton on title fight: 'There's light at the end of the tunnel, but it's getting dimmer'",
+     "resumen": "Lewis Hamilton appeared to issue a message to his misfiring Ferrari team after qualifying for the Italian Grand Prix: prioritise me now or we can kiss the 2026 championship goodbye.",
+     "fecha": "2026-09-05T17:57:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711803_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813191/lewis-hamilton-title-fight-theres-light-end-tunnel-getting-dimmer-italian-grand-prix-formula-1-monza"
+    },
+    {
      "titulo": "Italian Grand Prix: Alpine's Pierre Gasly takes thrilling first career pole, Ferrari off the pace",
      "resumen": "Pierre Gasly delivered the shock of the season by taking the first pole position of his career for Sunday's Italian Grand Prix.",
-     "fecha": "2026-09-05T15:57:33Z",
+     "fecha": "2026-09-05T17:45:12Z",
      "imagen": "https://a.espncdn.com/photo/2026/0905/r1711783_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813189/alpine-pierre-gasly-takes-thrilling-first-career-pole-italian-grand-prix-ferrari-pace-formula-1-monza"
+    },
+    {
+     "titulo": "Pierre Gasly checkmates George Russell in chess before stunning him to Italian GP pole",
+     "resumen": "Before beating George Russell to pole position at the Italian Grand Prix, Pierre Gasly has revealed he also beat the Mercedes driver in a game of online chess.",
+     "fecha": "2026-09-05T17:44:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711812_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813192/pierre-gasly-checkmates-george-russell-chess-stunning-italian-grand-prix-pole-monza-formula-1"
+    },
+    {
+     "titulo": "Pierre Gasly reflects on 'very special' Monza pole",
+     "resumen": "Pierre Gasly reflects on 'very special' Monza pole",
+     "fecha": "2026-09-05T17:41:31Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0905/dm_260905_COM_F1_Presser_Pierre_Gasly_reflects_on_very_special_Monza_pole_20260905_GLOBAL_EX_GER/dm_260905_COM_F1_Presser_Pierre_Gasly_reflects_on_very_special_Monza_pole_20260905_GLOBAL_EX_GER.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49837394/pierre-gasly-reflects-very-special-monza-pole"
+    },
+    {
+     "titulo": "Oscar Piastri hit with three-place grid penalty after impeding in qualifying for Italian Grand Prix",
+     "resumen": "MONZA, Italy -- Oscar Piastri has dropped three places on the Italian Grand Prix grid to sixth after he was penalised for impeding Liam Lawson's Red Bull during Q2 at Monza.",
+     "fecha": "2026-09-05T16:59:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711815_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813193/oscar-piastri-hit-three-place-grid-penalty-impeding-qualifying-italian-grand-prix-monza"
     },
     {
      "titulo": "McLaren 'insulted' as Alpine's Briatore denounces podium judge",
@@ -2631,34 +2648,6 @@
      "fecha": "2026-09-05T13:13:27Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0905/dm_260905_McLaren_insulted_as_Alpines_Briatore_denounces_podium_judge/dm_260905_McLaren_insulted_as_Alpines_Briatore_denounces_podium_judge.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49834790/mclaren-insulted-alpine-briatore-denounces-podium-judge"
-    },
-    {
-     "titulo": "Italian Grand Prix: Lewis Hamilton and Max Verstappen clash at Monza as George Russell sets pace",
-     "resumen": "Lewis Hamilton and Max Verstappen evoked memories of their 2021 title scrap as they clashed in practice for the Italian Grand Prix.",
-     "fecha": "2026-09-05T12:18:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711694_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813188/lewis-hamilton-max-verstappen-clash-monza-george-russell-sets-pace-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Flavio Briatore takes aim at McLaren and 'nasty' judge after Pierre Gasly ruling",
-     "resumen": "Flavio Briatore has accused a \"nasty\" FIA judge of having a \"working relationship\" with McLaren in an extraordinary outburst against the British team on the eve of Sunday's Italian Grand Prix.",
-     "fecha": "2026-09-05T10:55:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711350_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813153/flavio-briatore-takes-aim-mclaren-nasty-judge-pierre-gasly-ruling"
-    },
-    {
-     "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-09-05T10:37:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "George Russell fastest in second practice at Italian Grand Prix, Charles Leclerc behind",
-     "resumen": "George Russell landed a timely world championship boost by finishing fastest in practice for the Italian Grand Prix.",
-     "fecha": "2026-09-04T16:00:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711247_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813152/george-russell-fastest-second-practice-italian-grand-prix-charles-leclerc-formula-1-monza"
     }
    ],
    "resultados": null,
@@ -2848,6 +2837,15 @@
      "categoria": "Catch Weight",
      "record": "20-9-0",
      "peleas": 4,
+     "gano": 2
+    },
+    {
+     "id": "4279621",
+     "nombre": "Modestas Bukauskas",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ltu.png",
+     "categoria": "Light Heavyweight",
+     "record": "20-7-0",
+     "peleas": 3,
      "gano": 2
     },
     {
@@ -3100,15 +3098,6 @@
      "categoria": "Featherweight",
      "record": "11-0-0",
      "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5236142",
-     "nombre": "Jonathan Micallef",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Welterweight",
-     "record": "10-1-0",
-     "peleas": 2,
      "gano": 2
     }
    ]
