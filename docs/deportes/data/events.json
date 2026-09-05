@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T20:26:12.773Z",
+ "actualizado": "2026-09-05T22:53:47.024Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -48,7 +48,7 @@
    "ruta": "rugby",
    "liga": "289234",
    "total": 3,
-   "proximos": 1
+   "proximos": 0
   },
   {
    "id": "f1",
@@ -641,7 +641,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
@@ -663,8 +663,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "id": "espn-603461",
