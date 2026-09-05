@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T12:41:50.884Z",
+ "actualizado": "2026-09-05T16:03:25.707Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1010,9 +1009,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1073,9 +1071,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1086,9 +1083,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1099,8 +1095,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1123,9 +1120,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1184,8 +1180,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1572,8 +1569,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1596,8 +1594,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1621,8 +1620,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1742,8 +1742,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1754,8 +1755,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1766,8 +1768,9 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290715",
@@ -2616,6 +2619,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Italian Grand Prix: Alpine's Pierre Gasly takes thrilling first career pole, Ferrari off the pace",
+     "resumen": "Pierre Gasly delivered the shock of the season by taking the first pole position of his career for Sunday's Italian Grand Prix.",
+     "fecha": "2026-09-05T15:57:33Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711783_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813189/alpine-pierre-gasly-takes-thrilling-first-career-pole-italian-grand-prix-ferrari-pace-formula-1-monza"
+    },
+    {
+     "titulo": "McLaren 'insulted' as Alpine's Briatore denounces podium judge",
+     "resumen": "McLaren 'insulted' as Alpine's Briatore denounces podium judge",
+     "fecha": "2026-09-05T13:13:27Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0905/dm_260905_McLaren_insulted_as_Alpines_Briatore_denounces_podium_judge/dm_260905_McLaren_insulted_as_Alpines_Briatore_denounces_podium_judge.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49834790/mclaren-insulted-alpine-briatore-denounces-podium-judge"
+    },
+    {
      "titulo": "Italian Grand Prix: Lewis Hamilton and Max Verstappen clash at Monza as George Russell sets pace",
      "resumen": "Lewis Hamilton and Max Verstappen evoked memories of their 2021 title scrap as they clashed in practice for the Italian Grand Prix.",
      "fecha": "2026-09-05T12:18:27Z",
@@ -2642,20 +2659,6 @@
      "fecha": "2026-09-04T16:00:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/0904/r1711247_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813152/george-russell-fastest-second-practice-italian-grand-prix-charles-leclerc-formula-1-monza"
-    },
-    {
-     "titulo": "Alpine's Pierre Gasly stripped of Monaco GP podium after McLaren and Red Bull win appeal",
-     "resumen": "Pierre Gasly's penalties from the Monaco Grand Prix have been reinstated 89 days after the race, meaning he has lost the podium to Isack Hadjar a second time.",
-     "fecha": "2026-09-04T13:23:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711243_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813150/alpine-pierre-gasly-stripped-monaco-gp-podium-mclaren-red-bull-win-appeal"
-    },
-    {
-     "titulo": "F1 to launch 2027 season with Milan festival featuring drivers, all 11 teams",
-     "resumen": "Formula 1 will launch its 2027 season with a three-day fan festival in Milan, culminating in a major live show featuring the drivers and team principals from all 11 teams.",
-     "fecha": "2026-09-04T13:03:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0904/r1711280_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813151/formula-1-launch-2027-season-milan-festival-featuring-drivers-all-11-teams"
     }
    ],
    "resultados": null,
@@ -2716,6 +2719,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC Fight Night: Hooker vs. Parnasse",
+     "fecha": "2026-09-05T16:00Z",
+     "marcador": null,
+     "sede": "Accor Arena"
+    },
     {
      "titulo": "UFC Fight Night: Nurmagomedov vs. Song",
      "fecha": "2026-08-29T07:00Z",
