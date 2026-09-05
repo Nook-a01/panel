@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T16:03:25.707Z",
+ "actualizado": "2026-09-05T20:26:12.773Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 20,
-   "proximos": 12
+   "proximos": 11
   },
   {
    "id": "argentina",
