@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T00:04:18.785Z",
+ "actualizado": "2026-09-05T04:25:31.172Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -131,10 +131,10 @@
       "equipo": "Deportivo Riestra",
       "abrev": "RIE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-      "pj": "7",
-      "pts": "8",
+      "pj": "8",
+      "pts": "9",
       "g": "2",
-      "e": "2",
+      "e": "3",
       "p": "3",
       "dg": "+1",
       "mio": false,
@@ -144,10 +144,10 @@
       "equipo": "Platense",
       "abrev": "PLA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-      "pj": "7",
-      "pts": "8",
+      "pj": "8",
+      "pts": "9",
       "g": "2",
-      "e": "2",
+      "e": "3",
       "p": "3",
       "dg": "-4",
       "mio": false,
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -422,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -626,8 +629,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -1007,8 +1011,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1031,8 +1036,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1043,8 +1049,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1067,8 +1074,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1079,8 +1087,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1115,8 +1124,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1163,8 +1173,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1175,8 +1186,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1248,8 +1260,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1348,10 +1361,10 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "22",
-      "pts": "52",
+      "pj": "23",
+      "pts": "53",
       "g": "16",
-      "e": "4",
+      "e": "5",
       "p": "2",
       "dg": "+30",
       "mio": false,
@@ -1426,10 +1439,10 @@
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "22",
-      "pts": "28",
+      "pj": "23",
+      "pts": "29",
       "g": "7",
-      "e": "7",
+      "e": "8",
       "p": "8",
       "dg": "+5",
       "mio": false,
@@ -1959,6 +1972,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Nashville rookie Brian Schwake duels NYCFC's Matt Freese to scoreless draw",
+     "resumen": " Nashville SC goalkeeper Brian Schwake dueled New York City FC's Matt Freese to a scoreless draw at Yankee Stadium on Friday night.",
+     "fecha": "2026-09-05T04:23:47Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761770.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761770"
+    },
+    {
+     "titulo": "New York City FC vs. Nashville SC - Game Highlights",
+     "resumen": "Watch the Game Highlights from New York City FC vs. Nashville SC, 09/04/2026",
+     "fecha": "2026-09-05T01:45:55Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0905/8ae208ac-1e07-43be-99fd-59e2a802fb0d/8ae208ac-1e07-43be-99fd-59e2a802fb0d.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49830480/new-york-city-fc-vs-nashville-sc-game-highlights"
+    },
+    {
      "titulo": "Tata Martino warns Atlanta vs. Miami: No way to neutralize Messi",
      "resumen": "Atlanta United FC head coach Gerardo \"Tata\" Martino warned his players of Lionel Messi's capabilities on the field ahead of the MLS regular season clash against Inter Miami CF on Saturday at Nu Stadium.",
      "fecha": "2026-09-04T14:38:38Z",
@@ -1985,20 +2012,6 @@
      "fecha": "2026-09-03T13:19:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1710853_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49813789/rangers-close-signing-portland-timbers-striker-kevin-kelsy"
-    },
-    {
-     "titulo": "América vs. Monterrey - Game Highlights",
-     "resumen": "América vs. Monterrey - Game Highlights",
-     "fecha": "2026-09-03T06:09:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0903/fc5677bd-5d74-482d-aa8a-7de9250c0823/fc5677bd-5d74-482d-aa8a-7de9250c0823.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49810751/america-vs-monterrey-game-highlights"
-    },
-    {
-     "titulo": "Toluca vs. León - Game Highlights",
-     "resumen": "Watch the Game Highlights from Toluca vs. León, 09/02/2026",
-     "fecha": "2026-09-03T03:56:30Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0903/428eb0bc-94d1-40b2-a89f-6a43c0b3fa2b/428eb0bc-94d1-40b2-a89f-6a43c0b3fa2b.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49809826/toluca-vs-leon-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
