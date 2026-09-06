@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T21:19:43.536Z",
+ "actualizado": "2026-09-06T23:52:42.320Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -66,14 +66,27 @@
       "equipo": "Defensa y Justicia",
       "abrev": "DYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-      "pj": "7",
+      "pj": "8",
       "pts": "14",
       "g": "4",
       "e": "2",
-      "p": "1",
-      "dg": "+1",
+      "p": "2",
+      "dg": "0",
       "mio": false,
       "pos": 4
+     },
+     {
+      "equipo": "Independiente",
+      "abrev": "IND",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+      "pj": "8",
+      "pts": "13",
+      "g": "4",
+      "e": "1",
+      "p": "3",
+      "dg": "+1",
+      "mio": false,
+      "pos": 5
      },
      {
       "equipo": "Newell's Old Boys",
@@ -86,7 +99,7 @@
       "p": "2",
       "dg": "+2",
       "mio": false,
-      "pos": 5
+      "pos": 6
      },
      {
       "equipo": "Boca Juniors",
@@ -99,7 +112,7 @@
       "p": "1",
       "dg": "-1",
       "mio": true,
-      "pos": 6
+      "pos": 7
      },
      {
       "equipo": "Unión (Santa Fe)",
@@ -112,20 +125,20 @@
       "p": "3",
       "dg": "+2",
       "mio": false,
-      "pos": 7
+      "pos": 8
      },
      {
-      "equipo": "Independiente",
-      "abrev": "IND",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-      "pj": "7",
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "8",
       "pts": "10",
       "g": "3",
       "e": "1",
-      "p": "3",
+      "p": "4",
       "dg": "0",
       "mio": false,
-      "pos": 8
+      "pos": 9
      },
      {
       "equipo": "San Lorenzo",
@@ -138,7 +151,7 @@
       "p": "4",
       "dg": "-2",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Deportivo Riestra",
@@ -151,7 +164,7 @@
       "p": "3",
       "dg": "+1",
       "mio": false,
-      "pos": 10
+      "pos": 11
      },
      {
       "equipo": "Platense",
@@ -164,7 +177,7 @@
       "p": "3",
       "dg": "-4",
       "mio": false,
-      "pos": 11
+      "pos": 12
      },
      {
       "equipo": "Estudiantes de La Plata",
@@ -177,31 +190,18 @@
       "p": "5",
       "dg": "-1",
       "mio": false,
-      "pos": 12
-     },
-     {
-      "equipo": "Lanús",
-      "abrev": "LAN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "7",
-      "pts": "7",
-      "g": "2",
-      "e": "1",
-      "p": "4",
-      "dg": "-1",
-      "mio": false,
       "pos": 13
      },
      {
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "7",
+      "pj": "8",
       "pts": "7",
       "g": "2",
       "e": "1",
-      "p": "4",
-      "dg": "-3",
+      "p": "5",
+      "dg": "-4",
       "mio": false,
       "pos": 14
      },
@@ -425,9 +425,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -630,8 +629,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -642,8 +642,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -961,9 +962,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -986,9 +986,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1023,9 +1022,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1048,9 +1046,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1061,9 +1058,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1074,9 +1070,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1087,9 +1082,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1100,9 +1094,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1113,8 +1106,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1137,9 +1131,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1247,9 +1240,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1272,8 +1264,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1587,8 +1580,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1623,8 +1617,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1635,8 +1630,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1707,8 +1703,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1767,8 +1764,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2630,8 +2628,8 @@
    "noticias": [
     {
      "titulo": "Ferrari's vintage disaster-class paves way for Antonelli to win Italian GP",
-     "resumen": "Ferrari couldn't get out of its own way at Monza, and the Italian team's Italian GP was over after just three laps.",
-     "fecha": "2026-09-06T20:58:59Z",
+     "resumen": "Ferrari couldn't get out of its own way at Monza, and the Italian team's Italian GP was effectively over after just three laps.",
+     "fecha": "2026-09-06T23:23:58Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712454_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/49850758/ferrari-vintage-disasterclass-paves-way-kimi-antonelli-take-home-italian-gp-win-monza"
     },
