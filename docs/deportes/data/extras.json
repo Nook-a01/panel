@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T05:56:37.062Z",
+ "actualizado": "2026-09-06T10:54:05.697Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -1165,9 +1167,8 @@
      "posCorta": "M",
      "edad": 21,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1578,8 +1579,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1714,8 +1716,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1750,8 +1753,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1972,6 +1976,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Breel Embolo debut goal gives Atlanta draw at Inter Miami",
+     "resumen": "Switzerland striker Breel Embolo marked his MLS debut by scoring a late penalty to earn Atlanta United a 2-2 draw at Inter Miami on Saturday.",
+     "fecha": "2026-09-06T06:18:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712143_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49843737/inter-miami-atlanta-united-breel-embolo-casemiro-lionel-messi"
+    },
+    {
      "titulo": "Inter Miami CF vs. Atlanta United FC - Game Highlights",
      "resumen": "Watch the Game Highlights from Inter Miami CF vs. Atlanta United FC, 09/05/2026",
      "fecha": "2026-09-06T04:17:04Z",
@@ -1984,13 +1995,6 @@
      "fecha": "2026-09-06T03:44:14Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49842819/cavan-sullivan-freddy-adu-mls-record-philadelphia-union"
-    },
-    {
-     "titulo": "Breel Embolo debut goal gives Atlanta draw at Inter Miami",
-     "resumen": "Switzerland striker Breel Embolo marked his MLS debut by scoring a late penalty to earn Atlanta United a 2-2 draw at Inter Miami on Saturday.",
-     "fecha": "2026-09-06T03:32:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712143_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49843737/inter-miami-atlanta-united-breel-embolo-casemiro-lionel-messi"
     },
     {
      "titulo": "Josh Sargent scores goal for Toronto FC",
@@ -2626,9 +2630,16 @@
     {
      "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
-     "fecha": "2026-09-05T18:18:02Z",
+     "fecha": "2026-09-06T07:05:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0824/r1706266_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49689121/italian-grand-prix-2026-circuit-monza-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-06T07:04:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
     },
     {
      "titulo": "Lewis Hamilton on title fight: 'There's light at the end of the tunnel, but it's getting dimmer'",
@@ -2636,13 +2647,6 @@
      "fecha": "2026-09-05T17:57:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/0905/r1711803_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813191/lewis-hamilton-title-fight-theres-light-end-tunnel-getting-dimmer-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Italian Grand Prix: Alpine's Pierre Gasly takes thrilling first career pole, Ferrari off the pace",
-     "resumen": "Pierre Gasly delivered the shock of the season by taking the first pole position of his career for Sunday's Italian Grand Prix.",
-     "fecha": "2026-09-05T17:45:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711783_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813189/alpine-pierre-gasly-takes-thrilling-first-career-pole-italian-grand-prix-ferrari-pace-formula-1-monza"
     },
     {
      "titulo": "Pierre Gasly checkmates George Russell in chess before stunning him to Italian GP pole",
