@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T19:09:37.930Z",
+ "actualizado": "2026-09-06T21:19:43.536Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -79,10 +79,10 @@
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-      "pj": "7",
-      "pts": "11",
+      "pj": "8",
+      "pts": "12",
       "g": "3",
-      "e": "2",
+      "e": "3",
       "p": "2",
       "dg": "+2",
       "mio": false,
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,8 +425,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1021,8 +1023,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1071,8 +1074,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1083,8 +1087,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1095,8 +1100,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1180,9 +1186,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1193,8 +1198,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1274,7 +1280,7 @@
     {
      "titulo": "FIFA president Gianni Infantino to stand for reelection in 2027",
      "resumen": "Gianni Infantino will run for reelection as FIFA president despite uncertainty over his future in the position following his failed attempt to raise $20 billion with the sale of a stake in future World Cups to private investors.",
-     "fecha": "2026-09-06T17:11:07Z",
+     "fecha": "2026-09-06T20:45:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712226_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49847747/fifa-president-gianni-infantino-stand-re-election-2027"
     },
@@ -2132,8 +2138,8 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "242",
-      "g": "6",
+      "pts": "267",
+      "g": "7",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
       "color": "#00D2BE",
@@ -2148,7 +2154,7 @@
       "equipo": "George Russell",
       "abrev": "RUS",
       "detalle": "Mercedes",
-      "pts": "183",
+      "pts": "201",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2164,7 +2170,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "183",
+      "pts": "191",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2180,7 +2186,7 @@
       "equipo": "Lando Norris",
       "abrev": "NOR",
       "detalle": "McLaren",
-      "pts": "159",
+      "pts": "171",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2212,7 +2218,7 @@
       "equipo": "Max Verstappen",
       "abrev": "VER",
       "detalle": "Red Bull",
-      "pts": "112",
+      "pts": "127",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "nacionalidad": "Dutch",
@@ -2228,7 +2234,7 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "104",
+      "pts": "116",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
@@ -2244,7 +2250,7 @@
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "68",
+      "pts": "71",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2260,7 +2266,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "49",
+      "pts": "51",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2276,7 +2282,7 @@
       "equipo": "Pierre Gasly",
       "abrev": "GAS",
       "detalle": "Alpine F1 Team",
-      "pts": "44",
+      "pts": "41",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2292,7 +2298,7 @@
       "equipo": "Arvid Lindblad",
       "abrev": "LIN",
       "detalle": "RB F1 Team",
-      "pts": "23",
+      "pts": "29",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2308,7 +2314,7 @@
       "equipo": "Franco Colapinto",
       "abrev": "COL",
       "detalle": "Alpine F1 Team",
-      "pts": "19",
+      "pts": "21",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
       "nacionalidad": "Argentine",
@@ -2436,7 +2442,7 @@
       "equipo": "Yuki Tsunoda",
       "abrev": "TSU",
       "detalle": "RB F1 Team",
-      "pts": "0",
+      "pts": "1",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
       "nacionalidad": "Japanese",
@@ -2501,8 +2507,8 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "425",
-      "g": "8",
+      "pts": "468",
+      "g": "9",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "logo": null,
@@ -2512,7 +2518,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "338",
+      "pts": "346",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2523,7 +2529,7 @@
       "pos": 3,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "263",
+      "pts": "287",
       "g": "2",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2534,7 +2540,7 @@
       "pos": 4,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "186",
+      "pts": "204",
       "g": "0",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2545,7 +2551,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "66",
+      "pts": "75",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2556,7 +2562,7 @@
       "pos": 6,
       "equipo": "Alpine F1 Team",
       "detalle": "French",
-      "pts": "63",
+      "pts": "62",
       "g": "0",
       "color": "#FFF500",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
@@ -2623,9 +2629,23 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Toto Wolff predicted Kimi Antonelli had potential to 'walk on water' after 19th to victory at Italian GP",
+     "titulo": "Ferrari's vintage disaster-class paves way for Antonelli to win Italian GP",
+     "resumen": "Ferrari couldn't get out of its own way at Monza, and the Italian team's Italian GP was over after just three laps.",
+     "fecha": "2026-09-06T20:58:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712454_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/49850758/ferrari-vintage-disasterclass-paves-way-kimi-antonelli-take-home-italian-gp-win-monza"
+    },
+    {
+     "titulo": "Antonelli: Italian GP comeback win 'a day to remember forever'",
+     "resumen": "Antonelli: Italian GP comeback win 'a day to remember forever'",
+     "fecha": "2026-09-06T19:41:54Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0906/dm_260906_COM_F1_Presser_Antonelli_Italian_GP_comeback_win_a_day_to_remember_forever_20260906/dm_260906_COM_F1_Presser_Antonelli_Italian_GP_comeback_win_a_day_to_remember_forever_20260906.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49851543/italian-gp-comeback-win-day-remember-forever"
+    },
+    {
+     "titulo": "Toto Wolff predicted Kimi Antonelli had potential to 'walk over water' from 19th to victory at Italian GP",
      "resumen": "Mercedes boss Toto Wolff claims he knew ahead of Sunday's Italian Grand Prix that Kimi Antonelli had the potential to \"walk over water\" and win the race from 19th on the grid.",
-     "fecha": "2026-09-06T19:07:01Z",
+     "fecha": "2026-09-06T19:26:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712360_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813287/toto-wolff-predicted-kimi-antonelli-had-potential-walk-water-italian-grand-prix-italian-grand-prix-formula-1-monza"
     },
@@ -2649,20 +2669,6 @@
      "fecha": "2026-09-06T17:30:36Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712335_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813284/charles-leclerc-reflects-battle-lewis-hamilton-went-too-far-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Kimi Antonelli comes from 19th on the grid to win sensational home Italian Grand Prix",
-     "resumen": "Kimi Antonelli dealt a seismic blow to George Russell's hopes of taking the world championship by passing his Mercedes teammate with just three laps remaining to win the Italian Grand Prix after he started 19th on the grid.",
-     "fecha": "2026-09-06T16:41:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712320_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813281/kimi-antonelli-comes-19th-grid-win-home-italian-grand-prix-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Kimi Antonelli wins Italian Grand Prix, first Italian to win in Monza since 1966 - as it happened",
-     "resumen": "Kimi Antonelli came from 19th on the grid to win his home race at the Italian Grand Prix with a magical drive around Monza.",
-     "fecha": "2026-09-06T16:27:37Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712309_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49814103/italian-grand-prix-2026-live-monza-f1-latest-updates-commentary-result-charles-leclerc-lewis-hamilton-george-russell-kimi-antonelli-max-verstappen-lando-norris"
     }
    ],
    "resultados": null,
