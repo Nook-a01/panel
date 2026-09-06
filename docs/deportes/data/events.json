@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T00:55:34.410Z",
+ "actualizado": "2026-09-06T05:56:37.062Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -655,7 +655,7 @@
    "sport": "futbol",
    "emoji": "🩷",
    "titulo": "Inter Miami CF vs Atlanta United FC",
-   "inicio": "2026-09-05T23:30Z",
+   "inicio": "2026-09-06T01:05Z",
    "horaConfirmada": true,
    "competicion": "MLS",
    "sede": "Nu Stadium",
@@ -663,8 +663,8 @@
    "visitante": "Atlanta United FC",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",

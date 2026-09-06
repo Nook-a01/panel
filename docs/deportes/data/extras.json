@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T00:55:34.410Z",
+ "actualizado": "2026-09-06T05:56:37.062Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -37,6 +37,19 @@
       "pos": 1
      },
      {
+      "equipo": "Vélez Sarsfield",
+      "abrev": "VEL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+      "pj": "8",
+      "pts": "16",
+      "g": "4",
+      "e": "4",
+      "p": "0",
+      "dg": "+5",
+      "mio": false,
+      "pos": 2
+     },
+     {
       "equipo": "Instituto (Córdoba)",
       "abrev": "IACC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
@@ -47,7 +60,7 @@
       "p": "1",
       "dg": "+4",
       "mio": false,
-      "pos": 2
+      "pos": 3
      },
      {
       "equipo": "Defensa y Justicia",
@@ -59,19 +72,6 @@
       "e": "2",
       "p": "1",
       "dg": "+1",
-      "mio": false,
-      "pos": 3
-     },
-     {
-      "equipo": "Vélez Sarsfield",
-      "abrev": "VEL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-      "pj": "7",
-      "pts": "13",
-      "g": "3",
-      "e": "4",
-      "p": "0",
-      "dg": "+4",
       "mio": false,
       "pos": 4
      },
@@ -170,12 +170,12 @@
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-      "pj": "7",
+      "pj": "8",
       "pts": "7",
       "g": "2",
       "e": "1",
-      "p": "4",
-      "dg": "0",
+      "p": "5",
+      "dg": "-1",
       "mio": false,
       "pos": 12
      },
@@ -422,9 +422,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -627,9 +626,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -640,9 +638,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1022,9 +1019,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1073,9 +1069,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1086,9 +1081,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1099,9 +1093,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1112,9 +1105,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1173,8 +1165,9 @@
      "posCorta": "M",
      "edad": 21,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1197,9 +1190,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1271,9 +1263,8 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
@@ -1385,10 +1376,10 @@
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "22",
-      "pts": "42",
+      "pj": "23",
+      "pts": "43",
       "g": "12",
-      "e": "6",
+      "e": "7",
       "p": "4",
       "dg": "+15",
       "mio": true,
@@ -1398,10 +1389,10 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "21",
-      "pts": "37",
+      "pj": "22",
+      "pts": "38",
       "g": "11",
-      "e": "4",
+      "e": "5",
       "p": "6",
       "dg": "+11",
       "mio": false,
@@ -1411,12 +1402,12 @@
       "equipo": "New England Revolution",
       "abrev": "NE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "22",
+      "pj": "23",
       "pts": "37",
       "g": "11",
       "e": "4",
-      "p": "7",
-      "dg": "+9",
+      "p": "8",
+      "dg": "+8",
       "mio": false,
       "pos": 4
      },
@@ -1424,10 +1415,10 @@
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "22",
-      "pts": "35",
+      "pj": "23",
+      "pts": "36",
       "g": "10",
-      "e": "5",
+      "e": "6",
       "p": "7",
       "dg": "+8",
       "mio": false,
@@ -1460,30 +1451,56 @@
       "pos": 7
      },
      {
+      "equipo": "Orlando City SC",
+      "abrev": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "pj": "23",
+      "pts": "28",
+      "g": "8",
+      "e": "4",
+      "p": "11",
+      "dg": "-16",
+      "mio": false,
+      "pos": 8
+     },
+     {
+      "equipo": "Philadelphia Union",
+      "abrev": "PHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+      "pj": "23",
+      "pts": "27",
+      "g": "7",
+      "e": "6",
+      "p": "10",
+      "dg": "-3",
+      "mio": false,
+      "pos": 9
+     },
+     {
       "equipo": "Red Bull New York",
       "abrev": "RBNY",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "22",
-      "pts": "26",
+      "pj": "23",
+      "pts": "27",
       "g": "7",
-      "e": "5",
+      "e": "6",
       "p": "10",
       "dg": "-14",
       "mio": false,
-      "pos": 8
+      "pos": 10
      },
      {
       "equipo": "Toronto FC",
       "abrev": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-      "pj": "22",
-      "pts": "25",
+      "pj": "23",
+      "pts": "26",
       "g": "5",
-      "e": "10",
+      "e": "11",
       "p": "7",
       "dg": "-6",
       "mio": false,
-      "pos": 9
+      "pos": 11
      },
      {
       "equipo": "D.C. United",
@@ -1496,70 +1513,44 @@
       "p": "7",
       "dg": "-8",
       "mio": false,
-      "pos": 10
-     },
-     {
-      "equipo": "Orlando City SC",
-      "abrev": "ORL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "22",
-      "pts": "25",
-      "g": "7",
-      "e": "4",
-      "p": "11",
-      "dg": "-17",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "Philadelphia Union",
-      "abrev": "PHI",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "22",
-      "pts": "24",
-      "g": "6",
-      "e": "6",
-      "p": "10",
-      "dg": "-5",
-      "mio": false,
       "pos": 12
-     },
-     {
-      "equipo": "Atlanta United FC",
-      "abrev": "ATL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "22",
-      "pts": "21",
-      "g": "6",
-      "e": "3",
-      "p": "13",
-      "dg": "-13",
-      "mio": false,
-      "pos": 13
-     },
-     {
-      "equipo": "CF Montréal",
-      "abrev": "MTL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "22",
-      "pts": "21",
-      "g": "5",
-      "e": "6",
-      "p": "11",
-      "dg": "-16",
-      "mio": false,
-      "pos": 14
      },
      {
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "22",
-      "pts": "20",
-      "g": "5",
+      "pj": "23",
+      "pts": "23",
+      "g": "6",
       "e": "5",
       "p": "12",
-      "dg": "-8",
+      "dg": "-5",
+      "mio": false,
+      "pos": 13
+     },
+     {
+      "equipo": "Atlanta United FC",
+      "abrev": "ATL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+      "pj": "23",
+      "pts": "22",
+      "g": "6",
+      "e": "4",
+      "p": "13",
+      "dg": "-13",
+      "mio": false,
+      "pos": 14
+     },
+     {
+      "equipo": "CF Montréal",
+      "abrev": "MTL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+      "pj": "23",
+      "pts": "21",
+      "g": "5",
+      "e": "6",
+      "p": "12",
+      "dg": "-18",
       "mio": false,
       "pos": 15
      }
@@ -1587,9 +1578,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1612,8 +1602,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1771,9 +1762,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1982,6 +1972,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Inter Miami CF vs. Atlanta United FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Inter Miami CF vs. Atlanta United FC, 09/05/2026",
+     "fecha": "2026-09-06T04:17:04Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0906/1a7bf67b-a170-42af-bcda-9f16723e5344/1a7bf67b-a170-42af-bcda-9f16723e5344.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49843980/inter-miami-cf-vs-atlanta-united-fc-game-highlights"
+    },
+    {
+     "titulo": "Cavan Sullivan, 16, breaks Freddy Adu's MLS record",
+     "resumen": "Philadelphia Union teenage star Cavan Sullivan scored in a third successive MLS game and in the process broke a record set by one-time U.S. soccer prodigy Freddy Adu.",
+     "fecha": "2026-09-06T03:44:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49842819/cavan-sullivan-freddy-adu-mls-record-philadelphia-union"
+    },
+    {
+     "titulo": "Breel Embolo debut goal gives Atlanta draw at Inter Miami",
+     "resumen": "Switzerland striker Breel Embolo marked his MLS debut by scoring a late penalty to earn Atlanta United a 2-2 draw at Inter Miami on Saturday.",
+     "fecha": "2026-09-06T03:32:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712143_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49843737/inter-miami-atlanta-united-breel-embolo-casemiro-lionel-messi"
+    },
+    {
+     "titulo": "Josh Sargent scores goal for Toronto FC",
+     "resumen": "Josh Sargent scores goal for Toronto FC",
+     "fecha": "2026-09-06T02:07:12Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0906/797bb4e1-10c4-4e01-8401-66e2f54ba186/797bb4e1-10c4-4e01-8401-66e2f54ba186.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49842494/josh-sargent-scores-goal-toronto-fc"
+    },
+    {
      "titulo": "Nashville rookie Brian Schwake duels NYCFC's Matt Freese to scoreless draw",
      "resumen": " Nashville SC goalkeeper Brian Schwake dueled New York City FC's Matt Freese to a scoreless draw at Yankee Stadium on Friday night.",
      "fecha": "2026-09-05T04:58:21Z",
@@ -1994,34 +2012,6 @@
      "fecha": "2026-09-05T01:45:55Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0905/8ae208ac-1e07-43be-99fd-59e2a802fb0d/8ae208ac-1e07-43be-99fd-59e2a802fb0d.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49830480/new-york-city-fc-vs-nashville-sc-game-highlights"
-    },
-    {
-     "titulo": "Tata Martino warns Atlanta vs. Miami: No way to neutralize Messi",
-     "resumen": "Atlanta United FC head coach Gerardo \"Tata\" Martino warned his players of Lionel Messi's capabilities on the field ahead of the MLS regular season clash against Inter Miami CF on Saturday at Nu Stadium.",
-     "fecha": "2026-09-04T14:38:38Z",
-     "imagen": "https://a.espncdn.com/photo/2023/1219/r1268260_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49825369/tata-martino-warns-atlanta-vs-miami-no-way-neutralize-messi"
-    },
-    {
-     "titulo": "Matías Galarza joins Inter Miami from River Plate",
-     "resumen": "Matías Galarza has joined Inter Miami CF from Argentinian side River Plate.",
-     "fecha": "2026-09-03T17:27:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710661_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49808396/matias-galarza-joins-inter-miami-river-plate"
-    },
-    {
-     "titulo": "South Africa's Lyle Foster joins Dynamo on loan from Burnley",
-     "resumen": "South Africa's Lyle Foster joined the Houston Dynamo on loan from Burnley on Thursday through summer of 2027.",
-     "fecha": "2026-09-03T15:41:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0627/r1680394_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49814986/south-africa-lyle-foster-joins-dynamo-loan-burnley"
-    },
-    {
-     "titulo": "Rangers close to signing Portland Timbers striker Kevin Kelsy",
-     "resumen": "Rangers are pursuing options on the final day of the Scottish Premiership transfer window as they close in on the signing of striker Kevin Kelsy.",
-     "fecha": "2026-09-03T13:19:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1710853_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49813789/rangers-close-signing-portland-timbers-striker-kevin-kelsy"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2326,10 +2316,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
