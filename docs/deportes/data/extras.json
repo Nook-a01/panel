@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-06T10:54:05.697Z",
+ "actualizado": "2026-09-06T14:09:39.101Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1167,8 +1167,9 @@
      "posCorta": "M",
      "edad": 21,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1270,6 +1271,13 @@
    ],
    "noticias": [
     {
+     "titulo": "FIFA president Gianni Infantino to stand for reelection in 2027",
+     "resumen": "FIFA president Gianni Infantino has reiterated his desire to stand for reelection despite the continuing controversy surrounding his leadership.",
+     "fecha": "2026-09-06T13:32:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712226_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49847747/fifa-president-gianni-infantino-stand-re-election-2027"
+    },
+    {
      "titulo": "Maresca: Enzo Fernandez is 'a winner'",
      "resumen": "Maresca: Enzo Fernandez is 'a winner'",
      "fecha": "2026-09-04T13:35:35Z",
@@ -1317,13 +1325,6 @@
      "fecha": "2026-09-01T09:04:25Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49783354/balogun-one-watch-deadline-day"
-    },
-    {
-     "titulo": "Lionel Messi's Argentina career: the stats, records and how he compares to Cristiano Ronaldo",
-     "resumen": "After Lionel Messi announced his international retirement, ESPN takes a look at the numbers behind his storied Argentina career.",
-     "fecha": "2026-08-31T19:49:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709497_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49784066/lionel-messi-argentina-career-stats-records-how-compares-cristiano-ronaldo"
     },
     {
      "titulo": "Xavi addresses van Dijk's national team future at unveiling",
@@ -1753,9 +1754,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -2628,6 +2628,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Italian Grand Prix LIVE! Latest updates as Kimi Antonelli becomes new race leader after starting P19",
+     "resumen": "Kimi Antonelli and Mercedes teammate George Russell tussle for the lead.",
+     "fecha": "2026-09-06T14:09:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712243_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49814103/italian-grand-prix-2026-live-monza-f1-latest-updates-commentary-result-charles-leclerc-lewis-hamilton-george-russell-kimi-antonelli-max-verstappen-lando-norris"
+    },
+    {
+     "titulo": "Charles Leclerc suffers huge crash at Italian Grand Prix, major blow for Ferrari at home race",
+     "resumen": "Ferrari suffered a nightmare start to the Italian Grand Prix as Charles Leclerc crashed out three laps after pushing teammate Lewis Hamilton off the track at the start.",
+     "fecha": "2026-09-06T14:04:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712241_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813283/charles-leclerc-suffers-huge-crash-italian-grand-prix-major-blow-ferrari-home-race-italian-grand-prix-formula-1-monza"
+    },
+    {
+     "titulo": "Lightning McQueen at the Italian GP: Inside the Cars takeover making waves in the F1 paddock",
+     "resumen": "It's 20 years since the story of Lightning McQueen's rookie season in the Piston Cup first captivated cinemagoers around the globe.",
+     "fecha": "2026-09-06T12:07:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49847164/lightning-mcqueen-italian-grand-prix-cars-takeover-making-waves-paddock-formula-1"
+    },
+    {
      "titulo": "Italian Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 action is back in full swing and next up on the calendar is Monza, also known as the \"Temple of Speed.\"",
      "fecha": "2026-09-06T07:05:21Z",
@@ -2647,27 +2668,6 @@
      "fecha": "2026-09-05T17:57:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/0905/r1711803_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813191/lewis-hamilton-title-fight-theres-light-end-tunnel-getting-dimmer-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Pierre Gasly checkmates George Russell in chess before stunning him to Italian GP pole",
-     "resumen": "Before beating George Russell to pole position at the Italian Grand Prix, Pierre Gasly has revealed he also beat the Mercedes driver in a game of online chess.",
-     "fecha": "2026-09-05T17:44:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711812_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813192/pierre-gasly-checkmates-george-russell-chess-stunning-italian-grand-prix-pole-monza-formula-1"
-    },
-    {
-     "titulo": "Pierre Gasly reflects on 'very special' Monza pole",
-     "resumen": "Pierre Gasly reflects on 'very special' Monza pole",
-     "fecha": "2026-09-05T17:41:31Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0905/dm_260905_COM_F1_Presser_Pierre_Gasly_reflects_on_very_special_Monza_pole_20260905_GLOBAL_EX_GER/dm_260905_COM_F1_Presser_Pierre_Gasly_reflects_on_very_special_Monza_pole_20260905_GLOBAL_EX_GER.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49837394/pierre-gasly-reflects-very-special-monza-pole"
-    },
-    {
-     "titulo": "Oscar Piastri hit with three-place grid penalty after impeding in qualifying for Italian Grand Prix",
-     "resumen": "MONZA, Italy -- Oscar Piastri has dropped three places on the Italian Grand Prix grid to sixth after he was penalised for impeding Liam Lawson's Red Bull during Q2 at Monza.",
-     "fecha": "2026-09-05T16:59:11Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711815_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813193/oscar-piastri-hit-three-place-grid-penalty-impeding-qualifying-italian-grand-prix-monza"
     }
    ],
    "resultados": null,
