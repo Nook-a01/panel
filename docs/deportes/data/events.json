@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-05T22:53:47.024Z",
+ "actualizado": "2026-09-06T00:55:34.410Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 20,
+   "total": 19,
    "proximos": 11
   },
   {
@@ -35,8 +35,8 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 19,
-   "proximos": 12
+   "total": 18,
+   "proximos": 11
   },
   {
    "id": "pumas",
@@ -76,50 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841460",
-   "miLado": "local",
-   "idEspn": "401841460",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Estudiantes de La Plata",
-   "inicio": "2026-08-05T22:00Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Estadio Tomás Adolfo Ducó",
-   "local": "Boca Juniors",
-   "visitante": "Estudiantes de La Plata",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-401863561",
-   "miLado": "local",
-   "idEspn": "401863561",
-   "liga": "concacaf.leagues.cup",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs Atlético de San Luis",
-   "inicio": "2026-08-05T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "Leagues Cup",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "Atlético de San Luis",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/15720.png",
-   "finalizado": true,
-   "marcador": "4 - 2"
-  },
   {
    "id": "espn-603498",
    "miLado": "local",
@@ -685,8 +641,8 @@
    "visitante": "Australia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "28 - 28"
   },
   {
    "id": "espn-761777",
@@ -1110,7 +1066,7 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC 332",
+   "titulo": "UFC 332: Silva vs. Wang",
    "inicio": "2026-10-03T21:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
