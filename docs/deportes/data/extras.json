@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-07T04:38:05.486Z",
+ "actualizado": "2026-09-07T10:15:46.517Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -424,9 +422,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -629,8 +626,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -697,6 +695,18 @@
      "bandera": null,
      "nombre": "Franco Sebastián Pérez",
      "dorsal": "35",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": null,
+     "pais": "",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "3139337",
+     "bandera": null,
+     "nombre": "Lautaro Facundo Bianco",
+     "dorsal": "40",
      "posicion": "Forward",
      "posCorta": "F",
      "edad": null,
@@ -785,18 +795,6 @@
      "posCorta": "F",
      "edad": 18,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "3139337",
-     "bandera": null,
-     "nombre": "Lautaro Facundo Bianco",
-     "dorsal": "99",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": null,
-     "pais": "",
      "foto": null,
      "lesionado": false
     }
@@ -960,9 +958,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -985,9 +982,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1046,9 +1042,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1059,9 +1054,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1072,9 +1066,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1085,8 +1078,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1097,9 +1091,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1110,8 +1103,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1170,9 +1164,8 @@
      "posCorta": "M",
      "edad": 21,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1196,8 +1189,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1244,9 +1238,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1276,9 +1269,16 @@
    ],
    "noticias": [
     {
+     "titulo": "Belgian FA won't back Gianni Infantino's FIFA re-election, cites Folarin Balogun red card ban U-turn",
+     "resumen": "The Belgian football federation said it can't support Gianni Infantino's bid for another term as FIFA president, citing transparency and governance issues and the way it handled clearing Folarin Balogun from a mandatory one-game ban at the World Cup.",
+     "fecha": "2026-09-07T10:07:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712695_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49857842/gianni-infantino-fifa-belgian-fa-belgium-world-cup-2026-folarin-balogun-red-card-overturned-usmnt"
+    },
+    {
      "titulo": "FIFA president Gianni Infantino to stand for reelection in 2027",
      "resumen": "Gianni Infantino will run for reelection as FIFA president despite uncertainty over his future in the position following his failed attempt to raise $20 billion with the sale of a stake in future World Cups to private investors.",
-     "fecha": "2026-09-06T20:45:09Z",
+     "fecha": "2026-09-07T09:38:00Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712226_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49847747/fifa-president-gianni-infantino-stand-re-election-2027"
     },
@@ -1771,8 +1771,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2633,6 +2634,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Kimi Antonelli the 'AI agent': Toto Wolff's new comparison for F1 star after Italian GP win",
+     "resumen": "Kimi Antonelli has gone from a rookie \"like deer in the headlights\" to a continuously self-improving \"AI agent,\" Mercedes boss Toto Wolff said after the 20-year-old's stunning victory at the Italian Grand Prix.",
+     "fecha": "2026-09-07T09:04:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712685_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813303/kimi-antonelli-ai-agent-toto-wolffs-new-comparison-f1-star-italian-gp-win-italian-grand-prix-formula-1-monza"
+    },
+    {
+     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
+     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
+     "fecha": "2026-09-07T09:02:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-07T07:17:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Ferrari's vintage disaster-class paves way for Antonelli to win Italian GP",
      "resumen": "Ferrari couldn't get out of its own way at Monza, and the Italian team's Italian GP was effectively over after just three laps.",
      "fecha": "2026-09-06T23:23:58Z",
@@ -2652,27 +2674,6 @@
      "fecha": "2026-09-06T19:26:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712360_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813287/toto-wolff-predicted-kimi-antonelli-had-potential-walk-water-italian-grand-prix-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Lewis Hamilton urges Ferrari to introduce 'rules of engagement,' loses more points in title fight",
-     "resumen": "Lewis Hamilton has called on his Ferrari bosses to introduce \"rules of engagement\" between its two drivers after a messy first-lap battle with teammate Charles Leclerc lost him more ground in the title race.",
-     "fecha": "2026-09-06T18:40:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712382_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813288/lewis-hamilton-urges-ferrari-introduce-rules-engagement-loses-more-points-title-fight-formula-1-italian-grand-prix"
-    },
-    {
-     "titulo": "George Russell realistic on title fight with Kimi Antonelli: 'Challenging to overcome that gap'",
-     "resumen": "George Russell has admitted it is going to be \"exceptionally challenging\" to prevent Kimi Antonelli from beating him to the world championship after his rival produced a stunning fightback drive from 19th to win the Italian Grand Prix.",
-     "fecha": "2026-09-06T18:24:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813290/george-russell-realistic-title-fight-kimi-antonelli-challenging-overcome-gap-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Ferrari's Leclerc on battle with Hamilton at Italian GP: 'We went too far'",
-     "resumen": "Charles Leclerc has admitted he and Ferrari teammate Lewis Hamilton raced each other too hard after they went wheel-to-wheel on the opening lap of the Italian Grand Prix.",
-     "fecha": "2026-09-06T17:30:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712335_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813284/charles-leclerc-reflects-battle-lewis-hamilton-went-too-far-italian-grand-prix-formula-1-monza"
     }
    ],
    "resultados": null,
