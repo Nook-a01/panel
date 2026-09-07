@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-07T15:52:40.936Z",
+ "actualizado": "2026-09-07T19:57:10.905Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -422,8 +422,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1020,8 +1021,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1070,8 +1072,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1082,8 +1085,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1094,8 +1098,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1179,9 +1184,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1192,9 +1196,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1712,8 +1715,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1984,6 +1988,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Pochettino cautious about young stars for USMNT camp amid buzz around Sullivan, Hall",
+     "resumen": "USMNT coach Mauricio Pochettino said that while he is happy about the potential of young players in the U.S. pool, \"we need to be careful\" amid the buzz around Philadelphia Union's Cavan Sullivan and NYRB's Julian Hall.",
+     "fecha": "2026-09-07T17:04:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0227/r1620946_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49860427/pochettino-cautious-young-stars-usmnt-camp-buzz-cavan-sullivan-julian-hall"
+    },
+    {
      "titulo": "MLS Power Rankings: Griezmann catapults Orlando into the playoff picture",
      "resumen": "With eight goal contributions in eight games since joining the Lions, Antoine Griezmann has turned around Orlando's season. That and more in ESPN's MLS Power Rankings.",
      "fecha": "2026-09-07T13:29:53Z",
@@ -2017,13 +2028,6 @@
      "fecha": "2026-09-06T04:17:04Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0906/1a7bf67b-a170-42af-bcda-9f16723e5344/1a7bf67b-a170-42af-bcda-9f16723e5344.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49843980/inter-miami-cf-vs-atlanta-united-fc-game-highlights"
-    },
-    {
-     "titulo": "Cavan Sullivan, 16, breaks Freddy Adu's MLS record",
-     "resumen": "Philadelphia Union teenage star Cavan Sullivan scored in a third successive MLS game and in the process broke a record set by one-time U.S. soccer prodigy Freddy Adu.",
-     "fecha": "2026-09-06T03:44:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49842819/cavan-sullivan-freddy-adu-mls-record-philadelphia-union"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2636,6 +2640,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Isack Hadjar to miss F1 Spanish GP as Liam Lawson continues at Red Bull",
+     "resumen": "Liam Lawson will continue to deputize for Red Bull's injured Isak Hadjar at the first ever Madrid Grand Prix, the team confirmed Monday.",
+     "fecha": "2026-09-07T18:44:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712844_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49860811/isack-hadjar-miss-f1-spanish-gp-liam-lawson-continues-red-bull"
+    },
+    {
+     "titulo": "Ex-F1 chief Bernie Ecclestone stopped for illegally bringing shotgun to Portugal",
+     "resumen": "Bernie Ecclestone said he was stopped by police at an airport in Portugal for bringing a shotgun into the country he intended to use in a clay pigeon shooting competition.",
+     "fecha": "2026-09-07T18:34:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712877_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49861130/ex-f1-chief-bernie-ecclestone-stopped-illegally-bringing-shotgun-portugal"
+    },
+    {
+     "titulo": "FIA president Mohammed Ben Sulayem: F1 drivers and staff won't be put 'at risk' over Middle East security situation",
+     "resumen": "FIA president Mohammed Ben Sulayem defended the wait for clarity over how this year's Formula 1 season will end amid uncertainty over the Middle East security situation.",
+     "fecha": "2026-09-07T16:51:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712815_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813315/formula-1-fia-mohammed-ben-sulayem-2026-championship-mercedes-ferrari-red-bull-championship"
+    },
+    {
      "titulo": "Lewis Hamilton and Charles Leclerc Italian GP duel 'not good for the team,' says Ferrari boss",
      "resumen": "Lewis Hamilton has been warned that his in-fighting with Charles Leclerc at Ferrari \"is not good for the team.\"",
      "fecha": "2026-09-07T13:51:45Z",
@@ -2655,27 +2680,6 @@
      "fecha": "2026-09-07T10:46:15Z",
      "imagen": "https://a.espncdn.com/photo/2026/0907/r1712701_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49813305/alpine-pierre-gasly-sums-rollercoaster-italian-gp-story-my-life-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "Kimi Antonelli the 'AI agent': Toto Wolff's new comparison for F1 star after Italian GP win",
-     "resumen": "Kimi Antonelli has gone from a rookie \"like deer in the headlights\" to a continuously self-improving \"AI agent,\" Mercedes boss Toto Wolff said after the 20-year-old's stunning victory at the Italian Grand Prix.",
-     "fecha": "2026-09-07T09:04:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712685_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813303/kimi-antonelli-ai-agent-toto-wolffs-new-comparison-f1-star-italian-gp-win-italian-grand-prix-formula-1-monza"
-    },
-    {
-     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
-     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
-     "fecha": "2026-09-07T09:02:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-09-07T07:17:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
     }
    ],
    "resultados": null,
