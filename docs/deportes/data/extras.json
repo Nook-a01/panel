@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-07T10:15:46.517Z",
+ "actualizado": "2026-09-07T15:52:40.936Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -958,8 +958,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -982,8 +983,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1042,8 +1044,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1054,8 +1057,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1078,9 +1082,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1238,8 +1241,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1269,9 +1273,16 @@
    ],
    "noticias": [
     {
-     "titulo": "Belgian FA won't back Gianni Infantino's FIFA re-election, cites Folarin Balogun red card ban U-turn",
-     "resumen": "The Belgian football federation said it can't support Gianni Infantino's bid for another term as FIFA president, citing transparency and governance issues and the way it handled clearing Folarin Balogun from a mandatory one-game ban at the World Cup.",
-     "fecha": "2026-09-07T10:07:37Z",
+     "titulo": "Mbappe backs himself as the best in the world",
+     "resumen": "Mbappe backs himself as the best in the world",
+     "fecha": "2026-09-07T14:29:01Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0907/dm_260907_Mbappe_backs_himself_as_the_best_in_the_world/dm_260907_Mbappe_backs_himself_as_the_best_in_the_world.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49859683/mbappe-backs-best-world"
+    },
+    {
+     "titulo": "Belgian FA won't back Infantino's FIFA reelection, cites Balogun red card ban U-turn",
+     "resumen": "The Belgian football federation said it can't support Gianni Infantino's bid for another term as FIFA president, citing transparency and governance issues and the way FIFA handled clearing Folarin Balogun from a mandatory one-game ban at the World Cup.",
+     "fecha": "2026-09-07T12:27:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/0907/r1712695_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49857842/gianni-infantino-fifa-belgian-fa-belgium-world-cup-2026-folarin-balogun-red-card-overturned-usmnt"
     },
@@ -1337,13 +1348,6 @@
      "fecha": "2026-08-25T15:36:54Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0825/dm_260825_Xavi_addresses_van_Dijks_national_team_future_at_unveiling/dm_260825_Xavi_addresses_van_Dijks_national_team_future_at_unveiling.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49722859/xavi-addresses-van-dijk-national-team-future-unveiling"
-    },
-    {
-     "titulo": "Would a combined UEFA, Concacaf Nations League benefit the USMNT?",
-     "resumen": "Would a combined UEFA, Concacaf Nations League benefit the USMNT?",
-     "fecha": "2026-08-25T09:18:38Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0825/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA/dm_260825_COM_SOC_Presser_Would_a_combined_UEFA_Concacaf_Nations_League_benefit_the_USMNT_20260825_GLOBA.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49720082/would-combined-uefa-concacaf-nations-league-benefit-usmnt"
     }
    ],
    "resultados": null,
@@ -1610,9 +1614,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1709,9 +1712,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1982,6 +1984,13 @@
    ],
    "noticias": [
     {
+     "titulo": "MLS Power Rankings: Griezmann catapults Orlando into the playoff picture",
+     "resumen": "With eight goal contributions in eight games since joining the Lions, Antoine Griezmann has turned around Orlando's season. That and more in ESPN's MLS Power Rankings.",
+     "fecha": "2026-09-07T13:29:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712662_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49852959/mls-power-rankings-griezmann-catapults-orlando-playoff-picture"
+    },
+    {
      "titulo": "Toluca vs. Monterrey - Game Highlights",
      "resumen": "Watch the Game Highlights from Toluca vs. Monterrey, 09/06/2026",
      "fecha": "2026-09-07T03:51:35Z",
@@ -2015,13 +2024,6 @@
      "fecha": "2026-09-06T03:44:14Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49842819/cavan-sullivan-freddy-adu-mls-record-philadelphia-union"
-    },
-    {
-     "titulo": "Josh Sargent scores goal for Toronto FC",
-     "resumen": "Josh Sargent scores goal for Toronto FC",
-     "fecha": "2026-09-06T02:07:12Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0906/797bb4e1-10c4-4e01-8401-66e2f54ba186/797bb4e1-10c4-4e01-8401-66e2f54ba186.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49842494/josh-sargent-scores-goal-toronto-fc"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2634,6 +2636,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton and Charles Leclerc Italian GP duel 'not good for the team,' says Ferrari boss",
+     "resumen": "Lewis Hamilton has been warned that his in-fighting with Charles Leclerc at Ferrari \"is not good for the team.\"",
+     "fecha": "2026-09-07T13:51:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712773_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813308/lewis-hamilton-charles-leclerc-italian-gp-duel-not-good-team-says-ferrari-boss-italian-grand-prix-formula-1-monza"
+    },
+    {
+     "titulo": "Spanish Grand Prix 2026: Race start time in Madrid, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is heading to Madrid for this year's Spanish Grand Prix where a brand-new circuit will provide drivers with a fresh challenge to mark the end of the European races.",
+     "fecha": "2026-09-07T13:08:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712694_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49700467/spanish-grand-prix-2026-circuit-madring-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Alpine's Pierre Gasly sums up rollercoaster Italian GP: 'Story of my life'",
+     "resumen": "Pierre Gasly has said Alpine's surprisingly strong Italian Grand Prix will be a galvanising one for a team which has long set its sights on closing the gap to Formula 1's big four.",
+     "fecha": "2026-09-07T10:46:15Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813305/alpine-pierre-gasly-sums-rollercoaster-italian-gp-story-my-life-italian-grand-prix-formula-1-monza"
+    },
+    {
      "titulo": "Kimi Antonelli the 'AI agent': Toto Wolff's new comparison for F1 star after Italian GP win",
      "resumen": "Kimi Antonelli has gone from a rookie \"like deer in the headlights\" to a continuously self-improving \"AI agent,\" Mercedes boss Toto Wolff said after the 20-year-old's stunning victory at the Italian Grand Prix.",
      "fecha": "2026-09-07T09:04:00Z",
@@ -2653,27 +2676,6 @@
      "fecha": "2026-09-07T07:17:59Z",
      "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "Ferrari's vintage disaster-class paves way for Antonelli to win Italian GP",
-     "resumen": "Ferrari couldn't get out of its own way at Monza, and the Italian team's Italian GP was effectively over after just three laps.",
-     "fecha": "2026-09-06T23:23:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712454_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/49850758/ferrari-vintage-disasterclass-paves-way-kimi-antonelli-take-home-italian-gp-win-monza"
-    },
-    {
-     "titulo": "Antonelli: Italian GP comeback win 'a day to remember forever'",
-     "resumen": "Antonelli: Italian GP comeback win 'a day to remember forever'",
-     "fecha": "2026-09-06T19:41:54Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0906/dm_260906_COM_F1_Presser_Antonelli_Italian_GP_comeback_win_a_day_to_remember_forever_20260906/dm_260906_COM_F1_Presser_Antonelli_Italian_GP_comeback_win_a_day_to_remember_forever_20260906.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49851543/italian-gp-comeback-win-day-remember-forever"
-    },
-    {
-     "titulo": "Toto Wolff predicted Kimi Antonelli had potential to 'walk over water' from 19th to victory at Italian GP",
-     "resumen": "Mercedes boss Toto Wolff claims he knew ahead of Sunday's Italian Grand Prix that Kimi Antonelli had the potential to \"walk over water\" and win the race from 19th on the grid.",
-     "fecha": "2026-09-06T19:26:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712360_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813287/toto-wolff-predicted-kimi-antonelli-had-potential-walk-water-italian-grand-prix-italian-grand-prix-formula-1-monza"
     }
    ],
    "resultados": null,
