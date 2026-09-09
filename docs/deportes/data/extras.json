@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-09T09:44:00.070Z",
+ "actualizado": "2026-09-09T14:35:09.892Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -638,8 +640,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1056,8 +1059,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1068,8 +1072,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1261,8 +1266,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1583,9 +1589,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1608,9 +1613,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1621,9 +1625,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1634,9 +1637,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1707,9 +1709,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1720,9 +1721,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2631,6 +2631,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen admits to McLaren, Mercedes talks before 'following heart' with Red Bull stay",
+     "resumen": "Max Verstappen has admitted to serious talks with McLaren and Mercedes before agreeing his Red Bull extension last month.",
+     "fecha": "2026-09-09T11:13:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0309/r1625590_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49878411/max-verstappen-admits-mclaren-mercedes-talks-following-heart-red-bull-stay"
+    },
+    {
+     "titulo": "Charles Leclerc's advice for Max vs 100 drivers: Don't crash into Verstappen!",
+     "resumen": "Max Verstappen is set to race 100 drivers in a unique go-karting challenge, and his fellow Formula 1 rivals have given their two pence on how they think the race will go down.",
+     "fecha": "2026-09-09T10:59:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712779_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49813312/max-verstappen-vs-100-silverstone-disney-streaming-charles-leclerc-george-russell"
+    },
+    {
+     "titulo": "Kimi Raikkonen's son Robin, 11, joins Red Bull junior team",
+     "resumen": "Robin Raikkonen, the 11-year-old son of 2007 Formula 1 world champion Kimi, has joined Red Bull Racing's driver development programme.",
+     "fecha": "2026-09-09T10:52:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0909/r1713675_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49878294/kimi-raikkonen-son-robin-formula-1-sign-red-bull-juniors"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-09T10:35:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Spanish Grand Prix: Everything you need to know about F1's brand-new Madring",
      "resumen": "The highly-anticipated Spanish Grand Prix in Madrid is finally here as drivers prepare for their challenge on a brand-new circuit -- the Madring.",
      "fecha": "2026-09-09T08:45:36Z",
@@ -2643,34 +2671,6 @@
      "fecha": "2026-09-08T16:12:05Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713255_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49869760/george-russell-follows-lando-norris-getting-silverstone-grandstand"
-    },
-    {
-     "titulo": "Charles Leclerc's advice for Max vs 100 drivers: Don't crash into Verstappen!",
-     "resumen": "Max Verstappen is set to race 100 drivers in a unique go-karting challenge, and his fellow Formula 1 rivals have given their two pence on how they think the race will go down.",
-     "fecha": "2026-09-08T09:37:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712779_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813312/max-verstappen-vs-100-silverstone-disney-streaming-charles-leclerc-george-russell"
-    },
-    {
-     "titulo": "Isack Hadjar to miss F1 Spanish GP as Liam Lawson continues at Red Bull",
-     "resumen": "Liam Lawson will continue to deputize for Red Bull's injured Isak Hadjar at the first ever Madrid Grand Prix, the team confirmed Monday.",
-     "fecha": "2026-09-07T18:44:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712844_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49860811/isack-hadjar-miss-f1-spanish-gp-liam-lawson-continues-red-bull"
-    },
-    {
-     "titulo": "Ex-F1 chief Bernie Ecclestone stopped for illegally bringing shotgun to Portugal",
-     "resumen": "Bernie Ecclestone said he was stopped by police at an airport in Portugal for bringing a shotgun into the country he intended to use in a clay pigeon shooting competition.",
-     "fecha": "2026-09-07T18:34:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712877_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49861130/ex-f1-chief-bernie-ecclestone-stopped-illegally-bringing-shotgun-portugal"
-    },
-    {
-     "titulo": "FIA president Mohammed Ben Sulayem: F1 drivers and staff won't be put 'at risk' over Middle East security situation",
-     "resumen": "FIA president Mohammed Ben Sulayem defended the wait for clarity over how this year's Formula 1 season will end amid uncertainty over the Middle East security situation.",
-     "fecha": "2026-09-07T16:51:11Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712815_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49813315/formula-1-fia-mohammed-ben-sulayem-2026-championship-mercedes-ferrari-red-bull-championship"
     }
    ],
    "resultados": null,
