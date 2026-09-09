@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-09T18:34:47.388Z",
+ "actualizado": "2026-09-09T21:41:08.643Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1058,8 +1058,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1130,8 +1131,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1190,8 +1192,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1238,8 +1241,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1267,6 +1271,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-09-09T21:13:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "Burley: Kane should win the 2026 men's Ballon d'Or",
      "resumen": "Burley: Kane should win the 2026 men's Ballon d'Or",
@@ -1308,13 +1319,6 @@
      "fecha": "2026-09-07T12:27:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/0907/r1712695_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49857842/gianni-infantino-fifa-belgian-fa-belgium-world-cup-2026-folarin-balogun-red-card-overturned-usmnt"
-    },
-    {
-     "titulo": "FIFA president Gianni Infantino to stand for reelection in 2027",
-     "resumen": "Gianni Infantino will run for reelection as FIFA president despite uncertainty over his future in the position following his failed attempt to raise $20 billion with the sale of a stake in future World Cups to private investors.",
-     "fecha": "2026-09-07T09:38:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712226_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49847747/fifa-president-gianni-infantino-stand-re-election-2027"
     },
     {
      "titulo": "Maresca: Enzo Fernandez is 'a winner'",
@@ -1584,8 +1588,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1621,8 +1626,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1719,8 +1725,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1863,8 +1870,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "125088",
@@ -1977,6 +1985,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-09-09T21:13:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "MLS: League sets record for incoming and outgoing transfers in 2026",
+     "resumen": "Major League Soccer announced that transfer activity in 2026 set league records for revenues involving both incoming and outgoing transfers.",
+     "fecha": "2026-09-09T19:03:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0818/r1703570_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49882716/mls-league-sets-record-incoming-outgoing-transfers-2026"
+    },
+    {
      "titulo": "Pochettino cautious about young stars for USMNT camp amid buzz around Sullivan, Hall",
      "resumen": "USMNT coach Mauricio Pochettino said that while he is happy about the potential of young players in the U.S. pool, \"we need to be careful\" amid the buzz around Philadelphia Union's Cavan Sullivan and NYRB's Julian Hall.",
      "fecha": "2026-09-07T17:04:01Z",
@@ -2003,20 +2025,6 @@
      "fecha": "2026-09-07T00:37:12Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0907/a2051057-cd49-4a85-b77f-98737791659e/a2051057-cd49-4a85-b77f-98737791659e.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49854140/leon-vs-america-game-highlights"
-    },
-    {
-     "titulo": "Breel Embolo debut goal gives Atlanta draw at Inter Miami",
-     "resumen": "Switzerland striker Breel Embolo marked his MLS debut by scoring a late penalty to earn Atlanta United a 2-2 draw at Inter Miami on Saturday.",
-     "fecha": "2026-09-06T06:18:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712143_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49843737/inter-miami-atlanta-united-breel-embolo-casemiro-lionel-messi"
-    },
-    {
-     "titulo": "Inter Miami CF vs. Atlanta United FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Inter Miami CF vs. Atlanta United FC, 09/05/2026",
-     "fecha": "2026-09-06T04:17:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0906/1a7bf67b-a170-42af-bcda-9f16723e5344/1a7bf67b-a170-42af-bcda-9f16723e5344.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49843980/inter-miami-cf-vs-atlanta-united-fc-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2273,9 +2281,10 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 10,
@@ -3038,7 +3047,7 @@
      "id": "5076027",
      "nombre": "Édgar Cháirez",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "categoria": "Flyweight",
+     "categoria": "Catch Weight",
      "record": "14-6-0",
      "peleas": 3,
      "gano": 2
