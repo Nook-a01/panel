@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T04:42:51.894Z",
+ "actualizado": "2026-09-10T09:42:24.962Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1084,9 +1084,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1110,9 +1109,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1123,9 +1121,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1136,9 +1133,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1149,9 +1145,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1279,6 +1274,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Flick: Yamal deserves to win the Ballon d'Or",
+     "resumen": "Flick: Yamal deserves to win the Ballon d'Or",
+     "fecha": "2026-09-10T08:21:15Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_Flick_Yamal_deserves_to_win_the_Ballon_dOr/dm_260910_Flick_Yamal_deserves_to_win_the_Ballon_dOr.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49889739/yamal-deserves-win-ballon-dor"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-09-10T04:14:58Z",
@@ -1347,13 +1349,6 @@
      "fecha": "2026-09-01T14:42:23Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
-    },
-    {
-     "titulo": "Ogden: Balogun is one to watch on deadline day",
-     "resumen": "Ogden: Balogun is one to watch on deadline day",
-     "fecha": "2026-09-01T09:04:25Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0831/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day/dm_260831_Ogden_Balogun_is_one_to_watch_on_deadline_day.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49783354/balogun-one-watch-deadline-day"
     }
    ],
    "resultados": null,
@@ -1633,8 +1628,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1706,8 +1702,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1767,9 +1764,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1876,9 +1872,8 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "125088",
@@ -1991,6 +1986,13 @@
    ],
    "noticias": [
     {
+     "titulo": "LAFC vs. New York Red Bulls - Game Highlights",
+     "resumen": "Watch the Game Highlights from LAFC vs. New York Red Bulls, 09/09/2026",
+     "fecha": "2026-09-10T05:06:06Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0910/ae4122a9-48ed-4e93-9423-8579d264e176/ae4122a9-48ed-4e93-9423-8579d264e176.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49888506/lafc-vs-new-york-red-bulls-game-highlights"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-09-10T04:14:58Z",
@@ -2017,13 +2019,6 @@
      "fecha": "2026-09-10T02:42:14Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761790.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761790"
-    },
-    {
-     "titulo": "Niklas Dorsch's mix-up at the back results in a Toronto FC own goal",
-     "resumen": "Niklas Dorsch's mix-up at the back results in a Toronto FC own goal",
-     "fecha": "2026-09-10T02:29:46Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0909/dm_260909_mix-up_at_the_back_results_in_a_Toronto_FC/dm_260909_mix-up_at_the_back_results_in_a_Toronto_FC.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49886402/niklas-dorsch-mix-back-results-toronto-fc-own-goal"
     },
     {
      "titulo": "Atlanta United FC vs. Orlando City SC - Game Highlights",
@@ -2271,9 +2266,10 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 9,
@@ -2336,9 +2332,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
