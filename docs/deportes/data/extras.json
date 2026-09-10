@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T09:42:24.962Z",
+ "actualizado": "2026-09-10T14:25:24.002Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -423,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1021,9 +1021,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1096,9 +1095,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1169,8 +1167,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1181,8 +1180,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1193,9 +1193,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1274,6 +1273,20 @@
    ],
    "noticias": [
     {
+     "titulo": "2026 Ballon d'Or: Full men's, women's short lists, host city change, more",
+     "resumen": "The 2026 Ballon d'Or short lists are out. Here's who could win the biggest individual prizes in men's and women's soccer.",
+     "fecha": "2026-09-10T10:47:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713144_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49867974/2026-ballon-dor-full-mens-women-shortlists-host-city-change-vozinha-more"
+    },
+    {
+     "titulo": "Nicol believes there is no 'obvious choice' for Ballon d'Or",
+     "resumen": "Nicol believes there is no 'obvious choice' for Ballon d'Or",
+     "fecha": "2026-09-10T09:44:01Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_Nicol_believes_there_is_no_obvious_choice_for_Ballon_dOr/dm_260910_Nicol_believes_there_is_no_obvious_choice_for_Ballon_dOr.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49890120/nicol-believes-there-no-obvious-choice-ballon-dor"
+    },
+    {
      "titulo": "Flick: Yamal deserves to win the Ballon d'Or",
      "resumen": "Flick: Yamal deserves to win the Ballon d'Or",
      "fecha": "2026-09-10T08:21:15Z",
@@ -1300,13 +1313,6 @@
      "fecha": "2026-09-09T01:38:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713099_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49865329/popovic-comfortable-socceroos-penalty-shootout-choices-world-cup"
-    },
-    {
-     "titulo": "2026 Ballon d'Or: Full men's, women's short lists, host city change, more",
-     "resumen": "The 2026 Ballon d'Or short lists are out. Here's who could win the biggest individual prizes in men's and women's soccer.",
-     "fecha": "2026-09-08T19:22:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713144_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49867974/2026-ballon-dor-full-mens-women-shortlists-host-city-change-vozinha-more"
     },
     {
      "titulo": "Cape Verde's Vozinha nominated for Goalkeeper of the Year award at Ballon d'Or after World Cup heroics",
@@ -1342,13 +1348,6 @@
      "fecha": "2026-09-02T09:55:17Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0902/dm_260902_Ogden_Balogun_left_Everton_transfer_window_in_tatters/dm_260902_Ogden_Balogun_left_Everton_transfer_window_in_tatters.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49801654/balogun-left-everton-transfer-window-tatters"
-    },
-    {
-     "titulo": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
-     "resumen": "Gomez: Nobody should wear the Argentina No. 10 jersey for quite some time!",
-     "fecha": "2026-09-01T14:42:23Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0901/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time/dm_260901_Gomez_Nobody_should_wear_the_Argentina_number_10_jersey_for_quite_some_time.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49793781/wear-argentina-no-10-jersey-quite-some"
     }
    ],
    "resultados": null,
@@ -2266,10 +2265,9 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 9,
@@ -2283,10 +2281,9 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 10,
