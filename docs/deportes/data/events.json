@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-09T04:41:35.580Z",
+ "actualizado": "2026-09-10T04:42:51.894Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 17,
-   "proximos": 11
+   "proximos": 10
   },
   {
    "id": "pumas",
@@ -640,8 +640,8 @@
    "visitante": "Inter Miami CF",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 1"
   },
   {
    "id": "espn-401841557",
