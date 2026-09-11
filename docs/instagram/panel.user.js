@@ -9,7 +9,7 @@
 // @grant        GM_info
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.2.0
+// @version      1.2.1
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
@@ -695,6 +695,12 @@ async function IGPanelPro(){
     var j=await res.json();
     var ef=j&&j.data&&j.data.user&&j.data.user.edge_follow;
     if(!ef||!ef.edges) throw {kind:'shape'};
+    // Instagram dejó obsoleto el endpoint de query_hash: ya no devuelve error, devuelve
+    // 200 con la lista VACÍA. Sin esta guarda, la primera página vacía se tomaba como
+    // válida, el escaneo se marcaba completo y terminaba con 0 cuentas — sin llegar
+    // nunca al método alternativo. Una primera página sin nadie es siempre un fallo:
+    // si de verdad no seguís a nadie, no habría nada que escanear.
+    if(!cursor && ef.edges.length===0) throw {kind:'shape'};
     return {
       total:ef.count,
       next:(ef.page_info&&ef.page_info.has_next_page)?ef.page_info.end_cursor:'',
@@ -708,7 +714,9 @@ async function IGPanelPro(){
 
   // Respaldo si GraphQL dejara de existir: API v1 (dos listas). Misma resiliencia.
   async function apiPage(type,cursor){
-    var url='https://www.instagram.com/api/v1/friendships/'+uid+'/'+type+'/?count=100'+(cursor?('&max_id='+encodeURIComponent(cursor)):'');
+    // count=50: la web de Instagram no entrega más de 50 por página en este endpoint.
+    // Con 100 la petición puede rechazarse entera y el escaneo queda en cero.
+    var url='https://www.instagram.com/api/v1/friendships/'+uid+'/'+type+'/?count=50'+(cursor?('&max_id='+encodeURIComponent(cursor)):'');
     var res=await fetchT(url,{headers:headers,credentials:'include'});
     capClaim(res);
     if(!res.ok) throw {kind:res.status===429?'limit':'http', status:res.status};
@@ -812,6 +820,16 @@ async function IGPanelPro(){
       if(pageN%30===0){ setScanStatus('😴 Pausa larga para no llamar la atención de Instagram…',pctNow()); await sleep(20000); }
     }
     state.scanning=false;
+    // Un escaneo que "termina bien" pero sin una sola cuenta no es un resultado: es un
+    // fallo silencioso. Antes se mostraba "0 seguidos analizados" como si fuera cierto.
+    if(cache.complete && cache.users.length===0){
+      cache.complete=false;
+      lsSet(LS.cache,cache);
+      state.scanErr='El escaneo terminó sin leer ninguna cuenta. Suele pasar cuando Instagram cambia sus endpoints por dentro. Probá "Reescanear"; si vuelve a dar cero, la herramienta necesita actualizarse.';
+      if(state.activeTab==='analysis') renderAnalysisTab();
+      toast('⚠️ El escaneo no leyó ninguna cuenta. Mirá el aviso del panel.');
+      return;
+    }
     if(state.activeTab==='analysis') renderAnalysisTab();
     if(cache.complete){
       sumarEscaneo();

@@ -34,7 +34,7 @@ import { extraerPanel, reemplazarFuncion, AVISAR_DIRECTO } from "./lib/panel-cod
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "docs/instagram/panel.user.js";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.2.0";
+const VERSION = "1.2.1";
 
 const html = readFileSync(ORIGEN, "utf8");
 let panel = extraerPanel(html);
