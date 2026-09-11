@@ -4,18 +4,32 @@
 // @namespace    https://nook-a01.github.io/panel/
 // @match        https://www.instagram.com/*
 // @match        https://instagram.com/*
+// @match        https://nook-a01.github.io/panel/instagram/*
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.2.1
+// @version      1.3.0
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
 
 (() => {
   "use strict";
+
+  /* ── en la página de instalación no se dibuja nada ────────────
+     El script corre también ahí (ver el @match de arriba) con un único fin:
+     dejar una marca con su versión, para que la propia página pueda decir
+     "ya lo tenés" en vez de mostrarte los pasos otra vez, y avisar si lo
+     que tenés instalado quedó viejo. */
+  if (location.hostname === "nook-a01.github.io") {
+    let v = "";
+    try { v = (typeof GM_info !== "undefined" && GM_info.script && GM_info.script.version) || ""; } catch (e) {}
+    document.documentElement.setAttribute("data-panel-instalado", v || "si");
+    document.dispatchEvent(new CustomEvent("panel-instagram-listo", { detail: { version: v } }));
+    return;
+  }
 
   const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
 

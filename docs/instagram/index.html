@@ -2393,5 +2393,80 @@ body::before{
     requestAnimationFrame(revisar);
   }, { passive: true });
 })();
+
+/* ── ¿ya lo tenés puesto? ──────────────────────────────────────────
+   El userscript corre también en esta página (sin dibujar nada) sólo para
+   dejar una marca con su versión. Si está, no tiene sentido mostrarte los
+   pasos de instalación otra vez: se reemplazan por un botón que te lleva
+   directo a Instagram.
+
+   Se espera un momento porque el gestor inyecta con run-at document-idle:
+   preguntar antes daría "no instalado" aunque lo estuviera. */
+(function () {
+  var VERSION_ACTUAL = "1.3.0";
+
+  function marca() {
+    return document.documentElement.getAttribute("data-panel-instalado");
+  }
+
+  function mostrarYaEsta(version) {
+    var caja = document.getElementById("bloque-extension");
+    if (!caja) return;
+
+    var viejo = version && version !== "si" && version !== VERSION_ACTUAL;
+
+    caja.innerHTML =
+      '<div style="background:#CCFF00;color:#000;font-weight:900;font-size:.6rem;' +
+      'letter-spacing:.1em;padding:.2em .5em;display:inline-block;margin-bottom:.7rem">' +
+      'YA LO TENÉS</div>' +
+      '<h2 style="font-size:1.15rem;font-weight:800;margin:0 0 .5rem">' +
+      'El panel ya está instalado en este navegador</h2>' +
+      '<p style="color:#8b8b8b;font-size:.92rem;margin:0 0 1rem">' +
+      (viejo
+        ? 'Tenés la versión ' + version + ' y la última es la ' + VERSION_ACTUAL +
+          '. Se actualiza sola en un rato; si querés apurarla, abrí el gestor de ' +
+          'userscripts y tocá buscar actualizaciones.'
+        : 'No hace falta instalar nada más. Entrá a Instagram y tocá el botón ' +
+          '<b style="color:#CCFF00">◐</b> abajo a la derecha.') +
+      '</p>' +
+      '<a class="big" href="https://www.instagram.com/" ' +
+      'style="display:block;text-decoration:none">📸 Abrir Instagram</a>';
+
+    // Los pasos de instalación ya no aplican.
+    var seg = document.getElementById("seg");
+    if (seg) seg.style.display = "none";
+    ["p-pc", "p-android", "p-ios"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = "none";
+    });
+    var separador = document.querySelector('p[style*="o, si estás en el celular"]');
+    if (separador) separador.style.display = "none";
+  }
+
+  function revisar() {
+    var v = marca();
+    if (v) { mostrarYaEsta(v); return true; }
+    return false;
+  }
+
+  // Por si el script llega después que este código.
+  document.addEventListener("panel-instagram-listo", function (e) {
+    mostrarYaEsta((e.detail && e.detail.version) || "si");
+  });
+
+  if (!revisar()) {
+    // Un temporizador con ventana fija no sirve: si el gestor inyecta más tarde
+    // (página lenta, extensión pesada), la ventana ya venció y no se entera
+    // nunca. Medido: con 12 intentos de 250 ms la marca puesta a los 4 s pasaba
+    // desapercibida. Un observador no tiene ventana — avisa cuando ocurra.
+    var obs = new MutationObserver(function () {
+      if (revisar()) obs.disconnect();
+    });
+    obs.observe(document.documentElement, {
+      attributes: true, attributeFilter: ["data-panel-instalado"],
+    });
+  }
+})();
+
 </script>
 <!-- /piel: piel-afiche -->

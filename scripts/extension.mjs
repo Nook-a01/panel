@@ -25,7 +25,7 @@ import { extraerPanel, reemplazarFuncion, AVISAR_DIRECTO } from "./lib/panel-cod
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.2.0";
+const VERSION = "1.3.0";
 
 /* ─────────── 2. el guion que corre adentro de Instagram ─────────── */
 
