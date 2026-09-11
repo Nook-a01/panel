@@ -1,7 +1,7 @@
 {
-  "name": "panel-de-instagram",
-  "version": "1.3.0",
-  "description": "Mirá quién no te sigue de vuelta, quién ve tus historias y cómo crece tu cuenta.",
+  "name": "panel",
+  "version": "1.4.0",
+  "description": "Deportes, plata, campamento e Instagram en un solo lugar.",
   "main": "principal.js",
   "scripts": {
     "start": "electron .",
@@ -11,16 +11,18 @@
   "license": "MIT",
   "build": {
     "appId": "io.github.nooka01.panel-instagram",
-    "productName": "Panel de Instagram",
+    "productName": "Panel",
     "files": [
       "principal.js",
+      "puente.js",
+      "barra.html",
       "panel.js",
       "icono.png",
       "package.json"
     ],
     "win": {
       "target": "portable",
-      "artifactName": "Panel de Instagram.exe"
+      "artifactName": "Panel.exe"
     }
   },
   "devDependencies": {

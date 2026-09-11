@@ -1,14 +1,14 @@
-Panel de Instagram — programa de escritorio
-===========================================
+Panel — programa de escritorio
+==============================
 
-PARA QUÉ
-Ver quién no te sigue de vuelta, quién mira tus historias y cómo crece tu
-cuenta, sin instalar ninguna extensión.
+QUÉ ES
+Las cuatro secciones del Panel en una sola ventana: Deportes, Plata, Campamento
+e Instagram.
 
 CÓMO SE USA
-Abrí el programa. Vas a ver la pantalla de inicio de sesión REAL de Instagram
-—la de ellos, servida por ellos—. Entrá como siempre. Cuando estés adentro,
-abajo a la derecha aparece un botón ◐ : tocalo y se abre el panel.
+Abrilo y elegí la sección arriba. En Instagram vas a ver la pantalla de inicio
+de sesión REAL de Instagram —la de ellos, servida por ellos—. Entrá como
+siempre; después aparece un botón ◐ abajo a la derecha que abre el panel.
 
 La sesión queda guardada en tu computadora, así que la próxima vez entrás
 directo.
@@ -17,18 +17,26 @@ TU CONTRASEÑA
 Nunca pasa por este programa ni por ningún servidor nuestro: se la escribís a
 Instagram en su propia pantalla, igual que en el navegador.
 
-POR QUÉ ES UN PROGRAMA Y NO UNA PÁGINA WEB
-Los nombres de tus seguidores sólo existen dentro de una sesión de Instagram
-abierta. Una página web no puede leerlos: Instagram manda una cabecera
-(X-Frame-Options: DENY) que impide meter su sitio dentro de otra página, y una
-política de seguridad que bloquea cualquier script de afuera. Este programa trae
-su propio navegador, así que abre Instagram como página principal —no metida
-adentro de otra— y desde ahí sí puede mostrar el panel.
+POR QUÉ ES UN PROGRAMA Y NO UNA PÁGINA
+Tres de las cuatro secciones son páginas web comunes y andarían en cualquier
+navegador. La que obliga a esto es Instagram: los nombres de tus seguidores sólo
+existen dentro de una sesión abierta, y una página web no los puede leer.
+Probado:
+  · meter instagram.com en un iframe → responde X-Frame-Options: DENY
+  · pedirle la API desde otro sitio  → no manda ninguna cabecera CORS
+  · inyectar un script en su página  → su política sólo permite sus dominios
+Un programa trae su propio navegador, así que abre Instagram como página
+principal y desde ahí sí puede mostrar el panel.
+
+EN EL CELULAR
+Este programa no corre en el teléfono. En Android se podría hacer un .apk con la
+misma idea; en iPhone no, porque Apple no permite instalar apps por fuera de su
+tienda. Para el teléfono está el camino del userscript:
+https://nook-a01.github.io/panel/instagram/
 
 PARA DESARROLLAR
   npm install
   npm start
 
-El archivo panel.js se genera solo; no lo edites a mano. Sale del mismo código
-que la extensión y el userscript:
+panel.js se genera solo, no lo edites a mano:
   node scripts/escritorio.mjs
