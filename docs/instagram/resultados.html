@@ -120,6 +120,15 @@
 
   .contador{color:var(--tenue);font-size:.78rem;font-family:var(--mono);margin-bottom:9px}
 
+  /* ── pasador de páginas ── */
+  .pasador{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin-top:13px;color:var(--tenue);font-size:.82rem;font-family:var(--mono);
+  }
+  .pasador .btn{padding:9px 16px;font-size:1.05rem;line-height:1}
+  .pasador .btn[disabled]{opacity:.28;cursor:default;border-color:var(--linea)}
+  .pasador .btn[disabled]:hover{background:var(--negro)}
+
   /* ── filas ── */
   .lista{display:flex;flex-direction:column;gap:7px}
   .fila{
@@ -217,7 +226,11 @@
 (function(){
   var WORKER = 'https://plata.hamcqc.workers.dev';
   var LS = 'panel-ig-clave', LS_WL = 'panel-ig-wl';
-  var datos = null, pestana = 'seguidores', mostrando = 30, busqueda = '', modo = 'normal';
+  // 20 por página, con ‹ › para moverse — como el panel de la computadora.
+  // Una lista de 229 que sólo crece con "ver más" se vuelve imposible de
+  // recorrer en un teléfono: no se sabe dónde se está ni se puede volver.
+  var POR_PAGINA = 20;
+  var datos = null, pestana = 'seguidores', pagina = 0, busqueda = '', modo = 'normal';
   var filtros = { noSiguen:true, teSiguen:false, verificados:true, privados:true };
   var blanca = new Set();
 
@@ -237,7 +250,15 @@
     var d = Math.floor(s/86400);
     return 'hace ' + d + ' día' + (d > 1 ? 's' : '');
   }
-  var users = function(){ return (datos && datos.users) || []; };
+  var users = function(){ return (datos && datos.users) || [];
+  };
+  // Al cambiar de página hay que volver arriba: si no, quedás mirando el final
+  // de la lista nueva y parece que no pasó nada.
+  function irArriba(){
+    var c = document.querySelector('.cuerpo');
+    if(c) c.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }
 
   // La lista blanca llega del escaneo, pero se puede editar acá: lo tocado en el
   // teléfono se guarda local y pisa a lo que vino, así una estrella no se pierde
@@ -317,13 +338,28 @@
     '</div>';
   }
   function listaConMas(lista, pintarUno){
-    var visibles = lista.slice(0, mostrando);
-    var faltan = lista.length - mostrando;
-    return '<div class="contador">Mostrados: ' + num(visibles.length) + ' · Total filtrado: ' + num(lista.length) + '</div>' +
+    var paginas = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
+    // Si se achicó la lista (por un filtro o una búsqueda) y la página en la
+    // que estabas ya no existe, hay que traerla al rango o queda en blanco.
+    if(pagina >= paginas) pagina = paginas - 1;
+    if(pagina < 0) pagina = 0;
+
+    var desde = pagina * POR_PAGINA;
+    var visibles = lista.slice(desde, desde + POR_PAGINA);
+
+    return '<div class="contador">' +
+        (lista.length ? (num(desde + 1) + '–' + num(desde + visibles.length) + ' de ' + num(lista.length)) : '0 resultados') +
+      '</div>' +
       '<div class="lista">' +
         (visibles.length ? visibles.map(pintarUno).join('') : '<div class="vacio">Nada que mostrar con estos filtros.</div>') +
       '</div>' +
-      (faltan > 0 ? '<button class="btn ancho" id="mas">Ver ' + Math.min(100, faltan) + ' más</button>' : '');
+      (paginas > 1
+        ? '<div class="pasador">' +
+            '<button class="btn" id="anterior"' + (pagina === 0 ? ' disabled' : '') + '>‹</button>' +
+            '<span>Página ' + (pagina + 1) + ' de ' + paginas + '</span>' +
+            '<button class="btn" id="siguiente"' + (pagina >= paginas - 1 ? ' disabled' : '') + '>›</button>' +
+          '</div>'
+        : '');
   }
   function tarjeta(valor, etiqueta, clase){
     var v = (valor === null || valor === undefined) ? '—' : (typeof valor === 'number' ? num(valor) : valor);
@@ -532,17 +568,18 @@
   $('#pestanas').addEventListener('click', function(e){
     var b = e.target.closest('[data-p]');
     if(!b) return;
-    pestana = b.dataset.p; mostrando = 30; busqueda = '';
+    pestana = b.dataset.p; pagina = 0; busqueda = '';
     pintar();
   });
   $('#vista').addEventListener('click', function(e){
     var f = e.target.closest('[data-f]');
-    if(f){ filtros[f.dataset.f] = !filtros[f.dataset.f]; mostrando = 30; pintar(); return; }
+    if(f){ filtros[f.dataset.f] = !filtros[f.dataset.f]; pagina = 0; pintar(); return; }
     var m = e.target.closest('[data-m]');
-    if(m){ modo = m.dataset.m; mostrando = 30; pintar(); return; }
+    if(m){ modo = m.dataset.m; pagina = 0; pintar(); return; }
     var w = e.target.closest('[data-wl]');
     if(w){ tocarBlanca(w.dataset.wl); pintar(); return; }
-    if(e.target.id === 'mas'){ mostrando += 100; pintar(); return; }
+    if(e.target.id === 'anterior'){ if(pagina > 0) pagina--; pintar(); irArriba(); return; }
+    if(e.target.id === 'siguiente'){ pagina++; pintar(); irArriba(); return; }
     if(e.target.id === 'copiar'){
       var lista = [...$('#vista').querySelectorAll('.usuario')].map(function(n){ return n.textContent; }).join('\n');
       navigator.clipboard.writeText(lista).then(function(){
@@ -563,7 +600,7 @@
   $('#vista').addEventListener('input', function(e){
     if(e.target.id !== 'buscar') return;
     busqueda = (e.target.value || '').trim().toLowerCase();
-    mostrando = 30;
+    pagina = 0;
     pintar();
     // Al redibujar se pierde el foco: se devuelve con el cursor al final.
     var c = $('#buscar');
