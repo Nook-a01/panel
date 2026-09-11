@@ -1,0 +1,10 @@
+{
+  "name": "worker-plata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.125.0"
+  },
+  "private": true
+}

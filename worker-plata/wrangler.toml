@@ -1,6 +1,9 @@
 name = "plata"
 main = "src/index.js"
 compatibility_date = "2026-09-11"
+# El SDK de Anthropic usa APIs de Node (streams, crypto), que en Workers
+# están detrás de este flag.
+compatibility_flags = ["nodejs_compat"]
 
 # Sin tarea programada a propósito.
 #

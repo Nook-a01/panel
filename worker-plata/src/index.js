@@ -1,3 +1,5 @@
+import Anthropic from "@anthropic-ai/sdk";
+
 // Worker de Plata — el depósito compartido entre tu compu y tu celular.
 //
 // POR QUÉ EXISTE
@@ -31,6 +33,11 @@
 //   GET/POST /campamento → los días marcados del plan de 30 días
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
+//   POST /chat           → preguntas sobre tus gastos, respondidas por Claude
+//
+// SECRETOS (se cargan con `wrangler secret put`, nunca en el código)
+//   CLAVE_APP          → la clave que autoriza todo lo de arriba
+//   ANTHROPIC_API_KEY  → sólo para /chat
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
 // Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
@@ -260,7 +267,111 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos", "GET/POST /instagram"] }, 404);
+      // ---- el chat sobre tus gastos ----
+      //
+      // POR QUÉ EL MODELO NO HACE CUENTAS
+      // El pedido original decía "ya que no hace bien los números". Los modelos
+      // de lenguaje son malos sumando y buenos explicando, así que acá NO suman:
+      // la app manda el resumen ya calculado —con la misma función `calc()` que
+      // pinta la pantalla— y el modelo sólo lo interpreta y lo cuenta en
+      // castellano. Si además calculara por su cuenta, habría dos verdades.
+      //
+      // La clave de Anthropic vive como secreto del Worker. Nunca toca la
+      // página, que es pública.
+      if (url.pathname === "/chat" && request.method === "POST") {
+        if (!env.ANTHROPIC_API_KEY) {
+          return json({
+            error: "Falta cargar la clave de Anthropic.",
+            comoArreglarlo: "Desde worker-plata/: npx wrangler secret put ANTHROPIC_API_KEY",
+          }, 503);
+        }
+
+        const entrante = await request.json();
+        const mensaje = String(entrante?.mensaje || "").trim();
+        if (!mensaje) return json({ error: "No mandaste ninguna pregunta." }, 400);
+        if (mensaje.length > 2000) return json({ error: "La pregunta es demasiado larga." }, 400);
+
+        const resumen = entrante?.resumen || {};
+        // El historial llega de la página; se recorta para que una conversación
+        // larga no encarezca cada pregunta ni desborde el contexto.
+        const historial = Array.isArray(entrante?.historial) ? entrante.historial.slice(-12) : [];
+
+        const instrucciones =
+`Sos el asistente de "Plata en Mano", la app de finanzas personales de Agustín, argentino.
+
+CÓMO HABLÁS
+- Español rioplatense, de vos. Directo y corto: dos o tres frases salvo que pida detalle.
+- Nada de listas largas ni de tecnicismos. Hablás como un amigo que sabe de plata.
+- Los importes en pesos argentinos, con punto de miles: $1.170.577.
+
+LA REGLA MÁS IMPORTANTE
+Los números te llegan YA CALCULADOS en el bloque de abajo. Usá esos y sólo esos.
+No sumes, no restes, no estimes y no inventes un número que no esté ahí. Si te
+falta un dato para responder, decí qué falta y dónde cargarlo en la app, en vez
+de suponerlo. Una cuenta mal hecha acá le hace tomar una decisión equivocada.
+
+Si te pregunta si le alcanza para algo, compará contra "libre para gastar" y
+avisale qué pasa con lo que todavía debe pagar este mes. Si el número da
+negativo, decilo sin vueltas: para eso está la app.
+
+No des consejos de inversión ni recomendaciones financieras profesionales.`;
+
+        const datosFrescos =
+`NÚMEROS DE HOY (${new Date().toISOString().slice(0, 10)}), ya calculados por la app:
+${JSON.stringify(resumen, null, 1)}`;
+
+        try {
+          const cliente = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+          const respuesta = await cliente.messages.create({
+            model: env.MODELO_CHAT || "claude-opus-5",
+            // Un techo corto a propósito: las respuestas son de dos o tres
+            // frases, y así una pregunta nunca se dispara de precio.
+            max_tokens: 1500,
+            system: [
+              // Lo estable primero para que se pueda cachear; los números
+              // cambian en cada consulta y van después.
+              { type: "text", text: instrucciones, cache_control: { type: "ephemeral" } },
+              { type: "text", text: datosFrescos },
+            ],
+            messages: [
+              ...historial
+                .filter(m => m && (m.rol === "user" || m.rol === "assistant") && m.texto)
+                .map(m => ({ role: m.rol, content: String(m.texto).slice(0, 4000) })),
+              { role: "user", content: mensaje },
+            ],
+          });
+
+          if (respuesta.stop_reason === "refusal") {
+            return json({ respuesta: "Esa no te la puedo contestar. Probá preguntándome otra cosa sobre tus gastos." });
+          }
+
+          const texto = respuesta.content
+            .filter(b => b.type === "text")
+            .map(b => b.text)
+            .join("\n")
+            .trim();
+
+          return json({
+            respuesta: texto || "No se me ocurrió nada para contestarte. Probá de nuevo.",
+            uso: {
+              entrada: respuesta.usage?.input_tokens ?? null,
+              salida: respuesta.usage?.output_tokens ?? null,
+              cacheLeido: respuesta.usage?.cache_read_input_tokens ?? null,
+            },
+          });
+        } catch (e) {
+          // Los errores de la API se traducen a algo accionable en vez de
+          // mostrar el mensaje crudo en pantalla.
+          const estado = e?.status;
+          if (estado === 401) return json({ error: "La clave de Anthropic no es válida." }, 502);
+          if (estado === 429) return json({ error: "Muchas preguntas seguidas. Esperá unos segundos." }, 429);
+          if (estado === 400 && /credit|balance/i.test(e?.message || ""))
+            return json({ error: "Se quedó sin crédito la cuenta de Anthropic." }, 502);
+          return json({ error: "No se pudo consultar: " + (e?.message || "error desconocido") }, 502);
+        }
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos", "GET/POST /instagram", "POST /chat"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }

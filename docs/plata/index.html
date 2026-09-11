@@ -252,6 +252,31 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
 .kv{display:flex; justify-content:space-between; gap:12px; font-size:13.5px; padding:6px 0; border-bottom:1px dashed var(--line)}
 .kv:last-child{border-bottom:0}
 .kv b{font-family:var(--f-mono); font-weight:600}
+/* ---------- consultas ---------- */
+.chat-caja{
+  min-height:260px; max-height:min(52vh,460px); overflow-y:auto;
+  display:flex; flex-direction:column; gap:9px;
+  padding:4px 2px 8px;
+}
+.chat-msg{
+  max-width:86%; padding:10px 13px; border-radius:14px;
+  font-size:14.5px; line-height:1.5; white-space:normal;
+}
+.chat-msg.mio{ align-self:flex-end; background:var(--accent); color:#fff; border-bottom-right-radius:5px }
+:root[data-theme="dark"] .chat-msg.mio, :root:not([data-theme="light"]) .chat-msg.mio{ color:#08201D }
+.chat-msg.suyo{ align-self:flex-start; background:var(--surface-2); color:var(--ink); border-bottom-left-radius:5px }
+.chat-msg.pensando{ color:var(--ink-3); font-style:italic }
+.chat-vacio{ color:var(--ink-3); font-size:13.5px; padding:10px 2px }
+.chat-sug{ display:flex; flex-wrap:wrap; gap:7px; margin-top:12px }
+.chat-sug .btn{ font-size:12.5px; text-align:left }
+.chat-entrada{ display:flex; gap:8px; margin-top:10px }
+.chat-entrada input{ flex:1; min-width:0 }
+@media(max-width:640px){
+  .chat-msg{ max-width:92%; font-size:14px }
+  .chat-caja{ min-height:220px }
+  .chat-sug{ flex-direction:column }
+  .chat-sug .btn{ width:100% }
+}
 </style>
 
 <div class="app">
@@ -275,6 +300,7 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <button data-v="fijos">Fijos y cuotas</button>
     <button data-v="plan">Plan</button>
     <button data-v="consultas">Consultas</button>
+    <button data-v="chat">Consultas</button>
     <button data-v="historial">Historial</button>
     <button data-v="import">Importar</button>
     <button data-v="ajustes">Ajustes</button>
@@ -432,6 +458,27 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <div class="card">
       <div class="hd"><h3>Topes por rubro</h3><span class="hint">contra lo que gastás normalmente</span></div>
       <div class="bd" id="planTopes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONSULTAS ===================== -->
+<section class="view" id="v-chat">
+  <div class="stack">
+    <div class="notice info">Preguntá lo que quieras sobre tu plata. Las cuentas las hace la app con tus datos reales; la respuesta sólo te las explica.</div>
+    <div class="card">
+      <div class="hd"><h3>Consultas</h3><span class="hint" id="chatHint"></span></div>
+      <div class="bd">
+        <div id="chatMsgs" class="chat-caja"></div>
+        <div class="chat-entrada">
+          <input type="text" id="chatTexto" placeholder="¿me alcanza para…?" autocomplete="off">
+          <button class="btn pri" id="chatEnviar">Preguntar</button>
+        </div>
+        <p style="margin:10px 0 0;font-size:12.5px;color:var(--ink-3)">
+          Se manda un resumen con tus totales, no tus movimientos uno por uno.
+          <button class="btn sm gh" id="chatLimpiar" style="margin-left:6px">Borrar la charla</button>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -1453,6 +1500,129 @@ function renderPlan(){
   }).join('');
 }
 
+
+/* ============================ consultas ============================
+   Un chat para preguntar sobre tus gastos en tus palabras.
+
+   EL MODELO NO HACE CUENTAS.
+   El pedido original decía "ya que no hace bien los números". Los modelos de
+   lenguaje son flojos sumando y buenos explicando, así que las cuentas las hace
+   `calc()` —la misma que pinta la pantalla— y se le mandan ya hechas. El modelo
+   sólo las interpreta. Si además calculara por su cuenta habría dos verdades, y
+   una estaría mal. */
+
+let chatHist = [];          // [{rol:'user'|'assistant', texto}]
+let chatPensando = false;
+
+// Lo que ve el modelo. Números, no movimientos: mandar los 169 movimientos
+// encarecería cada pregunta sin mejorar la respuesta.
+function chatResumen(){
+  const c = calc();
+  const pres = presupuestoMes(c.hoyYM);
+  const catsGasto = pres.filas
+    .filter(f => f.gastado > 0)
+    .sort((a,b) => b.gastado - a.gastado)
+    .slice(0, 8)
+    .map(f => ({ categoria: f.cat.nombre, gastado: Math.round(f.gastado), tope: Math.round(f.tope) || null }));
+
+  const pendientes = movsMes(c.hoyYM)
+    .filter(m => !confirmado(m))
+    .sort((a,b) => a.fecha.localeCompare(b.fecha))
+    .slice(0, 12)
+    .map(m => ({ fecha: m.fecha, que: m.desc || catName(m.catId), monto: Math.round(+m.monto||0), tipo: m.tipo }));
+
+  return {
+    hoy: c.hoy,
+    saldoHoy: Math.round(c.saldo),
+    libreParaGastar: Math.round(c.libre),
+    libreSiCobrasTodo: Math.round(c.libreConIngresos),
+    aunDebePagarEsteMes: Math.round(c.comprometido),
+    yaVencidoSinPagar: Math.round(c.vencido),
+    faltaCobrarEsteMes: Math.round(c.porCobrar),
+    ahorroIntocable: Math.round(c.reserva),
+    diasHastaElProximoCobro: c.diasHasta,
+    vieneGastandoPorDia: Math.round(c.ritmo),
+    proyeccionFinDeMes: Math.round(c.proyeccion),
+    loPaganConTarjetaEsteMes: Math.round(c.tarjetaMes),
+    gastoPorCategoria: catsGasto,
+    pagosPendientesDelMes: pendientes,
+    topeTotalPresupuesto: Math.round(pres.topeTotal),
+    gastadoEsteMes: Math.round(pres.gastadoTotal),
+  };
+}
+
+const SUGERENCIAS = [
+  '¿Cuánto puedo gastar hoy sin quedarme corto?',
+  '¿En qué se me está yendo la plata este mes?',
+  '¿Me alcanza para un gasto de $150.000?',
+  '¿Qué me falta pagar todavía?',
+];
+
+function renderChat(){
+  const caja = $('#chatMsgs'); if(!caja) return;
+
+  if(!chatHist.length){
+    caja.innerHTML =
+      '<div class="chat-vacio">'+
+      '<p>Preguntame lo que quieras sobre tu plata. Las cuentas las hace la app; '+
+      'yo te las explico.</p>'+
+      '<div class="chat-sug">'+
+        SUGERENCIAS.map(s=>'<button class="btn sm" data-sug="'+esc(s)+'">'+esc(s)+'</button>').join('')+
+      '</div></div>';
+  } else {
+    caja.innerHTML = chatHist.map(m =>
+      '<div class="chat-msg '+(m.rol==='user'?'mio':'suyo')+'">'+
+        esc(m.texto).replace(/\n/g,'<br>')+
+      '</div>').join('') +
+      (chatPensando ? '<div class="chat-msg suyo pensando">pensando…</div>' : '');
+  }
+  caja.scrollTop = caja.scrollHeight;
+
+  const btn = $('#chatEnviar');
+  if(btn) btn.disabled = chatPensando;
+}
+
+async function chatPreguntar(texto){
+  texto = String(texto||'').trim();
+  if(!texto || chatPensando) return;
+
+  const clave = mpClave();
+  if(!clave){
+    chatHist.push({rol:'assistant', texto:'Para consultarme necesito la clave de tu panel. Escribila en Ajustes, en la tarjeta de Mercado Pago.'});
+    renderChat();
+    return;
+  }
+
+  chatHist.push({rol:'user', texto});
+  chatPensando = true;
+  renderChat();
+
+  try{
+    const r = await fetch(MP_WORKER + '/chat', {
+      method:'POST',
+      headers:{ 'content-type':'application/json', authorization:'Bearer '+clave },
+      body: JSON.stringify({
+        mensaje: texto,
+        resumen: chatResumen(),
+        // Sin el ida y vuelta previo, cada pregunta empezaría de cero y no se
+        // podría repreguntar ("¿y si espero a cobrar?").
+        historial: chatHist.slice(0,-1),
+      })
+    });
+    const d = await r.json().catch(()=>({}));
+    chatPensando = false;
+    if(!r.ok){
+      chatHist.push({rol:'assistant', texto: (d.error||'No se pudo consultar.') + (d.comoArreglarlo ? '\n\n'+d.comoArreglarlo : '')});
+    } else {
+      chatHist.push({rol:'assistant', texto: d.respuesta || 'No hubo respuesta.'});
+    }
+  }catch(e){
+    chatPensando = false;
+    chatHist.push({rol:'assistant', texto:'No se pudo conectar: '+e.message});
+  }
+  renderChat();
+}
+
 /* ============================ render: historial ============================ */
 function renderHistorial(){
   const meses = mesesConDatos();
@@ -1884,6 +2054,7 @@ function render(){
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
   else if(vista==='plan') renderPlan();
+  else if(vista==='chat') renderChat();
   else if(vista==='historial') renderHistorial();
   else if(vista==='consultas') renderConsultas();
   else if(vista==='ajustes') renderAjustes();
@@ -2214,6 +2385,17 @@ $('#cmGuardar').onclick = guardarMeta;
 
 $('#impConfirm').onclick = confirmarImport;
 $('#impCancel').onclick = ()=>{ impRows=[]; renderImport(); $('#impText').value=''; };
+
+
+/* ---------- consultas ---------- */
+$('#chatEnviar').onclick = ()=>{ const i=$('#chatTexto'); const t=i.value; i.value=''; chatPreguntar(t); };
+$('#chatTexto').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); $('#chatEnviar').click(); } });
+$('#chatLimpiar').onclick = ()=>{ chatHist=[]; renderChat(); };
+// Las sugerencias se dibujan y se borran, así que el escuchador va en el contenedor.
+$('#chatMsgs').addEventListener('click', e=>{
+  const b = e.target.closest('[data-sug]');
+  if(b) chatPreguntar(b.getAttribute('data-sug'));
+});
 
 /* ---------- exportar / restaurar ---------- */
 // Descarga del navegador, a secas. Antes usaba la API de descargas de Claude,
