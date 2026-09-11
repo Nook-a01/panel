@@ -25,6 +25,12 @@
 //   POST /guardar  → el lector manda lo que leyó de Mercado Pago
 //   GET  /datos    → la app pide lo último guardado
 //   GET  /estado   → cuándo se actualizó por última vez, sin exponer importes
+//   GET  /semilla  → la configuración inicial (categorías, pagos fijos, historial)
+//
+// POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
+// Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
+// que se publica en un repositorio PÚBLICO. Incluía 96 movimientos con importes y
+// los nombres de 38 personas reales. Ahora vive acá, detrás de la clave.
 
 const cabeceras = {
   "content-type": "application/json; charset=utf-8",
@@ -143,7 +149,14 @@ export default {
         });
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado"] }, 404);
+      // ---- configuración inicial (categorías, pagos fijos, reglas, historial) ----
+      if (url.pathname === "/semilla") {
+        const guardado = await env.PLATA.get("semilla");
+        if (!guardado) return json({ error: "No hay semilla cargada." }, 404);
+        return new Response(guardado, { headers: cabeceras });
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }

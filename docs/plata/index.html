@@ -577,7 +577,11 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   </form>
 </dialog>
 
-<!-- Los datos financieros se removieron del historial el 11/9/2026. Viven en el KV del Worker, detrás de la clave. -->
+<!-- La configuración inicial (categorías, pagos fijos, reglas e historial) NO va acá.
+     Este archivo se publica en un repositorio PÚBLICO, y hasta el 11/9/2026 llevaba
+     incrustados 96 movimientos con importes y los nombres de 38 personas reales,
+     descargables por cualquiera desde raw.githubusercontent.com y desde GitHub Pages.
+     Ahora vive en el Worker, detrás de la clave: GET /semilla. -->
 
 <script>
 (function(){
@@ -698,10 +702,15 @@ function sane(st){
   return st;
 }
 
-function leerSeed(){
+// La semilla llega del Worker, no del documento: acá sería pública.
+// Sin clave no hay semilla, y la app arranca vacía pidiendo que la escribas.
+async function leerSeed(){
+  const clave = mpClave();
+  if(!clave) return null;
   try{
-    const el = document.getElementById('seed-datos');
-    return el ? sane(JSON.parse(el.textContent)) : null;
+    const r = await fetch(MP_WORKER+'/semilla', { headers:{ authorization:'Bearer '+clave }, cache:'no-store' });
+    if(!r.ok) return null;
+    return sane(await r.json());
   }catch(e){ return null; }
 }
 function estaVacio(st){
@@ -729,7 +738,7 @@ async function cargar(){
     if(r.ok) remoto = sane(await r.json());
   }catch(e){ /* primera vez: el archivo todavía no existe */ }
   const best = merge(local, remoto);
-  const sd = leerSeed();
+  const sd = await leerSeed();
   if(debeResembrar(best, sd)){
     if(best){ try{ localStorage.setItem(LS_KEY+'-previo', JSON.stringify(best)); }catch(e){} }
     S = sd; sembrado = true;
