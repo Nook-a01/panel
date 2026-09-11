@@ -1,0 +1,20 @@
+name = "plata"
+main = "src/index.js"
+compatibility_date = "2026-09-11"
+
+# Sin tarea programada a propósito.
+#
+# La primera versión consultaba la API de Mercado Pago una vez por día, pero esa
+# API no devuelve ni los gastos ni el saldo (ver el comentario de src/index.js).
+# Ahora los datos llegan cuando el lector corre en tu navegador, así que no hay
+# nada que programar de este lado.
+
+# Donde se guardan los movimientos.
+[[kv_namespaces]]
+binding = "PLATA"
+id = "f9c512421d3f4f7bb32c971d795acda1"
+
+# El secreto NO va acá. Se carga aparte y queda cifrado en Cloudflare:
+#   npx wrangler secret put CLAVE_APP
+#
+# Este archivo sí puede ser público: no contiene ningún dato sensible.

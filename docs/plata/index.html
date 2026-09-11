@@ -485,6 +485,25 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   <div class="split">
     <div class="stack">
       <div class="card">
+        <div class="hd"><h3>Mercado Pago</h3></div>
+        <div class="bd stack">
+          <div id="mpEstado" class="notice info">Sin conectar.</div>
+          <div><label class="fl" for="mpClave">Clave de tu panel</label><input type="password" id="mpClave" placeholder="la que pusiste al instalar el lector" autocomplete="off"></div>
+          <p style="margin:0; font-size:13px; color:var(--ink-3)">
+            La clave queda solo en este dispositivo. Con ella la app lee tu saldo y tus
+            movimientos del panel privado donde los deja el lector de Mercado Pago.
+          </p>
+          <div class="frow">
+            <button class="btn primary" id="mpSync">Traer de Mercado Pago</button>
+            <button class="btn" id="mpOlvidar">Olvidar clave</button>
+          </div>
+          <p style="margin:0; font-size:13px; color:var(--ink-3)">
+            Para que haya datos nuevos, entrá a mercadopago.com.ar en la computadora con
+            el lector instalado. Desde el celular solo se lee lo último que quedó guardado.
+          </p>
+        </div>
+      </div>
+      <div class="card">
         <div class="hd"><h3>Tu punto de partida</h3></div>
         <div class="bd stack">
           <div class="frow">
@@ -803,7 +822,10 @@ function confirmado(m){ return m.estado!=='pend'; }
 
 function calc(){
   const hoy = todayISO(), hoyYM = hoy.slice(0,7);
-  const corte = S.cfg.fechaCorte || hoy;
+  // Sin fecha de corte hay que contar TODO, no nada. Antes el respaldo era `hoy`,
+  // y como abajo se descarta lo anterior al corte Y lo posterior a hoy, no quedaba
+  // ningún movimiento en el medio: el saldo se congelaba en el inicial para siempre.
+  const corte = S.cfg.fechaCorte || '0000-01-01';
 
   // saldo real de hoy: solo lo que efectivamente entra y sale de la cuenta
   let saldo = Number(S.cfg.saldoInicial)||0;
@@ -1442,6 +1464,138 @@ function refreshSelects(){
 }
 
 /* ============================ render maestro ============================ */
+/* ============================ Mercado Pago ============================
+   Los datos los deja el lector que corre dentro de mercadopago.com.ar, en un
+   Worker privado. Acá solo se leen.
+
+   POR QUÉ EL SALDO PISA A "TU PUNTO DE PARTIDA"
+   El saldo que informa Mercado Pago es la verdad de este momento: ya incluye
+   todo lo que pasó hasta ahora. Por eso al sincronizar se guarda como saldo
+   inicial con fecha de corte de hoy. Los movimientos traídos quedan igual para
+   el análisis por categoría y el historial, pero no se vuelven a sumar al
+   saldo: eso sería contarlos dos veces.                                      */
+
+const MP_WORKER   = 'https://plata.hamcqc.workers.dev';
+const MP_CLAVE_LS = 'plata-mp-clave';
+
+function mpClave(){ try{ return localStorage.getItem(MP_CLAVE_LS) || ''; }catch(e){ return ''; } }
+function mpGuardarClave(v){
+  try{ v ? localStorage.setItem(MP_CLAVE_LS, v) : localStorage.removeItem(MP_CLAVE_LS); }catch(e){}
+}
+
+function mpAviso(texto, clase){
+  const el = $('#mpEstado');
+  if(!el) return;
+  el.className = 'notice ' + (clase || 'info');
+  el.textContent = texto;
+}
+
+function mpHaceCuanto(iso){
+  const h = (Date.now() - new Date(iso).getTime()) / 3600e3;
+  if(h < 1)  return 'hace ' + Math.max(1, Math.round(h*60)) + ' min';
+  if(h < 24) return 'hace ' + Math.round(h) + ' h';
+  return 'hace ' + Math.round(h/24) + ' días';
+}
+
+async function mpTraer(silencioso){
+  const clave = mpClave();
+  if(!clave){ if(!silencioso) mpAviso('Escribí la clave y tocá «Traer de Mercado Pago».','warn'); return; }
+
+  if(!silencioso) mpAviso('Consultando…','info');
+  let d;
+  try{
+    const r = await fetch(MP_WORKER + '/datos', {
+      headers:{ authorization:'Bearer ' + clave }, cache:'no-store'
+    });
+    if(r.status === 401){ mpAviso('La clave no es correcta.','bad'); return; }
+    if(r.status === 404){ mpAviso('Todavía no hay datos. Entrá a mercadopago.com.ar en la compu con el lector instalado.','warn'); return; }
+    if(!r.ok){ mpAviso('El panel respondió ' + r.status + '.','bad'); return; }
+    d = await r.json();
+  }catch(e){
+    mpAviso('No se pudo conectar con el panel.','bad');
+    return;
+  }
+
+  const hoy = todayISO();
+  let nuevos = 0;
+
+  // Los movimientos se identifican por el id de Mercado Pago, así importar dos
+  // veces no duplica nada.
+  const yaEstan = new Set(S.movs.filter(m=>m.src && m.src.startsWith('mp:')).map(m=>m.src));
+
+  (d.movimientos||[]).forEach(m=>{
+    const src = 'mp:' + m.id;
+    if(yaEstan.has(src)) return;
+    const esIngreso = m.tipo === 'ingreso';
+    S.movs.push({
+      id: uid(),
+      fecha: m.fecha,
+      tipo: esIngreso ? 'ingreso' : 'gasto',
+      monto: Number(m.monto)||0,
+      catId: adivinarCat(m.detalle || '', esIngreso),
+      desc: m.detalle || 'Movimiento de Mercado Pago',
+      src, srcTipo: 'mp',
+      estado: 'ok'
+    });
+    nuevos++;
+  });
+
+  // El saldo informado por MP manda sobre el punto de partida cargado a mano.
+  if(d.saldo != null && Number.isFinite(Number(d.saldo))){
+    S.cfg.saldoInicial = Number(d.saldo);
+    S.cfg.fechaCorte   = hoy;
+  }
+
+  S.mp = {
+    actualizado: d.actualizado || null,
+    saldo: d.saldo != null ? Number(d.saldo) : null,
+    mes: d.mes || null,
+    categorias: d.categorias || null
+  };
+
+  marcarCambio();
+  render();
+  mpPintarEstado();
+
+  if(!silencioso){
+    mpAviso(
+      'Listo · ' + (nuevos ? nuevos + ' movimiento' + (nuevos===1?'':'s') + ' nuevo' + (nuevos===1?'':'s') : 'sin movimientos nuevos') +
+      (d.saldo != null ? ' · saldo $' + money(Number(d.saldo)).replace(/^\$/,'') : ''),
+      'ok'
+    );
+  }
+}
+
+function mpPintarEstado(){
+  const el = $('#mpEstado');
+  if(!el) return;
+  if(!mpClave()){ mpAviso('Sin conectar. Escribí la clave de tu panel.','info'); return; }
+  const mp = S.mp;
+  if(!mp || !mp.actualizado){ mpAviso('Conectado, pero todavía no trajiste datos.','info'); return; }
+
+  const horas = (Date.now() - new Date(mp.actualizado).getTime()) / 3600e3;
+  // Más de tres días sin leer: conviene avisar en vez de mostrar datos viejos
+  // como si fueran de hoy.
+  if(horas > 72){
+    mpAviso('Los datos son de ' + mpHaceCuanto(mp.actualizado) + '. Entrá a mercadopago.com.ar en la compu para actualizarlos.','warn');
+  }else{
+    mpAviso('Al día · leído ' + mpHaceCuanto(mp.actualizado) + (mp.saldo!=null ? ' · saldo ' + money(mp.saldo) : ''),'ok');
+  }
+}
+
+function mpConectar(){
+  const inp = $('#mpClave');
+  if(inp) inp.value = mpClave();
+  if(inp) inp.onchange = ()=>{ mpGuardarClave(inp.value.trim()); mpPintarEstado(); };
+  const b1 = $('#mpSync');
+  if(b1) b1.onclick = ()=>{ if(inp) mpGuardarClave(inp.value.trim()); mpTraer(false); };
+  const b2 = $('#mpOlvidar');
+  if(b2) b2.onclick = ()=>{ mpGuardarClave(''); if(inp) inp.value=''; mpPintarEstado(); };
+  mpPintarEstado();
+  // Al abrir la app, si ya hay clave, se trae lo último sin molestar.
+  if(mpClave()) mpTraer(true);
+}
+
 function render(){
   $('#mLabel').textContent = ymLabel(selYM);
   refreshSelects();
@@ -1815,6 +1969,7 @@ $('#wipe').onclick = ()=>{
   fillCatSelect($('#cCat'), 'gasto', fallbackCat('gasto'));
   selYM = ymNow();
   irA('resumen');
+  mpConectar();
   if(!sembrado && !S.movs.length && !S.recs.length && !Number(S.cfg.saldoInicial)){
     setTimeout(()=>{ irA('ajustes'); toast('Empezá poniendo cuánta plata tenés hoy'); }, 400);
   }
