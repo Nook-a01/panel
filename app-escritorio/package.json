@@ -23,7 +23,8 @@
       "artifactName": "Panel de Instagram.exe"
     }
   },
-  "dependencies": {
+  "devDependencies": {
+    "electron-builder": "^26.15.3",
     "electron": "^44.3.0"
   }
 }

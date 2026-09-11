@@ -1,0 +1,86 @@
+name: Armar el programa de escritorio
+
+# Construye el .exe del Panel de Instagram y lo publica como descarga, para
+# repartirlo con un solo link.
+#
+# POR QUÉ SE ARMA ACÁ Y NO EN LA COMPUTADORA
+# En la máquina donde se desarrolla está activa la regla ASR
+# 01443614-cd74-433a-b99e-2ecdc07bfc25 ("impedir ejecutables que no cumplan
+# criterios de prevalencia, antigüedad o confianza"), que se encendió a
+# propósito en la auditoría de seguridad. Un .exe recién creado y sin firmar
+# entra justo en esa definición: Windows deja crearlo pero no deja leerlo, ni
+# siquiera copiándolo a otra carpeta — el bloqueo sigue al contenido.
+#
+# Apagar esa regla para poder subir un archivo sería cambiar la seguridad de la
+# máquina por comodidad. Acá el problema no existe, y de paso el programa queda
+# armado siempre igual, sin depender de cómo esté configurada una computadora.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Número de versión (ej: 1.3.0)"
+        required: true
+        default: "1.3.0"
+
+permissions:
+  contents: write
+
+jobs:
+  armar:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # El panel se regenera desde su fuente en vez de confiar en el archivo
+      # commiteado: los tres caminos (extensión, userscript y programa) ya se
+      # desincronizaron una vez por armarse a mano.
+      - name: Regenerar el panel desde la fuente
+        run: node scripts/escritorio.mjs
+
+      - name: Instalar dependencias
+        working-directory: app-escritorio
+        run: npm ci
+
+      - name: Armar el ejecutable
+        working-directory: app-escritorio
+        run: npx electron-builder --win portable --x64
+
+      - name: Ver qué salió
+        working-directory: app-escritorio
+        shell: bash
+        run: ls -lh dist/*.exe
+
+      - name: Publicar la descarga
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: Panel de Instagram ${{ inputs.version }}
+          files: app-escritorio/dist/*.exe
+          body: |
+            Programa para **Windows**. No hace falta instalar ninguna extensión.
+
+            ### Cómo se usa
+            1. Bajá el archivo de abajo y abrilo.
+            2. Aparece la pantalla de inicio de sesión **real de Instagram**. Entrá como siempre.
+            3. Abajo a la derecha aparece un botón **◐**. Tocalo y se abre el panel.
+
+            La sesión queda guardada, así que la próxima vez entrás directo.
+
+            ### Si Windows te avisa que es un programa desconocido
+            Tocá **Más información → Ejecutar de todas formas**. Pasa porque el
+            programa no está firmado con un certificado pago, no porque tenga
+            algo raro.
+
+            ### Tu contraseña
+            No pasa por este programa ni por ningún servidor: se la escribís a
+            Instagram en su propia pantalla, igual que en el navegador.
+
+            ### En iPhone y Android
+            Este programa no corre en el celular. Para el teléfono está el
+            camino del userscript, explicado en
+            https://nook-a01.github.io/panel/instagram/
