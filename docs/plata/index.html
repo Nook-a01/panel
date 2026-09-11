@@ -671,7 +671,9 @@ function fallbackCat(tipo){
 
 /* ============================ persistencia ============================ */
 const LS_KEY = 'plata-en-mano-v1';
-let artifactApi = null, apiFilesOk = null, saveTimer = null, saving = false, dirty = false;
+// apiFilesOk: null = todavía no se guardó nada · true = va al panel compartido ·
+// false = solo en este navegador (sin clave, o sin internet).
+let apiFilesOk = null, saveTimer = null, saving = false, dirty = false;
 
 function setChip(cls, txt){ const c=$('#saveChip'); c.className='chip '+(cls||''); $('#saveTxt').textContent = txt; }
 
@@ -733,18 +735,23 @@ let sembrado = false;
 async function cargar(){
   let local = sane(readLS());
   let remoto = null;
-  try{
-    const r = await fetch('data/finanzas.json?t='+Date.now(), {cache:'no-store'});
-    if(r.ok) remoto = sane(await r.json());
-  }catch(e){ /* primera vez: el archivo todavía no existe */ }
+  // El estado compartido vive en el Worker. Antes se buscaba data/finanzas.json,
+  // que nunca llegó a existir porque se escribía con la API de Artifacts de Claude,
+  // ausente en GitHub Pages: cada aparato quedaba con su propia copia.
+  const clave = mpClave();
+  if(clave){
+    try{
+      const r = await fetch(MP_WORKER+'/app', { headers:{ authorization:'Bearer '+clave }, cache:'no-store' });
+      if(r.ok) remoto = sane(await r.json());
+    }catch(e){ /* sin internet: se sigue con lo que hay en este aparato */ }
+  }
   const best = merge(local, remoto);
   const sd = await leerSeed();
   if(debeResembrar(best, sd)){
     if(best){ try{ localStorage.setItem(LS_KEY+'-previo', JSON.stringify(best)); }catch(e){} }
     S = sd; sembrado = true;
   } else if(best) S = best;
-  try{ artifactApi = (window.claude && window.claude.use) ? await window.claude.use('artifact') : null; }catch(e){ artifactApi=null; }
-  if(!artifactApi) apiFilesOk = false;
+  apiFilesOk = null;   // se define en el primer guardado
 }
 
 function marcarCambio(){
@@ -758,16 +765,27 @@ function marcarCambio(){
 
 async function guardarNube(){
   if(saving){ clearTimeout(saveTimer); saveTimer=setTimeout(guardarNube,1500); return; }
-  if(!artifactApi){ apiFilesOk=false; setChip('warn','Guardado en este dispositivo'); dirty=false; renderStoreInfo(); return; }
+  const clave = mpClave();
+  if(!clave){ apiFilesOk=false; setChip('warn','Solo en este aparato'); dirty=false; renderStoreInfo(); return; }
   saving = true;
   try{
-    await artifactApi.publish({'data/finanzas.json': {content: JSON.stringify(S), contentType:'application/json'}});
+    const r = await fetch(MP_WORKER+'/app', {
+      method:'POST',
+      headers:{ 'content-type':'application/json', authorization:'Bearer '+clave },
+      body: JSON.stringify(S)
+    });
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const d = await r.json();
+    // El otro aparato había guardado algo más nuevo: se adopta en vez de pisarlo.
+    if(d.conservado && d.estado){
+      const traido = sane(d.estado);
+      if(traido){ S = traido; writeLS(); render(); setChip('warn','Traído del otro aparato'); dirty=false; return; }
+    }
     apiFilesOk = true; dirty = false;
-    setChip('ok','Guardado');
+    setChip('ok','Guardado en los dos');
   }catch(err){
-    const code = (err && err.code) || 'upstream_error';
-    if(code==='conflict'){ setChip('warn','Se abrió en otro lado'); }
-    else { apiFilesOk = false; setChip('warn','Guardado en este dispositivo'); }
+    apiFilesOk = false;
+    setChip('warn','Solo en este aparato');
   }finally{
     saving = false; renderStoreInfo();
   }
@@ -1447,10 +1465,10 @@ function renderStoreInfo(){
   const n = S.movs.length;
   if(apiFilesOk===true){
     el.className='notice info';
-    el.innerHTML='<span>Tus datos viajan con este artefacto: los abrís desde cualquier dispositivo con tu cuenta y están ahí. '+n+' movimientos guardados.</span>';
+    el.innerHTML='<span>Guardado en tu panel privado: lo que cambiás acá lo ves en el celular y al revés. '+n+' movimientos.</span>';
   } else if(apiFilesOk===false){
     el.className='notice warn';
-    el.innerHTML='<span>Ahora mismo guardo solo en este navegador ('+n+' movimientos). Bajate un respaldo cada tanto para no depender de eso.</span>';
+    el.innerHTML='<span>Ahora mismo guardo solo en este navegador ('+n+' movimientos): lo que cambies acá no llega al otro aparato. Escribí la clave de tu panel en Mercado Pago, más arriba.</span>';
   } else {
     el.className='notice info'; el.innerHTML='<span>'+n+' movimientos guardados.</span>';
   }
@@ -1946,15 +1964,20 @@ $('#impConfirm').onclick = confirmarImport;
 $('#impCancel').onclick = ()=>{ impRows=[]; renderImport(); $('#impText').value=''; };
 
 /* ---------- exportar / restaurar ---------- */
-async function bajar(filename, data){
+// Descarga del navegador, a secas. Antes usaba la API de descargas de Claude,
+// que en GitHub Pages no existe: los dos botones de respaldo avisaban
+// “descargas no disponibles” y no bajaban nada, ni acá ni en el celular.
+function bajar(filename, data){
   try{
-    const dl = (window.claude && window.claude.use) ? await window.claude.use('downloads') : null;
-    if(!dl){ toast('Descargas no disponibles acá — copiá el texto a mano'); return; }
-    await dl.save({filename, data});
-    toast('Listo');
+    const tipo = filename.endsWith('.csv') ? 'text/csv;charset=utf-8' : 'application/json;charset=utf-8';
+    const url = URL.createObjectURL(new Blob([data], {type:tipo}));
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+    toast('Respaldo bajado');
   }catch(err){
-    const code=(err&&err.code)||'';
-    toast(code==='declined' ? 'Cancelaste la descarga' : 'No se pudo descargar');
+    toast('No se pudo descargar');
   }
 }
 $('#expJson').onclick = ()=> bajar('plata-en-mano-'+todayISO()+'.json', JSON.stringify(S,null,2));

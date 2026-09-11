@@ -26,6 +26,8 @@
 //   GET  /datos    → la app pide lo último guardado
 //   GET  /estado   → cuándo se actualizó por última vez, sin exponer importes
 //   GET  /semilla  → la configuración inicial (categorías, pagos fijos, historial)
+//   GET  /app      → el estado completo de la app (lo que ves en pantalla)
+//   POST /app      → la app guarda su estado acá para que el otro aparato lo vea
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
 // Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
@@ -156,7 +158,37 @@ export default {
         return new Response(guardado, { headers: cabeceras });
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla"] }, 404);
+      // ---- el estado de la app, compartido entre el celular y la compu ----
+      //
+      // Antes la app intentaba guardar con la API de Artifacts de Claude, que no
+      // existe en GitHub Pages: siempre fallaba y quedaba “guardado en este
+      // dispositivo”. Cada aparato tenía su propia copia y nunca se encontraban.
+      if (url.pathname === "/app") {
+        if (request.method === "GET") {
+          const guardado = await env.PLATA.get("app");
+          if (!guardado) return json({ error: "Todavía no hay estado guardado." }, 404);
+          return new Response(guardado, { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const entrante = await request.json();
+          if (!entrante || !Array.isArray(entrante.cats))
+            return json({ error: "Eso no parece un estado de la app." }, 400);
+
+          // Si el aparato que escribe tiene datos más viejos que los guardados,
+          // no se pisa: gana el más nuevo y se le devuelve al que llegó tarde.
+          const previo = JSON.parse((await env.PLATA.get("app")) || "null");
+          const tPrevio   = previo   ? new Date(previo.updatedAt   || 0).getTime() : -1;
+          const tEntrante = new Date(entrante.updatedAt || 0).getTime();
+          if (previo && tPrevio > tEntrante)
+            return json({ ok: true, conservado: true, estado: previo });
+
+          await env.PLATA.put("app", JSON.stringify(entrante));
+          return json({ ok: true, conservado: false, guardadoEn: entrante.updatedAt });
+        }
+        return json({ error: "Usá GET o POST." }, 405);
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }
