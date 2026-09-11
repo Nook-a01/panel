@@ -1,0 +1,29 @@
+{
+  "name": "panel-de-instagram",
+  "version": "1.3.0",
+  "description": "Mirá quién no te sigue de vuelta, quién ve tus historias y cómo crece tu cuenta.",
+  "main": "principal.js",
+  "scripts": {
+    "start": "electron .",
+    "empaquetar": "electron-builder --win portable --x64"
+  },
+  "author": "Nook",
+  "license": "MIT",
+  "build": {
+    "appId": "io.github.nooka01.panel-instagram",
+    "productName": "Panel de Instagram",
+    "files": [
+      "principal.js",
+      "panel.js",
+      "icono.png",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "artifactName": "Panel de Instagram.exe"
+    }
+  },
+  "dependencies": {
+    "electron": "^44.3.0"
+  }
+}
