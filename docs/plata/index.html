@@ -274,6 +274,7 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <button data-v="presu">Presupuesto</button>
     <button data-v="fijos">Fijos y cuotas</button>
     <button data-v="plan">Plan</button>
+    <button data-v="consultas">Consultas</button>
     <button data-v="historial">Historial</button>
     <button data-v="import">Importar</button>
     <button data-v="ajustes">Ajustes</button>
@@ -452,6 +453,53 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   </div>
 </section>
 
+
+<!-- ===================== CONSULTAS ===================== -->
+<section class="view" id="v-consultas">
+  <div class="stack">
+    <div class="notice info">Preguntame antes de gastar. Uso tu saldo de hoy, lo que te falta pagar y el ritmo al que venís gastando este mes.</div>
+
+    <div class="notice warn" id="conFalta" hidden></div>
+
+    <div class="card">
+      <div class="hd"><h3>¿Puedo comprar esto?</h3></div>
+      <div class="bd stack">
+        <div class="frow">
+          <div><label class="fl" for="cqMonto">Cuánto sale</label><input type="number" id="cqMonto" step="100" placeholder="0" inputmode="numeric"></div>
+          <div><label class="fl" for="cqCuotas">En cuántas cuotas</label><input type="number" id="cqCuotas" min="1" max="60" value="1" inputmode="numeric"></div>
+        </div>
+        <div><label class="fl" for="cqQue">Qué es (opcional)</label><input type="text" id="cqQue" placeholder="zapatillas, heladera, regalo..."></div>
+        <div class="btnrow"><button class="btn pri" id="cqVer">Decime si me da</button></div>
+        <div id="cqResp"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd"><h3>Quiero llegar a una meta</h3><span class="hint" id="cmHint"></span></div>
+      <div class="bd stack">
+        <div class="frow">
+          <div><label class="fl" for="cmNombre">Para qué</label><input type="text" id="cmNombre" placeholder="viaje, notebook, colchón"></div>
+          <div><label class="fl" for="cmMonto">Cuánto necesitás</label><input type="number" id="cmMonto" step="1000" placeholder="0" inputmode="numeric"></div>
+        </div>
+        <div class="frow">
+          <div><label class="fl" for="cmFecha">Para cuándo</label><input type="date" id="cmFecha"></div>
+          <div><label class="fl" for="cmYa">Ya tenés juntado</label><input type="number" id="cmYa" step="1000" placeholder="0" inputmode="numeric"></div>
+        </div>
+        <div class="btnrow">
+          <button class="btn pri" id="cmVer">Armame el plan</button>
+          <button class="btn" id="cmGuardar">Guardar esta meta</button>
+        </div>
+        <div id="cmResp"></div>
+      </div>
+    </div>
+
+    <div class="card" id="cmListaCard" hidden>
+      <div class="hd"><h3>Tus metas</h3></div>
+      <div class="bd" id="cmLista"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== IMPORTAR ===================== -->
 <section class="view" id="v-import">
   <div class="stack">
@@ -610,6 +658,10 @@ function daysInMonth(ym){ return new Date(+ym.slice(0,4), +ym.slice(5,7), 0).get
 function clampDay(ym,d){ return Math.min(Math.max(1,d|0), daysInMonth(ym)); }
 function dayOfMonth(ym,d){ return ym+'-'+String(clampDay(ym,d)).padStart(2,'0'); }
 function fmtDay(s){ const d=parseISO(s); return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0'); }
+function fmtDiaAno(s){
+  const d = parseISO(s), dd = String(d.getDate()).padStart(2,'0'), mm = String(d.getMonth()+1).padStart(2,'0');
+  return d.getFullYear() === new Date().getFullYear() ? dd+'/'+mm : dd+'/'+mm+'/'+d.getFullYear();
+}
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
 
@@ -699,7 +751,7 @@ function merge(a,b){
 function sane(st){
   if(!st || typeof st!=='object' || !Array.isArray(st.cats)) return null;
   st.cfg = Object.assign({saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0}, st.cfg||{});
-  ['recs','cuotas','movs','reglas'].forEach(k=>{ if(!Array.isArray(st[k])) st[k]=[]; });
+  ['recs','cuotas','movs','reglas','metas'].forEach(k=>{ if(!Array.isArray(st[k])) st[k]=[]; });
   if(!st.gen || typeof st.gen!=='object') st.gen={};
   return st;
 }
@@ -1445,6 +1497,192 @@ function renderHistorial(){
   ).join('') : '<div class="empty">Hace falta al menos un mes cerrado.</div>';
 }
 
+/* ============================ render: consultas ============================ */
+//
+// Todo sale de calc(), el mismo cálculo que muestra el resumen. Si acá dijera
+// otro número que en la portada, uno de los dos estaría mintiendo.
+
+// Lo que la app necesita saber y todavía no sabe. En vez de calcular con
+// supuestos callados, lo dice y manda al lugar donde se carga.
+function loQueFalta(){
+  const f = [];
+  if(!(Number(S.cfg.saldoInicial)||0) && !S.movs.length) f.push('cuánta plata tenés hoy');
+  if(!S.cfg.diaCobro) f.push('qué día cobrás');
+  if(!S.recs.some(r=>r.tipo==='ingreso' && r.activo!==false)) f.push('cuánto entra por mes');
+  if(!S.recs.some(r=>r.tipo==='gasto' && r.activo!==false)) f.push('qué pagás todos los meses');
+  return f;
+}
+
+function pintarFaltantes(){
+  const el = $('#conFalta'); if(!el) return;
+  const f = loQueFalta();
+  if(!f.length){ el.hidden = true; return; }
+  el.hidden = false;
+  el.innerHTML = '<span>Para responderte bien me falta saber <b>'+f.join('</b>, <b>')+'</b>. '+
+    'Cargalo en Ajustes y en Fijos y cuotas, y las respuestas dejan de ser aproximadas.</span>';
+}
+
+/* ---------- ¿me da para esta compra? ---------- */
+function responderCompra(){
+  const monto  = Number($('#cqMonto').value)||0;
+  const cuotas = Math.max(1, Math.min(60, Number($('#cqCuotas').value)||1));
+  const que    = ($('#cqQue').value||'').trim();
+  const caja   = $('#cqResp');
+
+  if(monto <= 0){ caja.innerHTML = '<div class="empty">Poné cuánto sale y te digo.</div>'; return; }
+
+  const c = calc();
+  const porMes  = monto / cuotas;
+  const ahora   = cuotas === 1 ? monto : porMes;
+  const despues = c.libre - ahora;
+  const porDia  = despues / Math.max(1, c.diasHasta);
+  const nombre  = que ? '«'+esc(que)+'»' : 'esta compra';
+  const ritmo   = c.ritmo;
+  const alcanza = porDia >= ritmo;
+
+  let veredicto, grave;
+  if(despues < 0){ veredicto = 'No te da'; grave = true; }
+  else if(!alcanza){ veredicto = 'Te da, pero te deja corto'; grave = true; }
+  else { veredicto = 'Sí, te da'; grave = false; }
+
+  const filas = [['Tenés disponible hoy', money(c.libre)]];
+  if(cuotas > 1) filas.push(['Se va este mes (1 de '+cuotas+')', '− '+money(ahora)]);
+  else filas.push(['Sale', '− '+money(monto)]);
+  filas.push(['Te queda', money(despues)]);
+  filas.push(['Por día hasta el '+fmtDay(c.refCobro)+' ('+c.diasHasta+' días)', money(Math.max(0,porDia))]);
+  filas.push(['Venís gastando por día', money(ritmo)]);
+
+  let explico;
+  if(despues < 0){
+    explico = 'Después de pagar '+nombre+' quedarías '+money(Math.abs(despues))+' abajo, y todavía faltan '+
+              c.diasHasta+' días para que cobres. Eso ya cuenta lo que tenés comprometido y no pagaste.';
+  } else if(!alcanza){
+    explico = 'Te quedarían '+money(despues)+' para '+c.diasHasta+' días, o sea '+money(porDia)+' por día. '+
+              'Venís gastando '+money(ritmo)+' por día, así que a ese ritmo te faltarían unos '+
+              money((ritmo - porDia) * c.diasHasta)+' antes de cobrar. Se puede, pero bajando el gasto diario.';
+  } else {
+    explico = 'Te quedarían '+money(despues)+' para '+c.diasHasta+' días — '+money(porDia)+' por día — y venís '+
+              'gastando '+money(ritmo)+'. Entra sin apretar.';
+  }
+  if(cuotas > 1)
+    explico += ' Ojo que las otras '+(cuotas-1)+' cuotas de '+money(porMes)+' siguen cayendo los meses que vienen: '+
+               money(monto-porMes)+' más, repartidos.';
+  if(c.vencido > 0)
+    explico += ' Además tenés '+money(c.vencido)+' que ya venció y sigue sin pagar; eso va primero.';
+
+  caja.innerHTML =
+    '<div class="notice '+(grave?'warn':'info')+'" style="margin-bottom:10px">'+
+      '<span><b style="font-size:15px">'+veredicto+'</b><br>'+explico+'</span></div>'+
+    '<div class="tablewrap"><table><tbody>'+
+      filas.map(function(f){ return '<tr><td>'+esc(f[0])+'</td><td class="r money">'+f[1]+'</td></tr>'; }).join('')+
+    '</tbody></table></div>';
+}
+
+/* ---------- metas ---------- */
+function planDeMeta(monto, ya, fechaObj){
+  const falta = Math.max(0, monto - ya);
+  const dias = Math.ceil((parseISO(fechaObj) - parseISO(todayISO())) / 86400000);
+  if(!(dias > 0)) return null;
+  const meses = dias / 30.44, semanas = dias / 7;
+  return { falta:falta, dias:dias, meses:meses, semanas:semanas,
+           porMes: falta / Math.max(1, meses),
+           porSemana: falta / Math.max(1, semanas),
+           porDia: falta / dias };
+}
+
+// Lo que de verdad te sobró los meses cerrados, para no prometer de más.
+function sobranteTipico(){
+  const cerrados = mesesConDatos().filter(function(ym){ return ym < ymNow() && !(histDe(ym)||{}).parcial; });
+  if(!cerrados.length) return null;
+  const netos = cerrados.map(function(ym){ return resumenDeMes(ym, false).neto; }).sort(function(a,b){ return a-b; });
+  return { mediana: netos[Math.floor(netos.length/2)], meses: cerrados.length,
+           mejor: netos[netos.length-1], peor: netos[0] };
+}
+
+function responderMeta(){
+  const nombre = ($('#cmNombre').value||'').trim() || 'tu meta';
+  const monto  = Number($('#cmMonto').value)||0;
+  const ya     = Number($('#cmYa').value)||0;
+  const fecha  = $('#cmFecha').value;
+  const caja   = $('#cmResp');
+
+  if(monto <= 0 || !fecha){ caja.innerHTML = '<div class="empty">Poné cuánto necesitás y para cuándo.</div>'; return; }
+  const p = planDeMeta(monto, ya, fecha);
+  if(!p){ caja.innerHTML = '<div class="empty">Esa fecha ya pasó. Elegí una más adelante.</div>'; return; }
+  if(p.falta === 0){ caja.innerHTML = '<div class="notice info"><span>Ya tenés juntado lo de '+esc(nombre)+'.</span></div>'; return; }
+
+  const s = sobranteTipico();
+  let veredicto, explico;
+
+  if(!s){
+    veredicto = 'Te falta '+money(p.falta);
+    explico = 'Para llegar el '+fmtDiaAno(fecha)+' tenés que apartar '+money(p.porMes)+' por mes, o '+
+              money(p.porSemana)+' por semana. Todavía no tengo meses cerrados, así que no puedo decirte si te da: '+
+              'cuando pase un mes completo te lo comparo contra lo que de verdad te sobra.';
+  } else if(s.mediana <= 0){
+    veredicto = 'Así no llegás';
+    explico = 'Necesitás apartar '+money(p.porMes)+' por mes, pero en los últimos '+s.meses+' meses no te sobró nada: '+
+              'el mes típico cerró '+money(Math.abs(s.mediana))+' en rojo. Antes de juntar para '+esc(nombre)+
+              ' hay que dar vuelta eso, o correr la fecha.';
+  } else if(p.porMes > s.mediana){
+    const cuando = new Date(Date.now() + (p.falta/s.mediana)*30.44*86400000).toISOString().slice(0,10);
+    veredicto = 'Llegás, pero no para esa fecha';
+    explico = 'Necesitarías '+money(p.porMes)+' por mes y en los últimos '+s.meses+' meses te sobró '+
+              money(s.mediana)+' en el mes típico. A ese ritmo juntás los '+money(p.falta)+' recién para el '+
+              fmtDiaAno(cuando)+'. Para llegar el '+fmtDiaAno(fecha)+' te faltan '+money(p.porMes - s.mediana)+
+              ' por mes: o recortás eso, o movés la fecha.';
+  } else {
+    veredicto = 'Sí, llegás';
+    explico = 'Apartando '+money(p.porMes)+' por mes ('+money(p.porSemana)+' por semana) llegás el '+fmtDiaAno(fecha)+'. '+
+              'En los últimos '+s.meses+' meses te sobró '+money(s.mediana)+' en el mes típico, así que te queda '+
+              money(s.mediana - p.porMes)+' de margen. El peor mes fue '+money(s.peor)+': si se repite, ese mes no aportás.';
+  }
+
+  caja.innerHTML =
+    '<div class="notice '+(/^Sí/.test(veredicto)?'info':'warn')+'" style="margin-bottom:10px">'+
+      '<span><b style="font-size:15px">'+veredicto+'</b><br>'+explico+'</span></div>'+
+    '<div class="tablewrap"><table><tbody>'+
+      [['Te falta juntar', money(p.falta)],
+       ['Por mes', money(p.porMes)],
+       ['Por semana', money(p.porSemana)],
+       ['Por día', money(p.porDia)],
+       ['Tiempo', p.dias+' días']]
+      .map(function(f){ return '<tr><td>'+esc(f[0])+'</td><td class="r money">'+f[1]+'</td></tr>'; }).join('')+
+    '</tbody></table></div>';
+}
+
+function guardarMeta(){
+  const nombre = ($('#cmNombre').value||'').trim();
+  const monto  = Number($('#cmMonto').value)||0;
+  const fecha  = $('#cmFecha').value;
+  if(!nombre || monto<=0 || !fecha){ toast('Faltan el nombre, el monto o la fecha'); return; }
+  if(!Array.isArray(S.metas)) S.metas = [];
+  S.metas.push({ id:uid(), nombre:nombre, monto:monto, ya:Number($('#cmYa').value)||0, fecha:fecha });
+  marcarCambio(); renderConsultas(); toast('Meta guardada');
+}
+
+function renderConsultas(){
+  pintarFaltantes();
+  const s = sobranteTipico();
+  $('#cmHint').textContent = s
+    ? 'en el mes típico te sobra '+(s.mediana>=0?'':'−')+money(Math.abs(s.mediana))
+    : 'hace falta un mes cerrado para comparar';
+
+  const metas = Array.isArray(S.metas) ? S.metas : [];
+  $('#cmListaCard').hidden = !metas.length;
+  if(metas.length){
+    $('#cmLista').innerHTML = '<div class="tablewrap"><table><thead><tr><th>Meta</th><th class="r">Falta</th><th class="r">Por mes</th><th>Para</th><th></th></tr></thead><tbody>'+
+      metas.map(function(m){
+        const p = planDeMeta(Number(m.monto)||0, Number(m.ya)||0, m.fecha);
+        return '<tr><td style="font-weight:500">'+esc(m.nombre)+'</td>'+
+          '<td class="r money">'+money(p ? p.falta : 0)+'</td>'+
+          '<td class="r money">'+(p ? money(p.porMes) : '—')+'</td>'+
+          '<td>'+esc(fmtDiaAno(m.fecha))+'</td>'+
+          '<td class="r"><button class="btn sm gh" data-delmeta="'+m.id+'" title="Borrar">✕</button></td></tr>';
+      }).join('')+'</tbody></table></div>';
+  }
+}
+
 /* ============================ render: ajustes ============================ */
 function renderAjustes(){
   $('#sSaldo').value  = Number(S.cfg.saldoInicial)||0;
@@ -1647,6 +1885,7 @@ function render(){
   else if(vista==='fijos') renderFijos();
   else if(vista==='plan') renderPlan();
   else if(vista==='historial') renderHistorial();
+  else if(vista==='consultas') renderConsultas();
   else if(vista==='ajustes') renderAjustes();
   else if(vista==='import') $('#impHint').textContent = S.reglas.length+' reglas de categorización activas';
   etiquetarTablas();
@@ -1889,6 +2128,7 @@ document.addEventListener('click', e=>{
   else if(d.delcuo){ if(confirm('¿Borrar estas cuotas? Las ya generadas quedan como están.'))
       cambiar(()=>{ S.cuotas = S.cuotas.filter(x=>x.id!==d.delcuo); }); }
   else if(d.delregla) cambiar(()=>{ S.reglas.splice(+d.delregla,1); });
+  else if(d.delmeta){ if(confirm('¿Borrar esta meta?')) cambiar(()=>{ S.metas = (S.metas||[]).filter(x=>x.id!==d.delmeta); }); }
   else if(d.vermes){ selYM = d.vermes; irA('resumen'); }
 });
 
@@ -1960,6 +2200,18 @@ $('#impTable').addEventListener('change', e=>{
   if(t.dataset.imp){ const r=impRows.find(x=>x.id===t.dataset.imp); if(r) r.usar=t.checked; renderImport(); }
   if(t.dataset.impcat){ const r=impRows.find(x=>x.id===t.dataset.impcat); if(r) r.catId=t.value; renderImport(); }
 });
+/* ---------- consultas ---------- */
+$('#cqVer').onclick     = responderCompra;
+$('#cmVer').onclick     = responderMeta;
+$('#cmGuardar').onclick = guardarMeta;
+// Enter en cualquiera de los montos responde, sin tener que buscar el botón.
+['#cqMonto','#cqCuotas','#cqQue'].forEach(function(sel){
+  $(sel).addEventListener('keydown', function(e){ if(e.key==='Enter') responderCompra(); });
+});
+['#cmNombre','#cmMonto','#cmYa'].forEach(function(sel){
+  $(sel).addEventListener('keydown', function(e){ if(e.key==='Enter') responderMeta(); });
+});
+
 $('#impConfirm').onclick = confirmarImport;
 $('#impCancel').onclick = ()=>{ impRows=[]; renderImport(); $('#impText').value=''; };
 
@@ -2395,15 +2647,14 @@ body::before{
    2 de 7 columnas. */
 @media(max-width:640px){
 
-  /* Las ocho secciones en dos filas de cuatro: se ven todas juntas. */
+  /* Las nueve secciones en tres filas de tres: se ven todas juntas. */
   nav.tabs{
-    display:grid; grid-template-columns:repeat(4,1fr);
+    display:grid; grid-template-columns:repeat(3,1fr);
     gap:0; overflow:visible; margin-top:8px;
   }
-  /* Medido: la barra da 343px, o sea 81px por botón. «MOVIMIENTOS» y
-     «PRESUPUESTO» son las palabras más largas y a 10px sin espaciado extra
-     ocupan 72px, así que entran enteras. El corte por letra queda solo como
-     red de seguridad para que nada se escape del borde. */
+  /* Medido: la barra da 343px. Con tres columnas son 114px por botón, y las
+     palabras más largas —MOVIMIENTOS y PRESUPUESTO— ocupan 72px a 10px, así que
+     entran holgadas. El corte por letra queda solo como red de seguridad. */
   nav.tabs button{
     min-width:0; overflow-wrap:anywhere;
     padding:9px 2px; font-size:10px; line-height:1.3;

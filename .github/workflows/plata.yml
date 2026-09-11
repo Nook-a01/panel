@@ -1,0 +1,47 @@
+name: Aviso de plata
+
+# Mira tus números una vez por día y avisa SOLO si hay algo que decir.
+#
+# No manda un resumen diario de "todo bien" a propósito: un aviso que llega
+# todos los días se deja de leer, y el día que sí importa tampoco se lee.
+# Las reglas están en scripts/plata-diario.mjs.
+
+on:
+  schedule:
+    # 13:12 UTC = 10:12 en Argentina, cinco minutos después del de deportes
+    # para que no lleguen pegados.
+    #
+    # El minuto no es en punto a propósito: GitHub demora más las tareas que
+    # caen en punto, que es cuando más carga tiene.
+    - cron: "12 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aviso-plata
+  cancel-in-progress: false
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Revisar la plata y avisar si corresponde
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          # La clave del panel privado. Si falta, el script avisa y sale bien:
+          # no queremos un mail de tarea fallida todos los días por eso.
+          CLAVE_APP:         ${{ secrets.CLAVE_APP }}
+        run: node scripts/plata-diario.mjs
