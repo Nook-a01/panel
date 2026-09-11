@@ -300,7 +300,6 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <button data-v="fijos">Fijos y cuotas</button>
     <button data-v="plan">Plan</button>
     <button data-v="consultas">Consultas</button>
-    <button data-v="chat">Consultas</button>
     <button data-v="historial">Historial</button>
     <button data-v="import">Importar</button>
     <button data-v="ajustes">Ajustes</button>
@@ -462,27 +461,6 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   </div>
 </section>
 
-<!-- ===================== CONSULTAS ===================== -->
-<section class="view" id="v-chat">
-  <div class="stack">
-    <div class="notice info">Preguntá lo que quieras sobre tu plata. Las cuentas las hace la app con tus datos reales; la respuesta sólo te las explica.</div>
-    <div class="card">
-      <div class="hd"><h3>Consultas</h3><span class="hint" id="chatHint"></span></div>
-      <div class="bd">
-        <div id="chatMsgs" class="chat-caja"></div>
-        <div class="chat-entrada">
-          <input type="text" id="chatTexto" placeholder="¿me alcanza para…?" autocomplete="off">
-          <button class="btn pri" id="chatEnviar">Preguntar</button>
-        </div>
-        <p style="margin:10px 0 0;font-size:12.5px;color:var(--ink-3)">
-          Se manda un resumen con tus totales, no tus movimientos uno por uno.
-          <button class="btn sm gh" id="chatLimpiar" style="margin-left:6px">Borrar la charla</button>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== HISTORIAL ===================== -->
 <section class="view" id="v-historial">
   <div class="stack">
@@ -507,6 +485,21 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <div class="notice info">Preguntame antes de gastar. Uso tu saldo de hoy, lo que te falta pagar y el ritmo al que venís gastando este mes.</div>
 
     <div class="notice warn" id="conFalta" hidden></div>
+
+      <div class="card">
+        <div class="hd"><h3>Preguntame</h3><span class="hint">en tus palabras</span></div>
+        <div class="bd">
+          <div id="chatMsgs" class="chat-caja"></div>
+          <div class="chat-entrada">
+            <input type="text" id="chatTexto" placeholder="¿me alcanza para…?" autocomplete="off">
+            <button class="btn pri" id="chatEnviar">Preguntar</button>
+          </div>
+          <p style="margin:10px 0 0;font-size:12.5px;color:var(--ink-3)">
+            Las cuentas las hace la app con tus números reales, acá mismo: no se manda nada a ningún lado.
+            <button class="btn sm gh" id="chatLimpiar" style="margin-left:6px">Borrar</button>
+          </p>
+        </div>
+      </div>
 
     <div class="card">
       <div class="hd"><h3>¿Puedo comprar esto?</h3></div>
@@ -1501,61 +1494,219 @@ function renderPlan(){
 }
 
 
+
 /* ============================ consultas ============================
-   Un chat para preguntar sobre tus gastos en tus palabras.
+   Preguntas sobre tus gastos, respondidas por la app.
 
-   EL MODELO NO HACE CUENTAS.
-   El pedido original decía "ya que no hace bien los números". Los modelos de
-   lenguaje son flojos sumando y buenos explicando, así que las cuentas las hace
-   `calc()` —la misma que pinta la pantalla— y se le mandan ya hechas. El modelo
-   sólo las interpreta. Si además calculara por su cuenta habría dos verdades, y
-   una estaría mal. */
+   POR QUÉ NO HAY UN MODELO DE IA ACÁ
+   Las preguntas que importan —cuánto puedo gastar, me alcanza para tal cosa,
+   en qué se me va la plata— son cuentas, no conversación. Un modelo sólo las
+   habría puesto en palabras, cobrando por cada pregunta y mandando tus números
+   a un servidor ajeno.
 
-let chatHist = [];          // [{rol:'user'|'assistant', texto}]
-let chatPensando = false;
+   Resolverlas acá sale gratis, contesta al instante, funciona sin internet y
+   tus datos no salen de este aparato. Y ataca mejor el problema original —"no
+   hace bien los números"— porque no hay modelo que pueda equivocarse en una
+   cuenta: las hace calc(), la misma que pinta la pantalla. */
 
-// Lo que ve el modelo. Números, no movimientos: mandar los 169 movimientos
-// encarecería cada pregunta sin mejorar la respuesta.
-function chatResumen(){
+let chatHist = [];   // [{rol:'user'|'app', texto}]
+
+/* ---------- entender cuánta plata dice ----------
+   Escribimos los montos de muchas formas: "150.000", "150 mil", "150 lucas",
+   "150k", "$1.200.500". Todas tienen que caer en el mismo número. */
+function montoDeTexto(t){
+  const s = String(t||'').toLowerCase().replace(/\s+/g,' ');
+
+  // "150 mil", "1,5 millones", "150 lucas", "150 palos"
+  const conPalabra = s.match(/(\d+(?:[.,]\d+)?)\s*(millon(?:es)?|palos?|mil|lucas?|k\b)/);
+  if(conPalabra){
+    const n = Number(conPalabra[1].replace(',', '.'));
+    const u = conPalabra[2];
+    if(!Number.isFinite(n)) return null;
+    if(/millon|palo/.test(u)) return Math.round(n * 1e6);
+    return Math.round(n * 1000);          // mil, lucas, k
+  }
+
+  // "$150.000", "150000", "1.200.500,50"
+  const crudo = s.match(/\$?\s*(\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d{4,}(?:[.,]\d+)?|\d+,\d+)/);
+  if(crudo){
+    let v = crudo[1];
+    if(/\.\d{3}/.test(v)) v = v.replace(/\./g,'').replace(',', '.');   // miles con punto
+    else v = v.replace(',', '.');
+    const n = Number(v);
+    return Number.isFinite(n) ? Math.round(n) : null;
+  }
+  return null;
+}
+
+const plata = n => '$' + Math.round(Math.abs(n)).toLocaleString('es-AR');
+
+/* ---------- las respuestas ---------- */
+
+function respCuantoGastar(){
+  const c = calc();
+  if(c.libre < 0){
+    return 'Hoy no te sobra nada: te falta ' + plata(c.libre) + '.\n\n' +
+      'Tenés ' + plata(c.saldo) + ' y todavía debés pagar ' + plata(c.comprometido) + ' este mes' +
+      (c.vencido > 0 ? ', de los cuales ' + plata(c.vencido) + ' ya venció' : '') + '.\n\n' +
+      (c.porCobrar > 0
+        ? 'Te falta cobrar ' + plata(c.porCobrar) + '. Cuando entre, te quedan ' +
+          plata(c.libreConIngresos) + (c.libreConIngresos < 0 ? ' en contra' : ' libres') + '.'
+        : 'No tenés más ingresos cargados para este mes.');
+  }
+  const porDia = c.libre / Math.max(1, c.diasHasta);
+  return 'Podés gastar ' + plata(c.libre) + ' hasta el próximo cobro.\n\n' +
+    'Son ' + plata(porDia) + ' por día durante ' + c.diasHasta + ' días.\n\n' +
+    'Venís gastando ' + plata(c.ritmo) + ' por día, así que ' +
+    (c.ritmo > porDia
+      ? 'a este ritmo no llegás: tenés que bajar ' + plata(c.ritmo - porDia) + ' por día.'
+      : 'vas bien, con ' + plata(porDia - c.ritmo) + ' de margen por día.');
+}
+
+function respMeAlcanza(monto){
+  if(monto == null){
+    return '¿De cuánto es el gasto? Escribilo con el número, por ejemplo:\n«¿me alcanza para 150 mil?»';
+  }
+  // No se recalcula acá: se llena el formulario de «¿Puedo comprar esto?» y se
+  // aprieta. Ese ya contempla las cuotas y compara contra tu ritmo de gasto.
+  // Tener dos cuentas para la misma pregunta sería tener dos verdades.
+  const campo = $('#cqMonto');
+  if(campo){
+    campo.value = monto;
+    const cuotas = $('#cqCuotas'); if(cuotas && !Number(cuotas.value)) cuotas.value = 1;
+    responderCompra();
+    const caja = $('#cqResp');
+    // innerText y no textContent: textContent pega todo de corrido y el
+    // veredicto quedaba soldado a la explicación ("No te daDespués de pagar…").
+    // innerText respeta los cortes de bloque.
+    const texto = caja
+      ? (caja.innerText || caja.textContent || '').replace(/\n{3,}/g, '\n\n').trim()
+      : '';
+    if(texto) return texto + '\n\nSi es en cuotas, poné cuántas en «¿Puedo comprar esto?» acá abajo y te lo recalculo.';
+  }
+  // Respaldo por si el formulario no está a mano.
+  const c = calc();
+  const despues = c.libre - monto;
+  return despues >= 0
+    ? 'Sí, te alcanza. Te quedarían ' + plata(despues) + ' hasta el cobro.'
+    : 'No te alcanza: te faltan ' + plata(despues) + '.';
+}
+
+function respEnQueSeVa(){
   const c = calc();
   const pres = presupuestoMes(c.hoyYM);
-  const catsGasto = pres.filas
-    .filter(f => f.gastado > 0)
-    .sort((a,b) => b.gastado - a.gastado)
-    .slice(0, 8)
-    .map(f => ({ categoria: f.cat.nombre, gastado: Math.round(f.gastado), tope: Math.round(f.tope) || null }));
+  const filas = pres.filas.filter(f => f.gastado > 0).sort((a,b) => b.gastado - a.gastado).slice(0, 6);
+  if(!filas.length) return 'Todavía no hay gastos cargados este mes.';
 
-  const pendientes = movsMes(c.hoyYM)
-    .filter(m => !confirmado(m))
-    .sort((a,b) => a.fecha.localeCompare(b.fecha))
-    .slice(0, 12)
-    .map(m => ({ fecha: m.fecha, que: m.desc || catName(m.catId), monto: Math.round(+m.monto||0), tipo: m.tipo }));
+  const total = filas.reduce((a,f) => a + f.gastado, 0);
+  let r = 'Este mes llevás gastados ' + plata(pres.gastadoTotal) + '. Lo más pesado:\n\n';
+  filas.forEach((f, i) => {
+    const pct = Math.round(f.gastado / Math.max(1, total) * 100);
+    r += (i+1) + '. ' + f.cat.nombre + ' — ' + plata(f.gastado) + ' (' + pct + '%)' +
+      (f.tope > 0 && f.gastado > f.tope ? '  ⚠️ te pasaste ' + plata(f.gastado - f.tope) : '') + '\n';
+  });
+  const pasadas = pres.filas.filter(f => f.tope > 0 && f.gastado > f.tope);
+  if(pasadas.length) r += '\nTe pasaste del tope en ' + pasadas.length +
+    (pasadas.length === 1 ? ' categoría.' : ' categorías.');
+  return r.trim();
+}
 
-  return {
-    hoy: c.hoy,
-    saldoHoy: Math.round(c.saldo),
-    libreParaGastar: Math.round(c.libre),
-    libreSiCobrasTodo: Math.round(c.libreConIngresos),
-    aunDebePagarEsteMes: Math.round(c.comprometido),
-    yaVencidoSinPagar: Math.round(c.vencido),
-    faltaCobrarEsteMes: Math.round(c.porCobrar),
-    ahorroIntocable: Math.round(c.reserva),
-    diasHastaElProximoCobro: c.diasHasta,
-    vieneGastandoPorDia: Math.round(c.ritmo),
-    proyeccionFinDeMes: Math.round(c.proyeccion),
-    loPaganConTarjetaEsteMes: Math.round(c.tarjetaMes),
-    gastoPorCategoria: catsGasto,
-    pagosPendientesDelMes: pendientes,
-    topeTotalPresupuesto: Math.round(pres.topeTotal),
-    gastadoEsteMes: Math.round(pres.gastadoTotal),
-  };
+function respQueFaltaPagar(){
+  const c = calc();
+  const pend = movsMes(c.hoyYM).filter(m => !confirmado(m) && m.tipo === 'gasto')
+    .sort((a,b) => a.fecha.localeCompare(b.fecha));
+  if(!pend.length) return 'No te queda nada pendiente de pago este mes. 🎉';
+
+  const hoy = c.hoy;
+  const vencidos = pend.filter(m => m.fecha <= hoy);
+  let r = 'Te falta pagar ' + plata(c.comprometido) + ' en ' + pend.length +
+    (pend.length === 1 ? ' pago' : ' pagos') + '.\n\n';
+  if(vencidos.length){
+    r += '⚠️ Ya vencieron ' + vencidos.length + ' por ' + plata(c.vencido) + ':\n';
+    vencidos.slice(0, 6).forEach(m => {
+      r += '· ' + fmtDay(m.fecha) + '  ' + (m.desc || catName(m.catId)) + ' — ' + plata(m.monto) + '\n';
+    });
+    if(vencidos.length > 6) r += '· y ' + (vencidos.length - 6) + ' más\n';
+    r += '\n';
+  }
+  const porVenir = pend.filter(m => m.fecha > hoy);
+  if(porVenir.length){
+    r += 'Por venir:\n';
+    porVenir.slice(0, 6).forEach(m => {
+      r += '· ' + fmtDay(m.fecha) + '  ' + (m.desc || catName(m.catId)) + ' — ' + plata(m.monto) + '\n';
+    });
+    if(porVenir.length > 6) r += '· y ' + (porVenir.length - 6) + ' más';
+  }
+  return r.trim();
+}
+
+function respMeta(monto){
+  if(monto == null){
+    return '¿Cuánto querés juntar? Escribilo con el número, por ejemplo:\n«quiero juntar 500 mil»';
+  }
+  // Igual que arriba: el plan de metas ya está armado abajo y contempla para
+  // cuándo la querés y cuánto tenés juntado.
+  const campo = $('#cmMonto');
+  if(campo){ campo.value = monto; }
+  const c = calc();
+  const sobra = c.libreConIngresos;
+  if(sobra <= 0){
+    return 'Para juntar ' + plata(monto) + ' primero hay que dar vuelta el mes: hoy te faltan ' +
+      plata(sobra) + ' para cerrar.\n\nMirá en qué se te va la plata y bajá de ahí antes de ponerte una meta.';
+  }
+  const meses = Math.ceil(monto / sobra);
+  return 'Para juntar ' + plata(monto) + ', guardando lo que te sobra (' + plata(sobra) +
+    ' por mes), lo tenés en ' + (meses === 1 ? 'un mes' : meses + ' meses') + '.\n\n' +
+    'Abajo, en «Quiero llegar a una meta», podés poner para cuándo la querés y cuánto ya tenés juntado, y te arma el plan exacto.';
+}
+
+function respComoVengo(){
+  const c = calc();
+  const r = resumenMes(c.hoyYM, true);
+  const neto = r.ing - r.gas;
+  return 'Este mes entraron ' + plata(r.ing) + ' y salieron ' + plata(r.gas) + '.\n\n' +
+    (neto >= 0
+      ? 'Vas ' + plata(neto) + ' arriba. '
+      : 'Vas ' + plata(neto) + ' abajo. ') +
+    'Proyectando tu ritmo hasta fin de mes, terminás con ' + plata(c.proyeccion) +
+    (c.proyeccion < 0 ? ' en contra.' : '.');
+}
+
+/* ---------- de la pregunta a la respuesta ---------- */
+function responder(pregunta){
+  const t = String(pregunta||'').toLowerCase();
+  const monto = montoDeTexto(t);
+
+  if(/alcanz|puedo comprar|me da para|compro|comprar|gasto de|viable/.test(t))
+    return respMeAlcanza(monto);
+  if(/junt|ahorr|meta|llegar a/.test(t))
+    return respMeta(monto);
+  if(/en qu[eé] se|en qu[eé] gast|d[oó]nde se me va|categor|m[aá]s gast/.test(t))
+    return respEnQueSeVa();
+  if(/falta pagar|debo|pendiente|vencid|deuda/.test(t))
+    return respQueFaltaPagar();
+  if(/c[oó]mo vengo|c[oó]mo voy|resumen|balance|este mes/.test(t))
+    return respComoVengo();
+  if(/cu[aá]nto puedo gastar|cu[aá]nto me queda|cu[aá]nto tengo|libre|gastar hoy/.test(t))
+    return respCuantoGastar();
+
+  // Si dijo un número y nada más, lo más probable es que pregunte si le alcanza.
+  if(monto != null) return respMeAlcanza(monto);
+
+  return 'No te entendí. Probá con alguno de estos:\n\n' +
+    '· ¿Cuánto puedo gastar?\n' +
+    '· ¿Me alcanza para 150 mil?\n' +
+    '· ¿En qué se me va la plata?\n' +
+    '· ¿Qué me falta pagar?\n' +
+    '· ¿Cómo vengo este mes?\n' +
+    '· Quiero juntar 500 mil';
 }
 
 const SUGERENCIAS = [
-  '¿Cuánto puedo gastar hoy sin quedarme corto?',
-  '¿En qué se me está yendo la plata este mes?',
-  '¿Me alcanza para un gasto de $150.000?',
-  '¿Qué me falta pagar todavía?',
+  '¿Cuánto puedo gastar?',
+  '¿En qué se me va la plata?',
+  '¿Qué me falta pagar?',
+  '¿Cómo vengo este mes?',
 ];
 
 function renderChat(){
@@ -1564,8 +1715,7 @@ function renderChat(){
   if(!chatHist.length){
     caja.innerHTML =
       '<div class="chat-vacio">'+
-      '<p>Preguntame lo que quieras sobre tu plata. Las cuentas las hace la app; '+
-      'yo te las explico.</p>'+
+      '<p>Preguntame sobre tu plata. Las respuestas salen de tus números reales, al instante y sin conexión.</p>'+
       '<div class="chat-sug">'+
         SUGERENCIAS.map(s=>'<button class="btn sm" data-sug="'+esc(s)+'">'+esc(s)+'</button>').join('')+
       '</div></div>';
@@ -1573,53 +1723,16 @@ function renderChat(){
     caja.innerHTML = chatHist.map(m =>
       '<div class="chat-msg '+(m.rol==='user'?'mio':'suyo')+'">'+
         esc(m.texto).replace(/\n/g,'<br>')+
-      '</div>').join('') +
-      (chatPensando ? '<div class="chat-msg suyo pensando">pensando…</div>' : '');
+      '</div>').join('');
   }
   caja.scrollTop = caja.scrollHeight;
-
-  const btn = $('#chatEnviar');
-  if(btn) btn.disabled = chatPensando;
 }
 
-async function chatPreguntar(texto){
+function chatPreguntar(texto){
   texto = String(texto||'').trim();
-  if(!texto || chatPensando) return;
-
-  const clave = mpClave();
-  if(!clave){
-    chatHist.push({rol:'assistant', texto:'Para consultarme necesito la clave de tu panel. Escribila en Ajustes, en la tarjeta de Mercado Pago.'});
-    renderChat();
-    return;
-  }
-
+  if(!texto) return;
   chatHist.push({rol:'user', texto});
-  chatPensando = true;
-  renderChat();
-
-  try{
-    const r = await fetch(MP_WORKER + '/chat', {
-      method:'POST',
-      headers:{ 'content-type':'application/json', authorization:'Bearer '+clave },
-      body: JSON.stringify({
-        mensaje: texto,
-        resumen: chatResumen(),
-        // Sin el ida y vuelta previo, cada pregunta empezaría de cero y no se
-        // podría repreguntar ("¿y si espero a cobrar?").
-        historial: chatHist.slice(0,-1),
-      })
-    });
-    const d = await r.json().catch(()=>({}));
-    chatPensando = false;
-    if(!r.ok){
-      chatHist.push({rol:'assistant', texto: (d.error||'No se pudo consultar.') + (d.comoArreglarlo ? '\n\n'+d.comoArreglarlo : '')});
-    } else {
-      chatHist.push({rol:'assistant', texto: d.respuesta || 'No hubo respuesta.'});
-    }
-  }catch(e){
-    chatPensando = false;
-    chatHist.push({rol:'assistant', texto:'No se pudo conectar: '+e.message});
-  }
+  chatHist.push({rol:'app', texto: responder(texto)});
   renderChat();
 }
 
@@ -1832,6 +1945,7 @@ function guardarMeta(){
 }
 
 function renderConsultas(){
+  renderChat();
   pintarFaltantes();
   const s = sobranteTipico();
   $('#cmHint').textContent = s
@@ -2054,7 +2168,6 @@ function render(){
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
   else if(vista==='plan') renderPlan();
-  else if(vista==='chat') renderChat();
   else if(vista==='historial') renderHistorial();
   else if(vista==='consultas') renderConsultas();
   else if(vista==='ajustes') renderAjustes();
