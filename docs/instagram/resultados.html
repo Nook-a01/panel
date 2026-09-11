@@ -132,7 +132,14 @@
     width:42px;height:42px;flex:0 0 auto;border:2px solid var(--magenta);border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     font-weight:900;color:var(--tenue);font-size:.95rem;
+    position:relative;overflow:hidden;background:var(--negro);
   }
+  /* La foto se superpone a la inicial: si no carga, queda la letra debajo. */
+  .av img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    border-radius:50%;opacity:0;transition:opacity .18s;
+  }
+  .av img.lista{opacity:1}
   .av.blanca{border-color:var(--acido)}
   .datos{min-width:0;flex:1}
   .usuario{font-weight:800;font-size:.98rem;color:var(--tinta);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -283,12 +290,23 @@
       '<span class="chico">Último escaneo: ' + cuando(datos.escaneadoEn || datos.actualizado) +
       ' · se escanea desde la computadora</span></div></div>';
   }
+  // La foto la trae el Worker, no esta página: Instagram bloquea que otro sitio
+  // muestre sus fotos — cargan desde instagram.com y acá no (probado). El Worker
+  // no es una página, así que las pide de servidor a servidor y las reenvía.
+  //
+  // loading=lazy porque con 920 cuentas pedirlas todas de una sería absurdo:
+  // se traen sólo las que entran en pantalla.
+  function foto(usuario){
+    return '<img loading="lazy" decoding="async" alt="" src="' + WORKER + '/foto?u=' +
+      encodeURIComponent(usuario) + '">';
+  }
+
   function filaUsuario(u, metaHtml, conEstrella){
     var enBlanca = blanca.has(String(u.username).toLowerCase());
     return '<div class="fila">' +
       '<a class="av' + (u.follows_viewer ? ' blanca' : '') + '" href="https://www.instagram.com/' +
         encodeURIComponent(u.username) + '/" target="_blank" rel="noopener">' +
-        esc((u.username || '?').slice(0,1).toUpperCase()) + '</a>' +
+        esc((u.username || '?').slice(0,1).toUpperCase()) + foto(u.username) + '</a>' +
       '<a class="datos" href="https://www.instagram.com/' + encodeURIComponent(u.username) +
         '/" target="_blank" rel="noopener" style="text-decoration:none">' +
         '<div class="usuario">@' + esc(u.username) + '</div>' +
@@ -533,6 +551,15 @@
       }, function(){ e.target.textContent = 'No se pudo'; });
     }
   });
+  // Las fotos aparecen recién cuando cargan, y la que falla se saca para que
+  // quede la inicial. Va en fase de captura porque load y error no burbujean.
+  $('#vista').addEventListener('load', function(e){
+    if(e.target.tagName === 'IMG') e.target.classList.add('lista');
+  }, true);
+  $('#vista').addEventListener('error', function(e){
+    if(e.target.tagName === 'IMG') e.target.remove();
+  }, true);
+
   $('#vista').addEventListener('input', function(e){
     if(e.target.id !== 'buscar') return;
     busqueda = (e.target.value || '').trim().toLowerCase();

@@ -31,6 +31,7 @@
 //   GET/POST /campamento → los días marcados del plan de 30 días
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
+//   GET  /foto?u=       → la foto de perfil de esa cuenta, traída por el Worker
 
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
@@ -102,6 +103,38 @@ export default {
 
     if (request.method === "OPTIONS") return json({ ok: true });
     if (!env.CLAVE_APP) return json({ error: "Falta el secreto CLAVE_APP en el Worker." }, 500);
+    // ---- fotos de perfil ----
+    //
+    // Instagram bloquea que otro sitio muestre sus fotos: cargan desde
+    // instagram.com y no desde nook-a01.github.io (probado). El bloqueo mira
+    // de qué página viene el pedido, y el Worker no es una página: pide la
+    // imagen de servidor a servidor y se la pasa al teléfono.
+    //
+    // Esta ruta NO pide clave a propósito: va en el atributo src de una
+    // imagen, donde no se pueden mandar cabeceras. A cambio no expone nada:
+    // recibe un nombre de usuario y devuelve una foto de perfil, que ya es
+    // pública en Instagram.
+    if (url.pathname === "/foto") {
+      const quien = (url.searchParams.get("u") || "").toLowerCase();
+      if (!/^[a-z0-9._]{1,40}$/.test(quien)) return new Response("", { status: 400 });
+      const guardado = JSON.parse((await env.PLATA.get("instagram")) || "null");
+      const cuenta = guardado && (guardado.users || []).find(u => (u.username||"").toLowerCase() === quien);
+      const foto = cuenta && cuenta.profile_pic_url;
+      if (!foto) return new Response("", { status: 404 });
+      const r = await fetch(foto, {
+        headers: { "user-agent": "Mozilla/5.0", referer: "https://www.instagram.com/" },
+        cf: { cacheTtl: 3600, cacheEverything: true },
+      });
+      if (!r.ok) return new Response("", { status: 404 });
+      return new Response(r.body, {
+        headers: {
+          "content-type": r.headers.get("content-type") || "image/jpeg",
+          "cache-control": "public, max-age=3600",
+          "access-control-allow-origin": "*",
+        },
+      });
+    }
+
     if (!autorizado(request, env)) return json({ error: "Clave incorrecta o ausente." }, 401);
 
     try {
