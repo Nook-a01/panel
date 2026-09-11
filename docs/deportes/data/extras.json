@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-11T14:25:04.663Z",
+ "actualizado": "2026-09-11T18:31:19.708Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -959,8 +959,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1044,8 +1045,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1056,8 +1058,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1176,8 +1179,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1236,8 +1240,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1265,6 +1270,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Two FIFA officials get lifetime bans for misuse of funds",
+     "resumen": "FIFA judges imposed life bans on two former federation presidents for financial misconduct.",
+     "fecha": "2026-09-11T17:43:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0701/r1682659_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49905396/two-fifa-officials-get-life-bans-misuse-funds"
+    },
     {
      "titulo": "Musiala returns with a goal in Bayern's Champions League win",
      "resumen": "Musiala returns with a goal in Bayern's Champions League win",
@@ -1320,13 +1332,6 @@
      "fecha": "2026-09-09T01:38:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713099_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49865329/popovic-comfortable-socceroos-penalty-shootout-choices-world-cup"
-    },
-    {
-     "titulo": "Cape Verde's Vozinha nominated for Goalkeeper of the Year award at Ballon d'Or after World Cup heroics",
-     "resumen": "Cape Verde goalkeeper Vozinha has been nominated for the men's Goalkeeper of the Year award at the 2026 Ballon d'Or.",
-     "fecha": "2026-09-08T14:00:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713164_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49868020/cape-verde-colo-colo-vozinha-nominated-goalkeeper-year-award"
     },
     {
      "titulo": "Mbappe backs himself as the best in the world",
@@ -1607,8 +1612,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1632,8 +1638,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1705,8 +1712,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1741,9 +1749,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -2628,10 +2635,31 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Spanish Grand Prix in Madrid LIVE: F1 practice updates, results and analysis",
-     "resumen": "George Russell came out on top of the first practice session at the new Madring.",
-     "fecha": "2026-09-11T13:56:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714838_1296x729_16-9.jpg",
+     "titulo": "Will Madring live up to reputation as F1 car killer? 'The most risky circuit of the calendar'",
+     "resumen": "F1 got its first taste of the Spanish Grand Prix's brand-new Madring on Friday, and early impressions suggest it's going to take guts to get right.",
+     "fecha": "2026-09-11T18:28:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714988_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/49905766/will-spanish-grand-prix-madring-live-reputation-f1-car-killer-most-risky-circuit-calendar"
+    },
+    {
+     "titulo": "Spanish Grand Prix: Mercedes' Kimi Antonelli quickest in second practice, George Russell fifth",
+     "resumen": "George Russell was left trailing Kimi Antonelli in second practice for the Spanish Grand Prix -- as British rookie Arvid Lindblad crashed out at Formula 1's new \"risky\" and \"car-killer\" venue in Madrid.",
+     "fecha": "2026-09-11T17:05:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714916_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867133/mercedes-kimi-antonelli-quickest-second-practice-george-russell-fifth-spanish-grand-prix-madring-formula-1"
+    },
+    {
+     "titulo": "Spanish Grand Prix 2026: Race start time in Madrid, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is heading to Madrid for this year's Spanish Grand Prix where a brand-new circuit will provide drivers with a fresh challenge to mark the end of the European races.",
+     "fecha": "2026-09-11T16:52:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712694_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49700467/spanish-grand-prix-2026-circuit-madring-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Spanish Grand Prix: Kimi Antonelli sets pace in second practice on Madring debut - as it happened",
+     "resumen": "Kimi Antonelli topped the times in the second practice session of the Spanish Grand Prix.",
+     "fecha": "2026-09-11T16:42:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714930_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49867235/spanish-grand-prix-2026-live-madrid-updates-results-analysis-commentary"
     },
     {
@@ -2647,27 +2675,6 @@
      "fecha": "2026-09-11T07:37:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "F1 drivers discuss challenges of new Madrid Grand Prix circuit",
-     "resumen": "F1 drivers discuss challenges of new Madrid Grand Prix circuit",
-     "fecha": "2026-09-10T21:51:51Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_F1_drivers_discuss_challenges_of_new_Madrid_Grand_Prix_circuit/dm_260910_F1_drivers_discuss_challenges_of_new_Madrid_Grand_Prix_circuit.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49896561/f1-drivers-discuss-challenges-new-madrid-grand-prix-circuit"
-    },
-    {
-     "titulo": "Kimi Antonelli phone crashed after Italian GP win: Jannik Sinner and Valentino Rossi among messages",
-     "resumen": "Kimi Antonelli got so many messages after winning the Italian Grand Prix, which he called the best day of his life, that his WhatsApp crashed that evening.",
-     "fecha": "2026-09-10T17:55:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0910/r1714412_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867095/kimi-antonelli-phone-crashed-italian-grand-prix-win-jannik-sinner-valentino-rossi-messages-formula-1"
-    },
-    {
-     "titulo": "'The most risky on the calendar': F1 drivers react to 'crazy' Madring layout ahead of Spanish Grand Prix",
-     "resumen": "Formula 1 drivers have predicted multiple crashes and red flags at this weekend's Spanish Grand Prix after getting their first glimpse of the new Madring circuit.",
-     "fecha": "2026-09-10T17:53:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0910/r1714435_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49894131/the-most-risky-calendar-f1-drivers-react-crazy-madring-layout-ahead-spanish-grand-prix"
     }
    ],
    "resultados": null,
@@ -2685,11 +2692,11 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Conor Benn on cutting weight: 'It's hell'",
-     "resumen": "Conor Benn on cutting weight: 'It's hell'",
-     "fecha": "2026-09-10T01:50:14Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0909/dm_260909_Watchfolder_ufc_rev/dm_260909_Watchfolder_ufc_rev.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49887016/hell"
+     "titulo": "Cris Cyborg is still going strong as a force in women's P4P top 10",
+     "resumen": "At age 41, PFL women's featherweight champion continues win streak to secure spot in ESPN P4P top 10.",
+     "fecha": "2026-09-08T14:58:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0825/r1706696_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     },
     {
      "titulo": "Salahdine Parnasse KO's Dan Hooker in Round 1",
