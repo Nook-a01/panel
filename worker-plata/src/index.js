@@ -28,6 +28,7 @@
 //   GET  /semilla  → la configuración inicial (categorías, pagos fijos, historial)
 //   GET  /app      → el estado completo de la app (lo que ves en pantalla)
 //   POST /app      → la app guarda su estado acá para que el otro aparato lo vea
+//   GET/POST /campamento → los días marcados del plan de 30 días
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
 // Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
@@ -188,7 +189,27 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app"] }, 404);
+      // ---- campamento: qué días del plan marcaste ----
+      if (url.pathname === "/campamento") {
+        if (request.method === "GET") {
+          const g = await env.PLATA.get("campamento");
+          return new Response(g || JSON.stringify({ hechos: [] }), { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const e = await request.json();
+          if (!e || !Array.isArray(e.hechos)) return json({ error: "Falta la lista de días." }, 400);
+          // Unión con lo guardado: marcar en un aparato no desmarca en el otro.
+          const previo = JSON.parse((await env.PLATA.get("campamento")) || "null");
+          const juntos = new Set([...(previo && previo.hechos || []), ...e.hechos]
+            .map(Number).filter(n => n >= 1 && n <= 30));
+          const guardar = { hechos: [...juntos].sort((a, b) => a - b), actualizado: new Date().toISOString() };
+          await env.PLATA.put("campamento", JSON.stringify(guardar));
+          return json({ ok: true, hechos: guardar.hechos.length });
+        }
+        return json({ error: "Usá GET o POST." }, 405);
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }

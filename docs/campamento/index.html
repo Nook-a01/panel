@@ -172,6 +172,23 @@
     .rgrid{grid-template-columns:64px repeat(16,1fr);}
     .beatnums{grid-template-columns:64px repeat(16,1fr);}
   }
+
+/* ── índice de teoría y enlaces desde los días ──────────────── */
+.indice-teoria{ display:grid; gap:8px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); margin-top:10px }
+.indice-teoria a{
+  display:flex; align-items:baseline; gap:9px;
+  padding:10px 12px; border-radius:10px; text-decoration:none;
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+  color:inherit; font-size:.93rem; line-height:1.35;
+}
+.indice-teoria a:hover{ background:rgba(255,255,255,.08) }
+.indice-teoria a b{ opacity:.55; font-variant-numeric:tabular-nums; flex:0 0 auto }
+a.ir-teoria{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; cursor:pointer }
+/* Al saltar desde un día, la sección parpadea para que sepas dónde caíste. */
+.card.resaltada{ animation:resaltar 1.8s ease-out }
+@keyframes resaltar{ from{ box-shadow:0 0 0 3px var(--accent) } to{ box-shadow:0 0 0 0 transparent } }
+/* El encabezado es fijo: sin esto el salto deja el título tapado. */
+.card[id^="teoria-"]{ scroll-margin-top:96px }
 </style>
 </head>
 <body>
@@ -213,8 +230,8 @@
 
   <div class="card">
     <h2>Cómo usar esto</h2>
-    <p>La página calcula sola en qué día del plan estás (día 1 completado el 28 de julio; reseteado el 14 de agosto de 2026 para retomar en el día 2). Abrí la pestaña <strong>Hoy</strong>, hacé el ejercicio en FL Studio, y listo. Si un día no podés, no pasa nada: retomá donde ibas, los días no se vencen.</p>
-    <p class="muted">Los tics de las casillas son visuales y se reinician al recargar la página — tu progreso real vive en tus .flp. Guardá cada ejercicio como proyecto: <span class="mono">D01 - dembow.flp</span>, <span class="mono">D02 - escala.flp</span>, etc. Esa carpeta va a ser tu diario de progreso.</p>
+    <p>El día avanza cuando vos lo marcás, no con el calendario. Abrí <strong>Hoy</strong>, hacé el ejercicio en FL Studio y tocá el <strong>✓</strong>: recién ahí pasás al día siguiente. Si no podés un día, no perdés nada — el plan te espera donde lo dejaste.</p>
+    <p class="muted">Las marcas se guardan en este navegador, y si escribiste la clave de tu panel también viajan al celular. Igual guardá cada ejercicio como proyecto: <span class="mono">D01 - dembow.flp</span>, <span class="mono">D02 - escala.flp</span>. Esa carpeta es tu diario de progreso de verdad.</p>
   </div>
 </section>
 
@@ -231,14 +248,31 @@
     <p>Todo lo que necesitás para producir urbano, afro y house, explicado en idioma piano roll. No hay partituras, no hay solfeo: hay notas que se pintan y reglas que se escuchan. Volvé a esta pestaña cada vez que un día del plan te mande acá.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-indice">
+    <h2>Índice</h2>
+    <p class="muted" style="margin-top:-4px">Nueve secciones. Tocá la que buscás en vez de scrollear.</p>
+    <div class="indice-teoria">
+      <a href="#teoria-1" data-teoria="1"><b>1</b> El piano roll es tu mapa</a>
+      <a href="#teoria-2" data-teoria="2"><b>2</b> Escalas: tu zona segura</a>
+      <a href="#teoria-3" data-teoria="3"><b>3</b> Tonalidad: qué significa "estar en Am"</a>
+      <a href="#teoria-4" data-teoria="4"><b>4</b> Acordes: 3 o 4 notas salteadas</a>
+      <a href="#teoria-5" data-teoria="5"><b>5</b> Progresiones por género (recetas probadas)</a>
+      <a href="#teoria-6" data-teoria="6"><b>6</b> Melodía: pocas notas, mucha intención</a>
+      <a href="#teoria-7" data-teoria="7"><b>7</b> Ritmo: los 4 patrones que tenés que saber</a>
+      <a href="#teoria-8" data-teoria="8"><b>8</b> Estructura: de loop a canción</a>
+      <a href="#teoria-9" data-teoria="9"><b>9</b> Chuleta rápida</a>
+    </div>
+  </div>
+
+
+  <div class="card" id="teoria-1">
     <h2>1. El piano roll es tu mapa</h2>
     <p>Solo existen <strong>12 notas</strong> y después se repiten más agudas o más graves: <span class="mono">C, C#, D, D#, E, F, F#, G, G#, A, A#, B</span>. Cada repetición es una <strong>octava</strong>: A3, A4 y A5 son "la misma nota" en distintas alturas.</p>
     <p>Equivalencia con los nombres en español: <span class="mono">C=Do · D=Re · E=Mi · F=Fa · G=Sol · A=La · B=Si</span>. Las teclas negras son los sostenidos (#).</p>
     <div class="callout"><b>Truco FL Studio:</b> en el piano roll, andá a <span class="mono">Helpers → Scale highlighting</span> y elegí "A Minor". FL te pinta las notas correctas y nunca más pifiás una nota fuera de escala.</div>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-2">
     <h2>2. Escalas: tu zona segura</h2>
     <p>Una escala es un <strong>grupo de 7 notas que combinan entre sí</strong>. Si todas tus melodías, acordes y 808s usan notas de la misma escala, todo suena "bien" automáticamente. Esa es la respuesta a "¿por qué mi beat suena raro?": casi siempre hay una nota fuera de la escala.</p>
     <h3>La escala menor: tu casa</h3>
@@ -255,13 +289,13 @@
     <div class="callout"><b>¿En qué escala está un sample?</b> Arrastralo al playlist, abrilo con el ícono de onda y fijate si el nombre trae la tonalidad (ej: "142 BPM D Min" = Re menor). Si no la trae: tocá notas de Am por encima hasta encontrar la que "encaja" como tónica — o usá un MIDI del mismo pack y mirá qué notas usa.</div>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-3">
     <h2>3. Tonalidad: qué significa "estar en Am"</h2>
     <p>La tonalidad es el <strong>hogar</strong> del tema: la nota donde todo tiende a resolver. Un tema "en Am" usa las notas de la escala de Am, sus acordes salen de esas notas, y cuando la melodía cae en A se siente "en casa".</p>
     <p>Dato útil: <strong>Am y C mayor usan las mismas teclas blancas</strong> (son relativas). Por eso un MIDI "en C" te sirve igual para tu beat en Am. Cada escala mayor tiene su relativa menor: C↔Am, G↔Em, F↔Dm.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-4">
     <h2>4. Acordes: 3 o 4 notas salteadas</h2>
     <p>La receta universal: <strong>elegí una nota de la escala, salteá una, agarrá la siguiente, salteá otra, agarrá la siguiente.</strong> Eso es una triada (acorde de 3 notas). En Am: A (salto B) + C (salto D) + E = <strong>Am</strong>.</p>
     <p>Cada escala genera 7 acordes, uno por nota. Los de Am (los únicos que necesitás por ahora):</p>
@@ -284,7 +318,7 @@
     <div class="callout"><b>Truco FL Studio:</b> en el piano roll, <span class="mono">stamp tool</span> (el sellito arriba) trae acordes listos: elegís "minor 7th" y pintás el acorde entero con un click.</div>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-5">
     <h2>5. Progresiones por género (recetas probadas)</h2>
     <p>Una progresión es una ronda de 3-4 acordes que se repite. Estas son las que suenan en los géneros que producís — todas en Am para que las pruebes ya mismo, un acorde por compás:</p>
     <h3 style="color:var(--w1)">Reggaetón / urbano</h3>
@@ -312,7 +346,7 @@
     <p class="muted">¿Y si quiero otra tonalidad? Subí o bajá TODAS las notas la misma cantidad de semitonos (en FL: seleccioná todo y Shift+flecha arriba/abajo). La progresión sigue funcionando igual.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-6">
     <h2>6. Melodía: pocas notas, mucha intención</h2>
     <p><strong>Regla 1 — Notas del acorde primero.</strong> Si abajo suena Am (A-C-E), una melodía con A, C y E siempre encaja. Las otras notas de la escala son "de paso": usalas para conectar, no para aterrizar.</p>
     <p><strong>Regla 2 — Repetición 2+2.</strong> Repetí 2 compases igual, variá los 2 siguientes. El cerebro ama reconocer y sorprenderse en ese orden.</p>
@@ -321,7 +355,7 @@
     <p><strong>El bajo:</strong> toca la fundamental de cada acorde (Am→A, F→F...) en octava grave. El groove del bajo importa más que sus notas: copiale el ritmo al kick y después sacale o sumale un golpe.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-7">
     <h2>7. Ritmo: los 4 patrones que tenés que saber</h2>
     <p>El grid: cada compás tiene 16 casillas (pasos). Los beats fuertes son 1, 5, 9 y 13.</p>
     <h3 style="color:var(--w1)">Dembow (reggaetón · ~95 BPM)</h3>
@@ -351,7 +385,7 @@
     <p><strong>Síncopa:</strong> notas que caen entre los beats fuertes. Es lo que separa "correcto" de "que te mueve". Truco: mové notas 1 casilla (1/16) antes del beat y escuchá.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-8">
     <h2>8. Estructura: de loop a canción</h2>
     <p>Las canciones se arman en <strong>bloques de 8 compases</strong>. La regla de oro: <strong>cada 8 compases, algo entra o algo sale.</strong></p>
     <table>
@@ -366,7 +400,7 @@
     <p class="muted">En house la lógica es la misma pero más estirada (bloques de 16-32) y el "hook" se llama drop.</p>
   </div>
 
-  <div class="card">
+  <div class="card" id="teoria-9">
     <h2>9. Chuleta rápida</h2>
     <span class="pill">Reggaetón: 88-100 BPM</span>
     <span class="pill">Dancehall: 95-105 BPM</span>
@@ -589,16 +623,74 @@ const DAYS = [
 </script>
 <script>
 // =============== LOGIC ===============
-const START = new Date(2026, 7, 13); // 13 de agosto de 2026 (día 1) — reseteado el 14/8: hoy es Día 2
+//
+// EL DÍA NO AVANZA SOLO.
+// Antes había un START fijo (13/8/2026) y el día salía de restar fechas: al
+// 11/9 la página decía "Día 30 de 30" sin que hubieras hecho ninguna lección.
+// El calendario corría aunque vos no. Ahora avanzás marcando: el día de Hoy es
+// el primero que todavía no marcaste.
+//
+// Y LAS MARCAS SE GUARDAN.
+// Antes eran `new Set()` en memoria y se borraban al recargar — la propia
+// página lo avisaba. Ahora viven en este navegador, y si tenés la clave del
+// panel también viajan al celular.
+
 const MS_DAY = 86400000;
-function todayNum(){
-  const now = new Date();
-  const t0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const diff = Math.floor((t0 - START) / MS_DAY) + 1;
-  return Math.min(30, Math.max(1, diff));
+const LS_HECHOS = 'campamento-hechos';
+const WORKER = 'https://plata.hamcqc.workers.dev';
+
+function claveePanel(){ try{ return localStorage.getItem('plata-mp-clave') || ''; }catch(e){ return ''; } }
+
+function leerHechos(){
+  try{
+    const v = JSON.parse(localStorage.getItem(LS_HECHOS) || '[]');
+    return new Set(Array.isArray(v) ? v.map(Number).filter(n=>n>=1 && n<=30) : []);
+  }catch(e){ return new Set(); }
 }
-const TODAY = todayNum();
-const done = new Set(); // in-memory only
+function guardarHechos(){
+  const lista = [...done].sort((a,b)=>a-b);
+  try{ localStorage.setItem(LS_HECHOS, JSON.stringify(lista)); }catch(e){}
+  subirHechos(lista);
+}
+
+// Sincronización con el panel privado. Es opcional a propósito: sin clave la
+// página funciona igual, solo que el progreso queda en este aparato.
+let subiendo = null;
+function subirHechos(lista){
+  const clave = claveePanel(); if(!clave) return;
+  clearTimeout(subiendo);
+  subiendo = setTimeout(function(){
+    fetch(WORKER + '/campamento', {
+      method:'POST',
+      headers:{ 'content-type':'application/json', authorization:'Bearer '+clave },
+      body: JSON.stringify({ hechos: lista, actualizado: new Date().toISOString() })
+    }).catch(function(){ /* sin internet: queda guardado acá y sube la próxima */ });
+  }, 1200);
+}
+async function bajarHechos(){
+  const clave = claveePanel(); if(!clave) return false;
+  try{
+    const r = await fetch(WORKER + '/campamento', { headers:{ authorization:'Bearer '+clave }, cache:'no-store' });
+    if(!r.ok) return false;
+    const d = await r.json();
+    if(!d || !Array.isArray(d.hechos)) return false;
+    // Gana la unión: marcar en un aparato nunca desmarca en el otro.
+    let cambio = false;
+    d.hechos.forEach(function(n){ if(!done.has(Number(n))){ done.add(Number(n)); cambio = true; } });
+    if(cambio){ try{ localStorage.setItem(LS_HECHOS, JSON.stringify([...done].sort((a,b)=>a-b))); }catch(e){} }
+    return cambio;
+  }catch(e){ return false; }
+}
+
+const done = leerHechos();
+
+// El día de hoy es el primero sin marcar. Si marcaste 1, 2 y 5, hoy es el 3:
+// el plan es una fila, no un calendario.
+function diaActual(){
+  for(let d = 1; d <= 30; d++) if(!done.has(d)) return d;
+  return 30;
+}
+let TODAY = diaActual();
 
 function weekOf(d){ return WEEKS[d.w-1]; }
 
@@ -606,6 +698,7 @@ function dayCard(day, opts={}){
   const wk = weekOf(day);
   const el = document.createElement('div');
   el.className = 'day' + (opts.open ? ' open' : '') + (day.d === TODAY && opts.highlight ? ' today-hl' : '');
+  el.dataset.dia = day.d;
   el.innerHTML = `
     <div class="day-head">
       <div class="dnum" style="background:${wk.color}">D${day.d}</div>
@@ -613,11 +706,11 @@ function dayCard(day, opts={}){
         <div class="n">${day.t}</div>
         <div class="g">${day.g}</div>
       </div>
-      <button class="check" aria-label="Marcar día ${day.d} como hecho">✓</button>
+      <button class="check" aria-label="Marcar día ${day.d} como hecho" aria-pressed="false">✓</button>
       <span class="chev">▶</span>
     </div>
     <div class="day-body">
-      <div class="blk"><div class="lbl">📖 Teoría (10 min)</div><ul>${day.teoria.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="lbl">📖 Teoría (10 min)</div><ul>${day.teoria.map(x=>`<li>${enlazarTeoria(x)}</li>`).join('')}</ul></div>
       <div class="blk"><div class="lbl">🎹 Práctica en FL Studio (25 min)</div><ul>${day.practica.map(x=>`<li>${x}</li>`).join('')}</ul></div>
       <div class="constraint">${day.constraint}</div>
       <div class="win">${day.win}</div>
@@ -627,50 +720,109 @@ function dayCard(day, opts={}){
     el.classList.toggle('open');
   });
   const chk = el.querySelector('.check');
-  if(done.has(day.d)) chk.classList.add('on');
+  if(done.has(day.d)){ chk.classList.add('on'); chk.setAttribute('aria-pressed','true'); }
   chk.addEventListener('click', ()=>{
-    if(done.has(day.d)){ done.delete(day.d); chk.classList.remove('on'); }
-    else{ done.add(day.d); chk.classList.add('on'); }
-    document.querySelectorAll(`.day .check`).forEach(c=>{}); // no-op, single instance per list
-    updateProgress();
+    if(done.has(day.d)) done.delete(day.d); else done.add(day.d);
+    guardarHechos();
+    TODAY = diaActual();
+    repintar();
   });
   return el;
 }
 
 function updateProgress(){
-  const pct = Math.round((TODAY-1)/30*100);
-  document.getElementById('dayChip').textContent = `Día ${TODAY} de 30`;
-  // Le dejamos el día a la portada del Panel, para que lo muestre sin
-  // tener que repetir esta cuenta. Acá está la única fecha de arranque.
+  const hechos = done.size;
+  const pct = Math.round(hechos / 30 * 100);
+  // El chip dice lo que hiciste, no qué día del calendario es.
+  document.getElementById('dayChip').textContent =
+    hechos === 30 ? '30 de 30 — terminaste' : `Día ${TODAY} · ${hechos} de 30 hechos`;
   try{ localStorage.setItem('campamento-dia', String(TODAY)); }catch(e){}
-  document.getElementById('barFill').style.width = Math.max(3,pct) + '%';
+  document.getElementById('barFill').style.width = Math.max(3, pct) + '%';
   const wk = WEEKS[DAYS[TODAY-1].w-1];
-  document.getElementById('barLabel').textContent = wk.title.split('·')[1].trim();
+  document.getElementById('barLabel').textContent =
+    hechos === 0 ? 'Todavía no marcaste ningún día' : wk.title.split('·')[1].trim();
 }
 
-// ---- render Hoy ----
-(function(){
+// ---- teoría: convertir las menciones en enlaces ----
+//
+// Los días decían «Leé en Teoría la parte de bajo en 6. Melodía» en texto
+// plano: había que cambiar de pestaña y buscar scrolleando entre nueve
+// secciones. Ahora cada mención es un enlace que abre la sección justa.
+function enlazarTeoria(txt){
+  return String(txt).replace(/<b>(\d)\.\s*([^<]+)<\/b>/g, function(todo, num, titulo){
+    return '<a class="ir-teoria" href="#teoria-' + num + '" data-teoria="' + num + '">' +
+           num + '. ' + titulo + '</a>';
+  });
+}
+
+function irATeoria(num){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('section.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelector('.tab[data-tab="teoria"]').classList.add('active');
+  document.getElementById('panel-teoria').classList.add('active');
+  const destino = document.getElementById('teoria-' + num);
+  if(!destino){ window.scrollTo({top:0}); return; }
+  // El salto se difiere un instante a propósito: al ocultar el panel anterior
+  // (que es alto) el navegador reacomoda el scroll y cancela la animación si se
+  // pide en el mismo tick.
+  //
+  // Va con setTimeout y NO con requestAnimationFrame: rAF no se ejecuta mientras
+  // la página no se pinta (pestaña en segundo plano, ventana tapada), y entonces
+  // el salto no ocurría nunca. Medido: cero llamadas a scrollIntoView.
+  setTimeout(function(){
+    destino.scrollIntoView({behavior:'smooth', block:'start'});
+    // Respaldo por si scrollIntoView no mueve nada (pasa con contenedores que
+    // acaban de cambiar de tamaño): se calcula la posición y se salta a mano.
+    setTimeout(function(){
+      const r = destino.getBoundingClientRect();
+      if(r.top < -40 || r.top > window.innerHeight)
+        // instant a propósito: el CSS tiene scroll-behavior:smooth global, y si
+        // el respaldo también saliera suave heredaría el mismo problema que vino
+        // a resolver.
+        window.scrollTo({ top: window.scrollY + r.top - 88, behavior: 'instant' });
+    }, 700);
+    destino.classList.add('resaltada');
+    setTimeout(function(){ destino.classList.remove('resaltada'); }, 1800);
+  }, 60);
+}
+
+// ---- render ----
+function renderHoy(){
   const day = DAYS[TODAY-1];
   const wk = weekOf(day);
   const wrap = document.getElementById('todayCard');
+  wrap.innerHTML = '';
+
+  if(done.size === 30){
+    const fin = document.createElement('div');
+    fin.className = 'card';
+    fin.innerHTML = '<h2>Terminaste los 30 días</h2><p>Marcaste el plan completo. ' +
+      'Escuchá el export del día 1 y el del día 30 uno detrás del otro: ese es tu progreso real.</p>';
+    wrap.appendChild(fin);
+    return;
+  }
+
   const intro = document.createElement('div');
   intro.className = 'week-h';
   intro.innerHTML = `<div class="week-dot" style="background:${wk.color}"></div>
     <div><div class="t">${wk.title}</div><div class="d">${wk.desc}</div></div>`;
   wrap.appendChild(intro);
   wrap.appendChild(dayCard(day, {open:true, highlight:true}));
+
   const nxt = document.createElement('p');
   nxt.className = 'muted';
   nxt.style.margin = '6px 4px 20px';
+  // "Mañana" era una promesa que el plan no cumple: el día siguiente llega
+  // cuando marcás éste, no cuando cambia la fecha.
   nxt.textContent = day.d < 30
-    ? `Mañana: Día ${day.d+1} — ${DAYS[day.d].t}`
-    : 'Último día del ciclo. Después de hoy, escribime y armamos el ciclo 2.';
+    ? `Cuando marques este día pasás al Día ${day.d+1} — ${DAYS[day.d].t}`
+    : 'Último día del ciclo. Después de marcarlo, escribime y armamos el ciclo 2.';
   wrap.appendChild(nxt);
-})();
+}
 
-// ---- render Plan ----
-(function(){
+function renderPlan(){
   const list = document.getElementById('planList');
+  list.innerHTML = '';
   let lastWeek = 0;
   DAYS.forEach(day=>{
     if(day.w !== lastWeek){
@@ -684,7 +836,9 @@ function updateProgress(){
     }
     list.appendChild(dayCard(day, {open:false, highlight:true}));
   });
-})();
+}
+
+function repintar(){ renderHoy(); renderPlan(); updateProgress(); }
 
 // ---- tabs ----
 document.querySelectorAll('.tab').forEach(btn=>{
@@ -697,7 +851,19 @@ document.querySelectorAll('.tab').forEach(btn=>{
   });
 });
 
-updateProgress();
+// Enlaces a teoría, vengan del día de hoy o del índice.
+document.addEventListener('click', function(e){
+  const a = e.target.closest('[data-teoria]');
+  if(!a) return;
+  e.preventDefault();
+  irATeoria(a.dataset.teoria);
+});
+
+repintar();
+
+// Si tenés la clave del panel, el progreso del otro aparato se suma al de acá.
+bajarHechos().then(function(hubo){ if(hubo){ TODAY = diaActual(); repintar(); } });
+
 </script>
 
 <style id="volver-al-panel">
