@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mis resultados · Panel de Instagram</title>
+<!--
+  POR QUÉ EXISTE ESTA PÁGINA
+
+  En iPhone no hay forma de LEER Instagram: Apple no deja instalar apps fuera de
+  su tienda, y una página web no puede entrar a la sesión de Instagram — probado,
+  responde `X-Frame-Options: DENY` y no manda ninguna cabecera CORS.
+
+  Pero mostrar lo ya leído sí se puede. La computadora escanea y sube el
+  resultado al panel privado; esta página lo baja y lo muestra. Misma idea que el
+  lector de Mercado Pago.
+
+  Lo que llega acá es el resultado, no la sesión: nombres de usuario, si te
+  siguen de vuelta y los totales. Nada que sirva para entrar a la cuenta.
+-->
+<style>
+  :root{
+    --acido:#CCFF00; --shock:#ff3b6b;
+    --fondo:#000; --caja:#0e0e14; --linea:#23232e;
+    --tinta:#fff; --apagado:#8b8b95;
+    --f:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --m:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--fondo); color:var(--tinta); font-family:var(--f);
+    font-size:16px; line-height:1.5;
+    padding:max(18px,env(safe-area-inset-top)) 16px calc(env(safe-area-inset-bottom) + 40px);
+    max-width:560px; margin:0 auto;
+  }
+  h1{font-size:1.5rem;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+  .sub{color:var(--apagado);font-size:.88rem;margin-top:5px}
+
+  .caja{background:var(--caja);border:1px solid var(--linea);border-radius:14px;padding:16px;margin-top:16px}
+  label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--apagado);font-weight:700;margin-bottom:7px}
+  input{
+    width:100%;background:#06060a;border:1px solid var(--linea);border-radius:10px;
+    color:var(--tinta);font:inherit;font-size:16px;padding:12px 13px;
+  }
+  input:focus{outline:none;border-color:var(--acido)}
+  button{
+    width:100%;background:var(--acido);color:#000;border:0;border-radius:10px;
+    font:inherit;font-weight:800;font-size:1rem;padding:13px;margin-top:11px;cursor:pointer;
+  }
+  button.gh{background:none;color:var(--apagado);border:1px solid var(--linea);font-weight:600}
+
+  .grande{font-size:3rem;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--shock)}
+  .fila{display:flex;gap:12px;margin-top:14px}
+  .fila>div{flex:1;background:var(--caja);border:1px solid var(--linea);border-radius:12px;padding:12px}
+  .fila .n{font-size:1.35rem;font-weight:800;font-family:var(--m)}
+  .fila .q{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--apagado);margin-top:2px}
+
+  .filtros{display:flex;gap:7px;margin:18px 0 10px}
+  .filtros button{width:auto;flex:1;margin:0;padding:9px 8px;font-size:.82rem;background:none;border:1px solid var(--linea);color:var(--apagado)}
+  .filtros button.on{background:var(--acido);border-color:var(--acido);color:#000}
+
+  .cuenta{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit}
+  .cuenta:last-child{border-bottom:0}
+  .foto{width:42px;height:42px;border-radius:50%;background:#1b1b24;flex:0 0 auto;object-fit:cover;
+        display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--apagado);font-size:.9rem}
+  .datos{min-width:0;flex:1}
+  .usuario{font-weight:700;font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .nombre{color:var(--apagado);font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .marca{font-size:.68rem;font-weight:800;letter-spacing:.05em;padding:3px 7px;border-radius:20px;flex:0 0 auto}
+  .no{background:rgba(255,59,107,.15);color:var(--shock)}
+  .si{background:rgba(204,255,0,.13);color:var(--acido)}
+
+  .aviso{background:rgba(204,255,0,.08);border:1px solid rgba(204,255,0,.25);border-radius:12px;padding:13px;font-size:.88rem;color:#e8ffb0;margin-top:16px}
+  .malo{background:rgba(255,59,107,.1);border-color:rgba(255,59,107,.3);color:#ffb8c8}
+  .oculto{display:none}
+  .volver{display:inline-block;margin-top:26px;color:var(--apagado);font-size:.85rem;text-decoration:none}
+</style>
+</head>
+<body>
+
+<h1>Mis resultados</h1>
+<p class="sub" id="sub">Lo último que escaneaste desde la computadora.</p>
+
+<!-- ---------- pedir la clave ---------- -->
+<div class="caja" id="pedirClave">
+  <label for="clave">Clave de tu Panel</label>
+  <input type="password" id="clave" placeholder="la misma que usás en Plata" autocomplete="off" inputmode="text">
+  <button id="entrar">Ver mis resultados</button>
+  <p class="sub" style="margin-top:11px">
+    Queda guardada en este teléfono. Es la misma clave del Panel: no es tu contraseña de Instagram.
+  </p>
+</div>
+
+<div id="aviso" class="aviso oculto"></div>
+
+<!-- ---------- resultados ---------- -->
+<div id="resultados" class="oculto">
+  <div class="caja" style="text-align:center">
+    <div class="grande" id="nNoSiguen">0</div>
+    <div class="sub" style="margin-top:6px">no te siguen de vuelta</div>
+  </div>
+
+  <div class="fila">
+    <div><div class="n" id="nSeguidores">—</div><div class="q">Seguidores</div></div>
+    <div><div class="n" id="nSeguidos">—</div><div class="q">Seguidos</div></div>
+  </div>
+
+  <div class="caja" style="margin-top:14px">
+    <label for="buscar">Buscar</label>
+    <input type="search" id="buscar" placeholder="nombre de usuario">
+  </div>
+
+  <div class="filtros">
+    <button data-f="no" class="on">No me siguen</button>
+    <button data-f="si">Sí me siguen</button>
+    <button data-f="todos">Todos</button>
+  </div>
+
+  <div id="lista"></div>
+  <button class="gh" id="mas" style="margin-top:14px">Ver más</button>
+  <button class="gh" id="olvidar" style="margin-top:8px">Olvidar la clave en este teléfono</button>
+</div>
+
+<a class="volver" href="./">‹ Volver a la instalación</a>
+
+<script>
+(function(){
+  var WORKER = 'https://plata.hamcqc.workers.dev';
+  var LS = 'panel-ig-clave';
+  var datos = null, filtro = 'no', mostrando = 50;
+
+  var $ = function(s){ return document.querySelector(s); };
+  function clave(){ try{ return localStorage.getItem(LS) || ''; }catch(e){ return ''; } }
+  function guardar(v){ try{ v ? localStorage.setItem(LS, v) : localStorage.removeItem(LS); }catch(e){} }
+
+  function avisar(txt, malo){
+    var a = $('#aviso');
+    a.textContent = txt;
+    a.className = 'aviso' + (malo ? ' malo' : '');
+  }
+
+  function cuando(iso){
+    if(!iso) return '';
+    var s = Math.floor((Date.now() - new Date(iso).getTime())/1000);
+    if(s < 3600) return 'hace ' + Math.max(1,Math.floor(s/60)) + ' min';
+    if(s < 86400) return 'hace ' + Math.floor(s/3600) + ' h';
+    return 'hace ' + Math.floor(s/86400) + ' día' + (Math.floor(s/86400) > 1 ? 's' : '');
+  }
+
+  async function traer(){
+    var k = clave();
+    if(!k) return;
+    avisar('Buscando lo último que escaneaste…');
+    try{
+      var r = await fetch(WORKER + '/instagram', {
+        headers: { authorization: 'Bearer ' + k }, cache: 'no-store'
+      });
+      if(r.status === 401){
+        guardar('');
+        avisar('Esa clave no es correcta. Probá de nuevo.', true);
+        $('#pedirClave').className = 'caja';
+        return;
+      }
+      if(r.status === 404){
+        avisar('Todavía no hay nada. Abrí Instagram en la computadora, escaneá y tocá «Ver en el celular».', true);
+        $('#pedirClave').className = 'caja oculto';
+        return;
+      }
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      datos = await r.json();
+      pintar();
+    }catch(e){
+      avisar('No se pudo conectar: ' + e.message, true);
+    }
+  }
+
+  function pintar(){
+    if(!datos || !Array.isArray(datos.users)) return;
+    $('#pedirClave').className = 'caja oculto';
+    $('#aviso').className = 'aviso oculto';
+    $('#resultados').className = '';
+
+    $('#sub').textContent =
+      (datos.usuario ? '@' + datos.usuario + ' · ' : '') +
+      'escaneado ' + cuando(datos.escaneadoEn || datos.actualizado);
+
+    $('#nNoSiguen').textContent = (datos.noSiguen != null ? datos.noSiguen
+      : datos.users.filter(function(u){ return !u.follows_viewer; }).length).toLocaleString('es-AR');
+    $('#nSeguidores').textContent = datos.seguidores != null ? Number(datos.seguidores).toLocaleString('es-AR') : '—';
+    $('#nSeguidos').textContent   = datos.seguidos   != null ? Number(datos.seguidos).toLocaleString('es-AR')   : '—';
+
+    pintarLista();
+  }
+
+  function pintarLista(){
+    var q = ($('#buscar').value || '').trim().toLowerCase();
+    var lista = datos.users.filter(function(u){
+      if(filtro === 'no' && u.follows_viewer) return false;
+      if(filtro === 'si' && !u.follows_viewer) return false;
+      if(q && (u.username || '').toLowerCase().indexOf(q) < 0 &&
+              (u.full_name || '').toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    });
+
+    var caja = $('#lista');
+    caja.innerHTML = '';
+    lista.slice(0, mostrando).forEach(function(u){
+      var a = document.createElement('a');
+      a.className = 'cuenta';
+      a.href = 'https://www.instagram.com/' + encodeURIComponent(u.username) + '/';
+      a.target = '_blank'; a.rel = 'noopener';
+
+      // La foto viene del CDN de Instagram y su dirección vence: si no carga,
+      // queda la inicial, que siempre funciona.
+      var foto = document.createElement('div');
+      foto.className = 'foto';
+      foto.textContent = (u.username || '?').slice(0,1).toUpperCase();
+      if(u.profile_pic_url){
+        var img = new Image();
+        img.className = 'foto'; img.alt = '';
+        img.onload = function(){ if(foto.parentNode) foto.parentNode.replaceChild(img, foto); };
+        img.src = u.profile_pic_url;
+      }
+
+      var d = document.createElement('div');
+      d.className = 'datos';
+      d.innerHTML = '<div class="usuario">@' + esc(u.username) + (u.is_verified ? ' ✓' : '') + '</div>' +
+                    (u.full_name ? '<div class="nombre">' + esc(u.full_name) + '</div>' : '');
+
+      var m = document.createElement('span');
+      m.className = 'marca ' + (u.follows_viewer ? 'si' : 'no');
+      m.textContent = u.follows_viewer ? 'te sigue' : 'no te sigue';
+
+      a.appendChild(foto); a.appendChild(d); a.appendChild(m);
+      caja.appendChild(a);
+    });
+
+    if(!lista.length){
+      caja.innerHTML = '<p class="sub" style="text-align:center;padding:24px 0">Nada que mostrar acá.</p>';
+    }
+    $('#mas').className = 'gh' + (lista.length > mostrando ? '' : ' oculto');
+    $('#mas').textContent = 'Ver más (' + Math.max(0, lista.length - mostrando) + ' restantes)';
+  }
+
+  function esc(t){
+    return String(t == null ? '' : t)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  $('#entrar').onclick = function(){
+    var v = ($('#clave').value || '').trim();
+    if(!v) return;
+    guardar(v);
+    traer();
+  };
+  $('#clave').addEventListener('keydown', function(e){ if(e.key === 'Enter') $('#entrar').click(); });
+  $('#buscar').addEventListener('input', function(){ mostrando = 50; pintarLista(); });
+  $('#mas').onclick = function(){ mostrando += 100; pintarLista(); };
+  $('#olvidar').onclick = function(){
+    guardar('');
+    location.reload();
+  };
+  document.querySelectorAll('.filtros button').forEach(function(b){
+    b.onclick = function(){
+      filtro = b.dataset.f; mostrando = 50;
+      document.querySelectorAll('.filtros button').forEach(function(x){ x.className = x === b ? 'on' : ''; });
+      pintarLista();
+    };
+  });
+
+  if(clave()){ $('#pedirClave').className = 'caja oculto'; traer(); }
+})();
+</script>
+</body>
+</html>

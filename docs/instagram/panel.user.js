@@ -175,6 +175,88 @@ async function IGPanelPro(){
   function loadWL(){ return new Set(lsGet(LS.wl,[])); }
   function saveWL(s){ lsSet(LS.wl,Array.from(s)); }
 
+
+  // ---------------- verlo en el celular ----------------
+  //
+  // En iPhone no hay forma de LEER Instagram: Apple no deja instalar apps fuera
+  // de su tienda, y una página web no puede entrar a la sesión de Instagram
+  // (responde X-Frame-Options: DENY y no manda cabeceras CORS). Lo que sí se
+  // puede es mostrar en el teléfono lo que ya se leyó acá.
+  //
+  // Así que la computadora lee y sube el resultado al panel privado, y el
+  // celular lo muestra. Misma idea que el lector de Mercado Pago.
+  //
+  // Se sube sólo el resultado, no la sesión: nombres de usuario, si te siguen de
+  // vuelta y los totales. Nada que sirva para entrar a tu cuenta.
+  var PANEL_WORKER = 'https://plata.hamcqc.workers.dev';
+  var LS_CLAVE = 'igpp_clave_panel';
+
+  function claveCelular(){ try{ return localStorage.getItem(LS_CLAVE) || ''; }catch(e){ return ''; } }
+  function guardarClaveCelular(v){
+    try{ v ? localStorage.setItem(LS_CLAVE, v) : localStorage.removeItem(LS_CLAVE); }catch(e){}
+  }
+
+  function pedirClaveCelular(){
+    var v = prompt(
+      'Ver esto en el celular\n\n' +
+      'Escribí la clave de tu Panel (la misma que usás en la sección Plata).\n' +
+      'Queda guardada acá y sirve para que el teléfono vea lo que se escanea en esta computadora.'
+    );
+    if(v === null) return false;
+    v = v.trim();
+    if(!v) return false;
+    guardarClaveCelular(v);
+    return true;
+  }
+
+  async function subirAlCelular(silencioso){
+    var clave = claveCelular();
+    if(!clave) return { estado: 'sin-clave' };
+
+    var lista = users().map(function(u){
+      return {
+        username: u.username,
+        full_name: u.full_name || '',
+        is_verified: !!u.is_verified,
+        is_private: !!u.is_private,
+        profile_pic_url: u.profile_pic_url || '',
+        follows_viewer: !!u.follows_viewer
+      };
+    });
+
+    var cuentas = lsGet(LS.counts, null) || {};
+    var cuerpo = {
+      usuario: (cuentas.username || ''),
+      users: lista,
+      total: lista.length,
+      noSiguen: lista.filter(function(u){ return !u.follows_viewer; }).length,
+      seguidores: cuentas.followers || null,
+      seguidos: cuentas.following || null,
+      historial: lsGet(LS.hist, []),
+      perdidos: lsGet(LS.lost, []),
+      escaneadoEn: cache && cache.ts ? new Date(cache.ts).toISOString() : new Date().toISOString()
+    };
+
+    try{
+      var r = await fetch(PANEL_WORKER + '/instagram', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', authorization: 'Bearer ' + clave },
+        body: JSON.stringify(cuerpo)
+      });
+      if(r.status === 401){
+        guardarClaveCelular('');
+        if(!silencioso) toast('La clave del Panel no es correcta. Probá de nuevo.');
+        return { estado: 'clave-mala' };
+      }
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      if(!silencioso) toast('📲 Listo: ya lo podés ver en el celular.');
+      return { estado: 'ok', cuentas: lista.length };
+    }catch(e){
+      if(!silencioso) toast('No se pudo subir: ' + e.message);
+      return { estado: 'error', error: e.message };
+    }
+  }
+
   // ---------------- registro de actividad ----------------
   // Manda: el usuario de Instagram, un id aleatorio de esta instalación, el evento,
   // la hora local, la versión, y si es móvil o escritorio.
@@ -847,6 +929,8 @@ async function IGPanelPro(){
     if(state.activeTab==='analysis') renderAnalysisTab();
     if(cache.complete){
       sumarEscaneo();
+      // El celular no puede leer Instagram; muestra lo que se leyó acá.
+      subirAlCelular(true);
       // Limpiar la lista blanca: sacar a quienes ya no seguís (no aparecen en el
       // escaneo completo de tus seguidos). Guarda anti-escaneo-corto: solo si la
       // cantidad leída es creíble, para no vaciarla por una lista incompleta.
@@ -942,6 +1026,15 @@ async function IGPanelPro(){
       var re=document.createElement('button'); re.className='igpp-btn'; re.textContent='🔄 Reescanear';
       re.onclick=function(){ if(users().length===0||confirm('¿Reescanear ahora? El escaneo actual se reemplaza al terminar.')){ runScan(true); renderAnalysisTab(); } };
       scanCard.firstChild.appendChild(re);
+
+      var cel=document.createElement('button'); cel.className='igpp-btn';
+      cel.textContent = claveCelular() ? '📲 Mandar al celular' : '📲 Ver en el celular';
+      cel.onclick=function(){
+        if(!claveCelular() && !pedirClaveCelular()) return;
+        cel.disabled=true; cel.textContent='📲 Subiendo…';
+        subirAlCelular(false).then(function(){ cel.disabled=false; renderAnalysisTab(); });
+      };
+      scanCard.firstChild.appendChild(cel);
     }
     body.appendChild(scanCard);
 

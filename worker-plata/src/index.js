@@ -30,6 +30,7 @@
 //   POST /app      → la app guarda su estado acá para que el otro aparato lo vea
 //   GET/POST /campamento → los días marcados del plan de 30 días
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
+//   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
 // Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
@@ -229,7 +230,37 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos"] }, 404);
+      // ---- panel de Instagram: lo leído desde la computadora ----
+      //
+      // En iPhone no hay forma de leer Instagram: Apple no deja instalar apps
+      // fuera de su tienda, y una página web no puede entrar a la sesión de
+      // Instagram (X-Frame-Options: DENY, y sin CORS). Así que lee la compu y
+      // el teléfono muestra lo leído. Es la misma idea que el lector de
+      // Mercado Pago.
+      if (url.pathname === "/instagram") {
+        if (request.method === "GET") {
+          const g = await env.PLATA.get("instagram");
+          if (!g) return json({ error: "Todavía no escaneaste desde la computadora." }, 404);
+          return new Response(g, { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const e = await request.json();
+          if (!e || !Array.isArray(e.users))
+            return json({ error: "Eso no parece un escaneo." }, 400);
+          // Una lectura vacía no debe borrar la anterior: si el escaneo falló,
+          // mejor mostrar en el celular lo de ayer que nada.
+          if (!e.users.length) {
+            const previo = await env.PLATA.get("instagram");
+            if (previo) return json({ ok: true, conservado: true });
+          }
+          e.actualizado = new Date().toISOString();
+          await env.PLATA.put("instagram", JSON.stringify(e));
+          return json({ ok: true, cuentas: e.users.length });
+        }
+        return json({ error: "Usá GET o POST." }, 405);
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos", "GET/POST /instagram"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }
