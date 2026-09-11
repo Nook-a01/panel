@@ -29,6 +29,7 @@
 //   GET  /app      → el estado completo de la app (lo que ves en pantalla)
 //   POST /app      → la app guarda su estado acá para que el otro aparato lo vea
 //   GET/POST /campamento → los días marcados del plan de 30 días
+//   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
 // Hasta el 11/9/2026 esa configuración venía incrustada en docs/plata/index.html,
@@ -209,7 +210,26 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento"] }, 404);
+      // ---- marcador en vivo: qué resultado se avisó por última vez ----
+      //
+      // Vive acá y no en el repositorio a propósito: la tarea corre cada 5
+      // minutos y guardar el estado en git dejaría decenas de commits por
+      // partido, que es justo el ruido que ya hubo que limpiar una vez.
+      if (url.pathname === "/vivos") {
+        if (request.method === "GET") {
+          const g = await env.PLATA.get("vivos");
+          return new Response(g || "{}", { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const e = await request.json();
+          if (!e || typeof e !== "object") return json({ error: "Cuerpo inválido." }, 400);
+          await env.PLATA.put("vivos", JSON.stringify(e));
+          return json({ ok: true, partidos: Object.keys(e).length });
+        }
+        return json({ error: "Usá GET o POST." }, 405);
+      }
+
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }

@@ -94,9 +94,18 @@ self.addEventListener("push", e => {
     icon: "./deportes/icons/icon-192.png",
     badge: "./deportes/icons/icon-192.png",
     tag: d.tag || undefined,
-    renotify: false,
-    data: { url: d.url || "./deportes/" },
-    vibrate: [200, 80, 200],
+    // Durante un partido llegan varios avisos con el MISMO tag: el sistema
+    // reemplaza el anterior en vez de apilarlos, así queda una sola
+    // notificación que se va actualizando con el resultado y el minuto.
+    //
+    // `silencioso` lo decide quien envía: los cambios de minuto actualizan el
+    // texto sin sonar, y el gol o el final sí suenan. Por defecto NO es
+    // silencioso, para no enmudecer el resumen de las 10, que no manda el campo.
+    renotify: !d.silencioso && !!d.tag,
+    silent: d.silencioso === true,
+    // Una notificación silenciosa no puede pedir vibración: Chrome rechaza la
+    // combinación y no muestra nada.
+    vibrate: d.silencioso === true ? undefined : [200, 80, 200],
   }));
 });
 

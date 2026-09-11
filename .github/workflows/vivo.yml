@@ -1,0 +1,52 @@
+name: Marcador en vivo
+
+# Manda el resultado mientras se juega, en UNA sola notificación que se va
+# actualizando (todas comparten el mismo tag, así el celular reemplaza la
+# anterior en vez de apilar).
+#
+# POR QUÉ CADA 5 MINUTOS Y NO MÁS SEGUIDO
+# Es el mínimo que acepta GitHub Actions, y en la práctica llega con demora
+# variable porque las tareas programadas compiten con las de todo el mundo. Un
+# gol puede avisarse algunos minutos tarde. Si eso molesta, el camino para
+# bajarlo a un minuto es mover esto al Worker de Cloudflare, que acepta cron de
+# 1 minuto — pero implica escribir la firma VAPID a mano, que acá ya viene
+# resuelta por la librería web-push.
+#
+# El script sale enseguida si no hay ningún partido en juego, así que las
+# corridas en las que no pasa nada duran segundos.
+#
+# El último marcador avisado se guarda en el Worker, no en el repositorio: si
+# se commiteara, esta tarea dejaría decenas de commits por partido.
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marcador-vivo
+  cancel-in-progress: false
+
+jobs:
+  vivo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Mirar los partidos en juego
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          CLAVE_APP:         ${{ secrets.CLAVE_APP }}
+        run: node scripts/vivo.mjs
