@@ -11,7 +11,7 @@
 // vieja después de publicar, hasta limpiar la caché a mano.
 // Los escudos sí se guardan para siempre: no cambian nunca.
 
-const CACHE   = "panel-v16";
+const CACHE   = "panel-v17";
 const ESCUDOS = "panel-escudos";
 
 const BASICOS = [
@@ -84,9 +84,14 @@ self.addEventListener("fetch", e => {
 
 /* ---------- notificación push entrante ---------- */
 self.addEventListener("push", e => {
-  // Por ahora los avisos son todos de Deportes, así que si el mensaje no
-  // dice a dónde ir, va ahí y no a la portada.
-  let d = { title: "Panel", body: "Tenés un evento próximo", url: "./deportes/" };
+  // El destino por defecto es la portada, no Deportes.
+  //
+  // Antes caía en "./deportes/" porque el Panel empezó siendo sólo eso. Al
+  // tocar un aviso sin destino propio —la notificación de prueba, por
+  // ejemplo— el manejador de abajo ARRASTRA la ventana que tengas abierta
+  // hacia ahí: estabas leyendo Instagram y saltabas a Deportes sin pedirlo.
+  // Los avisos que sí saben a dónde van (partidos, plata) mandan su propia url.
+  let d = { title: "Panel", body: "Novedades en tu Panel", url: "./" };
   try { if (e.data) d = { ...d, ...e.data.json() }; } catch { if (e.data) d.body = e.data.text(); }
 
   e.waitUntil(self.registration.showNotification(d.title, {
@@ -111,7 +116,7 @@ self.addEventListener("push", e => {
 
 self.addEventListener("notificationclick", e => {
   e.notification.close();
-  const destino = new URL(e.notification.data?.url || "./deportes/", self.location).href;
+  const destino = new URL(e.notification.data?.url || "./", self.location).href;
 
   e.waitUntil(
     self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(lista => {

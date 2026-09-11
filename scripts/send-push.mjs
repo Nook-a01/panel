@@ -193,6 +193,9 @@ if (TEST) {
     title: "🔔 Prueba — Panel",
     body: "Si ves esto, las notificaciones funcionan.",
     tag: "prueba",
+    // Destino explícito: sin esto el aviso usa el del service worker y te
+    // mueve la ventana que estés mirando.
+    url: "./",
   });
   console.log(ok ? "✓ Notificación de prueba enviada" : "✗ No se pudo enviar");
   process.exit(ok ? 0 : 1);
