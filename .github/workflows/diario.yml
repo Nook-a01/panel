@@ -13,7 +13,10 @@ on:
     # Se programa dos veces por las dudas: si GitHub saltea la primera,
     # la segunda cubre. El propio aviso no se repite porque lleva la
     # misma etiqueta y el celular reemplaza el anterior.
-    - cron: "37 11 * * *"
+    # 13:07 UTC = 10:07 en Argentina — el aviso de las 10 de la mañana.
+    # 13:37 UTC = 10:37 como respaldo, por si GitHub saltea la primera.
+    # El minuto no es en punto a propósito (ver la nota de arriba).
+    - cron: "7 13 * * *"
     - cron: "37 13 * * *"
   workflow_dispatch:
 
