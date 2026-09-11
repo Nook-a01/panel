@@ -1605,6 +1605,21 @@ function mpConectar(){
   if(mpClave()) mpTraer(true);
 }
 
+/* En el teléfono cada fila de tabla se apila y cada celda necesita decir de qué
+   columna es. La etiqueta se saca del <thead> en vez de repetirla a mano en cada
+   <td>: así vale para las tablas de ahora y para las que se agreguen después. */
+function etiquetarTablas(){
+  document.querySelectorAll('section.view table').forEach(t=>{
+    const ths=[...t.querySelectorAll('thead th')].map(th=>th.textContent.trim());
+    if(!ths.length) return;
+    t.classList.add('apilable');
+    t.querySelectorAll('tbody tr').forEach(tr=>{
+      if(tr.querySelector('td[colspan]')) return;   // la fila de “no hay nada”
+      [...tr.children].forEach((td,i)=>{ if(ths[i]) td.setAttribute('data-th', ths[i]); });
+    });
+  });
+}
+
 function render(){
   $('#mLabel').textContent = ymLabel(selYM);
   refreshSelects();
@@ -1616,6 +1631,7 @@ function render(){
   else if(vista==='historial') renderHistorial();
   else if(vista==='ajustes') renderAjustes();
   else if(vista==='import') $('#impHint').textContent = S.reglas.length+' reglas de categorización activas';
+  etiquetarTablas();
 }
 function irA(v){
   vista = v;
@@ -2342,5 +2358,99 @@ body::before{
   }, { passive: true });
 })();
 </script>
+
+<style id="telefono">
+/* Va último a propósito. La hoja «piel-diario» de más arriba le da a los botones
+   de sección padding .9rem y letter-spacing .1em, y al venir después en el archivo
+   le ganaba a estas reglas aunque estuvieran dentro de un @media. Con el mismo
+   peso gana el que está más abajo, así que este bloque va acá y no hay que
+   inflar selectores para que mande. */
+/* ======================= teléfono ======================= */
+/* Medido a 375px antes de tocar nada: la barra de secciones escondía 5 de sus 8
+   botones y había que arrastrarla de costado sin que nada lo indicara; las
+   tablas escondían entre 140 y 449 píxeles de columnas. En historial se veían
+   2 de 7 columnas. */
+@media(max-width:640px){
+
+  /* Las ocho secciones en dos filas de cuatro: se ven todas juntas. */
+  nav.tabs{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:0; overflow:visible; margin-top:8px;
+  }
+  /* Medido: la barra da 343px, o sea 81px por botón. «MOVIMIENTOS» y
+     «PRESUPUESTO» son las palabras más largas y a 10px sin espaciado extra
+     ocupan 72px, así que entran enteras. El corte por letra queda solo como
+     red de seguridad para que nada se escape del borde. */
+  nav.tabs button{
+    min-width:0; overflow-wrap:anywhere;
+    padding:9px 2px; font-size:10px; line-height:1.3;
+    text-align:center; letter-spacing:0; white-space:normal;
+  }
+
+  /* Cada fila de tabla pasa a ser una tarjeta: el primer dato hace de título y
+     los demás van como «etiqueta … valor». Nada queda fuera de la pantalla. */
+  .tablewrap{ overflow-x:visible }
+  table.apilable{ font-size:14px }
+  table.apilable thead{ display:none }
+  table.apilable tbody tr{
+    display:block; padding:11px 0; border-top:1px solid var(--line);
+  }
+  table.apilable tbody tr:first-child{ border-top:0 }
+  table.apilable tbody tr:hover{ background:none }
+  /* La etiqueta a la izquierda y todo el contenido junto a la derecha. Con
+     space-between, una celda con dos cosas adentro (el detalle y su chapita)
+     las separaba y el texto quedaba flotando al medio. */
+  table.apilable tbody td{
+    display:flex; align-items:baseline; justify-content:flex-end;
+    gap:10px; border:0; padding:3px 0; text-align:right;
+  }
+  table.apilable tbody td::before{
+    content:attr(data-th); flex:0 0 auto; margin-right:auto; text-align:left;
+    font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+    color:var(--ink-3); font-weight:600;
+  }
+  /* El primer dato: título de la tarjeta, ancho completo y sin etiqueta arriba. */
+  table.apilable tbody td[data-th]:first-child{
+    display:block; text-align:left; font-size:15px; margin-bottom:5px;
+  }
+  table.apilable tbody td[data-th]:first-child::before{
+    display:block; margin-bottom:3px;
+  }
+  /* Celdas sin encabezado (los botones ✕ y «ver»): sin etiqueta y a la derecha. */
+  table.apilable tbody td:not([data-th]){ justify-content:flex-end; padding-top:9px }
+  table.apilable tbody td:not([data-th])::before{ content:none }
+  table.apilable tbody td[colspan]{ display:block; text-align:center }
+  table.apilable tbody td[colspan]::before{ content:none }
+
+  /* Un campo de fecha tiene un ancho mínimo propio que no entraba en su columna
+     y empujaba la tarjeta fuera del borde. Sin esto la grilla no lo deja encoger. */
+  .frow{ grid-template-columns:1fr }
+  .frow > *{ min-width:0 }
+  input[type=date]{ min-width:0 }
+
+  /* Las reglas aprendidas son la única tabla sin encabezado, así que no entra en
+     el apilado automático. El patrón es largo (varias alternativas separadas por
+     barras) y en una columna angosta quedaba cortado letra por letra: se le da la
+     fila entera, y la categoría y la ✕ van debajo. */
+  #reglasList table tbody tr{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px;
+    padding:10px 0; border-top:1px solid var(--line);
+  }
+  #reglasList table tbody tr:first-child{ border-top:0 }
+  #reglasList table tbody td{ display:block; border:0; padding:0 }
+  #reglasList table tbody td:first-child{ flex:1 1 100% }
+  #reglasList table tbody td:last-child{ margin-left:auto }
+  #reglasList .money{ white-space:normal; overflow-wrap:anywhere; font-size:12.5px; line-height:1.5 }
+
+  /* Los dos botones flotantes tapaban la última fila en pantallas con borde
+     redondeado; se respeta el área segura del teléfono. */
+  .app{ padding-bottom:calc(128px + env(safe-area-inset-bottom)) }
+  .fab{
+    right:max(14px, env(safe-area-inset-right));
+    bottom:max(14px, env(safe-area-inset-bottom));
+    padding:12px 17px; font-size:14.5px;
+  }
+}
+</style>
 <!-- /piel: piel-diario --></body>
 </html>
