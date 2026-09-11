@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Mis resultados · Panel de Instagram</title>
+<meta name="theme-color" content="#0c0c14">
+<title>Panel de Instagram</title>
 <!--
   POR QUÉ EXISTE ESTA PÁGINA
 
@@ -11,118 +12,202 @@
   su tienda, y una página web no puede entrar a la sesión de Instagram — probado,
   responde `X-Frame-Options: DENY` y no manda ninguna cabecera CORS.
 
-  Pero mostrar lo ya leído sí se puede. La computadora escanea y sube el
-  resultado al panel privado; esta página lo baja y lo muestra. Misma idea que el
-  lector de Mercado Pago.
+  Mostrar lo ya leído sí se puede. La computadora escanea y sube el resultado al
+  panel privado; esta página lo baja y lo muestra.
 
-  Lo que llega acá es el resultado, no la sesión: nombres de usuario, si te
-  siguen de vuelta y los totales. Nada que sirva para entrar a la cuenta.
+  EL ASPECTO ES EL DEL PANEL DE VERDAD, no el de la página de instalación. Los
+  valores de color, radios y tipografías salen del CSS del panel (el bloque
+  `.igpp-*` de index.html): mismo degradado de Instagram, mismas tarjetas, mismas
+  filas. La primera versión usó el verde ácido de la página de instalación y
+  parecía otra aplicación.
 -->
 <style>
   :root{
-    --acido:#CCFF00; --shock:#ff3b6b;
-    --fondo:#000; --caja:#0e0e14; --linea:#23232e;
-    --tinta:#fff; --apagado:#8b8b95;
-    --f:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
-    --m:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --fondo:#0a0a12;
+    --panel-1:#12121c; --panel-2:#0c0c14;
+    --fila:#0d0d16;
+    --linea:#26263a; --linea-2:#20202f; --linea-3:#2a2a40;
+    --tinta:#f4f4f8; --tenue:#8f8fa3;
+    --ig-a:#405de6; --ig-b:#c13584; --ig-c:#f56040;
+    --f:system-ui,-apple-system,'Segoe UI',sans-serif;
     color-scheme:dark;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     background:var(--fondo); color:var(--tinta); font-family:var(--f);
     font-size:16px; line-height:1.5;
-    padding:max(18px,env(safe-area-inset-top)) 16px calc(env(safe-area-inset-bottom) + 40px);
-    max-width:560px; margin:0 auto;
+    min-height:100dvh;
+    padding:max(10px,env(safe-area-inset-top)) 10px calc(env(safe-area-inset-bottom) + 14px);
   }
-  h1{font-size:1.5rem;font-weight:900;letter-spacing:-.02em;line-height:1.1}
-  .sub{color:var(--apagado);font-size:.88rem;margin-top:5px}
 
-  .caja{background:var(--caja);border:1px solid var(--linea);border-radius:14px;padding:16px;margin-top:16px}
-  label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--apagado);font-weight:700;margin-bottom:7px}
-  input{
-    width:100%;background:#06060a;border:1px solid var(--linea);border-radius:10px;
-    color:var(--tinta);font:inherit;font-size:16px;padding:12px 13px;
+  /* ── el marco, igual que .igpp-panel ── */
+  .panel{
+    background:linear-gradient(180deg,var(--panel-1),var(--panel-2));
+    border:1px solid var(--linea); border-radius:22px;
+    max-width:920px; margin:0 auto; overflow:hidden;
+    display:flex; flex-direction:column; min-height:calc(100dvh - 28px);
   }
-  input:focus{outline:none;border-color:var(--acido)}
-  button{
-    width:100%;background:var(--acido);color:#000;border:0;border-radius:10px;
-    font:inherit;font-weight:800;font-size:1rem;padding:13px;margin-top:11px;cursor:pointer;
+
+  .cabeza{
+    padding:16px 20px; display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid #232336; background:rgba(255,255,255,.02);
   }
-  button.gh{background:none;color:var(--apagado);border:1px solid var(--linea);font-weight:600}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.2rem}
+  .punto{
+    width:30px;height:30px;border-radius:9px;flex:0 0 auto;
+    background:linear-gradient(45deg,var(--ig-a),var(--ig-b),var(--ig-c));
+    box-shadow:0 3px 14px rgba(193,53,132,.5);
+  }
+  .cabeza .quien{color:var(--tenue);font-size:.82rem;font-weight:500;margin-top:2px}
 
-  .grande{font-size:3rem;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--shock)}
-  .fila{display:flex;gap:12px;margin-top:14px}
-  .fila>div{flex:1;background:var(--caja);border:1px solid var(--linea);border-radius:12px;padding:12px}
-  .fila .n{font-size:1.35rem;font-weight:800;font-family:var(--m)}
-  .fila .q{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--apagado);margin-top:2px}
+  /* ── pestañas, igual que .igpp-tab ── */
+  .pestanas{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid #232336;overflow-x:auto;scrollbar-width:none}
+  .pestanas::-webkit-scrollbar{display:none}
+  .pestanas button{
+    background:none;border:1px solid transparent;color:var(--tenue);
+    padding:10px 16px;cursor:pointer;font:700 .95rem var(--f);
+    border-radius:12px;white-space:nowrap;transition:all .12s;
+  }
+  .pestanas button.on{
+    color:#fff;border-color:#3a3a55;
+    background:linear-gradient(45deg,rgba(64,93,230,.25),rgba(193,53,132,.25));
+  }
 
-  .filtros{display:flex;gap:7px;margin:18px 0 10px}
-  .filtros button{width:auto;flex:1;margin:0;padding:9px 8px;font-size:.82rem;background:none;border:1px solid var(--linea);color:var(--apagado)}
-  .filtros button.on{background:var(--acido);border-color:var(--acido);color:#000}
+  .cuerpo{padding:18px 16px;overflow:auto;flex:1}
 
-  .cuenta{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit}
-  .cuenta:last-child{border-bottom:0}
-  .foto{width:42px;height:42px;border-radius:50%;background:#1b1b24;flex:0 0 auto;object-fit:cover;
-        display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--apagado);font-size:.9rem}
+  /* ── tarjetas de número, igual que .igpp-stat ── */
+  .numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+  .stat{
+    background:linear-gradient(180deg,#12121e,var(--panel-2));
+    border:1px solid var(--linea); border-radius:18px;
+    padding:18px 8px; text-align:center;
+  }
+  .stat .n{
+    font-size:1.9rem;font-weight:800;line-height:1.05;
+    background:linear-gradient(45deg,#c4ceff,#ffb0e2);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat.rojo .n{background:linear-gradient(45deg,#ff8fb0,#ff3b6b);-webkit-background-clip:text;background-clip:text}
+  .stat .l{color:var(--tenue);font-size:.78rem;margin-top:4px}
+
+  input[type=search],input[type=password]{
+    width:100%;padding:12px 15px;border-radius:12px;border:1px solid var(--linea-3);
+    background:var(--fila);color:var(--tinta);font:1rem var(--f);outline:none;
+  }
+  input:focus{border-color:var(--ig-b)}
+
+  /* ── filas, igual que .igpp-row ── */
+  .lista{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .fila{
+    display:flex;align-items:center;gap:13px;padding:11px 13px;
+    border:1px solid var(--linea-2);border-radius:15px;background:var(--fila);
+    text-decoration:none;color:inherit;transition:border-color .12s;
+  }
+  .fila:hover{border-color:#35354f}
+  .av{
+    width:48px;height:48px;border-radius:50%;flex:0 0 auto;
+    background:#1c1c2b;display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:var(--tenue);font-size:1rem;
+  }
   .datos{min-width:0;flex:1}
-  .usuario{font-weight:700;font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .nombre{color:var(--apagado);font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .marca{font-size:.68rem;font-weight:800;letter-spacing:.05em;padding:3px 7px;border-radius:20px;flex:0 0 auto}
-  .no{background:rgba(255,59,107,.15);color:var(--shock)}
-  .si{background:rgba(204,255,0,.13);color:var(--acido)}
+  .usuario{font-weight:700;font-size:1rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .meta{display:block;color:var(--tenue);font-size:.85rem;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .insignia{
+    background:#1c1c2b;color:#e8e8f0;padding:5px 11px;border-radius:999px;
+    font-size:.78rem;font-weight:700;white-space:nowrap;border:1px solid var(--linea-3);flex:0 0 auto;
+  }
+  .insignia.no{background:rgba(255,59,107,.12);color:#ff8fb0;border-color:rgba(255,59,107,.3)}
+  .insignia.si{background:rgba(64,93,230,.15);color:#a9b8ff;border-color:rgba(64,93,230,.35)}
 
-  .aviso{background:rgba(204,255,0,.08);border:1px solid rgba(204,255,0,.25);border-radius:12px;padding:13px;font-size:.88rem;color:#e8ffb0;margin-top:16px}
-  .malo{background:rgba(255,59,107,.1);border-color:rgba(255,59,107,.3);color:#ffb8c8}
-  .oculto{display:none}
-  .volver{display:inline-block;margin-top:26px;color:var(--apagado);font-size:.85rem;text-decoration:none}
+  /* ── botones, igual que .igpp-btn / .igpp-primary ── */
+  .btn{
+    background:#1c1c2b;color:var(--tinta);border:1px solid #2c2c44;border-radius:12px;
+    padding:12px 17px;cursor:pointer;font:600 .98rem var(--f);width:100%;margin-top:12px;
+    transition:filter .12s;
+  }
+  .btn:hover{filter:brightness(1.25)}
+  .btn.pri{
+    background:linear-gradient(45deg,var(--ig-a),var(--ig-b));
+    border-color:transparent;font-weight:700;
+  }
+
+  .aviso{
+    background:rgba(64,93,230,.1);border:1px solid rgba(64,93,230,.3);
+    border-radius:15px;padding:14px;font-size:.92rem;color:#c8d2ff;
+  }
+  .aviso.malo{background:rgba(255,59,107,.1);border-color:rgba(255,59,107,.3);color:#ffb8c8}
+  .etq{
+    display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--tenue);font-weight:700;margin-bottom:7px;
+  }
+  .nota{color:var(--tenue);font-size:.82rem;margin-top:11px;line-height:1.5}
+  .vacio{text-align:center;color:var(--tenue);padding:30px 10px}
+  .oculto{display:none !important}
+  .pie{padding:0 16px 16px}
+  .pie a{color:var(--tenue);font-size:.82rem;text-decoration:none}
+
+  @media(max-width:420px){
+    body{padding-left:6px;padding-right:6px}
+    /* Las tres pestañas tienen que entrar sin arrastrar: en 390px la tercera
+       quedaba cortada contra el borde. */
+    .pestanas{padding:10px 10px;gap:4px}
+    .pestanas button{padding:9px 10px;font-size:.84rem}
+    .cuerpo{padding:16px 12px}
+    .panel{border-radius:18px}
+    .numeros{gap:7px}
+    .stat{padding:14px 4px;border-radius:15px}
+    .stat .n{font-size:1.55rem}
+    .stat .l{font-size:.7rem}
+    .av{width:42px;height:42px}
+  }
 </style>
 </head>
 <body>
 
-<h1>Mis resultados</h1>
-<p class="sub" id="sub">Lo último que escaneaste desde la computadora.</p>
+<div class="panel">
 
-<!-- ---------- pedir la clave ---------- -->
-<div class="caja" id="pedirClave">
-  <label for="clave">Clave de tu Panel</label>
-  <input type="password" id="clave" placeholder="la misma que usás en Plata" autocomplete="off" inputmode="text">
-  <button id="entrar">Ver mis resultados</button>
-  <p class="sub" style="margin-top:11px">
-    Queda guardada en este teléfono. Es la misma clave del Panel: no es tu contraseña de Instagram.
-  </p>
+  <div class="cabeza">
+    <div class="logo">
+      <span class="punto"></span>
+      <span>Panel<div class="quien" id="quien">de Instagram</div></span>
+    </div>
+  </div>
+
+  <div class="pestanas" id="pestanas"></div>
+
+  <div class="cuerpo">
+
+    <!-- pedir la clave -->
+    <div id="pedirClave">
+      <label class="etq" for="clave">Clave de tu panel</label>
+      <input type="password" id="clave" placeholder="la misma que usás en Plata" autocomplete="off">
+      <button class="btn pri" id="entrar">Ver mis resultados</button>
+      <p class="nota">
+        Queda guardada en este teléfono. Es la clave de tu Panel, no la contraseña de Instagram.
+      </p>
+    </div>
+
+    <div id="aviso" class="aviso oculto"></div>
+
+    <!-- resultados -->
+    <div id="resultados" class="oculto">
+      <div class="numeros">
+        <div class="stat rojo"><div class="n" id="nNo">0</div><div class="l">No te siguen</div></div>
+        <div class="stat"><div class="n" id="nSeguidores">—</div><div class="l">Seguidores</div></div>
+        <div class="stat"><div class="n" id="nSeguidos">—</div><div class="l">Seguidos</div></div>
+      </div>
+
+      <input type="search" id="buscar" placeholder="Buscar cuenta…">
+
+      <div class="lista" id="lista"></div>
+      <button class="btn" id="mas">Ver más</button>
+      <p class="nota" id="pieNota"></p>
+    </div>
+
+  </div>
+
+  <div class="pie"><a href="./">‹ Volver a la instalación</a></div>
 </div>
-
-<div id="aviso" class="aviso oculto"></div>
-
-<!-- ---------- resultados ---------- -->
-<div id="resultados" class="oculto">
-  <div class="caja" style="text-align:center">
-    <div class="grande" id="nNoSiguen">0</div>
-    <div class="sub" style="margin-top:6px">no te siguen de vuelta</div>
-  </div>
-
-  <div class="fila">
-    <div><div class="n" id="nSeguidores">—</div><div class="q">Seguidores</div></div>
-    <div><div class="n" id="nSeguidos">—</div><div class="q">Seguidos</div></div>
-  </div>
-
-  <div class="caja" style="margin-top:14px">
-    <label for="buscar">Buscar</label>
-    <input type="search" id="buscar" placeholder="nombre de usuario">
-  </div>
-
-  <div class="filtros">
-    <button data-f="no" class="on">No me siguen</button>
-    <button data-f="si">Sí me siguen</button>
-    <button data-f="todos">Todos</button>
-  </div>
-
-  <div id="lista"></div>
-  <button class="gh" id="mas" style="margin-top:14px">Ver más</button>
-  <button class="gh" id="olvidar" style="margin-top:8px">Olvidar la clave en este teléfono</button>
-</div>
-
-<a class="volver" href="./">‹ Volver a la instalación</a>
 
 <script>
 (function(){
@@ -133,6 +218,11 @@
   var $ = function(s){ return document.querySelector(s); };
   function clave(){ try{ return localStorage.getItem(LS) || ''; }catch(e){ return ''; } }
   function guardar(v){ try{ v ? localStorage.setItem(LS, v) : localStorage.removeItem(LS); }catch(e){} }
+  function esc(t){
+    return String(t == null ? '' : t)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  var num = n => Number(n).toLocaleString('es-AR');
 
   function avisar(txt, malo){
     var a = $('#aviso');
@@ -145,7 +235,23 @@
     var s = Math.floor((Date.now() - new Date(iso).getTime())/1000);
     if(s < 3600) return 'hace ' + Math.max(1,Math.floor(s/60)) + ' min';
     if(s < 86400) return 'hace ' + Math.floor(s/3600) + ' h';
-    return 'hace ' + Math.floor(s/86400) + ' día' + (Math.floor(s/86400) > 1 ? 's' : '');
+    var d = Math.floor(s/86400);
+    return 'hace ' + d + ' día' + (d > 1 ? 's' : '');
+  }
+
+  /* ── pestañas: las mismas que el panel, con las que no se pueden mostrar acá
+        marcadas en vez de escondidas, para que se entienda por qué no están ── */
+  var PESTANAS = [
+    { id:'no',    texto:'👥 No te siguen', activa:true },
+    { id:'si',    texto:'💙 Te siguen',    activa:true },
+    { id:'todos', texto:'📋 Todos',        activa:true }
+  ];
+
+  function pintarPestanas(){
+    $('#pestanas').innerHTML = PESTANAS.map(function(p){
+      return '<button data-f="' + p.id + '"' + (p.id === filtro ? ' class="on"' : '') + '>' +
+             esc(p.texto) + '</button>';
+    }).join('');
   }
 
   async function traer(){
@@ -159,12 +265,12 @@
       if(r.status === 401){
         guardar('');
         avisar('Esa clave no es correcta. Probá de nuevo.', true);
-        $('#pedirClave').className = 'caja';
+        $('#pedirClave').className = '';
         return;
       }
       if(r.status === 404){
-        avisar('Todavía no hay nada. Abrí Instagram en la computadora, escaneá y tocá «Ver en el celular».', true);
-        $('#pedirClave').className = 'caja oculto';
+        avisar('Todavía no hay nada para mostrar. Abrí Instagram en la computadora, escaneá y tocá «Ver en el celular».', true);
+        $('#pedirClave').className = 'oculto';
         return;
       }
       if(!r.ok) throw new Error('HTTP ' + r.status);
@@ -177,19 +283,23 @@
 
   function pintar(){
     if(!datos || !Array.isArray(datos.users)) return;
-    $('#pedirClave').className = 'caja oculto';
+    $('#pedirClave').className = 'oculto';
     $('#aviso').className = 'aviso oculto';
     $('#resultados').className = '';
 
-    $('#sub').textContent =
+    $('#quien').textContent =
       (datos.usuario ? '@' + datos.usuario + ' · ' : '') +
       'escaneado ' + cuando(datos.escaneadoEn || datos.actualizado);
 
-    $('#nNoSiguen').textContent = (datos.noSiguen != null ? datos.noSiguen
-      : datos.users.filter(function(u){ return !u.follows_viewer; }).length).toLocaleString('es-AR');
-    $('#nSeguidores').textContent = datos.seguidores != null ? Number(datos.seguidores).toLocaleString('es-AR') : '—';
-    $('#nSeguidos').textContent   = datos.seguidos   != null ? Number(datos.seguidos).toLocaleString('es-AR')   : '—';
+    var noSiguen = datos.noSiguen != null
+      ? datos.noSiguen
+      : datos.users.filter(function(u){ return !u.follows_viewer; }).length;
 
+    $('#nNo').textContent = num(noSiguen);
+    $('#nSeguidores').textContent = datos.seguidores != null ? num(datos.seguidores) : '—';
+    $('#nSeguidos').textContent   = datos.seguidos   != null ? num(datos.seguidos)   : '—';
+
+    pintarPestanas();
     pintarLista();
   }
 
@@ -205,47 +315,34 @@
 
     var caja = $('#lista');
     caja.innerHTML = '';
+
     lista.slice(0, mostrando).forEach(function(u){
       var a = document.createElement('a');
-      a.className = 'cuenta';
+      a.className = 'fila';
       a.href = 'https://www.instagram.com/' + encodeURIComponent(u.username) + '/';
       a.target = '_blank'; a.rel = 'noopener';
-
-      // La foto viene del CDN de Instagram y su dirección vence: si no carga,
-      // queda la inicial, que siempre funciona.
-      var foto = document.createElement('div');
-      foto.className = 'foto';
-      foto.textContent = (u.username || '?').slice(0,1).toUpperCase();
-      if(u.profile_pic_url){
-        var img = new Image();
-        img.className = 'foto'; img.alt = '';
-        img.onload = function(){ if(foto.parentNode) foto.parentNode.replaceChild(img, foto); };
-        img.src = u.profile_pic_url;
-      }
-
-      var d = document.createElement('div');
-      d.className = 'datos';
-      d.innerHTML = '<div class="usuario">@' + esc(u.username) + (u.is_verified ? ' ✓' : '') + '</div>' +
-                    (u.full_name ? '<div class="nombre">' + esc(u.full_name) + '</div>' : '');
-
-      var m = document.createElement('span');
-      m.className = 'marca ' + (u.follows_viewer ? 'si' : 'no');
-      m.textContent = u.follows_viewer ? 'te sigue' : 'no te sigue';
-
-      a.appendChild(foto); a.appendChild(d); a.appendChild(m);
+      a.innerHTML =
+        '<div class="av">' + esc((u.username || '?').slice(0,1).toUpperCase()) + '</div>' +
+        '<div class="datos">' +
+          '<div class="usuario">@' + esc(u.username) + (u.is_verified ? ' ✓' : '') + '</div>' +
+          (u.full_name ? '<span class="meta">' + esc(u.full_name) + '</span>' : '') +
+        '</div>' +
+        '<span class="insignia ' + (u.follows_viewer ? 'si' : 'no') + '">' +
+          (u.follows_viewer ? 'te sigue' : 'no te sigue') +
+        '</span>';
       caja.appendChild(a);
     });
 
     if(!lista.length){
-      caja.innerHTML = '<p class="sub" style="text-align:center;padding:24px 0">Nada que mostrar acá.</p>';
+      caja.innerHTML = '<div class="vacio">Nada que mostrar acá.</div>';
     }
-    $('#mas').className = 'gh' + (lista.length > mostrando ? '' : ' oculto');
-    $('#mas').textContent = 'Ver más (' + Math.max(0, lista.length - mostrando) + ' restantes)';
-  }
 
-  function esc(t){
-    return String(t == null ? '' : t)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    var faltan = lista.length - mostrando;
+    $('#mas').className = 'btn' + (faltan > 0 ? '' : ' oculto');
+    $('#mas').textContent = 'Ver ' + Math.min(100, faltan) + ' más';
+    $('#pieNota').textContent = lista.length
+      ? 'Mostrando ' + Math.min(mostrando, lista.length) + ' de ' + num(lista.length) + '.'
+      : '';
   }
 
   $('#entrar').onclick = function(){
@@ -257,19 +354,17 @@
   $('#clave').addEventListener('keydown', function(e){ if(e.key === 'Enter') $('#entrar').click(); });
   $('#buscar').addEventListener('input', function(){ mostrando = 50; pintarLista(); });
   $('#mas').onclick = function(){ mostrando += 100; pintarLista(); };
-  $('#olvidar').onclick = function(){
-    guardar('');
-    location.reload();
-  };
-  document.querySelectorAll('.filtros button').forEach(function(b){
-    b.onclick = function(){
-      filtro = b.dataset.f; mostrando = 50;
-      document.querySelectorAll('.filtros button').forEach(function(x){ x.className = x === b ? 'on' : ''; });
-      pintarLista();
-    };
+
+  // Las pestañas se redibujan, así que el escuchador va en el contenedor.
+  $('#pestanas').addEventListener('click', function(e){
+    var b = e.target.closest('[data-f]');
+    if(!b) return;
+    filtro = b.dataset.f; mostrando = 50;
+    pintarPestanas(); pintarLista();
   });
 
-  if(clave()){ $('#pedirClave').className = 'caja oculto'; traer(); }
+  if(clave()){ $('#pedirClave').className = 'oculto'; traer(); }
+  else pintarPestanas();
 })();
 </script>
 </body>
