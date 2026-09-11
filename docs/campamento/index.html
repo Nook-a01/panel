@@ -859,6 +859,79 @@ document.addEventListener('click', function(e){
   irATeoria(a.dataset.teoria);
 });
 
+// ---- las notas, como teclas ----
+// El texto original viene "A + C + E" o "A · B · C". Se parte en fichas: una
+// por nota, y las alteradas (#) se pintan oscuras, como las teclas negras del
+// piano. Se leen de un vistazo, que es como se usan mientras pintás en el
+// piano roll.
+(function(){
+  document.querySelectorAll('.prog .notes').forEach(function(el){
+    var crudo = el.textContent.trim();
+    if(!crudo || el.querySelector('.nota')) return;
+    // Las progresiones de acordes (Am → F → C → G) no son notas sueltas: se dejan.
+    if(crudo.indexOf('→') >= 0) return;
+    var partes = crudo.split(/\s*[+·]\s*/).filter(function(t){ return t.length; });
+    if(partes.length < 2) return;
+    el.textContent = '';
+    partes.forEach(function(nota, i){
+      if(i){
+        // El separador sigue existiendo para los lectores de pantalla, que si no
+        // leerían "ACE" de corrido.
+        var sep = document.createElement('span');
+        sep.className = 'nota-sep';
+        sep.textContent = ', ';
+        el.appendChild(sep);
+      }
+      var chip = document.createElement('span');
+      chip.className = 'nota' + (/#/.test(nota) ? ' negra' : '');
+      chip.textContent = nota;
+      el.appendChild(chip);
+    });
+  });
+  // La escala base de todo el plan es la que manda: se destaca.
+  var base = document.querySelector('#teoria-2 .prog');
+  if(base) base.classList.add('destacada');
+})();
+
+// Las mismas teclas en la tabla de escalas. Ahí sí aparecen los sostenidos,
+// que se pintan oscuros: se ve de un golpe que Em tiene una sola tecla negra
+// y que Fm tiene cuatro, que es justo lo que la tabla quiere contar.
+(function(){
+  document.querySelectorAll('#panel-teoria td.mono').forEach(function(td){
+    var crudo = td.textContent.trim();
+    if(!crudo || td.querySelector('.nota')) return;
+    var partes = crudo.split(/\s+/).filter(Boolean);
+    // Solo si TODO lo que hay son nombres de nota; si no, es texto y se deja.
+    if(partes.length < 3 || !partes.every(function(t){ return /^[A-G](#|b)?$/.test(t); })) return;
+    td.textContent = '';
+    td.classList.add('notas-tabla');
+    partes.forEach(function(nota, i){
+      if(i){ var sep=document.createElement('span'); sep.className='nota-sep'; sep.textContent=', '; td.appendChild(sep); }
+      var chip = document.createElement('span');
+      chip.className = 'nota' + (/#|b$/.test(nota) ? ' negra' : '');
+      chip.textContent = nota;
+      td.appendChild(chip);
+    });
+  });
+})();
+
+// En el teléfono las tablas de teoría se apilan: cada fila pasa a ser una
+// ficha con la etiqueta de cada dato. Sin esto, la columna de notas queda de
+// 90px y las 7 teclas se parten en cuatro renglones por fila.
+// La etiqueta sale del <thead>, no se repite a mano en cada celda.
+(function(){
+  document.querySelectorAll('#panel-teoria table').forEach(function(t){
+    var ths = [].map.call(t.querySelectorAll('tr:first-child th, tr:first-child td'),
+                          function(c){ return c.textContent.trim(); });
+    if(!ths.length || !ths[0]) return;
+    t.classList.add('apilable');
+    [].forEach.call(t.querySelectorAll('tr'), function(tr, i){
+      if(i === 0) return;
+      [].forEach.call(tr.children, function(td, j){ if(ths[j]) td.setAttribute('data-th', ths[j]); });
+    });
+  });
+})();
+
 repintar();
 
 // Si tenés la clave del panel, el progreso del otro aparato se suma al de acá.
@@ -1040,14 +1113,18 @@ nav{
 }
 
 /* ── la barra de avance: un termómetro con borde ──────────────── */
-.progress-row .prog, .prog{
+/* Esta regla apuntaba también a `.prog` pelado. La barra de avance NO usa
+   esa clase (usa `.bar`), así que no llegaba a ninguna barra: lo único que
+   alcanzaba eran las 21 fichas de acordes de la teoría, y las dejaba
+   ilegibles. Queda acotada a la barra de verdad. */
+.progress-row .bar{
   background:var(--surface);
   border:2px solid var(--border);
   border-radius:100px;
   overflow:hidden;
   box-shadow:3px 3px 0 var(--border);
 }
-.prog > *, .prog .bar{ background:var(--accent) }
+.progress-row .bar > *{ background:var(--accent) }
 .day-chip{
   background:var(--accent);
   color:var(--accent-ink);
@@ -1130,6 +1207,273 @@ nav{ top:env(safe-area-inset-top) }
 @media (prefers-reduced-motion:reduce){
   .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   TARJETAS DE ACORDES Y ESCALAS
+   ═══════════════════════════════════════════════════════════════
+   Arriba había una regla con el comentario «la barra de avance: un
+   termómetro con borde» que apuntaba a `.prog` pelado. La barra de avance
+   no usa esa clase — usa `.bar` — así que esa regla no tocaba ninguna
+   barra: lo único que alcanzaba eran las 21 tarjetas de acordes de la
+   teoría, y `.prog > *{background:var(--accent)}` les pintaba cada línea
+   de texto de color sólido. Quedaban ilegibles: una pastilla roja con
+   barras adentro donde tendría que decir «Am · A C E · tu acorde base».
+
+   Acá se rehacen como lo que son: fichas musicales. El nombre del acorde
+   manda, las notas se leen como teclas sueltas, y el para-qué queda de pie
+   de foto. */
+
+.note-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+.prog{
+  /* Se reponen los valores que la regla de la barra había pisado. */
+  background:var(--surface);
+  border:2px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:4px 4px 0 var(--border);
+  overflow:visible;
+  padding:13px 14px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.prog:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--border) }
+
+/* Y se desarma la que las rompía. */
+.prog > *{ background:none }
+
+.prog .name{
+  font-family:var(--f-tit);
+  font-weight:800;
+  font-size:1.02rem;
+  line-height:1.2;
+  letter-spacing:-.02em;
+  color:var(--ink);
+  margin:0;
+}
+
+/* Las notas, como teclas. El separador original (+ o ·) se reemplaza por
+   una ficha por nota: se cuentan de un vistazo, que es como se usan. */
+.prog .notes{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  color:var(--accent);
+  font-weight:600;
+  margin:0;
+}
+.nota{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:29px;
+  padding:3px 7px;
+  border:1.5px solid var(--border);
+  border-radius:7px;
+  background:var(--surface2);
+  color:var(--ink);
+  font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  font-size:.82rem;
+  font-weight:700;
+  line-height:1.35;
+}
+/* Las alteradas (las teclas negras del piano) van oscuras, como en el piano. */
+.nota.negra{
+  background:var(--border);
+  color:var(--surface);
+  border-color:var(--border);
+}
+/* El «+» o el «·» que separaba, ahora mudo pero presente para quien lee con lector de pantalla. */
+.nota-sep{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0) }
+
+.prog .use{
+  color:var(--ink3);
+  font-size:.79rem;
+  line-height:1.4;
+  margin:0;
+  padding-top:1px;
+  border-top:1px dashed var(--border);
+  margin-top:auto;
+  padding-top:8px;
+  opacity:.9;
+}
+
+/* La escala base del plan es la ficha principal: se distingue del resto. */
+.prog.destacada{
+  background:var(--accent);
+  border-color:var(--border);
+  box-shadow:5px 5px 0 var(--border);
+}
+.prog.destacada .name{ color:var(--accent-ink) }
+.prog.destacada .use{ color:var(--accent-ink); opacity:.82; border-top-color:rgba(255,247,236,.35) }
+.prog.destacada .nota{ background:var(--accent-ink); color:var(--accent); border-color:var(--accent-ink) }
+.prog.destacada .nota.negra{ background:var(--border); color:var(--accent-ink); border-color:var(--border) }
+
+#panel-teoria td.notas-tabla{ display:flex; flex-wrap:wrap; gap:4px }
+
+/* ── tablas de la teoría ──────────────────────────────────────────
+   Eran filas sin respiro sobre el papel. Se les da encabezado marcado,
+   filas alternadas y las notas en la misma tipografía de las fichas. */
+#panel-teoria table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-top:12px;
+  border:2px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:4px 4px 0 var(--border);
+}
+#panel-teoria th{
+  background:var(--border);
+  color:var(--surface);
+  font-family:var(--f-tit);
+  font-size:.68rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  text-align:left;
+  padding:9px 12px;
+}
+#panel-teoria td{
+  padding:10px 12px;
+  border-top:1px solid rgba(36,28,19,.14);
+  vertical-align:top;
+  font-size:.9rem;
+}
+#panel-teoria tbody tr:nth-child(even) td,
+#panel-teoria tr:nth-child(even) td{ background:var(--surface2) }
+#panel-teoria td.mono, #panel-teoria .mono{
+  font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  font-size:.84rem;
+  letter-spacing:.02em;
+}
+
+/* ── los avisos de FL Studio ──────────────────────────────────────
+   Son el dato accionable de cada sección; merecen leerse distinto al
+   cuerpo y no como un párrafo más. */
+#panel-teoria .callout{
+  position:relative;
+  background:var(--surface2);
+  border:2px solid var(--border);
+  border-left-width:7px;
+  border-radius:12px;
+  padding:12px 14px;
+  margin-top:14px;
+  font-size:.89rem;
+  line-height:1.5;
+  box-shadow:3px 3px 0 var(--border);
+}
+
+/* ── jerarquía dentro de cada sección ─────────────────────────── */
+#panel-teoria h3{
+  font-size:.95rem;
+  margin-top:18px;
+  margin-bottom:2px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+#panel-teoria h3::after{
+  content:"";
+  flex:1;
+  height:2px;
+  background:repeating-linear-gradient(90deg,var(--border) 0 5px,transparent 5px 9px);
+  opacity:.4;
+}
+#panel-teoria .card > p{ margin-top:9px }
+#panel-teoria .card{ padding:20px 20px 22px }
+#panel-teoria .card h2{
+  font-size:1.28rem;
+  padding-bottom:11px;
+  margin-bottom:3px;
+  border-bottom:2px solid var(--border);
+}
+
+/* ── índice ───────────────────────────────────────────────────── */
+.indice-teoria a{
+  background:var(--surface2);
+  border:2px solid var(--border);
+  border-radius:11px;
+  box-shadow:3px 3px 0 var(--border);
+  padding:11px 13px;
+  font-family:var(--f-tit);
+  font-weight:600;
+  font-size:.88rem;
+  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.indice-teoria a:hover{
+  background:var(--accent);
+  color:var(--accent-ink);
+  transform:translate(-2px,-2px);
+  box-shadow:5px 5px 0 var(--border);
+}
+.indice-teoria a b{
+  font-family:var(--f-tit);
+  opacity:1;
+  background:var(--border);
+  color:var(--surface);
+  width:21px; height:21px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:6px;
+  font-size:.72rem;
+}
+.indice-teoria a:hover b{ background:var(--accent-ink); color:var(--accent) }
+
+a.ir-teoria{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration-thickness:2px;
+  text-underline-offset:3px;
+}
+a.ir-teoria:hover{ background:var(--resalte); color:var(--ink); border-radius:3px }
+
+/* El parpadeo al aterrizar, en el color del cuaderno. */
+@keyframes resaltar{
+  0%   { box-shadow:0 0 0 4px var(--resalte), 4px 4px 0 var(--border) }
+  100% { box-shadow:0 0 0 0 transparent,     4px 4px 0 var(--border) }
+}
+
+/* ── teléfono ─────────────────────────────────────────────────── */
+@media(max-width:560px){
+  .note-grid{ grid-template-columns:1fr 1fr; gap:9px }
+  .prog{ padding:11px 11px 10px; gap:7px }
+  .prog .name{ font-size:.92rem }
+  .nota{ min-width:26px; padding:2px 5px; font-size:.76rem }
+  .prog .use{ font-size:.74rem }
+  #panel-teoria .card{ padding:16px 15px 18px }
+  #panel-teoria th, #panel-teoria td{ padding:8px 9px; font-size:.83rem }
+
+  /* Cada fila de tabla, una ficha. La columna de notas medía 90px y las siete
+     teclas se partían en cuatro renglones por fila. */
+  #panel-teoria table.apilable{ box-shadow:4px 4px 0 var(--border) }
+  #panel-teoria table.apilable tr:first-child{ display:none }
+  #panel-teoria table.apilable tr{
+    display:block; padding:11px 12px;
+    border-top:2px solid var(--border);
+  }
+  #panel-teoria table.apilable tr:nth-child(2){ border-top:0 }
+  #panel-teoria table.apilable td{
+    display:block; border:0; padding:3px 0; background:none !important;
+  }
+  #panel-teoria table.apilable td::before{
+    content:attr(data-th);
+    display:block;
+    font-family:var(--f-tit);
+    font-size:.6rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink3); font-weight:700; margin-bottom:3px;
+  }
+  #panel-teoria table.apilable td:first-child{ font-size:1rem; font-weight:700 }
+  #panel-teoria table.apilable td:first-child::before{ content:none }
+  .indice-teoria{ grid-template-columns:1fr 1fr; gap:7px }
+  .indice-teoria a{ padding:9px 10px; font-size:.78rem }
+}
+
 </style>
 
 <script>
