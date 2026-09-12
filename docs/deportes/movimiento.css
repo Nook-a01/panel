@@ -80,7 +80,7 @@ body{font-size:17px;line-height:1.55;letter-spacing:.005em}
 
 /* Todo lo que responde al dedo usa el tiempo corto: si tarda más,
    se siente lento aunque sea más "suave". */
-.ev,.jug,.jm,.pf,.tarjeta,.ficha,.torneo-chip,.btn3d,.volver,.pest{
+.ev,.jug,.jm,.pf,.ficha,.torneo-chip,.btn3d,.volver,.pest{
   transition:transform var(--t-rapido) var(--toque),
              box-shadow var(--t-rapido) var(--toque),
              background var(--t-medio) var(--apple);

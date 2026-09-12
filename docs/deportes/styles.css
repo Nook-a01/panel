@@ -354,21 +354,6 @@ main{
 .obra span{font-family:var(--term);font-size:16px;color:#333;display:block;max-width:280px}
 @keyframes balanceo{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}
 
-/* ---------- fichas de la portada ---------- */
-.mosaico{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:6px}
-.tarjeta{
-  background:var(--tinta);border:3px solid var(--c);
-  box-shadow:5px 5px 0 var(--c);
-  padding:12px;text-align:left;cursor:inherit;color:var(--papel);
-  font-family:inherit;
-  transition:transform .2s var(--ease-fuerte), box-shadow .2s var(--ease-fuerte);
-}
-.tarjeta:active{transform:translate(5px,5px);box-shadow:0 0 0}
-.tarjeta .em{font-size:30px;display:block;filter:drop-shadow(0 0 8px var(--c))}
-.tarjeta .nom{font-family:var(--pixel);font-size:9px;margin:8px 0 6px;display:block;line-height:1.6}
-.tarjeta .dato{font-family:var(--term);font-size:16px;color:var(--cian);display:block;line-height:1.25}
-.tarjeta .comp{font-family:var(--term);font-size:14px;color:var(--papel);opacity:.7;display:block;margin-top:4px}
-
 /* ---------- pie ---------- */
 #pie{
   position:relative;z-index:5;text-align:center;
@@ -468,9 +453,8 @@ html.anim .rev.visible{
 .escudo.mini{width:20px;height:20px;margin-right:2px}
 .escudo.mini .emoji-resp{font-size:14px}
 
-/* en las fichas y tarjetas el escudo ya no necesita el resplandor del emoji */
-.ficha .escudo img,.tarjeta .escudo img{filter:drop-shadow(0 0 7px var(--c))}
-.tarjeta .escudo{margin-bottom:2px}
+/* en las fichas el escudo ya no necesita el resplandor del emoji */
+.ficha .escudo img{filter:drop-shadow(0 0 7px var(--c))}
 
 /* las filas de evento alinean escudo + texto en una sola línea */
 .ev .cuerpo .t{display:flex;align-items:center;gap:5px}
