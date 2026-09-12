@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Estudio · Panel</title>
+<meta name="theme-color" content="#0b0b10">
+<!-- Igual que el resto del panel: nada de afuera, sólo lo que está acá adentro.
+     Se permite conectarse al propio sitio para leer la pieza. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<style>
+:root{
+  --fondo:#0b0b10; --caja:#14141c; --caja2:#1b1b26; --linea:#2a2a3a;
+  --tinta:#f2f2f7; --tinta2:#a0a0b4;
+  --acento:#7CE7C6; --acento2:#F5D06F; --rojo:#FF6B81;
+  --f:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --m:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--f);line-height:1.5;
+     padding:18px 16px calc(90px + env(safe-area-inset-bottom));}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:1.5rem;margin:.2rem 0 .1rem;letter-spacing:-.01em}
+.sub{color:var(--tinta2);font-size:.92rem;margin:0 0 18px}
+.caja{background:var(--caja);border:1px solid var(--linea);border-radius:14px;padding:16px;margin:14px 0}
+.datos{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.dato{background:var(--caja2);border:1px solid var(--linea);border-radius:999px;padding:5px 12px;font-size:.82rem}
+.dato b{color:var(--acento);font-family:var(--m)}
+h2{font-size:1rem;margin:0 0 10px;color:var(--acento)}
+.charla li{margin:.45rem 0;color:#d5d5e2}
+.fila{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
+button,select{font:inherit;font-size:.92rem;border-radius:10px;border:1px solid var(--linea);
+  background:var(--caja2);color:var(--tinta);padding:10px 14px;cursor:pointer}
+button.pri{background:var(--acento);border-color:var(--acento);color:#07281f;font-weight:700}
+button:disabled{opacity:.45;cursor:default}
+select{padding:9px 10px;max-width:100%}
+.aviso{font-size:.86rem;color:var(--tinta2);margin-top:10px}
+.aviso.mal{color:var(--rojo)}
+.aviso.bien{color:var(--acento)}
+.pista{border-top:1px solid var(--linea);padding:12px 0 4px}
+.pista:first-of-type{border-top:0}
+.pista .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pista .cab b{font-size:.95rem}
+.pista .cab span{color:var(--tinta2);font-size:.82rem}
+/* Cada compás es una columna; cada nota, un bloquecito. Alcanza para ver la
+   forma de la idea sin pretender ser un piano roll. */
+.rollo{margin-top:8px;height:54px;position:relative;background:var(--caja2);
+  border:1px solid var(--linea);border-radius:8px;overflow:hidden}
+.rollo i{position:absolute;height:4px;border-radius:2px;background:var(--acento)}
+.rollo .bar{position:absolute;top:0;bottom:0;width:1px;background:#ffffff12}
+.rollo .aguja{position:absolute;top:0;bottom:0;width:2px;background:var(--acento2);
+  box-shadow:0 0 8px var(--acento2);opacity:0;transition:opacity .15s}
+.rollo.sonando .aguja{opacity:1}
+.volver{position:fixed;left:max(.7rem,env(safe-area-inset-left));bottom:max(.7rem,env(safe-area-inset-bottom));
+  display:inline-flex;align-items:center;gap:.45em;padding:.5em .85em;border:1px solid var(--linea);
+  border-radius:100px;background:#14141ccc;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  color:var(--acento);font:600 .78rem/1 var(--f);text-decoration:none;z-index:50}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="titulo">Estudio</h1>
+  <p class="sub">Lo que venimos armando. Acá lo escuchás, se lo mandás a FL Studio o te lo bajás.</p>
+
+  <div class="caja">
+    <div class="datos" id="datos"></div>
+    <div class="fila">
+      <button class="pri" id="sonar">▶ Sonar</button>
+      <button id="parar" disabled>■ Parar</button>
+      <button id="bajar">⤓ Bajar .mid</button>
+    </div>
+    <div class="fila">
+      <select id="salida"><option>Buscando salidas MIDI…</option></select>
+      <button id="buscar">Buscar de nuevo</button>
+    </div>
+    <div class="aviso" id="estado">Si elegís una salida MIDI, las notas van directo a FL Studio. Si no, suenan acá nomás.</div>
+  </div>
+
+  <div class="caja">
+    <h2>De qué se trata</h2>
+    <ul class="charla" id="charla"></ul>
+  </div>
+
+  <div class="caja">
+    <h2>Las pistas</h2>
+    <div id="pistas"></div>
+  </div>
+</div>
+<a class="volver" href="../"><span aria-hidden="true">←</span> Panel</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var $ = function(s){ return document.querySelector(s); };
+  var pieza = null, midiAcceso = null, salidas = [], sonando = false;
+  var audio = null, timers = [], apagados = [], t0 = 0, raf = 0;
+
+  // ---------- notas ----------
+  // "A#3" o "F#1" -> número MIDI. Do central (C4) = 60, como en FL Studio.
+  var ESCALA = { C:0, D:2, E:4, F:5, G:7, A:9, B:11 };
+  function numeroDe(nombre){
+    var m = String(nombre).match(/^([A-G])([#b]?)(-?\d+)$/);
+    if(!m) return null;
+    var n = ESCALA[m[1]] + (m[2] === '#' ? 1 : m[2] === 'b' ? -1 : 0);
+    return n + (Number(m[3]) + 1) * 12;
+  }
+
+  function todasLasNotas(){
+    var out = [];
+    (pieza.pistas || []).forEach(function(p){
+      (p.notas || []).forEach(function(n){
+        var num = numeroDe(n.nota);
+        if(num === null) return;
+        out.push({ canal: (p.canal || 1) - 1, num: num, inicio: n.inicio, largo: n.largo, vel: n.vel || 90 });
+      });
+    });
+    return out.sort(function(a,b){ return a.inicio - b.inicio; });
+  }
+
+  var porTiempo = function(){ return 60000 / (pieza.bpm || 120); };
+  var duracion  = function(){ return (pieza.compases || 8) * 4; };
+
+  // ---------- sonar ----------
+  //
+  // Dos caminos a la vez. Si hay una salida MIDI elegida, las notas van para
+  // allá y las toca FL Studio con tus plugins. Si no, se arma un sonido pobre
+  // acá con el navegador, sólo para que puedas escuchar la idea desde el
+  // teléfono, donde no hay FL Studio.
+  function salidaElegida(){
+    var v = $('#salida').value;
+    return salidas.filter(function(o){ return o.id === v; })[0] || null;
+  }
+
+  function sonar(){
+    if(sonando) parar();
+    var notas = todasLasNotas();
+    if(!notas.length){ aviso('La pieza no tiene notas todavía.', 'mal'); return; }
+
+    var out = salidaElegida();
+    var ms = porTiempo();
+    sonando = true;
+    $('#sonar').disabled = true; $('#parar').disabled = false;
+    document.querySelectorAll('.rollo').forEach(function(r){ r.classList.add('sonando'); });
+
+    if(!out){
+      audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+      if(audio.state === 'suspended') audio.resume();
+    }
+
+    notas.forEach(function(n){
+      var t = n.inicio * ms;
+      timers.push(setTimeout(function(){
+        if(out){
+          out.send([0x90 | n.canal, n.num, n.vel]);
+          apagados.push(setTimeout(function(){ out.send([0x80 | n.canal, n.num, 0]); }, n.largo * ms));
+        } else {
+          pitido(n.num, n.largo * ms / 1000, n.vel / 127);
+        }
+      }, t));
+    });
+
+    // Al final vuelve a empezar: una idea de ocho compases se escucha en loop.
+    timers.push(setTimeout(function(){ parar(); sonar(); }, duracion() * ms));
+
+    t0 = performance.now();
+    mover();
+  }
+
+  function pitido(num, seg, vol){
+    var f = 440 * Math.pow(2, (num - 69) / 12);
+    var o = audio.createOscillator(), g = audio.createGain();
+    o.type = num < 48 ? 'sine' : 'triangle';
+    o.frequency.value = f;
+    var ahora = audio.currentTime;
+    g.gain.setValueAtTime(0, ahora);
+    g.gain.linearRampToValueAtTime(Math.min(.22, vol * .22), ahora + .01);
+    g.gain.exponentialRampToValueAtTime(.0001, ahora + Math.max(.08, seg));
+    o.connect(g); g.connect(audio.destination);
+    o.start(ahora); o.stop(ahora + Math.max(.1, seg) + .05);
+  }
+
+  function parar(){
+    timers.forEach(clearTimeout); apagados.forEach(clearTimeout);
+    timers = []; apagados = [];
+    cancelAnimationFrame(raf);
+    // Un "todas las notas en silencio" por canal, por si quedó alguna colgada.
+    var out = salidaElegida();
+    if(out) for(var c = 0; c < 16; c++) out.send([0xB0 | c, 123, 0]);
+    sonando = false;
+    $('#sonar').disabled = false; $('#parar').disabled = true;
+    document.querySelectorAll('.rollo').forEach(function(r){ r.classList.remove('sonando'); });
+    document.querySelectorAll('.aguja').forEach(function(a){ a.style.left = '0%'; });
+  }
+
+  function mover(){
+    var pasado = (performance.now() - t0) / porTiempo();
+    var pct = Math.min(100, pasado / duracion() * 100);
+    document.querySelectorAll('.aguja').forEach(function(a){ a.style.left = pct + '%'; });
+    if(sonando) raf = requestAnimationFrame(mover);
+  }
+
+  // ---------- salidas MIDI ----------
+  function buscarSalidas(){
+    if(!navigator.requestMIDIAccess){
+      aviso('Este navegador no puede mandar MIDI. En la computadora usá Brave, Chrome o Edge; en el iPhone no se puede y la idea suena acá nomás.', 'mal');
+      $('#salida').innerHTML = '<option value="">Sonar acá (sin MIDI)</option>';
+      return;
+    }
+    navigator.requestMIDIAccess({ sysex:false }).then(function(a){
+      midiAcceso = a;
+      a.onstatechange = listar;
+      listar();
+    }).catch(function(){
+      aviso('No me diste permiso para usar el MIDI, así que la idea suena acá nomás.', 'mal');
+      $('#salida').innerHTML = '<option value="">Sonar acá (sin MIDI)</option>';
+    });
+  }
+
+  function listar(){
+    salidas = [];
+    midiAcceso.outputs.forEach(function(o){ salidas.push(o); });
+    var sel = $('#salida');
+    sel.innerHTML = '<option value="">Sonar acá (sin MIDI)</option>' +
+      salidas.map(function(o){ return '<option value="' + o.id + '">' + esc(o.name) + '</option>'; }).join('');
+    // loopMIDI es el puente hacia FL Studio: si está, se elige solo.
+    var loop = salidas.filter(function(o){ return /loop/i.test(o.name); })[0];
+    if(loop){
+      sel.value = loop.id;
+      aviso('Encontré «' + loop.name + '». Abrí FL Studio y elegilo como entrada MIDI: lo que toques acá entra ahí.', 'bien');
+    } else if(salidas.length){
+      aviso('Hay ' + salidas.length + ' salida(s) MIDI. Elegí la que escuche FL Studio.', '');
+    } else {
+      aviso('No hay ninguna salida MIDI abierta. Abrí loopMIDI y creá un puerto para mandarle las notas a FL Studio.', '');
+    }
+  }
+
+  function aviso(t, clase){ var e = $('#estado'); e.textContent = t; e.className = 'aviso ' + (clase || ''); }
+  function esc(t){ return String(t == null ? '' : t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  // ---------- bajar .mid ----------
+  //
+  // El formato MIDI se arma a mano: son tres cabeceras y una lista de eventos
+  // con el tiempo contado desde el anterior. No hace falta ninguna biblioteca,
+  // y así el proyecto sigue sin una sola línea de código ajeno.
+  var PPQ = 480;
+
+  function varLen(n){
+    var b = [n & 0x7F];
+    n >>= 7;
+    while(n > 0){ b.unshift((n & 0x7F) | 0x80); n >>= 7; }
+    return b;
+  }
+  function texto(s){ return Array.from(new TextEncoder().encode(s)); }
+  function bloque(tipo, datos){
+    var largo = datos.length;
+    return texto(tipo).concat([(largo>>>24)&255, (largo>>>16)&255, (largo>>>8)&255, largo&255], datos);
+  }
+
+  function armarMidi(){
+    var ms = 60000000 / (pieza.bpm || 120);            // microsegundos por negra
+    // La cabecera son SEIS bytes, ni uno más: formato, cuántas pistas y
+    // cuántos pulsos entra una negra. Con un par de bytes de sobra el archivo
+    // se lee como formato 0 de una sola pista y sale cualquier cosa.
+    var nPistas = (pieza.pistas||[]).length + 1;
+    var cabeza = bloque('MThd', [0,1, (nPistas>>8)&255, nPistas&255, (PPQ>>8)&255, PPQ&255]);
+
+    // Pista 0: sólo el tempo y el nombre, como acostumbra FL Studio.
+    var meta = [0, 0xFF, 0x51, 0x03, (ms>>16)&255, (ms>>8)&255, ms&255]
+      .concat([0, 0xFF, 0x03].concat(varLen(texto(pieza.titulo||'Pieza').length), texto(pieza.titulo||'Pieza')))
+      .concat([0, 0xFF, 0x2F, 0]);
+    var pistas = [bloque('MTrk', meta)];
+
+    (pieza.pistas||[]).forEach(function(p){
+      var canal = (p.canal || 1) - 1;
+      var ev = [];
+      (p.notas||[]).forEach(function(n){
+        var num = numeroDe(n.nota); if(num === null) return;
+        ev.push({ t: Math.round(n.inicio*PPQ), tipo: 0x90|canal, a: num, b: n.vel||90 });
+        ev.push({ t: Math.round((n.inicio+n.largo)*PPQ), tipo: 0x80|canal, a: num, b: 0 });
+      });
+      // Primero por tiempo y, si empatan, apagar antes que encender: si no,
+      // una nota repetida se apaga a sí misma apenas empezó.
+      ev.sort(function(a,b){ return a.t - b.t || ((a.tipo & 0xF0) - (b.tipo & 0xF0)); });
+
+      var datos = [0, 0xFF, 0x03].concat(varLen(texto(p.nombre||'Pista').length), texto(p.nombre||'Pista'));
+      var previo = 0;
+      ev.forEach(function(e){
+        datos = datos.concat(varLen(e.t - previo), [e.tipo, e.a, e.b]);
+        previo = e.t;
+      });
+      datos = datos.concat([0, 0xFF, 0x2F, 0]);
+      pistas.push(bloque('MTrk', datos));
+    });
+
+    return new Uint8Array(cabeza.concat.apply(cabeza, pistas));
+  }
+
+  function bajar(){
+    var bytes = armarMidi();
+    var url = URL.createObjectURL(new Blob([bytes], { type:'audio/midi' }));
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = (pieza.titulo||'pieza').replace(/[^\w\sáéíóúñ-]/gi,'').trim().replace(/\s+/g,'-').toLowerCase() + '.mid';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  }
+
+  // ---------- dibujar ----------
+  function pintar(){
+    $('#titulo').textContent = pieza.titulo || 'Estudio';
+    $('#datos').innerHTML =
+      '<span class="dato">Tonalidad <b>' + esc(pieza.tonalidad||'—') + '</b></span>' +
+      '<span class="dato">Tempo <b>' + esc(pieza.bpm||'—') + '</b> BPM</span>' +
+      '<span class="dato">Compás <b>' + esc(pieza.compas||'4/4') + '</b></span>' +
+      '<span class="dato"><b>' + esc(pieza.compases||8) + '</b> compases</span>';
+    $('#charla').innerHTML = (pieza.charla||[]).map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('');
+
+    var total = duracion();
+    $('#pistas').innerHTML = (pieza.pistas||[]).map(function(p){
+      var notas = (p.notas||[]).map(function(n){ return { num: numeroDe(n.nota), i: n.inicio, l: n.largo }; })
+                               .filter(function(n){ return n.num !== null; });
+      var min = Math.min.apply(null, notas.map(function(n){ return n.num; }).concat([127]));
+      var max = Math.max.apply(null, notas.map(function(n){ return n.num; }).concat([0]));
+      var rango = Math.max(1, max - min);
+      var barras = '';
+      for(var c = 1; c < (pieza.compases||8); c++) barras += '<span class="bar" style="left:' + (c/(pieza.compases||8)*100) + '%"></span>';
+      return '<div class="pista">' +
+        '<div class="cab"><b>' + esc(p.nombre) + '</b><span>' + esc(p.instrumento||'') + ' · ' + notas.length + ' notas</span></div>' +
+        '<div class="rollo">' + barras +
+          notas.map(function(n){
+            return '<i style="left:' + (n.i/total*100) + '%;width:' + Math.max(.6, n.l/total*100) + '%;bottom:' +
+                   (6 + (n.num-min)/rango*40) + 'px"></i>';
+          }).join('') +
+          '<span class="aguja" style="left:0%"></span>' +
+        '</div></div>';
+    }).join('');
+  }
+
+  // ---------- arranque ----------
+  $('#sonar').onclick = sonar;
+  $('#parar').onclick = parar;
+  $('#bajar').onclick = bajar;
+  $('#buscar').onclick = buscarSalidas;
+  window.addEventListener('pagehide', parar);
+
+  fetch('./pieza.json?v=' + Date.now())
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(p){ pieza = p; pintar(); buscarSalidas(); })
+    .catch(function(){
+      document.querySelector('.wrap').innerHTML =
+        '<h1>Estudio</h1><p class="sub">No pude leer la pieza. Probá recargar.</p>';
+    });
+})();
+</script>
+</body>
+</html>

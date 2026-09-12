@@ -205,6 +205,19 @@ function poner(sel, html) {
   } catch {}
 })();
 
+/* Estudio: en qué quedó la idea que estamos armando. Sale del mismo archivo
+   que suena la app, así que no hay dos verdades. */
+(async () => {
+  try {
+    const r = await fetch("musica/pieza.json", { cache: "no-cache" });
+    if (!r.ok) return;
+    const p = await r.json();
+    poner("#vivo-musica",
+      escapar(p.titulo || "Sin título") +
+      ' <span class="mini">' + escapar(p.tonalidad || "") + " · " + escapar(p.bpm || "") + " BPM</span>");
+  } catch {}
+})();
+
 function escapar(s) {
   return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }

@@ -3,7 +3,7 @@
 Resumen para retomar desde cualquier lado (celular, otra PC, otra sesión).
 Sin datos personales: este repo es público.
 
-## Las cuatro apps
+## Las cinco apps
 
 | App | Dónde | Estado |
 |---|---|---|
@@ -11,6 +11,7 @@ Sin datos personales: este repo es público.
 | Plata | `docs/plata/` | Andando. Responsive arreglado, historial arreglado, sección Consultas contesta sin pagar nada. |
 | Campamento | `docs/campamento/` | Andando. Diseño rehecho; el día actual es el primero sin marcar, no la fecha del calendario. |
 | Instagram | `docs/instagram/` | Andando. `resultados.html` es el panel del teléfono: 6 pestañas, fotos por proxy, de a 20 perfiles. |
+| Estudio | `docs/musica/` | Empezada. Suena la idea, se la manda a FL Studio por MIDI y la baja en `.mid`. La conversación va por Claude, no hay modelo adentro. |
 
 Publicado en `nook-a01.github.io/panel/`.
 
@@ -37,6 +38,6 @@ un `<img src>` no puede mandar encabezados.
 
 ## Lo que falta
 
-- **App de música** (FL Studio + Blender con un chat). Es la única de las cinco sin empezar.
+- **Estudio**: falta el envío en vivo probado contra FL Studio de verdad, y Blender, que quedó para después.
 - Ticket de GitHub #4748144: esperando respuesta, no hay nada que hacer.
 - Ofrecidos y sin contestar: un `.apk` de Android, y una versión Mac del programa de escritorio.
