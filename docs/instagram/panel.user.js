@@ -224,6 +224,13 @@ async function IGPanelPro(){
       };
     });
 
+    // El acumulado de Historias se guarda acá como mapa {usuario: {...}}, pero la
+    // pestaña del celular espera una lista y llama "veces" a lo que acá es "count".
+    var sv = loadSV();
+    var historias = Object.keys(sv).map(function(u){
+      return { username:u, full_name:sv[u].full_name || '', veces:sv[u].count || 1, ts:sv[u].last_ts || 0 };
+    }).sort(function(a,b){ return b.veces - a.veces; });
+
     var cuentas = lsGet(LS.counts, null) || {};
     var cuerpo = {
       usuario: (cuentas.username || ''),
@@ -234,6 +241,8 @@ async function IGPanelPro(){
       seguidos: cuentas.following || null,
       historial: lsGet(LS.hist, []),
       perdidos: lsGet(LS.lost, []),
+      historias: historias,
+      listaBlanca: Array.from(loadWL()),
       escaneadoEn: cache && cache.ts ? new Date(cache.ts).toISOString() : new Date().toISOString()
     };
 
