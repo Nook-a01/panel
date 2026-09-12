@@ -18,6 +18,7 @@ contextBridge.exposeInMainWorld("estudio", {
   versiones:       ()            => ipcRenderer.invoke("estudio:versiones"),
   abrirVersion:    (id)          => ipcRenderer.invoke("estudio:abrir-version", id),
   duplicarVersion: (desde, nom)  => ipcRenderer.invoke("estudio:duplicar-version", desde, nom),
+  versionDesde:    (pieza)       => ipcRenderer.invoke("estudio:version-desde", pieza),
   renombrarVersion:(id, nom)     => ipcRenderer.invoke("estudio:renombrar-version", id, nom),
   borrarVersion:   (id)          => ipcRenderer.invoke("estudio:borrar-version", id),
 

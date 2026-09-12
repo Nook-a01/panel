@@ -21,6 +21,7 @@
       "puente-estudio.js",
       "estudio.html",
       "estudio.js",
+      "compositor.js",
       "pieza-inicial.json",
       "icono.png",
       "package.json"

@@ -185,6 +185,17 @@ async function duplicarVersion(desdeId, nombre) {
   return { id, pieza: copia };
 }
 
+// Una pieza recién compuesta entra como versión nueva, nunca encima de otra.
+async function versionDesde(pieza) {
+  const i = await asegurarIndice();
+  const id = idNuevo();
+  await escribirJson(datos("versiones", id + ".json"), pieza);
+  i.versiones.push({ id, nombre: pieza.titulo || "Canción nueva", creada: new Date().toISOString() });
+  i.actual = id;
+  await escribirIndice(i);
+  return { id, pieza };
+}
+
 async function renombrarVersion(id, nombre) {
   const i = await asegurarIndice();
   const v = i.versiones.find(x => x.id === id);
@@ -241,6 +252,7 @@ function registrar() {
   ipcMain.handle("estudio:versiones", () => listarVersiones());
   ipcMain.handle("estudio:abrir-version", (_e, id) => abrirVersion(id));
   ipcMain.handle("estudio:duplicar-version", (_e, desde, nombre) => duplicarVersion(desde, nombre));
+  ipcMain.handle("estudio:version-desde", (_e, pieza) => versionDesde(pieza));
   ipcMain.handle("estudio:renombrar-version", (_e, id, nombre) => renombrarVersion(id, nombre));
   ipcMain.handle("estudio:borrar-version", (_e, id) => borrarVersion(id));
 

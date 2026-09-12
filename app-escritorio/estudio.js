@@ -184,7 +184,7 @@
   $("#versiones").onchange = async function () {
     parar();
     var p = await window.estudio.abrirVersion(this.value);
-    if (p) { pieza = p; pintarPieza(); pintarConfig(); }
+    if (p) { pieza = p; pintarPieza(); pintarConfig(); pintarMapa(); }
   };
 
   $("#duplicar").onclick = async function () {
@@ -193,7 +193,7 @@
     if (!r) return;
     pieza = r.pieza;
     await pintarVersiones();
-    pintarPieza(); pintarConfig();
+    pintarPieza(); pintarConfig(); pintarMapa();
     avisoConfig("Listo: estás en una copia. Lo que toques acá no afecta a la anterior.", "bien");
   };
 
@@ -215,7 +215,7 @@
     if (!r.ok) { avisoConfig(r.porque, "mal"); return; }
     pieza = await window.estudio.abrirVersion(r.actual);
     await pintarVersiones();
-    pintarPieza(); pintarConfig();
+    pintarPieza(); pintarConfig(); pintarMapa();
   };
 
   /* ---------------- configuración ---------------- */
@@ -236,7 +236,7 @@
     if (!pieza) return;
     var bpm = Number($("#cBpm").value), comp = Number($("#cComp").value);
     if (bpm >= 40 && bpm <= 220) pieza.bpm = bpm;
-    if (comp >= 1 && comp <= 64) pieza.compases = comp;
+    if (comp >= 1 && comp <= 256) pieza.compases = comp;
     pieza.tonalidad = $("#cTon").value.trim() || pieza.tonalidad;
     var sonaba = sonando;
     if (sonaba) parar();
@@ -321,6 +321,57 @@
     avisoMidi(donde ? "Guardado en " + donde : "No lo guardaste.", donde ? "bien" : "");
   };
 
+  /* ---------------- componer ---------------- */
+  $("#gDado").onclick = function () { $("#gSemilla").value = Math.floor(Math.random() * 99999) + 1; };
+
+  $("#gArmar").onclick = async function () {
+    var b = this;
+    b.disabled = true; b.textContent = "Armando…";
+    $("#gAviso").textContent = "";
+    parar();
+    try {
+      var nueva = window.Compositor.componer({
+        genero: $("#gGenero").value,
+        tonalidad: $("#gTon").value.trim() || "Am",
+        bpm: Number($("#gBpm").value) || null,
+        semilla: Number($("#gSemilla").value) || 1,
+        titulo: "Canción " + $("#gSemilla").value,
+      });
+      var r = await window.estudio.versionDesde(nueva);
+      pieza = r.pieza;
+      await pintarVersiones();
+      pintarPieza(); pintarConfig(); pintarMapa();
+      var notas = pieza.pistas.reduce(function (a, p) { return a + p.notas.length; }, 0);
+      var seg = Math.round(pieza.compases * 4 * 60 / pieza.bpm);
+      $("#gAviso").textContent = "Listo: " + pieza.compases + " compases, " +
+        Math.floor(seg / 60) + ":" + String(seg % 60).padStart(2, "0") + ", " +
+        pieza.pistas.length + " pistas, " + notas + " notas.";
+      $("#gAviso").className = "aviso bien";
+    } catch (e) {
+      $("#gAviso").textContent = "No pude armarla: " + e.message;
+      $("#gAviso").className = "aviso mal";
+    }
+    b.disabled = false; b.textContent = "Armar la canción";
+  };
+
+  // El mapa de secciones: dónde empieza cada parte, para no perderse en 120
+  // compases cuando lo abrís en FL Studio.
+  function pintarMapa() {
+    var caja = $("#gMapaCaja");
+    if (!pieza || !pieza.mapa) { caja.hidden = true; return; }
+    caja.hidden = false;
+    var ms = 60000 / pieza.bpm;
+    $("#gMapa").innerHTML = '<div class="lista"><table><thead><tr>' +
+      "<th>Parte</th><th>Empieza en el compás</th><th>Dura</th><th>Minuto</th>" +
+      "</tr></thead><tbody>" +
+      pieza.mapa.map(function (s) {
+        var seg = Math.round((s.desdeCompas - 1) * 4 * ms / 1000);
+        return "<tr><td>" + esc(s.nombre) + '</td><td class="n">' + s.desdeCompas +
+          '</td><td class="n">' + s.compases + '</td><td class="n">' +
+          Math.floor(seg / 60) + ":" + String(seg % 60).padStart(2, "0") + "</td></tr>";
+      }).join("") + "</tbody></table></div>";
+  }
+
   /* ---------------- plugins ---------------- */
   $("#escPlugins").onclick = async function () {
     var b = this; b.disabled = true; b.textContent = "Buscando…";
@@ -397,6 +448,7 @@
     await pintarVersiones();
     pintarPieza();
     pintarConfig();
+    pintarMapa();
     buscarSalidas();
     pintarSamples();
   })();
