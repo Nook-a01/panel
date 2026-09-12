@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12T00:17:17.310Z",
+ "actualizado": "2026-09-12T05:46:07.590Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -76,6 +76,19 @@
       "pos": 4
      },
      {
+      "equipo": "Boca Juniors",
+      "abrev": "CABJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "pj": "9",
+      "pts": "14",
+      "g": "3",
+      "e": "5",
+      "p": "1",
+      "dg": "+1",
+      "mio": true,
+      "pos": 5
+     },
+     {
       "equipo": "Unión (Santa Fe)",
       "abrev": "USF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
@@ -86,7 +99,7 @@
       "p": "3",
       "dg": "+3",
       "mio": false,
-      "pos": 5
+      "pos": 6
      },
      {
       "equipo": "Newell's Old Boys",
@@ -99,7 +112,7 @@
       "p": "2",
       "dg": "+2",
       "mio": false,
-      "pos": 6
+      "pos": 7
      },
      {
       "equipo": "Independiente",
@@ -112,19 +125,6 @@
       "p": "3",
       "dg": "+1",
       "mio": false,
-      "pos": 7
-     },
-     {
-      "equipo": "Boca Juniors",
-      "abrev": "CABJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "pj": "8",
-      "pts": "11",
-      "g": "2",
-      "e": "5",
-      "p": "1",
-      "dg": "-1",
-      "mio": true,
       "pos": 8
      },
      {
@@ -196,12 +196,12 @@
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "8",
+      "pj": "9",
       "pts": "7",
       "g": "2",
       "e": "1",
-      "p": "5",
-      "dg": "-4",
+      "p": "6",
+      "dg": "-6",
       "mio": false,
       "pos": 14
      },
@@ -984,8 +984,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1057,9 +1058,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",

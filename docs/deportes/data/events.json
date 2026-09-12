@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12T00:17:17.310Z",
+ "actualizado": "2026-09-12T05:46:07.590Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 17,
-   "proximos": 10
+   "proximos": 9
   },
   {
    "id": "argentina",
@@ -640,8 +640,8 @@
    "visitante": "Central Córdoba (Santiago del Estero)",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "3 - 1"
   },
   {
    "feedId": "f1",
