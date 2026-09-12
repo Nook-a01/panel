@@ -34,6 +34,8 @@ const SECCIONES = [
   { id: "plata",      texto: "💸 Plata",      url: PANEL_WEB + "plata/" },
   { id: "campamento", texto: "🎹 Campamento", url: PANEL_WEB + "campamento/" },
   { id: "instagram",  texto: "📸 Instagram",  url: INSTAGRAM },
+  // El Estudio no es una URL: abre su propia ventana (ver abrirEstudio).
+  { id: "estudio",    texto: "🎛️ Estudio",    url: null },
 ];
 
 let ventana = null, barra = null, contenido = null;
@@ -98,7 +100,8 @@ function acomodar() {
 
 function ir(id) {
   const s = SECCIONES.find(x => x.id === id);
-  if (!s || !contenido) return;
+  // Sin url no es una sección de la vista: es el Estudio, que abre su ventana.
+  if (!s || !s.url || !contenido) return;
   contenido.webContents.loadURL(s.url);
 }
 
@@ -107,7 +110,7 @@ function avisarSeccion() {
   const url = contenido.webContents.getURL();
   const actual = esInstagram(url)
     ? "instagram"
-    : (SECCIONES.find(s => s.id !== "instagram" && url.startsWith(s.url)) || {}).id;
+    : (SECCIONES.find(s => s.url && s.id !== "instagram" && url.startsWith(s.url)) || {}).id;
   barra.webContents.send("seccion", actual || "");
 }
 
@@ -142,14 +145,46 @@ async function inyectarSiEsInstagram() {
   }
 }
 
+/* ---------------- Estudio ----------------
+   Va en SU PROPIA ventana, y no en la vista de arriba, por una razón de
+   seguridad: esa vista carga Instagram, y a propósito no tiene ningún permiso
+   sobre la máquina. El Estudio sí necesita leer tus plugins y tus samples, así
+   que vive aparte, con su propio puente y cargando sólo páginas nuestras. */
+let estudio = null;
+
+function abrirEstudio() {
+  if (estudio && !estudio.isDestroyed()) { estudio.focus(); return; }
+  const { BrowserWindow } = require("electron");
+  estudio = new BrowserWindow({
+    width: 1120, height: 860, minWidth: 520,
+    title: "Estudio",
+    backgroundColor: "#0b0b10",
+    icon: path.join(__dirname, "icono.png"),
+    webPreferences: {
+      preload: path.join(__dirname, "puente-estudio.js"),
+      contextIsolation: true,
+      nodeIntegration: false,
+    },
+  });
+  // El MIDI necesita permiso, igual que el micrófono. Se concede sólo acá y
+  // sólo para el MIDI: cualquier otro pedido se rechaza.
+  estudio.webContents.session.setPermissionRequestHandler((_wc, permiso, ok) => {
+    ok(permiso === "midi" || permiso === "midiSysex");
+  });
+  estudio.loadFile(path.join(__dirname, "estudio.html"));
+  estudio.on("closed", () => { estudio = null; });
+}
+
 app.whenReady().then(() => {
   Menu.setApplicationMenu(null);
 
   // La barra pide cambiar de sección por acá.
   const { ipcMain } = require("electron");
-  ipcMain.on("ir", (_e, id) => ir(id));
+  ipcMain.on("ir", (_e, id) => { if (id === "estudio") abrirEstudio(); else ir(id); });
   ipcMain.on("atras", () => { if (contenido?.webContents.canGoBack()) contenido.webContents.goBack(); });
   ipcMain.on("recargar", () => contenido?.webContents.reload());
+
+  require("./estudio-motor.js").registrar();
 
   crear();
   app.on("activate", () => { if (!ventana) crear(); });

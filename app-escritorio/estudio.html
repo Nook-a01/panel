@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Estudio</title>
+<style>
+:root{
+  --fondo:#0b0b10; --caja:#14141c; --caja2:#1b1b26; --linea:#2a2a3a;
+  --tinta:#f2f2f7; --tinta2:#a0a0b4;
+  --acento:#7CE7C6; --acento2:#F5D06F; --rojo:#FF6B81;
+  --f:ui-sans-serif,system-ui,'Segoe UI',sans-serif;
+  --m:ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--f);
+     line-height:1.5;display:flex;flex-direction:column;overflow:hidden}
+header{padding:12px 18px;border-bottom:1px solid var(--linea);display:flex;
+       align-items:center;gap:14px;flex:0 0 auto}
+header h1{font-size:1.05rem;margin:0;letter-spacing:-.01em}
+header .pieza{color:var(--tinta2);font-size:.86rem}
+nav{display:flex;gap:6px;padding:10px 18px 0;flex:0 0 auto}
+nav button{background:none;border:0;color:var(--tinta2);font:600 .88rem var(--f);
+  padding:8px 12px;border-radius:8px 8px 0 0;cursor:pointer}
+nav button.on{color:var(--acento);background:var(--caja);border-bottom:2px solid var(--acento)}
+main{flex:1 1 auto;overflow:auto;padding:16px 18px 28px}
+.hoja{display:none}
+.hoja.on{display:block}
+.caja{background:var(--caja);border:1px solid var(--linea);border-radius:12px;padding:14px;margin:0 0 14px}
+h2{font-size:.95rem;margin:0 0 10px;color:var(--acento)}
+.fila{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+button.b,select,input[type=text]{font:inherit;font-size:.88rem;border-radius:9px;
+  border:1px solid var(--linea);background:var(--caja2);color:var(--tinta);padding:8px 12px;cursor:pointer}
+button.pri{background:var(--acento);border-color:var(--acento);color:#07281f;font-weight:700}
+button.b:disabled{opacity:.45;cursor:default}
+.chip{background:var(--caja2);border:1px solid var(--linea);border-radius:999px;padding:4px 11px;font-size:.8rem}
+.chip b{color:var(--acento);font-family:var(--m)}
+.aviso{font-size:.84rem;color:var(--tinta2);margin-top:9px}
+.aviso.bien{color:var(--acento)} .aviso.mal{color:var(--rojo)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{text-align:left;color:var(--tinta2);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--linea)}
+td{padding:5px 8px;border-bottom:1px solid #ffffff0a}
+td.n{font-family:var(--m);color:var(--acento2);text-align:right}
+.lista{max-height:300px;overflow:auto;border:1px solid var(--linea);border-radius:9px}
+.vacio{color:var(--tinta2);font-size:.86rem;padding:10px 2px}
+.rollo{margin-top:8px;height:52px;position:relative;background:var(--caja2);
+  border:1px solid var(--linea);border-radius:8px;overflow:hidden}
+.rollo i{position:absolute;height:4px;border-radius:2px;background:var(--acento)}
+.rollo .bar{position:absolute;top:0;bottom:0;width:1px;background:#ffffff12}
+.rollo .aguja{position:absolute;top:0;bottom:0;width:2px;background:var(--acento2);opacity:0}
+.rollo.sonando .aguja{opacity:1}
+.pista .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:12px}
+small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:break-all}
+</style>
+</head>
+<body>
+<header>
+  <h1>Estudio</h1>
+  <span class="pieza" id="cab">—</span>
+</header>
+
+<nav>
+  <button data-h="tocar" class="on">Tocar</button>
+  <button data-h="plugins">Plugins</button>
+  <button data-h="samples">Samples</button>
+</nav>
+
+<main>
+  <!-- TOCAR -->
+  <section class="hoja on" id="h-tocar">
+    <div class="caja">
+      <div class="fila" id="datos"></div>
+      <div class="fila" style="margin-top:12px">
+        <button class="b pri" id="sonar">▶ Sonar</button>
+        <button class="b" id="parar" disabled>■ Parar</button>
+        <select id="salida"><option value="">Buscando salidas MIDI…</option></select>
+        <button class="b" id="buscar">Buscar de nuevo</button>
+      </div>
+      <div class="aviso" id="estadoMidi">—</div>
+    </div>
+    <div class="caja">
+      <h2>Las pistas</h2>
+      <div id="pistas"></div>
+    </div>
+    <div class="caja">
+      <h2>De qué se trata</h2>
+      <ul id="charla" style="margin:0;padding-left:1.1rem;color:#d5d5e2;font-size:.88rem"></ul>
+    </div>
+  </section>
+
+  <!-- PLUGINS -->
+  <section class="hoja" id="h-plugins">
+    <div class="caja">
+      <div class="fila">
+        <button class="b pri" id="escPlugins">Buscar mis plugins</button>
+        <span class="chip">Encontrados <b id="nPlugins">—</b></span>
+      </div>
+      <div class="aviso">Se miran las carpetas donde Windows y FL Studio dejan los VST. No se abre ni se modifica ninguno: sólo se listan.</div>
+    </div>
+    <div id="listaPlugins"></div>
+  </section>
+
+  <!-- SAMPLES -->
+  <section class="hoja" id="h-samples">
+    <div class="caja">
+      <div class="fila">
+        <button class="b pri" id="addCarpeta">Agregar una carpeta</button>
+        <button class="b" id="abrirDatos">Ver dónde guardo tus cosas</button>
+      </div>
+      <div class="aviso">Elegí las carpetas donde tenés tus samples. Se cuentan por tipo y por subcarpeta, para saber con qué contamos.</div>
+    </div>
+    <div id="listaSamples"></div>
+  </section>
+</main>
+
+<script src="estudio.js"></script>
+</body>
+</html>

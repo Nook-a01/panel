@@ -17,6 +17,11 @@
       "puente.js",
       "barra.html",
       "panel.js",
+      "estudio-motor.js",
+      "puente-estudio.js",
+      "estudio.html",
+      "estudio.js",
+      "pieza-inicial.json",
       "icono.png",
       "package.json"
     ],
