@@ -635,11 +635,10 @@ const DAYS = [
 // página lo avisaba. Ahora viven en este navegador, y si tenés la clave del
 // panel también viajan al celular.
 
-const MS_DAY = 86400000;
 const LS_HECHOS = 'campamento-hechos';
 const WORKER = 'https://plata.hamcqc.workers.dev';
 
-function claveePanel(){ try{ return localStorage.getItem('plata-mp-clave') || ''; }catch(e){ return ''; } }
+function clavePanel(){ try{ return localStorage.getItem('plata-mp-clave') || ''; }catch(e){ return ''; } }
 
 function leerHechos(){
   try{
@@ -657,7 +656,7 @@ function guardarHechos(){
 // página funciona igual, solo que el progreso queda en este aparato.
 let subiendo = null;
 function subirHechos(lista){
-  const clave = claveePanel(); if(!clave) return;
+  const clave = clavePanel(); if(!clave) return;
   clearTimeout(subiendo);
   subiendo = setTimeout(function(){
     fetch(WORKER + '/campamento', {
@@ -668,7 +667,7 @@ function subirHechos(lista){
   }, 1200);
 }
 async function bajarHechos(){
-  const clave = claveePanel(); if(!clave) return false;
+  const clave = clavePanel(); if(!clave) return false;
   try{
     const r = await fetch(WORKER + '/campamento', { headers:{ authorization:'Bearer '+clave }, cache:'no-store' });
     if(!r.ok) return false;
@@ -738,7 +737,7 @@ function updateProgress(){
     hechos === 30 ? '30 de 30 — terminaste' : `Día ${TODAY} · ${hechos} de 30 hechos`;
   try{ localStorage.setItem('campamento-dia', String(TODAY)); }catch(e){}
   document.getElementById('barFill').style.width = Math.max(3, pct) + '%';
-  const wk = WEEKS[DAYS[TODAY-1].w-1];
+  const wk = weekOf(DAYS[TODAY-1]);
   document.getElementById('barLabel').textContent =
     hechos === 0 ? 'Todavía no marcaste ningún día' : wk.title.split('·')[1].trim();
 }
@@ -964,43 +963,6 @@ bajarHechos().then(function(hubo){ if(hubo){ TODAY = diaActual(); repintar(); } 
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-
-
 
 <!-- piel: piel-cuaderno -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
