@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T04:42:51.894Z",
+ "actualizado": "2026-09-12T00:17:17.310Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 18,
+   "total": 17,
    "proximos": 10
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401903297",
-   "miLado": "local",
-   "idEspn": "401903297",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Deportivo Recoleta",
-   "inicio": "2026-08-11T22:00Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Estadio Tomás Adolfo Ducó",
-   "local": "Boca Juniors",
-   "visitante": "Deportivo Recoleta",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/22517.png",
-   "finalizado": true,
-   "marcador": "3 - 1"
-  },
   {
    "id": "espn-401863614",
    "miLado": "local",
