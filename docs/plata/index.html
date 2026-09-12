@@ -216,6 +216,12 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--accent)
 .notice.info{background:var(--accent-soft); color:var(--accent-ink)}
 :root[data-theme="dark"] .notice.info{color:var(--accent-ink)}
 .notice.warn{background:var(--warn-soft); color:var(--warn)}
+/* «ok» comparte el fondo de «info»: la barra lateral es lo que distingue un
+   «listo» de un mensaje neutro sin inventar un color que no está en la paleta.
+   Va con border-left y no con box-shadow porque la piel «diario» apaga todas
+   las sombras con un !important general. */
+.notice.ok{background:var(--accent-soft); color:var(--accent); border-left:3px solid var(--accent)}
+.notice.bad{background:var(--crit-soft); color:var(--crit); border-left:3px solid var(--crit)}
 .stack{display:flex; flex-direction:column; gap:14px}
 .split{display:grid; gap:14px; grid-template-columns:1fr}
 @media(min-width:880px){ .split{grid-template-columns:1.35fr 1fr} }
@@ -375,7 +381,7 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <div class="card">
       <div class="hd"><h3>Categorías y topes mensuales</h3><span class="hint" id="presuTotal"></span></div>
       <div class="bd">
-        <div class="tablewrap"><table id="catTable"><thead><tr><th>Categoría</th><th>Tipo</th><th class="r">Tope mensual</th><th class="r">Gastado este mes</th><th></th></tr></thead><tbody></tbody></table></div>
+        <div class="tablewrap"><table id="catTable"><thead><tr><th>Categoría</th><th>Tipo</th><th class="r" title="La plata que movés a inversión no cuenta como gasto ni como ingreso: se muestra aparte.">Inversión</th><th class="r">Tope mensual</th><th class="r">Gastado este mes</th><th></th></tr></thead><tbody></tbody></table></div>
         <div class="btnrow" style="margin-top:14px">
           <input type="text" id="newCatName" placeholder="Nombre de la categoría" style="max-width:230px">
           <select id="newCatTipo" style="max-width:130px"><option value="gasto">Gasto</option><option value="ingreso">Ingreso</option></select>
@@ -1313,6 +1319,9 @@ function renderPresu(){
     return '<tr>'
       +'<td><input type="text" data-cn="'+c.id+'" value="'+esc(c.nombre)+'" style="border-color:transparent;background:transparent;padding:5px 6px"></td>'
       +'<td><span class="pill">'+(c.tipo==='gasto'?'gasto':'ingreso')+'</span></td>'
+      +'<td class="r"><input type="checkbox" data-cg="'+c.id+'"'+(c.noGasto?' checked':'')
+        +' title="No cuenta como gasto ni como ingreso: se muestra aparte, en «A inversión»."'
+        +' style="width:16px;height:16px"></td>'
       +'<td class="r">'+(c.tipo==='gasto'
           ? '<input type="number" data-ct="'+c.id+'" value="'+(Number(c.tope)||0)+'" min="0" step="1000" style="max-width:130px;text-align:right">'
           : '<span style="color:var(--ink-3)">—</span>')+'</td>'
@@ -2310,7 +2319,7 @@ function renderImport(){
       +'<td class="money" style="color:var(--ink-3)">'+fmtDay(r.fecha)+'</td>'
       +'<td><div style="font-weight:500">'+esc(r.desc)+'</div>'
         +(r.dup?'<span class="pill p-pend" style="margin-top:3px">ya lo tenés</span>':'')
-        +(r.medio==='tarjeta'?' <span class="pill p-tar" style="margin-top:3px">tarjeta de crédito</span>':'')
+        +(esTarjeta(r)?' <span class="pill p-tar" style="margin-top:3px">tarjeta de crédito</span>':'')
         +(r.estado==='pend'?' <span class="pill p-pend" style="margin-top:3px">pendiente</span>':'')+'</td>'
       +'<td><select data-impcat="'+r.id+'" style="min-width:150px">'+S.cats.filter(x=>x.tipo===r.tipo).map(x=>'<option value="'+x.id+'"'+(x.id===r.catId?' selected':'')+'>'+esc(x.nombre)+'</option>').join('')+'</select></td>'
       +'<td class="r money '+(esIng?'in':'out')+'">'+(esIng?'+':'−')+money(r.monto)+'</td></tr>';
@@ -2422,6 +2431,8 @@ $('#catTable').addEventListener('change', e=>{
   const t=e.target;
   if(t.dataset.cn){ const c=cat(t.dataset.cn); if(c){ c.nombre = t.value.trim()||c.nombre; marcarCambio(); render(); } }
   if(t.dataset.ct){ const c=cat(t.dataset.ct); if(c){ c.tope = Math.max(0, parseFloat(t.value)||0); marcarCambio(); renderPresu(); } }
+  // Cambia los totales de todo el tablero, no sólo esta tabla: va render() entero.
+  if(t.dataset.cg){ const c=cat(t.dataset.cg); if(c){ c.noGasto = t.checked; marcarCambio(); render(); } }
 });
 $('#addCat').onclick = ()=>{
   const n = $('#newCatName').value.trim(); if(!n){ toast('Ponele un nombre'); return; }
@@ -2600,91 +2611,6 @@ $('#wipe').onclick = ()=>{
   @media (prefers-reduced-motion:reduce){ .volver-panel{ transition:none } }
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
-
 
 <!-- piel: piel-diario -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
