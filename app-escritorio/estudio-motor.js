@@ -106,6 +106,106 @@ async function escanearSamples(raiz) {
   return { ruta: raiz, total, cortado, porExt, grupos };
 }
 
+/* ---------------- versiones ----------------
+   Una idea no es un archivo, son varios intentos. Cada versión es su propio
+   archivo con su nombre y su fecha, y el índice dice cuál estás escuchando.
+
+   Nunca se pisa una versión al crear otra: probar algo no puede costarte lo
+   anterior. Por eso "duplicar" es la operación normal y no hay "guardar como"
+   que reemplace. */
+
+function idNuevo() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+async function leerIndice() {
+  const i = await leerJson(datos("versiones.json"), null);
+  if (i && Array.isArray(i.versiones)) return i;
+  return { actual: null, versiones: [] };
+}
+
+async function escribirIndice(i) { await escribirJson(datos("versiones.json"), i); }
+
+// La primera vez no hay nada: entra la pieza que viene con el programa, o la
+// que hubiera quedado guardada por la versión anterior del Estudio.
+async function asegurarIndice() {
+  const i = await leerIndice();
+  if (i.versiones.length) return i;
+  const vieja = await leerJson(datos("pieza.json"), null);
+  const inicial = vieja || await leerJson(path.join(__dirname, "pieza-inicial.json"), null);
+  if (!inicial) return i;
+  const id = idNuevo();
+  await escribirJson(datos("versiones", id + ".json"), inicial);
+  i.versiones = [{ id, nombre: inicial.titulo || "Primera idea", creada: new Date().toISOString() }];
+  i.actual = id;
+  await escribirIndice(i);
+  return i;
+}
+
+async function listarVersiones() {
+  const i = await asegurarIndice();
+  return { actual: i.actual, versiones: i.versiones };
+}
+
+async function abrirVersion(id) {
+  const i = await asegurarIndice();
+  if (!i.versiones.some(v => v.id === id)) return null;
+  i.actual = id;
+  await escribirIndice(i);
+  return leerJson(datos("versiones", id + ".json"), null);
+}
+
+async function piezaActual() {
+  const i = await asegurarIndice();
+  if (!i.actual) return null;
+  return leerJson(datos("versiones", i.actual + ".json"), null);
+}
+
+async function guardarActual(pieza) {
+  const i = await asegurarIndice();
+  if (!i.actual) return false;
+  await escribirJson(datos("versiones", i.actual + ".json"), pieza);
+  // El nombre de la versión sigue al título, salvo que le hayas puesto uno propio.
+  const v = i.versiones.find(x => x.id === i.actual);
+  if (v && !v.propio && pieza.titulo) { v.nombre = pieza.titulo; await escribirIndice(i); }
+  return true;
+}
+
+async function duplicarVersion(desdeId, nombre) {
+  const i = await asegurarIndice();
+  const base = await leerJson(datos("versiones", (desdeId || i.actual) + ".json"), null);
+  if (!base) return null;
+  const id = idNuevo();
+  const copia = JSON.parse(JSON.stringify(base));
+  copia.titulo = nombre || ((base.titulo || "Idea") + " (otra vuelta)");
+  await escribirJson(datos("versiones", id + ".json"), copia);
+  i.versiones.push({ id, nombre: copia.titulo, creada: new Date().toISOString(), vieneDe: desdeId || i.actual });
+  i.actual = id;
+  await escribirIndice(i);
+  return { id, pieza: copia };
+}
+
+async function renombrarVersion(id, nombre) {
+  const i = await asegurarIndice();
+  const v = i.versiones.find(x => x.id === id);
+  if (!v) return false;
+  v.nombre = nombre;
+  v.propio = true;              // a partir de acá el nombre es tuyo, no del título
+  await escribirIndice(i);
+  return true;
+}
+
+async function borrarVersion(id) {
+  const i = await asegurarIndice();
+  // No se borra la última: quedarías sin nada que escuchar.
+  if (i.versiones.length <= 1) return { ok: false, porque: "Es la única versión que queda." };
+  i.versiones = i.versiones.filter(v => v.id !== id);
+  if (i.actual === id) i.actual = i.versiones[0].id;
+  await escribirIndice(i);
+  try { await fs.unlink(datos("versiones", id + ".json")); } catch {}
+  return { ok: true, actual: i.actual };
+}
+
 /* ---------------- registro ---------------- */
 function registrar() {
   ipcMain.handle("estudio:plugins", () => escanearPlugins());
@@ -135,19 +235,25 @@ function registrar() {
 
   ipcMain.handle("estudio:samples", (_e, ruta) => escanearSamples(ruta));
 
-  // La primera vez no hay nada guardado: se copia la pieza que viene con el
-  // programa, así el Estudio nunca abre vacío.
-  ipcMain.handle("estudio:leer-pieza", async () => {
-    const guardada = await leerJson(datos("pieza.json"), null);
-    if (guardada) return guardada;
-    const inicial = await leerJson(path.join(__dirname, "pieza-inicial.json"), null);
-    if (inicial) await escribirJson(datos("pieza.json"), inicial);
-    return inicial;
-  });
+  ipcMain.handle("estudio:leer-pieza", () => piezaActual());
+  ipcMain.handle("estudio:guardar-pieza", (_e, pieza) => guardarActual(pieza));
 
-  ipcMain.handle("estudio:guardar-pieza", async (_e, pieza) => {
-    await escribirJson(datos("pieza.json"), pieza);
-    return true;
+  ipcMain.handle("estudio:versiones", () => listarVersiones());
+  ipcMain.handle("estudio:abrir-version", (_e, id) => abrirVersion(id));
+  ipcMain.handle("estudio:duplicar-version", (_e, desde, nombre) => duplicarVersion(desde, nombre));
+  ipcMain.handle("estudio:renombrar-version", (_e, id, nombre) => renombrarVersion(id, nombre));
+  ipcMain.handle("estudio:borrar-version", (_e, id) => borrarVersion(id));
+
+  // Guardar el .mid donde vos quieras, con el diálogo de Windows.
+  ipcMain.handle("estudio:guardar-midi", async (_e, nombre, bytes) => {
+    const r = await dialog.showSaveDialog({
+      title: "Guardar el MIDI",
+      defaultPath: nombre,
+      filters: [{ name: "Archivo MIDI", extensions: ["mid"] }],
+    });
+    if (r.canceled || !r.filePath) return null;
+    await fs.writeFile(r.filePath, Buffer.from(bytes));
+    return r.filePath;
   });
 
   // Para que sepas dónde quedan tus cosas y las puedas abrir a mano.

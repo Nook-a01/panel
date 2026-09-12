@@ -223,11 +223,16 @@ select{padding:9px 10px;max-width:100%}
     var sel = $('#salida');
     sel.innerHTML = '<option value="">Sonar acá (sin MIDI)</option>' +
       salidas.map(function(o){ return '<option value="' + o.id + '">' + esc(o.name) + '</option>'; }).join('');
-    // loopMIDI es el puente hacia FL Studio: si está, se elige solo.
-    var loop = salidas.filter(function(o){ return /loop/i.test(o.name); })[0];
+    // Se elige solo el puerto que más pinta tenga de ir a FL Studio. El nombre
+    // se lo pone quien crea el puerto en loopMIDI, así que puede decir "loop",
+    // "FL Studio" o "MIDI"; lo que NO hay que elegir es el sintetizador de
+    // Windows, que suena a MIDI de los 90 y no entra al FL Studio.
+    var loop = salidas.filter(function(o){
+      return /fl.?studio|loop|virtual|midi/i.test(o.name) && !/wavetable|microsoft gs/i.test(o.name);
+    })[0];
     if(loop){
       sel.value = loop.id;
-      aviso('Encontré «' + loop.name + '». Abrí FL Studio y elegilo como entrada MIDI: lo que toques acá entra ahí.', 'bien');
+      aviso('Elegí «' + loop.name + '». Abrí FL Studio y activalo como entrada MIDI: lo que toques acá entra ahí.', 'bien');
     } else if(salidas.length){
       aviso('Hay ' + salidas.length + ' salida(s) MIDI. Elegí la que escuche FL Studio.', '');
     } else {

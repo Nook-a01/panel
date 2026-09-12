@@ -50,6 +50,10 @@ td.n{font-family:var(--m);color:var(--acento2);text-align:right}
 .rollo .aguja{position:absolute;top:0;bottom:0;width:2px;background:var(--acento2);opacity:0}
 .rollo.sonando .aguja{opacity:1}
 .pista .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:12px}
+.campo{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--tinta2)}
+.campo input,.campo select{font:inherit;font-size:.88rem;border-radius:9px;border:1px solid var(--linea);
+  background:var(--caja2);color:var(--tinta);padding:7px 9px;width:auto}
+.campo input[type=number]{width:76px}
 small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:break-all}
 </style>
 </head>
@@ -69,10 +73,42 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
   <!-- TOCAR -->
   <section class="hoja on" id="h-tocar">
     <div class="caja">
+      <h2>Versiones</h2>
+      <div class="fila">
+        <select id="versiones"></select>
+        <button class="b" id="duplicar">+ Otra vuelta</button>
+        <button class="b" id="renombrar">Renombrar</button>
+        <button class="b" id="borrar">Borrar</button>
+      </div>
+      <div class="aviso">Cada vuelta es una copia aparte: probar algo nunca te pisa lo anterior.</div>
+    </div>
+
+    <div class="caja">
+      <h2>Cómo suena</h2>
+      <div class="fila">
+        <label class="campo">Tempo <input type="number" id="cBpm" min="40" max="220" step="1"> BPM</label>
+        <label class="campo">Tonalidad <input type="text" id="cTon" size="4" maxlength="6"></label>
+        <label class="campo">Compases <input type="number" id="cComp" min="1" max="64" step="1"></label>
+        <label class="campo">Transportar
+          <select id="cTrans">
+            <option value="-12">-1 octava</option><option value="-5">-5</option>
+            <option value="-4">-4</option><option value="-3">-3</option><option value="-2">-2</option>
+            <option value="-1">-1</option><option value="0" selected>sin mover</option>
+            <option value="1">+1</option><option value="2">+2</option><option value="3">+3</option>
+            <option value="4">+4</option><option value="5">+5</option><option value="12">+1 octava</option>
+          </select>
+        </label>
+        <button class="b" id="aplicarTrans">Aplicar</button>
+      </div>
+      <div class="aviso" id="avisoConfig">El tempo y los compases se guardan solos. Transportar mueve todas las notas y no se puede deshacer: si dudás, duplicá primero.</div>
+    </div>
+
+    <div class="caja">
       <div class="fila" id="datos"></div>
       <div class="fila" style="margin-top:12px">
         <button class="b pri" id="sonar">▶ Sonar</button>
         <button class="b" id="parar" disabled>■ Parar</button>
+        <button class="b" id="bajarMidi">⤓ Guardar .mid</button>
         <select id="salida"><option value="">Buscando salidas MIDI…</option></select>
         <button class="b" id="buscar">Buscar de nuevo</button>
       </div>
