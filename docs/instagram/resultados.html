@@ -233,6 +233,9 @@
   var datos = null, pestana = 'seguidores', pagina = 0, busqueda = '', modo = 'normal';
   var filtros = { noSiguen:true, teSiguen:false, verificados:true, privados:true };
   var blanca = new Set();
+  // La lista entera que quedó después de los filtros, para el botón «Copiar
+  // lista»: en pantalla sólo hay 20, pero copiar 20 de 200 no le sirve a nadie.
+  var listaCopiable = [];
 
   var $ = function(s){ return document.querySelector(s); };
   function clave(){ try{ return localStorage.getItem(LS) || ''; }catch(e){ return ''; } }
@@ -381,6 +384,7 @@
                      (u.full_name||'').toLowerCase().indexOf(busqueda) < 0) return false;
       return true;
     });
+    listaCopiable = lista;
 
     return banda() + resumenEscaneo() +
       '<div class="fila-ctrl">' +
@@ -581,7 +585,7 @@
     if(e.target.id === 'anterior'){ if(pagina > 0) pagina--; pintar(); irArriba(); return; }
     if(e.target.id === 'siguiente'){ pagina++; pintar(); irArriba(); return; }
     if(e.target.id === 'copiar'){
-      var lista = [...$('#vista').querySelectorAll('.usuario')].map(function(n){ return n.textContent; }).join('\n');
+      var lista = listaCopiable.map(function(u){ return '@' + u.username; }).join('\n');
       navigator.clipboard.writeText(lista).then(function(){
         e.target.textContent = '✓ Copiado';
         setTimeout(function(){ e.target.textContent = 'Copiar lista'; }, 1600);
