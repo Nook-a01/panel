@@ -361,7 +361,7 @@
     if (!pieza || !pieza.mapa) { caja.hidden = true; return; }
     caja.hidden = false;
     var ms = 60000 / pieza.bpm;
-    $("#gMapa").innerHTML = '<div class="lista"><table><thead><tr>' +
+    $("#gMapa").innerHTML = '<div class="lista entera"><table><thead><tr>' +
       "<th>Parte</th><th>Empieza en el compás</th><th>Dura</th><th>Minuto</th>" +
       "</tr></thead><tbody>" +
       pieza.mapa.map(function (s) {
