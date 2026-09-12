@@ -2163,6 +2163,11 @@ async function mpTraer(silencioso){
   (d.movimientos||[]).forEach(m=>{
     const src = 'mp:' + m.id;
     if(yaEstan.has(src)) return;
+    // Guardar plata en una reserva de Mercado Pago figura como un movimiento
+    // negativo, pero no gastaste nada: la moviste de un bolsillo tuyo a otro.
+    // Si se importa, te infla los gastos del mes. El saldo ya la cuenta, porque
+    // el lector suma las reservas al disponible.
+    if(m.esReserva || /reservad/i.test(m.descripcionTipo || '')) return;
     const esIngreso = m.tipo === 'ingreso';
     S.movs.push({
       id: uid(),

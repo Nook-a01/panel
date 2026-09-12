@@ -114,6 +114,10 @@
           monto: Math.abs(monto),
           tipo: monto < 0 ? "gasto" : "ingreso",
           descripcionTipo: tipo,
+          // Mover plata a una reserva no es gastar. Se marca acá, mirando TODOS
+          // los textos de la fila y no sólo el que quedó como tipo: según el
+          // orden del HTML, ese podría ser "Dinero disponible" y se escaparía.
+          esReserva: titulos.some(t => /reservad/i.test(t)),
           origen: "lector-mp",
         });
       }
@@ -136,6 +140,32 @@
     const sinSigno = sueltos.find(x => !/^[+-]/.test(String(x.texto).trim()));
     return sinSigno ? sinSigno.valor : null;
   }
+
+  // Las reservas son plata tuya que Mercado Pago aparta, cada una con el nombre
+  // que le hayas puesto. NO están en el saldo disponible: si no se suman, el
+  // panel te muestra de menos y encima parece que gastaste lo que guardaste.
+  //
+  // Se leen sólo en la pantalla de Inicio, que es la única donde figuran. Se
+  // toman todos los importes sin signo de la página y se descartan los de la
+  // tarjeta del saldo y los de Créditos, que se reconocen por su propio texto.
+  // Lo que queda son las reservas, cada una con su nombre.
+  function leerReservas() {
+    let total = 0;
+    for (const el of contenido().querySelectorAll('[aria-label*="pesos"]')) {
+      if (el.closest("li")) continue;
+      const texto = el.getAttribute("aria-label");
+      if (/^[+-]/.test(String(texto).trim())) continue;
+      const valor = importeDesdeTexto(texto);
+      if (valor === null) continue;
+      const caja = el.closest("section,article") || el.parentElement;
+      const alrededor = ((caja && caja.innerText) || "").replace(/\s+/g, " ");
+      if (/Transferir|Ir a Tu dinero|Cr[ée]ditos|Consultar l[íi]mite/i.test(alrededor)) continue;
+      total += valor;
+    }
+    return total;
+  }
+
+  const enInicio = () => /\/home/.test(location.pathname);
 
   function leerAnalisisDelMes() {
     const sueltos = leerFueraDeListas();
@@ -225,7 +255,14 @@
 
   async function leerYEnviar(silencioso) {
     const movimientos = leerMovimientos();
-    const saldo = leerSaldo();
+
+    // El saldo completo sólo se puede armar en Inicio, porque es la única
+    // pantalla que muestra las reservas. Desde las otras se manda null a
+    // propósito: el panel conserva el último saldo bueno en vez de pisarlo
+    // con el disponible solo, que es justamente el número que estaba mal.
+    const disponible = leerSaldo();
+    const reservas = enInicio() ? leerReservas() : null;
+    const saldo = (enInicio() && disponible !== null) ? disponible + reservas : null;
 
     if (!movimientos.length && saldo === null) {
       if (!silencioso) {
@@ -257,11 +294,18 @@
         return;
       }
       const c = r.cuerpo || {};
+      const peso = n => "$" + Number(n).toLocaleString("es-AR");
       avisar(
         "✅ Panel actualizado\n" +
         (c.nuevos ? c.nuevos + " nuevo" + (c.nuevos === 1 ? "" : "s") : "sin movimientos nuevos") +
         " · " + (c.total || 0) + " en total" +
-        (c.saldo != null ? "\nSaldo: $" + c.saldo.toLocaleString("es-AR") : ""),
+        // Se muestra el desglose y no sólo el total: si algún día Mercado Pago
+        // cambia la pantalla y las reservas dejan de leerse, se ve acá al toque
+        // en vez de aparecer como un saldo misteriosamente más chico.
+        (saldo != null
+          ? "\nSaldo: " + peso(saldo) +
+            "\n(disponible " + peso(disponible) + " + reservas " + peso(reservas) + ")"
+          : "\nSaldo: se lee desde Inicio"),
         "#276749"
       );
     } catch (e) {
@@ -282,7 +326,9 @@
     document.body.appendChild(b);
   }
 
-  const paginaConDatos = () => /\/(banking\/balance|activities)/.test(location.pathname);
+  // Inicio entra en la lista porque es la única pantalla donde se ven las
+  // reservas, y sin ellas el saldo queda incompleto.
+  const paginaConDatos = () => /\/(home|banking\/balance|activities)/.test(location.pathname);
 
   function arrancar() {
     if (!paginaConDatos()) {
