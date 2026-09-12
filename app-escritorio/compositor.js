@@ -100,8 +100,15 @@
     },
   };
 
-  // Batería estándar: cada nota es un instrumento, no una altura.
-  var TAMBOR = { kick: "C1", snare: "D1", clap: "D#1", hat: "F#1", hatAbierto: "A#1", perc: "G#1", tom: "A1" };
+  // La batería NO va por el mapa General MIDI, y es a propósito.
+  //
+  // Cada golpe sale en su propia pista, así que el número de nota ya no tiene
+  // que distinguir un bombo de un clap: eso lo dice la pista. Y como en FL
+  // Studio el muestreador toca su sample sin tocarle la altura cuando la nota
+  // es la 60, poner todo ahí hace que arrastrar un .wav a cada canal suene tal
+  // cual es. Con el mapa General MIDI (C1, D1, F#1...) el mismo sample entraba
+  // tres octavas abajo y el bombo quedaba en un retumbe.
+  var GOLPE = "C4";   // = nota MIDI 60, la que FL Studio muestra como C5
 
   /* ---------------- la forma de la canción ----------------
      Los largos no son caprichosos: de a 8 y 16 compases, que es como está
@@ -134,8 +141,11 @@
       return 12 * (octava + 1 + o) + ton.raiz + escala[g];
     }
 
+    // Una pista por sonido: el clap no comparte canal con el redoblante ni el
+    // hat abierto con el cerrado. En FL Studio cada canal lleva un sample, así
+    // que dos sonidos en una misma pista serían uno solo.
     var pistas = {
-      Kick:      [], Snare: [], Hats: [], Perc: [],
+      Kick:      [], Snare: [], Clap: [], Hats: [], "Hat abierto": [], Perc: [],
       Bajo:      [], Acordes: [], Melodía: [], Contramelodía: [],
     };
     var mapa = [];
@@ -152,33 +162,34 @@
 
         /* --- batería --- */
         if (sec.energia >= 2) {
-          gen.kick.forEach(function (x) { pistas.Kick.push(n(TAMBOR.kick, base + x, 0.25, 112)); });
+          gen.kick.forEach(function (x) { pistas.Kick.push(n(GOLPE, base + x, 0.25, 112)); });
         }
         if (sec.energia >= 2) {
-          gen.clap.forEach(function (x) {
-            pistas.Snare.push(n(sec.energia >= 4 ? TAMBOR.clap : TAMBOR.snare, base + x, 0.25, 104));
-          });
+          // Del estribillo para arriba el backbeat lo lleva el clap, que suena
+          // más ancho; abajo lo lleva el redoblante.
+          var caja = sec.energia >= 4 ? pistas.Clap : pistas.Snare;
+          gen.clap.forEach(function (x) { caja.push(n(GOLPE, base + x, 0.25, 104)); });
         }
         if (sec.energia >= 1) {
           gen.hat.forEach(function (x, i) {
             // En las secciones de más energía el hat se parte en semicorcheas
             // de a ratos: es lo que da sensación de que sube sin agregar nada.
             if (sec.energia >= 4 && az.suerte(0.18)) {
-              pistas.Hats.push(n(TAMBOR.hat, base + x, 0.12, 70));
-              pistas.Hats.push(n(TAMBOR.hat, base + x + 0.25, 0.12, 56));
+              pistas.Hats.push(n(GOLPE, base + x, 0.12, 70));
+              pistas.Hats.push(n(GOLPE, base + x + 0.25, 0.12, 56));
             } else {
-              pistas.Hats.push(n(TAMBOR.hat, base + x, 0.2, i % 2 === 0 ? 80 : 60));
+              pistas.Hats.push(n(GOLPE, base + x, 0.2, i % 2 === 0 ? 80 : 60));
             }
           });
-          if (sec.energia >= 3 && c % 4 === 3) pistas.Hats.push(n(TAMBOR.hatAbierto, base + 3.5, 0.4, 84));
+          if (sec.energia >= 3 && c % 4 === 3) pistas["Hat abierto"].push(n(GOLPE, base + 3.5, 0.4, 84));
         }
         if (sec.energia >= 3) {
-          gen.perc.forEach(function (x) { pistas.Perc.push(n(TAMBOR.perc, base + x, 0.2, 72)); });
+          gen.perc.forEach(function (x) { pistas.Perc.push(n(GOLPE, base + x, 0.2, 72)); });
         }
         // Remate: el último compás de cada sección avisa que viene otra cosa.
         if (ultimo && sec.energia >= 2) {
           for (var r = 0; r < 4; r++) {
-            pistas.Snare.push(n(TAMBOR.snare, base + 3 + r * 0.25, 0.2, 80 + r * 10));
+            pistas.Snare.push(n(GOLPE, base + 3 + r * 0.25, 0.2, 80 + r * 10));
           }
         }
 
@@ -219,7 +230,9 @@
           });
         }
         if (sec.energia >= 4 && c % 2 === 1) {
-          pistas["Contramelodía"].push(n(nombreDe(nota(grado + 4, 6)), base + 2, 1.5, 66));
+          // Una octava abajo de la melodía: en la 6 quedaba arriba de un piano
+          // entero (nota 105) y no se escuchaba, chillaba.
+          pistas["Contramelodía"].push(n(nombreDe(nota(grado + 4, 4)), base + 2, 1.5, 66));
         }
       }
       t += sec.compases * 4;
@@ -231,11 +244,18 @@
 
     var total = t / 4;
     var instrumentos = {
-      Kick: "808 o kick de tu librería", Snare: "clap y redoblante", Hats: "hi-hats",
+      Kick: "un kick o un 808", Snare: "redoblante", Clap: "clap o palmas",
+      Hats: "hi-hat cerrado", "Hat abierto": "hi-hat abierto",
       Perc: "shaker, conga o percusión", Bajo: "808 o sub", Acordes: "piano, pad o pluck",
       "Melodía": "lead, flauta o whistle", "Contramelodía": "algo lejano, con delay",
     };
-    var canales = { Kick: 10, Snare: 10, Hats: 10, Perc: 10, Bajo: 2, Acordes: 3, "Melodía": 4, "Contramelodía": 5 };
+    // Cada pista, su propio canal MIDI. El 10 queda afuera a propósito: ese
+    // canal significa "batería General MIDI" y acá los golpes no siguen ese mapa.
+    var canales = {
+      Kick: 11, Snare: 12, Clap: 13, Hats: 14, "Hat abierto": 15, Perc: 16,
+      Bajo: 2, Acordes: 3, "Melodía": 4, "Contramelodía": 5,
+    };
+    var percusion = { Kick: 1, Snare: 1, Clap: 1, Hats: 1, "Hat abierto": 1, Perc: 1 };
 
     return {
       titulo: (op.titulo || "Canción nueva") + " — " + gen.nombre,
@@ -256,6 +276,7 @@
       pistas: Object.keys(pistas).map(function (k) {
         return {
           nombre: k, canal: canales[k], instrumento: instrumentos[k],
+          percusion: !!percusion[k],
           notas: pistas[k].sort(function (a, b) { return a.inicio - b.inicio; }),
         };
       }).filter(function (p) { return p.notas.length; }),

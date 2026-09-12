@@ -248,7 +248,7 @@
   ["#cBpm", "#cTon", "#cComp"].forEach(function (s) { $(s).onchange = alCambiarConfig; });
 
   // Transportar mueve TODAS las notas de TODAS las pistas... menos la batería:
-  // en el canal 10 cada nota es un instrumento, no una altura. Subirle dos
+  // ahí la nota no es una altura sino el disparo del sample. Subirle dos
   // semitonos al bombo te lo convierte en otra cosa.
   $("#aplicarTrans").onclick = function () {
     var pasos = Number($("#cTrans").value) || 0;
@@ -257,7 +257,7 @@
     if (sonaba) parar();
     var movidas = 0;
     (pieza.pistas || []).forEach(function (p) {
-      if (p.canal === 10) return;
+      if (p.percusion || p.canal === 10) return;   // el 10 es de las piezas viejas
       (p.notas || []).forEach(function (n) {
         var v = numeroDe(n.nota);
         if (v === null) return;
@@ -282,7 +282,13 @@
   // con dos de más el archivo se lee como formato 0 de una sola pista.
   var PPQ = 480;
   function varLen(n) { var b = [n & 0x7F]; n >>= 7; while (n > 0) { b.unshift((n & 0x7F) | 0x80); n >>= 7; } return b; }
-  function texto(s) { return Array.from(new TextEncoder().encode(s)); }
+  // Los nombres adentro de un MIDI son de una sola letra por byte. Si mandamos
+  // "Melodía" en UTF-8, FL Studio lo lee byte por byte y muestra "MelodÃ­a".
+  // Se le sacan los acentos y queda legible en cualquier programa.
+  function sinAcentos(s) {
+    return String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^ -~]/g, "");
+  }
+  function texto(s) { return Array.from(new TextEncoder().encode(sinAcentos(s))); }
   function bloque(tipo, d) {
     var l = d.length;
     return texto(tipo).concat([(l >>> 24) & 255, (l >>> 16) & 255, (l >>> 8) & 255, l & 255], d);
