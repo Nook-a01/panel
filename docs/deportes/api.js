@@ -37,11 +37,18 @@ export async function marcadores(ruta, liga) {
     const c = e.competitions?.[0] || {};
     const cs = c.competitors || [];
     const est = e.status?.type?.name || "";
+    // `state` es el campo corto de ESPN: "pre", "in" o "post". Es el mismo que
+    // usa el aviso de goles (scripts/vivo.mjs), así que con esto la app y la
+    // notificación no pueden discrepar sobre si un partido se está jugando.
+    // El nombre largo queda de respaldo por si algún deporte no trae `state`.
+    const corto = e.status?.type?.state || "";
     salida[e.id] = {
       estado: est,
-      enVivo: /IN|HALFTIME|FIRST_HALF|SECOND_HALF|PERIOD|OVERTIME/.test(est) &&
-              !/FINAL|FULL_TIME|SCHEDULED|POSTPONED|CANCELED/.test(est),
-      terminado: /FINAL|FULL_TIME/.test(est),
+      enVivo: corto
+        ? corto === "in"
+        : (/IN|HALFTIME|FIRST_HALF|SECOND_HALF|PERIOD|OVERTIME/.test(est) &&
+           !/FINAL|FULL_TIME|SCHEDULED|POSTPONED|CANCELED/.test(est)),
+      terminado: corto ? corto === "post" : /FINAL|FULL_TIME/.test(est),
       detalle: e.status?.type?.detail || e.status?.type?.shortDetail || "",
       reloj: e.status?.displayClock || "",
       periodo: e.status?.period ?? null,

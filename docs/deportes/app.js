@@ -127,10 +127,17 @@ const extraDe      = id => (EXTRA?.feeds || {})[id] || {};
 const eventosDe = id =>
   (DATOS?.eventos || []).filter(e => !id || e.feedId === id);
 
-// Un evento sigue contando como "próximo" hasta 2 h después de empezar.
+// Un evento sigue contando como "próximo" hasta 2 h después de empezar, PERO
+// nunca se esconde uno que se está jugando.
+//
+// Con las 2 h peladas, un partido que arrancaba 21:30 desaparecía de la portada
+// a las 23:30 — con entretiempo y descuento, eso cae justo sobre el final, o
+// antes si el partido empieza tarde. Pasó con Boca–Central Córdoba del 11/9:
+// llegaban los avisos de los goles y la portada no mostraba nada.
 const futurosDe = id => {
   const ahora = Date.now();
-  return eventosDe(id).filter(e => new Date(e.inicio).getTime() > ahora - 2 * 3600e3);
+  return eventosDe(id).filter(e =>
+    estaEnCurso(e) || new Date(e.inicio).getTime() > ahora - 2 * 3600e3);
 };
 
 /* ================= CINTA DE TITULARES ================= */
