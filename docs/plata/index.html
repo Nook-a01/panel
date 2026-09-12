@@ -588,9 +588,10 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
             movimientos del panel privado donde los deja el lector de Mercado Pago.
           </p>
           <div class="frow">
-            <button class="btn primary" id="mpSync">Traer de Mercado Pago</button>
+            <button class="btn pri" id="mpSync">Traer de Mercado Pago</button>
             <button class="btn" id="mpOlvidar">Olvidar clave</button>
           </div>
+          <div id="mpCruces" hidden></div>
           <p style="margin:0; font-size:13px; color:var(--ink-3)">
             Para que haya datos nuevos, entrá a mercadopago.com.ar en la computadora con
             el lector instalado. Desde el celular solo se lee lo último que quedó guardado.
@@ -1682,9 +1683,84 @@ function respComoVengo(){
 }
 
 /* ---------- de la pregunta a la respuesta ---------- */
+// «Tengo 300 mil para todo el mes, ayudame con la compra»: acá el número es el
+// presupuesto, no una compra. Antes caía en respMeAlcanza, que lo tomaba como un
+// gasto puntual y contestaba «no te da» — la pregunta exactamente al revés.
+//
+// El reparto sale del peso que tuvo cada rubro en los meses anteriores. No se
+// inventan porcentajes: si no hay historial, se dice que no lo hay.
+function respPlanDelMes(monto){
+  const c = calc();
+  const total = monto != null ? monto : c.libre;
+
+  if(!(total > 0)){
+    return 'Decime con cuánto contás y te lo reparto, por ejemplo:\n' +
+      '«tengo 300 mil para todo el mes».' +
+      (c.comprometido > 0
+        ? '\n\nTe lo pregunto porque hoy la app no te ve nada libre: figuran ' +
+          plata(c.comprometido) + ' de fijos y cuotas sin pagar este mes. ' +
+          'Si ya los pagaste, marcalos en «Fijos y cuotas» y las cuentas cambian.'
+        : '');
+  }
+
+  const dias = Math.max(1, c.diasHasta);
+  const porDia = total / dias;
+  let out = 'Con ' + plata(total) + ' hasta el ' + fmtDay(c.refCobro) + ', que son ' + dias + ' días:\n\n' +
+    '· ' + plata(porDia) + ' por día\n' +
+    '· ' + plata(porDia * 7) + ' por semana\n';
+
+  const meses = mesesConDatos().filter(ym => ym < c.hoyYM).slice(-3);
+  const suma = {}; let base = 0;
+  meses.forEach(ym => {
+    const porCat = gastoPorCatDeMes(ym);
+    Object.keys(porCat).forEach(k => { suma[k] = (suma[k]||0) + porCat[k]; base += porCat[k]; });
+  });
+
+  if(base > 0){
+    out += '\nRepartido como venís gastando, según ' + meses.length +
+      (meses.length === 1 ? ' mes anterior' : ' meses anteriores') + ':\n';
+    Object.keys(suma)
+      .map(k => ({ nombre: catName(k), parte: suma[k] / base }))
+      .sort((a, b) => b.parte - a.parte)
+      .slice(0, 6)
+      .forEach(f => {
+        out += '· ' + f.nombre + ': ' + plata(total * f.parte) +
+               ' (' + Math.round(f.parte * 100) + '%)\n';
+      });
+  } else {
+    out += '\nNo tengo meses anteriores cargados, así que no puedo decirte cuánto ' +
+           'se te va en cada rubro. Con unos meses de movimientos, este reparto sale solo.\n';
+  }
+
+  if(c.ritmo > 0){
+    out += '\nVenís gastando ' + plata(c.ritmo) + ' por día: ' +
+      (c.ritmo > porDia
+        ? 'para que llegue tenés que bajar ' + plata(c.ritmo - porDia) + ' por día.'
+        : 'vas bien, con ' + plata(porDia - c.ritmo) + ' de margen por día.') + '\n';
+  }
+
+  if(c.comprometido > 0){
+    out += '\nOjo: esto es plata para el día a día. Aparte figuran ' + plata(c.comprometido) +
+      ' de fijos y cuotas sin pagar este mes' +
+      (c.vencido > 0 ? ', de los cuales ' + plata(c.vencido) + ' ya venció' : '') +
+      '. Si ya los pagaste, marcalos en «Fijos y cuotas».';
+  }
+
+  return out.trim();
+}
+
 function responder(pregunta){
   const t = String(pregunta||'').toLowerCase();
   const monto = montoDeTexto(t);
+
+  // Va antes que «¿me alcanza?» porque estas preguntas también dicen "comprar",
+  // pero el número que traen es lo que la persona TIENE, no lo que va a gastar.
+  const pidePlan = /repart|distribu|planea|planific|organiz|administr|estir|rend[ií]/.test(t) ||
+                   /compras? del mes|hacer la compra|super del mes|changuito/.test(t);
+  const esPresupuesto = monto != null &&
+    /\b(tengo|cuento con|dispongo|me quedan?|me sobran?)\b/.test(t) &&
+    /\b(mes|mensual|quincena|semana)\b/.test(t);
+  if(pidePlan || esPresupuesto) return respPlanDelMes(monto);
 
   if(/alcanz|puedo comprar|me da para|compro|comprar|gasto de|viable/.test(t))
     return respMeAlcanza(monto);
@@ -1704,6 +1780,7 @@ function responder(pregunta){
 
   return 'No te entendí. Probá con alguno de estos:\n\n' +
     '· ¿Cuánto puedo gastar?\n' +
+    '· Tengo 300 mil para todo el mes\n' +
     '· ¿Me alcanza para 150 mil?\n' +
     '· ¿En qué se me va la plata?\n' +
     '· ¿Qué me falta pagar?\n' +
@@ -1713,6 +1790,7 @@ function responder(pregunta){
 
 const SUGERENCIAS = [
   '¿Cuánto puedo gastar?',
+  '¿Cómo reparto la plata del mes?',
   '¿En qué se me va la plata?',
   '¿Qué me falta pagar?',
   '¿Cómo vengo este mes?',
@@ -1989,6 +2067,7 @@ function renderAjustes(){
         '<tr><td><span class="money">'+esc(r.pat)+'</span></td><td><span class="pill">'+esc(catName(r.catId))+'</span></td>'
         +'<td class="r"><button class="btn sm gh" data-delregla="'+(REGLAS_DEF.length+i)+'">✕</button></td></tr>').join('')+'</tbody></table></div>'
     : '<div class="empty">Cuando importes movimientos y corrijas una categoría, me la guardo acá para la próxima.</div>';
+  renderMpCruces();
   renderStoreInfo();
 }
 function renderStoreInfo(){
@@ -2114,6 +2193,7 @@ async function mpTraer(silencioso){
   marcarCambio();
   render();
   mpPintarEstado();
+  renderMpCruces();
 
   if(!silencioso){
     mpAviso(
@@ -2141,6 +2221,93 @@ function mpPintarEstado(){
   }
 }
 
+/* ---------- lo que ya pagaste con Mercado Pago ----------
+   Los fijos y las cuotas del mes se crean como «pendiente» y hay que marcarlos
+   a mano. Si los pagaste con Mercado Pago, la app baja tu saldo real Y además
+   sigue contando el fijo como deuda: te lo cuenta dos veces, y «podés gastar»
+   termina en un número que no es el tuyo.
+
+   Acá sólo se proponen los cruces; marcar queda en tus manos. Dar por pagado
+   un fijo que no lo está esconde una deuda de verdad, que es peor que el
+   problema que estamos arreglando. */
+const MP_DIAS_MARGEN = 7;
+
+function diasEntreISO(a, b){
+  return Math.round((parseISO(a).getTime() - parseISO(b).getTime()) / 86400000);
+}
+
+function cruzarConMP(){
+  const ym = todayISO().slice(0,7);
+  const delMes = movsMes(ym);
+  const pendientes = delMes.filter(m => m.tipo==='gasto' && !confirmado(m)
+    && (m.srcTipo==='fijo' || m.srcTipo==='cuota'));
+  const pagos = delMes.filter(m => m.tipo==='gasto' && m.srcTipo==='mp' && confirmado(m));
+  if(!pendientes.length || !pagos.length) return [];
+
+  const usados = new Set(), cruces = [];
+  pendientes.forEach(p => {
+    const monto = Number(p.monto)||0;
+    // Un servicio nunca sale igual dos meses seguidos: se tolera un 1%, con un
+    // piso de $500 para que los montos chicos no queden afuera por monedas.
+    const margen = Math.max(500, monto * 0.01);
+    let mejor = null;
+    pagos.forEach(g => {
+      if(usados.has(g.id)) return;
+      const dif = Math.abs((Number(g.monto)||0) - monto);
+      if(dif > margen) return;
+      const dias = Math.abs(diasEntreISO(g.fecha, p.fecha));
+      if(dias > MP_DIAS_MARGEN) return;
+      if(!mejor || dif < mejor.dif || (dif === mejor.dif && dias < mejor.dias))
+        mejor = {pago:g, dif, dias};
+    });
+    if(mejor){ usados.add(mejor.pago.id); cruces.push({fijo:p, pago:mejor.pago, dias:mejor.dias}); }
+  });
+  return cruces;
+}
+
+function renderMpCruces(){
+  const caja = $('#mpCruces'); if(!caja) return;
+  const cruces = cruzarConMP();
+  if(!cruces.length){ caja.hidden = true; caja.innerHTML = ''; return; }
+  caja.hidden = false;
+  const uno = cruces.length === 1;
+  caja.innerHTML =
+    '<div class="notice warn" style="margin:12px 0 10px">'
+      + (uno ? 'Hay 1 gasto fijo que figura sin pagar, pero en Mercado Pago aparece un pago que parece ser ese mismo.'
+             : 'Hay ' + cruces.length + ' gastos fijos que figuran sin pagar, pero en Mercado Pago aparecen pagos que parecen ser esos mismos.')
+      + ' Mientras sigan sin marcar, se te descuentan dos veces.</div>'
+    + '<div class="tablewrap"><table><thead><tr>'
+      // Los títulos son cortos a propósito: en el teléfono cada fila se apila y
+      // el título de la columna se repite al lado de cada dato. Uno largo se corta.
+      + '<th></th><th>Sin pagar</th><th>Pago encontrado</th><th class="r">Monto</th>'
+    + '</tr></thead><tbody>'
+    + cruces.map(c =>
+        '<tr>'
+        + '<td><input type="checkbox" data-cruce="'+esc(c.fijo.id)+'" checked style="width:16px;height:16px"></td>'
+        + '<td><div style="font-weight:500">'+esc(c.fijo.desc)+'</div>'
+          + '<span class="pill p-pend">'+fmtDay(c.fijo.fecha)+'</span></td>'
+        // Sólo la fecha: al lado está la del fijo, así que la diferencia se ve
+        // sola. Escribirla además desbordaba la fila en el teléfono.
+        + '<td><div>'+esc(c.pago.desc)+'</div>'
+          + '<span class="pill">'+fmtDay(c.pago.fecha)+'</span></td>'
+        + '<td class="r money">'+money(c.fijo.monto)+'</td>'
+        + '</tr>').join('')
+    + '</tbody></table></div>'
+    + '<div class="frow" style="margin-top:10px">'
+      + '<button class="btn pri" id="mpMarcar">Marcar como pagados</button>'
+    + '</div>';
+  etiquetarTablas();
+}
+
+function mpMarcarPagados(){
+  const ids = Array.from(document.querySelectorAll('#mpCruces input[data-cruce]:checked'))
+    .map(i => i.dataset.cruce);
+  if(!ids.length){ toast('No marcaste ninguno'); return; }
+  cambiar(()=> ids.forEach(id => { const m = S.movs.find(x => x.id === id); if(m) m.estado = 'ok'; }));
+  toast(ids.length === 1 ? 'Listo: 1 gasto marcado como pagado'
+                         : 'Listo: ' + ids.length + ' gastos marcados como pagados');
+}
+
 function mpConectar(){
   const inp = $('#mpClave');
   if(inp) inp.value = mpClave();
@@ -2149,6 +2316,11 @@ function mpConectar(){
   if(b1) b1.onclick = ()=>{ if(inp) mpGuardarClave(inp.value.trim()); mpTraer(false); };
   const b2 = $('#mpOlvidar');
   if(b2) b2.onclick = ()=>{ mpGuardarClave(''); if(inp) inp.value=''; mpPintarEstado(); };
+  // Delegado: la tabla de cruces se vuelve a dibujar entera en cada render.
+  const cajaCruces = $('#mpCruces');
+  if(cajaCruces) cajaCruces.addEventListener('click', e => {
+    if(e.target.id === 'mpMarcar') mpMarcarPagados();
+  });
   mpPintarEstado();
   // Al abrir la app, si ya hay clave, se trae lo último sin molestar.
   if(mpClave()) mpTraer(true);
