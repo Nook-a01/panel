@@ -1136,6 +1136,22 @@ nav{
 }
 .volver-panel:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
 
+/* El botón se aparta al bajar. Es fijo, así que si se queda quieto tapa
+   lo que haya debajo — y no es adorno lo que tapa: en Instagram cubría el
+   botón de elegir plataforma, que hay que poder tocar. Baja al desplazarse
+   hacia abajo y vuelve al subir, que es cuando lo estás buscando. */
+.volver-panel{
+  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+}
+.volver-panel.escondido{
+  transform:translateY(160%);
+  opacity:0;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+}
+
 body{
   padding-top:env(safe-area-inset-top);
   padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
@@ -1152,23 +1168,6 @@ body::before{
 /* La barra que queda pegada arriba tiene que frenar debajo del reloj,
    no en el borde de la pantalla. */
 nav{ top:env(safe-area-inset-top) }
-
-/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
-   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
-   Instagram cubría el botón de elegir plataforma, que hay que poder
-   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
-   cuando lo estás buscando. */
-.volver-panel{
-  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
-}
-.volver-panel.escondido{
-  transform:translateY(160%);
-  opacity:0;
-  pointer-events:none;
-}
-@media (prefers-reduced-motion:reduce){
-  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
-}
 
 /* ═══════════════════════════════════════════════════════════════
    TARJETAS DE ACORDES Y ESCALAS
