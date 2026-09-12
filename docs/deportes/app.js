@@ -569,7 +569,7 @@ function escudoRival(e, v) {
   return `<span class="escudo mini rival"><img src="${esc(logo)}" alt=""
     loading="lazy" decoding="async"
     onload="this.parentNode.classList.add('cargado')"
-    onerror="this.parentNode.remove()"><span class="emoji-resp">🛡️</span></span>`;
+    onerror="this.parentNode.classList.add('sin-img');this.remove()"><span class="emoji-resp">🛡️</span></span>`;
 }
 
 /* ---------- tabla ---------- */
@@ -1440,9 +1440,6 @@ async function verTorneo(ruta, liga) {
         </tr></thead><tbody>`;
         for (const f of g.filas) {
           // Resaltamos a los equipos que seguís.
-          const mio = (DATOS?.eventos || []).some(e =>
-            e.liga === liga && (e.local === f.equipo || e.visitante === f.equipo) &&
-            feedPorId(e.feedId));
           const esMio = misEquipos().some(n => f.equipo.includes(n));
           out += `<tr class="${esMio ? "mio" : ""}">
             <td class="num">${f.pos}</td>
@@ -1592,8 +1589,6 @@ async function verJugador(ruta, liga, id) {
 
 /* ================= INTERACCIÓN ================= */
 function conectar() {
-  $$("#vista .tarjeta").forEach(b => b.onclick = () => irA(b.dataset.id));
-
   // Abrir el detalle de un evento
   $$("#vista [data-ev]").forEach(b =>
     b.onclick = () => { location.hash = "#/e/" + encodeURIComponent(b.dataset.ev); });
