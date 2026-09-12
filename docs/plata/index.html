@@ -550,6 +550,7 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
 <section class="view" id="v-import">
   <div class="stack">
     <div class="notice info">Pegá el resumen de tu banco o tarjeta (o un CSV) y lo convierto en movimientos. Reconozco fecha, detalle y monto solo, y aprendo a qué categoría va cada comercio para la próxima vez.</div>
+    <div class="notice ok"><b>¿Un ticket de papel?</b> Sacale una foto, mantené el dedo apretado sobre la foto hasta que se pueda seleccionar el texto, copialo y pegalo acá. Saco el comercio, la fecha y el total. La foto no sale de tu teléfono: la lee él, no la app.</div>
     <div class="card">
       <div class="hd"><h3>Pegar movimientos</h3></div>
       <div class="bd stack">
@@ -2412,6 +2413,105 @@ function parseFecha(t, refYM){
   return y+'-'+String(mo).padStart(2,'0')+'-'+String(Math.min(d,31)).padStart(2,'0');
 }
 
+/* ---------- un ticket suelto ----------
+   El lector de arriba espera un resumen: cada línea con su fecha y su monto.
+   El texto de un ticket no es así — el comercio está arriba, la fecha en el
+   medio y el total abajo — y sin esto no reconocía nada.
+
+   Va pensado para que le pegues el texto que tu propio teléfono saca de una
+   foto (mantener apretado sobre la imagen y copiar). Así la foto nunca sale
+   del aparato y no hace falta ningún programa de terceros. */
+
+// Basura típica de un ticket que no es ni el comercio ni el total.
+const TICKET_RUIDO = /^(cuit|c\.u\.i\.t|iva|i\.v\.a|resp|responsable|ing(resos)? brutos|iibb|inicio de actividades|factura|ticket|comprobante|n[uú]mero|nro|caja|cajero|vendedor|terminal|lote|cup[oó]n|autorizaci[oó]n|tarjeta|visa|mastercard|cabal|maestro|efectivo|d[eé]bito|debito|cr[eé]dito|credito|gracias|vuelva|su compra|atendi[oó]|hora|fecha|subtotal|descuento|ahorro|art[ií]culos?|items?|cant|unit)\b/i;
+
+function montosDe(linea){
+  const vistos = [];
+  // Se piden separadores o decimales para no confundir un CUIT o un teléfono
+  // con plata: 20123456789 no es un importe, 12.345,67 sí.
+  const re = /\$?\s*\d{1,3}(?:[.,]\d{3})+(?:[.,]\d{1,2})?|\$\s*\d+(?:[.,]\d{1,2})?|\b\d+[.,]\d{2}\b/g;
+  let m;
+  while((m = re.exec(linea))){
+    const p = parseMonto(m[0]);
+    if(p && p.v > 0) vistos.push(p.v);
+  }
+  return vistos;
+}
+
+function leerTicket(txt){
+  const lineas = String(txt).split(/\r?\n/).map(l=>l.trim()).filter(Boolean);
+  if(!lineas.length) return [];
+
+  // El total: primero se busca una línea que lo diga con todas las letras.
+  // "Subtotal" no cuenta, y si hay varias gana la última, que es la de abajo.
+  let total = null;
+  for(const l of lineas){
+    if(!/\btotal\b/i.test(l) || /sub\s*total/i.test(l)) continue;
+    const v = montosDe(l);
+    if(v.length) total = Math.max(...v);
+  }
+  // Sin la palabra "total", el número más grande del ticket suele serlo.
+  if(total == null){
+    const todos = lineas.flatMap(montosDe);
+    if(!todos.length) return [];
+    total = Math.max(...todos);
+  }
+  if(!(total > 0)) return [];
+
+  const fecha = (function(){
+    // Los números de CUIT, Ingresos Brutos y factura tienen tramos que parecen
+    // fechas: en "901-123456-7" se lee "01-12" y el ticket terminaba en
+    // diciembre. Por eso se saltean esas líneas y se exige que la fecha no esté
+    // pegada a más dígitos.
+    const RE = /(^|[^\d])(\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[\/\-.]\d{1,2}(?:[\/\-.]\d{2,4})?)(?!\d)/;
+    for(const l of lineas){
+      if(TICKET_RUIDO.test(l)) continue;
+      const m = l.match(RE);
+      if(m){ const f = parseFecha(m[2], selYM); if(f) return f; }
+    }
+    return todayISO();
+  })();
+
+  // El comercio es la primera línea con letras que no sea un dato de la AFIP
+  // ni un importe suelto. Los tickets lo imprimen arriba de todo.
+  let desc = '';
+  for(const l of lineas){
+    if(l.length < 3 || l.length > 60) continue;
+    if(TICKET_RUIDO.test(l)) continue;
+    if(!/[a-záéíóúñ]{3}/i.test(l)) continue;
+    if(montosDe(l).length && !/[a-záéíóúñ]{4}/i.test(l.replace(/[\d.,$]/g,''))) continue;
+    desc = l.replace(/\s{2,}/g,' ').slice(0,60);
+    break;
+  }
+  if(!desc) desc = 'Ticket';
+
+  const catId = adivinarCat(desc, false);
+  const dup = S.movs.some(m => m.fecha===fecha && Math.abs((+m.monto||0)-total) < 0.5);
+  return [{ id:uid(), fecha, desc, monto:total, catId, sugerida:catId, tipo:'gasto',
+            medio:'saldo', estado:'ok', usar:!dup, dup }];
+}
+
+/* Decide si lo pegado es un resumen o un ticket.
+
+   No alcanza con probar el lector de resúmenes y, si no encuentra nada, pasar
+   al de tickets: con el texto de un ticket igual "encuentra" cosas, pero mal.
+   En una prueba leyó la hora "19:42" como $42 y el número de Ingresos Brutos
+   como un movimiento de $3.456.
+
+   La diferencia de fondo es la densidad: en un resumen casi todas las líneas
+   son movimientos; en un ticket son dos o tres sobre quince. */
+function leerImportado(txt){
+  const lineas = String(txt).split(/\r?\n/).filter(l=>l.trim().length>3).length;
+  const filas = leerTexto(txt);
+  // La proporción, no la cantidad: pegar dos movimientos sueltos sigue siendo
+  // un resumen, y un ticket de quince líneas con dos que parecen movimientos
+  // sigue siendo un ticket.
+  const esResumen = filas.length > 0 && filas.length >= lineas * 0.5;
+  if(esResumen) return filas;
+  const ticket = leerTicket(txt);
+  return ticket.length ? ticket : filas;
+}
+
 function adivinarCat(desc, esIngreso){
   const n = norm(desc), tipo = esIngreso?'ingreso':'gasto';
   for(let i=S.reglas.length-1;i>=0;i--){
@@ -2502,6 +2602,9 @@ function renderImport(){
       +'<td class="r money '+(esIng?'in':'out')+'">'+(esIng?'+':'−')+money(r.monto)+'</td></tr>';
   }).join('') + (impRows.length>MAX
     ? '<tr><td colspan="5" class="empty">y '+(impRows.length-MAX)+' movimientos más, que también se van a sumar.</td></tr>' : '');
+  // Las filas se dibujan acá, después del render general, así que hay que
+  // volver a etiquetarlas o en el teléfono quedan sin el nombre de la columna.
+  etiquetarTablas();
 }
 
 function confirmarImport(){
@@ -2657,14 +2760,16 @@ $('#addCuo').onclick = ()=>{
 }));
 
 $('#impParse').onclick = ()=>{
-  impRows = leerTexto($('#impText').value);
-  if(!impRows.length){ toast('No pude reconocer movimientos en ese texto'); }
+  impRows = leerImportado($('#impText').value);
+  if(!impRows.length){ toast('No pude reconocer movimientos ni un total en ese texto'); }
   renderImport();
 };
 $('#impFile').addEventListener('change', e=>{
   const f = e.target.files[0]; if(!f) return;
   const rd = new FileReader();
-  rd.onload = ()=>{ $('#impText').value = String(rd.result||''); impRows = leerTexto($('#impText').value); renderImport(); if(!impRows.length) toast('No pude reconocer movimientos en ese archivo'); };
+  rd.onload = ()=>{ const t = String(rd.result||''); $('#impText').value = t;
+    impRows = leerImportado(t);
+    renderImport(); if(!impRows.length) toast('No pude reconocer movimientos en ese archivo'); };
   rd.readAsText(f, 'utf-8'); e.target.value='';
 });
 $('#impTable').addEventListener('change', e=>{
