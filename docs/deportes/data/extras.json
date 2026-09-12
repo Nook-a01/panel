@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12T05:46:07.590Z",
+ "actualizado": "2026-09-12T10:43:58.867Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -959,9 +959,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -984,9 +983,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1045,9 +1043,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -2627,18 +2624,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "FIA boss pushing for engine rule changes to keep Fernando Alonso in F1: 'Needs to leave when he wants'",
+     "resumen": "FIA president Mohammed Ben Sulayem hinted he is pushing for Formula 1 engine rule changes which will help keep Fernando Alonso in the sport another year, saying it would be \"unacceptable\" for the Spanish legend to retire as things currently are.",
+     "fecha": "2026-09-12T10:08:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715258_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867163/fia-boss-pushing-engine-rule-changes-keep-fernando-alonso-f1-needs-leave-wants-spanish-grand-prix-madring-formula-1"
+    },
+    {
+     "titulo": "Max vs 100: When is Verstappen race, how to watch on Disney+, how it works, who's taking part?",
+     "resumen": "Four-time Formula 1 world champion Max Verstappen is taking on his next challenge -- which could be his most entertaining yet.",
+     "fecha": "2026-09-12T07:11:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0501/r1652101_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439341/verstappen-race-how-watch-disney+-how-works-taking-part"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-12T07:09:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Will Madring live up to reputation as F1 car killer? 'The most risky circuit of the calendar'",
      "resumen": "F1 got its first taste of the Spanish Grand Prix's brand-new Madring on Friday, and early impressions suggest it's going to take guts to get right.",
      "fecha": "2026-09-11T18:28:30Z",
      "imagen": "https://a.espncdn.com/photo/2026/0911/r1714988_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/49905766/will-spanish-grand-prix-madring-live-reputation-f1-car-killer-most-risky-circuit-calendar"
-    },
-    {
-     "titulo": "Spanish Grand Prix: Mercedes' Kimi Antonelli quickest in second practice, George Russell fifth",
-     "resumen": "George Russell was left trailing Kimi Antonelli in second practice for the Spanish Grand Prix -- as British rookie Arvid Lindblad crashed out at Formula 1's new \"risky\" and \"car-killer\" venue in Madrid.",
-     "fecha": "2026-09-11T17:05:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714916_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867133/mercedes-kimi-antonelli-quickest-second-practice-george-russell-fifth-spanish-grand-prix-madring-formula-1"
     },
     {
      "titulo": "Spanish Grand Prix 2026: Race start time in Madrid, how to watch, full schedule, predictions",
@@ -2653,20 +2664,6 @@
      "fecha": "2026-09-11T16:42:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/0911/r1714930_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49867235/spanish-grand-prix-2026-live-madrid-updates-results-analysis-commentary"
-    },
-    {
-     "titulo": "F2 car bursts into flames as 'risky' Madrid circuit debuts at Spanish GP",
-     "resumen": "A Formula 2 car burst into flames as danger concerns stalked the first running of the inaugural Spanish Grand Prix in Madrid.",
-     "fecha": "2026-09-11T10:46:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0911/r1714797_473x266_16-9.png",
-     "link": "https://www.espn.com/f1/story/_/id/49902064/f2-car-bursts-flames-risky-madrid-circuit-debuts-spanish-gp"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-09-11T07:37:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
     }
    ],
    "resultados": null,
