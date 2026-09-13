@@ -324,6 +324,10 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .blq-big{font-family:var(--f-display); font-weight:800; font-size:clamp(42px,11vw,66px); line-height:1.05; letter-spacing:-.03em; margin:4px 0 6px}
 .blq-s{font-size:14px}
 .blq-det{font-size:12.5px; margin-top:4px; opacity:.9}
+.saldo-hoy{display:flex; gap:8px; margin-top:12px; flex-wrap:wrap}
+.saldo-hoy input{flex:1 1 180px; max-width:260px; font-family:var(--f-mono); font-size:22px; padding:10px 12px}
+.blq-libre .saldo-hoy .btn{background:var(--on-accent); color:var(--accent); border-color:var(--on-accent); font-weight:700}
+.blq-libre .lnk{font-size:12.5px; margin-left:6px}
 .blq-pagos{background:var(--orange-soft); border-color:transparent; color:var(--orange-ink)}
 .blq-susc{background:var(--violet-soft); border-color:transparent; color:var(--violet-ink)}
 .blq-ahorro{background:var(--green-soft); border-color:transparent; color:var(--green-ink)}
@@ -1250,9 +1254,39 @@ function cuotasDelMes(ym){
 }
 
 /* ============================ render: hoy ============================ */
+// Si el saldo del que parte la cuenta tiene más de un día, lo libre sale de un
+// número viejo y puede estar muy lejos de la realidad. En ese caso no se
+// muestra: se pregunta cuánto tenés hoy.
+let pedirSaldo = false;
+function saldoViejo(){
+  const t = Number(S.cfg.corteEn) || parseISO(S.cfg.fechaCorte || '2000-01-01').getTime();
+  return Date.now() - t > 24*3600e3;
+}
+function guardarSaldoHoy(){
+  const inp = $('#hoySaldo');
+  const v = inp ? parseFloat(inp.value) : NaN;
+  if(!(v >= 0)){ toast('Escribí cuánto tenés hoy'); if(inp) inp.focus(); return; }
+  pedirSaldo = false;
+  cambiar(()=>{
+    S.cfg.saldoInicial = v;
+    S.cfg.fechaCorte   = todayISO();
+    S.cfg.corteEn      = Date.now();
+  });
+  toast('Listo');
+}
+
 function renderHoy(){
   const c = calc(), ap = apartados();
 
+  if(pedirSaldo || saldoViejo()){
+    $('#hoyLibre').classList.remove('neg');
+    $('#hoyLibreK').textContent = '¿Cuánto tenés hoy?';
+    $('#hoyLibreV').hidden = true;
+    $('#hoyLibreS').innerHTML = 'Sumá Mercado Pago, la Cuenta Digital y el efectivo. Con eso te digo cuánto podés gastar hasta que cobres.'
+      + '<div class="saldo-hoy"><input type="number" id="hoySaldo" inputmode="numeric" min="0" step="100" placeholder="0" aria-label="Cuánto tenés hoy">'
+      + '<button class="btn" id="hoySaldoOk">Listo</button></div>';
+  } else {
+  $('#hoyLibreV').hidden = false;
   $('#hoyLibre').classList.toggle('neg', c.libre < 0);
   $('#hoyLibreK').textContent = c.libre >= 0 ? 'Libre para vos hasta que cobres' : 'Te falta hasta que cobres';
   $('#hoyLibreV').textContent = money(Math.abs(c.libre));
@@ -1264,7 +1298,9 @@ function renderHoy(){
   if(c.comprometido) det.push('pagos '+money(c.comprometido));
   if(c.apartado) det.push('apartado '+money(c.apartado));
   if(c.reserva) det.push('ahorro '+money(c.reserva));
-  $('#hoyLibreS').innerHTML = esc(partes.join(' · ')) + '<div class="blq-det">'+esc(det.join(' · '))+'</div>';
+  $('#hoyLibreS').innerHTML = esc(partes.join(' · ')) + '<div class="blq-det">'+esc(det.join(' · '))
+    + '<button class="lnk" id="hoySaldoCorregir">corregir</button></div>';
+  }
 
   // Todo lo de antes del cobro y dos semanas más, para ver lo que se viene
   // apenas cobrás (el alquiler, por ejemplo).
@@ -2258,11 +2294,13 @@ async function mpTraer(silencioso){
     nuevos++;
   });
 
-  // El saldo informado por MP manda sobre el punto de partida cargado a mano.
-  if(d.saldo != null && Number.isFinite(Number(d.saldo))){
+  // El saldo leído de MP pisa al punto de partida sólo si es más nuevo: lo que
+  // escribiste a mano hoy vale más que una lectura de hace días.
+  const tLectura = d.actualizado ? new Date(d.actualizado).getTime() : Date.now();
+  if(d.saldo != null && Number.isFinite(Number(d.saldo)) && tLectura > (Number(S.cfg.corteEn)||0)){
     S.cfg.saldoInicial = Number(d.saldo);
     S.cfg.fechaCorte   = hoy;
-    S.cfg.corteEn      = d.actualizado ? new Date(d.actualizado).getTime() : Date.now();
+    S.cfg.corteEn      = tLectura;
   }
 
   S.mp = {
@@ -2884,6 +2922,14 @@ $('#fijosLista').addEventListener('change', e=>{
     }
   });
   toast('Actualizado');
+});
+document.addEventListener('click', e=>{
+  const id = e.target && e.target.id;
+  if(id === 'hoySaldoOk') guardarSaldoHoy();
+  else if(id === 'hoySaldoCorregir'){ pedirSaldo = true; renderHoy(); const i = $('#hoySaldo'); if(i) i.focus(); }
+});
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Enter' && e.target && e.target.id === 'hoySaldo'){ e.preventDefault(); guardarSaldoHoy(); }
 });
 document.addEventListener('change', e=>{
   if(e.target.id !== 'hoyMeta') return;
