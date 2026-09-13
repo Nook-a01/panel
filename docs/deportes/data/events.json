@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-13T10:15:52.512Z",
+ "actualizado": "2026-09-13T14:25:42.067Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -60,7 +60,7 @@
    "ruta": null,
    "liga": null,
    "total": 26,
-   "proximos": 20
+   "proximos": 19
   },
   {
    "id": "ufc",
@@ -697,7 +697,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null,
    "horaConfirmada": true,
    "id": "f1-2026-14",

@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-13T10:15:52.512Z",
+ "actualizado": "2026-09-13T14:25:42.067Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -291,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -616,9 +616,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -973,9 +972,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1010,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1048,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1073,9 +1069,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1123,9 +1118,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1574,9 +1568,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1599,9 +1592,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1612,9 +1604,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1625,9 +1616,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1686,9 +1676,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -2622,6 +2611,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Spanish Grand Prix LIVE! F1 Madrid race updates, commentary and results",
+     "resumen": "The first-ever Spanish Grand Prix at the Madring is under way, and you can follow all the action live with ESPN.",
+     "fecha": "2026-09-13T14:21:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715855_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867240/spanish-grand-prix-2026-live-madrid-updates-results-analysis-commentary"
+    },
+    {
+     "titulo": "Lewis Hamilton suffers early retirement at Spanish GP after Ferrari brake issues",
+     "resumen": "Lewis Hamilton's Spanish Grand Prix lasted just six laps before he was forced to retire with Ferrari brake issues.",
+     "fecha": "2026-09-13T14:01:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715862_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49926922/lewis-hamilton-suffers-early-retirement-spanish-grand-prix"
+    },
+    {
+     "titulo": "Max vs 100: When is Verstappen race, how to watch on Disney+, how it works, who's taking part?",
+     "resumen": "Four-time Formula 1 world champion Max Verstappen is taking on his next challenge -- which could be his most entertaining yet.",
+     "fecha": "2026-09-13T11:45:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0501/r1652101_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439341/verstappen-race-how-watch-disney+-how-works-taking-part"
+    },
+    {
+     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
+     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
+     "fecha": "2026-09-13T11:44:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
+    },
+    {
      "titulo": "Max Verstappen says F1 should consult drivers on new circuits amid Spanish Grand Prix concerns",
      "resumen": "Max Verstappen has called on Formula 1 to consult drivers when designing new circuits amid concerns there will be no overtaking at Sunday's inaugural race at the all-new Madring.",
      "fecha": "2026-09-12T18:19:15Z",
@@ -2634,34 +2651,6 @@
      "fecha": "2026-09-12T18:07:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/0912/r1715415_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49867175/kimi-antonelli-jokes-opening-stages-spanish-gp-madrid-driving-grandmother-madring-formula-1"
-    },
-    {
-     "titulo": "Carlos Sainz hit with three-place grid penalty for home Spanish Grand Prix",
-     "resumen": "Carlos Sainz has been dealt a major blow at his home race after he was handed a three-place grid penalty for the Spanish Grand Prix.",
-     "fecha": "2026-09-12T17:02:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715398_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867172/carlos-sainz-hit-three-place-grid-penalty-home-spanish-grand-prix-madring-formula-1"
-    },
-    {
-     "titulo": "Lando Norris labels 'surprise' Spanish Grand Prix pole 'one of the best laps I've done ever'",
-     "resumen": "Lando Norris called his scintillating Spanish Grand Prix pole lap one of the best he's ever done, even if he was convinced in the moment he was going to finish with the car in the wall.",
-     "fecha": "2026-09-12T16:45:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715371_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867169/lando-norris-labels-surprise-spanish-grand-prix-pole-one-best-laps-done-ever-spanish-grand-prix-madring-formula-1"
-    },
-    {
-     "titulo": "Spanish Grand Prix 2026: Race start time in Madrid, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is heading to Madrid for this year's Spanish Grand Prix where a brand-new circuit will provide drivers with a fresh challenge to mark the end of the European races.",
-     "fecha": "2026-09-12T16:23:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0907/r1712694_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49700467/spanish-grand-prix-2026-circuit-madring-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "McLaren's Lando Norris pips Kimi Antonelli to take thrilling pole for Spanish Grand Prix",
-     "resumen": "Lando Norris came from nowhere to edge out championship leader Kimi Antonelli and take a brilliant pole position for the Spanish Grand Prix.",
-     "fecha": "2026-09-12T15:39:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715363_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867167/mclarens-lando-norris-pips-kimi-antonelli-take-thrilling-pole-spanish-grand-prix-spanish-grand-prix-madring-formula-1"
     }
    ],
    "resultados": null,
