@@ -8,7 +8,7 @@ Sin datos personales: este repo es público.
 | App | Dónde | Estado |
 |---|---|---|
 | Deportes | `docs/deportes/` | Andando. Marcador en vivo por ESPN + aviso push que se actualiza solo. |
-| Plata | `docs/plata/` | Andando. Responsive arreglado, historial arreglado, sección Consultas contesta sin pagar nada. |
+| Plata | `docs/plata/` | Andando. Rehecha en 3 pestañas (Hoy, Movimientos, Fijos) y un engranaje con el resto: plata libre hasta el próximo cobro, pagos con su fecha, suscripciones, fijos cada 15 días o cada 2/4 meses y plata apartada para un gasto. |
 | Campamento | `docs/campamento/` | Andando. Diseño rehecho; el día actual es el primero sin marcar, no la fecha del calendario. |
 | Instagram | `docs/instagram/` | Andando. `resultados.html` es el panel del teléfono: 6 pestañas, fotos por proxy, de a 20 perfiles. |
 | Estudio | `docs/musica/` + `app-escritorio/` | Anda. Arma una canción entera (120 compases, 8 pistas, 4 géneros), la suena, la manda a FL Studio por MIDI y la baja en `.mid`. Lee los plugins y los samples de la máquina. Cada canción entra como versión aparte. La conversación va por Claude, no hay modelo adentro. |

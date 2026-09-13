@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Plata en Mano</title>
-<meta name="theme-color" content="#0A7A6C">
+<meta name="theme-color" content="#1D5FD8">
 <link rel="apple-touch-icon" href="../iconos/panel-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Plata">
@@ -19,36 +19,45 @@
 
 <style>
 :root{
-  --bg:#EBEDEF; --surface:#FFFFFF; --surface-2:#F4F6F8; --surface-3:#E9ECEF;
-  --ink:#141C24; --ink-2:#4B5966; --ink-3:#77848F;
-  --line:#DBE0E5; --line-2:#C4CBD3;
-  --accent:#0A7A6C; --accent-ink:#075E53; --accent-soft:#DCEEEB;
-  --warn:#B3801A; --warn-soft:#F7EDD8;
-  --crit:#B4304C; --crit-soft:#F9E2E6;
-  --shadow:0 1px 2px rgba(20,28,36,.05), 0 10px 28px -18px rgba(20,28,36,.35);
-  --radius:12px;
+  --bg:#EDF2FA; --surface:#FFFFFF; --surface-2:#F4F7FC; --surface-3:#E5EBF5;
+  --ink:#0E1A2B; --ink-2:#435268; --ink-3:#66758D;
+  --line:#DAE2EE; --line-2:#C0CBDC;
+  --accent:#1D5FD8; --accent-ink:#123F94; --accent-soft:#DFE9FC; --on-accent:#FFFFFF;
+  --warn:#A95A06; --warn-soft:#FCEBD5;
+  --crit:#C0304A; --crit-soft:#FBE0E5;
+  --orange-soft:#FFE8D4; --orange-ink:#6E3405;
+  --violet-soft:#ECE5FD; --violet-ink:#43208A;
+  --green-soft:#DAF3E3; --green-ink:#115230;
+  --shadow:0 1px 2px rgba(14,26,43,.05), 0 10px 26px -18px rgba(14,26,43,.35);
+  --radius:14px;
   --f-display:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#10161B; --surface:#1A222A; --surface-2:#212B34; --surface-3:#2A3540;
-    --ink:#E7EDF2; --ink-2:#A5B2BE; --ink-3:#7D8B98;
-    --line:#2B3641; --line-2:#3B4a56;
-    --accent:#43BCA9; --accent-ink:#6FD2C2; --accent-soft:#123B36;
-    --warn:#D9A445; --warn-soft:#3A2F17;
-    --crit:#E56B80; --crit-soft:#3C1E25;
+    --bg:#0B111C; --surface:#131B29; --surface-2:#192335; --surface-3:#212D42;
+    --ink:#E6EDF7; --ink-2:#A8B6CA; --ink-3:#8190A7;
+    --line:#233046; --line-2:#334260;
+    --accent:#5E93FF; --accent-ink:#A3C2FF; --accent-soft:#18284A; --on-accent:#07101F;
+    --warn:#F0A04B; --warn-soft:#3A2712;
+    --crit:#FF6F85; --crit-soft:#3C1920;
+    --orange-soft:#3A2414; --orange-ink:#FFC596;
+    --violet-soft:#271F45; --violet-ink:#D0BDFF;
+    --green-soft:#11301F; --green-ink:#9DE4BA;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#10161B; --surface:#1A222A; --surface-2:#212B34; --surface-3:#2A3540;
-  --ink:#E7EDF2; --ink-2:#A5B2BE; --ink-3:#7D8B98;
-  --line:#2B3641; --line-2:#3B4a56;
-  --accent:#43BCA9; --accent-ink:#6FD2C2; --accent-soft:#123B36;
-  --warn:#D9A445; --warn-soft:#3A2F17;
-  --crit:#E56B80; --crit-soft:#3C1E25;
+  --bg:#0B111C; --surface:#131B29; --surface-2:#192335; --surface-3:#212D42;
+  --ink:#E6EDF7; --ink-2:#A8B6CA; --ink-3:#8190A7;
+  --line:#233046; --line-2:#334260;
+  --accent:#5E93FF; --accent-ink:#A3C2FF; --accent-soft:#18284A; --on-accent:#07101F;
+  --warn:#F0A04B; --warn-soft:#3A2712;
+  --crit:#FF6F85; --crit-soft:#3C1920;
+  --orange-soft:#3A2414; --orange-ink:#FFC596;
+  --violet-soft:#271F45; --violet-ink:#D0BDFF;
+  --green-soft:#11301F; --green-ink:#9DE4BA;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.8);
 }
 
@@ -283,6 +292,77 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   .chat-sug{ flex-direction:column }
   .chat-sug .btn{ width:100% }
 }
+/* ======================= diseño azul ======================= */
+[hidden]{display:none !important}
+.brand .mark{color:var(--accent)}
+nav.tabs{display:flex; gap:6px; margin-top:10px; padding-bottom:10px; overflow:visible}
+nav.tabs button{background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:8px 16px; color:var(--ink-2); font-weight:600; font-size:14px}
+nav.tabs button:hover{color:var(--ink); border-color:var(--line-2)}
+nav.tabs button[aria-current="true"]{background:var(--accent); border-color:var(--accent); color:var(--on-accent)}
+nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-height:1}
+.subtabs{display:flex; gap:6px; overflow-x:auto; padding:0 0 10px; scrollbar-width:none}
+.subtabs::-webkit-scrollbar{display:none}
+.subtabs button{border:1px solid var(--line); background:var(--surface); border-radius:999px; padding:6px 12px; font-size:13px; color:var(--ink-2); white-space:nowrap}
+.subtabs button[aria-current="true"]{background:var(--accent-soft); color:var(--accent-ink); border-color:transparent; font-weight:600}
+.btn.pri, :root .btn.pri, :root:not([data-theme="light"]) .btn.pri, :root[data-theme="dark"] .btn.pri{color:var(--on-accent)}
+.seg button[aria-pressed="true"], :root[data-theme="dark"] .seg button[aria-pressed="true"]{color:var(--on-accent)}
+.fab, :root[data-theme="dark"] .fab{color:var(--on-accent); box-shadow:0 10px 24px -10px rgba(29,95,216,.75)}
+.chat-msg.mio, :root[data-theme="dark"] .chat-msg.mio, :root:not([data-theme="light"]) .chat-msg.mio{color:var(--on-accent)}
+
+/* ---------- hoy ---------- */
+.hoy{display:flex; flex-direction:column; gap:14px}
+.hoy-grid{display:grid; gap:14px; grid-template-columns:minmax(0,1fr)}
+@media(min-width:880px){ .hoy-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); align-items:start} }
+.hoy-col{display:flex; flex-direction:column; gap:14px}
+.blq{border-radius:18px; padding:16px 18px; background:var(--surface); border:1px solid var(--line)}
+.blq-hd{display:flex; align-items:baseline; gap:8px; margin-bottom:6px; flex-wrap:wrap}
+.blq-hd h3{font-size:15.5px; font-weight:700}
+.blq-hint{margin-left:auto; font-size:12.5px}
+.blq-libre{background:var(--accent); border-color:var(--accent); color:var(--on-accent); padding:20px 22px}
+.blq-libre.neg{background:var(--crit); border-color:var(--crit)}
+.blq-k{font-size:14px; font-weight:600}
+.blq-big{font-family:var(--f-display); font-weight:800; font-size:clamp(42px,11vw,66px); line-height:1.05; letter-spacing:-.03em; margin:4px 0 6px}
+.blq-s{font-size:14px}
+.blq-det{font-size:12.5px; margin-top:4px; opacity:.9}
+.blq-pagos{background:var(--orange-soft); border-color:transparent; color:var(--orange-ink)}
+.blq-susc{background:var(--violet-soft); border-color:transparent; color:var(--violet-ink)}
+.blq-ahorro{background:var(--green-soft); border-color:transparent; color:var(--green-ink)}
+.blq-apart{background:var(--surface-2)}
+.fila{display:flex; align-items:center; gap:10px; padding:9px 0; border-top:1px solid color-mix(in srgb, currentColor 16%, transparent)}
+.fila:first-child{border-top:0}
+.fila.tenue{opacity:.62}
+.f-fecha{font-size:13px; min-width:42px}
+.fila.tarde .f-fecha{color:var(--crit); font-weight:600}
+.f-que{flex:1; min-width:0}
+.f-que b{display:block; font-weight:600}
+.f-que small{display:block; font-size:12px}
+.f-monto{font-weight:600; white-space:nowrap}
+.fila .btn.sm{border-color:currentColor; background:transparent; color:inherit; font-weight:600}
+.vacio{font-size:13.5px; padding:6px 0}
+.lnk{background:none; border:0; padding:0; color:inherit; font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}
+.blq .kv{border-bottom-color:color-mix(in srgb, currentColor 18%, transparent); align-items:center; gap:10px}
+.blq .kv:last-child{border-bottom:0}
+.blq .kv b{color:inherit}
+.blq .kv.total span{font-weight:600}
+.blq .kv.total b{font-size:18px}
+.blq .kv b.neg{color:var(--crit)}
+.blq .kv.meta label{font-weight:600}
+.blq .kv.meta input{max-width:150px; text-align:right; font-family:var(--f-mono); padding:6px 9px}
+
+/* ---------- fijos ---------- */
+.fgrupo + .fgrupo{margin-top:18px}
+.fgrupo h4{font-family:var(--f-body); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent-ink); margin:0 0 2px}
+.frec{display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; padding:10px 0; border-top:1px solid var(--line)}
+.frec.tenue{opacity:.55}
+.frec-nom{flex:1 1 180px; min-width:0}
+.frec-nom b{display:block; font-weight:600}
+.frec-nom small{color:var(--ink-3); font-size:12px}
+.frec select, .frec input{width:auto; padding:6px 8px; font-size:13.5px}
+.frec input.monto{width:118px; text-align:right; font-family:var(--f-mono)}
+.frec .dia{display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--ink-3)}
+.frec .dia input[type=number]:not(.monto){width:62px}
+.check{display:inline-flex; align-items:center; gap:6px; font-size:13.5px; white-space:nowrap; cursor:pointer}
+.check input{width:16px; height:16px; margin:0}
 </style>
 
 <div class="app">
@@ -292,7 +372,7 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
       <span class="mark">Plata en Mano</span>
       <span class="sub">Control de gastos</span>
     </div>
-    <div class="monthnav">
+    <div class="monthnav" id="mNav">
       <button id="mPrev" title="Mes anterior" aria-label="Mes anterior">‹</button>
       <span class="label" id="mLabel" title="Volver al mes actual" style="cursor:pointer">—</span>
       <button id="mNext" title="Mes siguiente" aria-label="Mes siguiente">›</button>
@@ -300,10 +380,13 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
     <span class="chip" id="saveChip"><span class="dot"></span><span id="saveTxt">Listo</span></span>
   </div>
   <nav class="tabs" id="tabs">
-    <button data-v="resumen" aria-current="true">Resumen</button>
+    <button data-v="hoy" aria-current="true">Hoy</button>
     <button data-v="movs">Movimientos</button>
+    <button data-v="fijos">Fijos</button>
+    <button data-v="mas" class="tab-mas" aria-label="Más opciones" title="Presupuesto, plan, consultas, historial, importar y ajustes">⚙</button>
+  </nav>
+  <nav class="subtabs" id="subtabs" hidden>
     <button data-v="presu">Presupuesto</button>
-    <button data-v="fijos">Fijos y cuotas</button>
     <button data-v="plan">Plan</button>
     <button data-v="consultas">Consultas</button>
     <button data-v="historial">Historial</button>
@@ -312,44 +395,31 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
   </nav>
 </header>
 
-<!-- ===================== RESUMEN ===================== -->
-<section class="view on" id="v-resumen">
-  <div class="stack">
-    <div class="hero" id="hero">
-      <div class="eyebrow" id="heroEyebrow">Podés gastar</div>
-      <div class="big num pos" id="heroBig">$0</div>
-      <div class="note" id="heroNote"></div>
-      <div class="perday" id="perday"></div>
+<!-- ===================== HOY ===================== -->
+<section class="view on" id="v-hoy">
+  <div class="hoy">
+    <div class="blq blq-libre" id="hoyLibre">
+      <div class="blq-k" id="hoyLibreK">Libre para vos hasta que cobres</div>
+      <div class="blq-big num" id="hoyLibreV">$0</div>
+      <div class="blq-s" id="hoyLibreS"></div>
     </div>
-
-    <div class="tiles" id="tiles"></div>
-
-    <div class="split">
-      <div class="stack">
-        <div class="card">
-          <div class="hd"><h3>Ritmo de gasto del mes</h3><span class="hint" id="chartHint"></span></div>
-          <div class="bd" style="position:relative">
-            <svg class="chart" id="chart" viewBox="0 0 640 190" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gasto acumulado del mes comparado con el ritmo que te deja llegar a fin de mes"></svg>
-            <div class="tip" id="chartTip" hidden></div>
-            <div class="legend">
-              <span><i style="background:var(--accent)"></i>Gastado de verdad</span>
-              <span><i style="background:var(--line-2)"></i>Ritmo para llegar justo</span>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="hd"><h3>Presupuesto por categoría</h3><span class="hint" id="presuHint"></span></div>
-          <div class="bd" id="budList"></div>
-        </div>
+    <div class="hoy-grid">
+      <div class="blq blq-pagos">
+        <div class="blq-hd"><h3>Qué pagás y cuándo</h3><span class="blq-hint" id="hoyPagosHint"></span></div>
+        <div id="hoyPagos"></div>
       </div>
-      <div class="stack">
-        <div class="card">
-          <div class="hd"><h3>Pendientes del mes</h3><span class="hint" id="pendHint"></span></div>
-          <div class="bd" id="pendList"></div>
+      <div class="hoy-col">
+        <div class="blq blq-ahorro">
+          <div class="blq-hd"><h3>Ahorro</h3><span class="blq-hint" id="hoyAhorroHint"></span></div>
+          <div id="hoyAhorro"></div>
         </div>
-        <div class="card">
-          <div class="hd"><h3>Últimos movimientos</h3><a class="hint" href="#" id="verTodos" style="color:var(--accent)">Ver todos</a></div>
-          <div class="bd" id="lastMovs"></div>
+        <div class="blq blq-susc">
+          <div class="blq-hd"><h3>Suscripciones</h3><span class="blq-hint" id="hoySuscHint"></span></div>
+          <div id="hoySusc"></div>
+        </div>
+        <div class="blq blq-apart" id="hoyApartCard" hidden>
+          <div class="blq-hd"><h3>Apartado</h3><span class="blq-hint">no cuenta como plata libre</span></div>
+          <div id="hoyApart"></div>
         </div>
       </div>
     </div>
@@ -396,18 +466,30 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
 <!-- ===================== FIJOS ===================== -->
 <section class="view" id="v-fijos">
   <div class="stack">
-    <div class="notice info">Lo que cargues acá se genera solo todos los meses. Aparece como <b>pendiente</b> hasta que lo marcás pagado o cobrado, y ya se descuenta de lo que podés gastar.</div>
+    <div class="notice info"><span>Lo que cargues acá se agenda solo y aparece en <b>Hoy</b> hasta que lo marcás pagado. Cuando algo aumente, cambiá el monto en su renglón: los próximos pagos se actualizan solos.</span></div>
     <div class="card">
-      <div class="hd"><h3>Ingresos y gastos fijos</h3><span class="hint" id="fijosHint"></span></div>
+      <div class="hd"><h3>Lo que se repite</h3><span class="hint" id="fijosHint"></span></div>
+      <div class="bd" id="fijosLista"></div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>Agregar</h3></div>
       <div class="bd">
-        <div class="tablewrap"><table id="recTable"><thead><tr><th>Concepto</th><th>Tipo</th><th>Día</th><th>Categoría</th><th class="r">Monto</th><th></th></tr></thead><tbody></tbody></table></div>
-        <div class="frow" style="margin-top:14px">
-          <div><label class="fl" for="rNombre">Concepto</label><input type="text" id="rNombre" placeholder="Sueldo, alquiler, Netflix…"></div>
-          <div><label class="fl" for="rTipo">Tipo</label><select id="rTipo"><option value="gasto">Gasto fijo</option><option value="ingreso">Ingreso fijo</option></select></div>
-          <div><label class="fl" for="rDia">Día del mes</label><input type="number" id="rDia" min="1" max="31" value="1"></div>
+        <div class="frow">
+          <div><label class="fl" for="rNombre">Concepto</label><input type="text" id="rNombre" placeholder="Alquiler, psicólogo, sueldo…"></div>
+          <div><label class="fl" for="rTipo">Tipo</label><select id="rTipo"><option value="gasto">Gasto</option><option value="ingreso">Ingreso</option></select></div>
+          <div><label class="fl" for="rFrec">Cada cuánto</label><select id="rFrec"><option value="mensual">Cada mes</option><option value="quincenal">Cada 15 días</option><option value="bimestral">Cada 2 meses</option><option value="cuatrimestral">Cada 4 meses</option></select></div>
+          <div id="rDiaWrap"><label class="fl" for="rDia">Día del mes</label><input type="number" id="rDia" min="1" max="31" value="1"></div>
+          <div id="rDesdeWrap" hidden><label class="fl" for="rDesde">Próxima vez</label><input type="date" id="rDesde"></div>
           <div><label class="fl" for="rCat">Categoría</label><select id="rCat"></select></div>
           <div><label class="fl" for="rMonto">Monto</label><input type="number" id="rMonto" min="0" step="100" placeholder="0"></div>
-          <div style="display:flex; align-items:flex-end"><button class="btn pri" id="addRec" style="width:100%">Agregar</button></div>
+        </div>
+        <div class="btnrow" style="margin-top:12px">
+          <label class="check" id="rSuscWrap"><input type="checkbox" id="rSusc"> Es una suscripción</label>
+          <span class="btnrow" id="rApartWrap" hidden>
+            <label class="check"><input type="checkbox" id="rApart"> Es plata apartada para</label>
+            <select id="rApartPara" style="width:auto"></select>
+          </span>
+          <button class="btn pri" id="addRec" style="margin-left:auto">Agregar</button>
         </div>
       </div>
     </div>
@@ -608,10 +690,11 @@ dialog .dbd{padding:14px 18px 18px; display:flex; flex-direction:column; gap:12p
           </div>
           <p style="margin:0; font-size:13px; color:var(--ink-3)">Sumá todo: caja de ahorro, billetera virtual y efectivo. Desde esa fecha en adelante cuento los movimientos que cargues.</p>
           <div class="frow">
-            <div><label class="fl" for="sCobro">Día que cobrás</label><input type="number" id="sCobro" min="1" max="31" value="1"></div>
-            <div><label class="fl" for="sReserva">Ahorro intocable por mes</label><input type="number" id="sReserva" min="0" step="1000" placeholder="0"></div>
+            <div><label class="fl" for="sCobro">Cuándo cobrás</label><input type="number" id="sCobro" min="1" max="31" value="1"></div>
+            <div><label class="fl" for="sCobroTipo">Ese número es</label><select id="sCobroTipo"><option value="dia">El día del mes</option><option value="habil">El día hábil del mes</option></select></div>
+            <div><label class="fl" for="sReserva">Meta de ahorro por mes</label><input type="number" id="sReserva" min="0" step="1000" placeholder="0"></div>
           </div>
-          <p style="margin:0; font-size:13px; color:var(--ink-3)">El ahorro intocable se aparta antes de calcular cuánto podés gastar.</p>
+          <p style="margin:0; font-size:13px; color:var(--ink-3)">Si cobrás en los primeros 5 días hábiles, poné 5 y elegí «El día hábil del mes». La meta de ahorro se aparta antes de calcular cuánto te queda libre.</p>
         </div>
       </div>
       <div class="card">
@@ -745,7 +828,7 @@ function stateVacio(){
   const byName = n => (cats.find(c=>c.nombre===n)||{}).id;
   return {
     v:1, updatedAt:new Date().toISOString(),
-    cfg:{ saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0 },
+    cfg:{ saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia' },
     cats, recs:[], cuotas:[], movs:[],
     reglas: REGLAS_DEF.map(r=>({pat:r[0], catId:byName(r[1])})).filter(r=>r.catId),
     gen:{}
@@ -753,7 +836,7 @@ function stateVacio(){
 }
 let S = stateVacio();
 let selYM = ymNow();
-let vista = 'resumen';
+let vista = 'hoy';
 
 function cat(id){ return S.cats.find(c=>c.id===id) || null; }
 function catName(id){ const c=cat(id); return c?c.nombre:'Sin categoría'; }
@@ -798,7 +881,7 @@ function merge(a,b){
 }
 function sane(st){
   if(!st || typeof st!=='object' || !Array.isArray(st.cats)) return null;
-  st.cfg = Object.assign({saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0}, st.cfg||{});
+  st.cfg = Object.assign({saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia'}, st.cfg||{});
   ['recs','cuotas','movs','reglas','metas'].forEach(k=>{ if(!Array.isArray(st[k])) st[k]=[]; });
   if(!st.gen || typeof st.gen!=='object') st.gen={};
   return st;
@@ -893,30 +976,47 @@ async function guardarNube(){
 window.addEventListener('beforeunload', e=>{ if(dirty && apiFilesOk!==false){ e.preventDefault(); e.returnValue=''; } });
 
 /* ============================ generación automática ============================ */
-function keyGen(srcId, ym){ return srcId+'@'+ym; }
+function keyGen(srcId, clave){ return srcId+'@'+clave; }
+
+// Las fechas en que toca un fijo dentro de un rango. Los mensuales conservan la
+// clave id@AAAA-MM de siempre para no duplicar lo que ya estaba generado; los de
+// cada 15 días usan la fecha, porque en un mismo mes pueden caer dos veces.
+function fechasDeRec(r, desdeISO, hastaISO){
+  const frec = r.frec || 'mensual', out = [];
+  if(frec === 'quincenal'){
+    const t = parseISO(r.desde || desdeISO), lim = parseISO(desdeISO);
+    while(t < lim) t.setDate(t.getDate() + 14);
+    for(; iso(t) <= hastaISO; t.setDate(t.getDate() + 14)) out.push({fecha: iso(t), clave: iso(t)});
+    return out;
+  }
+  const paso = frec === 'bimestral' ? 2 : (frec === 'cuatrimestral' ? 4 : 1);
+  const primero = ymOf(desdeISO);
+  let ym = paso === 1 ? primero : ymOf(r.desde || desdeISO);
+  while(ymDiff(primero, ym) > 0) ym = ymAdd(ym, paso);
+  for(; ymDiff(ymOf(hastaISO), ym) >= 0; ym = ymAdd(ym, paso)) out.push({fecha: dayOfMonth(ym, r.dia||1), clave: ym});
+  return out;
+}
 
 function generar(){
   const hoyYM = ymNow();
   let desde = ymOf(S.cfg.fechaCorte) || hoyYM;
   if(ymDiff(hoyYM, desde) > 24) desde = ymAdd(hoyYM, -24);
-  const hasta = ymAdd(hoyYM, 3);
-  const meses = [];
-  for(let m=desde; ymDiff(hasta,m)>=0; m=ymAdd(m,1)) meses.push(m);
+  const hastaYM = ymAdd(hoyYM, 3);
+  const desdeISO = desde + '-01', hastaISO = dayOfMonth(hastaYM, daysInMonth(hastaYM));
   let creados = 0;
 
   const existentes = new Set(S.movs.filter(m=>m.src).map(m=>m.src));
 
   S.recs.filter(r=>r.activo!==false).forEach(r=>{
-    meses.forEach(ym=>{
-      const k = keyGen(r.id, ym);
+    fechasDeRec(r, desdeISO, hastaISO).forEach(({fecha, clave})=>{
+      const k = keyGen(r.id, clave);
       if(existentes.has(k)) return;
       if(S.gen[k]) return;                       // ya generado y borrado a mano
-      const fecha = dayOfMonth(ym, r.dia||1);
       if(fecha < S.cfg.fechaCorte) return;
       S.movs.push({
         id:uid(), fecha, tipo:r.tipo, monto:Number(r.monto)||0, catId:r.catId,
         desc:r.nombre, src:k, srcTipo:'fijo',
-        estado: (ym < hoyYM ? 'ok' : 'pend')
+        estado: (ymOf(fecha) < hoyYM ? 'ok' : 'pend')
       });
       S.gen[k]=1; creados++;
     });
@@ -926,7 +1026,7 @@ function generar(){
     const total = Math.max(1, c.total|0);
     for(let i=0;i<total;i++){
       const ym = ymAdd(c.desde, i);
-      if(ymDiff(ymAdd(hoyYM,3), ym) < 0) break;
+      if(ymDiff(hastaYM, ym) < 0) break;
       const k = keyGen(c.id, ym);
       if(existentes.has(k) || S.gen[k]) continue;
       const fecha = dayOfMonth(ym, c.dia||10);
@@ -947,6 +1047,25 @@ function movsMes(ym){ return S.movs.filter(m=> ymOf(m.fecha)===ym); }
 function esGasto(m){ return m.tipo==='gasto'; }
 function confirmado(m){ return m.estado!=='pend'; }
 
+// El N° día hábil del mes (lunes a viernes). Los feriados no se descuentan: si
+// hay uno antes, el cobro real cae un día después del que muestra la app.
+function nHabil(ym, n){
+  let c = 0;
+  for(let dd=1; dd<=daysInMonth(ym); dd++){
+    const f = dayOfMonth(ym, dd), w = parseISO(f).getDay();
+    if(w!==0 && w!==6 && ++c === n) return f;
+  }
+  return dayOfMonth(ym, daysInMonth(ym));
+}
+function cobroDelMes(ym){
+  const n = Math.min(31, Math.max(1, S.cfg.diaCobro||1));
+  return S.cfg.cobroTipo === 'habil' ? nHabil(ym, Math.min(n, 23)) : dayOfMonth(ym, n);
+}
+function proximoCobro(hoy){
+  const ym = hoy.slice(0,7), este = cobroDelMes(ym);
+  return este > hoy ? este : cobroDelMes(ymAdd(ym, 1));
+}
+
 function calc(){
   const hoy = todayISO(), hoyYM = hoy.slice(0,7);
   // Sin fecha de corte hay que contar TODO, no nada. Antes el respaldo era `hoy`,
@@ -956,41 +1075,51 @@ function calc(){
 
   // saldo real de hoy: solo lo que efectivamente entra y sale de la cuenta
   let saldo = Number(S.cfg.saldoInicial)||0;
+  // Lo que marcaste pagado a mano después de fijar el saldo todavía no está en
+  // ese saldo, aunque sea del mismo día: si no, pagar hoy no bajaba nada.
+  const corteEn = Number(S.cfg.corteEn) || parseISO(corte).getTime();
   S.movs.forEach(m=>{
     if(!confirmado(m)) return;
-    if(m.fecha <= corte) return;
     if(m.fecha > hoy) return;
+    if(m.fecha <= corte && !(Number(m.pagadoEn) > corteEn)) return;
     if(esTarjeta(m)) return;                       // la tarjeta no toca el saldo hoy
     saldo += (m.tipo==='ingreso' ? 1 : -1) * (Number(m.monto)||0);
   });
 
-  // compromisos y cobros pendientes del mes en curso
-  let comprometido=0, porCobrar=0, vencido=0, tarjetaMes=0, inversionMes=0;
-  movsMes(hoyYM).forEach(m=>{
+  // Lo pendiente cuenta hasta el próximo cobro, no hasta fin de mes: si cobrás el
+  // 5, lo que vence el 2 del mes que viene también sale de esta plata.
+  const refCobro = proximoCobro(hoy);
+  const diasHasta = Math.max(1, diasEntreISO(refCobro, hoy));
+  const ap = apartados();
+  const inicioMes = hoyYM + '-01';
+
+  let comprometido=0, porCobrar=0, vencido=0, pendCubierto=0, tarjetaMes=0, inversionMes=0;
+  S.movs.forEach(m=>{
     const v = Number(m.monto)||0;
     if(confirmado(m)){
+      if(ymOf(m.fecha) !== hoyYM) return;
       if(m.tipo==='gasto' && esTarjeta(m)) tarjetaMes += v;
       if(m.tipo==='gasto' && esNoGasto(m.catId) && !esTarjeta(m)) inversionMes += v;
       return;
     }
-    if(m.tipo==='gasto'){ if(esTarjeta(m)){ tarjetaMes += v; return; } comprometido += v; if(m.fecha<=hoy) vencido += v; }
-    else porCobrar += v;
+    if(m.fecha < inicioMes || m.fecha > refCobro) return;
+    if(m.tipo==='gasto'){
+      if(esTarjeta(m)){ if(ymOf(m.fecha)===hoyYM) tarjetaMes += v; return; }
+      // Lo que se paga con plata apartada no sale de lo libre mientras alcance.
+      if(ap.cubiertos.has(recDeMov(m))){ pendCubierto += v; return; }
+      comprometido += v; if(m.fecha<=hoy) vencido += v;
+    }
+    else if(!ap.ingresos.has(recDeMov(m))) porCobrar += v;
   });
 
   const reserva = Number(S.cfg.reserva)||0;
-  const libre = saldo - comprometido - reserva;
+  const apartado = ap.total;
+  const faltaApartado = Math.max(0, pendCubierto - apartado);
+  const libre = saldo - comprometido - reserva - apartado - faltaApartado;
   const libreConIngresos = libre + porCobrar;
 
-  // días hasta el próximo cobro
-  const diaCobro = clampDay(hoyYM, S.cfg.diaCobro||1);
-  const d = parseISO(hoy).getDate();
-  let diasHasta, refCobro;
-  if(diaCobro > d){ diasHasta = diaCobro - d; refCobro = dayOfMonth(hoyYM, diaCobro); }
-  else { const sig = ymAdd(hoyYM,1); const dc = clampDay(sig, S.cfg.diaCobro||1);
-         diasHasta = (daysInMonth(hoyYM)-d) + dc; refCobro = dayOfMonth(sig, dc); }
-  diasHasta = Math.max(1, diasHasta);
-
   // ritmo de gasto variable del mes en curso
+  const d = parseISO(hoy).getDate();
   const variables = movsMes(hoyYM).filter(m=> cuentaComoGasto(m) && confirmado(m) && !esTarjeta(m)
                     && m.srcTipo!=='fijo' && m.srcTipo!=='cuota' && m.fecha<=hoy);
   const gastadoVar = variables.reduce((a,m)=>a+(Number(m.monto)||0),0);
@@ -1001,7 +1130,7 @@ function calc(){
 
   return {hoy, hoyYM, saldo, comprometido, porCobrar, vencido, reserva, libre, libreConIngresos,
           diasHasta, refCobro, ritmo, gastadoVar, diasRestMes, proyeccion, diaMes:d,
-          tarjetaMes, inversionMes};
+          tarjetaMes, inversionMes, apartado, pendCubierto, faltaApartado};
 }
 
 function presupuestoMes(ym){
@@ -1059,219 +1188,141 @@ function gastoPorCatDeMes(ym){
   return o;
 }
 
-/* ============================ render: resumen ============================ */
-function renderResumen(){
-  const c = calc();
-  const esActual = selYM === c.hoyYM;
-  const hero=$('#hero'), big=$('#heroBig'), note=$('#heroNote'), eyeb=$('#heroEyebrow'), pd=$('#perday');
+/* ============================ fijos: ayudas ============================ */
+function recDeMov(m){ return (m && m.srcTipo==='fijo' && m.src) ? String(m.src).split('@')[0] : null; }
 
-  if(esActual){
-    const v = c.libre;
-    eyeb.textContent = v>=0 ? 'Podés gastar' : 'Te estás pasando por';
-    big.textContent = money(Math.abs(v));
-    big.className = 'big num ' + (v>=0?'pos':'neg');
-    hero.className = 'hero' + (v<0 ? ' is-crit' : (c.libre < c.ritmo*c.diasHasta ? ' is-warn':''));
-    const partes = [];
-    partes.push('Tenés <b>'+money(c.saldo)+'</b> en total.');
-    if(c.comprometido>0) partes.push('Le resto <b>'+money(c.comprometido)+'</b> de fijos y cuotas que faltan pagar este mes.');
-    if(c.reserva>0) partes.push('Aparto <b>'+money(c.reserva)+'</b> de ahorro.');
-    if(c.porCobrar>0) partes.push('Además te falta cobrar <b>'+money(c.porCobrar)+'</b>: con eso llegás a <b>'+money(c.libreConIngresos)+'</b>.');
-    if(c.tarjetaMes>0) partes.push('Aparte hubo <b>'+money(c.tarjetaMes)+'</b> en las tarjetas de crédito que pagan tus viejos: no salen de tu bolsillo y no entran en la cuenta.');
-    note.innerHTML = partes.join(' ');
-
-    const porDia = c.libre / c.diasHasta;
-    const alcanza = c.ritmo>0 ? Math.floor(c.libre / c.ritmo) : null;
-    pd.hidden = false;
-    pd.innerHTML =
-      tilePD(money(Math.max(0,porDia)), 'por día hasta el '+fmtDay(c.refCobro)+' ('+c.diasHasta+' '+(c.diasHasta===1?'día':'días')+')') +
-      tilePD(money(c.ritmo), 'venís gastando por día este mes') +
-      tilePD(alcanza===null? '—' : (alcanza>180?'+180':alcanza)+' días', 'te dura a este ritmo');
+// Plata apartada: un ingreso que no es libre porque ya tiene destino (la que
+// llega para pagar el psicólogo, por ejemplo). Lo apartado se descuenta de lo
+// libre, y el gasto que cubre no, mientras alcance.
+function apartados(){
+  const recs = S.recs.filter(r=> r.tipo==='ingreso' && r.aparta && r.activo!==false);
+  return {
+    recs,
+    total: recs.reduce((a,r)=> a + Math.max(0, Number(r.apartado)||0), 0),
+    cubiertos: new Set(recs.map(r=> r.aparta)),
+    ingresos: new Set(recs.map(r=> r.id))
+  };
+}
+function moverApartado(m){
+  const rid = recDeMov(m); if(!rid) return;
+  const v = Number(m.monto)||0;
+  if(m.tipo==='gasto'){
+    const a = S.recs.find(r=> r.tipo==='ingreso' && r.aparta===rid);
+    if(a) a.apartado = Math.max(0, (Number(a.apartado)||0) - v);
   } else {
-    const futuro = ymDiff(selYM, c.hoyYM) > 0;
-    const r = futuro ? resumenMes(selYM, true) : resumenDeMes(selYM, false);
-    eyeb.textContent = futuro ? 'Previsto para '+ymLabel(selYM) : 'Cerraste '+ymLabel(selYM)+' con';
-    big.textContent = (r.neto>=0?'':'−') + money(Math.abs(r.neto));
-    big.className = 'big num ' + (r.neto>=0?'pos':'neg');
-    hero.className = 'hero' + (r.neto<0?' is-warn':'');
-    const extra = (r.tar>0 ? ' Más <b>'+money(r.tar)+'</b> que pagaron tus viejos.' : '') + (r.inv>0 ? ' Y <b>'+money(r.inv)+'</b> que moviste a inversión.' : '');
-    note.innerHTML = (futuro
-      ? 'Con los fijos y cuotas que ya tenés cargados: entran <b>'+money(r.ing)+'</b> y salen <b>'+money(r.gas)+'</b>.'
-      : 'Entraron <b>'+money(r.ing)+'</b> y salieron <b>'+money(r.gas)+'</b> del saldo.') + extra;
-    pd.hidden = true; pd.innerHTML='';
+    const a = S.recs.find(r=> r.id===rid && r.aparta);
+    if(a) a.apartado = (Number(a.apartado)||0) + v;
   }
-
-  // tiles
-  const p = presupuestoMes(selYM);
-  const proyClass = c.proyeccion < 0 ? 'neg' : (c.proyeccion < c.reserva ? 'warn':'pos');
-  $('#tiles').innerHTML = [
-    tile('Saldo hoy', money(c.saldo), 'plata tuya disponible', ''),
-    tile('Comprometido', money(c.comprometido), c.vencido>0 ? money(c.vencido)+' ya venció' : 'fijos y cuotas sin pagar', c.vencido>0?'warn':''),
-    tile('Lo pagan tus viejos', money(c.tarjetaMes), 'tarjetas de crédito', ''),
-    tile('Falta cobrar', money(c.porCobrar), 'ingresos fijos del mes', c.porCobrar>0?'pos':''),
-    tile('Proyección a fin de mes', money(c.proyeccion), 'si seguís a este ritmo', proyClass)
-  ].join('');
-
-  renderChart(selYM, p);
-  renderBudList(p);
-  renderPendientes();
-  renderLastMovs();
-}
-function tilePD(v,k){ return '<div class="pd"><div class="v num">'+esc(v)+'</div><div class="k">'+esc(k)+'</div></div>'; }
-function tile(k,v,s,cls){ return '<div class="tile"><div class="k">'+esc(k)+'</div><div class="v '+cls+'">'+esc(v)+'</div><div class="s">'+esc(s)+'</div></div>'; }
-
-/* ---------- gráfico de ritmo ---------- */
-let chartState = null;
-function renderChart(ym, p){
-  const svg = $('#chart');
-  const W = Math.max(320, Math.round(svg.clientWidth || 640)), H = 190;
-  const PL = 52, PR = 12, PT = 12, PB = 24;
-  svg.setAttribute('viewBox', '0 0 '+W+' '+H);
-  const dim = daysInMonth(ym);
-  const hoyYM = ymNow(), diaHoy = parseISO(todayISO()).getDate();
-  const hasta = (ym===hoyYM) ? diaHoy : (ym<hoyYM ? dim : 0);
-
-  const porDia = new Array(dim+1).fill(0);
-  movsMes(ym).filter(m=> cuentaComoGasto(m) && confirmado(m)).forEach(m=>{
-    const d = parseISO(m.fecha).getDate(); if(d>=1&&d<=dim) porDia[d]+= (+m.monto||0);
-  });
-  const acum=[0]; for(let i=1;i<=dim;i++) acum[i]=acum[i-1]+porDia[i];
-
-  const objetivo = p.topeTotal;
-  const maxY = Math.max(objetivo, acum[hasta||dim]||0, 1) * 1.08;
-  const x = d => PL + (W-PL-PR) * (dim<=1?0:(d-1)/(dim-1));
-  const y = v => H-PB - (H-PB-PT) * (v/maxY);
-  chartState = {ym, dim, hasta, acum, objetivo, x, y, W, H, PL, PR, PT, PB, porDia};
-
-  let g='';
-  for(let i=0;i<=3;i++){
-    const v = maxY*i/3, yy=y(v);
-    g += '<line class="grid-l" x1="'+PL+'" y1="'+yy.toFixed(1)+'" x2="'+(W-PR)+'" y2="'+yy.toFixed(1)+'"/>';
-    g += '<text class="axis-t" x="'+(PL-7)+'" y="'+(yy+3.5).toFixed(1)+'" text-anchor="end">'+kFmt(v)+'</text>';
-  }
-  [1, Math.round(dim/2), dim].forEach(d=>{
-    g += '<text class="axis-t" x="'+x(d).toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle">'+d+'</text>';
-  });
-  if(objetivo>0) g += '<path class="ideal" d="M'+x(1).toFixed(1)+','+y(0).toFixed(1)+' L'+x(dim).toFixed(1)+','+y(objetivo).toFixed(1)+'"/>';
-
-  if(hasta>=1){
-    let d='M'+x(1).toFixed(1)+','+y(acum[1]).toFixed(1);
-    for(let i=2;i<=hasta;i++) d+=' L'+x(i).toFixed(1)+','+y(acum[i]).toFixed(1);
-    g += '<path class="realfill" d="'+d+' L'+x(hasta).toFixed(1)+','+y(0).toFixed(1)+' L'+x(1).toFixed(1)+','+y(0).toFixed(1)+' Z"/>';
-    g += '<path class="real" d="'+d+'"/>';
-    g += '<circle class="endpt" cx="'+x(hasta).toFixed(1)+'" cy="'+y(acum[hasta]).toFixed(1)+'" r="4.5"/>';
-  }
-  g += '<line class="cross" id="chartCross" x1="0" y1="'+PT+'" x2="0" y2="'+(H-PB)+'" style="display:none"/>';
-  g += '<circle class="endpt" id="chartDot" r="4" style="display:none"/>';
-  g += '<rect class="hot" id="chartHot" x="'+PL+'" y="0" width="'+(W-PL-PR)+'" height="'+H+'"/>';
-  svg.innerHTML = g;
-
-  const gastado = acum[hasta||dim]||0;
-  const ideal = objetivo>0 ? objetivo*((hasta||dim)/dim) : 0;
-  let txt = money(gastado)+' gastados';
-  if(objetivo>0){
-    const dif = gastado - ideal;
-    txt += dif>0 ? ' \u00b7 '+money(dif)+' arriba del ritmo' : ' \u00b7 '+money(-dif)+' abajo del ritmo';
-  }
-  $('#chartHint').textContent = txt;
 }
 
-function chartHover(ev){
-  const st = chartState; const svg=$('#chart'), tip=$('#chartTip');
-  if(!st || !st.hasta){ return; }
-  const r = svg.getBoundingClientRect();
-  const px = (ev.clientX - r.left) * (st.W / r.width);
-  let d = Math.round(1 + (px - st.PL) / Math.max(1,(st.W-st.PL-st.PR)) * (st.dim-1));
-  d = Math.min(st.hasta, Math.max(1, d));
-  const cx = st.x(d), cy = st.y(st.acum[d]);
-  const cross=$('#chartCross'), dot=$('#chartDot');
-  if(!cross||!dot) return;
-  cross.setAttribute('x1',cx); cross.setAttribute('x2',cx); cross.style.display='';
-  dot.setAttribute('cx',cx); dot.setAttribute('cy',cy); dot.style.display='';
-  const ideal = st.objetivo>0 ? st.objetivo*(d/st.dim) : 0;
-  const dif = st.acum[d]-ideal;
-  tip.hidden=false;
-  tip.innerHTML = '<div style="color:var(--ink-3)">'+d+' de '+MESES[+st.ym.slice(5,7)-1]+'</div>'
-    + '<div>Acumulado <b>'+money(st.acum[d])+'</b></div>'
-    + (st.porDia[d] ? '<div style="color:var(--ink-3)">ese día: '+money(st.porDia[d])+'</div>' : '')
-    + (st.objetivo>0 ? '<div style="color:'+(dif>0?'var(--crit)':'var(--accent)')+'">'+(dif>0?'+':'')+money(dif)+' vs. ritmo</div>' : '');
-  const left = cx * (r.width / st.W);
-  tip.style.left = Math.min(r.width-8, Math.max(8, left))+'px';
-  tip.style.top  = Math.max(28, cy * (r.height / st.H) - 10)+'px';
-}
-function chartOut(){
-  const cross=$('#chartCross'), dot=$('#chartDot');
-  if(cross) cross.style.display='none'; if(dot) dot.style.display='none';
-  $('#chartTip').hidden = true;
-}
-$('#chart').addEventListener('pointermove', chartHover);
-$('#chart').addEventListener('pointerleave', chartOut);
-let rsT=null;
-window.addEventListener('resize', ()=>{ clearTimeout(rsT); rsT=setTimeout(()=>{ if(vista==='resumen') renderChart(selYM, presupuestoMes(selYM)); }, 160); });
-
-function kFmt(v){
-  v = Math.round(v);
-  if(Math.abs(v)>=1000000) return (v/1000000).toFixed(1).replace('.',',')+'M';
-  if(Math.abs(v)>=1000) return Math.round(v/1000)+'k';
-  return String(v);
-}
-
-/* ---------- presupuesto por categoría ---------- */
-function renderBudList(p){
-  const filas = p.filas.filter(f=> f.tope>0 || f.gastado>0)
-    .sort((a,b)=> (b.tope? b.gastado/b.tope : 0) - (a.tope? a.gastado/a.tope : 0) || b.gastado-a.gastado);
-  if(!filas.length){
-    $('#budList').innerHTML = '<div class="empty">Sin topes cargados todavía. Poné cuánto querés gastar por rubro en <b>Presupuesto</b> y esta sección se llena sola.</div>';
-    $('#presuHint').textContent=''; return;
-  }
-  $('#budList').innerHTML = filas.map(f=>{
-    const pct = f.tope>0 ? Math.min(100, f.gastado/f.tope*100) : 0;
-    const cls = !f.tope ? '' : (f.gastado>f.tope ? 'crit' : (pct>=80?'warn':''));
-    const rest = f.tope - f.gastado;
-    const meta = f.tope>0
-      ? (rest>=0 ? 'te quedan '+money(rest) : 'te pasaste '+money(-rest))
-      : 'sin tope · poné uno en Presupuesto';
-    return '<div class="budrow">'
-      +'<div class="nm">'+esc(f.cat.nombre)+'</div>'
-      +'<div class="amt">'+money(f.gastado)+(f.tope? ' <span style="color:var(--ink-3)">/ '+money(f.tope)+'</span>':'')+'</div>'
-      +(f.tope? '<div class="barwrap"><div class="bar"><i class="'+cls+'" style="width:'+pct.toFixed(1)+'%"></i></div></div>' : '')
-      +'<div class="meta">'+esc(meta)+'</div>'
-      +'</div>';
-  }).join('');
-  $('#presuHint').textContent = p.topeTotal? money(p.gastadoTotal)+' de '+money(p.topeTotal) : money(p.gastadoTotal)+' gastados';
-}
-
-/* ---------- pendientes ---------- */
-function renderPendientes(){
+// Cuando cambia un fijo, lo agendado que no se pagó tiene que seguirlo. Si cambia
+// sólo el monto se corrige en el lugar; si cambia cuándo toca, se borra lo
+// pendiente y generar() lo vuelve a armar con las fechas nuevas.
+function reprogramarRec(r, soloMonto){
   const hoy = todayISO();
-  const pend = movsMes(selYM).filter(m=>!confirmado(m)).sort((a,b)=> a.fecha.localeCompare(b.fecha));
-  $('#pendHint').textContent = pend.length? pend.length+' sin confirmar' : 'todo al día';
-  if(!pend.length){ $('#pendList').innerHTML='<div class="empty">No queda nada pendiente en '+esc(ymLabel(selYM))+'.</div>'; return; }
-  $('#pendList').innerHTML = '<div class="tablewrap"><table><tbody>'+ pend.map(m=>{
-    const late = m.fecha <= hoy;
-    const pill = m.tipo==='ingreso'
-      ? '<span class="pill '+(late?'p-pend':'')+'">'+(late?'a cobrar':'cobra el '+fmtDay(m.fecha))+'</span>'
-      : '<span class="pill '+(late?'p-late':'p-pend')+'">'+(late?'venció el '+fmtDay(m.fecha):'vence el '+fmtDay(m.fecha))+'</span>';
-    return '<tr><td><div style="font-weight:500">'+esc(m.desc||catName(m.catId))+'</div><div style="margin-top:3px">'+pill+'</div></td>'
-      +'<td class="r money '+(m.tipo==='ingreso'?'in':'out')+'">'+(m.tipo==='ingreso'?'+':'−')+money(m.monto)+'</td>'
-      +'<td class="r"><button class="btn sm pri" data-ok="'+m.id+'">'+(m.tipo==='ingreso'?'Cobrado':'Pagado')+'</button></td></tr>';
-  }).join('') + '</tbody></table></div>';
-}
-
-/* ---------- últimos movimientos ---------- */
-function renderLastMovs(){
-  const ms = movsMes(selYM).filter(confirmado).sort((a,b)=> b.fecha.localeCompare(a.fecha) || (b.id>a.id?1:-1)).slice(0,8);
-  if(!ms.length){
-    $('#lastMovs').innerHTML = histDe(selYM)
-      ? '<div class="empty">De '+esc(ymLabel(selYM))+' tengo los totales por categoría, pero no el detalle movimiento por movimiento.</div>'
-      : '<div class="empty">Nada cargado en '+esc(ymLabel(selYM))+' todavía.</div>';
+  const afectados = S.movs.filter(m=> recDeMov(m)===r.id && !confirmado(m) && m.fecha >= hoy);
+  if(soloMonto){
+    afectados.forEach(m=>{ m.monto = Number(r.monto)||0; m.desc = r.nombre; m.catId = r.catId; });
     return;
   }
-  $('#lastMovs').innerHTML = '<div class="tablewrap"><table><tbody>'+ ms.map(m=>
-    '<tr><td class="money" style="width:44px;color:var(--ink-3)">'+fmtDay(m.fecha)+'</td>'
-    +'<td><div style="font-weight:500">'+esc(m.desc||catName(m.catId))+'</div><div style="font-size:12px;color:var(--ink-3)">'+esc(catName(m.catId))+'</div></td>'
-    +'<td class="r money '+(m.tipo==='ingreso'?'in':'out')+'">'+(m.tipo==='ingreso'?'+':'−')+money(m.monto)+'</td></tr>'
-  ).join('')+'</tbody></table></div>';
+  afectados.forEach(m=>{ delete S.gen[m.src]; });
+  const ids = new Set(afectados.map(m=> m.id));
+  S.movs = S.movs.filter(m=> !ids.has(m.id));
 }
+
+function equivMensual(r){
+  const m = Number(r.monto)||0, f = r.frec || 'mensual';
+  if(f==='quincenal') return m * 26 / 12;
+  if(f==='bimestral') return m / 2;
+  if(f==='cuatrimestral') return m / 4;
+  return m;
+}
+function frecTexto(r){
+  const f = r.frec || 'mensual';
+  if(f==='quincenal') return 'cada 15 días';
+  if(f==='bimestral') return 'cada 2 meses · día '+(r.dia||1);
+  if(f==='cuatrimestral') return 'cada 4 meses · día '+(r.dia||1);
+  return 'día '+(r.dia||1);
+}
+function cuotasDelMes(ym){
+  return S.cuotas.filter(c=>{ const i = ymDiff(ym, c.desde); return i >= 0 && i < (c.total|0); })
+                 .reduce((a,c)=> a + (Number(c.monto)||0), 0);
+}
+
+/* ============================ render: hoy ============================ */
+function renderHoy(){
+  const c = calc(), ap = apartados();
+
+  $('#hoyLibre').classList.toggle('neg', c.libre < 0);
+  $('#hoyLibreK').textContent = c.libre >= 0 ? 'Libre para vos hasta que cobres' : 'Te falta hasta que cobres';
+  $('#hoyLibreV').textContent = money(Math.abs(c.libre));
+  const partes = [];
+  if(c.libre > 0) partes.push('≈ '+money(c.libre / c.diasHasta)+' por día');
+  partes.push('faltan '+c.diasHasta+(c.diasHasta===1 ? ' día' : ' días'));
+  partes.push('cobrás el '+fmtDay(c.refCobro));
+  const det = ['tenés '+money(c.saldo)];
+  if(c.comprometido) det.push('pagos '+money(c.comprometido));
+  if(c.apartado) det.push('apartado '+money(c.apartado));
+  if(c.reserva) det.push('ahorro '+money(c.reserva));
+  $('#hoyLibreS').innerHTML = esc(partes.join(' · ')) + '<div class="blq-det">'+esc(det.join(' · '))+'</div>';
+
+  // Todo lo de antes del cobro y dos semanas más, para ver lo que se viene
+  // apenas cobrás (el alquiler, por ejemplo).
+  const hoy = c.hoy;
+  const hasta = iso(new Date(parseISO(c.refCobro).getTime() + 15*86400000));
+  const pend = S.movs.filter(m=> !confirmado(m) && m.tipo==='gasto' && !esTarjeta(m)
+                              && m.fecha >= c.hoyYM+'-01' && m.fecha <= hasta)
+                     .sort((a,b)=> a.fecha.localeCompare(b.fecha));
+  $('#hoyPagosHint').textContent = c.comprometido ? money(c.comprometido)+' antes de cobrar' : '';
+  $('#hoyPagos').innerHTML = pend.length ? pend.map(m=>{
+    const tarde = m.fecha < hoy, despues = m.fecha > c.refCobro;
+    const cubre = ap.recs.find(r=> r.aparta === recDeMov(m));
+    const alcanza = !cubre || (Number(cubre.apartado)||0) >= (Number(m.monto)||0);
+    const nota = cubre ? 'sale de '+cubre.nombre+(alcanza ? '' : ' · hoy no alcanza lo apartado')
+                       : (despues ? 'después de cobrar' : (tarde ? 'ya venció' : (m.fecha===hoy ? 'hoy' : '')));
+    return '<div class="fila'+(despues?' tenue':'')+(tarde?' tarde':'')+'">'
+      +'<div class="f-fecha num">'+fmtDay(m.fecha)+'</div>'
+      +'<div class="f-que"><b>'+esc(m.desc || catName(m.catId))+'</b>'+(nota ? '<small>'+esc(nota)+'</small>' : '')+'</div>'
+      +'<div class="f-monto num">'+money(m.monto)+'</div>'
+      +'<button class="btn sm pagar" data-ok="'+m.id+'" aria-label="Marcar pagado: '+esc(m.desc || catName(m.catId))+'"><span>Pagado</span></button></div>';
+  }).join('') : '<div class="vacio">No tenés pagos agendados. Cargalos en <button class="lnk" data-ir="fijos">Fijos</button>.</div>';
+
+  // Ahorro: el mes del próximo cobro, con lo que ya sabés que entra y sale.
+  const ing = S.recs.filter(r=> r.tipo==='ingreso' && !r.aparta && r.activo!==false);
+  const gas = S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false && !ap.cubiertos.has(r.id));
+  const tIng = ing.reduce((a,r)=> a + equivMensual(r), 0);
+  const tGas = gas.reduce((a,r)=> a + equivMensual(r), 0) + cuotasDelMes(c.refCobro.slice(0,7));
+  const libreMes = tIng - tGas - c.reserva;
+  const llega = c.libre - c.ritmo * c.diasHasta;
+  $('#hoyAhorroHint').textContent = 'mes que viene';
+  $('#hoyAhorro').innerHTML =
+    '<div class="kv meta"><label for="hoyMeta">Meta de ahorro por mes</label><input type="number" id="hoyMeta" min="0" step="10000" value="'+(Number(c.reserva)||0)+'"></div>'
+    + (ing.length
+      ? '<div class="kv"><span>Cobrás</span><b class="num">'+money(tIng)+'</b></div>'
+        +'<div class="kv"><span>Fijos, cuotas y suscripciones</span><b class="num">−'+money(tGas)+'</b></div>'
+        +'<div class="kv total"><span>Te quedan libres para el mes</span><b class="num'+(libreMes<0?' neg':'')+'">'+(libreMes<0?'−':'')+money(Math.abs(libreMes))+'</b></div>'
+        +'<div class="blq-det">'+(libreMes > 0 ? '≈ '+money(libreMes/30.4)+' por día' : 'Con esa meta no te alcanza: bajala o recortá un fijo.')+'</div>'
+      : '<div class="vacio">Cargá lo que cobrás en <button class="lnk" data-ir="fijos">Fijos</button> para ver cuánto podés ahorrar.</div>')
+    + (c.ritmo > 0
+      ? '<div class="kv"><span>Si seguís gastando así, al cobro te '+(llega>=0?'sobran':'faltan')+'</span><b class="num">'+money(Math.abs(llega))+'</b></div>'
+      : '');
+
+  const susc = S.recs.filter(r=> r.susc && r.tipo==='gasto' && r.activo!==false)
+                     .sort((a,b)=> (a.dia||1) - (b.dia||1));
+  $('#hoySuscHint').textContent = susc.length ? '≈ '+money(susc.reduce((a,r)=> a + equivMensual(r), 0))+' por mes' : '';
+  $('#hoySusc').innerHTML = susc.length ? susc.map(r=>
+    '<div class="fila"><div class="f-que"><b>'+esc(r.nombre)+'</b><small>'+esc(frecTexto(r))+'</small></div>'
+    +'<div class="f-monto num">'+money(r.monto)+'</div></div>'
+  ).join('') : '<div class="vacio">Marcá en <button class="lnk" data-ir="fijos">Fijos</button> cuáles son suscripciones.</div>';
+
+  $('#hoyApartCard').hidden = !ap.recs.length;
+  $('#hoyApart').innerHTML = ap.recs.map(r=>{
+    const g = S.recs.find(x=> x.id===r.aparta);
+    return '<div class="fila"><div class="f-que"><b>'+esc(r.nombre)+'</b><small>para '+esc(g ? g.nombre : 'un gasto')+'</small></div>'
+      +'<div class="f-monto num">'+money(Math.max(0, Number(r.apartado)||0))+'</div></div>';
+  }).join('');
+}
+function tilePD(v,k){ return '<div class="pd"><div class="v num">'+esc(v)+'</div><div class="k">'+esc(k)+'</div></div>'; }
 
 /* ============================ render: movimientos ============================ */
 function renderMovs(){
@@ -1335,21 +1386,44 @@ function renderPresu(){
 }
 
 /* ============================ render: fijos ============================ */
-function renderFijos(){
-  const recs = S.recs.slice().sort((a,b)=> (a.tipo===b.tipo? a.dia-b.dia : (a.tipo==='ingreso'?-1:1)));
-  $('#recTable tbody').innerHTML = recs.length? recs.map(r=>
-    '<tr>'
-    +'<td style="font-weight:500">'+esc(r.nombre)+'</td>'
-    +'<td><span class="pill '+(r.tipo==='ingreso'?'p-ok':'')+'">'+(r.tipo==='ingreso'?'ingreso':'gasto')+'</span></td>'
-    +'<td class="money">'+clampDay(ymNow(), r.dia)+'</td>'
-    +'<td><span class="pill">'+esc(catName(r.catId))+'</span></td>'
-    +'<td class="r money '+(r.tipo==='ingreso'?'in':'out')+'">'+money(r.monto)+'</td>'
-    +'<td class="r"><button class="btn sm gh" data-delrec="'+r.id+'" title="Borrar">✕</button></td></tr>'
-  ).join('') : '<tr><td colspan="6" class="empty">Todavía no cargaste ingresos ni gastos fijos.</td></tr>';
+const FRECS = [['mensual','Cada mes'],['quincenal','Cada 15 días'],['bimestral','Cada 2 meses'],['cuatrimestral','Cada 4 meses']];
 
-  const ing = recs.filter(r=>r.tipo==='ingreso').reduce((a,r)=>a+(+r.monto||0),0);
-  const gas = recs.filter(r=>r.tipo==='gasto').reduce((a,r)=>a+(+r.monto||0),0);
-  $('#fijosHint').textContent = ing||gas ? money(ing)+' entran · '+money(gas)+' salen · queda '+money(ing-gas) : '';
+function filaRec(r){
+  const frec = r.frec || 'mensual';
+  const gastos = S.recs.filter(x=> x.tipo==='gasto' && x.id!==r.id);
+  return '<div class="frec'+(r.activo===false?' tenue':'')+'">'
+    +'<div class="frec-nom"><b>'+esc(r.nombre)+'</b><small>'+esc(catName(r.catId))+(r.susc?' · suscripción':'')+'</small></div>'
+    +'<select data-rfrec="'+r.id+'" aria-label="Cada cuánto">'+FRECS.map(f=>'<option value="'+f[0]+'"'+(frec===f[0]?' selected':'')+'>'+f[1]+'</option>').join('')+'</select>'
+    +(frec==='quincenal'
+      ? '<input type="date" data-rdesde="'+r.id+'" value="'+esc(r.desde||'')+'" aria-label="Próxima vez">'
+      : '<label class="dia">día <input type="number" data-rdia="'+r.id+'" value="'+(r.dia||1)+'" min="1" max="31" aria-label="Día del mes"></label>')
+    +'<input type="number" class="monto" data-rmonto="'+r.id+'" value="'+(Number(r.monto)||0)+'" min="0" step="100" aria-label="Monto">'
+    +(r.tipo==='gasto'
+      ? '<label class="check"><input type="checkbox" data-rsusc="'+r.id+'"'+(r.susc?' checked':'')+'> Suscripción</label>'
+      : '<select data-raparta="'+r.id+'" aria-label="Para qué es"><option value="">Plata libre</option>'
+          + gastos.map(g=>'<option value="'+g.id+'"'+(r.aparta===g.id?' selected':'')+'>Apartada: '+esc(g.nombre)+'</option>').join('')+'</select>'
+        +(r.aparta ? '<label class="dia">hay <input type="number" class="monto" data-rapartado="'+r.id+'" value="'+(Number(r.apartado)||0)+'" min="0" step="1000" aria-label="Cuánto hay apartado hoy"></label>' : ''))
+    +'<button class="btn sm gh" data-delrec="'+r.id+'" title="Borrar" aria-label="Borrar '+esc(r.nombre)+'">✕</button>'
+    +'</div>';
+}
+
+function renderFijos(){
+  const grupos = [
+    ['Entra',            r=> r.tipo==='ingreso'],
+    ['Cada mes',         r=> r.tipo==='gasto' && (r.frec||'mensual')==='mensual'],
+    ['Cada 15 días',     r=> r.tipo==='gasto' && r.frec==='quincenal'],
+    ['Cada 2 o 4 meses', r=> r.tipo==='gasto' && (r.frec==='bimestral' || r.frec==='cuatrimestral')]
+  ];
+  const html = grupos.map(([titulo, f])=>{
+    const lista = S.recs.filter(f).sort((a,b)=> (a.dia||1)-(b.dia||1));
+    return lista.length ? '<div class="fgrupo"><h4>'+esc(titulo)+'</h4>'+lista.map(filaRec).join('')+'</div>' : '';
+  }).join('');
+  $('#fijosLista').innerHTML = html || '<div class="empty">Todavía no cargaste nada. Usá «Agregar», acá abajo.</div>';
+
+  const ing = S.recs.filter(r=> r.tipo==='ingreso' && !r.aparta && r.activo!==false).reduce((a,r)=> a + equivMensual(r), 0);
+  const gas = S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false).reduce((a,r)=> a + equivMensual(r), 0);
+  $('#fijosHint').textContent = ing||gas ? 'por mes: entran '+money(ing)+' · salen '+money(gas) : '';
+  formRec();
 
   const hoyYM = ymNow();
   $('#cuoTable tbody').innerHTML = S.cuotas.length? S.cuotas.map(c=>{
@@ -1890,7 +1964,7 @@ function pintarFaltantes(){
   if(!f.length){ el.hidden = true; return; }
   el.hidden = false;
   el.innerHTML = '<span>Para responderte bien me falta saber <b>'+f.join('</b>, <b>')+'</b>. '+
-    'Cargalo en Ajustes y en Fijos y cuotas, y las respuestas dejan de ser aproximadas.</span>';
+    'Cargalo en Ajustes (el engranaje) y en Fijos, y las respuestas dejan de ser aproximadas.</span>';
 }
 
 /* ---------- ¿me da para esta compra? ---------- */
@@ -2060,6 +2134,7 @@ function renderAjustes(){
   $('#sSaldo').value  = Number(S.cfg.saldoInicial)||0;
   $('#sFecha').value  = S.cfg.fechaCorte || todayISO();
   $('#sCobro').value  = S.cfg.diaCobro || 1;
+  $('#sCobroTipo').value = S.cfg.cobroTipo === 'habil' ? 'habil' : 'dia';
   $('#sReserva').value= Number(S.cfg.reserva)||0;
   const rs = S.reglas.slice(REGLAS_DEF.length);
   $('#reglasHint').textContent = rs.length? rs.length+' propias' : 'solo las de fábrica';
@@ -2164,18 +2239,18 @@ async function mpTraer(silencioso){
   (d.movimientos||[]).forEach(m=>{
     const src = 'mp:' + m.id;
     if(yaEstan.has(src)) return;
-    // Guardar plata en una reserva de Mercado Pago figura como un movimiento
-    // negativo, pero no gastaste nada: la moviste de un bolsillo tuyo a otro.
-    // Si se importa, te infla los gastos del mes. El saldo ya la cuenta, porque
-    // el lector suma las reservas al disponible.
-    if(m.esReserva || /reservad/i.test(m.descripcionTipo || '')) return;
     const esIngreso = m.tipo === 'ingreso';
+    // Guardar o sacar plata de una reserva de Mercado Pago figura como un
+    // movimiento, pero no es gasto ni ingreso real: es plata que se mueve de un
+    // bolsillo tuyo a otro. Se importa igual (para verlo en el historial) pero
+    // con una categoría que no cuenta ni como gasto ni como ingreso.
+    const esReserva = m.esReserva || /reservad/i.test(m.descripcionTipo || '');
     S.movs.push({
       id: uid(),
       fecha: m.fecha,
       tipo: esIngreso ? 'ingreso' : 'gasto',
       monto: Number(m.monto)||0,
-      catId: adivinarCat(m.detalle || '', esIngreso),
+      catId: esReserva ? (esIngreso ? 'c-traspaso-in' : 'c-traspaso') : adivinarCat(m.detalle || '', esIngreso),
       desc: m.detalle || 'Movimiento de Mercado Pago',
       src, srcTipo: 'mp',
       estado: 'ok'
@@ -2187,6 +2262,7 @@ async function mpTraer(silencioso){
   if(d.saldo != null && Number.isFinite(Number(d.saldo))){
     S.cfg.saldoInicial = Number(d.saldo);
     S.cfg.fechaCorte   = hoy;
+    S.cfg.corteEn      = d.actualizado ? new Date(d.actualizado).getTime() : Date.now();
   }
 
   S.mp = {
@@ -2309,7 +2385,7 @@ function mpMarcarPagados(){
   const ids = Array.from(document.querySelectorAll('#mpCruces input[data-cruce]:checked'))
     .map(i => i.dataset.cruce);
   if(!ids.length){ toast('No marcaste ninguno'); return; }
-  cambiar(()=> ids.forEach(id => { const m = S.movs.find(x => x.id === id); if(m) m.estado = 'ok'; }));
+  cambiar(()=> ids.forEach(id => { const m = S.movs.find(x => x.id === id); if(m){ m.estado = 'ok'; moverApartado(m); } }));
   toast(ids.length === 1 ? 'Listo: 1 gasto marcado como pagado'
                          : 'Listo: ' + ids.length + ' gastos marcados como pagados');
 }
@@ -2347,10 +2423,13 @@ function etiquetarTablas(){
   });
 }
 
+const MAS = ['presu','plan','consultas','historial','import','ajustes'];
 function render(){
   $('#mLabel').textContent = ymLabel(selYM);
+  // El mes sólo importa donde se ve un mes: en Hoy manda el próximo cobro.
+  $('#mNav').hidden = !(vista==='movs' || vista==='presu');
   refreshSelects();
-  if(vista==='resumen') renderResumen();
+  if(vista==='hoy') renderHoy();
   else if(vista==='movs') renderMovs();
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
@@ -2362,8 +2441,12 @@ function render(){
   etiquetarTablas();
 }
 function irA(v){
+  if(v==='mas') v = 'ajustes';
   vista = v;
-  $$('#tabs button').forEach(b=> b.setAttribute('aria-current', String(b.dataset.v===v)));
+  const enMas = MAS.includes(v);
+  $$('#tabs button').forEach(b=> b.setAttribute('aria-current', String(b.dataset.v===v || (b.dataset.v==='mas' && enMas))));
+  $('#subtabs').hidden = !enMas;
+  $$('#subtabs button').forEach(b=> b.setAttribute('aria-current', String(b.dataset.v===v)));
   $$('section.view').forEach(s=> s.classList.toggle('on', s.id==='v-'+v));
   window.scrollTo({top:0, behavior:'instant'});
   render();
@@ -2667,11 +2750,11 @@ function guardarDlg(){
 
 /* ============================ eventos ============================ */
 $('#tabs').addEventListener('click', e=>{ const b=e.target.closest('button[data-v]'); if(b) irA(b.dataset.v); });
+$('#subtabs').addEventListener('click', e=>{ const b=e.target.closest('button[data-v]'); if(b) irA(b.dataset.v); });
 $('#mPrev').onclick = ()=>{ selYM = ymAdd(selYM,-1); render(); };
 $('#mNext').onclick = ()=>{ selYM = ymAdd(selYM, 1); render(); };
 $('#mLabel').onclick = ()=>{ selYM = ymNow(); render(); };
 $('#fab').onclick = ()=> abrirDlg(null);
-$('#verTodos').onclick = e=>{ e.preventDefault(); irA('movs'); };
 $('#dCancel').onclick = ()=> $('#dlg').close();
 $('#dSave').onclick = guardarDlg;
 $('#dlg').addEventListener('keydown', e=>{ if(e.key==='Enter' && e.target.tagName!=='TEXTAREA'){ e.preventDefault(); guardarDlg(); } });
@@ -2687,7 +2770,14 @@ $('#dTipoSeg').addEventListener('click', e=>{
 document.addEventListener('click', e=>{
   const t = e.target.closest('button'); if(!t) return;
   const d = t.dataset;
-  if(d.ok)      cambiar(()=>{ const m=S.movs.find(x=>x.id===d.ok); if(m) m.estado='ok'; });
+  if(d.ok)      cambiar(()=>{
+    const m=S.movs.find(x=>x.id===d.ok); if(!m) return;
+    // Marcarlo antes de su fecha es haberlo pagado hoy: con la fecha vieja el
+    // saldo no bajaba hasta ese día y lo libre subía de golpe.
+    const hoy = todayISO(); if(m.fecha > hoy) m.fecha = hoy;
+    m.estado='ok'; m.pagadoEn = Date.now(); moverApartado(m);
+  });
+  else if(d.ir)  irA(d.ir);
   else if(d.edit) abrirDlg(d.edit);
   else if(d.del){ if(confirm('¿Borrar este movimiento?')) cambiar(()=>{
       const m = S.movs.find(x=>x.id===d.del);
@@ -2696,13 +2786,20 @@ document.addEventListener('click', e=>{
     }); }
   else if(d.delcat){ const c=cat(d.delcat); if(c && confirm('¿Borrar la categoría “'+c.nombre+'”? Los movimientos quedan sin categoría.'))
       cambiar(()=>{ S.cats = S.cats.filter(x=>x.id!==d.delcat); }); }
-  else if(d.delrec){ if(confirm('¿Borrar este fijo? Los movimientos ya generados quedan como están.'))
-      cambiar(()=>{ S.recs = S.recs.filter(x=>x.id!==d.delrec); }); }
+  else if(d.delrec){
+    const r = S.recs.find(x=>x.id===d.delrec);
+    if(r && confirm('¿Borrar «'+r.nombre+'»? También se borran sus pagos pendientes que vienen; lo ya pagado queda.'))
+      cambiar(()=>{
+        reprogramarRec(r, false);
+        S.recs = S.recs.filter(x=>x.id!==d.delrec);
+        S.recs.forEach(x=>{ if(x.aparta===r.id){ x.aparta = null; delete x.apartado; } });
+      });
+  }
   else if(d.delcuo){ if(confirm('¿Borrar estas cuotas? Las ya generadas quedan como están.'))
       cambiar(()=>{ S.cuotas = S.cuotas.filter(x=>x.id!==d.delcuo); }); }
   else if(d.delregla) cambiar(()=>{ S.reglas.splice(+d.delregla,1); });
   else if(d.delmeta){ if(confirm('¿Borrar esta meta?')) cambiar(()=>{ S.metas = (S.metas||[]).filter(x=>x.id!==d.delmeta); }); }
-  else if(d.vermes){ selYM = d.vermes; irA('resumen'); }
+  else if(d.vermes){ selYM = d.vermes; irA('movs'); }
 });
 
 ['#fSearch','#fCat','#fTipo'].forEach(sel=> $(sel).addEventListener('input', renderMovs));
@@ -2721,7 +2818,22 @@ $('#addCat').onclick = ()=>{
 };
 $('#rCat').addEventListener('change', ()=> rCatTocada = true);
 $('#dCat').addEventListener('change', ()=> dCatTocada = true);
-$('#rTipo').addEventListener('change', ()=>{ rCatTocada=false; fillCatSelect($('#rCat'), $('#rTipo').value, fallbackCat($('#rTipo').value)); });
+function formRec(){
+  const tipo = $('#rTipo').value, frec = $('#rFrec').value;
+  $('#rSuscWrap').hidden = tipo !== 'gasto';
+  $('#rApartWrap').hidden = tipo !== 'ingreso';
+  $('#rDiaWrap').hidden = frec !== 'mensual';
+  $('#rDesdeWrap').hidden = frec === 'mensual';
+  if(!$('#rDesde').value) $('#rDesde').value = todayISO();
+  const gastos = S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false);
+  const prev = $('#rApartPara').value;
+  $('#rApartPara').innerHTML = gastos.length
+    ? gastos.map(g=>'<option value="'+g.id+'">'+esc(g.nombre)+'</option>').join('')
+    : '<option value="">primero cargá el gasto</option>';
+  if(prev && gastos.some(g=> g.id===prev)) $('#rApartPara').value = prev;
+}
+$('#rTipo').addEventListener('change', ()=>{ rCatTocada=false; fillCatSelect($('#rCat'), $('#rTipo').value, fallbackCat($('#rTipo').value)); formRec(); });
+$('#rFrec').addEventListener('change', formRec);
 function sugerir(inputSel, selectSel, tipo, tocada){
   if(tocada) return;
   const txt = $(inputSel).value.trim(); if(txt.length<3) return;
@@ -2739,10 +2851,46 @@ $('#cNombre').addEventListener('input', ()=>{
 $('#addRec').onclick = ()=>{
   const nombre=$('#rNombre').value.trim(), monto=Math.abs(parseFloat($('#rMonto').value)||0);
   if(!nombre||!monto){ toast('Falta el concepto o el monto'); return; }
-  cambiar(()=> S.recs.push({id:uid(), nombre, tipo:$('#rTipo').value, dia:Math.min(31,Math.max(1,parseInt($('#rDia').value)||1)),
-                            catId:$('#rCat').value, monto, activo:true}));
-  $('#rNombre').value=''; $('#rMonto').value=''; rCatTocada=false; toast('Fijo agregado y aplicado a este mes');
+  const tipo = $('#rTipo').value, frec = $('#rFrec').value;
+  let dia = Math.min(31, Math.max(1, parseInt($('#rDia').value)||1)), desde = null;
+  if(frec !== 'mensual'){ desde = $('#rDesde').value || todayISO(); dia = parseISO(desde).getDate(); }
+  const r = {id:uid(), nombre, tipo, frec, dia, desde, catId:$('#rCat').value, monto, activo:true};
+  if(tipo==='gasto' && $('#rSusc').checked) r.susc = true;
+  if(tipo==='ingreso' && $('#rApart').checked && $('#rApartPara').value){ r.aparta = $('#rApartPara').value; r.apartado = 0; }
+  cambiar(()=> S.recs.push(r));
+  $('#rNombre').value=''; $('#rMonto').value=''; $('#rSusc').checked=false; $('#rApart').checked=false; rCatTocada=false;
+  formRec();
+  toast('Agregado: ya aparece en Hoy');
 };
+// Cada renglón de Fijos se edita en el lugar.
+$('#fijosLista').addEventListener('change', e=>{
+  const t = e.target, d = t.dataset;
+  const id = d.rfrec || d.rdia || d.rdesde || d.rmonto || d.rsusc || d.raparta || d.rapartado;
+  const r = id && S.recs.find(x=> x.id===id);
+  if(!r) return;
+  cambiar(()=>{
+    if(d.rmonto){ r.monto = Math.max(0, parseFloat(t.value)||0); reprogramarRec(r, true); }
+    else if(d.rsusc){ r.susc = t.checked; }
+    else if(d.rapartado){ r.apartado = Math.max(0, parseFloat(t.value)||0); }
+    else if(d.raparta){ r.aparta = t.value || null; if(!r.aparta) delete r.apartado; else if(r.apartado==null) r.apartado = 0; }
+    else {
+      if(d.rfrec){
+        r.frec = t.value;
+        if(r.frec !== 'mensual' && !r.desde) r.desde = dayOfMonth(ymNow(), r.dia||1);
+      }
+      if(d.rdia) r.dia = Math.min(31, Math.max(1, parseInt(t.value)||1));
+      if(d.rdesde){ r.desde = t.value || todayISO(); r.dia = parseISO(r.desde).getDate(); }
+      reprogramarRec(r, false);
+    }
+  });
+  toast('Actualizado');
+});
+document.addEventListener('change', e=>{
+  if(e.target.id !== 'hoyMeta') return;
+  S.cfg.reserva = Math.max(0, parseFloat(e.target.value)||0);
+  cambiar(()=>{});
+  toast('Meta de ahorro guardada');
+});
 $('#addCuo').onclick = ()=>{
   const nombre=$('#cNombre').value.trim(), monto=Math.abs(parseFloat($('#cMonto').value)||0);
   const total=Math.max(1,parseInt($('#cTotal').value)||1), desde=$('#cDesde').value||ymNow();
@@ -2751,10 +2899,12 @@ $('#addCuo').onclick = ()=>{
   $('#cNombre').value=''; $('#cMonto').value=''; toast('Cuotas cargadas');
 };
 
-['sSaldo','sFecha','sCobro','sReserva'].forEach(id=> $('#'+id).addEventListener('change', ()=>{
+['sSaldo','sFecha','sCobro','sCobroTipo','sReserva'].forEach(id=> $('#'+id).addEventListener('change', ()=>{
   S.cfg.saldoInicial = parseFloat($('#sSaldo').value)||0;
+  if(id==='sSaldo' || id==='sFecha') S.cfg.corteEn = Date.now();
   S.cfg.fechaCorte   = $('#sFecha').value || todayISO();
   S.cfg.diaCobro     = Math.min(31, Math.max(1, parseInt($('#sCobro').value)||1));
+  S.cfg.cobroTipo    = $('#sCobroTipo').value === 'habil' ? 'habil' : 'dia';
   S.cfg.reserva      = Math.max(0, parseFloat($('#sReserva').value)||0);
   cambiar(()=>{}); toast('Guardado');
 }));
@@ -2855,8 +3005,9 @@ $('#wipe').onclick = ()=>{
   $('#cDesde').value = ymNow();
   fillCatSelect($('#rCat'), 'gasto', fallbackCat('gasto'));
   fillCatSelect($('#cCat'), 'gasto', fallbackCat('gasto'));
+  formRec();
   selYM = ymNow();
-  irA('resumen');
+  irA('hoy');
   mpConectar();
   if(!sembrado && !S.movs.length && !S.recs.length && !Number(S.cfg.saldoInicial)){
     setTimeout(()=>{ irA('ajustes'); toast('Empezá poniendo cuánta plata tenés hoy'); }, 400);
@@ -2894,224 +3045,25 @@ $('#wipe').onclick = ()=>{
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
 
-<!-- piel: piel-diario -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600;700&display=swap">
-<style id="piel-diario">
-:root, :root[data-theme], :root:not([data-theme]){
-  --bg:#F1ECE0;
-  --surface:#FAF7EF; --surface-2:#EDE7D8; --surface-3:#E3DCC9;
-  --ink:#171208; --ink-2:#4B4335; --ink-3:#6E6656;
-  --line:#D4CCB8; --line-2:#B3AA93;
-  --accent:#1C5B44; --accent-ink:#123B2C; --accent-soft:#DFE9E1;
-  --warn:#8A5E10; --warn-soft:#F0E7D0;
-  --crit:#8E2B22; --crit-soft:#F0DED9;
-  --shadow:none;
-  --radius:0;
-  --f-display:'Fraunces', Georgia, 'Times New Roman', serif;
-  --f-body:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  --f-mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
-  color-scheme:light;
-}
-
-/* Un diario no tiene esquinas redondeadas ni sombras: tiene filetes.
-   Esto barre con las dos cosas en toda la página de una vez. */
-*, *::before, *::after{ border-radius:0 !important; box-shadow:none !important }
-
-body{ background:var(--bg); color:var(--ink) }
-
-/* ── la cabecera, como el encabezado de un diario ─────────────── */
-header.top{
-  background:var(--bg);
-  border-bottom:3px double var(--ink);
-  padding-bottom:.55rem;
-}
-header.top h1, header.top .marca, header.top strong:first-of-type{
-  font-family:var(--f-display);
-  font-weight:700;
-  letter-spacing:-.025em;
-}
-
-/* ── la navegación: sin píldoras, subrayado como en un índice ─── */
-nav.tabs{ border-bottom:1px solid var(--line); gap:0 }
-nav.tabs a, nav.tabs button, .tabs .tab{
-  background:none;
-  border:0;
-  border-bottom:2px solid transparent;
-  padding:.55rem .9rem;
-  font-family:var(--f-mono);
-  font-size:.72rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--ink-2);
-}
-nav.tabs a.on, nav.tabs a.active, nav.tabs .on, .tabs .tab.on{
-  border-bottom-color:var(--ink);
-  color:var(--ink);
-  background:none;
-}
-
-/* ── nada de tarjetas: bloques separados por filetes ──────────── */
-.card{
-  background:transparent;
-  border:0;
-  border-top:1px solid var(--line);
-  padding:1.4rem 0 1.6rem;
-}
-.card + .card{ margin-top:0 }
-
-/* ── la cifra grande, en serifa y enorme ──────────────────────── */
-.hero{
-  background:transparent;
-  border:0; border-top:3px double var(--ink); border-bottom:1px solid var(--line);
-  /* El aire de la izquierda no es capricho: el bloque tiene una barra
-     de color de 4 px pegada al borde (.hero::before, que marca si vas
-     bien o mal de plata). Con menos relleno que eso, el texto arranca
-     ABAJO de la barra y las primeras letras de cada renglón se ven
-     tapadas, como si estuvieran cortadas. */
-  padding:1.5rem 0 1.7rem 1.1rem;
-}
-.hero .big{
-  font-family:var(--f-display);
-  font-weight:600;
-  font-size:clamp(3rem, 13vw, 5.6rem);
-  letter-spacing:-.045em;
-  line-height:.92;
-  color:var(--ink);
-  font-variant-numeric:lining-nums tabular-nums;
-}
-.hero .big.pos{ color:var(--accent) }
-.hero .note{ font-family:var(--f-body); color:var(--ink-2); max-width:62ch }
-.hero .note b{ color:var(--ink); font-weight:600 }
-
-/* ── los recuadros de datos: columnas con filete, no cajas ────── */
-.tiles{ border-top:1px solid var(--line) }
-.tile{
-  background:transparent;
-  border:0;
-  border-left:1px solid var(--line);
-  padding:.9rem 1rem;
-}
-.tile:first-child{ border-left:0; padding-left:0 }
-.tile .k{
-  font-family:var(--f-mono);
-  font-size:.63rem; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--ink-3);
-}
-.tile .v{
-  font-family:var(--f-display);
-  font-weight:600;
-  letter-spacing:-.02em;
-  color:var(--ink);
-  font-variant-numeric:lining-nums tabular-nums;
-}
-.tile .v.pos{ color:var(--accent) }
-.tile .s{ font-family:var(--f-body); color:var(--ink-3) }
-
-/* ── títulos de sección: versalitas espaciadas, con filete ────── */
-h2, h3, .card > h2:first-child{
-  font-family:var(--f-display);
-  font-weight:600;
-  letter-spacing:-.015em;
-  color:var(--ink);
-}
-
-/* ── botones: tipográficos, no de plástico ────────────────────── */
-.btn{
-  background:transparent;
-  border:1px solid var(--ink);
-  color:var(--ink);
-  font-family:var(--f-mono);
-  font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
-  padding:.5em 1em;
-  transition:background .18s ease, color .18s ease;
-}
-.btn:hover{ background:var(--ink); color:var(--bg) }
-/* Va con :root adelante para empatarle en peso a la regla de modo
-   oscuro de más arriba, que pinta este botón de verde muy oscuro. Sin
-   esto quedaba texto casi negro sobre fondo casi negro: una mancha. */
-:root .btn.pri{ background:var(--ink); color:var(--bg); border-color:var(--ink) }
-:root .btn.pri:hover{ background:var(--accent); border-color:var(--accent); filter:none }
-.btn.dgr{ border-color:var(--crit); color:var(--crit) }
-/* Los botones chicos van en caja baja: en mayúsculas "Cobrado" no
-   entra en su celda de la tabla y queda cortado a la mitad. */
-.btn.sm{ text-transform:none; letter-spacing:.01em; padding:.4em .6em; font-size:.7rem }
-.btn.dgr:hover{ background:var(--crit); color:var(--bg) }
-
-/* ── tablas: como la tabla de cotizaciones de un diario ───────── */
-table{ border-collapse:collapse; width:100% }
-th{
-  font-family:var(--f-mono);
-  font-size:.63rem; letter-spacing:.13em; text-transform:uppercase;
-  color:var(--ink-3);
-  border-bottom:1px solid var(--ink);
-  text-align:left; padding:.5rem .6rem;
-}
-td{ border-bottom:1px solid var(--line); padding:.6rem; }
-tr:hover td{ background:var(--surface-2) }
-
-/* ── etiquetas y píldoras: recuadro de un pelo ────────────────── */
-.chip, .pill, .badge{
-  background:transparent;
-  border:1px solid var(--line-2);
-  color:var(--ink-2);
-  font-family:var(--f-mono);
-  font-size:.65rem; letter-spacing:.08em; text-transform:uppercase;
-  padding:.24em .6em;
-}
-.chip.ok{ border-color:var(--accent); color:var(--accent) }
-.chip.warn{ border-color:var(--warn); color:var(--warn) }
-
-/* ── las cifras, siempre en serifa y alineadas ────────────────── */
-.money, .num, .v, .mono{
-  font-variant-numeric:lining-nums tabular-nums;
-}
-
-/* ── el botón de volver, a tono ───────────────────────────────── */
-.volver-panel{
-  background:var(--bg);
-  border:1px solid var(--ink);
-  color:var(--ink);
-  font-family:var(--f-mono);
-  font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
-}
-
+<!-- piel: azul -->
+<style id="piel-azul">
+/* Lo que la piel anterior hacía y no era estética: respetar el área segura del
+   iPhone y dejar que el botón de volver se esconda al bajar. */
 body{
   padding-top:env(safe-area-inset-top);
   padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
 }
 body::before{
-  content:"";
-  position:fixed; top:0; left:0; right:0;
-  height:env(safe-area-inset-top);
-  background:var(--bg);
-  z-index:9998;
-  pointer-events:none;
+  content:""; position:fixed; top:0; left:0; right:0;
+  height:env(safe-area-inset-top); background:var(--bg);
+  z-index:9998; pointer-events:none;
 }
-
-/* El botón de volver se aparta al bajar. Es fijo, así que si se queda
-   quieto tapa lo que haya debajo — y no es adorno lo que tapa: en
-   Instagram cubría el botón de elegir plataforma, que hay que poder
-   tocar. Baja al desplazarse hacia abajo y vuelve al subir, que es
-   cuando lo estás buscando. */
-.volver-panel{
-  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
-}
-.volver-panel.escondido{
-  transform:translateY(160%);
-  opacity:0;
-  pointer-events:none;
-}
+.volver-panel{ transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease }
+.volver-panel.escondido{ transform:translateY(160%); opacity:0; pointer-events:none }
 @media (prefers-reduced-motion:reduce){
   .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
 }
 </style>
-<script>
-  // El diario es siempre de papel: no tiene modo oscuro. Marcando el
-  // documento como claro se desactivan de una las reglas nocturnas que
-  // traía la app, en vez de ir peleándolas una por una.
-  document.documentElement.dataset.theme = "light";
-</script>
 
 <script>
 (() => {
@@ -3138,11 +3090,8 @@ body::before{
 </script>
 
 <style id="telefono">
-/* Va último a propósito. La hoja «piel-diario» de más arriba le da a los botones
-   de sección padding .9rem y letter-spacing .1em, y al venir después en el archivo
-   le ganaba a estas reglas aunque estuvieran dentro de un @media. Con el mismo
-   peso gana el que está más abajo, así que este bloque va acá y no hay que
-   inflar selectores para que mande. */
+/* Va último a propósito: con el mismo peso gana la regla que está más abajo, así
+   que el teléfono manda sobre todo lo anterior sin inflar selectores. */
 /* ======================= teléfono ======================= */
 /* Medido a 375px antes de tocar nada: la barra de secciones escondía 5 de sus 8
    botones y había que arrastrarla de costado sin que nada lo indicara; las
@@ -3150,19 +3099,18 @@ body::before{
    2 de 7 columnas. */
 @media(max-width:640px){
 
-  /* Las nueve secciones en tres filas de tres: se ven todas juntas. */
-  nav.tabs{
-    display:grid; grid-template-columns:repeat(3,1fr);
-    gap:0; overflow:visible; margin-top:8px;
-  }
-  /* Medido: la barra da 343px. Con tres columnas son 114px por botón, y las
-     palabras más largas —MOVIMIENTOS y PRESUPUESTO— ocupan 72px a 10px, así que
-     entran holgadas. El corte por letra queda solo como red de seguridad. */
-  nav.tabs button{
-    min-width:0; overflow-wrap:anywhere;
-    padding:9px 2px; font-size:10px; line-height:1.3;
-    text-align:center; letter-spacing:0; white-space:normal;
-  }
+  /* Las tres secciones y el engranaje en una sola fila: se ven todas sin arrastrar. */
+  nav.tabs{ gap:6px; margin-top:8px }
+  nav.tabs button{ flex:1 1 0; min-width:0; padding:8px 4px; font-size:13px }
+  nav.tabs .tab-mas{ flex:0 0 auto; padding:8px 12px }
+  .blq{ padding:14px 15px }
+  .blq-libre{ padding:18px 17px }
+  .fila{ gap:8px }
+  .f-fecha{ min-width:38px; font-size:12px }
+  .f-monto{ font-size:14px }
+  .fila .pagar{ width:34px; height:34px; padding:0; border-radius:50%; flex:none }
+  .fila .pagar span{ display:none }
+  .fila .pagar::before{ content:"✓"; font-size:15px; line-height:1 }
 
   /* Cada fila de tabla pasa a ser una tarjeta: el primer dato hace de título y
      los demás van como «etiqueta … valor». Nada queda fuera de la pantalla. */
@@ -3229,5 +3177,5 @@ body::before{
   }
 }
 </style>
-<!-- /piel: piel-diario --></body>
+<!-- /piel: azul --></body>
 </html>
