@@ -2,7 +2,7 @@
 // @name         Lector de Mercado Pago — Panel de plata
 // @namespace    https://nook-a01.github.io/panel/
 // @description  Lee tu saldo y tus movimientos desde tu propia sesión de Mercado Pago y los guarda en tu panel privado.
-// @version      1.1.0
+// @version      1.2.0
 // @match        https://www.mercadopago.com.ar/*
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
@@ -352,6 +352,19 @@
       setTimeout(arrancar, 1500);
     }
   }, 1000);
+
+  // Lectura sola: si la pestaña queda en Inicio y nadie la toca, se recarga cada
+  // 8 horas y al cargar vuelve a leer. Sólo en Inicio, que no tiene
+  // formularios: en otra sección podrías estar en medio de una transferencia.
+  const CADA = 8 * 3600e3, QUIETA = 2 * 60e3, cargadaEn = Date.now();
+  let tocadaEn = Date.now();
+  ["pointerdown", "keydown", "wheel", "touchstart", "scroll"].forEach(ev =>
+    addEventListener(ev, () => { tocadaEn = Date.now(); }, { passive: true, capture: true }));
+  setInterval(() => {
+    if (!enInicio()) return;
+    if (Date.now() - cargadaEn < CADA || Date.now() - tocadaEn < QUIETA) return;
+    location.reload();
+  }, 60e3);
 
   arrancar();
 })();

@@ -88,6 +88,12 @@ function fusionar(viejo, nuevo) {
   return {
     actualizado: new Date().toISOString(),
     saldo: nuevo.saldo ?? (viejo ? viejo.saldo : null),
+    // Cuándo se leyó el SALDO, que no es lo mismo que cuándo llegó algo: desde
+    // Actividad el lector manda movimientos sin saldo, y la app creía que el
+    // saldo viejo era de recién.
+    saldoLeidoEn: nuevo.saldo != null
+      ? new Date().toISOString()
+      : (viejo ? (viejo.saldoLeidoEn || viejo.actualizado || null) : null),
     mes: nuevo.mes ?? (viejo ? viejo.mes : null),
     categorias: nuevo.categorias ?? (viejo ? viejo.categorias : null),
     movimientos,
