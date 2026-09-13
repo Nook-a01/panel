@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-13T14:25:42.067Z",
+ "actualizado": "2026-09-13T18:11:36.593Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -628,8 +628,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -972,8 +973,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1008,8 +1010,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1069,8 +1072,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1093,9 +1097,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1118,8 +1121,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1178,8 +1182,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1736,9 +1741,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2611,18 +2615,39 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Spanish Grand Prix LIVE! F1 Madrid race updates, commentary and results",
-     "resumen": "The first-ever Spanish Grand Prix at the Madring is under way, and you can follow all the action live with ESPN.",
-     "fecha": "2026-09-13T14:21:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715855_1296x729_16-9.jpg",
+     "titulo": "Lando Norris hits out at F1 Virtual Safety Car rule after losing 'deserved' Spanish GP win",
+     "resumen": "Lando Norris bemoaned Formula 1's Virtual Safety Car rules after he appeared to lose a nailed-on Spanish Grand Prix win, saying \"it's a rule that shouldn't define a race.\"",
+     "fecha": "2026-09-13T18:09:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715935_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867189/spanish-grand-prix-formula-1-lando-norris-virtual-safety-car-deserved"
+    },
+    {
+     "titulo": "Hamilton concedes F1 title after early Spanish GP retirement; 'no stopping' Antonelli",
+     "resumen": "Lewis Hamilton's Spanish Grand Prix lasted just six laps before he was forced to retire with brake issues.",
+     "fecha": "2026-09-13T16:58:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715910_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49926922/lewis-hamilton-suffers-early-retirement-spanish-grand-prix"
+    },
+    {
+     "titulo": "Ugo Ugochukwu becomes first U.S. driver to win F3 title",
+     "resumen": "Ugo Ugochukwu finished second in Sunday's Spanish Grand Prix to become the first American driver to win the Formula 3 title.",
+     "fecha": "2026-09-13T16:47:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715963_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49928828/ugo-ugochukwu-american-driver-win-f3-title-dropped-mclaren"
+    },
+    {
+     "titulo": "Spanish Grand Prix results: Kimi Antonelli capitalises on Lando Norris misfortune for another win - as it happened",
+     "resumen": "Kimi Antonelli capitalised on some bad luck for Lando Norris to win the Spanish Grand Prix, and you can relive all the race updates on ESPN.",
+     "fecha": "2026-09-13T16:05:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715883_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49867240/spanish-grand-prix-2026-live-madrid-updates-results-analysis-commentary"
     },
     {
-     "titulo": "Lewis Hamilton suffers early retirement at Spanish GP after Ferrari brake issues",
-     "resumen": "Lewis Hamilton's Spanish Grand Prix lasted just six laps before he was forced to retire with Ferrari brake issues.",
-     "fecha": "2026-09-13T14:01:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715862_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49926922/lewis-hamilton-suffers-early-retirement-spanish-grand-prix"
+     "titulo": "Spanish Grand Prix: Kimi Antonelli wins again as Lando Norris rues bad luck, Lewis Hamilton suffers DNF",
+     "resumen": "Kimi Antonelli took a major stride towards becoming the youngest Formula 1 world champion ever with victory at the Spanish Grand Prix.",
+     "fecha": "2026-09-13T16:03:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715919_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867186/spanish-grand-prix-madring-formula-1-race-report-kimi-antonelli-lando-norris-lewis-hamilton"
     },
     {
      "titulo": "Max vs 100: When is Verstappen race, how to watch on Disney+, how it works, who's taking part?",
@@ -2630,27 +2655,6 @@
      "fecha": "2026-09-13T11:45:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0501/r1652101_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439341/verstappen-race-how-watch-disney+-how-works-taking-part"
-    },
-    {
-     "titulo": "What makes Max Verstappen so good? Career, background and F1 records",
-     "resumen": "Max Verstappen is returning to his racing roots and is facing 100 drivers in a unique event called Max vs. 100 where the Formula 1 star will attempt to overtake 100 challengers, starting from the back of the grid.",
-     "fecha": "2026-09-13T11:44:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0727/r1694213_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439356/what-makes-max verstappen-good-career-background-f1-records"
-    },
-    {
-     "titulo": "Max Verstappen says F1 should consult drivers on new circuits amid Spanish Grand Prix concerns",
-     "resumen": "Max Verstappen has called on Formula 1 to consult drivers when designing new circuits amid concerns there will be no overtaking at Sunday's inaugural race at the all-new Madring.",
-     "fecha": "2026-09-12T18:19:15Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715425_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867178/spanish-grand-prix-madring-formula-1-max-verstappen-consult-drivers-new-circuits-madring-concerns"
-    },
-    {
-     "titulo": "Kimi Antonelli jokes on opening stages of Spanish GP in Madrid: 'Driving like a grandmother'",
-     "resumen": "Kimi Antonelli has said that taking on the brand-new Madring will be like driving like a Grandma in the opening stages of the Spanish Grand Prix on Sunday.",
-     "fecha": "2026-09-12T18:07:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0912/r1715415_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867175/kimi-antonelli-jokes-opening-stages-spanish-gp-madrid-driving-grandmother-madring-formula-1"
     }
    ],
    "resultados": null,
@@ -2668,18 +2672,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Grasso takes out Fiorot to stay in UFC title picture; Silva taps Delgado",
+     "resumen": "Alexa Grasso took an impressive step toward another title shot with a unanimous decision win over Manon Fiorot, while Jean Silva submitted Jose Miguel Delgado at Noche UFC on Saturday.",
+     "fecha": "2026-09-13T17:27:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715675_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49921811/grasso-takes-fiorot-stay-ufc-title-picture-silva-taps-delgado"
+    },
+    {
      "titulo": "Cris Cyborg is still going strong as a force in women's P4P top 10",
      "resumen": "At age 41, PFL women's featherweight champion continues win streak to secure spot in ESPN P4P top 10.",
      "fecha": "2026-09-13T03:11:55Z",
      "imagen": "https://a.espncdn.com/photo/2026/0825/r1706696_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
-    },
-    {
-     "titulo": "Grasso takes out Fiorot to stay in UFC title picture; Silva taps Delgado",
-     "resumen": "Alexa Grasso took an impressive step toward another title shot with a unanimous decision win over Manon Fiorot, while Jean Silva submitted Jose Miguel Delgado at Noche UFC on Saturday.",
-     "fecha": "2026-09-13T02:01:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715675_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49921811/grasso-takes-fiorot-stay-ufc-title-picture-silva-taps-delgado"
     },
     {
      "titulo": "Song Yadong rises in divisional rankings after shocking KO",
