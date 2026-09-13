@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12T22:15:59.792Z",
+ "actualizado": "2026-09-13T00:01:06.047Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -947,9 +947,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -972,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1033,9 +1031,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1046,9 +1043,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1227,9 +1223,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1340,11 +1335,6 @@
   },
   "intermiami": {
    "compitiendo": [
-    {
-     "nombre": "Leagues Cup",
-     "liga": "concacaf.leagues.cup",
-     "ruta": "soccer"
-    },
     {
      "nombre": "MLS",
      "liga": "usa.1",
@@ -2679,6 +2669,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Song Yadong rises in divisional rankings after shocking KO",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-09-12T23:52:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709592_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
+    {
      "titulo": "Cris Cyborg is still going strong as a force in women's P4P top 10",
      "resumen": "At age 41, PFL women's featherweight champion continues win streak to secure spot in ESPN P4P top 10.",
      "fecha": "2026-09-08T14:58:31Z",
@@ -2698,13 +2695,6 @@
      "fecha": "2026-09-05T21:32:58Z",
      "imagen": "https://a.espncdn.com/photo/2026/0905/r1711964_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49839558/shevchenko-injured-vacates-silva-wang-vie-belt-ufc-332"
-    },
-    {
-     "titulo": "Song Yadong rises in divisional rankings after shocking KO",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-09-01T14:47:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709592_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     },
     {
      "titulo": "Song Yadong KO's Umar Nurmagomedov in massive UFC upset",
@@ -2787,6 +2777,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
      "categoria": "Lightweight",
      "record": "13-1-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5212849",
+     "nombre": "Tommy McMillen",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Featherweight",
+     "record": "12-0-0",
      "peleas": 3,
      "gano": 3
     },
@@ -2931,6 +2930,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
      "categoria": "W Bantamweight",
      "record": "18-6-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3136287",
+     "nombre": "Alexa Grasso",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "categoria": "W Flyweight",
+     "record": "18-5-1",
      "peleas": 2,
      "gano": 2
     },
@@ -3093,24 +3101,6 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
      "categoria": "Middleweight",
      "record": "13-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5307814",
-     "nombre": "Tommy Gantt",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Lightweight",
-     "record": "13-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5213352",
-     "nombre": "Diyar Nurgozhay",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
-     "categoria": "Light Heavyweight",
-     "record": "12-2-0",
      "peleas": 2,
      "gano": 2
     }

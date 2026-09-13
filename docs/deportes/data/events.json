@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-12T19:19:21.540Z",
+ "actualizado": "2026-09-13T00:01:06.047Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,8 +35,8 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 17,
-   "proximos": 10
+   "total": 16,
+   "proximos": 9
   },
   {
    "id": "pumas",
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401863614",
-   "miLado": "local",
-   "idEspn": "401863614",
-   "liga": "concacaf.leagues.cup",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs León",
-   "inicio": "2026-08-12T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "Leagues Cup",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "León",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/228.png",
-   "finalizado": true,
-   "marcador": "2 - 3"
-  },
   {
    "id": "espn-600059185",
    "miLado": null,
