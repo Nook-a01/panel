@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-13T04:45:09.020Z",
+ "actualizado": "2026-09-13T10:15:52.512Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -683,8 +683,8 @@
    "visitante": "Nashville SC",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",
