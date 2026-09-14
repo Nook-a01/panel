@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T01:03:01.735Z",
+ "actualizado": "2026-09-14T06:16:12.903Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -970,9 +969,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1007,9 +1005,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1032,9 +1029,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1045,9 +1041,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1226,8 +1221,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1427,6 +1423,19 @@
       "pos": 6
      },
      {
+      "equipo": "Philadelphia Union",
+      "abrev": "PHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+      "pj": "25",
+      "pts": "33",
+      "g": "9",
+      "e": "6",
+      "p": "10",
+      "dg": "+7",
+      "mio": false,
+      "pos": 7
+     },
+     {
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
@@ -1437,7 +1446,7 @@
       "p": "9",
       "dg": "+6",
       "mio": false,
-      "pos": 7
+      "pos": 8
      },
      {
       "equipo": "FC Cincinnati",
@@ -1449,19 +1458,6 @@
       "e": "8",
       "p": "8",
       "dg": "-7",
-      "mio": false,
-      "pos": 8
-     },
-     {
-      "equipo": "Philadelphia Union",
-      "abrev": "PHI",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "24",
-      "pts": "30",
-      "g": "8",
-      "e": "6",
-      "p": "10",
-      "dg": "+2",
       "mio": false,
       "pos": 9
      },
@@ -1618,8 +1614,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1691,8 +1688,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1961,6 +1959,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
+     "resumen": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
+     "fecha": "2026-09-14T05:18:56Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/ss_20260914_010055761_3660692/ss_20260914_010055761_3660692.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49937225/cavan-sullivan-continues-red-hot-run-2-goals-philly-win"
+    },
+    {
+     "titulo": "Chicago Fire FC vs. New England Revolution - Game Highlights",
+     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. New England Revolution, 09/13/2026",
+     "fecha": "2026-09-14T03:57:14Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0913/576b9aad-e1ac-4d9f-b048-5778b5d7d191/576b9aad-e1ac-4d9f-b048-5778b5d7d191.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49934683/chicago-fire-fc-vs-new-england-revolution-game-highlights"
+    },
+    {
+     "titulo": "Revs pour water on Fire's bid to leapfrog them in East",
+     "resumen": "Dor Turgeman had a first-half goal and a second-half assist, Peyton Miller scored in his 50th MLS start, and the New England Revolution beat the Chicago Fire 2-1 on Sunday.",
+     "fecha": "2026-09-14T01:41:40Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761812.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761812"
+    },
+    {
      "titulo": "Messi scores, but Nashville strikes late to deny Miami win",
      "resumen": "Lionel Messi scored a second-half goal, but Nashville SC struck back in stoppage time to earn a 2-2 draw at Inter Miami and maintain its nine-point lead at the top of the Eastern Conference.",
      "fecha": "2026-09-13T03:40:15Z",
@@ -1975,32 +1994,11 @@
      "link": "http://www.espn.com/soccer/report/_/gameId/761806"
     },
     {
-     "titulo": "Griezmann scores in 5th straight to help Orlando beat Toronto",
-     "resumen": "Antoine Griezmann scored for the eighth time in 10 matches, and rookie Harvey Sarajian notched his first goal and assist to spark Orlando City to a 3-0 victory over Toronto FC on Saturday night.",
-     "fecha": "2026-09-13T02:44:06Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761801.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761801"
-    },
-    {
      "titulo": "Sporting Kansas City vs. LAFC - Game Highlights",
      "resumen": "Watch the Game Highlights from Sporting Kansas City vs. LAFC, 09/12/2026",
      "fecha": "2026-09-13T02:43:35Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0913/8d8533b2-0b31-4d77-a13c-265fca6616a8/8d8533b2-0b31-4d77-a13c-265fca6616a8.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49922867/sporting-kansas-city-vs-lafc-game-highlights"
-    },
-    {
-     "titulo": "Sean Johnson has 2 saves for DC United in 0-0 tie with Atlanta",
-     "resumen": "Sean Johnson had two saves Saturday night for D.C. United in a 0-0 tie with Atlanta United.",
-     "fecha": "2026-09-13T02:24:12Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761803.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761803"
-    },
-    {
-     "titulo": "Donkor goals sees Red Bulls beat Crew to end winless streak at 6",
-     "resumen": "Ronald Donkor scored in the 89th minute and Ethan Horvath made three saves to help the New York Red Bulls end a six-match winless streak with a 1-0 victory over the Columbus Crew on Saturday night.",
-     "fecha": "2026-09-13T02:23:12Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761804.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761804"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
