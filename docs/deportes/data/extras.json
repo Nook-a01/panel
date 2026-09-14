@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T06:16:12.903Z",
+ "actualizado": "2026-09-14T12:53:32.330Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -945,8 +945,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -969,8 +970,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1029,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1041,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -2303,9 +2307,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2611,46 +2616,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Madring's F1 debut left everyone dissatisfied, even Spanish GP's top 3",
-     "resumen": "Many in the paddock were wary that the Spanish GP's brand-new Madring would make for dull racing, and that's exactly what came to pass Sunday.",
-     "fecha": "2026-09-13T21:59:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1716187_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/49932658/madring-f1-debut-left-everyone-dissatisfied-even-spanish-gp-top-three-kimi-antonelli-max-verstappen-lando-norris"
+     "titulo": "George Russell follows Lewis Hamilton in conceding F1 2026 title to Kimi Antonelli",
+     "resumen": "George Russell has all but conceded defeat in the year's title race, saying \"it's exceptionally unlikely\" he will catch Mercedes teammate Kimi Antonelli.",
+     "fecha": "2026-09-14T12:46:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0822/r1705296_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49939067/george-russell-follows-lewis-hamilton-conceding-f1-2026-title-kimi-antonelli"
     },
     {
-     "titulo": "Spanish Grand Prix: F1 drivers pushing for 'obvious' changes to Madring after debut",
-     "resumen": "Formula 1 drivers are already pushing for changes to be made to the Madring circuit after its debut Spanish Grand Prix produced a lifeless dud.",
-     "fecha": "2026-09-13T18:33:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1716043_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49930110/spanish-grand-prix-f1-drivers-pushing-obvious-changes-madring-debut"
+     "titulo": "Honda replacing F1 engine chief after poor start to return with Aston Martin",
+     "resumen": "Honda is replacing the head of its Formula 1 power unit project following the manufacturer's disappointing start to 2026 as Aston Martin's engine supplier.",
+     "fecha": "2026-09-14T10:33:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0805/r1697855_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49938723/honda-replacing-f1-engine-chief-poor-start-return-aston-martin"
     },
     {
-     "titulo": "Lando Norris hits out at F1 Virtual Safety Car rule after losing 'deserved' Spanish GP win",
-     "resumen": "Lando Norris bemoaned Formula 1's Virtual Safety Car rules after he appeared to lose a nailed-on Spanish Grand Prix win, saying \"it's a rule that shouldn't define a race.\"",
-     "fecha": "2026-09-13T18:09:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715935_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867189/spanish-grand-prix-formula-1-lando-norris-virtual-safety-car-deserved"
+     "titulo": "Spanish GP takeaways: Kimi Antonelli marches on as Lando Norris suffers, Madring falls flat",
+     "resumen": "The Spanish Grand Prix is done and dusted and drivers got their first taste of the brand-new Madring.",
+     "fecha": "2026-09-14T09:52:13Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0913/r1716010_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49929224/spanish-grand-prix-takeaways-kimi-antonelli-lando-norris-suffers-madring-falls-flat"
     },
     {
-     "titulo": "Hamilton concedes F1 title after early Spanish GP retirement; 'no stopping' Antonelli",
-     "resumen": "Lewis Hamilton's Spanish Grand Prix lasted just six laps before he was forced to retire with brake issues.",
-     "fecha": "2026-09-13T16:58:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715910_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49926922/lewis-hamilton-suffers-early-retirement-spanish-grand-prix"
+     "titulo": "Antonelli admits Norris deserved to win the Spanish Grand Prix",
+     "resumen": "Antonelli admits Norris deserved to win the Spanish Grand Prix",
+     "fecha": "2026-09-14T09:28:10Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/dm_260914_COM_F1_Presser_Antonelli_admits_Norris_deserved_to_win_the_Spanish_Grand_Prix_20260914_GLOBAL/dm_260914_COM_F1_Presser_Antonelli_admits_Norris_deserved_to_win_the_Spanish_Grand_Prix_20260914_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49938458/antonelli-admits-norris-deserved-win-spanish-grand-prix"
     },
     {
-     "titulo": "Ugo Ugochukwu becomes first U.S. driver to win F3 title",
-     "resumen": "Ugo Ugochukwu finished second in Sunday's Spanish Grand Prix to become the first American driver to win the Formula 3 title.",
-     "fecha": "2026-09-13T16:47:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715963_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49928828/ugo-ugochukwu-american-driver-win-f3-title-dropped-mclaren"
+     "titulo": "Max vs 100: F1 drivers predict how Verstappen will fare racing 100 drivers",
+     "resumen": "Max Verstappen will start from the back of a 101 go-kart grid with the sole aim of reaching the front of the pack in 30 laps.",
+     "fecha": "2026-09-14T08:51:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716461_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49937838/max-vs-100-f1-drivers-predict-how-verstappen-fare-racing-100-drivers"
     },
     {
-     "titulo": "Spanish Grand Prix results: Kimi Antonelli capitalises on Lando Norris misfortune for another win - as it happened",
-     "resumen": "Kimi Antonelli capitalised on some bad luck for Lando Norris to win the Spanish Grand Prix, and you can relive all the race updates on ESPN.",
-     "fecha": "2026-09-13T16:05:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715883_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49867240/spanish-grand-prix-2026-live-madrid-updates-results-analysis-commentary"
+     "titulo": "Verstappen: There will be no excuses after Max vs 100",
+     "resumen": "Verstappen: There will be no excuses after Max vs 100",
+     "fecha": "2026-09-14T08:48:28Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/dm_260914_COM_F1_Interview_Verstappen_There_will_be_no_excuses_after_Max_vs_100_20260914_GLOBAL/dm_260914_COM_F1_Interview_Verstappen_There_will_be_no_excuses_after_Max_vs_100_20260914_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49938293/there-no-excuses-max-vs-100"
     }
    ],
    "resultados": null,
