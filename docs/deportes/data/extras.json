@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-13T23:08:57.769Z",
+ "actualizado": "2026-09-14T01:03:01.735Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -89,6 +89,19 @@
       "pos": 5
      },
      {
+      "equipo": "Independiente",
+      "abrev": "IND",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+      "pj": "9",
+      "pts": "14",
+      "g": "4",
+      "e": "2",
+      "p": "3",
+      "dg": "+1",
+      "mio": false,
+      "pos": 6
+     },
+     {
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
@@ -99,7 +112,7 @@
       "p": "2",
       "dg": "+2",
       "mio": false,
-      "pos": 6
+      "pos": 7
      },
      {
       "equipo": "Unión (Santa Fe)",
@@ -112,20 +125,20 @@
       "p": "4",
       "dg": "+2",
       "mio": false,
-      "pos": 7
+      "pos": 8
      },
      {
-      "equipo": "Independiente",
-      "abrev": "IND",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-      "pj": "8",
-      "pts": "13",
-      "g": "4",
-      "e": "1",
-      "p": "3",
-      "dg": "+1",
+      "equipo": "San Lorenzo",
+      "abrev": "SLO",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+      "pj": "9",
+      "pts": "11",
+      "g": "3",
+      "e": "2",
+      "p": "4",
+      "dg": "-2",
       "mio": false,
-      "pos": 8
+      "pos": 9
      },
      {
       "equipo": "Estudiantes de La Plata",
@@ -138,7 +151,7 @@
       "p": "5",
       "dg": "0",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Lanús",
@@ -150,19 +163,6 @@
       "e": "1",
       "p": "4",
       "dg": "0",
-      "mio": false,
-      "pos": 10
-     },
-     {
-      "equipo": "San Lorenzo",
-      "abrev": "SLO",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "8",
-      "pts": "10",
-      "g": "3",
-      "e": "1",
-      "p": "4",
-      "dg": "-2",
       "mio": false,
       "pos": 11
      },
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -971,8 +970,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1007,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1031,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1043,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1375,12 +1378,12 @@
       "equipo": "New England Revolution",
       "abrev": "NE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "24",
-      "pts": "40",
-      "g": "12",
+      "pj": "25",
+      "pts": "43",
+      "g": "13",
       "e": "4",
       "p": "8",
-      "dg": "+9",
+      "dg": "+10",
       "mio": false,
       "pos": 3
      },
@@ -1401,12 +1404,12 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "23",
+      "pj": "24",
       "pts": "39",
       "g": "11",
       "e": "6",
-      "p": "6",
-      "dg": "+11",
+      "p": "7",
+      "dg": "+10",
       "mio": false,
       "pos": 5
      },
@@ -1589,8 +1592,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1601,8 +1605,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1613,9 +1618,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1687,9 +1691,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
