@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T12:53:32.330Z",
+ "actualizado": "2026-09-14T18:37:23.156Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1250,11 +1251,19 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "Ecuador hires Marcelo Gallardo through 2030 World Cup",
+     "resumen": "Marcelo Gallardo, one of the most decorated coaches in the history of the Argentine league, has reached an agreement to manage Ecuador ahead of the 2030 FIFA World Cup.",
+     "fecha": "2026-09-14T17:36:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716613_1024x576_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49941399/ecuador-hires-marcelo-gallardo-2030-world-cup"
+    },
     {
      "titulo": "Two FIFA officials get lifetime bans for misuse of funds",
      "resumen": "FIFA judges imposed life bans on two former federation presidents for financial misconduct.",
@@ -1310,13 +1319,6 @@
      "fecha": "2026-09-09T08:32:01Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0909/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49877552/kane-win-2026-men-ballon-dor"
-    },
-    {
-     "titulo": "Popovic comfortable with Socceroos penalty shootout choices at World Cup",
-     "resumen": "Socceroos coach Tony Popovic isn't second-guessing the shootout that saw his side eliminated from the FIFA World Cup, saying that he would have made the same choices had the two sides come back the next day.",
-     "fecha": "2026-09-09T01:38:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713099_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49865329/popovic-comfortable-socceroos-penalty-shootout-choices-world-cup"
     },
     {
      "titulo": "Mbappe backs himself as the best in the world",
@@ -1963,6 +1965,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Cavan Sullivan records first 2-goal game as Union crush San Diego",
+     "resumen": "Cavan Sullivan recorded his first two-goal game in MLS and assisted on another goal to help the Philadelphia Union cruise to a 5-0 victory over San Diego on Sunday night.",
+     "fecha": "2026-09-14T17:16:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716577_1024x576_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49941016/cavan-sullivan-first-2-goal-game-union-crush-san-diego"
+    },
+    {
+     "titulo": "MLS Power Rankings: Chicago's slide continues as Nashville cements top spot",
+     "resumen": "The Chicago Fire haven't tasted victory in more than three weeks, precipitating a slide down this week's edition of ESPN's MLS Power Rankings.",
+     "fecha": "2026-09-14T16:35:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716553_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49940062/mls-power-rankings-chicago-fire-slide-continues-nashville-sc-cement-top-spot"
+    },
+    {
      "titulo": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
      "resumen": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
      "fecha": "2026-09-14T05:18:56Z",
@@ -1989,20 +2005,6 @@
      "fecha": "2026-09-13T03:40:15Z",
      "imagen": "https://a.espncdn.com/photo/2026/0913/r1715698_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49921983/lionel-messi-goal-inter-miami-vs-nashville-mls-supporters-shield"
-    },
-    {
-     "titulo": "André Luiz, Taylor Calheira help Sporting KC stun LAFC 3-1 to end long winless streak",
-     "resumen": "André Luiz and Taylor Calheira scored first-half goals and Sporting Kansas City shocked Los Angeles FC with a 3-1 victory on Saturday night that ended a seven-match winless streak.",
-     "fecha": "2026-09-13T03:02:59Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761806.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761806"
-    },
-    {
-     "titulo": "Sporting Kansas City vs. LAFC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Sporting Kansas City vs. LAFC, 09/12/2026",
-     "fecha": "2026-09-13T02:43:35Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0913/8d8533b2-0b31-4d77-a13c-265fca6616a8/8d8533b2-0b31-4d77-a13c-265fca6616a8.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49922867/sporting-kansas-city-vs-lafc-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2307,10 +2309,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2616,6 +2617,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max vs 100 explained: Rules, drivers, shortcuts and how Verstappen can win",
+     "resumen": "Everything you need to know ahead of Max v 100 at Silverstone, as Max Verstappen takes on a unique new challenge.",
+     "fecha": "2026-09-14T15:50:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716537_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49938264/max-vs-100-explained-rules-drivers-shortcuts-how-verstappen-win"
+    },
+    {
+     "titulo": "Max vs 100: Meet the drivers racing against Red Bull's Verstappen",
+     "resumen": "Ahead of Max vs 100, here's single driver competing against Max Verstappen in the event streamed live on Disney+.",
+     "fecha": "2026-09-14T15:31:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716555_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439347/max-vs-100-meet-drivers-racing-red-bulls-verstappen"
+    },
+    {
      "titulo": "George Russell follows Lewis Hamilton in conceding F1 2026 title to Kimi Antonelli",
      "resumen": "George Russell has all but conceded defeat in the year's title race, saying \"it's exceptionally unlikely\" he will catch Mercedes teammate Kimi Antonelli.",
      "fecha": "2026-09-14T12:46:09Z",
@@ -2642,20 +2657,6 @@
      "fecha": "2026-09-14T09:28:10Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/dm_260914_COM_F1_Presser_Antonelli_admits_Norris_deserved_to_win_the_Spanish_Grand_Prix_20260914_GLOBAL/dm_260914_COM_F1_Presser_Antonelli_admits_Norris_deserved_to_win_the_Spanish_Grand_Prix_20260914_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49938458/antonelli-admits-norris-deserved-win-spanish-grand-prix"
-    },
-    {
-     "titulo": "Max vs 100: F1 drivers predict how Verstappen will fare racing 100 drivers",
-     "resumen": "Max Verstappen will start from the back of a 101 go-kart grid with the sole aim of reaching the front of the pack in 30 laps.",
-     "fecha": "2026-09-14T08:51:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716461_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49937838/max-vs-100-f1-drivers-predict-how-verstappen-fare-racing-100-drivers"
-    },
-    {
-     "titulo": "Verstappen: There will be no excuses after Max vs 100",
-     "resumen": "Verstappen: There will be no excuses after Max vs 100",
-     "fecha": "2026-09-14T08:48:28Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/dm_260914_COM_F1_Interview_Verstappen_There_will_be_no_excuses_after_Max_vs_100_20260914_GLOBAL/dm_260914_COM_F1_Interview_Verstappen_There_will_be_no_excuses_after_Max_vs_100_20260914_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49938293/there-no-excuses-max-vs-100"
     }
    ],
    "resultados": null,
@@ -2673,18 +2674,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Tom Aspinall vacates UFC heavyweight title amid ongoing eye issues",
+     "resumen": "Tom Aspinall has decided to vacate his UFC heavyweight title as a result of \"ongoing complications\" with injuries to his eyes.",
+     "fecha": "2026-09-14T14:04:08Z",
+     "imagen": "https://a.espncdn.com/photo/2024/0728/r1364408_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/ufc/story/_/id/49938121/tom-aspinall-vacates-ufc-heavyweight-title-amid-ongoing-eye-issues"
+    },
+    {
+     "titulo": "All-time UFC heavyweight champions",
+     "resumen": "From Mark Coleman to Tom Aspinall, check out which fighters have held the belt in the promotion's heaviest division.",
+     "fecha": "2026-09-14T13:38:49Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0621/r1509636_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/13463783/all-ufc-heavyweight-champions"
+    },
+    {
+     "titulo": "Current and all-time UFC champions",
+     "resumen": "From a heavyweight vacancy to strawweight Mackenzie Dern, check out the list of titleholders in each division.",
+     "fecha": "2026-09-14T13:30:05Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1116/r1576204_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions"
+    },
+    {
      "titulo": "Grasso takes out Fiorot to stay in UFC title picture; Silva taps Delgado",
      "resumen": "Alexa Grasso took an impressive step toward another title shot with a unanimous decision win over Manon Fiorot, while Jean Silva submitted Jose Miguel Delgado at Noche UFC on Saturday.",
      "fecha": "2026-09-13T17:27:37Z",
      "imagen": "https://a.espncdn.com/photo/2026/0913/r1715675_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49921811/grasso-takes-fiorot-stay-ufc-title-picture-silva-taps-delgado"
-    },
-    {
-     "titulo": "Cris Cyborg is still going strong as a force in women's P4P top 10",
-     "resumen": "At age 41, PFL women's featherweight champion continues win streak to secure spot in ESPN P4P top 10.",
-     "fecha": "2026-09-13T03:11:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0825/r1706696_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     },
     {
      "titulo": "Song Yadong rises in divisional rankings after shocking KO",
@@ -2699,20 +2714,6 @@
      "fecha": "2026-09-05T21:32:58Z",
      "imagen": "https://a.espncdn.com/photo/2026/0905/r1711964_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49839558/shevchenko-injured-vacates-silva-wang-vie-belt-ufc-332"
-    },
-    {
-     "titulo": "Song Yadong KO's Umar Nurmagomedov in massive UFC upset",
-     "resumen": "Song Yadong pulled off a massive upset by knocking out heavily favored Umar Nurmagomedov in the men's bantamweight main event of UFC Fight Night in Shanghai.",
-     "fecha": "2026-08-29T16:49:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0829/r1708497_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49762250/song-yadong-kos-umar-nurmagomedov-massive-ufc-upset-shanghai"
-    },
-    {
-     "titulo": "Injured UFC champion Ulberg hopes to return 'early next year'",
-     "resumen": "UFC light heavyweight champion Carlos Ulberg, who is recovering from an ACL tear, hopes to return to the Octagon \"early next year,\" he says.",
-     "fecha": "2026-08-27T17:30:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0412/r1642214_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49743588/injured-ufc-champion-ulberg-hopes-return-early-next-year"
     }
    ],
    "resultados": [
