@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T18:37:23.156Z",
+ "actualizado": "2026-09-15T07:43:00.862Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -1367,7 +1367,7 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC Fight Night: Las Vegas",
+   "titulo": "UFC Fight Night: Moicano vs. Nolan",
    "inicio": "2026-10-31T21:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
