@@ -7,7 +7,7 @@ Sin datos personales: este repo es público.
 
 | App | Dónde | Estado |
 |---|---|---|
-| Deportes | `docs/deportes/` | Andando. Marcador en vivo por ESPN + aviso push que se actualiza solo. |
+| Deportes | `docs/deportes/` | Andando. Marcador en vivo por ESPN dentro de la app. El aviso push en vivo se apagó el 14/9 a pedido (el vivo lo mira en la app de Apple); siguen los avisos antes de cada partido. |
 | Plata | `docs/plata/` | Andando. Rehecha en 3 pestañas (Hoy, Movimientos, Fijos) y un engranaje con el resto: plata libre hasta el próximo cobro, pagos con su fecha, suscripciones, fijos cada 15 días o cada 2/4 meses y plata apartada para un gasto. |
 | Campamento | `docs/campamento/` | Andando. Diseño rehecho; el día actual es el primero sin marcar, no la fecha del calendario. |
 | Instagram | `docs/instagram/` | Andando. `resultados.html` es el panel del teléfono: 6 pestañas, fotos por proxy, de a 20 perfiles. |
@@ -32,7 +32,7 @@ un `<img src>` no puede mandar encabezados.
 
 ## Automático
 
-- `.github/workflows/vivo.yml` — avisa los goles mientras hay partido.
+- `.github/workflows/vivo.yml` — avisaba los goles mientras había partido. Sin horario desde el 14/9; se puede correr a mano.
 - `.github/workflows/programa.yml` — compila el programa de escritorio.
 - Los reportes salen solos el día 1 de cada mes.
 

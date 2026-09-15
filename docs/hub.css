@@ -26,8 +26,9 @@
 
 *{box-sizing:border-box}
 
-html,body{height:100%}
+html{height:100%}
 body{
+  min-height:100%;
   margin:0;
   background:var(--papel);
   color:var(--tinta);
@@ -51,7 +52,10 @@ body{
   position:relative; z-index:2;
   display:flex; align-items:baseline; justify-content:space-between;
   gap:1rem;
-  padding:max(1.4rem, env(safe-area-inset-top)) 1.5rem .9rem;
+  /* Se suma al área segura en vez de tomar el mayor de los dos. En el iPhone
+     con la app instalada, el sistema difumina una franja debajo del reloj;
+     con max() la marca caía justo adentro de ese borroneo. */
+  padding:calc(env(safe-area-inset-top, 0px) + 1.4rem) 1.5rem .9rem;
 }
 .marca{
   margin:0;
@@ -98,7 +102,11 @@ body{
 
 .tira{
   position:relative;
-  flex:1 1 0;
+  /* Crece para llenar la pantalla, pero NUNCA se achica por debajo de lo
+     que mide su contenido. Con 1 1 0 las cinco tiras se repartían el alto
+     del celular a la fuerza, el texto no entraba en su pedazo y se salía
+     por arriba y por abajo, pisando a la de al lado. */
+  flex:1 0 auto;
   display:flex;
   align-items:center;
   gap:clamp(.8rem, 3vw, 1.6rem);
@@ -242,6 +250,7 @@ body{
   padding:.18em .55em;
   border:1px solid currentColor;
   border-radius:100px;
+  white-space:nowrap;
   font-size:.94em;
   opacity:.85;
 }
@@ -299,6 +308,8 @@ body{
 @media (min-width:900px) and (min-height:520px){
   .tiras{ flex-direction:row; gap:3px; padding:0 1rem 1rem }
   .tira{
+    /* En columnas sí se reparten el ancho por igual. */
+    flex:1 1 0;
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-end;
@@ -315,9 +326,43 @@ body{
   .flecha{ position:absolute; top:1.6rem; right:1.5rem }
   /* El tamaño se ata al ancho de la columna, no al de la pantalla.
      Antes usaba 5.2vw: a ~950 px las columnas quedan de unos 230 px
-     pero el título ya medía 37 px, y "Campamento" se cortaba. */
-  .tira h2{ font-size:clamp(1.15rem, 2.5vw, 2.05rem) }
+     pero el título ya medía 37 px, y "Campamento" se cortaba.
+     Después se sumó la quinta tira (Estudio) y 2.5vw volvió a quedar
+     grande: a 1280 px cada columna mide 247 px y "Campamento" salía
+     partido en "Campament / o". Ahora la cuenta es la de cinco columnas:
+     (ancho - márgenes - separaciones) / 5, menos el relleno de la tira,
+     dividido por lo que ocupa la palabra más larga (unos 6,7 cuerpos).
+     No se usa el ancho de la propia tira (cqi) porque al apuntar la
+     columna se ensancha y el título cambiaría de tamaño en plena
+     animación. */
+  .tira h2{ font-size:clamp(1.05rem, calc((100vw - 17rem - 12px) / 34), 2.05rem) }
   .que{ max-width:30ch }
+}
+
+/* ── celular y pantallas angostas: las tiras apiladas ─────────
+   El número va arriba a la derecha y la flecha abajo a la derecha, los
+   dos fuera de la columna del texto: antes cada uno se comía su propia
+   columna y al texto le quedaban unos 250 px en un iPhone.
+   El dibujo de fondo baja y el velo se hace horizontal: en la tira
+   apilada el texto ocupa todo el alto, así que un velo que sólo tapa
+   la parte de abajo dejaba las líneas cruzando el título. */
+@media (max-width:899.98px), (max-height:519.98px){
+  .tiras{ gap:.55rem }
+  .tira{
+    align-items:flex-start;
+    padding:1.05rem 1.1rem 1.15rem 1.3rem;
+  }
+  .num{ position:absolute; top:1.1rem; right:1.1rem; padding-top:0 }
+  .flecha{ position:absolute; right:1.1rem; bottom:.8rem; font-size:1.2rem }
+  .cuerpo{ padding-right:1.6rem }
+  .que{ max-width:none }
+  .tira .arte{ opacity:calc(var(--img-op, .22) * .55) }
+  .tira .arte::after{
+    background:linear-gradient(90deg,
+      color-mix(in srgb, var(--fondo) 94%, transparent) 0%,
+      color-mix(in srgb, var(--fondo) 86%, transparent) 62%,
+      color-mix(in srgb, var(--fondo) 60%, transparent) 100%);
+  }
 }
 
 /* ── si pediste menos movimiento, se apaga todo ───────────── */
