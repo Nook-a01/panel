@@ -25,7 +25,9 @@ import { extraerPanel, reemplazarFuncion, AVISAR_DIRECTO } from "./lib/panel-cod
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.3.0";
+// El servidor del Panel: ahí se sube el escaneo para verlo en el celular.
+const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
+const VERSION = "1.4.0";
 
 /* ─────────── 2. el guion que corre adentro de Instagram ─────────── */
 
@@ -55,15 +57,23 @@ const contenido = panel => `// Panel de Instagram — se ejecuta adentro de inst
      lo demás sin tocar. Como el panel se define dentro de este
      alcance, sus llamadas a fetch() encuentran ésta primero, y no
      hubo que modificar ni una línea del panel. */
+  /* Lo mismo vale para el servidor del Panel, adonde se sube el escaneo para
+     verlo en el celular: desde acá Instagram también lo bloquea. Hasta la
+     1.3.0 ese envío salía directo y no llegaba nunca. */
+  const PANEL_WORKER = ${JSON.stringify(PANEL_WORKER)};
   const fetchReal = window.fetch.bind(window);
   const fetch = (url, opciones) => {
     const dir = typeof url === "string" ? url : (url && url.url) || "";
-    if (!dir.startsWith(CONTADOR)) return fetchReal(url, opciones);
+    if (!dir.startsWith(CONTADOR + "/") && !dir.startsWith(PANEL_WORKER + "/")) return fetchReal(url, opciones);
+    const o = opciones || {};
     return new Promise(resolver => {
       chrome.runtime.sendMessage(
-        { tipo: "contador", url: dir, cuerpo: opciones && opciones.body },
-        r => resolver({ ok: !!(r && r.ok), status: r && r.ok ? 200 : 0,
-                        json: async () => (r && r.datos) || {} })
+        { tipo: "salir", url: dir, metodo: o.method || "", cabeceras: o.headers || null, cuerpo: o.body },
+        r => {
+          void chrome.runtime.lastError;
+          resolver({ ok: !!(r && r.ok), status: (r && r.status) || 0,
+                     json: async () => (r && r.datos) || {} });
+        }
       );
     });
   };
@@ -92,6 +102,24 @@ ${panel}
       alert("No se pudo abrir el panel: " + (e && e.message ? e.message : e));
     }).finally(() => { abriendo = false; });
   });
+
+  // Llegaste por el enlace del panel: la página de instalación te manda a
+  // instagram.com/?igpp=abrir cuando ya tenés la extensión. Se abre sola UNA
+  // vez y se limpia la dirección, así recargar no la vuelve a abrir.
+  if (/[?&]igpp=abrir(&|$)/.test(location.search)) {
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete("igpp");
+      history.replaceState(history.state, "", u.pathname + u.search + u.hash);
+    } catch (e) {}
+    setTimeout(() => {
+      if (document.getElementById("igpp-root") || abriendo) return;
+      abriendo = true;
+      Promise.resolve(IGPanelPro()).catch(e => {
+        alert("No se pudo abrir el panel: " + (e && e.message ? e.message : e));
+      }).finally(() => { abriendo = false; });
+    }, 1500);
+  }
 })();
 `;
 
@@ -108,6 +136,7 @@ const fondo = `// Proceso de fondo de la extensión.
 // está declarado en el manifiesto.
 
 const CONTADOR = ${JSON.stringify(CONTADOR)};
+const PANEL_WORKER = ${JSON.stringify(PANEL_WORKER)};
 
 chrome.action.onClicked.addListener(tab => {
   if (!tab || !tab.id) return;
@@ -130,20 +159,40 @@ chrome.action.onClicked.addListener(tab => {
 });
 
 chrome.runtime.onMessage.addListener((msg, _remitente, responder) => {
-  if (!msg || msg.tipo !== "contador") return false;
-  if (typeof msg.url !== "string" || !msg.url.startsWith(CONTADOR)) {
-    responder({ ok: false });
-    return false;
+  if (!msg || msg.tipo !== "salir" || typeof msg.url !== "string") return false;
+
+  const alContador = msg.url.startsWith(CONTADOR + "/");
+  const alPanel = msg.url.startsWith(PANEL_WORKER + "/");
+  if (!alContador && !alPanel) { responder({ ok: false, status: 0 }); return false; }
+
+  // Al contador, igual que siempre: POST de texto plano. Al servidor del
+  // Panel, sólo lo que usa el enlace del celular: leer, subir y borrar.
+  const metodo = alContador ? "POST" : String(msg.metodo || "GET").toUpperCase();
+  if (!["GET", "POST", "DELETE"].includes(metodo)) { responder({ ok: false, status: 0 }); return false; }
+
+  const pedido = { method: metodo };
+  if (alContador) {
+    pedido.headers = { "content-type": "text/plain" };
+    pedido.body = msg.cuerpo || "{}";
+  } else {
+    if (msg.cabeceras && typeof msg.cabeceras === "object") pedido.headers = msg.cabeceras;
+    if (metodo === "POST") pedido.body = msg.cuerpo || "{}";
   }
-  fetch(msg.url, {
-    method: "POST",
-    headers: { "content-type": "text/plain" },
-    body: msg.cuerpo || "{}",
-  })
-    .then(async r => responder({ ok: r.ok, datos: await r.json().catch(() => ({})) }))
-    .catch(() => responder({ ok: false }));
+
+  fetch(msg.url, pedido)
+    .then(async r => responder({ ok: r.ok, status: r.status, datos: await r.json().catch(() => ({})) }))
+    .catch(() => responder({ ok: false, status: 0 }));
   return true;   // la respuesta llega después: hay que dejar el canal abierto
 });
+`;
+
+/* ─────────── 3b. la marca en la página de instalación ─────────── */
+
+const marca = `// Corre sólo en la página de instalación del panel. No lee nada: deja una
+// marca con la versión para que la página sepa que la extensión está puesta
+// y, si llegaste por el enlace, te mande directo a Instagram con el panel.
+document.documentElement.setAttribute("data-panel-instalado", ${JSON.stringify(VERSION)});
+document.dispatchEvent(new CustomEvent("panel-instagram-listo", { detail: { version: ${JSON.stringify(VERSION)} } }));
 `;
 
 /* ─────────── 4. el manifiesto ─────────── */
@@ -158,12 +207,17 @@ const manifiesto = {
   host_permissions: [
     "https://www.instagram.com/*",
     CONTADOR + "/*",
+    PANEL_WORKER + "/*",
   ],
   background: { service_worker: "fondo.js" },
   action: { default_title: "Abrir el Panel de Instagram" },
   content_scripts: [{
     matches: ["https://www.instagram.com/*"],
     js: ["contenido.js"],
+    run_at: "document_idle",
+  }, {
+    matches: ["https://nook-a01.github.io/panel/instagram/*"],
+    js: ["marca.js"],
     run_at: "document_idle",
   }],
   icons: { 16: "icono-16.png", 48: "icono-48.png", 128: "icono-128.png" },
@@ -284,6 +338,7 @@ mkdirSync(SALIDA, { recursive: true });
 writeFileSync(SALIDA + "/manifest.json", JSON.stringify(manifiesto, null, 2));
 writeFileSync(SALIDA + "/contenido.js", contenido(panel));
 writeFileSync(SALIDA + "/fondo.js", fondo);
+writeFileSync(SALIDA + "/marca.js", marca);
 for (const s of [16, 48, 128]) writeFileSync(`${SALIDA}/icono-${s}.png`, png(s, dibujo));
 
 writeFileSync(SALIDA + "/LEEME.txt", `Panel de Instagram — extensión para Chrome, Edge, Brave y Opera
@@ -310,6 +365,9 @@ CÓMO USARLA
   Entrá a instagram.com con tu sesión abierta y tocá el ícono.
   Tocalo de nuevo para cerrar el panel.
 
+  O tocá el enlace que te pasaron: con la extensión puesta te lleva
+  directo a Instagram con el panel abierto.
+
 SI ALGO NO ANDA
 
   · "No pasa nada al tocar el ícono": recargá la pestaña de Instagram.
@@ -327,6 +385,12 @@ QUÉ SE ENVÍA
   mirás. Nada más: no salen tus seguidores, ni tus mensajes, ni tus
   historias, ni ningún contenido de tu cuenta, y la contraseña no se
   pide nunca. Podés cambiar de idea desde el pie del panel.
+
+  Aparte, y sólo si tocás "Ver en el celular" y aceptás: tus resultados
+  (los usuarios que seguís, si te siguen de vuelta y tus totales) se
+  guardan en un servidor para verlos en tu teléfono con un enlace
+  propio. Quien tenga ese enlace ve la lista: no lo compartas. Se borran
+  desde el mismo botón, y solos si pasan 90 días sin escanear.
 
 Versión ${VERSION}
 `);

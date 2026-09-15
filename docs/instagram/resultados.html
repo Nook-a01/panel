@@ -202,9 +202,10 @@
   <div class="cabeza">
     <span class="cuadro"></span>
     <span class="titulo">Panel de <em>Instagram</em></span>
-    <span class="ver" id="ver">v1.3</span>
+    <span class="ver" id="ver">v1.4</span>
   </div>
 
+  <div id="hola" style="display:none;font-weight:800;font-size:1.25rem;padding:14px 16px 2px"></div>
   <div class="pestanas" id="pestanas"></div>
 
   <div class="cuerpo">
@@ -225,7 +226,13 @@
 <script>
 (function(){
   var WORKER = 'https://plata.hamcqc.workers.dev';
-  var LS = 'panel-ig-clave', LS_WL = 'panel-ig-wl';
+  // Con ?c=<código> la página muestra el panel de la persona dueña de ese
+  // enlace: no pide clave, y su lista blanca local va aparte de la tuya.
+  var CODIGO = (function(){
+    var m = /[?&]c=([a-f0-9]{32})(&|$)/i.exec(location.search);
+    return m ? m[1].toLowerCase() : '';
+  })();
+  var LS = 'panel-ig-clave', LS_WL = CODIGO ? 'panel-ig-wl-' + CODIGO : 'panel-ig-wl';
   // 20 por página, con ‹ › para moverse — como el panel de la computadora.
   // Una lista de 229 que sólo crece con "ver más" se vuelve imposible de
   // recorrer en un teléfono: no se sabe dónde se está ni se puede volver.
@@ -322,7 +329,7 @@
   // se traen sólo las que entran en pantalla.
   function foto(usuario){
     return '<img loading="lazy" decoding="async" alt="" src="' + WORKER + '/foto?u=' +
-      encodeURIComponent(usuario) + '">';
+      encodeURIComponent(usuario) + (CODIGO ? '&c=' + CODIGO : '') + '">';
   }
 
   function filaUsuario(u, metaHtml, conEstrella){
@@ -530,6 +537,8 @@
     $('#pedirClave').className = 'oculto';
     $('#aviso').className = 'aviso oculto';
     $('#vista').className = '';
+    var hola = $('#hola');
+    if(hola && datos.usuario){ hola.textContent = '👋 Hola, @' + datos.usuario; hola.style.display = 'block'; }
     pintarPestanas();
     $('#vista').innerHTML =
       pestana === 'seguidores'   ? vistaSeguidores() :
@@ -542,12 +551,14 @@
 
   async function traer(){
     var k = clave();
-    if(!k) return;
+    if(!CODIGO && !k) return;
     $('#aviso').className = 'aviso';
     $('#aviso').textContent = 'Buscando lo último que escaneaste…';
     try{
-      var r = await fetch(WORKER + '/instagram', { headers:{ authorization:'Bearer '+k }, cache:'no-store' });
-      if(r.status === 401){
+      var r = CODIGO
+        ? await fetch(WORKER + '/ig/' + CODIGO, { cache:'no-store' })
+        : await fetch(WORKER + '/instagram', { headers:{ authorization:'Bearer '+k }, cache:'no-store' });
+      if(!CODIGO && r.status === 401){
         guardar(''); $('#pedirClave').className = '';
         $('#aviso').className = 'aviso rosa'; $('#aviso').textContent = 'Esa clave no es correcta. Probá de nuevo.';
         return;
@@ -555,7 +566,9 @@
       if(r.status === 404){
         $('#pedirClave').className = 'oculto';
         $('#aviso').className = 'aviso rosa';
-        $('#aviso').textContent = 'Todavía no hay nada. Abrí Instagram en la computadora, escaneá y tocá «Ver en el celular».';
+        $('#aviso').textContent = CODIGO
+          ? 'Este enlace todavía no tiene nada, o se borró. En la computadora abrí el panel, escaneá y tocá «📲 Ver en el celular».'
+          : 'Todavía no hay nada. Abrí Instagram en la computadora, escaneá y tocá «Ver en el celular».';
         return;
       }
       if(!r.ok) throw new Error('HTTP ' + r.status);
@@ -618,7 +631,7 @@
   };
   $('#clave').addEventListener('keydown', function(e){ if(e.key === 'Enter') $('#entrar').click(); });
 
-  if(clave()){ $('#pedirClave').className = 'oculto'; traer(); }
+  if(CODIGO || clave()){ $('#pedirClave').className = 'oculto'; traer(); }
   else pintarPestanas();
 })();
 </script>

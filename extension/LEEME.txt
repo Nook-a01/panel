@@ -22,6 +22,9 @@ CÓMO USARLA
   Entrá a instagram.com con tu sesión abierta y tocá el ícono.
   Tocalo de nuevo para cerrar el panel.
 
+  O tocá el enlace que te pasaron: con la extensión puesta te lleva
+  directo a Instagram con el panel abierto.
+
 SI ALGO NO ANDA
 
   · "No pasa nada al tocar el ícono": recargá la pestaña de Instagram.
@@ -40,4 +43,10 @@ QUÉ SE ENVÍA
   historias, ni ningún contenido de tu cuenta, y la contraseña no se
   pide nunca. Podés cambiar de idea desde el pie del panel.
 
-Versión 1.3.0
+  Aparte, y sólo si tocás "Ver en el celular" y aceptás: tus resultados
+  (los usuarios que seguís, si te siguen de vuelta y tus totales) se
+  guardan en un servidor para verlos en tu teléfono con un enlace
+  propio. Quien tenga ese enlace ve la lista: no lo compartas. Se borran
+  desde el mismo botón, y solos si pasan 90 días sin escanear.
+
+Versión 1.4.0

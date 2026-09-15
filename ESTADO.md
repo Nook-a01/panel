@@ -10,7 +10,7 @@ Sin datos personales: este repo es público.
 | Deportes | `docs/deportes/` | Andando. Marcador en vivo por ESPN dentro de la app. El aviso push en vivo se apagó el 14/9 a pedido (el vivo lo mira en la app de Apple); siguen los avisos antes de cada partido. |
 | Plata | `docs/plata/` | Andando. Rehecha en 3 pestañas (Hoy, Movimientos, Fijos) y un engranaje con el resto: plata libre hasta el próximo cobro, pagos con su fecha, suscripciones, fijos cada 15 días o cada 2/4 meses y plata apartada para un gasto. |
 | Campamento | `docs/campamento/` | Andando. Diseño rehecho; el día actual es el primero sin marcar, no la fecha del calendario. |
-| Instagram | `docs/instagram/` | Andando. `resultados.html` es el panel del teléfono: 6 pestañas, fotos por proxy, de a 20 perfiles. |
+| Instagram | `docs/instagram/` | Andando, extensión y userscript 1.4.0. `resultados.html` es el panel del teléfono: 6 pestañas, fotos por proxy, de a 20 perfiles. Con `?c=<código>` muestra el panel de OTRA persona (su enlace personal, pedido con permiso desde su compu, guardado en `/ig/<código>` del Worker, se borra a los 90 días). El enlace para repartir es `instagram/?abrir`: si ya tiene el panel, va directo a Instagram con el panel abierto. |
 | Estudio | `docs/musica/` + `app-escritorio/` | Anda. Arma una canción entera (120 compases, 8 pistas, 4 géneros), la suena, la manda a FL Studio por MIDI y la baja en `.mid`. Lee los plugins y los samples de la máquina. Cada canción entra como versión aparte. La conversación va por Claude, no hay modelo adentro. |
 
 Publicado en `nook-a01.github.io/panel/`.

@@ -123,6 +123,114 @@ async function IGPanelPro(){
     try{ v ? localStorage.setItem(LS_CLAVE, v) : localStorage.removeItem(LS_CLAVE); }catch(e){}
   }
 
+  // ---- enlace personal para el celular ----
+  // Quien no tiene la clave del Panel (cualquiera a quien se le pasó el panel)
+  // ve SUS resultados en SU celular con un enlace propio. El enlace lleva un
+  // código al azar de 32 caracteres que hace de llave: quien lo tiene ve esa
+  // lista. Por eso se pide permiso antes, se avisa, y se puede borrar.
+  var LS_CODIGO = 'igpp_codigo_celular';
+  var PAGINA_RESULTADOS = 'https://nook-a01.github.io/panel/instagram/resultados.html';
+  function codigoCelular(){ try{ return localStorage.getItem(LS_CODIGO) || ''; }catch(e){ return ''; } }
+  function guardarCodigoCelular(v){ try{ v ? localStorage.setItem(LS_CODIGO, v) : localStorage.removeItem(LS_CODIGO); }catch(e){} }
+  function nuevoCodigoCelular(){
+    var b = new Uint8Array(16); crypto.getRandomValues(b);
+    var c = Array.prototype.map.call(b, function(x){ return ('0' + x.toString(16)).slice(-2); }).join('');
+    guardarCodigoCelular(c);
+    return c;
+  }
+  function enlaceCelular(){ var c = codigoCelular(); return c ? PAGINA_RESULTADOS + '?c=' + c : ''; }
+  function copiarViejo(t){
+    try{
+      var a = document.createElement('textarea'); a.value = t; a.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(a); a.select(); var ok = document.execCommand('copy'); a.remove(); return ok;
+    }catch(e){ return false; }
+  }
+  function copiarTexto(t){
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText)
+        return navigator.clipboard.writeText(t).then(function(){ return true; }, function(){ return copiarViejo(t); });
+    }catch(e){}
+    return Promise.resolve(copiarViejo(t));
+  }
+  function abrirCelularPersonal(){
+    var prev = document.getElementById('igpp-cel-ov'); if(prev) prev.remove();
+    var ov = document.createElement('div'); ov.id = 'igpp-cel-ov';
+    ov.style.cssText = 'position:fixed;inset:0;background:rgba(6,6,12,.93);z-index:2147483600;display:flex;align-items:center;justify-content:center;padding:18px;color:#f4f4f8';
+    var box = document.createElement('div');
+    box.style.cssText = 'background:#12121c;border:1px solid #2a2a40;border-radius:16px;max-width:460px;width:100%;padding:22px;line-height:1.5';
+    ov.appendChild(box);
+    ov.addEventListener('click', function(e){ if(e.target === ov) ov.remove(); });
+    (document.getElementById('igpp-root') || document.body).appendChild(ov);
+
+    function boton(texto, primario){
+      var b = document.createElement('button'); b.className = primario ? 'igpp-primary' : 'igpp-btn';
+      b.textContent = texto; b.style.cssText += ';width:100%;margin-top:9px'; return b;
+    }
+    function pintarCel(){
+      box.innerHTML = '';
+      var t = document.createElement('div'); t.style.cssText = 'font-weight:800;font-size:1.1rem;margin-bottom:8px';
+      if(!codigoCelular()){
+        t.textContent = '📲 Ver tus resultados en el celular';
+        var p = document.createElement('div'); p.style.cssText = 'font-size:.93rem;color:#d5d5e2';
+        p.innerHTML = 'El celular no puede leer Instagram, así que para verlo ahí <b>tus resultados se guardan en un servidor</b>: ' +
+          'los usuarios que seguís, si te siguen de vuelta y tus totales. Tu contraseña y tus mensajes, no.<br><br>' +
+          '<b>Quien tenga tu enlace ve esa lista</b>: no lo compartas. Lo podés borrar cuando quieras desde acá, ' +
+          'y se borra solo si pasan 90 días sin escanear.';
+        var crear = boton('Acepto, crear mi enlace', true);
+        crear.onclick = function(){
+          crear.disabled = true; crear.textContent = 'Subiendo…';
+          nuevoCodigoCelular();
+          subirAlCelular(true).then(function(res){
+            if(res && res.estado === 'ok'){ pintarCel(); return; }
+            guardarCodigoCelular('');
+            crear.disabled = false; crear.textContent = 'Acepto, crear mi enlace';
+            toast('No se pudo subir' + (res && res.error ? ': ' + String(res.error).slice(0, 40) : ''));
+          });
+        };
+        var cancelar = boton('Cancelar'); cancelar.onclick = function(){ ov.remove(); };
+        var duenio = document.createElement('a');
+        duenio.textContent = 'Soy el dueño del Panel: usar mi clave';
+        duenio.style.cssText = 'display:block;text-align:center;margin-top:14px;color:#8f8fa3;cursor:pointer;text-decoration:underline;font-size:.85rem';
+        duenio.onclick = function(){
+          if(!pedirClaveCelular()) return;
+          ov.remove();
+          subirAlCelular(false).then(function(){ renderAnalysisTab(); });
+        };
+        box.appendChild(t); box.appendChild(p); box.appendChild(crear); box.appendChild(cancelar); box.appendChild(duenio);
+        return;
+      }
+      var enlace = enlaceCelular();
+      t.textContent = '📲 Tu enlace para el celular';
+      var p2 = document.createElement('div'); p2.style.cssText = 'font-size:.93rem;color:#d5d5e2;margin-bottom:10px';
+      p2.textContent = 'Abrilo en tu teléfono y vas a ver tu panel. Se actualiza solo cada vez que escaneás acá. Es solo tuyo: no lo pases.';
+      var campo = document.createElement('input'); campo.className = 'igpp-input'; campo.readOnly = true; campo.value = enlace;
+      campo.style.cssText += ';width:100%;font-size:.8rem';
+      campo.onclick = function(){ campo.select(); };
+      var copiar = boton('Copiar enlace', true);
+      copiar.onclick = function(){ copiarTexto(enlace).then(function(ok){ copiar.textContent = ok ? '✓ Copiado' : 'Seleccioná el texto y copialo'; }); };
+      var wa = boton('Mandármelo por WhatsApp');
+      wa.onclick = function(){ try{ window.open('https://wa.me/?text=' + encodeURIComponent(enlace), '_blank', 'noopener'); }catch(e){} };
+      var subir = boton('Subir lo último ahora');
+      subir.onclick = function(){
+        subir.disabled = true; subir.textContent = 'Subiendo…';
+        subirAlCelular(false).then(function(){ subir.disabled = false; subir.textContent = 'Subir lo último ahora'; });
+      };
+      var borrar = boton('Borrar mis datos del servidor');
+      borrar.style.cssText += ';color:#ff6b8b';
+      borrar.onclick = function(){
+        if(!confirm('¿Borrar tus resultados del servidor? El enlace deja de funcionar.')) return;
+        borrar.disabled = true;
+        fetch(PANEL_WORKER + '/ig/' + codigoCelular(), { method: 'DELETE' }).then(function(r){
+          if(r && r.ok){ guardarCodigoCelular(''); toast('🗑️ Borrado del servidor'); pintarCel(); }
+          else { borrar.disabled = false; toast('No se pudo borrar. Probá de nuevo.'); }
+        }, function(){ borrar.disabled = false; toast('No se pudo borrar. Probá de nuevo.'); });
+      };
+      var cerrar = boton('Cerrar'); cerrar.onclick = function(){ ov.remove(); };
+      [t, p2, campo, copiar, wa, subir, borrar, cerrar].forEach(function(el){ box.appendChild(el); });
+    }
+    pintarCel();
+  }
+
   function pedirClaveCelular(){
     var v = prompt(
       'Ver esto en el celular\n\n' +
@@ -138,7 +246,8 @@ async function IGPanelPro(){
 
   async function subirAlCelular(silencioso){
     var clave = claveCelular();
-    if(!clave) return { estado: 'sin-clave' };
+    var codigo = clave ? '' : codigoCelular();
+    if(!clave && !codigo) return { estado: 'sin-clave' };
 
     var lista = users().map(function(u){
       return {
@@ -151,6 +260,13 @@ async function IGPanelPro(){
       };
     });
 
+    // El acumulado de Historias se guarda acá como mapa {usuario: {...}}, pero la
+    // pestaña del celular espera una lista y llama "veces" a lo que acá es "count".
+    var sv = loadSV();
+    var historias = Object.keys(sv).map(function(u){
+      return { username:u, full_name:sv[u].full_name || '', veces:sv[u].count || 1, ts:sv[u].last_ts || 0 };
+    }).sort(function(a,b){ return b.veces - a.veces; });
+
     var cuentas = lsGet(LS.counts, null) || {};
     var cuerpo = {
       usuario: (cuentas.username || ''),
@@ -161,15 +277,24 @@ async function IGPanelPro(){
       seguidos: cuentas.following || null,
       historial: lsGet(LS.hist, []),
       perdidos: lsGet(LS.lost, []),
+      historias: historias,
+      listaBlanca: Array.from(loadWL()),
       escaneadoEn: cache && cache.ts ? new Date(cache.ts).toISOString() : new Date().toISOString()
     };
 
     try{
-      var r = await fetch(PANEL_WORKER + '/instagram', {
+      var r = await fetch(PANEL_WORKER + (clave ? '/instagram' : '/ig/' + codigo), {
         method: 'POST',
-        headers: { 'content-type': 'application/json', authorization: 'Bearer ' + clave },
+        headers: clave
+          ? { 'content-type': 'application/json', authorization: 'Bearer ' + clave }
+          : { 'content-type': 'application/json' },
         body: JSON.stringify(cuerpo)
       });
+      if(!clave && r.status === 409){
+        guardarCodigoCelular('');
+        if(!silencioso) toast('Ese enlace era de otra cuenta. Tocá «Ver en el celular» para armar uno nuevo.');
+        return { estado: 'otra-cuenta' };
+      }
       if(r.status === 401){
         guardarClaveCelular('');
         if(!silencioso) toast('La clave del Panel no es correcta. Probá de nuevo.');
@@ -948,7 +1073,7 @@ async function IGPanelPro(){
       var cel=document.createElement('button'); cel.className='igpp-btn';
       cel.textContent = claveCelular() ? '📲 Mandar al celular' : '📲 Ver en el celular';
       cel.onclick=function(){
-        if(!claveCelular() && !pedirClaveCelular()) return;
+        if(!claveCelular()){ abrirCelularPersonal(); return; }
         cel.disabled=true; cel.textContent='📲 Subiendo…';
         subirAlCelular(false).then(function(){ cel.disabled=false; renderAnalysisTab(); });
       };

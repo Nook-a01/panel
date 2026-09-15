@@ -1,14 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Panel de Instagram",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Quién no te sigue de vuelta, quién ve tus historias y cómo crece tu cuenta.",
   "permissions": [
     "activeTab"
   ],
   "host_permissions": [
     "https://www.instagram.com/*",
-    "https://wispy-poetry-97f9.hamcqc.workers.dev/*"
+    "https://wispy-poetry-97f9.hamcqc.workers.dev/*",
+    "https://plata.hamcqc.workers.dev/*"
   ],
   "background": {
     "service_worker": "fondo.js"
@@ -23,6 +24,15 @@
       ],
       "js": [
         "contenido.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://nook-a01.github.io/panel/instagram/*"
+      ],
+      "js": [
+        "marca.js"
       ],
       "run_at": "document_idle"
     }

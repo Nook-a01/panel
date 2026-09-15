@@ -32,6 +32,8 @@
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
 //   GET  /foto?u=       → la foto de perfil de esa cuenta, traída por el Worker
+//   GET/POST/DELETE /ig/<código> → el panel de Instagram de otra persona (SIN clave:
+//                          el código de 32 caracteres al azar ES la llave)
 
 //
 // POR QUÉ LA SEMILLA ESTÁ ACÁ Y NO EN LA PÁGINA
@@ -43,7 +45,7 @@ const cabeceras = {
   "content-type": "application/json; charset=utf-8",
   "access-control-allow-origin": "*",
   "access-control-allow-headers": "authorization, content-type",
-  "access-control-allow-methods": "GET, POST, OPTIONS",
+  "access-control-allow-methods": "GET, POST, DELETE, OPTIONS",
   "cache-control": "no-store",          // que nadie guarde datos financieros en caché
 };
 
@@ -123,7 +125,10 @@ export default {
     if (url.pathname === "/foto") {
       const quien = (url.searchParams.get("u") || "").toLowerCase();
       if (!/^[a-z0-9._]{1,40}$/.test(quien)) return new Response("", { status: 400 });
-      const guardado = JSON.parse((await env.PLATA.get("instagram")) || "null");
+      // Con ?c= la foto sale del escaneo de esa persona; sin él, del tuyo.
+      const cod = (url.searchParams.get("c") || "").toLowerCase();
+      const deQuien = /^[a-f0-9]{32}$/.test(cod) ? "ig:" + cod : "instagram";
+      const guardado = JSON.parse((await env.PLATA.get(deQuien)) || "null");
       const cuenta = guardado && (guardado.users || []).find(u => (u.username||"").toLowerCase() === quien);
       const foto = cuenta && cuenta.profile_pic_url;
       if (!foto) return new Response("", { status: 404 });
@@ -139,6 +144,54 @@ export default {
           "access-control-allow-origin": "*",
         },
       });
+    }
+
+    // ---- el panel de Instagram de cada persona ----
+    //
+    // A quien le pasás el panel no le das tu clave (con ella vería tu plata).
+    // Cada uno ve SUS resultados en SU celular con un enlace propio que lleva un
+    // código de 32 caracteres al azar: ese código es la llave, así que esta ruta
+    // no pide clave. Lo arma su compu la primera vez, después de pedirle permiso.
+    //
+    // Frenos, porque esta ruta está abierta y comparte depósito con Plata:
+    //   · el código tiene que ser 32 hexadecimales (no se adivina);
+    //   · el cuerpo tiene que tener forma de escaneo y un tope de tamaño;
+    //   · un enlace no se puede pisar con OTRA cuenta de Instagram;
+    //   · una subida cada 10 minutos por enlace (el depósito gratis tiene
+    //     1.000 escrituras por día y Plata también las usa);
+    //   · se borra solo a los 90 días sin escanear, y la persona lo puede
+    //     borrar cuando quiera (DELETE).
+    const mIg = /^\/ig\/([a-f0-9]{32})$/.exec(url.pathname);
+    if (mIg) {
+      const k = "ig:" + mIg[1];
+      if (request.method === "GET") {
+        const g = await env.PLATA.get(k);
+        if (!g) return json({ error: "Todavía no hay nada con este enlace." }, 404);
+        return new Response(g, { headers: cabeceras });
+      }
+      if (request.method === "DELETE") {
+        await env.PLATA.delete(k);
+        return json({ ok: true, borrado: true });
+      }
+      if (request.method === "POST") {
+        if (Number(request.headers.get("content-length") || 0) > 6000000)
+          return json({ error: "Demasiado grande." }, 413);
+        let e;
+        try { e = await request.json(); } catch { return json({ error: "Eso no parece un escaneo." }, 400); }
+        if (!e || !Array.isArray(e.users) || e.users.length > 20000 ||
+            typeof e.usuario !== "string" || !/^[A-Za-z0-9._]{1,30}$/.test(e.usuario))
+          return json({ error: "Eso no parece un escaneo." }, 400);
+        const previo = JSON.parse((await env.PLATA.get(k)) || "null");
+        if (previo && previo.usuario && previo.usuario.toLowerCase() !== e.usuario.toLowerCase())
+          return json({ error: "Este enlace es de otra cuenta de Instagram." }, 409);
+        if (previo && !e.users.length) return json({ ok: true, conservado: true });
+        if (previo && previo.actualizado && Date.now() - Date.parse(previo.actualizado) < 10 * 60e3)
+          return json({ ok: true, conservado: true, motivo: "Se subió hace menos de 10 minutos." });
+        e.actualizado = new Date().toISOString();
+        await env.PLATA.put(k, JSON.stringify(e), { expirationTtl: 90 * 24 * 3600 });
+        return json({ ok: true, cuentas: e.users.length });
+      }
+      return json({ error: "Usá GET, POST o DELETE." }, 405);
     }
 
     if (!autorizado(request, env)) return json({ error: "Clave incorrecta o ausente." }, 401);

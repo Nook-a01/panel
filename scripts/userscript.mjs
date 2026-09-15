@@ -34,7 +34,8 @@ import { extraerPanel, reemplazarFuncion, AVISAR_DIRECTO } from "./lib/panel-cod
 const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "docs/instagram/panel.user.js";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-const VERSION = "1.3.0";
+const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
+const VERSION = "1.4.0";
 
 const html = readFileSync(ORIGEN, "utf8");
 let panel = extraerPanel(html);
@@ -104,6 +105,7 @@ const cabecera = `// ==UserScript==
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
+// @connect      plata.hamcqc.workers.dev
 // @inject-into  content
 // @version      ${VERSION}
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
@@ -129,6 +131,8 @@ const cuerpo = `
   }
 
   const CONTADOR = ${JSON.stringify(CONTADOR)};
+  // El servidor del Panel, adonde se sube el escaneo para verlo en el celular.
+  const PANEL_WORKER = ${JSON.stringify(PANEL_WORKER)};
 
   /* ── el puente con el contador ────────────────────────────────
      El panel manda sus datos con fetch(). Un fetch normal, hecho desde
@@ -147,12 +151,12 @@ const cuerpo = `
 
   const fetch = (url, opciones) => {
     const dir = typeof url === "string" ? url : (url && url.url) || "";
-    if (!dir.startsWith(CONTADOR) || !pedir) return fetchReal(url, opciones);
+    if ((!dir.startsWith(CONTADOR + "/") && !dir.startsWith(PANEL_WORKER + "/")) || !pedir) return fetchReal(url, opciones);
 
     const o = opciones || {};
     return new Promise(resolver => {
-      const responder = (ok, texto) => resolver({
-        ok, status: ok ? 200 : 0,
+      const responder = (ok, texto, status) => resolver({
+        ok, status: status || (ok ? 200 : 0),
         json: async () => { try { return JSON.parse(texto); } catch { return {}; } },
         text: async () => texto || "",
       });
@@ -162,7 +166,7 @@ const cuerpo = `
           url: dir,
           headers: o.headers || {},
           data: o.body,
-          onload: r => responder(r.status >= 200 && r.status < 300, r.responseText),
+          onload: r => responder(r.status >= 200 && r.status < 300, r.responseText, r.status),
           onerror: () => responder(false, ""),
           ontimeout: () => responder(false, ""),
         });
@@ -206,6 +210,17 @@ const cuerpo = `
   });
 
   document.documentElement.appendChild(fab);
+
+  // Llegaste por el enlace del panel (instagram.com/?igpp=abrir): se abre solo
+  // UNA vez y se limpia la dirección, así recargar no lo vuelve a abrir.
+  if (/[?&]igpp=abrir(&|$)/.test(location.search)) {
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete("igpp");
+      history.replaceState(history.state, "", u.pathname + u.search + u.hash);
+    } catch (e) {}
+    setTimeout(() => { if (!document.getElementById("igpp-root")) fab.click(); }, 1500);
+  }
 
 ${panel}
 })();

@@ -9,6 +9,7 @@
 // está declarado en el manifiesto.
 
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
+const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
 
 chrome.action.onClicked.addListener(tab => {
   if (!tab || !tab.id) return;
@@ -31,17 +32,28 @@ chrome.action.onClicked.addListener(tab => {
 });
 
 chrome.runtime.onMessage.addListener((msg, _remitente, responder) => {
-  if (!msg || msg.tipo !== "contador") return false;
-  if (typeof msg.url !== "string" || !msg.url.startsWith(CONTADOR)) {
-    responder({ ok: false });
-    return false;
+  if (!msg || msg.tipo !== "salir" || typeof msg.url !== "string") return false;
+
+  const alContador = msg.url.startsWith(CONTADOR + "/");
+  const alPanel = msg.url.startsWith(PANEL_WORKER + "/");
+  if (!alContador && !alPanel) { responder({ ok: false, status: 0 }); return false; }
+
+  // Al contador, igual que siempre: POST de texto plano. Al servidor del
+  // Panel, sólo lo que usa el enlace del celular: leer, subir y borrar.
+  const metodo = alContador ? "POST" : String(msg.metodo || "GET").toUpperCase();
+  if (!["GET", "POST", "DELETE"].includes(metodo)) { responder({ ok: false, status: 0 }); return false; }
+
+  const pedido = { method: metodo };
+  if (alContador) {
+    pedido.headers = { "content-type": "text/plain" };
+    pedido.body = msg.cuerpo || "{}";
+  } else {
+    if (msg.cabeceras && typeof msg.cabeceras === "object") pedido.headers = msg.cabeceras;
+    if (metodo === "POST") pedido.body = msg.cuerpo || "{}";
   }
-  fetch(msg.url, {
-    method: "POST",
-    headers: { "content-type": "text/plain" },
-    body: msg.cuerpo || "{}",
-  })
-    .then(async r => responder({ ok: r.ok, datos: await r.json().catch(() => ({})) }))
-    .catch(() => responder({ ok: false }));
+
+  fetch(msg.url, pedido)
+    .then(async r => responder({ ok: r.ok, status: r.status, datos: await r.json().catch(() => ({})) }))
+    .catch(() => responder({ ok: false, status: 0 }));
   return true;   // la respuesta llega después: hay que dejar el canal abierto
 });
