@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-15T13:31:54.950Z",
+ "actualizado": "2026-09-15T18:11:01.538Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -937,327 +937,21 @@
      }
     ]
    },
-   "plantel": [
-    {
-     "id": "177927",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Juan Musso",
-     "dorsal": "1",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "167192",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gerónimo Rulli",
-     "dorsal": "12",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/167192.png",
-     "lesionado": false
-    },
-    {
-     "id": "158626",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Emiliano Martínez",
-     "dorsal": "23",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "233945",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Marcos Senesi",
-     "dorsal": "2",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233945.png",
-     "lesionado": false
-    },
-    {
-     "id": "145190",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nicolás Tagliafico",
-     "dorsal": "3",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/145190.png",
-     "lesionado": false
-    },
-    {
-     "id": "228262",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gonzalo Montiel",
-     "dorsal": "4",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "233937",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lisandro Martínez",
-     "dorsal": "6",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233937.png",
-     "lesionado": false
-    },
-    {
-     "id": "96970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Cristian Romero",
-     "dorsal": "13",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "119289",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nicolás Otamendi",
-     "dorsal": "19",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 38,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "249663",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Facundo Medina",
-     "dorsal": "25",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "164826",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nahuel Molina",
-     "dorsal": "26",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "153115",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Leandro Paredes",
-     "dorsal": "5",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "174466",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rodrigo De Paul",
-     "dorsal": "7",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "320760",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Valentín Barco",
-     "dorsal": "8",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 22,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "207343",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Giovani Lo Celso",
-     "dorsal": "11",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 30,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "228393",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Exequiel Palacios",
-     "dorsal": "14",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "277208",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Thiago Almada",
-     "dorsal": "16",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/277208.png",
-     "lesionado": false
-    },
-    {
-     "id": "337970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nico Paz",
-     "dorsal": "18",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 22,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "249299",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Alexis Mac Allister",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "285450",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Enzo Fernández",
-     "dorsal": "24",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "277206",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Julián Álvarez",
-     "dorsal": "9",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 26,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "45843",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lionel Messi",
-     "dorsal": "10",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
-     "lesionado": false
-    },
-    {
-     "id": "76017",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nico González",
-     "dorsal": "15",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "323838",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Giuliano Simeone",
-     "dorsal": "17",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 23,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "311743",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "José Manuel López",
-     "dorsal": "21",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "219713",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lautaro Martínez",
-     "dorsal": "22",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    }
-   ],
+   "plantel": null,
    "noticias": [
     {
      "titulo": "Grading Bafana Bafana players' overseas moves since the FIFA World Cup",
      "resumen": "South Africa returned to the FIFA World Cup in 2026 after a 16-year absence, and since their round of 32 exit at the hands of Canada, Bafana Bafana players have secured several noteworthy moves abroad.",
-     "fecha": "2026-09-15T08:36:31Z",
+     "fecha": "2026-09-15T14:02:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1716934_1158x651_16-9.png",
      "link": "https://www.espn.com/espn/story/_/id/49947673/grading-bafana-bafana-players-overseas-moves-fifa-world-cup"
+    },
+    {
+     "titulo": "Flick: Yamal wants to win the Ballon d'Or",
+     "resumen": "Flick: Yamal wants to win the Ballon d'Or",
+     "fecha": "2026-09-15T13:30:58Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0915/dm_260915_Flick_Yamal_wants_to_win_the_Ballon_dOr/dm_260915_Flick_Yamal_wants_to_win_the_Ballon_dOr.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49948958/yamal-wants-win-ballon-dor"
     },
     {
      "titulo": "Gomez: Raphinha is not the No. 9 Barcelona wanted, but the one they needed",
@@ -1321,13 +1015,6 @@
      "fecha": "2026-09-09T08:32:01Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0909/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49877552/kane-win-2026-men-ballon-dor"
-    },
-    {
-     "titulo": "Mbappe backs himself as the best in the world",
-     "resumen": "Mbappe backs himself as the best in the world",
-     "fecha": "2026-09-07T14:29:01Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0907/dm_260907_Mbappe_backs_himself_as_the_best_in_the_world/dm_260907_Mbappe_backs_himself_as_the_best_in_the_world.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49859683/mbappe-backs-best-world"
     }
    ],
    "resultados": null,
@@ -1564,8 +1251,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1614,9 +1302,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1675,8 +1362,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1687,9 +1375,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1946,6 +1633,20 @@
    ],
    "noticias": [
     {
+     "titulo": "USMNT, RSL midfielder Diego Luna (knee) set to be out for months",
+     "resumen": "Real Salt Lake and U.S. midfielder Diego Luna is expected to be out for months and will likely undergo an arthroscopic procedure to determine the extent of a knee injury, sources confirmed to ESPN.",
+     "fecha": "2026-09-15T16:53:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0915/r1717093_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49950214/usa-diego-luna-real-salt-lake-injury-mls"
+    },
+    {
+     "titulo": "NFL, NBA, MLB, NHL, MLS urge action against threats from bettors",
+     "resumen": "The NFL, NBA, MLB, NHL, MLS and their players' unions are urging state gambling regulators to combat escalating harassment and violent threats from sports bettors.",
+     "fecha": "2026-09-15T15:57:08Z",
+     "imagen": "https://a.espncdn.com/photo/2016/0127/r48631_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/betting/sports/story/_/id/49949715/nfl-nba-mlb-nhl-mls-urge-action-threats-bettors"
+    },
+    {
      "titulo": "Source: Colombia, U.S. battling for Inter Miami U20 dual national Alexander Shaw",
      "resumen": "Inter Miami midfielder Alexander Shaw has been contacted by Colombia after playing for the United States U-20 team in the 2026 Concacaf tournament, a source confirmed to ESPN.",
      "fecha": "2026-09-15T04:01:39Z",
@@ -1972,20 +1673,6 @@
      "fecha": "2026-09-14T16:35:32Z",
      "imagen": "https://a.espncdn.com/photo/2026/0914/r1716553_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49940062/mls-power-rankings-chicago-fire-slide-continues-nashville-sc-cement-top-spot"
-    },
-    {
-     "titulo": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
-     "resumen": "Cavan Sullivan continues red-hot run with 2 goals in Philly's win",
-     "fecha": "2026-09-14T05:18:56Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0914/ss_20260914_010055761_3660692/ss_20260914_010055761_3660692.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49937225/cavan-sullivan-continues-red-hot-run-2-goals-philly-win"
-    },
-    {
-     "titulo": "Revs pour water on Fire's bid to leapfrog them in East",
-     "resumen": "Dor Turgeman had a first-half goal and a second-half assist, Peyton Miller scored in his 50th MLS start, and the New England Revolution beat the Chicago Fire 2-1 on Sunday.",
-     "fecha": "2026-09-14T01:41:40Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761812.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761812"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2598,25 +2285,25 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max vs 100: Meet the drivers racing against Red Bull's Verstappen",
+     "resumen": "Ahead of Max vs 100, here's single driver competing against Max Verstappen in the event streamed live on Disney+.",
+     "fecha": "2026-09-15T15:54:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716555_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439347/max-vs-100-meet-drivers-racing-red-bulls-verstappen"
+    },
+    {
+     "titulo": "Max vs 100 explained: Rules, drivers, shortcuts and how Verstappen can win",
+     "resumen": "Everything you need to know ahead of Max v 100 at Silverstone, as Max Verstappen takes on a unique new challenge.",
+     "fecha": "2026-09-15T15:50:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716537_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49938264/max-vs-100-explained-rules-drivers-shortcuts-how-verstappen-win"
+    },
+    {
      "titulo": "Max vs 100: How Verstappen's karting years made an F1 champion - and prepared him for an all-new test",
      "resumen": "Max Verstappen tells ESPN's Laurence Edmondson how his karting roots shaped his F1 career and prepared him for the Max vs 100 challenge.",
      "fecha": "2026-09-15T06:20:28Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1716913_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49925725/max-verstappen-100-disney-karting-f1-champion-exclusive-interview"
-    },
-    {
-     "titulo": "Max vs 100 explained: Rules, drivers, shortcuts and how Verstappen can win",
-     "resumen": "Everything you need to know ahead of Max v 100 at Silverstone, as Max Verstappen takes on a unique new challenge.",
-     "fecha": "2026-09-14T15:50:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716537_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49938264/max-vs-100-explained-rules-drivers-shortcuts-how-verstappen-win"
-    },
-    {
-     "titulo": "Max vs 100: Meet the drivers racing against Red Bull's Verstappen",
-     "resumen": "Ahead of Max vs 100, here's single driver competing against Max Verstappen in the event streamed live on Disney+.",
-     "fecha": "2026-09-14T15:31:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716555_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439347/max-vs-100-meet-drivers-racing-red-bulls-verstappen"
     },
     {
      "titulo": "George Russell follows Lewis Hamilton in conceding F1 2026 title to Kimi Antonelli",
@@ -2655,6 +2342,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "UFC's Islam Makhachev questions validity of Jon Jones' wins streak",
+     "resumen": "UFC champ Islam Makhachev believes Jon Jones' failed drug tests and issues outside the Octagon invalidate Jones' place among the UFC's all-time streaks for consecutive wins.",
+     "fecha": "2026-09-15T18:09:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0816/r1702425_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49949666/ufc-islam-makhachev-questions-validity-jon-jones-win-streak"
+    },
+    {
+     "titulo": "Ex-UFC champ Cejudo set to box 'Euphoria' actor Walton Sept. 26",
+     "resumen": "Retired UFC champion Henry Cejudo has a new opponent for his professional boxing debut on Sept. 26 -- actor and professional boxing prospect Javon \"Wanna\" Walton.",
+     "fecha": "2026-09-15T16:00:02Z",
+     "imagen": "https://a.espncdn.com/photo/2024/0227/r1296908_600x400_3-2.jpg",
+     "link": "https://www.espn.com/boxing/story/_/id/49949147/former-ufc-champ-cejudo-face-euphoria-actor-boxing-debut"
+    },
+    {
+     "titulo": "Small changes in biggest weight class in MMA divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-09-15T14:03:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716711_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
+    {
      "titulo": "Tom Aspinall vacates UFC heavyweight title amid ongoing eye issues",
      "resumen": "Tom Aspinall has decided to vacate his UFC heavyweight title as a result of \"ongoing complications\" with injuries to his eyes.",
      "fecha": "2026-09-14T14:04:08Z",
@@ -2674,27 +2382,6 @@
      "fecha": "2026-09-14T13:30:05Z",
      "imagen": "https://a.espncdn.com/photo/2025/1116/r1576204_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions"
-    },
-    {
-     "titulo": "Grasso takes out Fiorot to stay in UFC title picture; Silva taps Delgado",
-     "resumen": "Alexa Grasso took an impressive step toward another title shot with a unanimous decision win over Manon Fiorot, while Jean Silva submitted Jose Miguel Delgado at Noche UFC on Saturday.",
-     "fecha": "2026-09-13T17:27:37Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0913/r1715675_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49921811/grasso-takes-fiorot-stay-ufc-title-picture-silva-taps-delgado"
-    },
-    {
-     "titulo": "Song Yadong rises in divisional rankings after shocking KO",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-09-13T00:46:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709592_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "Shevchenko injured, vacates; Silva, Wang to vie for belt at UFC 332",
-     "resumen": "Natalia Silva and Wang Cong will vie for the women's flyweight title at UFC 332 after champion Valentina Shevchenko suffered an injury and vacated the belt.",
-     "fecha": "2026-09-05T21:32:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0905/r1711964_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49839558/shevchenko-injured-vacates-silva-wang-vie-belt-ufc-332"
     }
    ],
    "resultados": [
