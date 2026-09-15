@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T22:29:43.707Z",
+ "actualizado": "2026-09-15T01:27:03.157Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -102,6 +102,19 @@
       "pos": 6
      },
      {
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "9",
+      "pts": "13",
+      "g": "4",
+      "e": "1",
+      "p": "4",
+      "dg": "+3",
+      "mio": false,
+      "pos": 7
+     },
+     {
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
@@ -112,7 +125,7 @@
       "p": "2",
       "dg": "+2",
       "mio": false,
-      "pos": 7
+      "pos": 8
      },
      {
       "equipo": "Unión (Santa Fe)",
@@ -125,7 +138,7 @@
       "p": "4",
       "dg": "+2",
       "mio": false,
-      "pos": 8
+      "pos": 9
      },
      {
       "equipo": "San Lorenzo",
@@ -138,7 +151,7 @@
       "p": "4",
       "dg": "-2",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Estudiantes de La Plata",
@@ -151,31 +164,18 @@
       "p": "5",
       "dg": "0",
       "mio": false,
-      "pos": 10
-     },
-     {
-      "equipo": "Lanús",
-      "abrev": "LAN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "8",
-      "pts": "10",
-      "g": "3",
-      "e": "1",
-      "p": "4",
-      "dg": "0",
-      "mio": false,
       "pos": 11
      },
      {
       "equipo": "Deportivo Riestra",
       "abrev": "RIE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-      "pj": "8",
+      "pj": "9",
       "pts": "9",
       "g": "2",
       "e": "3",
-      "p": "3",
-      "dg": "+1",
+      "p": "4",
+      "dg": "-2",
       "mio": false,
       "pos": 12
      },
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1593,8 +1594,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1605,8 +1607,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1617,8 +1620,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1690,8 +1694,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
