@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-16T00:18:09.694Z",
+ "actualizado": "2026-09-16T05:59:49.260Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 16,
-   "proximos": 9
+   "proximos": 8
   },
   {
    "id": "argentina",
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 16,
+   "total": 15,
    "proximos": 9
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761716",
-   "miLado": "visitante",
-   "idEspn": "761716",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Nashville SC vs Inter Miami CF",
-   "inicio": "2026-08-16T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "GEODIS Park",
-   "local": "Nashville SC",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "4 - 1"
-  },
   {
    "id": "espn-401903231",
    "miLado": "visitante",
