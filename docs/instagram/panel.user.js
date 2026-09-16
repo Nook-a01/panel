@@ -11,7 +11,7 @@
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @connect      plata.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.4.0
+// @version      1.4.1
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
@@ -84,6 +84,51 @@
   if (document.getElementById("igpp-fab")) return;   // ya está puesto
 
   let abriendo = false;
+  const AUTO_KEY = "igpp_autoabrir";
+  const AUTO_TTL = 15 * 60 * 1000;
+
+  function cookie(n) {
+    const m = document.cookie.match("(^|;)\\s*" + n + "\\s*=\\s*([^;]+)");
+    return m ? m[2] : null;
+  }
+  function haySesion() { return !!cookie("ds_user_id"); }
+  function pedirAutoAbrir() {
+    try { localStorage.setItem(AUTO_KEY, String(Date.now())); } catch (e) {}
+  }
+  function limpiarAutoAbrir() {
+    try { localStorage.removeItem(AUTO_KEY); } catch (e) {}
+  }
+  function autoPendiente() {
+    try {
+      const ts = parseInt(localStorage.getItem(AUTO_KEY) || "0", 10);
+      if (!ts) return false;
+      if (Date.now() - ts > AUTO_TTL) { limpiarAutoAbrir(); return false; }
+      return true;
+    } catch (e) { return false; }
+  }
+  function avisoLogin() {
+    if (document.getElementById("igpp-login-note")) return;
+    const n = document.createElement("div");
+    n.id = "igpp-login-note";
+    n.textContent = "Cuando termines de iniciar sesión en Instagram, el panel se abre solo.";
+    n.style.cssText = [
+      "position:fixed", "left:12px", "right:12px",
+      "bottom:calc(72px + env(safe-area-inset-bottom))",
+      "z-index:2147482999", "background:#000", "color:#CCFF00",
+      "border:2px solid #CCFF00", "padding:10px 12px",
+      "font:700 13px system-ui,-apple-system,Segoe UI,sans-serif",
+      "text-align:center", "box-shadow:0 2px 14px rgba(0,0,0,.45)",
+    ].join(";");
+    document.documentElement.appendChild(n);
+  }
+  function revisarAutoAbrir() {
+    if (!autoPendiente() || document.getElementById("igpp-root")) return;
+    if (!haySesion()) { avisoLogin(); return; }
+    limpiarAutoAbrir();
+    const n = document.getElementById("igpp-login-note");
+    if (n) n.remove();
+    setTimeout(() => { if (!document.getElementById("igpp-root")) fab.click(); }, 500);
+  }
 
   const fab = document.createElement("button");
   fab.id = "igpp-fab";
@@ -113,16 +158,19 @@
 
   document.documentElement.appendChild(fab);
 
-  // Llegaste por el enlace del panel (instagram.com/?igpp=abrir): se abre solo
-  // UNA vez y se limpia la dirección, así recargar no lo vuelve a abrir.
+  // Llegaste por el enlace del panel (instagram.com/?igpp=abrir): si ya hay
+  // sesión se abre solo. Si Instagram primero pide login, queda una marca local
+  // por 15 minutos y se abre apenas vuelve la sesión real de Instagram.
   if (/[?&]igpp=abrir(&|$)/.test(location.search)) {
+    pedirAutoAbrir();
     try {
       const u = new URL(location.href);
       u.searchParams.delete("igpp");
       history.replaceState(history.state, "", u.pathname + u.search + u.hash);
     } catch (e) {}
-    setTimeout(() => { if (!document.getElementById("igpp-root")) fab.click(); }, 1500);
   }
+  revisarAutoAbrir();
+  setInterval(revisarAutoAbrir, 1200);
 
 async function IGPanelPro(){
   if(document.getElementById('igpp-root')){ return; }
