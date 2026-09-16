@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-16T11:30:04.551Z",
+ "actualizado": "2026-09-16T16:53:06.164Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1257,6 +1258,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Abdelkarim praises Norwegian striker, accepts 'Haaland of the Nile' comparison",
+     "resumen": "Abdelkarim praises Norwegian striker, accepts 'Haaland of the Nile' comparison",
+     "fecha": "2026-09-16T13:03:36Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0916/dm_260916_Abdelkarim_praises_Norwegian_striker_accepts_Haaland_of_the_Nile_comparison/dm_260916_Abdelkarim_praises_Norwegian_striker_accepts_Haaland_of_the_Nile_comparison.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49956431/abdelkarim-praises-norwegian-striker-accepts-haaland-nile-comparison"
+    },
+    {
      "titulo": "Lionel Messi called up for Oct. 6 Argentina friendly for 'last tango'",
      "resumen": "Despite announcing his international retirement, Lionel Messi was included Tuesday in Argentina's squad for a farewell friendly against Benin on Oct. 6.",
      "fecha": "2026-09-16T00:52:38Z",
@@ -1325,13 +1333,6 @@
      "fecha": "2026-09-10T08:21:15Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_Flick_Yamal_deserves_to_win_the_Ballon_dOr/dm_260910_Flick_Yamal_deserves_to_win_the_Ballon_dOr.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49889739/yamal-deserves-win-ballon-dor"
-    },
-    {
-     "titulo": "Burley: Kane should win the 2026 men's Ballon d'Or",
-     "resumen": "Burley: Kane should win the 2026 men's Ballon d'Or",
-     "fecha": "2026-09-09T08:32:01Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0909/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL/dm_260909_COM_SOC_Analysis_Burley_Kane_should_win_the_2026_mens_Ballon_dOr_20260909_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49877552/kane-win-2026-men-ballon-dor"
     }
    ],
    "resultados": null,
@@ -1593,9 +1594,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1619,9 +1619,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1693,9 +1692,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2604,16 +2602,30 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max vs 100 LIVE! Race updates, commentary as Verstappen faces go-karters in epic Silverstone challenge",
+     "resumen": "Follow live updates as Formula 1 star Max Verstappen attempts to overtake 100 drivers in a go-kart race, starting from the back of the grid. Watch live on ESPN on Disney+.",
+     "fecha": "2026-09-16T16:49:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0916/r1717545_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49867241/max-verstappen-vs-100-live-race-updates-commentary-go-karts-silverstone-disney-red-bull"
+    },
+    {
      "titulo": "Max vs 100: Meet the drivers racing against Red Bull's Verstappen",
      "resumen": "Ahead of Max vs 100, here's single driver competing against Max Verstappen in the event streamed live on Disney+.",
-     "fecha": "2026-09-16T10:31:04Z",
+     "fecha": "2026-09-16T16:13:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0914/r1716555_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49439347/max-vs-100-meet-drivers-racing-red-bulls-verstappen"
     },
     {
+     "titulo": "Max vs 100: When is Verstappen race, how to watch on Disney+, how it works, who's taking part?",
+     "resumen": "Four-time Formula 1 world champion Max Verstappen is taking on his next challenge -- which could be his most entertaining yet.",
+     "fecha": "2026-09-16T16:12:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0501/r1652101_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49439341/verstappen-race-how-watch-disney+-how-works-taking-part"
+    },
+    {
      "titulo": "Max vs 100 explained: Rules, drivers, shortcuts and how Verstappen can win",
      "resumen": "Everything you need to know ahead of Max v 100 at Silverstone, as Max Verstappen takes on a unique new challenge.",
-     "fecha": "2026-09-16T10:30:31Z",
+     "fecha": "2026-09-16T16:11:33Z",
      "imagen": "https://a.espncdn.com/photo/2026/0914/r1716537_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49938264/max-vs-100-explained-rules-drivers-shortcuts-how-verstappen-win"
     },
@@ -2625,25 +2637,11 @@
      "link": "https://www.espn.com/f1/story/_/id/49925725/max-verstappen-100-disney-karting-f1-champion-exclusive-interview"
     },
     {
-     "titulo": "Max vs 100: When is Verstappen race, how to watch on Disney+, how it works, who's taking part?",
-     "resumen": "Four-time Formula 1 world champion Max Verstappen is taking on his next challenge -- which could be his most entertaining yet.",
-     "fecha": "2026-09-16T10:24:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0501/r1652101_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49439341/verstappen-race-how-watch-disney+-how-works-taking-part"
-    },
-    {
      "titulo": "Max vs 100: F1 drivers predict how Verstappen will fare racing 100 drivers",
      "resumen": "Max Verstappen will start from the back of a 101 go-kart grid with the sole aim of reaching the front of the pack in 30 laps.",
      "fecha": "2026-09-16T09:25:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/0914/r1716461_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49937838/max-vs-100-f1-drivers-predict-how-verstappen-fare-racing-100-drivers"
-    },
-    {
-     "titulo": "F1 2027 calendar: Monaco GP gets sprint race, Türkiye and Portugal return to schedule",
-     "resumen": "The 2027 Monaco Grand Prix has been named as one of 10 sprint races on next year's 24-race calendar, which includes the return of rounds in Türkiye and Portugal.",
-     "fecha": "2026-09-16T09:06:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0608/r1669704_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49955561/f1-2027-calendar-monaco-gp-sprint-race-turkiye-portugal-return-schedule"
     }
    ],
    "resultados": null,
@@ -2660,6 +2658,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Alexa Grasso shows off flyweight's elite status in women's P4P top 10",
+     "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
+     "fecha": "2026-09-16T12:27:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0915/r1717174_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
     {
      "titulo": "UFC's Islam Makhachev questions validity of Jon Jones' wins streak",
      "resumen": "UFC champ Islam Makhachev believes Jon Jones' failed drug tests and issues outside the Octagon invalidate Jones' place among the UFC's all-time streaks for consecutive wins.",
@@ -2680,13 +2685,6 @@
      "fecha": "2026-09-15T14:03:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/0914/r1716711_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "Tom Aspinall vacates UFC heavyweight title amid ongoing eye issues",
-     "resumen": "Tom Aspinall has decided to vacate his UFC heavyweight title as a result of \"ongoing complications\" with injuries to his eyes.",
-     "fecha": "2026-09-14T14:04:08Z",
-     "imagen": "https://a.espncdn.com/photo/2024/0728/r1364408_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/49938121/tom-aspinall-vacates-ufc-heavyweight-title-amid-ongoing-eye-issues"
     },
     {
      "titulo": "All-time UFC heavyweight champions",
