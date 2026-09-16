@@ -1,16 +1,16 @@
 {
- "actualizado": "2026-09-15T21:19:21.548Z",
+ "actualizado": "2026-09-16T00:18:09.694Z",
  "feeds": {
   "boca": {
    "compitiendo": [
     {
-     "nombre": "Argentine Liga Profesional de Fútbol",
-     "liga": "arg.1",
+     "nombre": "CONMEBOL Sudamericana",
+     "liga": "conmebol.sudamericana",
      "ruta": "soccer"
     },
     {
-     "nombre": "CONMEBOL Sudamericana",
-     "liga": "conmebol.sudamericana",
+     "nombre": "Argentine Liga Profesional de Fútbol",
+     "liga": "arg.1",
      "ruta": "soccer"
     },
     {
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -422,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -971,8 +972,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1081,9 +1083,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1257,11 +1258,18 @@
    ],
    "noticias": [
     {
-     "titulo": "Lionel Messi called up for Oct. 6 Argentina friendly as 'last tango' farewell",
-     "resumen": "Despite announcing his international retirement, Lionel Messi was included Tuesday in Argentina's squad for a farewell friendly against Benin on October 6.",
-     "fecha": "2026-09-15T21:17:15Z",
+     "titulo": "Lionel Messi called up for Oct. 6 Argentina friendly as 'last tango'",
+     "resumen": "Despite announcing his international retirement, Lionel Messi was included Tuesday in Argentina's squad for a farewell friendly against Benin on Oct. 6.",
+     "fecha": "2026-09-15T23:45:34Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1717226_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49952015/lionel-messi-called-argentina-friendly-last-tango-farewell"
+    },
+    {
+     "titulo": "Thomas Tuchel: 'Regret I didn't eat some grass' after England's Azteca win over Mexico",
+     "resumen": "Thomas Tuchel has revealed he wished he had eaten some of the grass after England's memorable FIFA World Cup win over Mexico.",
+     "fecha": "2026-09-15T22:36:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0915/r1717253_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49952392/thomas-tuchel-wish-ate-some-azteca-grass-england-stunning-world-cup-win-mexico"
     },
     {
      "titulo": "James Rodríguez retires from Colombia after 15-year career",
@@ -1297,13 +1305,6 @@
      "fecha": "2026-09-14T22:00:13Z",
      "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Ecuador hires Marcelo Gallardo through 2030 World Cup",
-     "resumen": "Marcelo Gallardo, one of the most decorated coaches in the history of the Argentine league, has reached an agreement to manage Ecuador ahead of the 2030 FIFA World Cup.",
-     "fecha": "2026-09-14T17:36:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716613_1024x576_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49941399/ecuador-hires-marcelo-gallardo-2030-world-cup"
     },
     {
      "titulo": "Musiala returns with a goal in Bayern's Champions League win",
@@ -2727,12 +2728,6 @@
      "fecha": "2026-08-22T21:00Z",
      "marcador": null,
      "sede": "Golden 1 Center"
-    },
-    {
-     "titulo": "UFC 330: Makhachev vs. Machado Garry",
-     "fecha": "2026-08-15T21:30Z",
-     "marcador": null,
-     "sede": "Xfinity Mobile Arena"
     }
    ],
    "peleadores": [

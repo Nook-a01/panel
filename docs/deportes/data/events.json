@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-15T07:43:00.862Z",
+ "actualizado": "2026-09-16T00:18:09.694Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 17,
+   "total": 16,
    "proximos": 9
   },
   {
@@ -71,55 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 15,
+   "total": 14,
    "proximos": 10
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600059185",
-   "miLado": null,
-   "idEspn": "600059185",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC 330: Makhachev vs. Machado Garry",
-   "inicio": "2026-08-15T21:30Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Xfinity Mobile Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
-  {
-   "id": "espn-401841505",
-   "miLado": "visitante",
-   "idEspn": "401841505",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Platense vs Boca Juniors",
-   "inicio": "2026-08-16T00:15Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Ciudad de Vicente López",
-   "local": "Platense",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "1 - 1"
-  },
   {
    "id": "espn-761716",
    "miLado": "visitante",
