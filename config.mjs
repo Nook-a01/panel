@@ -69,7 +69,7 @@ export const CONFIG = {
       escudo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/20232.png&h=120&w=120",
       activo: true,
       source: "espn-soccer",
-      leagues: ["usa.1", "usa.open", "concacaf.champions", "concacaf.leagues.cup"],
+      leagues: ["usa.1", "usa.open", "concacaf.champions", "concacaf.leagues.cup", "campeones.cup"],
       matchTeamId: "20232",
       matchName: /inter miami/i,
     },
