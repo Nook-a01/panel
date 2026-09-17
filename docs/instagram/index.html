@@ -4,7 +4,7 @@
      - la página solo puede conectarse a su propio Worker; ningún otro destino.
      - no carga scripts ni estilos externos, solo los propios de la página.
      - no filtra la dirección de origen al navegar. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: https://wispy-poetry-97f9.hamcqc.workers.dev; connect-src https://wispy-poetry-97f9.hamcqc.workers.dev; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: https://wispy-poetry-97f9.hamcqc.workers.dev; connect-src 'self' https://wispy-poetry-97f9.hamcqc.workers.dev; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Panel de Instagram — Instalación</title>
 <style>
@@ -2696,3 +2696,32 @@ body::before{
 
 </script>
 <!-- /piel: piel-afiche -->
+<script>
+/* ── ¿hay una versión más nueva publicada? ──────────────────────────────
+   GitHub Pages deja guardada cada página 10 minutos, y Chrome de Android no
+   recarga una pestaña que quedó abierta: sin esto, alguien podía seguir viendo
+   el asistente viejo aunque ya hubiera uno nuevo. Al abrir y al volver a la
+   pestaña se compara con version.txt (sin caché); si cambió, se recarga con la
+   versión en la dirección, así el navegador no usa la copia guardada.
+   Subí el número en version.txt Y acá cada vez que cambie esta página. */
+(function () {
+  var ESTA = "5";
+  function revisar() {
+    fetch("version.txt", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (v) {
+        v = (v || "").trim();
+        if (!v || v === ESTA) return;
+        var marca = "igpp_recargado_" + v;
+        try { if (sessionStorage.getItem(marca)) return; sessionStorage.setItem(marca, "1"); } catch (e) {}
+        var u = new URL(location.href);
+        u.searchParams.set("v", v);
+        location.replace(u.href);
+      })
+      .catch(function () {});
+  }
+  revisar();
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") revisar(); });
+  window.addEventListener("pageshow", function (e) { if (e.persisted) revisar(); });
+})();
+</script>

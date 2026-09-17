@@ -11,7 +11,7 @@
 // vieja después de publicar, hasta limpiar la caché a mano.
 // Los escudos sí se guardan para siempre: no cambian nunca.
 
-const CACHE   = "panel-v18";
+const CACHE   = "panel-v19";
 const ESCUDOS = "panel-escudos";
 
 const BASICOS = [
@@ -71,8 +71,19 @@ self.addEventListener("fetch", e => {
   if (url.hostname !== location.hostname) return;
 
   // Todo lo del Panel: red primero, caché como red de emergencia.
+  // Las páginas se piden con "no-cache": el navegador pregunta al servidor si
+  // cambiaron (respuesta cortita si no) en vez de usar la copia de hasta 10
+  // minutos que deja GitHub Pages. Sin esto, después de publicar se seguía
+  // viendo la versión anterior un rato, sobre todo en Android.
+  // Si GitHub redirige (por ejemplo /instagram → /instagram/), Chrome no acepta
+  // una respuesta "redirigida" para una navegación: se le pide al navegador que
+  // vaya a la dirección final, así los enlaces relativos de la página siguen bien.
+  const pedido = e.request.mode === "navigate"
+    ? fetch(e.request.url, { cache: "no-cache", credentials: "same-origin" })
+        .then(r => r.redirected ? Response.redirect(r.url, 302) : r)
+    : fetch(e.request);
   e.respondWith(
-    fetch(e.request)
+    pedido
       .then(r => {
         const copia = r.clone();
         caches.open(CACHE).then(c => c.put(e.request, copia)).catch(() => {});
