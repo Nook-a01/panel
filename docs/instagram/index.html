@@ -6,6 +6,19 @@
      - no filtra la dirección de origen al navegar. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: https://wispy-poetry-97f9.hamcqc.workers.dev; connect-src 'self' https://wispy-poetry-97f9.hamcqc.workers.dev; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
+<script>
+/* Celular + enlace para repartir (?abrir): directo a los tres pasos, antes de
+   dibujar nada de esta página. En el celular el único camino es el marcador,
+   así que no hay nada que esperar (la espera de 2,5 s de más abajo es para la
+   compu, por si ya tiene el panel con la extensión). */
+(function () {
+  if (!/[?&]abrir(=|&|$)/.test(location.search)) return;
+  var ua = navigator.userAgent;
+  var celular = /iPad|iPhone|iPod|Android/.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (celular) location.replace("celular.html" + location.search);
+})();
+</script>
 <title>Panel de Instagram — Instalación</title>
 <style>
   :root{--bg:#08080c;--card:#101018;--text:#f4f4f8;--muted:#8f8fa3;--border:#232332;
@@ -2705,7 +2718,7 @@ body::before{
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "5";
+  var ESTA = "6";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })

@@ -105,21 +105,27 @@ h1 em{font-style:normal;color:var(--magenta)}
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "5";
-  function revisar() {
+  var ESTA = "6";
+  var raiz = document.documentElement;
+  function mostrar() { raiz.style.visibility = ""; }
+  // Al abrir, la página no se ve hasta saber si es la última: así nunca aparece
+  // un instante la versión vieja antes de recargarse. Tope 1,5 s por si no hay red.
+  function revisar(alAbrir) {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
       .then(function (v) {
         v = (v || "").trim();
-        if (!v || v === ESTA) return;
+        if (!v || v === ESTA) { mostrar(); return; }
         var marca = "igpp_recargado_" + v;
-        try { if (sessionStorage.getItem(marca)) return; sessionStorage.setItem(marca, "1"); } catch (e) {}
+        try { if (sessionStorage.getItem(marca)) { mostrar(); return; } sessionStorage.setItem(marca, "1"); } catch (e) {}
         var u = new URL(location.href);
         u.searchParams.set("v", v);
         location.replace(u.href);
       })
-      .catch(function () {});
+      .catch(mostrar);
   }
+  raiz.style.visibility = "hidden";
+  setTimeout(mostrar, 1500);
   revisar();
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") revisar(); });
   window.addEventListener("pageshow", function (e) { if (e.persisted) revisar(); });
@@ -137,6 +143,11 @@ h1 em{font-style:normal;color:var(--magenta)}
 
   var USERSCRIPT = "panel.user.js";
   var INSTAGRAM  = "https://www.instagram.com/?igpp=abrir";
+  // En Android, cualquier link a instagram.com lo agarra la app de Instagram.
+  // Con un "intent" que nombra a Chrome, Android se lo da a Chrome y se abre en
+  // una pestaña nueva. Si no hay Chrome, cae en la dirección común.
+  var IG_EN_CHROME = "intent://www.instagram.com/#Intent;scheme=https;package=com.android.chrome;" +
+                     "S.browser_fallback_url=https%3A%2F%2Fwww.instagram.com%2F;end";
   var LINKS = {
     userscriptsIOS: "https://apps.apple.com/app/userscripts/id1463298887",
     firefoxAndroid: "https://play.google.com/store/apps/details?id=org.mozilla.firefox",
@@ -314,6 +325,25 @@ h1 em{font-style:normal;color:var(--magenta)}
       caja(12, 102, 296, 30, { f: "#161618" }) + tx(28, 122, 13, "🔍  panel", { c: "#9a9a9f", w: 500 }) +
       cartel(120, 140, "TOCÁ EL DE LA ESTRELLITA", 160, 98)),
 
+    // Android: ⋮ → Favoritos
+    androidMenuFavoritos: lienzo(180,
+      caja(12, 14, 250, 34, { rx: 17, f: GRIS }) + tx(30, 36, 12, "🔒 instagram.com", { c: "#cfcfd4", w: 500 }) +
+      tx(292, 40, 22, "⋮", { a: "middle", w: 900 }) + aro(292, 31, 16) + numero(292, 64, "1") +
+      caja(120, 80, 190, 92, { rx: 8, f: "#2a2a2c" }) +
+      caja(136, 92, 120, 7, { f: "#3a3a3c" }) +
+      tx(136, 126, 14, "☆  Favoritos", { w: 700 }) + marco(126, 108, 178, 26) + numero(108, 121, "2") +
+      caja(136, 150, 100, 7, { f: "#3a3a3c" })),
+
+    // Android: lista de favoritos, ⋮ al lado de Panel → Editar
+    androidListaFavoritos: lienzo(200,
+      tx(24, 32, 18, "←", { w: 700 }) + tx(52, 31, 15, "Dispositivos móviles", { w: 700 }) +
+      caja(12, 46, 296, 38, { f: "#1f1f21" }) + tx(28, 70, 15, "☆", { w: 700 }) + tx(52, 70, 14, "Panel", { w: 700 }) +
+      tx(292, 72, 20, "⋮", { a: "middle", w: 900 }) + aro(292, 65, 15) + numero(262, 65, "1") +
+      caja(12, 88, 296, 38, { f: "#161618" }) + caja(52, 103, 120, 7, { f: "#2a2a2c" }) +
+      caja(170, 116, 138, 74, { rx: 8, f: "#2a2a2c" }) +
+      tx(186, 142, 14, "Editar", { w: 700 }) + marco(176, 124, 126, 28) + numero(156, 138, "2") +
+      tx(186, 176, 13, "Eliminar", { c: "#cfcfd4", w: 500 })),
+
     // Compu: tienda de Chrome
     pcTienda: lienzo(190,
       caja(0, 0, 320, 26, { f: "#1c1c1e" }) + '<circle cx="14" cy="13" r="4" fill="#ff5f57"/><circle cx="28" cy="13" r="4" fill="#febc2e"/><circle cx="42" cy="13" r="4" fill="#28c840"/>' +
@@ -388,7 +418,7 @@ h1 em{font-style:normal;color:var(--magenta)}
         cuerpo: '<p class="txt">Tocá el botón. Se copia un texto largo: <b>es el panel entero</b>, no hace falta que lo mires.</p>',
         boton: { texto: 'Copiar el panel', accion: 'copiarPanel' },
         secundario: 'Ya tengo el marcador → Ir a Instagram',
-        secundarioHref: 'https://www.instagram.com/',
+        secundarioHref: IG_EN_CHROME,
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
       { titulo: 'Guardalo como <em>favorito</em>',
         cuerpo: '<p class="txt">En Chrome, en esta misma página. Seguí los dibujos: el círculo rosa es donde tocás.</p>' +
@@ -396,18 +426,25 @@ h1 em{font-style:normal;color:var(--magenta)}
                   { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después la <b>estrellita ☆</b>', img: DIB.androidEstrella },
                   { t: 'Abajo aparece un aviso: tocá <b>Editar</b>', img: DIB.androidEditar },
                   { t: 'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
+                ]) +
+                '<p class="txt" style="margin-bottom:.6rem"><b>¿No apareció Editar, o no te dejó pegar?</b> Hacelo desde la lista de favoritos:</p>' +
+                lista([
+                  { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después <b>Favoritos</b>', img: DIB.androidMenuFavoritos },
+                  { t: 'Entrá a <b>Dispositivos móviles</b>. Al lado de <b>Panel</b> tocá sus <b>tres puntitos ⋮</b> y después <b>Editar</b>', img: DIB.androidListaFavoritos },
+                  { t: 'En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
                 ]),
         boton: { texto: 'Ya lo guardé →' },
         secundario: 'Volver a copiar el panel',
         secundarioAccion: 'copiarPanel',
         pie: 'Si al pegar no aparece nada, volvé a copiar el panel con el botón de arriba.' },
       { titulo: 'Abrilo en <em>Instagram</em>',
-        cuerpo: '<p class="txt">Tiene que ser <b>Chrome</b>, no la app de Instagram:</p>' +
+        cuerpo: '<p class="txt">El botón abre Instagram en una <b>pestaña nueva de Chrome</b>, no en la app:</p>' +
                 lista([
                   'Tocá <b>Abrir Instagram</b> (abajo) e iniciá sesión si te lo pide',
                   { t: 'Tocá la <b>barra de arriba</b>, escribí <b>Panel</b> y tocá el que tiene la <b>estrellita</b>', img: DIB.androidAbrir }
                 ]),
-        boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
+        boton: { texto: 'Abrir Instagram', href: IG_EN_CHROME },
+        aviso: 'Si igual se te abre la app de Instagram, cerrala, abrí <b>Chrome</b> y escribí <b>instagram.com</b> en la barra de arriba.',
         pie: 'La próxima vez: entrás a instagram.com en Chrome, escribís <b>Panel</b> arriba y tocás el marcador.' }
     ],
     pc: [
@@ -479,7 +516,7 @@ h1 em{font-style:normal;color:var(--magenta)}
     html += '<h1>' + p.titulo + '</h1>' + p.cuerpo;
     html += p.boton.href
       ? '<a class="btn" id="principal" href="' + p.boton.href + '"' +
-        (p.boton.href === USERSCRIPT ? '' : ' target="_blank" rel="noopener"') + '>' + p.boton.texto + '</a>'
+        (p.boton.href === USERSCRIPT || /^intent:/.test(p.boton.href) ? '' : ' target="_blank" rel="noopener"') + '>' + p.boton.texto + '</a>'
       : '<button class="btn" id="principal">' + p.boton.texto + '</button>';
     if (p.aviso) html += '<p class="aviso">' + p.aviso + '</p>';
     if (p.copiar) html += '<button class="sec" id="copiar">Copiar el link de esta página</button>';
