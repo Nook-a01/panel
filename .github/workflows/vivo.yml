@@ -18,14 +18,9 @@ name: Marcador en vivo
 # El último marcador avisado se guarda en el Worker, no en el repositorio: si
 # se commiteara, esta tarea dejaría decenas de commits por partido.
 
-# APAGADO el 14/09/2026, a pedido. El marcador en vivo lo mira en la app de
-# Apple, que sí lo muestra como Live Activity en la pantalla bloqueada; este
-# aviso repetía lo mismo como notificación, que no es lo que quería ver.
-# El aviso ANTES de cada partido y los resúmenes siguen: salen de
-# send-push.mjs, no de acá. Para prenderlo de nuevo, descomentar el schedule.
 on:
-  # schedule:
-  #   - cron: "*/5 * * * *"
+  schedule:
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
