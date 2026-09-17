@@ -57,7 +57,11 @@ h1 em{font-style:normal;color:var(--magenta)}
 
 .lista{border:2px solid #333;background:#0b0b0b;padding:.8rem .9rem;margin-bottom:1.3rem;list-style:none}
 .lista li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;color:#ddd;margin:.35rem 0}
+.lista li + li{border-top:1px solid #222;padding-top:.7rem;margin-top:.7rem}
 .lista .num{width:1.5rem;height:1.5rem;flex:none;background:var(--magenta);color:#000;font-weight:900;display:grid;place-items:center;font-size:.8rem;margin-top:.05rem}
+.lista .cont{flex:1;min-width:0}
+/* dibujo de dónde tocar, debajo de cada acción */
+.dib{display:block;width:100%;height:auto;margin-top:.55rem}
 
 /* ── botones ── */
 .btn,.sec{display:block;width:100%;text-align:center;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;font-family:var(--f)}
@@ -136,11 +140,177 @@ h1 em{font-style:normal;color:var(--magenta)}
       return '<span class="chip' + (i === items.length - 1 ? ' fin' : '') + '">' + t + '</span>';
     }).join('<span class="fl">›</span>') + '</div>';
   }
+  // Cada acción puede ser un texto o {t: texto, img: dibujo}.
   function lista(items) {
-    return '<ol class="lista">' + items.map(function (t, i) {
-      return '<li><span class="num">' + (i + 1) + '</span><span>' + t + '</span></li>';
+    return '<ol class="lista">' + items.map(function (it, i) {
+      var texto = typeof it === "string" ? it : it.t;
+      var dibujo = typeof it === "string" ? "" : (it.img || "");
+      return '<li><span class="num">' + (i + 1) + '</span><div class="cont">' + texto + dibujo + '</div></li>';
     }).join('') + '</ol>';
   }
+
+  /* ── Dibujos de dónde tocar ─────────────────────────────────────────
+     Son esquemas, no capturas: se dibujan acá siguiendo las guías oficiales
+     de Apple (Safari en iOS 26: el botón "Más" •••) y de Google (Chrome en
+     Android: ⋮ y la estrellita). Las capturas de otros sitios no se pueden
+     usar en una página pública. El círculo rosa marca dónde tocar. */
+  var ROSA = "#FF2D7A", ACIDO = "#CCFF00", GRIS = "#2a2a2c", LETRA = "system-ui,-apple-system,'Segoe UI',sans-serif";
+  function lienzo(alto, cuerpo) {
+    return '<svg class="dib" viewBox="0 0 320 ' + alto + '" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+      '<rect x="1" y="1" width="318" height="' + (alto - 2) + '" fill="#0d0d0f" stroke="#333" stroke-width="2"/>' + cuerpo + '</svg>';
+  }
+  function tx(x, y, tam, texto, o) {
+    o = o || {};
+    return '<text x="' + x + '" y="' + y + '" font-size="' + tam + '" fill="' + (o.c || "#fff") + '" font-weight="' + (o.w || 600) +
+      '" text-anchor="' + (o.a || "start") + '" font-family="' + LETRA + '">' + texto + '</text>';
+  }
+  function caja(x, y, w, h, o) {
+    o = o || {};
+    return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (o.rx || 0) + '" fill="' + (o.f || GRIS) + '"' +
+      (o.s ? ' stroke="' + o.s + '" stroke-width="' + (o.sw || 2) + '"' : '') + '/>';
+  }
+  function aro(cx, cy, rx, ry) {
+    return '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + (ry || rx) + '" fill="none" stroke="' + ROSA + '" stroke-width="4"/>';
+  }
+  function marco(x, y, w, h) {
+    return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="none" stroke="' + ROSA + '" stroke-width="4"/>';
+  }
+  // Cartelito "TOCÁ" con una línea hasta el lugar.
+  function cartel(x, y, texto, hx, hy) {
+    var w = texto.length * 7.4 + 18;
+    return (hx !== undefined ? '<line x1="' + (x + w / 2) + '" y1="' + (y + 11) + '" x2="' + hx + '" y2="' + hy + '" stroke="' + ROSA + '" stroke-width="3"/>' : '') +
+      caja(x, y, w, 22, { f: ROSA }) + tx(x + w / 2, y + 15.5, 12, texto, { c: "#000", w: 900, a: "middle" });
+  }
+  function numero(x, y, n) {
+    return '<circle cx="' + x + '" cy="' + y + '" r="11" fill="' + ROSA + '"/>' + tx(x, y + 4.5, 13, n, { c: "#000", w: 900, a: "middle" });
+  }
+  function rayas(x, y, filas) {
+    var s = "";
+    for (var i = 0; i < filas; i++) s += caja(x, y + i * 14, 180 - (i % 2) * 50, 7, { f: "#222" });
+    return s;
+  }
+
+  var DIB = {
+    // iPhone: barra de abajo de Safari con el botón Más (•••)
+    iosMas: lienzo(150,
+      rayas(24, 22, 4) +
+      caja(0, 96, 320, 54, { f: "#161618" }) +
+      tx(26, 130, 26, "‹", { c: "#9a9a9f", w: 400 }) +
+      caja(52, 106, 196, 34, { rx: 17, f: GRIS }) + tx(150, 128, 12, "nook-a01.github.io", { c: "#cfcfd4", a: "middle", w: 500 }) +
+      '<circle cx="283" cy="123" r="17" fill="' + GRIS + '"/>' + tx(283, 128, 15, "•••", { a: "middle", w: 900 }) +
+      aro(283, 123, 25) + cartel(170, 20, "TOCÁ •••", 276, 98)),
+
+    // iPhone: menú de Más con "Agregar marcador"
+    iosMenuAgregar: lienzo(176,
+      caja(22, 16, 276, 144, { rx: 14, f: "#1c1c1e" }) +
+      caja(40, 34, 120, 8, { f: "#333" }) +
+      tx(44, 84, 15, "📖  Agregar marcador") + marco(30, 62, 260, 34) +
+      caja(40, 114, 150, 8, { f: "#333" }) + caja(40, 138, 100, 8, { f: "#333" }) +
+      cartel(196, 104, "TOCÁ ACÁ", 250, 96)),
+
+    // iPhone: pantalla de Agregar marcador con Guardar
+    iosGuardar: lienzo(150,
+      tx(20, 34, 13, "Cancelar", { c: "#4da3ff", w: 500 }) + tx(160, 34, 13, "Agregar marcador", { a: "middle", w: 800 }) +
+      tx(300, 34, 13, "Guardar", { c: "#4da3ff", w: 800, a: "end" }) + aro(271, 29, 38, 17) + numero(271, 62, "2") +
+      caja(20, 80, 220, 36, { rx: 8, f: "#1c1c1e", s: ACIDO }) + tx(34, 103, 14, "Panel", { w: 600 }) + numero(254, 98, "1") +
+      tx(24, 138, 11, "1 · escribí Panel   ·   2 · tocá Guardar", { c: "#9a9a9f", w: 600 })),
+
+    // iPhone: Más → Marcadores (para editar o para abrir)
+    iosMenuMarcadores: lienzo(150,
+      caja(22, 16, 276, 118, { rx: 14, f: "#1c1c1e" }) +
+      caja(40, 34, 140, 8, { f: "#333" }) +
+      tx(44, 80, 15, "📖  Marcadores") + marco(30, 58, 260, 34) +
+      caja(40, 110, 110, 8, { f: "#333" }) +
+      cartel(196, 100, "TOCÁ ACÁ", 250, 92)),
+
+    // iPhone: mantener apretado "Panel" → Editar
+    iosEditar: lienzo(190,
+      tx(20, 30, 15, "Marcadores", { w: 800 }) +
+      caja(20, 44, 280, 32, { f: "#1c1c1e" }) + tx(34, 65, 14, "⭐  Favoritos", { c: "#cfcfd4", w: 500 }) +
+      caja(20, 80, 280, 32, { f: "#1c1c1e" }) + tx(34, 101, 14, "📖  Panel", { w: 700 }) +
+      numero(292, 96, "1") + tx(272, 101, 11, "mantené apretado", { c: ROSA, w: 800, a: "end" }) +
+      caja(150, 122, 150, 56, { rx: 12, f: "#2c2c2e" }) +
+      tx(166, 145, 14, "✏️  Editar", { w: 700 }) + marco(154, 126, 142, 26) +
+      tx(166, 170, 13, "🗑️  Eliminar", { c: "#ff453a", w: 500 }) +
+      numero(138, 139, "2")),
+
+    // iPhone: editar la dirección y pegar
+    iosPegar: lienzo(200,
+      tx(160, 30, 14, "Editar marcador", { a: "middle", w: 800 }) +
+      tx(300, 30, 13, "Guardar", { c: "#4da3ff", w: 800, a: "end" }) + aro(274, 25, 33, 15) + numero(229, 25, "3") +
+      caja(20, 46, 280, 32, { rx: 8, f: "#1c1c1e" }) + tx(34, 67, 14, "Panel") +
+      caja(88, 96, 84, 34, { rx: 10, f: "#3a3a3c" }) + tx(130, 118, 14, "Pegar", { a: "middle", w: 700 }) +
+      '<path d="M122 130 l8 9 l8 -9 z" fill="#3a3a3c"/>' + aro(130, 113, 50, 23) + numero(70, 113, "2") +
+      caja(20, 142, 280, 32, { rx: 8, f: "#1c1c1e", s: ACIDO }) + tx(34, 163, 13, "|", { c: ACIDO }) +
+      tx(160, 190, 11, "1 · mantené apretado acá (la dirección vacía)", { c: "#9a9a9f", a: "middle", w: 600 })),
+
+    // iPhone: marcador Panel en la lista, adentro de Instagram
+    iosPanel: lienzo(150,
+      tx(20, 30, 15, "Marcadores", { w: 800 }) +
+      caja(20, 44, 280, 32, { f: "#1c1c1e" }) + tx(34, 65, 14, "⭐  Favoritos", { c: "#cfcfd4", w: 500 }) +
+      caja(20, 80, 280, 32, { f: "#1c1c1e" }) + tx(34, 101, 14, "📖  Panel", { w: 700 }) + marco(20, 80, 280, 32) +
+      cartel(160, 120, "TOCÁ PANEL", 200, 112)),
+
+    // Android: ⋮ y la estrellita
+    androidEstrella: lienzo(180,
+      caja(12, 14, 250, 34, { rx: 17, f: GRIS }) + tx(30, 36, 12, "🔒 nook-a01.github.io", { c: "#cfcfd4", w: 500 }) +
+      tx(292, 40, 22, "⋮", { a: "middle", w: 900 }) + aro(292, 31, 16) + numero(292, 64, "1") +
+      caja(120, 80, 190, 90, { rx: 8, f: "#2a2a2c" }) +
+      tx(142, 110, 18, "→", { c: "#cfcfd4", a: "middle" }) + tx(180, 110, 18, "☆", { a: "middle", w: 700 }) +
+      tx(218, 110, 16, "⬇", { c: "#cfcfd4", a: "middle" }) + tx(256, 110, 16, "ⓘ", { c: "#cfcfd4", a: "middle" }) +
+      tx(290, 110, 16, "↻", { c: "#cfcfd4", a: "middle" }) + aro(180, 104, 16) + numero(180, 136, "2") +
+      caja(136, 152, 130, 7, { f: "#3a3a3c" })),
+
+    // Android: aviso de abajo con EDITAR
+    androidEditar: lienzo(130,
+      rayas(20, 20, 3) +
+      caja(12, 72, 296, 44, { rx: 6, f: "#2f3033" }) +
+      tx(26, 99, 13, "Se agregó a favoritos", { c: "#e6e6e6", w: 500 }) +
+      tx(292, 99, 13, "EDITAR", { c: "#8ab4f8", w: 800, a: "end" }) + marco(226, 80, 76, 28) +
+      cartel(170, 40, "TOCÁ EDITAR", 262, 80)),
+
+    // Android: nombre y URL, pegar
+    androidPegar: lienzo(210,
+      tx(24, 32, 18, "←", { w: 700 }) + tx(52, 31, 15, "Editar favorito", { w: 700 }) + numero(24, 56, "4") +
+      tx(24, 84, 11, "Nombre", { c: "#8ab4f8", w: 700 }) + tx(24, 104, 15, "Panel") + caja(24, 110, 272, 2, { f: "#8ab4f8" }) +
+      tx(24, 140, 11, "URL", { c: "#8ab4f8", w: 700 }) + tx(24, 162, 15, "|", { c: ACIDO }) + caja(24, 168, 272, 2, { f: ACIDO }) +
+      caja(150, 118, 76, 30, { rx: 6, f: "#3a3a3c" }) + tx(188, 138, 13, "Pegar", { a: "middle", w: 700 }) + aro(188, 133, 44, 21) +
+      numero(248, 133, "3") + tx(24, 196, 11, "1 · borrá la URL  ·  2 · mantené apretado ahí  ·  4 · volvé atrás", { c: "#9a9a9f", w: 600 })),
+
+    // Android: escribir Panel y tocar el favorito
+    androidAbrir: lienzo(170,
+      caja(12, 14, 296, 34, { rx: 17, f: GRIS, s: "#8ab4f8" }) + tx(30, 36, 14, "Panel|", { w: 600 }) + numero(290, 31, "1") +
+      caja(12, 58, 296, 40, { f: "#1f1f21" }) + tx(28, 84, 16, "☆", { w: 700 }) + tx(52, 76, 14, "Panel", { w: 700 }) +
+      tx(52, 91, 10, "javascript:(async function IGPanelPro()…", { c: "#9a9a9f", w: 500 }) + marco(12, 58, 296, 40) +
+      caja(12, 102, 296, 30, { f: "#161618" }) + tx(28, 122, 13, "🔍  panel", { c: "#9a9a9f", w: 500 }) +
+      cartel(120, 140, "TOCÁ EL DE LA ESTRELLITA", 160, 98)),
+
+    // Compu: tienda de Chrome
+    pcTienda: lienzo(190,
+      caja(0, 0, 320, 26, { f: "#1c1c1e" }) + '<circle cx="14" cy="13" r="4" fill="#ff5f57"/><circle cx="28" cy="13" r="4" fill="#febc2e"/><circle cx="42" cy="13" r="4" fill="#28c840"/>' +
+      caja(56, 6, 250, 14, { rx: 7, f: GRIS }) + tx(64, 17, 9, "chromewebstore.google.com", { c: "#9a9a9f", w: 500 }) +
+      caja(20, 42, 40, 40, { rx: 8, f: "#2e2e3a" }) + tx(40, 69, 20, "🐒", { a: "middle" }) +
+      tx(68, 60, 13, "Violentmonkey", { w: 800 }) + tx(68, 76, 10, "Extensión", { c: "#9a9a9f", w: 500 }) +
+      caja(192, 48, 112, 30, { rx: 15, f: "#1a73e8" }) + tx(248, 68, 11.5, "Agregar a Chrome", { a: "middle", w: 700 }) + aro(248, 63, 62, 22) + numero(248, 96, "1") +
+      caja(96, 104, 208, 76, { rx: 8, f: "#2a2a2c" }) + tx(110, 126, 12, "¿Agregar Violentmonkey?", { w: 700 }) +
+      caja(206, 146, 90, 24, { rx: 12, f: "#1a73e8" }) + tx(251, 162, 10.5, "Agregar extensión", { a: "middle", w: 700 }) +
+      marco(202, 142, 98, 32) + numero(186, 158, "2")),
+
+    // Compu: pantalla de instalación de Violentmonkey
+    pcInstalar: lienzo(160,
+      caja(0, 0, 320, 26, { f: "#1c1c1e" }) + '<circle cx="14" cy="13" r="4" fill="#ff5f57"/><circle cx="28" cy="13" r="4" fill="#febc2e"/><circle cx="42" cy="13" r="4" fill="#28c840"/>' +
+      tx(20, 50, 11, "🐒 Violentmonkey · Instalar script", { c: "#9a9a9f", w: 600 }) +
+      tx(20, 76, 17, "Panel de Instagram", { w: 800 }) +
+      caja(20, 100, 150, 32, { rx: 6, f: "#2e7d32" }) + tx(95, 121, 12, "Confirmar instalación", { a: "middle", w: 800 }) + aro(95, 116, 86, 25) +
+      caja(182, 100, 70, 32, { rx: 6, f: GRIS }) + tx(217, 121, 12, "Cerrar", { a: "middle", w: 600, c: "#cfcfd4" }) +
+      cartel(186, 138, "TOCÁ ACÁ", 150, 128)),
+
+    // Uso: el botón ◐ abajo a la derecha de Instagram
+    igBoton: lienzo(150,
+      tx(20, 36, 18, "Instagram", { w: 800 }) + rayas(20, 54, 5) +
+      '<circle cx="282" cy="116" r="20" fill="#000" stroke="' + ACIDO + '" stroke-width="3"/>' + tx(282, 122, 18, "◐", { c: ACIDO, a: "middle", w: 900 }) +
+      aro(282, 116, 28) + cartel(150, 104, "TOCÁ ◐", 254, 116))
+  };
 
   /* Cada paso: titulo y cuerpo (HTML), boton {texto, href, avanza}, secundario.
      "avanza": al tocar el botón principal ya queda anotado el paso siguiente,
@@ -159,19 +329,27 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundarioHref: 'https://www.instagram.com/',
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
       { titulo: 'Guardalo como <em>marcador</em>',
-        cuerpo: '<p class="txt">En Safari, en esta misma página:</p>' +
-                lista(['Tocá <b>compartir</b> (el cuadradito con la flecha) → <b>Agregar marcador</b> → de nombre poné <b>Panel</b> → <b>Guardar</b>',
-                       'Tocá el <b>libro 📖</b> → <b>Editar</b> → tocá <b>Panel</b>',
-                       'Borrá la dirección, <b>mantené apretado</b> ahí → <b>Pegar</b> → <b>OK</b>']),
+        cuerpo: '<p class="txt">En Safari, en esta misma página. Seguí los dibujos: el círculo rosa es donde tocás.</p>' +
+                lista([
+                  { t: 'Abajo a la derecha tocá <b>Más (•••)</b>', img: DIB.iosMas },
+                  { t: 'Tocá <b>Agregar marcador</b>', img: DIB.iosMenuAgregar },
+                  { t: 'Poné de nombre <b>Panel</b> y tocá <b>Guardar</b>', img: DIB.iosGuardar },
+                  { t: 'Tocá otra vez <b>Más (•••)</b> y después <b>Marcadores</b>', img: DIB.iosMenuMarcadores },
+                  { t: '<b>Mantené apretado</b> el marcador <b>Panel</b> y tocá <b>Editar</b>', img: DIB.iosEditar },
+                  { t: 'Borrá la dirección, <b>mantené apretado</b> en ese renglón vacío, tocá <b>Pegar</b> y después <b>Guardar</b>', img: DIB.iosPegar }
+                ]) +
+                '<p class="aviso">Si abajo ves un <b>libro 📖</b> en vez de <b>•••</b>, usá el libro: tu Safari tiene otro diseño.</p>',
         boton: { texto: 'Ya lo guardé →' },
         secundario: 'Volver a copiar el panel',
         secundarioAccion: 'copiarPanel',
         pie: 'Si al pegar no aparece nada, volvé a copiar el panel con el botón de arriba.' },
       { titulo: 'Abrilo en <em>Instagram</em>',
         cuerpo: '<p class="txt">Tiene que ser <b>Safari</b>, no la app de Instagram:</p>' +
-                lista(['Tocá <b>Abrir Instagram</b> e iniciá sesión si te lo pide',
-                       'Tocá el <b>libro 📖</b>',
-                       'Tocá <b>Panel</b>']),
+                lista([
+                  'Tocá <b>Abrir Instagram</b> (abajo) e iniciá sesión si te lo pide',
+                  { t: 'Ya en Instagram, tocá <b>Más (•••)</b> → <b>Marcadores</b>', img: DIB.iosMenuMarcadores },
+                  { t: 'Tocá <b>Panel</b>', img: DIB.iosPanel }
+                ]),
         boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
         aviso: 'Si se te abre la app de Instagram, volvé acá, <b>mantené apretado</b> el botón y elegí <b>Abrir</b>.',
         pie: 'La próxima vez: entrás a instagram.com en Safari y tocás el marcador <b>Panel</b>.' }
@@ -183,34 +361,42 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundario: 'Ya tengo el marcador → Ir a Instagram',
         secundarioHref: 'https://www.instagram.com/',
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
-      { titulo: 'Guardalo como <em>marcador</em>',
-        cuerpo: '<p class="txt">En Chrome, en esta misma página:</p>' +
-                lista(['Tocá los <b>tres puntitos ⋮</b> de arriba → la <b>estrellita ☆</b>',
-                       'Abajo aparece <b>Editar</b>: tocalo',
-                       'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b> → <b>Pegar</b> → volvé atrás']),
+      { titulo: 'Guardalo como <em>favorito</em>',
+        cuerpo: '<p class="txt">En Chrome, en esta misma página. Seguí los dibujos: el círculo rosa es donde tocás.</p>' +
+                lista([
+                  { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después la <b>estrellita ☆</b>', img: DIB.androidEstrella },
+                  { t: 'Abajo aparece un aviso: tocá <b>Editar</b>', img: DIB.androidEditar },
+                  { t: 'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
+                ]),
         boton: { texto: 'Ya lo guardé →' },
         secundario: 'Volver a copiar el panel',
         secundarioAccion: 'copiarPanel',
         pie: 'Si al pegar no aparece nada, volvé a copiar el panel con el botón de arriba.' },
       { titulo: 'Abrilo en <em>Instagram</em>',
         cuerpo: '<p class="txt">Tiene que ser <b>Chrome</b>, no la app de Instagram:</p>' +
-                lista(['Tocá <b>Abrir Instagram</b> e iniciá sesión si te lo pide',
-                       'Tocá la <b>barra de arriba</b> (donde va la dirección) y escribí <b>Panel</b>',
-                       'Tocá el <b>marcador Panel</b> que aparece en la lista (el de la estrellita)']),
+                lista([
+                  'Tocá <b>Abrir Instagram</b> (abajo) e iniciá sesión si te lo pide',
+                  { t: 'Tocá la <b>barra de arriba</b>, escribí <b>Panel</b> y tocá el que tiene la <b>estrellita</b>', img: DIB.androidAbrir }
+                ]),
         boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
         pie: 'La próxima vez: entrás a instagram.com en Chrome, escribís <b>Panel</b> arriba y tocás el marcador.' }
     ],
     pc: [
       { titulo: 'Agregá <em>Violentmonkey</em>',
         cuerpo: '<p class="txt">Es una extensión <b>gratis</b> de la tienda oficial. Sirve para Chrome, Brave, Edge, Opera y Firefox. Tocá el botón y después:</p>' +
-                lista(['Tocá <b>' + (esFirefox ? 'Agregar a Firefox' : 'Agregar a Chrome') + '</b>',
-                       'Confirmá con <b>Agregar extensión</b>', 'Volvé a esta pestaña']),
+                lista([
+                  { t: 'Tocá <b>' + (esFirefox ? 'Agregar a Firefox' : 'Agregar a Chrome') + '</b> y confirmá con <b>Agregar extensión</b>', img: esFirefox ? '' : DIB.pcTienda },
+                  'Volvé a esta pestaña'
+                ]),
         boton: { texto: 'Agregar Violentmonkey', href: esFirefox ? LINKS.vmFirefox : LINKS.vmChrome, avanza: true },
         secundario: 'Ya la tengo →',
         pie: '' },
       { titulo: 'Instalá el <em>panel</em>',
         cuerpo: '<p class="txt">Tocá el botón. Se abre una pantalla de Violentmonkey con el nombre del panel:</p>' +
-                lista(['Tocá <b>Instalar</b>', 'Volvé a esta pestaña']),
+                lista([
+                  { t: 'Tocá <b>Confirmar instalación</b> (o <b>Instalar</b>)', img: DIB.pcInstalar },
+                  'Volvé a esta pestaña'
+                ]),
         boton: { texto: 'Instalar el panel', href: USERSCRIPT },
         instalar: true,
         pie: 'Cuando vuelvas, esta página se da cuenta sola de que quedó instalado.' }
@@ -327,6 +513,7 @@ h1 em{font-style:normal;color:var(--magenta)}
       '<div class="ok">✓</div><div class="centro">' +
       '<h1>¡Listo, ya <em>lo tenés</em>!</h1>' +
       '<p class="txt">De ahora en más abrís <b>instagram.com</b> en ' + donde + ' y tocás el botón <b>◐</b> de abajo a la derecha.</p></div>' +
+      '<div style="margin:0 0 1.2rem">' + DIB.igBoton + '</div>' +
       '<a class="btn" href="' + INSTAGRAM + '">Abrir Instagram</a>' +
       (aparato === "ios" ? '<p class="aviso">Si se te abre la app de Instagram, volvé acá, <b>mantené apretado</b> el botón y elegí <b>Abrir</b>.</p>' : '');
     elPie.innerHTML = 'Tiene que ser ' + donde + (aparato === "ios" || aparato === "android" ? ', no la app de Instagram' : '') + '.<br>Se actualiza solo.';
