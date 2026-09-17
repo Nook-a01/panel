@@ -95,9 +95,17 @@ async function fetchESPN(feed, desde, hasta, deporteRuta, log = console.log) {
   const eventos = [];
   for (const liga of feed.leagues || []) {
     let encontrados = 0;
-    for (const [a, b] of monthChunks(desde, hasta)) {
-      const url = `${ESPN}/${deporteRuta}/${liga}/scoreboard?dates=${yyyymmdd(a)}-${yyyymmdd(b)}&limit=500`;
-      const d = await getJSON(url);
+    // Las copas chicas (Campeones Cup) responden 403 al pedido por rango de
+    // fechas. Si ningún mes contestó, se pide la liga sin fechas: devuelve lo
+    // actual y lo próximo, que para una copa de un partido alcanza.
+    const pedidos = monthChunks(desde, hasta).map(([a, b]) =>
+      `${ESPN}/${deporteRuta}/${liga}/scoreboard?dates=${yyyymmdd(a)}-${yyyymmdd(b)}&limit=500`);
+    const respuestas = [];
+    for (const url of pedidos) respuestas.push(await getJSON(url));
+    if (respuestas.every(d => !d)) {
+      respuestas.push(await getJSON(`${ESPN}/${deporteRuta}/${liga}/scoreboard?limit=500`));
+    }
+    for (const d of respuestas) {
       if (!d?.events) continue;
       const ligaNombre = d.leagues?.[0]?.name || liga;
       for (const ev of d.events) {
