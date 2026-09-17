@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Panel de Instagram — instalar</title>
 <meta name="theme-color" content="#000000">
-<!-- Sólo texto, enlaces y un poco de código para llevar la cuenta de los pasos. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<!-- Sólo texto, enlaces, un poco de código para llevar la cuenta de los pasos
+     y el pedido de marcador.txt (mismo sitio) para copiar el panel. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <style>
 :root{
   --acido:#CCFF00;
@@ -144,48 +145,60 @@ h1 em{font-style:normal;color:var(--magenta)}
   /* Cada paso: titulo y cuerpo (HTML), boton {texto, href, avanza}, secundario.
      "avanza": al tocar el botón principal ya queda anotado el paso siguiente,
      así cuando la persona vuelve de la tienda encuentra el que sigue. */
+  /* En celulares el único camino es el MARCADOR, a pedido del dueño (17/9/2026):
+     se copia el panel, se guarda como marcador y se toca adentro de Instagram.
+     Aviso que queda escrito: el 30/8 se probó en un iPhone real y Safari no
+     corrió ni un marcador de 28 caracteres en Instagram. Si la gente dice que
+     "no pasa nada" al tocarlo, es eso. */
   var PASOS = {
     ios: [
-      { titulo: 'Bajá la app <em>Userscripts</em>',
-        cuerpo: '<p class="txt">Es <b>gratis</b> y es lo que deja que el panel funcione adentro de Instagram. Se instala una sola vez.</p>' +
-                appBox('{ }', 'linear-gradient(135deg,#2c7be5,#1b4fa8)', 'Userscripts', 'App Store'),
-        boton: { texto: 'Abrir App Store', href: LINKS.userscriptsIOS, avanza: true },
-        secundario: 'Ya la tengo →',
-        pie: 'Cuando termines de bajarla, volvé a esta página: te espera en el paso 2.' },
-      { titulo: 'Prendela en <em>Safari</em>',
-        cuerpo: '<p class="txt">Apple la deja apagada. Abrí <b>Ajustes</b> y tocá en este orden:</p>' +
-                ruta(['Apps', 'Safari', 'Extensiones', 'Userscripts', 'Permitir siempre']),
-        boton: { texto: 'Ya la prendí →' },
-        pie: 'Sin "Permitir siempre" el panel no aparece.' },
-      { titulo: 'Instalá el <em>panel</em>',
-        cuerpo: '<p class="txt">Tocá el botón. Se va a ver un montón de código: <b>está bien, no es un error</b>. Ahí hacé esto:</p>' +
-                lista(['Tocá el ícono <b>🧩</b> (o <b>AA</b>) al lado de la dirección',
-                       'Elegí <b>Userscripts</b>',
-                       'Tocá <b>Install</b> y volvé a esta pestaña']),
-        boton: { texto: 'Instalar el panel', href: USERSCRIPT },
-        instalar: true,
-        pie: 'Cuando vuelvas, esta página se da cuenta sola de que quedó instalado.' }
+      { titulo: 'Copiá el <em>panel</em>',
+        cuerpo: '<p class="txt">Tocá el botón. Se copia un texto largo: <b>es el panel entero</b>, no hace falta que lo mires.</p>',
+        boton: { texto: 'Copiar el panel', accion: 'copiarPanel' },
+        secundario: 'Ya tengo el marcador → Ir a Instagram',
+        secundarioHref: 'https://www.instagram.com/',
+        pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
+      { titulo: 'Guardalo como <em>marcador</em>',
+        cuerpo: '<p class="txt">En Safari, en esta misma página:</p>' +
+                lista(['Tocá <b>compartir</b> (el cuadradito con la flecha) → <b>Agregar marcador</b> → de nombre poné <b>Panel</b> → <b>Guardar</b>',
+                       'Tocá el <b>libro 📖</b> → <b>Editar</b> → tocá <b>Panel</b>',
+                       'Borrá la dirección, <b>mantené apretado</b> ahí → <b>Pegar</b> → <b>OK</b>']),
+        boton: { texto: 'Ya lo guardé →' },
+        secundario: 'Volver a copiar el panel',
+        secundarioAccion: 'copiarPanel',
+        pie: 'Si al pegar no aparece nada, volvé a copiar el panel con el botón de arriba.' },
+      { titulo: 'Abrilo en <em>Instagram</em>',
+        cuerpo: '<p class="txt">Tiene que ser <b>Safari</b>, no la app de Instagram:</p>' +
+                lista(['Tocá <b>Abrir Instagram</b> e iniciá sesión si te lo pide',
+                       'Tocá el <b>libro 📖</b>',
+                       'Tocá <b>Panel</b>']),
+        boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
+        aviso: 'Si se te abre la app de Instagram, volvé acá, <b>mantené apretado</b> el botón y elegí <b>Abrir</b>.',
+        pie: 'La próxima vez: entrás a instagram.com en Safari y tocás el marcador <b>Panel</b>.' }
     ],
     android: [
-      { titulo: 'Usá <em>Firefox</em>',
-        cuerpo: '<p class="txt">Chrome de Android no deja instalar extensiones. Firefox sí, y es <b>gratis</b>.</p>' +
-                appBox('🦊', 'linear-gradient(135deg,#ff9500,#e0402d)', 'Firefox', 'Google Play') +
-                '<p class="txt">Cuando lo tengas, <b>abrí este mismo link en Firefox</b>: copialo con el botón de abajo y pegalo arriba en Firefox.</p>',
-        boton: { texto: 'Bajar Firefox', href: LINKS.firefoxAndroid },
-        copiar: true,
-        pie: 'Todos los pasos que siguen se hacen en Firefox.' },
-      { titulo: 'Agregá <em>Violentmonkey</em>',
-        cuerpo: '<p class="txt">Es una extensión <b>gratis</b> de la tienda oficial de Firefox. Tocá el botón y después:</p>' +
-                lista(['Tocá <b>Agregar a Firefox</b>', 'Confirmá con <b>Agregar</b>', 'Volvé a esta pestaña']),
-        boton: { texto: 'Agregar Violentmonkey', href: LINKS.vmFirefox, avanza: true },
-        secundario: 'Ya la tengo →',
-        pie: '' },
-      { titulo: 'Instalá el <em>panel</em>',
-        cuerpo: '<p class="txt">Tocá el botón. Se abre una pantalla de Violentmonkey con el nombre del panel:</p>' +
-                lista(['Tocá <b>Instalar</b> (o <b>Confirmar</b>)', 'Volvé a esta pestaña']),
-        boton: { texto: 'Instalar el panel', href: USERSCRIPT },
-        instalar: true,
-        pie: 'Cuando vuelvas, esta página se da cuenta sola de que quedó instalado.' }
+      { titulo: 'Copiá el <em>panel</em>',
+        cuerpo: '<p class="txt">Tocá el botón. Se copia un texto largo: <b>es el panel entero</b>, no hace falta que lo mires.</p>',
+        boton: { texto: 'Copiar el panel', accion: 'copiarPanel' },
+        secundario: 'Ya tengo el marcador → Ir a Instagram',
+        secundarioHref: 'https://www.instagram.com/',
+        pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
+      { titulo: 'Guardalo como <em>marcador</em>',
+        cuerpo: '<p class="txt">En Chrome, en esta misma página:</p>' +
+                lista(['Tocá los <b>tres puntitos ⋮</b> de arriba → la <b>estrellita ☆</b>',
+                       'Abajo aparece <b>Editar</b>: tocalo',
+                       'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b> → <b>Pegar</b> → volvé atrás']),
+        boton: { texto: 'Ya lo guardé →' },
+        secundario: 'Volver a copiar el panel',
+        secundarioAccion: 'copiarPanel',
+        pie: 'Si al pegar no aparece nada, volvé a copiar el panel con el botón de arriba.' },
+      { titulo: 'Abrilo en <em>Instagram</em>',
+        cuerpo: '<p class="txt">Tiene que ser <b>Chrome</b>, no la app de Instagram:</p>' +
+                lista(['Tocá <b>Abrir Instagram</b> e iniciá sesión si te lo pide',
+                       'Tocá la <b>barra de arriba</b> (donde va la dirección) y escribí <b>Panel</b>',
+                       'Tocá el <b>marcador Panel</b> que aparece en la lista (el de la estrellita)']),
+        boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
+        pie: 'La próxima vez: entrás a instagram.com en Chrome, escribís <b>Panel</b> arriba y tocás el marcador.' }
     ],
     pc: [
       { titulo: 'Agregá <em>Violentmonkey</em>',
@@ -253,8 +266,11 @@ h1 em{font-style:normal;color:var(--magenta)}
       ? '<a class="btn" id="principal" href="' + p.boton.href + '"' +
         (p.boton.href === USERSCRIPT ? '' : ' target="_blank" rel="noopener"') + '>' + p.boton.texto + '</a>'
       : '<button class="btn" id="principal">' + p.boton.texto + '</button>';
+    if (p.aviso) html += '<p class="aviso">' + p.aviso + '</p>';
     if (p.copiar) html += '<button class="sec" id="copiar">Copiar el link de esta página</button>';
-    if (p.secundario) html += '<button class="sec" id="secundario">' + p.secundario + '</button>';
+    if (p.secundario) html += p.secundarioHref
+      ? '<a class="sec" id="secundario" href="' + p.secundarioHref + '">' + p.secundario + '</a>'
+      : '<button class="sec" id="secundario">' + p.secundario + '</button>';
     if (p.instalar) html += '<p class="aviso">¿Ya lo instalaste y no avanza? <a href="#" id="recargar">Tocá acá para comprobar</a></p>';
     if (n > 0) html += '<button class="atras" id="atras">← Volver al paso anterior</button>';
     elPaso.innerHTML = html;
@@ -262,13 +278,22 @@ h1 em{font-style:normal;color:var(--magenta)}
     elPie.innerHTML = (p.pie ? p.pie + '<br><br>' : '') +
       '¿No es tu aparato? <button id="cambiar">Cambiar de aparato</button>';
 
-    document.getElementById("principal").addEventListener("click", function (ev) {
+    var principal = document.getElementById("principal");
+    principal.addEventListener("click", function (ev) {
+      if (p.boton.accion === "copiarPanel") {
+        ev.preventDefault();
+        copiarPanel(principal, function () { setTimeout(function () { irA(n + 1); }, 900); });
+        return;
+      }
       if (!p.boton.href) { ev.preventDefault(); irA(n + 1); return; }
       // Se deja ir al enlace y, por detrás, queda anotado el paso siguiente.
       if (p.boton.avanza) setTimeout(function () { irA(n + 1); }, 400);
     });
     var sec = document.getElementById("secundario");
-    if (sec) sec.addEventListener("click", function () { irA(n + 1); });
+    if (sec && !p.secundarioHref) sec.addEventListener("click", function () {
+      if (p.secundarioAccion === "copiarPanel") copiarPanel(sec);
+      else irA(n + 1);
+    });
     var atras = document.getElementById("atras");
     if (atras) atras.addEventListener("click", function () { irA(n - 1); });
     var cop = document.getElementById("copiar");
@@ -307,19 +332,55 @@ h1 em{font-style:normal;color:var(--magenta)}
     elPie.innerHTML = 'Tiene que ser ' + donde + (aparato === "ios" || aparato === "android" ? ', no la app de Instagram' : '') + '.<br>Se actualiza solo.';
   }
 
-  function copiarLink(boton) {
-    var link = location.origin + location.pathname;
-    function ok() { boton.textContent = "✓ Link copiado"; }
-    function viejo(t) {
+  /* ── copiar ── */
+  // Respaldo para cuando el portapapeles moderno no deja: iOS ignora un
+  // textarea readonly y necesita la selección hecha con un Range.
+  function copiarViejo(t) {
+    try {
       var a = document.createElement("textarea");
-      a.value = t; a.setAttribute("readonly", ""); a.style.position = "fixed"; a.style.opacity = "0";
-      document.body.appendChild(a); a.select(); a.setSelectionRange(0, t.length);
-      try { document.execCommand("copy"); } catch (e) {}
-      document.body.removeChild(a);
-    }
+      a.value = t; a.contentEditable = "true"; a.readOnly = false;
+      a.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px";
+      document.body.appendChild(a);
+      var rango = document.createRange(); rango.selectNodeContents(a);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(rango);
+      a.setSelectionRange(0, t.length);
+      var ok = document.execCommand("copy");
+      sel.removeAllRanges(); document.body.removeChild(a);
+      return ok;
+    } catch (e) { return false; }
+  }
+  function copiar(texto, alTerminar) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(link).then(ok, function () { viejo(link); ok(); });
-    } else { viejo(link); ok(); }
+      navigator.clipboard.writeText(texto).then(function () { alTerminar(true); },
+        function () { alTerminar(copiarViejo(texto)); });
+    } else { alTerminar(copiarViejo(texto)); }
+  }
+  function copiarLink(boton) {
+    copiar(location.origin + location.pathname, function (ok) {
+      boton.textContent = ok ? "✓ Link copiado" : "No se pudo copiar: copialo de la barra de arriba";
+    });
+  }
+
+  // El panel para el marcador se baja al abrir la página, así al tocar el
+  // botón se copia en el mismo toque: iOS no deja copiar si antes hay que
+  // esperar una descarga.
+  var marcador = null;
+  fetch("marcador.txt", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+    .then(function (t) { marcador = t.trim(); })
+    .catch(function () { marcador = ""; });
+
+  function copiarPanel(boton, alCopiar) {
+    var original = boton.textContent;
+    if (marcador === null) { boton.textContent = "Cargando… tocá de nuevo"; return; }
+    if (!marcador) { boton.textContent = "No se pudo cargar: recargá la página"; return; }
+    copiar(marcador, function (ok) {
+      if (ok) { boton.textContent = "✓ Panel copiado"; if (alCopiar) alCopiar(); }
+      else {
+        boton.textContent = "No se pudo copiar, tocá de nuevo";
+        setTimeout(function () { boton.textContent = original; }, 2500);
+      }
+    });
   }
 
   /* ── ¿ya está instalado? ── */
