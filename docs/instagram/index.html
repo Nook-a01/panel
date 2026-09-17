@@ -2187,7 +2187,12 @@ function alCopiar(id,texto){
     });
   });
 }
-alCopiar('copyBmA',urlMarcador);   // Android → marcador
+// Android → el favorito CORTO que carga el panel: Chrome de Android no corre
+// uno de 130 KB (ver scripts/marcador.mjs). Si no se puede bajar, queda el entero.
+fetch('marcador-corto.txt',{cache:'no-cache'})
+  .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+  .then(function(t){ alCopiar('copyBmA',t.trim()); })
+  .catch(function(){ alCopiar('copyBmA',urlMarcador); });
 alCopiar('copyBmI',urlMarcador);   // iPhone  → marcador
 alCopiar('copyRawI',codigoAtajo);  // iPhone  → app Atajos (lleva completion)
 
@@ -2718,7 +2723,7 @@ body::before{
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "6";
+  var ESTA = "7";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })

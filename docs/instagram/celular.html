@@ -105,7 +105,7 @@ h1 em{font-style:normal;color:var(--magenta)}
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "6";
+  var ESTA = "7";
   var raiz = document.documentElement;
   function mostrar() { raiz.style.visibility = ""; }
   // Al abrir, la página no se ve hasta saber si es la última: así nunca aparece
@@ -415,7 +415,8 @@ h1 em{font-style:normal;color:var(--magenta)}
     ],
     android: [
       { titulo: 'Copiá el <em>panel</em>',
-        cuerpo: '<p class="txt">Tocá el botón. Se copia un texto largo: <b>es el panel entero</b>, no hace falta que lo mires.</p>',
+        cuerpo: '<p class="txt">Tocá el botón. Se copia un texto corto que <b>trae el panel</b> cada vez que lo tocás, no hace falta que lo mires.</p>' +
+                '<p class="aviso">¿Ya habías guardado un favorito <b>Panel</b> antes y no andaba? Borralo y hacé este de nuevo: el de antes era demasiado largo para Chrome.</p>',
         boton: { texto: 'Copiar el panel', accion: 'copiarPanel' },
         secundario: 'Ya tengo el marcador → Ir a Instagram',
         secundarioHref: IG_EN_CHROME,
@@ -617,14 +618,24 @@ h1 em{font-style:normal;color:var(--magenta)}
   // El panel para el marcador se baja al abrir la página, así al tocar el
   // botón se copia en el mismo toque: iOS no deja copiar si antes hay que
   // esperar una descarga.
-  var marcador = null;
-  fetch("marcador.txt", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
-    .then(function (t) { marcador = t.trim(); })
-    .catch(function () { marcador = ""; });
+  //
+  // Hay dos favoritos (ver scripts/marcador.mjs):
+  //   · iPhone  → marcador.txt, el panel entero adentro (Safari lo corre).
+  //   · Android → marcador-corto.txt, ~600 caracteres que cargan el panel:
+  //     Chrome de Android no corre un favorito de 130 KB.
+  var marcadores = { entero: null, corto: null };
+  function bajar(archivo, clave) {
+    fetch(archivo, { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+      .then(function (t) { marcadores[clave] = t.trim(); })
+      .catch(function () { marcadores[clave] = ""; });
+  }
+  bajar("marcador.txt", "entero");
+  bajar("marcador-corto.txt", "corto");
 
   function copiarPanel(boton, alCopiar) {
     var original = boton.textContent;
+    var marcador = aparato === "android" ? marcadores.corto : marcadores.entero;
     if (marcador === null) { boton.textContent = "Cargando… tocá de nuevo"; return; }
     if (!marcador) { boton.textContent = "No se pudo cargar: recargá la página"; return; }
     copiar(marcador, function (ok) {
