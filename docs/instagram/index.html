@@ -2700,6 +2700,16 @@ body::before{
     obs.observe(document.documentElement, {
       attributes: true, attributeFilter: ["data-panel-instalado"],
     });
+
+    // Llegó por el enlace para repartir (?abrir) y no tiene el panel: en vez
+    // de la página larga, el asistente paso a paso. El asistente sigue
+    // escuchando la marca, así que si el gestor sólo tardaba, desde ahí va
+    // directo a Instagram igual.
+    if (/[?&]abrir(=|&|$)/.test(location.search)) {
+      setTimeout(function () {
+        if (!marca()) location.replace("celular.html?abrir");
+      }, 2500);
+    }
   }
 })();
 
