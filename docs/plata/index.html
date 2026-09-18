@@ -12,6 +12,31 @@
 <link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
+<script>
+/* ¿Hay una versión más nueva publicada? GitHub deja la página guardada 10
+   minutos y el celular no recarga una pestaña abierta: sin esto seguís viendo
+   la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
+   plata/version.txt cuando cambie esta página. */
+(function () {
+  var ESTA = "1";
+  function revisar() {
+    fetch("version.txt", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (v) {
+        v = (v || "").trim();
+        if (!v || v === ESTA) return;
+        var marca = "plata_recargado_" + v;
+        try { if (sessionStorage.getItem(marca)) return; sessionStorage.setItem(marca, "1"); } catch (e) {}
+        var u = new URL(location.href); u.searchParams.set("v", v); location.replace(u.href);
+      })
+      .catch(function () {});
+  }
+  revisar();
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") revisar(); });
+  window.addEventListener("pageshow", function (e) { if (e.persisted) revisar(); });
+})();
+</script>
+
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
