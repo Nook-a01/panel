@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "2";
+  var ESTA = "3";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -1846,7 +1846,9 @@ function tilePD(v,k){ return '<div class="pd"><div class="v num">'+esc(v)+'</div
 function renderMovs(){
   const q = norm($('#fSearch').value.trim());
   const fc = $('#fCat').value, ft = $('#fTipo').value;
-  let ms = movsMes(selYM).filter(confirmado).sort((a,b)=> b.fecha.localeCompare(a.fecha) || (b.id>a.id?1:-1));
+  // También los pendientes: si no, los meses que vienen se ven vacíos y no hay
+  // forma de corregir un cobro o un pago futuro (pasó con «Plata de mamá» de octubre).
+  let ms = movsMes(selYM).sort((a,b)=> b.fecha.localeCompare(a.fecha) || (b.id>a.id?1:-1));
   if(q) ms = ms.filter(m=> norm(m.desc).includes(q) || norm(catName(m.catId)).includes(q));
   if(fc) ms = ms.filter(m=> m.catId===fc);
   if(ft) ms = ms.filter(m=> m.tipo===ft);
