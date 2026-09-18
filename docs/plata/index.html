@@ -329,6 +329,8 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .prox .p:last-child{border-bottom:0}
 .prox .p small{display:block; color:var(--ink-3); font-size:12.5px}
 .prox .nada{color:var(--ink-2); font-size:14px; padding:10px 0}
+.prox .pm{display:flex; align-items:center; gap:10px; flex:none}
+.prox .lnk-mas{background:none; border:0; color:var(--accent); font:inherit; text-decoration:underline; cursor:pointer; text-align:left}
 .acc2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .acc2 button{border:0; border-radius:var(--radius); padding:16px 8px; font-family:var(--f-display);
   font-size:16px; font-weight:700; cursor:pointer}
@@ -1561,13 +1563,18 @@ function renderSimple(c, proximos, sinSaldo){
   $('#hoyResumen').innerHTML = r;
 
   // lo que viene: los tres primeros
+  // Cada uno con su botón: si ya lo pagaste y no lo marcaste, la app lo sigue
+  // contando como pendiente y el número grande queda mal.
   const tres = proximos.slice(0,3);
   $('#hoyProx').innerHTML = tres.length
     ? tres.map(m=>{
+        const nombre = m.desc || catName(m.catId);
         const cuando = m.fecha < c.hoy ? 'ya venció' : (m.fecha===c.hoy ? 'es hoy' : 'vence el '+fmtDay(m.fecha));
-        return '<div class="p"><span><b>'+esc(m.desc || catName(m.catId))+'</b><small>'+cuando+'</small></span>'
-             + '<b class="num">'+money(m.monto)+'</b></div>';
-      }).join('') + (proximos.length>3 ? '<div class="nada">y '+(proximos.length-3)+' pago(s) más</div>' : '')
+        return '<div class="p"><span><b>'+esc(nombre)+'</b><small>'+cuando+'</small></span>'
+             + '<span class="pm"><b class="num">'+money(m.monto)+'</b>'
+             + '<button type="button" class="btn sm pagar" data-ok="'+m.id+'" aria-label="Ya pagué '+esc(nombre)+'"><span>Ya pagué</span></button></span></div>';
+      }).join('')
+      + (proximos.length>3 ? '<button type="button" class="nada lnk-mas" data-vertodo="1">y '+(proximos.length-3)+' pago(s) más · verlos todos</button>' : '')
     : '<div class="nada">No tenés pagos pendientes. 🎉</div>';
 
   // plan de ajuste, si lo armó
@@ -3250,6 +3257,7 @@ document.addEventListener('click', e=>{
     const hoy = todayISO(); if(m.fecha > hoy) m.fecha = hoy;
     m.estado='ok'; m.pagadoEn = Date.now(); moverApartado(m);
   });
+  else if(d.vertodo){ ponerDetalle(true); $('#hoyPagos').scrollIntoView({block:'start', behavior:'smooth'}); }
   else if(d.ir)  irA(d.ir);
   else if(d.edit) abrirDlg(d.edit);
   else if(d.del){ if(confirm('¿Borrar este movimiento?')) cambiar(()=>{
