@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "1";
+  var ESTA = "2";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -366,6 +366,13 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .mesque h3{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin-bottom:8px}
 .mesque .l{display:flex; justify-content:space-between; gap:10px; font-size:14.5px; padding:5px 0; color:var(--ink-2)}
 .mesque .l b{color:var(--ink); font-weight:700}
+.mesque button.det{display:flex; width:100%; justify-content:space-between; align-items:center; gap:10px; background:none;
+  border:0; padding:5px 0; font:inherit; color:var(--ink-2); text-align:left; cursor:pointer}
+.mesque .q{font-style:normal; font-size:11.5px; color:var(--accent); text-decoration:underline; margin-left:6px}
+.mesque .dt{border-left:2px solid var(--line-2); margin:2px 0 8px 4px; padding-left:10px}
+.mesque .dl{display:flex; justify-content:space-between; gap:10px; font-size:13px; color:var(--ink-2); padding:3px 0}
+.mesque .dl b{color:var(--ink)}
+.mesque .dl.tip{color:var(--ink-3); font-size:12px; display:block; padding-top:4px}
 .mesque .fin{border-top:1px solid var(--line); margin-top:8px; padding-top:10px; font-size:15px; color:var(--ink)}
 .mesque .fin b{font-size:17px}
 .mesque .ok{color:var(--green-ink)} .mesque .mal{color:var(--crit)}
@@ -1640,6 +1647,17 @@ function renderSimple(c, proximos, sinSaldo){
    palabras de contador. Acá queda la respuesta a "¿llego a fin de mes?":
    lo que entra, lo que ya está comprometido, lo que queda para el día a día y
    si eso alcanza con lo que gastás de verdad. */
+// Los renglones de arriba se pueden abrir para ver de qué está hecho el número:
+// preguntó "¿por qué me entraría 1.800.000?" y no había forma de saberlo.
+let detMes = null;   // 'ing' | 'fij' | null
+function detalleDeMes(movs, signo){
+  if(!movs.length) return '<div class="dt vacio">No hay nada cargado.</div>';
+  return '<div class="dt">' + movs.slice().sort((a,b)=> a.fecha.localeCompare(b.fecha)).map(m=>
+      '<div class="dl"><span>'+fmtDay(m.fecha)+' · '+esc(m.desc || catName(m.catId))+'</span><b>'+signo+money(m.monto)+'</b></div>'
+    ).join('')
+    + '<div class="dl tip">Sale de lo que tenés cargado en Fijos. Si algo ya no va, borralo ahí.</div></div>';
+}
+
 function pintarMesQue(c){
   const el = $('#hoyMesQue');
   const ym = ymAdd(ymNow(), 1);
@@ -1656,8 +1674,10 @@ function pintarMesQue(c){
   const cierra = tipico == null ? null : queda - tipico;
 
   let h = '<h3>El mes que viene · '+esc(ymLabel(ym))+'</h3>'
-    + '<div class="l"><span>Te entra</span><b>'+money(tIng)+'</b></div>'
-    + '<div class="l"><span>Alquiler, fijos y cuotas</span><b>−'+money(tFij)+'</b></div>'
+    + '<button type="button" class="l det" data-det="ing"><span>Te entra <i class="q">ver</i></span><b>'+money(tIng)+'</b></button>'
+    + (detMes==='ing' ? detalleDeMes(ms.filter(m=> m.tipo==='ingreso' && !esNoGasto(m.catId)), '+') : '')
+    + '<button type="button" class="l det" data-det="fij"><span>Alquiler, fijos y cuotas <i class="q">ver</i></span><b>−'+money(tFij)+'</b></button>'
+    + (detMes==='fij' ? detalleDeMes(ms.filter(m=> m.tipo==='gasto' && (m.srcTipo==='fijo' || m.srcTipo==='cuota')), '−') : '')
     + '<div class="l"><span>Te queda para el día a día</span><b class="'+(queda>=0?'ok':'mal')+'">'+money(queda)+'</b></div>';
 
   if(queda > 0) h += '<div class="l"><span>Eso es por día</span><b>'+money(queda/dim)+'</b></div>';
@@ -3341,6 +3361,7 @@ document.addEventListener('click', e=>{
   });
   else if(d.vertodo){ proxTodos = !proxTodos; renderHoy(); }
   else if(d.recortar){ irA('ajuste'); $('#ajMeta').value = d.recortar; renderAjuste(); }
+  else if(d.det){ detMes = (detMes===d.det ? null : d.det); renderHoy(); }
   else if(d.ir)  irA(d.ir);
   else if(d.edit) abrirDlg(d.edit);
   else if(d.del){ if(confirm('¿Borrar este movimiento?')) cambiar(()=>{
