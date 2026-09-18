@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-18T00:16:21.954Z",
+ "actualizado": "2026-09-18T04:48:47.733Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -988,9 +986,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1274,6 +1271,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Socceroos stalwart Ryan axed for Brazil series",
+     "resumen": "Maty Ryan has been axed from the Socceroos squad to take on Brazil in Queensland. ESPN's Joey Lynch reacts to the squad announcement.",
+     "fecha": "2026-09-18T01:31:41Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0917/dm_260917_Soccer_Analysis_Socceroos_stalwart_Ryan_axed_for_Brazil_series_20260918/dm_260917_Soccer_Analysis_Socceroos_stalwart_Ryan_axed_for_Brazil_series_20260918.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49969083/socceroos-stalwart-ryan-axed-brazil-series"
+    },
+    {
      "titulo": "Sources: English FA chief demands documents on FIFA World Cup sell-off plan, Balogun decision",
      "resumen": "FIFA vice president and FA chairwoman Debbie Hewitt has demanded FIFA president Gianni Infantino release all documents concerning his proposal for private investors to buy stakes in the World Cup, sources told ESPN.",
      "fecha": "2026-09-17T16:26:09Z",
@@ -1309,13 +1313,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
-     "titulo": "England boss Thomas Tuchel defends subs vs. Argentina: 'It's my scar'",
-     "resumen": "England boss Thomas Tuchel said he stands by his heavily criticised defensive substitutions in the World Cup semifinal defeat to Argentina, but accepts he made them too early.",
-     "fecha": "2026-09-16T19:28:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0916/r1717694_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49959154/england-thomas-tuchel-argentina-substitutions-2026-world-cup"
-    },
-    {
      "titulo": "Abdelkarim praises Norwegian striker, accepts 'Haaland of the Nile' comparison",
      "resumen": "Abdelkarim praises Norwegian striker, accepts 'Haaland of the Nile' comparison",
      "fecha": "2026-09-16T13:03:36Z",
@@ -1342,13 +1339,6 @@
      "fecha": "2026-09-10T23:06:42Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_Musiala_returns_with_a_goal_in_BayernE28099s_Champions_League_win/dm_260910_Musiala_returns_with_a_goal_in_BayernE28099s_Champions_League_win.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49897129/musiala-returns-goal-bayern-champions-league-win"
-    },
-    {
-     "titulo": "Nicol believes there is no 'obvious choice' for Ballon d'Or",
-     "resumen": "Nicol believes there is no 'obvious choice' for Ballon d'Or",
-     "fecha": "2026-09-10T09:44:01Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0910/dm_260910_Nicol_believes_there_is_no_obvious_choice_for_Ballon_dOr/dm_260910_Nicol_believes_there_is_no_obvious_choice_for_Ballon_dOr.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49890120/nicol-believes-there-no-obvious-choice-ballon-dor"
     }
    ],
    "resultados": null,
@@ -1590,9 +1580,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1641,8 +1630,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1701,8 +1691,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1750,9 +1741,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1763,9 +1753,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
