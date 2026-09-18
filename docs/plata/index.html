@@ -311,6 +311,52 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .chat-msg.mio, :root[data-theme="dark"] .chat-msg.mio, :root:not([data-theme="light"]) .chat-msg.mio{color:var(--on-accent)}
 
 /* ---------- hoy ---------- */
+/* ---------- pantalla simple ---------- */
+.simple{display:flex; flex-direction:column; gap:12px}
+.pordia{display:flex; align-items:baseline; gap:10px; border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--surface); padding:14px 16px}
+.pordia b{font-size:22px; font-weight:700; color:var(--accent)}
+.pordia span{font-size:14px; color:var(--ink-2)}
+.resumen{border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); padding:4px 16px}
+.resumen .r{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 0; border-bottom:1px solid var(--line)}
+.resumen .r:last-child{border-bottom:0}
+.resumen .iz{display:flex; align-items:center; gap:9px; color:var(--ink-2); font-size:14.5px}
+.resumen .pt{width:9px; height:9px; border-radius:50%; flex:none}
+.resumen b{font-size:15.5px; font-weight:700}
+.prox{border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); padding:6px 16px 10px}
+.prox h3{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin:12px 0 2px}
+.prox .p{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px solid var(--line)}
+.prox .p:last-child{border-bottom:0}
+.prox .p small{display:block; color:var(--ink-3); font-size:12.5px}
+.prox .nada{color:var(--ink-2); font-size:14px; padding:10px 0}
+.acc2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.acc2 button{border:0; border-radius:var(--radius); padding:16px 8px; font-family:var(--f-display);
+  font-size:16px; font-weight:700; cursor:pointer}
+.acc2 .g{background:var(--crit); color:#fff}
+.acc2 .c{background:var(--green-ink); color:#fff}
+.verdet{background:none; border:0; color:var(--ink-3); font-size:13.5px; text-decoration:underline; cursor:pointer; padding:6px 0; align-self:center}
+.plan-linea{display:flex; align-items:center; justify-content:space-between; gap:10px; border:1px solid var(--line);
+  border-left:4px solid var(--accent); border-radius:var(--radius); background:var(--surface); padding:12px 14px; font-size:14px}
+.plan-linea button{background:none; border:0; color:var(--accent); font:inherit; text-decoration:underline; cursor:pointer}
+
+/* ---------- ajustar ---------- */
+.aj-meta{border:2px solid var(--crit); border-radius:var(--radius); padding:16px 18px; background:var(--surface)}
+.aj-meta .et{font-size:13px; font-weight:700; color:var(--crit)}
+.aj-meta .n{font-size:32px; font-weight:700; letter-spacing:-.02em; margin:2px 0 10px}
+.aj-bar{height:12px; border-radius:8px; background:var(--surface-3); overflow:hidden}
+.aj-bar i{display:block; height:100%; background:var(--green-ink); width:0; transition:width .25s}
+.aj-sub{font-size:13.5px; color:var(--ink-2); margin-top:9px}
+.aj-op{display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--line)}
+.aj-op:last-child{border-bottom:0}
+.aj-op .tx{flex:1; min-width:0}
+.aj-op .tx b{display:block; font-size:14.5px}
+.aj-op .tx span{font-size:12.5px; color:var(--ink-3)}
+.aj-op .mo{font-weight:700; font-size:14.5px}
+.sw{width:46px; height:27px; border-radius:14px; background:var(--surface-3); position:relative; flex:none; border:0; cursor:pointer; padding:0}
+.sw[aria-pressed="true"]{background:var(--green-ink)}
+.sw i{position:absolute; top:3px; left:3px; width:21px; height:21px; border-radius:50%; background:#fff; transition:left .15s}
+.sw[aria-pressed="true"] i{left:22px}
+
 .hoy{display:flex; flex-direction:column; gap:14px}
 .hoy-grid{display:grid; gap:14px; grid-template-columns:minmax(0,1fr)}
 @media(min-width:880px){ .hoy-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); align-items:start} }
@@ -396,6 +442,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
     <button data-v="presu">Presupuesto</button>
     <button data-v="plan">Plan</button>
     <button data-v="consultas">Consultas</button>
+    <button data-v="ajuste">Ajustar</button>
     <button data-v="historial">Historial</button>
     <button data-v="import">Importar</button>
     <button data-v="ajustes">Ajustes</button>
@@ -411,6 +458,22 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
       <div class="blq-big num" id="hoyLibreV">$0</div>
       <div class="blq-s" id="hoyLibreS"></div>
     </div>
+
+    <!-- Lo simple: por día, tres renglones, lo que viene y los dos botones.
+         El resto del tablero queda abajo, escondido detrás de "Ver el detalle". -->
+    <div class="simple">
+      <div class="pordia" id="hoyPorDia" hidden></div>
+      <div class="plan-linea" id="hoyPlan" hidden></div>
+      <div class="resumen" id="hoyResumen"></div>
+      <div class="prox"><h3>Lo que viene</h3><div id="hoyProx"></div></div>
+      <div class="acc2">
+        <button type="button" class="g" id="hoyGaste">− Gasté</button>
+        <button type="button" class="c" id="hoyCobre">+ Cobré</button>
+      </div>
+      <button type="button" class="verdet" id="hoyVerDet">Ver el detalle ▾</button>
+    </div>
+
+    <div id="hoyDetalle" hidden>
     <div class="blq blq-mapa" id="hoyRitmoCard" hidden>
       <div class="blq-hd"><h3>¿Cómo venís?</h3><span class="blq-hint" id="hoyRitmoHint"></span></div>
       <p class="frase" id="hoyRitmoFrase"></p>
@@ -437,6 +500,36 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
           <div id="hoyApart"></div>
         </div>
       </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AJUSTAR ===================== -->
+<section class="view" id="v-ajuste">
+  <div class="stack">
+    <div class="notice info">Poné cuánto necesitás recortar por mes y marcá de dónde sale. Los montos salen de tus fijos y de lo que gastaste el mes pasado.</div>
+    <div class="card">
+      <div class="bd">
+        <div class="aj-meta">
+          <div class="et">Te falta recortar</div>
+          <div class="n num" id="ajFalta">$0</div>
+          <div class="aj-bar"><i id="ajBar"></i></div>
+          <div class="aj-sub" id="ajSub"></div>
+        </div>
+        <div class="kv meta" style="margin-top:14px">
+          <label for="ajMeta">¿Cuánto tenés que recortar por mes?</label>
+          <input type="number" id="ajMeta" min="0" step="10000" placeholder="0" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>Lo más caro que podés tocar</h3><span class="hint" id="ajHint"></span></div>
+      <div class="bd"><div id="ajLista"></div></div>
+    </div>
+    <div class="btnrow">
+      <button class="btn pri" id="ajGuardar">Guardar el plan</button>
+      <button class="btn gh" id="ajBorrar">Borrar el plan</button>
     </div>
   </div>
 </section>
@@ -1434,7 +1527,127 @@ function renderHoy(){
       +'<div class="f-monto num">'+money(Math.max(0, Number(r.apartado)||0))+'</div></div>';
   }).join('');
 
+  renderSimple(c, proximos, sinSaldo);
   pintarNeon(c, proximos, sinSaldo);
+}
+
+/* ============================ hoy: la parte simple ============================
+   Arriba queda una sola idea por renglón, en criollo. Todo lo anterior sigue
+   existiendo, pero abajo y escondido: se abre con "Ver el detalle" y esa
+   preferencia se guarda, así quien quiere el tablero completo lo tiene siempre. */
+const LS_DET = 'plata-ver-detalle';
+function verDetalle(){ try{ return localStorage.getItem(LS_DET)==='1'; }catch(e){ return false; } }
+function ponerDetalle(v){
+  try{ localStorage.setItem(LS_DET, v?'1':'0'); }catch(e){}
+  $('#hoyDetalle').hidden = !v;
+  $('#hoyVerDet').textContent = v ? 'Ocultar el detalle ▴' : 'Ver el detalle ▾';
+}
+
+function renderSimple(c, proximos, sinSaldo){
+  // por día
+  const pd = $('#hoyPorDia');
+  if(sinSaldo || c.libre <= 0){ pd.hidden = true; }
+  else {
+    pd.hidden = false;
+    pd.innerHTML = '<b class="num">'+money(c.libre / c.diasHasta)+'</b><span>por día, si querés llegar justo al '+fmtDay(c.refCobro)+'</span>';
+  }
+
+  // tres renglones
+  const fila = (color, texto, valor) =>
+    '<div class="r"><span class="iz"><i class="pt" style="background:'+color+'"></i>'+esc(texto)+'</span><b class="num">'+money(valor)+'</b></div>';
+  let r = fila('var(--crit)', 'Ya está comprometido', c.comprometido)
+        + fila('var(--green-ink)', 'Falta que te entre', c.porCobrar);
+  if(c.apartado) r += fila('var(--violet-ink)', 'Guardado para algo', c.apartado);
+  $('#hoyResumen').innerHTML = r;
+
+  // lo que viene: los tres primeros
+  const tres = proximos.slice(0,3);
+  $('#hoyProx').innerHTML = tres.length
+    ? tres.map(m=>{
+        const cuando = m.fecha < c.hoy ? 'ya venció' : (m.fecha===c.hoy ? 'es hoy' : 'vence el '+fmtDay(m.fecha));
+        return '<div class="p"><span><b>'+esc(m.desc || catName(m.catId))+'</b><small>'+cuando+'</small></span>'
+             + '<b class="num">'+money(m.monto)+'</b></div>';
+      }).join('') + (proximos.length>3 ? '<div class="nada">y '+(proximos.length-3)+' pago(s) más</div>' : '')
+    : '<div class="nada">No tenés pagos pendientes. 🎉</div>';
+
+  // plan de ajuste, si lo armó
+  const plan = S.cfg.ajuste;
+  const pl = $('#hoyPlan');
+  if(plan && plan.meta > 0){
+    pl.hidden = false;
+    const falta = Math.max(0, plan.meta - (plan.recorte||0));
+    pl.innerHTML = '<span>Plan de ajuste: recortás <b>'+money(plan.recorte||0)+'</b> de '+money(plan.meta)
+      + (falta ? ' · te falta <b>'+money(falta)+'</b>' : ' · <b>llegaste</b>')+'</span>'
+      + '<button type="button" data-ir="ajuste">Ver</button>';
+  } else pl.hidden = true;
+
+  ponerDetalle(verDetalle());
+}
+
+/* ============================ ajustar ============================
+   Cuánto hay que recortar por mes y de dónde puede salir: los fijos y las
+   suscripciones por su equivalente mensual, y las categorías por lo que
+   gastaste el mes pasado (o el último mes con datos). */
+function candidatosAjuste(){
+  const out = [];
+  S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false).forEach(r=>{
+    const monto = equivMensual(r);
+    if(monto > 0) out.push({ id:'rec:'+r.id, nombre:r.nombre, monto, nota: esSusc(r) ? 'suscripción' : 'fijo mensual' });
+  });
+  // el mes pasado, o el último con datos
+  let ym = ymAdd(ymNow(), -1);
+  if(!hayMovs(ym) && !histDe(ym)){ const l = mesesConDatos().filter(x=> x !== ymNow()); if(l.length) ym = l[l.length-1]; }
+  const porCat = gastoPorCatDeMes(ym);
+  const fijasPorCat = {};
+  S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false && r.catId)
+        .forEach(r=>{ fijasPorCat[r.catId] = (fijasPorCat[r.catId]||0) + equivMensual(r); });
+  Object.keys(porCat).forEach(k=>{
+    // lo que ya está listado como fijo no se cuenta dos veces
+    const monto = porCat[k] - (fijasPorCat[k]||0);
+    if(monto > 0) out.push({ id:'cat:'+k, nombre:catName(k), monto, nota:'gastaste esto en '+ymLabel(ym).toLowerCase() });
+  });
+  return out.sort((a,b)=> b.monto - a.monto).slice(0, 12);
+}
+
+let ajSel = null;   // Set con los ids marcados, mientras se edita
+function renderAjuste(){
+  const plan = S.cfg.ajuste || {};
+  if(!ajSel) ajSel = new Set(plan.ids || []);
+  if($('#ajMeta').value === '') $('#ajMeta').value = plan.meta || '';
+
+  const lista = candidatosAjuste();
+  $('#ajHint').textContent = lista.length ? 'por mes' : '';
+  $('#ajLista').innerHTML = lista.length ? lista.map(o=>
+    '<div class="aj-op"><button type="button" class="sw" data-aj="'+esc(o.id)+'" aria-pressed="'+(ajSel.has(o.id)?'true':'false')
+    + '" aria-label="Recortar '+esc(o.nombre)+'"><i></i></button>'
+    + '<div class="tx"><b>'+esc(o.nombre)+'</b><span>'+esc(o.nota)+'</span></div>'
+    + '<div class="mo num">'+money(o.monto)+'</div></div>'
+  ).join('') : '<div class="empty">Todavía no hay fijos ni gastos cargados para proponerte recortes.</div>';
+
+  const meta = Math.max(0, Number($('#ajMeta').value)||0);
+  const recorte = lista.filter(o=> ajSel.has(o.id)).reduce((a,o)=> a + o.monto, 0);
+  const falta = Math.max(0, meta - recorte);
+  $('#ajFalta').textContent = money(falta);
+  $('#ajBar').style.width = (meta ? Math.min(100, recorte/meta*100) : 0) + '%';
+  $('#ajSub').innerHTML = !meta
+    ? 'Poné abajo cuánto necesitás recortar por mes.'
+    : (falta ? 'Llevás <b>'+money(recorte)+'</b> de los '+money(meta)+' que necesitás.'
+             : '✓ Ya llegaste: recortás <b>'+money(recorte)+'</b> por mes.');
+}
+function guardarAjuste(){
+  const lista = candidatosAjuste();
+  const meta = Math.max(0, Number($('#ajMeta').value)||0);
+  const elegidos = lista.filter(o=> ajSel.has(o.id));
+  cambiar(()=>{
+    S.cfg.ajuste = { meta, ids:elegidos.map(o=>o.id), recorte:elegidos.reduce((a,o)=>a+o.monto,0), al:todayISO() };
+  });
+  toast('Plan guardado');
+}
+function borrarAjuste(){
+  ajSel = new Set();
+  $('#ajMeta').value = '';
+  cambiar(()=>{ delete S.cfg.ajuste; });
+  toast('Plan borrado');
 }
 
 /* ============================ hoy: lo que se mueve ============================ */
@@ -2664,7 +2877,7 @@ function etiquetarTablas(){
   });
 }
 
-const MAS = ['presu','plan','consultas','historial','import','ajustes'];
+const MAS = ['presu','plan','ajuste','consultas','historial','import','ajustes'];
 function render(){
   $('#mLabel').textContent = ymLabel(selYM);
   pintarPill();
@@ -2676,6 +2889,7 @@ function render(){
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
   else if(vista==='plan') renderPlan();
+  else if(vista==='ajuste') renderAjuste();
   else if(vista==='historial') renderHistorial();
   else if(vista==='consultas') renderConsultas();
   else if(vista==='ajustes') renderAjustes();
@@ -2690,6 +2904,9 @@ function irA(v){
   $('#subtabs').hidden = !enMas;
   $$('#subtabs button').forEach(b=> b.setAttribute('aria-current', String(b.dataset.v===v)));
   $$('section.view').forEach(s=> s.classList.toggle('on', s.id==='v-'+v));
+  // En Hoy y en Ajustar los botones grandes hacen lo mismo que el flotante:
+  // con los dos se pisan y confunden.
+  $('#fab').hidden = (v==='hoy' || v==='ajuste');
   window.scrollTo({top:0, behavior:'instant'});
   render();
 }
@@ -2957,10 +3174,10 @@ function aprenderRegla(desc, catId){
 
 /* ============================ diálogo de carga ============================ */
 let editId = null, dTipo = 'gasto', rCatTocada = false, dCatTocada = false;
-function abrirDlg(id){
+function abrirDlg(id, tipo){
   editId = id || null;
   const m = id ? S.movs.find(x=>x.id===id) : null;
-  dTipo = m ? m.tipo : 'gasto';
+  dTipo = m ? m.tipo : (tipo || 'gasto');
   $('#dlgTitle').textContent = m ? 'Editar movimiento' : 'Nuevo movimiento';
   $$('#dTipoSeg button').forEach(b=> b.setAttribute('aria-pressed', String(b.dataset.t===dTipo)));
   $('#dMonto').value = m ? (+m.monto||0) : '';
@@ -2997,6 +3214,20 @@ $('#mPrev').onclick = ()=>{ selYM = ymAdd(selYM,-1); render(); };
 $('#mNext').onclick = ()=>{ selYM = ymAdd(selYM, 1); render(); };
 $('#mLabel').onclick = ()=>{ selYM = ymNow(); render(); };
 $('#fab').onclick = ()=> abrirDlg(null);
+
+/* ---- pantalla simple y ajuste ---- */
+$('#hoyGaste').onclick = ()=> abrirDlg(null, 'gasto');
+$('#hoyCobre').onclick = ()=> abrirDlg(null, 'ingreso');
+$('#hoyVerDet').onclick = ()=> ponerDetalle($('#hoyDetalle').hidden);
+$('#ajMeta').addEventListener('input', renderAjuste);
+$('#ajLista').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-aj]'); if(!b) return;
+  const id = b.dataset.aj;
+  if(ajSel.has(id)) ajSel.delete(id); else ajSel.add(id);
+  renderAjuste();
+});
+$('#ajGuardar').onclick = guardarAjuste;
+$('#ajBorrar').onclick = borrarAjuste;
 $('#dCancel').onclick = ()=> $('#dlg').close();
 $('#dSave').onclick = guardarDlg;
 $('#dlg').addEventListener('keydown', e=>{ if(e.key==='Enter' && e.target.tagName!=='TEXTAREA'){ e.preventDefault(); guardarDlg(); } });
