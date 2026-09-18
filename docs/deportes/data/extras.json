@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-18T18:27:19.843Z",
+ "actualizado": "2026-09-18T21:40:20.349Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -962,9 +963,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -987,9 +987,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1060,9 +1059,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1109,9 +1107,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1242,9 +1239,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1272,6 +1268,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Patrick Vieira insists he expects to win trophies as Senegal boss",
+     "resumen": "Patrick Vieira insists he expects to win trophies as Senegal boss",
+     "fecha": "2026-09-18T19:21:43Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0918/dm_260918_COM_SOC_Presser_Patrick_Vieira_insists_he_expects_to_win_trophies_as_Senegal_boss_20260918_GLOBA/dm_260918_COM_SOC_Presser_Patrick_Vieira_insists_he_expects_to_win_trophies_as_Senegal_boss_20260918_GLOBA.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49974557/patrick-vieira-insists-expects-win-trophies-senegal-boss"
+    },
     {
      "titulo": "UEFA, Concacaf call on Infantino to make $10m payments to all FIFA members",
      "resumen": "FIFA's member federations should each get an extra $10 million (£7.4m) from its swelling cash reserves after a successful World Cup, the soccer body's vice presidents from Europe and North America said in a letter Friday.",
@@ -1313,13 +1316,6 @@
      "fecha": "2026-09-17T16:26:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/0917/r1718041_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49964525/fa-chief-demands-gianni-infantino-releases-fifa-documents-private-equity-proposal-folarin-balogun-decision"
-    },
-    {
-     "titulo": "UEFA VP: Gianni Infantino World Cup plan 'struck at the heart of the game'",
-     "resumen": "Gianni Infantino's plan to sell off a stake in the World Cup \"struck at the very heart of the principles of the game,\" UEFA vice-president Laura McAllister has told ESPN.",
-     "fecha": "2026-09-17T14:19:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0806/r1698399_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49963369/uefa-vp-laura-mcallister-gianni-infantino-world-cup-plan-struck-very-heart-game"
     },
     {
      "titulo": "Inter Miami manager: 'It would be only fair' for Messi to win Ballon d'Or again",
@@ -1694,9 +1690,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1707,9 +1702,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1756,9 +1750,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1769,9 +1762,8 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "199032",
@@ -1842,9 +1834,8 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "406938",
@@ -1969,18 +1960,18 @@
    ],
    "noticias": [
     {
-     "titulo": "Kily González on Inter Miami sporting decisions: 'You have to listen' to Lionel Messi",
-     "resumen": "New Inter Miami manager Cristian 'Kily' González has said the club takes the opinions of Lionel Messi into consideration when making sporting decisions, insisting one should always listen to players of that level.",
-     "fecha": "2026-09-18T18:20:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0918/r1718616_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49973553/kily-gonzalez-inter-miami-sporting-decisions-listen-lionel-messi"
-    },
-    {
      "titulo": "Transfer rumors, news: Real Madrid, Barcelona track Man City-bound USMNT star Sullivan",
      "resumen": "Real Madrid and Barcelona could make a future move for USMNT youngster Cavan Sullivan. Transfer Talk has the latest.",
-     "fecha": "2026-09-18T10:52:16Z",
+     "fecha": "2026-09-18T19:11:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/0903/r1711097_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49970584/transfer-rumors-news-real-madrid-barcelona-track-man-city-bound-usmnt-star-sullivan"
+    },
+    {
+     "titulo": "'Kily' González on Inter Miami sporting decisions: 'You have to listen' to Lionel Messi",
+     "resumen": "New Inter Miami manager Cristian 'Kily' González has said the club takes the opinions of Lionel Messi into consideration when making sporting decisions, insisting one should always listen to players of that level.",
+     "fecha": "2026-09-18T18:33:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0918/r1718616_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49973553/kily-gonzalez-inter-miami-sporting-decisions-listen-lionel-messi"
     },
     {
      "titulo": "Red Bulls teen Hall undecided on USMNT future despite 1st call-up",
@@ -2318,10 +2309,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
