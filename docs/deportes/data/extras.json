@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-18T04:48:47.733Z",
+ "actualizado": "2026-09-18T09:44:42.995Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -986,8 +988,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1580,8 +1583,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1837,8 +1841,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Mat%C3%ADas_Galarza_warmups.jpg/330px-Mat%C3%ADas_Galarza_warmups.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "406938",
@@ -1963,6 +1968,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Transfer rumors, news: Real Madrid, Barcelona track Man City-bound USMNT star Sullivan",
+     "resumen": "Real Madrid and Barcelona could make a future move for USMNT youngster Cavan Sullivan. Transfer Talk has the latest.",
+     "fecha": "2026-09-18T07:31:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0903/r1711097_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49970584/transfer-rumors-news-real-madrid-barcelona-track-man-city-bound-usmnt-star-sullivan"
+    },
+    {
      "titulo": "Red Bulls teen Hall undecided on USMNT future despite 1st call-up",
      "resumen": "New York Red Bulls teenage forward Julian Hall said the decision on his international allegiance was still \"not solidified,\" despite earning a first call-up to the U.S. men's national team on Thursday.",
      "fecha": "2026-09-17T22:08:13Z",
@@ -1996,13 +2008,6 @@
      "fecha": "2026-09-17T13:53:11Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0917/dm_260917_Inter_Miami_manager_It_would_be_only_fair_for_Messi_to_win_Ballon_dOr_again/dm_260917_Inter_Miami_manager_It_would_be_only_fair_for_Messi_to_win_Ballon_dOr_again.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49964659/only-fair-messi-win-ballon-dor-again"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-09-17T02:51:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
