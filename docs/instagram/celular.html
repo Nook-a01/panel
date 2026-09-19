@@ -44,16 +44,10 @@ h1{font-size:clamp(1.8rem,9vw,2.25rem);line-height:1.02;font-weight:900;text-tra
 h1 em{font-style:normal;color:var(--magenta)}
 .txt{font-size:1rem;color:#cfcfcf;margin-bottom:1.3rem}
 
-.app{display:flex;gap:.85rem;align-items:center;border:2px solid #fff;padding:.75rem;margin-bottom:1.3rem}
-.ico{width:3.4rem;height:3.4rem;flex:none;display:grid;place-items:center;font-weight:900;font-size:1.3rem;border-radius:.8rem}
-.app .n{font-weight:800;font-size:1.02rem;line-height:1.2}
-.app .s{font-size:.8rem;color:#aaa}
-.gratis{margin-left:auto;font-size:.66rem;font-weight:900;background:var(--acido);color:#000;padding:.2em .45em}
-
-.ruta{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:0 0 1.3rem}
-.chip{border:2px solid #fff;padding:.35em .6em;font-weight:800;font-size:.9rem}
-.chip.fin{background:var(--acido);color:#000;border-color:var(--acido)}
-.fl{color:var(--magenta);font-weight:900}
+/* en la compu el panel se arrastra hasta la barra de favoritos */
+.tirar{display:flex;justify-content:center;margin:.2rem 0 .4rem}
+.tirar a{display:inline-block;background:var(--acido);color:#000;border:2px solid var(--acido);font-weight:900;font-size:1.1rem;letter-spacing:.04em;padding:.9rem 1.7rem;text-decoration:none;cursor:grab;-webkit-user-select:none;user-select:none}
+.tirar a:active{cursor:grabbing;transform:translateY(1px)}
 
 .lista{border:2px solid #333;background:#0b0b0b;padding:.8rem .9rem;margin-bottom:1.3rem;list-style:none}
 .lista li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;color:#ddd;margin:.35rem 0}
@@ -112,7 +106,7 @@ h1 em{font-style:normal;color:var(--magenta)}
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "9";
+  var ESTA = "10";
   var raiz = document.documentElement;
   function mostrar() { raiz.style.visibility = ""; }
   // Al abrir, la página no se ve hasta saber si es la última: así nunca aparece
@@ -148,24 +142,15 @@ h1 em{font-style:normal;color:var(--magenta)}
        (y la extensión) dejan data-panel-instalado en esta página.
      - Con ?abrir, si el panel ya está puesto, va directo a Instagram. */
 
-  var USERSCRIPT = "panel.user.js";
   var INSTAGRAM  = "https://www.instagram.com/?igpp=abrir";
   // En Android, cualquier link a instagram.com lo agarra la app de Instagram.
   // Con un "intent" que nombra a Chrome, Android se lo da a Chrome y se abre en
   // una pestaña nueva. Si no hay Chrome, cae en la dirección común.
   var IG_EN_CHROME = "intent://www.instagram.com/#Intent;scheme=https;package=com.android.chrome;" +
                      "S.browser_fallback_url=https%3A%2F%2Fwww.instagram.com%2F;end";
-  var LINKS = {
-    userscriptsIOS: "https://apps.apple.com/app/userscripts/id1463298887",
-    firefoxAndroid: "https://play.google.com/store/apps/details?id=org.mozilla.firefox",
-    vmFirefox:      "https://addons.mozilla.org/firefox/addon/violentmonkey/",
-    vmChrome:       "https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
-  };
-
   var ua = navigator.userAgent;
   var esIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   var esAndroid = /Android/.test(ua);
-  var esFirefox = /Firefox|FxiOS/.test(ua);
   var esMacSafari = !esIOS && /Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg|OPR|Firefox/.test(ua);
   var abrir = /[?&]abrir(=|&|$)/.test(location.search);
 
@@ -181,12 +166,27 @@ h1 em{font-style:normal;color:var(--magenta)}
     if (/OPR|Opera|OPT/i.test(ua)) return "opera";
     if (/FxiOS|Firefox/i.test(ua)) return "firefox";
     if (/CriOS/i.test(ua)) return "chrome-ios";
+    if (esMacSafari) return "safari-mac";
     if (esIOS) return "safari";
     if (/Chrome/i.test(ua)) return "chrome";
     return esAndroid ? "chrome" : "otro";
   })();
-  var NOMBRE_NAV = { safari: "Safari", "chrome-ios": "Chrome", chrome: "Chrome", samsung: "Samsung Internet",
-                     firefox: "Firefox", edge: "Edge", opera: "Opera", otro: "tu navegador" }[NAV];
+  var NOMBRE_NAV = { safari: "Safari", "safari-mac": "Safari", "chrome-ios": "Chrome", chrome: "Chrome",
+                     samsung: "Samsung Internet", firefox: "Firefox", edge: "Edge", opera: "Opera",
+                     otro: "tu navegador" }[NAV];
+
+  /* ── compu: cómo se hace aparecer la barra de favoritos ──────────────
+     Ctrl+Shift+B la muestra en Chrome, Brave, Edge y Opera, y también en
+     Firefox desde la versión 84, donde antes abría el administrador.
+     Safari de Mac no tiene atajo documentado: va por el menú Visualización. */
+  var esMac = /Macintosh|Mac OS X/.test(ua);
+  var CTRL = esMac ? "⌘" : "Ctrl";
+  var BARRA = {
+    firefox: 'Apretá <b>' + CTRL + ' + Shift + B</b>. Si no pasa nada, hacé <b>clic derecho</b> en un lugar vacío de la barra de arriba → <b>Barra de marcadores</b> → <b>Mostrar siempre</b>.',
+    "safari-mac": 'Arriba en el menú andá a <b>Visualización</b> → <b>Mostrar barra de favoritos</b>.',
+    otro: 'Apretá <b>' + CTRL + ' + Shift + B</b>. Si no aparece, abrí el menú <b>⋮</b> de arriba a la derecha → <b>Favoritos</b> → <b>Mostrar barra de favoritos</b>.'
+  };
+  var barraTxt = BARRA[NAV] || BARRA.otro;
 
   function guardar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function leer(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -196,15 +196,11 @@ h1 em{font-style:normal;color:var(--magenta)}
 
   var NOMBRES = { ios: "🍎 iPhone", android: "🤖 Android", pc: "💻 Compu", mac: "💻 Mac" };
 
-  function appBox(ico, fondo, nombre, tienda) {
-    return '<div class="app"><div class="ico" style="background:' + fondo + '">' + ico + '</div>' +
-      '<div><div class="n">' + nombre + '</div><div class="s">' + tienda + '</div></div>' +
-      '<div class="gratis">GRATIS</div></div>';
-  }
-  function ruta(items) {
-    return '<div class="ruta">' + items.map(function (t, i) {
-      return '<span class="chip' + (i === items.length - 1 ? ' fin' : '') + '">' + t + '</span>';
-    }).join('<span class="fl">›</span>') + '</div>';
+  // El botón que se arrastra hasta la barra de favoritos. La dirección se le
+  // pone después, cuando terminó de bajar el marcador (ver ponerArrastre).
+  function tirador() {
+    return '<div class="tirar"><a id="tirar" href="#" draggable="true">◐ Panel</a></div>' +
+      '<p class="aviso">No le hagas clic acá: <b>arrastralo</b> hasta la barra.</p>';
   }
   // Bloque plegable "¿No te aparece así?": los navegadores cambian de diseño
   // según el modelo y la versión, y alguien escribió "no entiendo lo de
@@ -381,25 +377,53 @@ h1 em{font-style:normal;color:var(--magenta)}
       tx(186, 142, 14, "Editar", { w: 700 }) + marco(176, 124, 126, 28) + numero(156, 138, "2") +
       tx(186, 176, 13, "Eliminar", { c: "#cfcfd4", w: 500 })),
 
-    // Compu: tienda de Chrome
-    pcTienda: lienzo(190,
+    // Compu: dónde está la barra de favoritos
+    pcBarra: lienzo(120,
       caja(0, 0, 320, 26, { f: "#1c1c1e" }) + '<circle cx="14" cy="13" r="4" fill="#ff5f57"/><circle cx="28" cy="13" r="4" fill="#febc2e"/><circle cx="42" cy="13" r="4" fill="#28c840"/>' +
-      caja(56, 6, 250, 14, { rx: 7, f: GRIS }) + tx(64, 17, 9, "chromewebstore.google.com", { c: "#9a9a9f", w: 500 }) +
-      caja(20, 42, 40, 40, { rx: 8, f: "#2e2e3a" }) + tx(40, 69, 20, "🐒", { a: "middle" }) +
-      tx(68, 60, 13, "Violentmonkey", { w: 800 }) + tx(68, 76, 10, "Extensión", { c: "#9a9a9f", w: 500 }) +
-      caja(192, 48, 112, 30, { rx: 15, f: "#1a73e8" }) + tx(248, 68, 11.5, "Agregar a Chrome", { a: "middle", w: 700 }) + aro(248, 63, 62, 22) + numero(248, 96, "1") +
-      caja(96, 104, 208, 76, { rx: 8, f: "#2a2a2c" }) + tx(110, 126, 12, "¿Agregar Violentmonkey?", { w: 700 }) +
-      caja(206, 146, 90, 24, { rx: 12, f: "#1a73e8" }) + tx(251, 162, 10.5, "Agregar extensión", { a: "middle", w: 700 }) +
-      marco(202, 142, 98, 32) + numero(186, 158, "2")),
+      caja(56, 6, 250, 14, { rx: 7, f: GRIS }) + tx(64, 17, 9, "nook-a01.github.io", { c: "#9a9a9f", w: 500 }) +
+      caja(0, 26, 320, 24, { f: "#141416" }) +
+      tx(160, 42, 10.5, "· · ·   acá va a quedar el panel   · · ·", { c: "#6b6b70", a: "middle", w: 600 }) +
+      marco(2, 27, 316, 22) +
+      cartel(96, 72, "ESTA ES LA BARRA", 160, 52)),
 
-    // Compu: pantalla de instalación de Violentmonkey
-    pcInstalar: lienzo(160,
+    // Compu: arrastrar el botón del panel hasta la barra
+    pcArrastrar: lienzo(170,
       caja(0, 0, 320, 26, { f: "#1c1c1e" }) + '<circle cx="14" cy="13" r="4" fill="#ff5f57"/><circle cx="28" cy="13" r="4" fill="#febc2e"/><circle cx="42" cy="13" r="4" fill="#28c840"/>' +
-      tx(20, 50, 11, "🐒 Violentmonkey · Instalar script", { c: "#9a9a9f", w: 600 }) +
-      tx(20, 76, 17, "Panel de Instagram", { w: 800 }) +
-      caja(20, 100, 150, 32, { rx: 6, f: "#2e7d32" }) + tx(95, 121, 12, "Confirmar instalación", { a: "middle", w: 800 }) + aro(95, 116, 86, 25) +
-      caja(182, 100, 70, 32, { rx: 6, f: GRIS }) + tx(217, 121, 12, "Cerrar", { a: "middle", w: 600, c: "#cfcfd4" }) +
-      cartel(186, 138, "TOCÁ ACÁ", 150, 128)),
+      caja(0, 26, 320, 24, { f: "#141416" }) + marco(2, 27, 316, 22) +
+      caja(110, 118, 100, 34, { rx: 4, f: ACIDO }) + tx(160, 141, 14, "◐ Panel", { c: "#000", a: "middle", w: 900 }) +
+      '<path d="M160 112 L160 58" stroke="' + ROSA + '" stroke-width="4" fill="none"/>' +
+      '<path d="M150 72 L160 56 L170 72" stroke="' + ROSA + '" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' +
+      cartel(178, 76, "ARRASTRALO ACÁ")),
+
+    // Compu: clic derecho en la barra, para agregarlo a mano
+    pcAgregar: lienzo(170,
+      caja(0, 0, 320, 26, { f: "#1c1c1e" }) +
+      caja(0, 26, 320, 24, { f: "#141416" }) +
+      tx(14, 42, 10.5, "Barra de favoritos", { c: "#6b6b70", w: 600 }) +
+      numero(196, 38, "1") + tx(212, 43, 10.5, "clic derecho acá", { c: ROSA, w: 700 }) +
+      caja(60, 58, 200, 96, { rx: 8, f: "#1c1c1e", s: "#3a3a3c" }) +
+      tx(76, 84, 12, "Agregar página…") + marco(68, 66, 184, 26) + numero(48, 79, "2") +
+      tx(76, 112, 12, "Agregar carpeta…", { c: "#9a9a9f", w: 500 }) +
+      tx(76, 140, 12, "Administrar favoritos", { c: "#9a9a9f", w: 500 })),
+
+    // Compu: la ventanita del favorito, con el nombre y la dirección
+    pcPegar: lienzo(160,
+      caja(30, 14, 260, 132, { rx: 8, f: "#1c1c1e", s: "#3a3a3c" }) +
+      tx(46, 40, 13, "Agregar favorito", { w: 800 }) +
+      tx(46, 66, 10, "Nombre", { c: "#9a9a9f", w: 600 }) +
+      caja(46, 72, 224, 24, { rx: 4, f: "#0d0d0f", s: ACIDO, sw: 1.5 }) + tx(56, 89, 12, "Panel", { w: 600 }) + numero(284, 84, "1") +
+      tx(46, 112, 10, "URL", { c: "#9a9a9f", w: 600 }) +
+      caja(46, 118, 224, 24, { rx: 4, f: "#0d0d0f", s: ROSA, sw: 1.5 }) + tx(56, 135, 11.5, "pegá acá", { c: "#9a9a9f", w: 500 }) + numero(284, 130, "2")),
+
+    // Compu: Instagram con el panel ya puesto en la barra
+    pcEnIG: lienzo(160,
+      caja(0, 0, 320, 26, { f: "#1c1c1e" }) +
+      caja(56, 6, 250, 14, { rx: 7, f: GRIS }) + tx(64, 17, 9, "instagram.com", { c: "#9a9a9f", w: 500 }) +
+      caja(0, 26, 320, 24, { f: "#141416" }) +
+      caja(12, 30, 64, 16, { rx: 3, f: "#2a2a2c" }) + tx(44, 42, 10, "◐ Panel", { a: "middle", w: 800 }) +
+      aro(44, 38, 45, 18) +
+      tx(20, 78, 16, "Instagram", { w: 800 }) + rayas(20, 94, 3) +
+      cartel(124, 126, "HACÉ CLIC ACÁ", 62, 56)),
 
     // Uso: el botón ◐ abajo a la derecha de Instagram
     igBoton: lienzo(150,
@@ -550,45 +574,46 @@ h1 em{font-style:normal;color:var(--magenta)}
         pie: 'La próxima vez: entrás a instagram.com en Chrome, escribís <b>Panel</b> arriba y tocás el marcador.' }
     ],
     pc: [
-      { titulo: 'Agregá <em>Violentmonkey</em>',
-        cuerpo: '<p class="txt">Es una extensión <b>gratis</b> de la tienda oficial. Sirve para Chrome, Brave, Edge, Opera y Firefox. Tocá el botón y después:</p>' +
+      { titulo: 'Poné el panel en la <em>barra de favoritos</em>',
+        cuerpo: '<p class="txt">No hay que instalar nada ni bajar ninguna extensión: el panel es <b>un favorito más</b> de la barra de arriba de ' + NOMBRE_NAV + '.</p>' +
                 lista([
-                  { t: 'Tocá <b>' + (esFirefox ? 'Agregar a Firefox' : 'Agregar a Chrome') + '</b> y confirmá con <b>Agregar extensión</b>', img: esFirefox ? '' : DIB.pcTienda },
-                  'Volvé a esta pestaña'
+                  { t: '<b>Hacé aparecer la barra de favoritos.</b> ' + barraTxt, img: DIB.pcBarra },
+                  { t: '<b>Arrastrá</b> el botón verde de acá abajo <b>hasta la barra</b> y soltalo ahí', img: DIB.pcArrastrar }
+                ]) +
+                tirador() +
+                otrosCaminos([
+                  { c: 'Si no te deja arrastrarlo',
+                    t: 'Tocá <b>Copiar el panel</b> (abajo del todo). Después hacé <b>clic derecho</b> en un lugar vacío de la barra de favoritos y elegí <b>Agregar página…</b>. En <b>Nombre</b> escribí <b>Panel</b>, en <b>URL</b> borrá lo que haya y pegá con <b>' + CTRL + ' + V</b>. Guardá.' + DIB.pcAgregar + DIB.pcPegar },
+                  { c: 'Si al pegar la dirección queda vacía',
+                    t: 'Fijate que estés pegando <b>adentro de la ventanita del favorito</b>, y no en la barra de direcciones de arriba: ahí los navegadores no dejan pegar este tipo de dirección.' },
+                  { c: 'Si ya tenías un favorito Panel de antes',
+                    t: 'Borralo y hacé este de nuevo, el de antes era otro: clic derecho encima del favorito y elegí <b>Eliminar</b>.' },
+                  { c: 'Si usás Safari en la Mac',
+                    t: 'La barra se prende en <b>Visualización</b> → <b>Mostrar barra de favoritos</b>. El resto es igual: arrastrás el botón verde hasta la barra.' }
                 ]),
-        boton: { texto: 'Agregar Violentmonkey', href: esFirefox ? LINKS.vmFirefox : LINKS.vmChrome, avanza: true },
-        secundario: 'Ya la tengo →',
-        pie: '' },
-      { titulo: 'Instalá el <em>panel</em>',
-        cuerpo: '<p class="txt">Tocá el botón. Se abre una pantalla de Violentmonkey con el nombre del panel:</p>' +
+        boton: { texto: 'Ya lo puse en la barra →' },
+        secundario: 'Copiar el panel (para pegarlo a mano)',
+        secundarioAccion: 'copiarPanel',
+        pie: 'Se hace una sola vez. Después es hacer clic en Panel adentro de Instagram.' },
+      { titulo: 'Abrilo en <em>Instagram</em>',
+        cuerpo: '<p class="txt">Ahora abrí Instagram en <b>este mismo navegador</b>:</p>' +
                 lista([
-                  { t: 'Tocá <b>Confirmar instalación</b> (o <b>Instalar</b>)', img: DIB.pcInstalar },
-                  'Volvé a esta pestaña'
+                  'Tocá <b>Abrir Instagram</b> (abajo) e iniciá sesión si te lo pide',
+                  { t: 'Ya adentro de Instagram, hacé clic en <b>Panel</b>, arriba en la barra', img: DIB.pcEnIG }
+                ]) +
+                otrosCaminos([
+                  { c: 'Si hacés clic en Panel y no pasa nada',
+                    t: 'Tiene que ser <b>dentro de instagram.com</b> y con tu sesión iniciada. Desde cualquier otra página el panel avisa y no hace nada.' },
+                  { c: 'Si no ves el favorito Panel',
+                    t: 'Puede estar escondida la barra: ' + barraTxt + ' Si la barra está pero el favorito no, volvé al paso anterior.' }
                 ]),
-        boton: { texto: 'Instalar el panel', href: USERSCRIPT },
-        instalar: true,
-        pie: 'Cuando vuelvas, esta página se da cuenta sola de que quedó instalado.' }
-    ],
-    mac: [
-      { titulo: 'Bajá la app <em>Userscripts</em>',
-        cuerpo: '<p class="txt">Es <b>gratis</b> y es lo que deja que el panel funcione adentro de Instagram en Safari.</p>' +
-                appBox('{ }', 'linear-gradient(135deg,#2c7be5,#1b4fa8)', 'Userscripts', 'Mac App Store'),
-        boton: { texto: 'Abrir App Store', href: LINKS.userscriptsIOS, avanza: true },
-        secundario: 'Ya la tengo →',
-        pie: '' },
-      { titulo: 'Prendela en <em>Safari</em>',
-        cuerpo: '<p class="txt">En Safari, arriba en el menú, tocá en este orden:</p>' +
-                ruta(['Safari', 'Ajustes', 'Extensiones', 'Userscripts ✓', 'Permitir siempre']),
-        boton: { texto: 'Ya la prendí →' },
-        pie: 'Si preferís Chrome, Brave o Edge, tocá "Cambiar de aparato" abajo y elegí Compu.' },
-      { titulo: 'Instalá el <em>panel</em>',
-        cuerpo: '<p class="txt">Tocá el botón y después:</p>' +
-                lista(['Tocá el ícono de <b>Userscripts</b> en la barra de Safari', 'Tocá <b>Install</b>', 'Volvé a esta pestaña']),
-        boton: { texto: 'Instalar el panel', href: USERSCRIPT },
-        instalar: true,
-        pie: 'Cuando vuelvas, esta página se da cuenta sola de que quedó instalado.' }
+        boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
+        pie: 'La próxima vez: entrás a instagram.com y hacés clic en <b>Panel</b>.' }
     ]
   };
+  // La Mac lleva los mismos dos pasos: lo único que cambia es cómo se prende
+  // la barra, y de eso ya se encarga barraTxt según el navegador.
+  PASOS.mac = PASOS.pc;
 
   var instalado = false;
   var elPaso = document.getElementById("paso");
@@ -599,8 +624,6 @@ h1 em{font-style:normal;color:var(--magenta)}
   function pasoActual() {
     var n = parseInt(leer(clave()) || "0", 10) || 0;
     var total = PASOS[aparato].length;
-    // En Android, si ya se está en Firefox, el paso de bajar Firefox no aplica.
-    if (aparato === "android" && esFirefox && n === 0) n = 1;
     return Math.max(0, Math.min(n, total - 1));
   }
   function irA(n) { guardar(clave(), String(n)); pintar(); window.scrollTo(0, 0); }
@@ -642,7 +665,7 @@ h1 em{font-style:normal;color:var(--magenta)}
     html += '<h1>' + p.titulo + '</h1>' + p.cuerpo;
     html += p.boton.href
       ? '<a class="btn" id="principal" href="' + p.boton.href + '"' +
-        (p.boton.href === USERSCRIPT || /^intent:/.test(p.boton.href) ? '' : ' target="_blank" rel="noopener"') + '>' + p.boton.texto + '</a>'
+        (/^intent:/.test(p.boton.href) ? '' : ' target="_blank" rel="noopener"') + '>' + p.boton.texto + '</a>'
       : '<button class="btn" id="principal">' + p.boton.texto + '</button>';
     if (p.aviso) html += '<p class="aviso">' + p.aviso + '</p>';
     if (p.copiar) html += '<button class="sec" id="copiar">Copiar el link de esta página</button>';
@@ -676,6 +699,16 @@ h1 em{font-style:normal;color:var(--magenta)}
     if (atras) atras.addEventListener("click", function () { irA(n - 1); });
     var cop = document.getElementById("copiar");
     if (cop) cop.addEventListener("click", function () { copiarLink(cop); });
+    var tir = document.getElementById("tirar");
+    if (tir) {
+      ponerArrastre(tir, 0);
+      tir.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var antes = tir.textContent;
+        tir.textContent = "↑ Arrastralo, no lo toques";
+        setTimeout(function () { tir.textContent = antes; }, 2200);
+      });
+    }
     var rec = document.getElementById("recargar");
     if (rec) rec.addEventListener("click", function (ev) { ev.preventDefault(); location.reload(); });
     document.getElementById("cambiar").addEventListener("click", pintarElegir);
@@ -683,7 +716,7 @@ h1 em{font-style:normal;color:var(--magenta)}
 
   function pintarElegir() {
     var opciones = [["ios", "🍎 iPhone o iPad"], ["android", "🤖 Android"],
-                    ["pc", "💻 Compu (Chrome, Brave, Edge, Firefox)"], ["mac", "💻 Mac con Safari"]];
+                    ["pc", "💻 Compu o Mac"]];
     elPaso.innerHTML = '<h1>¿Desde qué <em>aparato</em>?</h1><p class="txt">Elegí dónde vas a usar el panel.</p>' +
       '<div class="elegir">' + opciones.map(function (o) {
         return '<button class="sec" data-a="' + o[0] + '">' + o[1] + '</button>';
@@ -758,9 +791,18 @@ h1 em{font-style:normal;color:var(--magenta)}
   bajar("marcador.txt", "entero");
   bajar("marcador-corto.txt", "corto");
 
+  function ponerArrastre(a, intento) {
+    if (marcadores.corto) { a.href = marcadores.corto; return; }
+    if (marcadores.corto === "" || intento > 30) {
+      a.textContent = "No se pudo cargar: recargá la página";
+      return;
+    }
+    setTimeout(function () { ponerArrastre(a, intento + 1); }, 200);
+  }
+
   function copiarPanel(boton, alCopiar) {
     var original = boton.textContent;
-    var marcador = aparato === "android" ? marcadores.corto : marcadores.entero;
+    var marcador = aparato === "ios" ? marcadores.entero : marcadores.corto;
     if (marcador === null) { boton.textContent = "Cargando… tocá de nuevo"; return; }
     if (!marcador) { boton.textContent = "No se pudo cargar: recargá la página"; return; }
     copiar(marcador, function (ok) {
