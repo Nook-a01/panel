@@ -28,6 +28,7 @@
 //   GET  /semilla  → la configuración inicial (categorías, pagos fijos, historial)
 //   GET  /app      → el estado completo de la app (lo que ves en pantalla)
 //   POST /app      → la app guarda su estado acá para que el otro aparato lo vea
+//   GET/POST /tarjeta    → el consumo del resumen en curso de la tarjeta de crédito
 //   GET/POST /campamento → los días marcados del plan de 30 días
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
@@ -284,6 +285,28 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
+      // ---- la tarjeta de crédito: cuánto va del resumen en curso ----
+      //
+      // Lo que gasta con la tarjeta no sale de su saldo: se le descuenta de la
+      // plata que le pasan el mes siguiente. El único que tiene el total del
+      // resumen en curso es el banco, así que lo manda el lector desde su
+      // página de BBVA.
+      if (url.pathname === "/tarjeta") {
+        if (request.method === "GET") {
+          const g = await env.PLATA.get("tarjeta");
+          if (!g) return json({ error: "Todavía no se leyó la tarjeta." }, 404);
+          return new Response(g, { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const e = await request.json();
+          if (!e || typeof e.pesos !== "number") return json({ error: "Eso no parece un consumo de tarjeta." }, 400);
+          e.leidoEn = new Date().toISOString();
+          await env.PLATA.put("tarjeta", JSON.stringify(e));
+          return json({ ok: true, pesos: e.pesos, cierre: e.cierre || null });
+        }
+        return json({ error: "Usá GET o POST." }, 405);
+      }
+
       // ---- campamento: qué días del plan marcaste ----
       if (url.pathname === "/campamento") {
         if (request.method === "GET") {
@@ -353,7 +376,7 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
-      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos", "GET/POST /instagram"] }, 404);
+      return json({ error: "Ruta desconocida", rutas: ["POST /guardar", "GET /datos", "GET/POST /tarjeta", "GET /estado", "GET /semilla", "GET/POST /app", "GET/POST /campamento", "GET/POST /vivos", "GET/POST /instagram"] }, 404);
     } catch (e) {
       return json({ error: e.message }, 500);
     }

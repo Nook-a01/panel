@@ -374,7 +374,11 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .mesque .dt{border-left:2px solid var(--line-2); margin:2px 0 8px 4px; padding-left:10px}
 .mesque .dl{display:flex; justify-content:space-between; gap:10px; font-size:13px; color:var(--ink-2); padding:3px 0}
 .mesque .dl b{color:var(--ink)}
-.mesque .dl.tip{color:var(--ink-3); font-size:12px; display:block; padding-top:4px}
+/* El nombre .tip ya lo usaba el cartelito flotante del gráfico viejo, que es
+   position:absolute con transform: sin esto, la explicación se dibujaba fuera
+   de la tarjeta. */
+.mesque .dl.tip{color:var(--ink-3); font-size:12px; display:block; padding:4px 0 0; white-space:normal; line-height:1.45;
+  position:static; transform:none; background:none; border:0; box-shadow:none; width:auto; pointer-events:auto}
 .mesque .fin{border-top:1px solid var(--line); margin-top:8px; padding-top:10px; font-size:15px; color:var(--ink)}
 .mesque .fin b{font-size:17px}
 .mesque .ok{color:var(--green-ink)} .mesque .mal{color:var(--crit)}
@@ -533,6 +537,11 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
         <div id="hoyPagos"></div>
       </div>
       <div class="hoy-col">
+        <div class="blq blq-tarjeta" id="hoyTarjetaCard" hidden>
+          <div class="blq-hd"><h3>Tarjeta de mamá</h3><span class="blq-hint" id="hoyTarjetaHint"></span></div>
+          <p class="frase" id="hoyTarjetaFrase"></p>
+          <div class="tbarra"><i id="hoyTarjetaBarra"></i></div>
+        </div>
         <div class="blq blq-ahorro">
           <div class="blq-hd"><h3>¿Cuánto podés ahorrar?</h3><span class="blq-hint" id="hoyAhorroHint"></span></div>
           <div id="hoyAhorro"></div>
@@ -845,8 +854,9 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
             <div><label class="fl" for="sCobro">Cuándo cobrás</label><input type="number" id="sCobro" min="1" max="31" value="1"></div>
             <div><label class="fl" for="sCobroTipo">Ese número es</label><select id="sCobroTipo"><option value="dia">El día del mes</option><option value="habil">El día hábil del mes</option></select></div>
             <div><label class="fl" for="sReserva">Meta de ahorro por mes</label><input type="number" id="sReserva" min="0" step="1000" placeholder="0"></div>
+            <div><label class="fl" for="sAyuda">Plata que te dan por mes con la tarjeta</label><input type="number" id="sAyuda" min="0" step="1000" placeholder="0"></div>
           </div>
-          <p style="margin:0; font-size:13px; color:var(--ink-3)">Si cobrás en los primeros 5 días hábiles, poné 5 y elegí «El día hábil del mes». La meta de ahorro se aparta antes de calcular cuánto te queda libre.</p>
+          <p style="margin:0; font-size:13px; color:var(--ink-3)">Si cobrás en los primeros 5 días hábiles, poné 5 y elegí «El día hábil del mes». La meta de ahorro se aparta antes de calcular cuánto te queda libre. Lo que gastás con la tarjeta de tu mamá se resta de la plata que te dan el mes siguiente.</p>
         </div>
       </div>
       <div class="card">
@@ -980,7 +990,7 @@ function stateVacio(){
   const byName = n => (cats.find(c=>c.nombre===n)||{}).id;
   return {
     v:1, updatedAt:new Date().toISOString(),
-    cfg:{ saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia' },
+    cfg:{ saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia', ayudaTarjeta:0 },
     cats, recs:[], cuotas:[], movs:[],
     reglas: REGLAS_DEF.map(r=>({pat:r[0], catId:byName(r[1])})).filter(r=>r.catId),
     gen:{}
@@ -1033,7 +1043,7 @@ function merge(a,b){
 }
 function sane(st){
   if(!st || typeof st!=='object' || !Array.isArray(st.cats)) return null;
-  st.cfg = Object.assign({saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia'}, st.cfg||{});
+  st.cfg = Object.assign({saldoInicial:0, fechaCorte:todayISO(), diaCobro:1, reserva:0, cobroTipo:'dia', ayudaTarjeta:0}, st.cfg||{});
   ['recs','cuotas','movs','reglas','metas'].forEach(k=>{ if(!Array.isArray(st[k])) st[k]=[]; });
   if(!st.gen || typeof st.gen!=='object') st.gen={};
   return st;
@@ -1426,6 +1436,18 @@ function guardarSaldoHoy(){
 // Las suscripciones se reconocen solas por el nombre; si destildás la casilla,
 // esa decisión manda (queda guardado susc:false).
 const RE_SUSC = /\b(apple|icloud|google one|drive|capcut|netflix|spotify|youtube|disney|hbo|max|prime video|amazon prime|paramount|star\+|crunchyroll|chatgpt|openai|claude|canva|adobe|tinder|duolingo|deezer|tidal|microsoft|xbox|game pass|playstation|nintendo|patreon|twitch|notion|dropbox)\b/i;
+// El consumo de la tarjeta lo lee el lector en la página del banco. Mientras
+// esa lectura no tenga más de 40 días (un resumen y monedas), manda sobre lo
+// que se ve en Mercado Pago, que sólo tiene los pagos hechos ahí.
+function tarjetaDelBanco(){
+  const t = S.tarjeta;
+  if(!t || !Number.isFinite(Number(t.pesos))) return null;
+  const dias = t.leidoEn ? (Date.now() - new Date(t.leidoEn).getTime()) / 86400e3 : 0;
+  if(dias > 40) return null;
+  return { pesos: Number(t.pesos), dolares: Number(t.dolares)||0, cierre: t.cierre || null,
+           vencimiento: t.vencimiento || null, leidoEn: t.leidoEn || null };
+}
+
 function esSusc(r){ return r.susc === true || (r.susc !== false && RE_SUSC.test(r.nombre || '')); }
 
 // Lo que gastaste en el día a día entre dos fechas. No cuenta los fijos ni las
@@ -1529,14 +1551,23 @@ function renderHoy(){
   const gas = S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false && !ap.cubiertos.has(r.id));
   const tIng = ing.reduce((a,r)=> a + equivMensual(r), 0);
   const tGas = gas.reduce((a,r)=> a + equivMensual(r), 0) + cuotasDelMes(c.refCobro.slice(0,7));
-  const trasFijos = tIng - tGas;
+  // Lo que le pasa la madre el mes que viene: el total menos lo que ya gastó
+  // este mes con su tarjeta.
+  const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
+  const tj = tarjetaDelBanco();
+  const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
+  const ayudaProx = Math.max(0, ayudaBase - gastadoTarj);
+  const trasFijos = tIng + ayudaProx - tGas;
   const vt = gastoVariableTipico(c);
   const podes = vt ? trasFijos - vt.valor : null;
   $('#hoyAhorroHint').textContent = 'por mes';
   if(!ing.length){
     $('#hoyAhorro').innerHTML = '<div class="vacio">Cargá lo que cobrás en <button class="lnk" data-ir="fijos">Fijos</button> para ver cuánto podés ahorrar.</div>';
   } else {
-    let h = '<p class="frase">Cobrás <b>'+money(tIng)+'</b> y tus fijos son <b>'+money(tGas)+'</b>: te quedan <b>'+money(trasFijos)+'</b>.</p>';
+    let h = '<p class="frase">Cobrás <b>'+money(tIng)+'</b> y tus fijos son <b>'+money(tGas)+'</b>.</p>';
+    if(ayudaBase > 0)
+      h += '<p class="frase">Tu mamá te pasa <b>'+money(ayudaBase)+'</b>, menos lo que gastaste con su tarjeta: el mes que viene te quedan <b class="'+(gastadoTarj ? 't-falta' : 't-ahorro')+'">'+money(ayudaProx)+'</b>.</p>';
+    h += '<p class="frase">En total te quedan <b>'+money(trasFijos)+'</b>.</p>';
     if(vt){
       h += '<p class="frase">En el día a día (comida, salidas, viajes, compras) venís gastando unos <b class="t-pagos">'+money(vt.valor)+'</b> por mes'
          + (vt.meses ? ', según '+(vt.meses===1 ? 'el mes pasado' : 'tus últimos '+vt.meses+' meses') : ', según lo que va de este mes')+'.</p>';
@@ -1554,6 +1585,24 @@ function renderHoy(){
         : '<p class="frase">No te da: para guardar <b>'+money(c.reserva)+'</b> tendrías que gastar <b class="t-falta">'+money(-sobra)+'</b> menos por mes.</p>';
     }
     $('#hoyAhorro').innerHTML = h;
+  }
+
+  // ---- tarjeta de mamá: lo que gastás ahora se descuenta el mes que viene ----
+  const tarjCard = $('#hoyTarjetaCard');
+  tarjCard.hidden = !(ayudaBase > 0 || gastadoTarj > 0);
+  if(!tarjCard.hidden){
+    const pct = ayudaBase > 0 ? Math.min(100, gastadoTarj / ayudaBase * 100) : (gastadoTarj > 0 ? 100 : 0);
+    $('#hoyTarjetaHint').textContent = mesNombre(c.hoyYM);
+    $('#hoyTarjetaFrase').innerHTML = gastadoTarj === 0
+      ? 'No la usaste en '+mesNombre(c.hoyYM)+'. El mes que viene te dan los <b class="t-ahorro">'+money(ayudaBase)+'</b> completos.'
+      : 'En '+mesNombre(c.hoyYM)+' gastaste <b class="t-falta">'+money(gastadoTarj)+'</b> con la tarjeta.'
+        + (ayudaBase > 0
+            ? ' El mes que viene, en vez de '+money(ayudaBase)+', te van a dar <b>'+money(ayudaProx)+'</b>.'
+              + (gastadoTarj >= ayudaBase ? ' Ya te la gastaste entera: lo que sumes ahora sale de tu sueldo.' : '')
+            : ' Poné en el engranaje cuánta plata te dan por mes y te digo con cuánto te quedás.');
+    const barra = $('#hoyTarjetaBarra');
+    barra.className = gastadoTarj === 0 ? 'tb-ok' : (pct < 30 ? 'tb-medio' : 'tb-mal');
+    barra.style.width = pct.toFixed(1) + '%';
   }
 
   // ---- suscripciones ----
@@ -1654,13 +1703,26 @@ function renderSimple(c, proximos, sinSaldo){
    si eso alcanza con lo que gastás de verdad. */
 // Los renglones de arriba se pueden abrir para ver de qué está hecho el número:
 // preguntó "¿por qué me entraría 1.800.000?" y no había forma de saberlo.
-let detMes = null;   // 'ing' | 'fij' | null
-function detalleDeMes(movs, signo){
+let detMes = null;   // 'ing' | 'fij' | 'ayuda' | null
+function detalleDeMes(movs, signo, nota){
   if(!movs.length) return '<div class="dt vacio">No hay nada cargado.</div>';
   return '<div class="dt">' + movs.slice().sort((a,b)=> a.fecha.localeCompare(b.fecha)).map(m=>
       '<div class="dl"><span>'+fmtDay(m.fecha)+' · '+esc(m.desc || catName(m.catId))+'</span><b>'+signo+money(m.monto)+'</b></div>'
     ).join('')
-    + '<div class="dl tip">Sale de lo que tenés cargado en Fijos. Si algo ya no va, borralo ahí.</div></div>';
+    + '<div class="dl tip">' + esc(nota || 'Sale de lo que tenés cargado en Fijos. Si algo ya no va, borralo ahí.') + '</div></div>';
+}
+
+function detalleTarjeta(tj){
+  if(!tj)
+    return detalleDeMes(movsMes(ymNow()).filter(m=> m.tipo==='gasto' && esTarjeta(m)), '−',
+      'Son los pagos con la tarjeta que se ven en Mercado Pago. Abrí tu resumen en el banco y el total se corrige solo.');
+  return '<div class="dt">'
+    + '<div class="dl"><span>Consumo del resumen</span><b>'+money(tj.pesos)+'</b></div>'
+    + (tj.dolares ? '<div class="dl"><span>En dólares (se pesifican al cierre)</span><b>USD '+tj.dolares.toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</b></div>' : '')
+    + (tj.cierre ? '<div class="dl"><span>Cierra</span><b>'+esc(tj.cierre)+'</b></div>' : '')
+    + (tj.vencimiento ? '<div class="dl"><span>Vence</span><b>'+esc(tj.vencimiento)+'</b></div>' : '')
+    + '<div class="dl tip">Lo lee tu banco: es el total del resumen en curso, no sólo lo que pasó por Mercado Pago. Se actualiza cada vez que abrís tu tarjeta en la página del banco'
+      + (tj.leidoEn ? ' (última lectura '+esc(mpHaceCuanto(tj.leidoEn))+')' : '') + '.</div></div>';
 }
 
 function pintarMesQue(c){
@@ -1669,11 +1731,17 @@ function pintarMesQue(c){
   const ms = movsMes(ym);
   const tIng = ms.filter(m=> m.tipo==='ingreso' && !esNoGasto(m.catId)).reduce((a,m)=>a+(+m.monto||0),0);
   const tFij = ms.filter(m=> m.tipo==='gasto' && (m.srcTipo==='fijo' || m.srcTipo==='cuota')).reduce((a,m)=>a+(+m.monto||0),0);
-  if(!tIng && !tFij){ el.hidden = true; return; }
+  // La plata que le pasa la madre: el total menos lo que ya gastó este mes con
+  // su tarjeta, porque eso se lo descuentan del mes siguiente.
+  const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
+  const tj = tarjetaDelBanco();
+  const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
+  const ayudaProx = Math.max(0, ayudaBase - gastadoTarj);
+  if(!tIng && !tFij && !ayudaBase){ el.hidden = true; return; }
   el.hidden = false;
 
   const dim = daysInMonth(ym);
-  const queda = tIng - tFij;
+  const queda = tIng + ayudaProx - tFij;
   const vt = gastoVariableTipico(c);          // lo que gastás por mes en el día a día
   const tipico = vt ? vt.valor : null;
   const cierra = tipico == null ? null : queda - tipico;
@@ -1681,6 +1749,13 @@ function pintarMesQue(c){
   let h = '<h3>El mes que viene · '+esc(ymLabel(ym))+'</h3>'
     + '<button type="button" class="l det" data-det="ing"><span>Te entra <i class="q">ver</i></span><b>'+money(tIng)+'</b></button>'
     + (detMes==='ing' ? detalleDeMes(ms.filter(m=> m.tipo==='ingreso' && !esNoGasto(m.catId)), '+') : '')
+    + (ayudaBase > 0 ? '<div class="l"><span>Te pasa tu mamá</span><b>'+money(ayudaBase)+'</b></div>' : '')
+    + (ayudaBase > 0 && gastadoTarj > 0
+        ? '<button type="button" class="l det" data-det="ayuda"><span>Menos lo que gastaste con su tarjeta'
+            + (tj && tj.cierre ? ' (cierra el '+esc(tj.cierre.slice(0,5))+')' : '')
+            + ' <i class="q">ver</i></span><b class="mal">−'+money(gastadoTarj)+'</b></button>'
+          + (detMes==='ayuda' ? detalleTarjeta(tj) : '')
+        : '')
     + '<button type="button" class="l det" data-det="fij"><span>Alquiler, fijos y cuotas <i class="q">ver</i></span><b>−'+money(tFij)+'</b></button>'
     + (detMes==='fij' ? detalleDeMes(ms.filter(m=> m.tipo==='gasto' && (m.srcTipo==='fijo' || m.srcTipo==='cuota')), '−') : '')
     + '<div class="l"><span>Te queda para el día a día</span><b class="'+(queda>=0?'ok':'mal')+'">'+money(queda)+'</b></div>';
@@ -1874,7 +1949,7 @@ function renderMovs(){
            (m.srcTipo==='cuota' ? '<span class="pill" style="margin-top:3px">cuota</span>'
             : m.srcTipo==='fijo' ? '<span class="pill" style="margin-top:3px">fijo</span>' : ''))
       +'</td>'
-      +'<td><span class="pill">'+esc(catName(m.catId))+'</span>'+(esTarjeta(m)?' <span class="pill p-tar">la pagan tus viejos</span>':'')+'</td>'
+      +'<td><span class="pill">'+esc(catName(m.catId))+'</span>'+(esTarjeta(m)?' <span class="pill p-tar">tarjeta de mamá</span>':'')+'</td>'
       +'<td class="r money '+(m.tipo==='ingreso'?'in':'out')+'">'+(m.tipo==='ingreso'?'+':'−')+money(m.monto)+'</td>'
       +'<td class="r" style="white-space:nowrap">'
         + (pend? '<button class="btn sm" data-ok="'+m.id+'">Confirmar</button> ':'')
@@ -2684,6 +2759,7 @@ function renderAjustes(){
   $('#sCobro').value  = S.cfg.diaCobro || 1;
   $('#sCobroTipo').value = S.cfg.cobroTipo === 'habil' ? 'habil' : 'dia';
   $('#sReserva').value= Number(S.cfg.reserva)||0;
+  $('#sAyuda').value  = Number(S.cfg.ayudaTarjeta)||0;
   const rs = S.reglas.slice(REGLAS_DEF.length);
   $('#reglasHint').textContent = rs.length? rs.length+' propias' : 'solo las de fábrica';
   $('#reglasList').innerHTML = rs.length
@@ -2793,6 +2869,10 @@ async function mpTraer(silencioso){
     // bolsillo tuyo a otro. Se importa igual (para verlo en el historial) pero
     // con una categoría que no cuenta ni como gasto ni como ingreso.
     const esReserva = m.esReserva || /reservad/i.test(m.descripcionTipo || '');
+    // Los pagos con la tarjeta de crédito de la madre llegan como "Mastercard
+    // crédito": no salen de su saldo, se descuentan de la plata que ella le pasa
+    // al mes siguiente. Se marcan como medio "credito" para contarlos aparte.
+    const medio = /mastercard|visa|cr[ée]dito|credito|tarjeta/i.test((m.descripcionTipo || '') + ' ' + (m.medio || '')) ? 'credito' : 'saldo';
     S.movs.push({
       id: uid(),
       fecha: m.fecha,
@@ -2800,7 +2880,7 @@ async function mpTraer(silencioso){
       monto: Number(m.monto)||0,
       catId: esReserva ? (esIngreso ? 'c-traspaso-in' : 'c-traspaso') : adivinarCat(m.detalle || '', esIngreso),
       desc: m.detalle || 'Movimiento de Mercado Pago',
-      src, srcTipo: 'mp',
+      src, srcTipo: 'mp', medio,
       estado: 'ok'
     });
     nuevos++;
@@ -2825,6 +2905,18 @@ async function mpTraer(silencioso){
     S.cfg.fechaCorte   = hoy;
     S.cfg.corteEn      = tLectura;
   }
+
+  // El consumo de la tarjeta lo manda el lector desde la página del banco: es
+  // el único lugar donde está el total del resumen, no sólo lo pagado por MP.
+  try{
+    const rt = await fetch(MP_WORKER + '/tarjeta', {
+      headers:{ authorization:'Bearer ' + clave }, cache:'no-store'
+    });
+    if(rt.ok){
+      const t = await rt.json();
+      if(t && Number.isFinite(Number(t.pesos))) S.tarjeta = t;
+    }
+  }catch(e){ /* si no se puede leer, queda lo de antes */ }
 
   S.mp = {
     actualizado: leidoEn,
@@ -3522,11 +3614,12 @@ $('#addCuo').onclick = ()=>{
   $('#cNombre').value=''; $('#cMonto').value=''; toast('Cuotas cargadas');
 };
 
-['sSaldo','sFecha','sCobro','sCobroTipo','sReserva'].forEach(id=> $('#'+id).addEventListener('change', ()=>{
+['sSaldo','sFecha','sCobro','sCobroTipo','sReserva','sAyuda'].forEach(id=> $('#'+id).addEventListener('change', ()=>{
   S.cfg.saldoInicial = parseFloat($('#sSaldo').value)||0;
   if(id==='sSaldo' || id==='sFecha') S.cfg.corteEn = Date.now();
   S.cfg.fechaCorte   = $('#sFecha').value || todayISO();
   S.cfg.diaCobro     = Math.min(31, Math.max(1, parseInt($('#sCobro').value)||1));
+  S.cfg.ayudaTarjeta = Math.max(0, parseFloat($('#sAyuda').value)||0);
   S.cfg.cobroTipo    = $('#sCobroTipo').value === 'habil' ? 'habil' : 'dia';
   S.cfg.reserva      = Math.max(0, parseFloat($('#sReserva').value)||0);
   cambiar(()=>{}); toast('Guardado');
@@ -3867,6 +3960,11 @@ input, textarea, select, [contenteditable]{caret-color:auto}
 .ritmo .d-verde{background:var(--verde)} .ritmo .d-amarillo{background:#FFD23F} .ritmo .d-rojo{background:var(--crit)}
 .ritmo .d-fut{background:transparent; box-shadow:inset 0 0 0 1px var(--line-2)}
 .ritmo .d-hoy{box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--cyan)}
+.blq-tarjeta{background:var(--surface); border:1px solid rgba(255,138,61,.35)}
+.blq-tarjeta .blq-hd h3{color:#FFB27A}
+.tbarra{height:12px; border-radius:6px; background:var(--surface-3); overflow:hidden; margin-top:2px}
+.tbarra i{display:block; height:100%; border-radius:6px; transition:width .35s}
+.tbarra .tb-ok{background:var(--verde)} .tbarra .tb-medio{background:#FFD23F} .tbarra .tb-mal{background:var(--crit)}
 .rep-barra{display:flex; gap:3px; height:18px; margin-top:4px}
 .rep-barra i{min-width:8px; border-radius:3px; background-image:repeating-linear-gradient(90deg, rgba(5,6,10,.35) 0 2px, transparent 2px 7px)}
 .rep-barra .r-libre{background-color:var(--cyan)} .rep-barra .r-pagos{background-color:var(--naranja)}

@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         Lector de Mercado Pago — Panel de plata
+// @name         Lector de Mercado Pago y tarjeta — Panel de plata
 // @namespace    https://nook-a01.github.io/panel/
-// @description  Lee tu saldo y tus movimientos desde tu propia sesión de Mercado Pago y los guarda en tu panel privado.
-// @version      1.2.0
+// @description  Lee tu saldo y tus movimientos de Mercado Pago, y el consumo de tu tarjeta en BBVA, y los guarda en tu panel privado.
+// @version      1.3.0
 // @match        https://www.mercadopago.com.ar/*
+// @match        https://online.bbva.com.ar/*
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
@@ -214,11 +215,11 @@
     return clave ? clave.trim() : "";
   }
 
-  function enviar(datos, clave) {
+  function enviar(datos, clave, ruta) {
     return new Promise((resolve, reject) => {
       GM_xmlhttpRequest({
         method: "POST",
-        url: WORKER + "/guardar",
+        url: WORKER + (ruta || "/guardar"),
         headers: { "content-type": "application/json", authorization: "Bearer " + clave },
         data: JSON.stringify(datos),
         timeout: 20000,
@@ -313,6 +314,81 @@
     }
   }
 
+  // ------------------------------------------------------------------------
+  // La tarjeta de crédito (BBVA)
+  // ------------------------------------------------------------------------
+  //
+  // Lo que se gasta con la tarjeta no sale del saldo: se descuenta de la plata
+  // que le pasan el mes siguiente. Mercado Pago sólo ve los pagos hechos con
+  // ella ahí, así que el total del resumen se lee del banco, que es el único
+  // que lo tiene completo.
+  //
+  // Se lee del texto de la página y no de clases CSS: el banco las genera con
+  // nombres al azar (hide-element__ApUyBpTp) que cambian en cada despliegue.
+  const enBanco = () => /(^|\.)bbva\.com\.ar$/.test(location.hostname);
+
+  function leerTarjeta() {
+    const t = (document.body.innerText || "").replace(/\u00a0/g, " ");
+    const num = s => Number(String(s).replace(/\./g, "").replace(",", "."));
+    const pesos = t.match(/Consumo en pesos\s*\$?\s*([\d.]+,\d{2})/i);
+    if (!pesos) return null;
+    const dolares = t.match(/Consumo en d[óo]lares\s*USD\s*([\d.]+,\d{2})/i);
+    // Hay dos pares de fechas: el resumen que ya cerró y el próximo. Importa el
+    // próximo, que es el que se está gastando ahora.
+    const prox = t.split(/Pr[óo]ximo resumen/i)[1] || t;
+    const f = prox.match(/Cierre\s*:?\s*(\d{2}\/\d{2}\/\d{4})[\s\S]{0,120}?Vencimiento\s*:?\s*(\d{2}\/\d{2}\/\d{4})/i);
+    return {
+      pesos: num(pesos[1]),
+      dolares: dolares ? num(dolares[1]) : 0,
+      cierre: f ? f[1] : null,
+      vencimiento: f ? f[2] : null,
+    };
+  }
+
+  async function enviarTarjeta(silencioso) {
+    const datos = leerTarjeta();
+    if (!datos) {
+      if (!silencioso) avisar("Acá no veo el consumo.\n\nEntrá a Tarjetas y abrí tu tarjeta.", "#b7791f");
+      return;
+    }
+    const clave = pedirClave();
+    if (!clave) return;
+    try {
+      const r = await enviar(datos, clave, "/tarjeta");
+      if (r.status === 401) {
+        GM_setValue(CLAVE_GUARDADA, "");
+        avisar("La clave no es correcta.\nTocá el botón de nuevo para reescribirla.", "#c53030");
+        return;
+      }
+      if (r.status !== 200) {
+        avisar("El panel rechazó los datos.\n" + ((r.cuerpo && r.cuerpo.error) || r.status), "#c53030");
+        return;
+      }
+      const peso = n => "$" + Number(n).toLocaleString("es-AR");
+      avisar(
+        "✅ Tarjeta actualizada\n" + peso(datos.pesos) +
+        (datos.dolares ? " + USD " + datos.dolares : "") +
+        (datos.cierre ? "\nCierra el " + datos.cierre : ""),
+        "#276749"
+      );
+    } catch (e) {
+      avisar("No se pudo conectar con el panel.\n" + e.message, "#c53030");
+    }
+  }
+
+  function ponerBotonTarjeta() {
+    if (document.getElementById("plata-boton-tarjeta")) return;
+    const b = document.createElement("button");
+    b.id = "plata-boton-tarjeta";
+    b.textContent = "💳 Actualizar tarjeta";
+    b.style.cssText =
+      "position:fixed;right:18px;bottom:18px;z-index:2147483647;padding:11px 16px;" +
+      "border:0;border-radius:999px;background:#004481;color:#fff;cursor:pointer;" +
+      "font:700 13px system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,68,129,.42)";
+    b.onclick = () => enviarTarjeta(false);
+    document.body.appendChild(b);
+  }
+
   function ponerBoton() {
     if (document.getElementById("plata-boton")) return;
     const b = document.createElement("button");
@@ -331,6 +407,16 @@
   const paginaConDatos = () => /\/(home|banking\/balance|activities)/.test(location.pathname);
 
   function arrancar() {
+    if (enBanco()) {
+      // El consumo sólo está en la pantalla de la tarjeta; en el resto del
+      // banco el botón queda igual, por si llegás desde otro lado.
+      ponerBotonTarjeta();
+      if (!window.__plataTarjetaYaLeyo) {
+        window.__plataTarjetaYaLeyo = true;
+        setTimeout(() => enviarTarjeta(true), 3500);
+      }
+      return;
+    }
     if (!paginaConDatos()) {
       const b = document.getElementById("plata-boton");
       if (b) b.remove();
@@ -349,6 +435,7 @@
     if (location.pathname !== ultimaRuta) {
       ultimaRuta = location.pathname;
       window.__plataYaLeyo = false;
+      window.__plataTarjetaYaLeyo = false;
       setTimeout(arrancar, 1500);
     }
   }, 1000);
@@ -361,6 +448,7 @@
   ["pointerdown", "keydown", "wheel", "touchstart", "scroll"].forEach(ev =>
     addEventListener(ev, () => { tocadaEn = Date.now(); }, { passive: true, capture: true }));
   setInterval(() => {
+    if (enBanco()) return;         // al banco no se lo recarga solo: te cierra la sesión
     if (!enInicio()) return;
     if (Date.now() - cargadaEn < CADA || Date.now() - tocadaEn < QUIETA) return;
     location.reload();
