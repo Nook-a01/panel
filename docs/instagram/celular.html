@@ -60,6 +60,13 @@ h1 em{font-style:normal;color:var(--magenta)}
 .lista li + li{border-top:1px solid #222;padding-top:.7rem;margin-top:.7rem}
 .lista .num{width:1.5rem;height:1.5rem;flex:none;background:var(--magenta);color:#000;font-weight:900;display:grid;place-items:center;font-size:.8rem;margin-top:.05rem}
 .lista .cont{flex:1;min-width:0}
+.alt{border:2px solid #333;background:#0b0b0b;margin:0 0 1.3rem}
+.alt summary{padding:.8rem .9rem;font-weight:800;font-size:.92rem;color:var(--acido);cursor:pointer;list-style:none}
+.alt summary::-webkit-details-marker{display:none}
+.alt summary::after{content:" ▾"}
+.alt[open] summary::after{content:" ▴"}
+.alt-c{padding:.2rem .9rem 1rem;font-size:.92rem;color:#cfcfcf;line-height:1.5}
+.alt-c b{display:block;color:var(--magenta);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.25rem}
 /* dibujo de dónde tocar, debajo de cada acción */
 .dib{display:block;width:100%;height:auto;margin-top:.55rem}
 
@@ -105,7 +112,7 @@ h1 em{font-style:normal;color:var(--magenta)}
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "7";
+  var ESTA = "8";
   var raiz = document.documentElement;
   function mostrar() { raiz.style.visibility = ""; }
   // Al abrir, la página no se ve hasta saber si es la última: así nunca aparece
@@ -180,6 +187,17 @@ h1 em{font-style:normal;color:var(--magenta)}
       return '<span class="chip' + (i === items.length - 1 ? ' fin' : '') + '">' + t + '</span>';
     }).join('<span class="fl">›</span>') + '</div>';
   }
+  // Bloque plegable "¿No te aparece así?": los navegadores cambian de diseño
+  // según el modelo y la versión, y alguien escribió "no entiendo lo de
+  // marcadores porque no me aparece así". Cada paso ofrece los otros caminos.
+  function otrosCaminos(items) {
+    return '<details class="alt"><summary>¿No te aparece así? Otras formas</summary>'
+      + items.map(function (o) {
+          return '<div class="alt-c"><b>' + o.c + '</b><div>' + o.t + '</div></div>';
+        }).join('')
+      + '</details>';
+  }
+
   // Cada acción puede ser un texto o {t: texto, img: dibujo}.
   function lista(items) {
     return '<ol class="lista">' + items.map(function (it, i) {
@@ -387,8 +405,8 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundario: 'Ya tengo el marcador → Ir a Instagram',
         secundarioHref: 'https://www.instagram.com/',
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
-      { titulo: 'Guardalo como <em>marcador</em>',
-        cuerpo: '<p class="txt">En Safari, en esta misma página. Seguí los dibujos: el círculo rosa es donde tocás.</p>' +
+      { titulo: 'Guardá esta página en <em>marcadores</em>',
+        cuerpo: '<p class="txt">Todo esto es <b>en Safari, en esta misma página</b>. Los dibujos son de Safari nuevo; si el tuyo se ve distinto, abrí «¿No te aparece así?».</p>' +
                 lista([
                   { t: 'Abajo a la derecha tocá <b>Más (•••)</b>', img: DIB.iosMas },
                   { t: 'Tocá <b>Agregar marcador</b>', img: DIB.iosMenuAgregar },
@@ -397,7 +415,16 @@ h1 em{font-style:normal;color:var(--magenta)}
                   { t: '<b>Mantené apretado</b> el marcador <b>Panel</b> y tocá <b>Editar</b>', img: DIB.iosEditar },
                   { t: 'Borrá la dirección, <b>mantené apretado</b> en ese renglón vacío, tocá <b>Pegar</b> y después <b>Guardar</b>', img: DIB.iosPegar }
                 ]) +
-                '<p class="aviso">Si abajo ves un <b>libro 📖</b> en vez de <b>•••</b>, usá el libro: tu Safari tiene otro diseño.</p>',
+                otrosCaminos([
+                  { c: 'Si abajo ves un libro 📖 y no •••',
+                    t: 'Tocá el <b>libro 📖</b> → el botón <b>+ Agregar</b> (arriba) → de nombre poné <b>Panel</b> → <b>Guardar</b>. Para editarlo: <b>libro 📖</b> → <b>Editar</b> (abajo) → tocá <b>Panel</b> → borrá la dirección y pegá.' },
+                  { c: 'Si tenés la barra arriba o un iPhone más viejo',
+                    t: 'Tocá <b>compartir</b> (el cuadradito con la flecha ↑) → <b>Agregar marcador</b> → <b>Guardar</b>. Después <b>libro 📖</b> → <b>Editar</b> → tocá <b>Panel</b> → borrá la dirección y pegá.' },
+                  { c: 'Si al pegar no aparece «Pegar»',
+                    t: 'Tocá una vez el renglón vacío de la dirección, esperá un segundo y volvé a <b>mantener apretado</b>. Si sigue sin salir, subí y tocá <b>Volver a copiar el panel</b>.' },
+                  { c: 'Si no sabés cuál marcador es',
+                    t: 'Es el que tiene el nombre que le pusiste (<b>Panel</b>). Si guardaste varios de prueba, borralos: mantenelos apretados y elegí <b>Eliminar</b>.' }
+                ]),
         boton: { texto: 'Ya lo guardé →' },
         secundario: 'Volver a copiar el panel',
         secundarioAccion: 'copiarPanel',
@@ -408,6 +435,12 @@ h1 em{font-style:normal;color:var(--magenta)}
                   'Tocá <b>Abrir Instagram</b> (abajo) e iniciá sesión si te lo pide',
                   { t: 'Ya en Instagram, tocá <b>Más (•••)</b> → <b>Marcadores</b>', img: DIB.iosMenuMarcadores },
                   { t: 'Tocá <b>Panel</b>', img: DIB.iosPanel }
+                ]) +
+                otrosCaminos([
+                  { c: 'Si no ves •••',
+                    t: 'Tocá el <b>libro 📖</b> (abajo o arriba, según tu Safari) y ahí tocá <b>Panel</b>.' },
+                  { c: 'Si tocás Panel y no pasa nada',
+                    t: 'Fijate que estés <b>dentro de instagram.com</b> y con tu sesión iniciada, no en otra página ni en la app de Instagram.' }
                 ]),
         boton: { texto: 'Abrir Instagram', href: 'https://www.instagram.com/' },
         aviso: 'Si se te abre la app de Instagram, volvé acá, <b>mantené apretado</b> el botón y elegí <b>Abrir</b>.',
@@ -421,8 +454,8 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundario: 'Ya tengo el marcador → Ir a Instagram',
         secundarioHref: IG_EN_CHROME,
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
-      { titulo: 'Guardalo como <em>favorito</em>',
-        cuerpo: '<p class="txt">En Chrome, en esta misma página. Seguí los dibujos: el círculo rosa es donde tocás.</p>' +
+      { titulo: 'Guardá esta página en <em>favoritos</em>',
+        cuerpo: '<p class="txt">Todo esto es <b>en Chrome, en esta misma página</b>. Si tu navegador se ve distinto, abrí «¿No te aparece así?».</p>' +
                 lista([
                   { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después la <b>estrellita ☆</b>', img: DIB.androidEstrella },
                   { t: 'Abajo aparece un aviso: tocá <b>Editar</b>', img: DIB.androidEditar },
@@ -433,6 +466,16 @@ h1 em{font-style:normal;color:var(--magenta)}
                   { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después <b>Favoritos</b>', img: DIB.androidMenuFavoritos },
                   { t: 'Entrá a <b>Dispositivos móviles</b>. Al lado de <b>Panel</b> tocá sus <b>tres puntitos ⋮</b> y después <b>Editar</b>', img: DIB.androidListaFavoritos },
                   { t: 'En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
+                ]) +
+                otrosCaminos([
+                  { c: 'Si la barra de direcciones te queda abajo',
+                    t: 'Deslizá la barra <b>hacia arriba</b> para que aparezcan los íconos, y ahí tocá la <b>estrellita ☆</b>. El resto es igual.' },
+                  { c: 'Si usás Samsung Internet',
+                    t: 'Tocá las <b>tres rayitas ☰</b> (abajo) → <b>Agregar página a</b> → <b>Favoritos</b>. Después <b>☰</b> → <b>Favoritos</b> → mantené apretado <b>Panel</b> → <b>Editar</b> → borrá la dirección y pegá.' },
+                  { c: 'Si usás Firefox',
+                    t: 'Tocá <b>⋮</b> → <b>Marcadores</b> para guardarla, y después <b>⋮</b> → <b>Marcadores</b> → mantené apretado <b>Panel</b> → <b>Editar</b> → borrá la dirección y pegá.' },
+                  { c: 'Si al pegar no aparece «Pegar»',
+                    t: 'Tocá el campo vacío, esperá un segundo y volvé a <b>mantener apretado</b>. Si sigue sin salir, subí y tocá <b>Volver a copiar el panel</b>.' }
                 ]),
         boton: { texto: 'Ya lo guardé →' },
         secundario: 'Volver a copiar el panel',
