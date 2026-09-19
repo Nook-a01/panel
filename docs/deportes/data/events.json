@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-18T04:48:47.733Z",
+ "actualizado": "2026-09-19T00:19:38.124Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 16,
+   "total": 15,
    "proximos": 8
   },
   {
@@ -163,28 +163,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-401903231",
-   "miLado": "visitante",
-   "idEspn": "401903231",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Deportivo Recoleta vs Boca Juniors",
-   "inicio": "2026-08-18T22:00Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Defensores del Chaco",
-   "local": "Deportivo Recoleta",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/22517.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "0 - 4"
   },
   {
    "id": "espn-761727",
