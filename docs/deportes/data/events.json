@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-19T10:56:14.344Z",
+ "actualizado": "2026-09-19T14:24:14.032Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 1,
+   "total": 3,
    "proximos": 0
   },
   {
@@ -47,7 +47,7 @@
    "color": "#38d0ff",
    "ruta": "rugby",
    "liga": "289234",
-   "total": 2,
+   "total": 3,
    "proximos": 0
   },
   {
@@ -76,6 +76,72 @@
   }
  ],
  "eventos": [
+  {
+   "id": "espn-703953",
+   "miLado": "local",
+   "idEspn": "703953",
+   "liga": "conmebol.america",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Argentina vs Colombia",
+   "inicio": "2024-07-15T01:15Z",
+   "horaConfirmada": true,
+   "competicion": "Copa América",
+   "sede": "Hard Rock Stadium",
+   "local": "Argentina",
+   "visitante": "Colombia",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+   "finalizado": true,
+   "marcador": "1 - 0"
+  },
+  {
+   "id": "espn-684665",
+   "miLado": "visitante",
+   "idEspn": "684665",
+   "liga": "fifa.worldq.conmebol",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Ecuador vs Argentina",
+   "inicio": "2025-09-09T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "FIFA World Cup Qualifying - CONMEBOL",
+   "sede": "Estadio Banco Pichincha",
+   "local": "Ecuador",
+   "visitante": "Argentina",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "finalizado": true,
+   "marcador": "1 - 0"
+  },
+  {
+   "id": "espn-603129",
+   "miLado": "local",
+   "idEspn": "603129",
+   "liga": "244293",
+   "ruta": "rugby",
+   "feedId": "pumas",
+   "feedLabel": "Los Pumas",
+   "sport": "rugby",
+   "emoji": "🏉",
+   "titulo": "Argentina vs South Africa",
+   "inicio": "2025-10-04T13:00Z",
+   "horaConfirmada": true,
+   "competicion": "The Rugby Championship",
+   "sede": "Allianz Stadium",
+   "local": "Argentina",
+   "visitante": "South Africa",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
+   "finalizado": true,
+   "marcador": "27 - 29"
+  },
   {
    "id": "espn-760517",
    "miLado": "visitante",
