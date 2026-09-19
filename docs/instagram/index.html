@@ -12,11 +12,11 @@
    así que no hay nada que esperar (la espera de 2,5 s de más abajo es para la
    compu, por si ya tiene el panel con la extensión). */
 (function () {
+  // Con el enlace para repartir (?abrir) nadie tiene que ver esta página: va
+  // derecho al asistente, en cualquier aparato. Si el panel ya está puesto, el
+  // asistente se da cuenta solo y de ahí salta a Instagram.
   if (!/[?&]abrir(=|&|$)/.test(location.search)) return;
-  var ua = navigator.userAgent;
-  var celular = /iPad|iPhone|iPod|Android/.test(ua) ||
-                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  if (celular) location.replace("celular.html" + location.search);
+  location.replace("celular.html" + location.search);
 })();
 </script>
 <title>Panel de Instagram — Instalación</title>
@@ -2723,7 +2723,7 @@ body::before{
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "8";
+  var ESTA = "9";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })

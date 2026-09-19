@@ -112,7 +112,7 @@ h1 em{font-style:normal;color:var(--magenta)}
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "8";
+  var ESTA = "9";
   var raiz = document.documentElement;
   function mostrar() { raiz.style.visibility = ""; }
   // Al abrir, la página no se ve hasta saber si es la última: así nunca aparece
@@ -168,6 +168,25 @@ h1 em{font-style:normal;color:var(--magenta)}
   var esFirefox = /Firefox|FxiOS/.test(ua);
   var esMacSafari = !esIOS && /Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg|OPR|Firefox/.test(ua);
   var abrir = /[?&]abrir(=|&|$)/.test(location.search);
+
+  /* ── ¿qué navegador es? ────────────────────────────────────────────────
+     Los pasos cambian según el navegador, no según el modelo del teléfono.
+     Y hay un caso que rompía todo: abrir el enlace desde WhatsApp o Instagram
+     abre el navegador DE ESA APP, que no tiene favoritos. Ahí no se puede
+     guardar nada: primero hay que pasar al navegador de verdad. */
+  var ENTRE_APPS = /FBAN|FBAV|FB_IAB|FBIOS|Instagram|Line |MicroMessenger|Snapchat|TikTok|Twitter|WhatsApp|OkHttp|WebView/i.test(ua) || ua.indexOf("; wv)") >= 0;
+  var NAV = (function () {
+    if (/SamsungBrowser/i.test(ua)) return "samsung";
+    if (/EdgA|EdgiOS|Edge/i.test(ua)) return "edge";
+    if (/OPR|Opera|OPT/i.test(ua)) return "opera";
+    if (/FxiOS|Firefox/i.test(ua)) return "firefox";
+    if (/CriOS/i.test(ua)) return "chrome-ios";
+    if (esIOS) return "safari";
+    if (/Chrome/i.test(ua)) return "chrome";
+    return esAndroid ? "chrome" : "otro";
+  })();
+  var NOMBRE_NAV = { safari: "Safari", "chrome-ios": "Chrome", chrome: "Chrome", samsung: "Samsung Internet",
+                     firefox: "Firefox", edge: "Edge", opera: "Opera", otro: "tu navegador" }[NAV];
 
   function guardar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function leer(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -389,6 +408,62 @@ h1 em{font-style:normal;color:var(--magenta)}
       aro(282, 116, 28) + cartel(150, 104, "TOCÁ ◐", 254, 116))
   };
 
+  /* Cómo se guarda y se edita un favorito en cada navegador. Sale de las guías
+     oficiales: Apple (Safari iOS 26), Google (Chrome Android), Samsung y Mozilla. */
+  var GUARDAR = {
+    safari: lista([
+      { t: 'Abajo a la derecha tocá <b>Más (•••)</b>', img: DIB.iosMas },
+      { t: 'Tocá <b>Agregar marcador</b>', img: DIB.iosMenuAgregar },
+      { t: 'Poné de nombre <b>Panel</b> y tocá <b>Guardar</b>', img: DIB.iosGuardar },
+      { t: 'Tocá otra vez <b>Más (•••)</b> y después <b>Marcadores</b>', img: DIB.iosMenuMarcadores },
+      { t: '<b>Mantené apretado</b> el marcador <b>Panel</b> y tocá <b>Editar</b>', img: DIB.iosEditar },
+      { t: 'Borrá la dirección, <b>mantené apretado</b> en ese renglón vacío, tocá <b>Pegar</b> y después <b>Guardar</b>', img: DIB.iosPegar }
+    ]),
+    chrome: lista([
+      { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después la <b>estrellita ☆</b>', img: DIB.androidEstrella },
+      { t: 'Abajo aparece un aviso: tocá <b>Editar</b>', img: DIB.androidEditar },
+      { t: 'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
+    ]) +
+    '<p class="txt" style="margin-bottom:.6rem"><b>¿No apareció Editar?</b> Hacelo desde la lista de favoritos:</p>' +
+    lista([
+      { t: 'Tocá <b>⋮</b> y después <b>Favoritos</b>', img: DIB.androidMenuFavoritos },
+      { t: 'Entrá a <b>Dispositivos móviles</b>. Al lado de <b>Panel</b> tocá sus <b>⋮</b> y después <b>Editar</b>', img: DIB.androidListaFavoritos },
+      { t: 'En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
+    ]),
+    "chrome-ios": lista([
+      'Tocá los <b>tres puntitos ⋯</b> y después <b>Agregar a marcadores</b>',
+      'Volvé a tocar <b>⋯</b> → <b>Marcadores</b>',
+      'Tocá <b>Editar</b> (abajo) y elegí <b>Panel</b>',
+      'Borrá la dirección, <b>mantené apretado</b>, tocá <b>Pegar</b> y guardá con <b>Listo</b>'
+    ]),
+    samsung: lista([
+      'Tocá la <b>estrellita ☆</b> de arriba (o <b>☰</b> abajo → <b>Agregar página a</b> → <b>Favoritos</b>)',
+      'Poné de nombre <b>Panel</b> y guardá',
+      'Abrí <b>☰</b> → <b>Favoritos</b>',
+      '<b>Mantené apretado</b> el favorito <b>Panel</b> y tocá <b>Editar</b>',
+      'Borrá la dirección, <b>mantené apretado</b>, tocá <b>Pegar</b> y guardá'
+    ]),
+    firefox: lista([
+      'Tocá <b>⋮</b> y después <b>Marcadores</b> (o el ícono de marcador) para guardar la página',
+      'Volvé a <b>⋮</b> → <b>Marcadores</b>',
+      'Al lado de <b>Panel</b> tocá sus <b>⋮</b> y elegí <b>Editar</b>',
+      'En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y confirmá con el <b>✓</b>'
+    ]),
+    edge: lista([
+      'Tocá <b>⋯</b> (abajo) → <b>Agregar a favoritos</b>',
+      'Volvé a <b>⋯</b> → <b>Favoritos</b>',
+      '<b>Mantené apretado</b> el favorito <b>Panel</b> y elegí <b>Editar</b>',
+      'Borrá la dirección, <b>mantené apretado</b>, tocá <b>Pegar</b> y guardá'
+    ]),
+    opera: lista([
+      'Tocá el <b>corazón ♥</b> o <b>⋮</b> → <b>Marcadores</b> para guardar la página',
+      'Abrí el menú de <b>Marcadores</b>',
+      '<b>Mantené apretado</b> el marcador <b>Panel</b> y elegí <b>Editar</b>',
+      'Borrá la dirección, <b>mantené apretado</b>, tocá <b>Pegar</b> y guardá'
+    ])
+  };
+  GUARDAR.otro = GUARDAR.chrome;
+
   /* Cada paso: titulo y cuerpo (HTML), boton {texto, href, avanza}, secundario.
      "avanza": al tocar el botón principal ya queda anotado el paso siguiente,
      así cuando la persona vuelve de la tienda encuentra el que sigue. */
@@ -406,15 +481,8 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundarioHref: 'https://www.instagram.com/',
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
       { titulo: 'Guardá esta página en <em>marcadores</em>',
-        cuerpo: '<p class="txt">Todo esto es <b>en Safari, en esta misma página</b>. Los dibujos son de Safari nuevo; si el tuyo se ve distinto, abrí «¿No te aparece así?».</p>' +
-                lista([
-                  { t: 'Abajo a la derecha tocá <b>Más (•••)</b>', img: DIB.iosMas },
-                  { t: 'Tocá <b>Agregar marcador</b>', img: DIB.iosMenuAgregar },
-                  { t: 'Poné de nombre <b>Panel</b> y tocá <b>Guardar</b>', img: DIB.iosGuardar },
-                  { t: 'Tocá otra vez <b>Más (•••)</b> y después <b>Marcadores</b>', img: DIB.iosMenuMarcadores },
-                  { t: '<b>Mantené apretado</b> el marcador <b>Panel</b> y tocá <b>Editar</b>', img: DIB.iosEditar },
-                  { t: 'Borrá la dirección, <b>mantené apretado</b> en ese renglón vacío, tocá <b>Pegar</b> y después <b>Guardar</b>', img: DIB.iosPegar }
-                ]) +
+        cuerpo: '<p class="txt">Todo esto es <b>en ' + NOMBRE_NAV + ', en esta misma página</b>. Si tu pantalla se ve distinta, abrí «¿No te aparece así?».</p>' +
+                (GUARDAR[NAV] || GUARDAR.safari) +
                 otrosCaminos([
                   { c: 'Si abajo ves un libro 📖 y no •••',
                     t: 'Tocá el <b>libro 📖</b> → el botón <b>+ Agregar</b> (arriba) → de nombre poné <b>Panel</b> → <b>Guardar</b>. Para editarlo: <b>libro 📖</b> → <b>Editar</b> (abajo) → tocá <b>Panel</b> → borrá la dirección y pegá.' },
@@ -455,18 +523,8 @@ h1 em{font-style:normal;color:var(--magenta)}
         secundarioHref: IG_EN_CHROME,
         pie: 'Se hace una sola vez. Después es tocar el marcador adentro de Instagram.' },
       { titulo: 'Guardá esta página en <em>favoritos</em>',
-        cuerpo: '<p class="txt">Todo esto es <b>en Chrome, en esta misma página</b>. Si tu navegador se ve distinto, abrí «¿No te aparece así?».</p>' +
-                lista([
-                  { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después la <b>estrellita ☆</b>', img: DIB.androidEstrella },
-                  { t: 'Abajo aparece un aviso: tocá <b>Editar</b>', img: DIB.androidEditar },
-                  { t: 'En <b>Nombre</b> poné <b>Panel</b>. En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
-                ]) +
-                '<p class="txt" style="margin-bottom:.6rem"><b>¿No apareció Editar, o no te dejó pegar?</b> Hacelo desde la lista de favoritos:</p>' +
-                lista([
-                  { t: 'Tocá los <b>tres puntitos ⋮</b> de arriba y después <b>Favoritos</b>', img: DIB.androidMenuFavoritos },
-                  { t: 'Entrá a <b>Dispositivos móviles</b>. Al lado de <b>Panel</b> tocá sus <b>tres puntitos ⋮</b> y después <b>Editar</b>', img: DIB.androidListaFavoritos },
-                  { t: 'En <b>URL</b> borrá todo, <b>mantené apretado</b>, tocá <b>Pegar</b> y volvé atrás', img: DIB.androidPegar }
-                ]) +
+        cuerpo: '<p class="txt">Todo esto es <b>en ' + NOMBRE_NAV + ', en esta misma página</b>. Si tu pantalla se ve distinta, abrí «¿No te aparece así?».</p>' +
+                (GUARDAR[NAV] || GUARDAR.chrome) +
                 otrosCaminos([
                   { c: 'Si la barra de direcciones te queda abajo',
                     t: 'Deslizá la barra <b>hacia arriba</b> para que aparezcan los íconos, y ahí tocá la <b>estrellita ☆</b>. El resto es igual.' },
@@ -547,8 +605,32 @@ h1 em{font-style:normal;color:var(--magenta)}
   }
   function irA(n) { guardar(clave(), String(n)); pintar(); window.scrollTo(0, 0); }
 
+  function pintarEnApp() {
+    var comoSalir = esIOS
+      ? lista([
+          'Abajo a la derecha tocá el botón de <b>compartir</b> o los <b>tres puntitos</b>',
+          'Elegí <b>Abrir en Safari</b> (o <b>Abrir en navegador</b>)',
+          'Cuando se abra Safari, seguí el asistente desde ahí'
+        ])
+      : lista([
+          'Arriba a la derecha tocá los <b>tres puntitos ⋮</b>',
+          'Elegí <b>Abrir en Chrome</b> (o <b>Abrir en el navegador</b>)',
+          'Cuando se abra Chrome, seguí el asistente desde ahí'
+        ]);
+    elPaso.innerHTML =
+      '<h1>Abrí esto en <em>' + (esIOS ? 'Safari' : 'Chrome') + '</em></h1>'
+      + '<p class="txt">Estás viendo esta página <b>adentro de otra app</b> (WhatsApp, Instagram o similar). Ese navegador de adentro <b>no tiene favoritos</b>, así que el panel no se puede guardar acá.</p>'
+      + comoSalir
+      + '<button type="button" class="sec" id="copiar">Copiar el link de esta página</button>'
+      + '<p class="aviso">Si no encontrás esa opción, copiá el link con el botón de arriba, abrí ' + (esIOS ? 'Safari' : 'Chrome') + ' y pegalo en la barra de direcciones.</p>';
+    elPie.innerHTML = 'Es un paso de una sola vez. Después todo sigue igual.';
+    var cop = document.getElementById("copiar");
+    if (cop) cop.addEventListener("click", function () { copiarLink(cop); });
+  }
+
   function pintar() {
     if (instalado) { pintarListo(); return; }
+    if (ENTRE_APPS) { pintarEnApp(); return; }
     var pasos = PASOS[aparato];
     var n = pasoActual();
     var p = pasos[n];
