@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "4";
+  var ESTA = "5";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -355,6 +355,8 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .prox .p small{display:block; color:var(--ink-3); font-size:12.5px}
 .prox .nada{color:var(--ink-2); font-size:14px; padding:10px 0}
 .prox .pm{display:flex; align-items:center; gap:10px; flex:none}
+.prox .ptot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:2px solid var(--line-2);margin-top:8px;padding:12px 0 4px;font-size:15px;color:var(--ink)}
+.prox .ptot b{font-size:18px;font-weight:700}
 .prox .lnk-mas{background:none; border:0; color:var(--accent); font:inherit; text-decoration:underline; cursor:pointer; text-align:left}
 .acc2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .acc2 button{border:0; border-radius:var(--radius); padding:16px 8px; font-family:var(--f-display);
@@ -1623,6 +1625,9 @@ function renderSimple(c, proximos, sinSaldo){
           ? '<button type="button" class="nada lnk-mas" data-vertodo="1">'
             + (proxTodos ? 'ver solo los tres primeros' : 'y '+(proximos.length-3)+' pago(s) más · verlos todos')+'</button>'
           : '')
+      // El total de TODO lo pendiente, aunque se estén viendo sólo los tres primeros.
+      + '<div class="ptot"><span>Total · '+proximos.length+(proximos.length===1?' pago':' pagos')+'</span><b class="num">'
+        + money(proximos.reduce(function(a,m){ return a + (Number(m.monto)||0); }, 0)) + '</b></div>'
     : '<div class="nada">No tenés pagos pendientes. 🎉</div>';
 
   // ¿cómo llego a fin del mes que viene?
