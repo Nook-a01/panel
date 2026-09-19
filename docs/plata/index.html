@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "3";
+  var ESTA = "4";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -3308,7 +3308,11 @@ function guardarDlg(){
   cambiar(()=>{
     if(editId){
       const m = S.movs.find(x=>x.id===editId);
-      if(m){ m.monto=monto; m.fecha=fecha; m.catId=catId; m.desc=desc; m.tipo=dTipo; m.estado='ok'; }
+      // Editar un movimiento que todavía no pasó no significa que ya lo cobraste
+      // o pagaste: si estaba pendiente y su fecha es futura, sigue pendiente.
+      if(m){ const seguiaPend = !confirmado(m) && fecha > todayISO();
+             m.monto=monto; m.fecha=fecha; m.catId=catId; m.desc=desc; m.tipo=dTipo;
+             m.estado = seguiaPend ? 'pend' : 'ok'; }
     } else {
       S.movs.push({id:uid(), fecha, tipo:dTipo, monto, catId, desc, estado:'ok'});
       if(ymOf(fecha)!==selYM) selYM = ymOf(fecha);
