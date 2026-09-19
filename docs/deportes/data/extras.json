@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-19T00:19:38.124Z",
+ "actualizado": "2026-09-19T05:52:18.018Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -616,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -628,8 +629,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1087,9 +1089,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1112,9 +1113,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1458,17 +1458,30 @@
       "pos": 7
      },
      {
+      "equipo": "Red Bull New York",
+      "abrev": "RBNY",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "pj": "26",
+      "pts": "33",
+      "g": "9",
+      "e": "6",
+      "p": "11",
+      "dg": "-14",
+      "mio": false,
+      "pos": 8
+     },
+     {
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "25",
+      "pj": "26",
       "pts": "32",
       "g": "8",
       "e": "8",
-      "p": "9",
-      "dg": "+6",
+      "p": "10",
+      "dg": "+5",
       "mio": false,
-      "pos": 8
+      "pos": 9
      },
      {
       "equipo": "FC Cincinnati",
@@ -1480,19 +1493,6 @@
       "e": "8",
       "p": "8",
       "dg": "-7",
-      "mio": false,
-      "pos": 9
-     },
-     {
-      "equipo": "Red Bull New York",
-      "abrev": "RBNY",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "25",
-      "pts": "30",
-      "g": "8",
-      "e": "6",
-      "p": "11",
-      "dg": "-15",
       "mio": false,
       "pos": 10
      },
@@ -1609,8 +1609,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1634,8 +1635,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1694,9 +1696,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1756,9 +1757,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1769,8 +1769,9 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "199032",
@@ -1805,8 +1806,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Italy",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Yannick_Bright_NYCFC_Miami_24_Sep_2025-010_%28cropped%29.jpg/330px-Yannick_Bright_NYCFC_Miami_24_Sep_2025-010_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "399971",
@@ -1889,8 +1891,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315801",
@@ -1901,8 +1904,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "387661",
@@ -1967,6 +1971,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Teenager Julian Hall scores lone goal in Red Bulls' victory over NYCFC",
+     "resumen": "Julian Hall scored early in the second half and keeper Ethan Horvath was never tested for the New York Red Bulls in a 1-0 victory over New York City FC on Friday night at Yankee Stadium.",
+     "fecha": "2026-09-19T02:41:23Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761815.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761815"
+    },
+    {
+     "titulo": "New York City FC vs. New York Red Bulls - Game Highlights",
+     "resumen": "Watch the Game Highlights from New York City FC vs. New York Red Bulls, 09/18/2026",
+     "fecha": "2026-09-19T01:48:18Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0919/eabb5316-6257-46a3-8402-580ac5d7713e/eabb5316-6257-46a3-8402-580ac5d7713e.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49976187/new-york-city-fc-vs-new-york-red-bulls-game-highlights"
+    },
+    {
      "titulo": "Source: Ex-U.S. defender Miazga set for NYCFC after Cincy exit",
      "resumen": "Former United States defender Matt Miazga is set to join New York City FC, a source confirmed to ESPN.",
      "fecha": "2026-09-18T22:01:00Z",
@@ -1993,20 +2011,6 @@
      "fecha": "2026-09-17T22:08:13Z",
      "imagen": "https://a.espncdn.com/photo/2026/0917/r1718291_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49967712/julian-hall-usa-poland-new-york-red-bulls"
-    },
-    {
-     "titulo": "Messi, MLS' Garber appear to have heated exchange after Miami win",
-     "resumen": "Lionel Messi pointed his finger at MLS commissioner Don Garber on multiple occasions while speaking with him after Inter Miami's game with Cruz Azul on Wednesday.",
-     "fecha": "2026-09-17T18:58:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1718209_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49966625/lionel-messi-mls-commissioner-don-garber-inter-miami-campeones-cup"
-    },
-    {
-     "titulo": "Beckham: Messi should win the Ballon D'Or",
-     "resumen": "Beckham: Messi should win the Ballon D'Or",
-     "fecha": "2026-09-17T17:47:22Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0917/dm_260917_COM_SOC_Interview_Beckham_Messi_should_win_the_Ballon_DOr_20260917_GLOBAL/dm_260917_COM_SOC_Interview_Beckham_Messi_should_win_the_Ballon_DOr_20260917_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49966215/messi-win-ballon-dor"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2140,10 +2144,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2750,368 +2753,7 @@
      "sede": "Golden 1 Center"
     }
    ],
-   "peleadores": [
-    {
-     "id": "2502364",
-     "nombre": "King Green",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Lightweight",
-     "record": "36-17-1",
-     "peleas": 4,
-     "gano": 3
-    },
-    {
-     "id": "5074121",
-     "nombre": "Alessandro Costa",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Flyweight",
-     "record": "17-5-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "5289841",
-     "nombre": "Daniil Donchenko",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
-     "categoria": "Welterweight",
-     "record": "16-2-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "5157667",
-     "nombre": "Quillan Salkilld",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Lightweight",
-     "record": "13-1-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "5212849",
-     "nombre": "Tommy McMillen",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Featherweight",
-     "record": "12-0-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "5216713",
-     "nombre": "Navajo Stirling",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
-     "categoria": "Light Heavyweight",
-     "record": "11-0-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "4049391",
-     "nombre": "Josh Hokit",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Heavyweight",
-     "record": "10-0-0",
-     "peleas": 3,
-     "gano": 3
-    },
-    {
-     "id": "3093653",
-     "nombre": "Sean Strickland",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Middleweight",
-     "record": "31-7-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "3022345",
-     "nombre": "Justin Gaethje",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Lightweight",
-     "record": "28-5-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "3022067",
-     "nombre": "Michael Page",
-     "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
-     "categoria": "Middleweight",
-     "record": "26-3-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "3151289",
-     "nombre": "Song Yadong",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
-     "categoria": "Bantamweight",
-     "record": "24-9-1",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4423264",
-     "nombre": "Tofiq Musayev",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
-     "categoria": "Lightweight",
-     "record": "24-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4336757",
-     "nombre": "Kai Asakura",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-     "categoria": "Bantamweight",
-     "record": "23-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4279621",
-     "nombre": "Modestas Bukauskas",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ltu.png",
-     "categoria": "Light Heavyweight",
-     "record": "21-7-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4375156",
-     "nombre": "Charles Johnson",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Catch Weight",
-     "record": "20-9-0",
-     "peleas": 4,
-     "gano": 2
-    },
-    {
-     "id": "4205093",
-     "nombre": "Sean O'Malley",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Bantamweight",
-     "record": "20-3-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4405109",
-     "nombre": "Sumudaerji",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chn.png",
-     "categoria": "Flyweight",
-     "record": "20-7-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4690541",
-     "nombre": "Gregory Rodrigues",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Middleweight",
-     "record": "20-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5099679",
-     "nombre": "Marcio Barbosa",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Featherweight",
-     "record": "19-2-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5145766",
-     "nombre": "Jean Silva",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Featherweight",
-     "record": "18-3-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4410868",
-     "nombre": "Mario Bautista",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Bantamweight",
-     "record": "18-3-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4397782",
-     "nombre": "Joselyne Edwards",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
-     "categoria": "W Bantamweight",
-     "record": "18-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "3136287",
-     "nombre": "Alexa Grasso",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "categoria": "W Flyweight",
-     "record": "18-5-1",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4566308",
-     "nombre": "Ketlen Souza",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "W Strawweight",
-     "record": "17-6-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5016786",
-     "nombre": "Farid Basharat",
-     "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
-     "categoria": "Bantamweight",
-     "record": "16-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5204223",
-     "nombre": "Kaan Ofli",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Featherweight",
-     "record": "15-4-1",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4694832",
-     "nombre": "Cam Rowston",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Middleweight",
-     "record": "15-3-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4503229",
-     "nombre": "David Martinez",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "categoria": "Bantamweight",
-     "record": "15-1-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5085291",
-     "nombre": "Manoel Sousa",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Lightweight",
-     "record": "15-1-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5060483",
-     "nombre": "Vitor Petrino",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Heavyweight",
-     "record": "15-2-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4848674",
-     "nombre": "Christian Leroy Duncan",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-     "categoria": "Middleweight",
-     "record": "15-2-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5075992",
-     "nombre": "Alexia Thainara",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "W Strawweight",
-     "record": "15-1-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5122238",
-     "nombre": "Mauricio Ruffy",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Lightweight",
-     "record": "14-2-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4001837",
-     "nombre": "Rizvan Kuniev",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-     "categoria": "Heavyweight",
-     "record": "14-3-1",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4685870",
-     "nombre": "Uroš Medić",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ser.png",
-     "categoria": "Welterweight",
-     "record": "14-3-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5076027",
-     "nombre": "Édgar Cháirez",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "categoria": "Catch Weight",
-     "record": "14-7-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5146696",
-     "nombre": "Luke Riley",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-     "categoria": "Featherweight",
-     "record": "14-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5099732",
-     "nombre": "Alden Coria",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Flyweight",
-     "record": "13-3-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5218817",
-     "nombre": "Mario Pinto",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
-     "categoria": "Heavyweight",
-     "record": "13-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5245078",
-     "nombre": "Axel Sola",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-     "categoria": "Lightweight",
-     "record": "13-1-1",
-     "peleas": 3,
-     "gano": 2
-    }
-   ]
+   "peleadores": null
   }
  }
 }
