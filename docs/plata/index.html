@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "5";
+  var ESTA = "6";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
