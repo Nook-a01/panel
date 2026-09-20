@@ -271,13 +271,26 @@ export default {
           if (!entrante || !Array.isArray(entrante.cats))
             return json({ error: "Eso no parece un estado de la app." }, 400);
 
-          // Si el aparato que escribe tiene datos más viejos que los guardados,
-          // no se pisa: gana el más nuevo y se le devuelve al que llegó tarde.
           const previo = JSON.parse((await env.PLATA.get("app")) || "null");
+
+          // Una pestaña abierta hace horas tiene el estado viejo en memoria. Al
+          // guardar le pone la fecha de ahora, así que "gana el más nuevo" la
+          // dejaba pisar todo lo que se había hecho mientras tanto. Por eso el
+          // que escribe manda también la versión sobre la que venía trabajando
+          // (baseUpdatedAt): si mientras tanto otro guardó algo distinto, no se
+          // pisa, se le devuelve lo guardado para que lo adopte.
+          const base = entrante.baseUpdatedAt;
+          if (previo && base !== undefined && (previo.updatedAt || null) !== (base || null))
+            return json({ ok: true, conservado: true, estado: previo });
+
+          // Sin baseUpdatedAt (una app vieja que todavía no se actualizó) queda
+          // la regla anterior: gana el más nuevo.
           const tPrevio   = previo   ? new Date(previo.updatedAt   || 0).getTime() : -1;
           const tEntrante = new Date(entrante.updatedAt || 0).getTime();
-          if (previo && tPrevio > tEntrante)
+          if (previo && base === undefined && tPrevio > tEntrante)
             return json({ ok: true, conservado: true, estado: previo });
+
+          delete entrante.baseUpdatedAt;
 
           await env.PLATA.put("app", JSON.stringify(entrante));
           return json({ ok: true, conservado: false, guardadoEn: entrante.updatedAt });

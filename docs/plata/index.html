@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "12";
+  var ESTA = "13";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -1020,6 +1020,9 @@ const LS_KEY = 'plata-en-mano-v1';
 // apiFilesOk: null = todavía no se guardó nada · true = va al panel compartido ·
 // false = solo en este navegador (sin clave, o sin internet).
 let apiFilesOk = null, saveTimer = null, saving = false, dirty = false;
+// La versión del panel sobre la que venimos trabajando. Se manda en cada
+// guardado para que una pestaña vieja no pise lo que hizo el otro aparato.
+let baseUpdatedAt = null;
 
 function setChip(cls, txt){ const c=$('#saveChip'); c.className='chip '+(cls||''); $('#saveTxt').textContent = txt; }
 
@@ -1097,6 +1100,7 @@ async function cargar(){
     if(best){ try{ localStorage.setItem(LS_KEY+'-previo', JSON.stringify(best)); }catch(e){} }
     S = sd; sembrado = true;
   } else if(best) S = best;
+  baseUpdatedAt = (remoto && remoto.updatedAt) || null;
   apiFilesOk = null;   // se define en el primer guardado
 }
 
@@ -1118,16 +1122,17 @@ async function guardarNube(){
     const r = await fetch(MP_WORKER+'/app', {
       method:'POST',
       headers:{ 'content-type':'application/json', authorization:'Bearer '+clave },
-      body: JSON.stringify(S)
+      body: JSON.stringify(Object.assign({}, S, { baseUpdatedAt: baseUpdatedAt }))
     });
     if(!r.ok) throw new Error('HTTP '+r.status);
     const d = await r.json();
     // El otro aparato había guardado algo más nuevo: se adopta en vez de pisarlo.
     if(d.conservado && d.estado){
       const traido = sane(d.estado);
-      if(traido){ S = traido; writeLS(); render(); setChip('warn','Traído del otro aparato'); dirty=false; return; }
+      if(traido){ S = traido; baseUpdatedAt = traido.updatedAt || null; writeLS(); render(); setChip('warn','Traído del otro aparato'); dirty=false; return; }
     }
     apiFilesOk = true; dirty = false;
+    baseUpdatedAt = S.updatedAt || null;
     setChip('ok','Guardado en los dos');
   }catch(err){
     apiFilesOk = false;
