@@ -11,7 +11,7 @@
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @connect      plata.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.4.1
+// @version      1.4.2
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
@@ -84,12 +84,23 @@
   if (document.getElementById("igpp-fab")) return;   // ya está puesto
 
   let abriendo = false;
+
+  /* Abrir solo después del login.
+     El enlace que se reparte es instagram.com/?igpp=abrir. Si ya hay sesión,
+     el panel se abre al toque. Si Instagram primero manda a iniciar sesión, la
+     marca queda guardada 15 minutos y el panel se abre apenas vuelve la sesión
+     de verdad: si no, la persona se logueaba y se quedaba mirando el feed sin
+     entender qué pasó. Esto estaba arreglado a mano en el archivo generado y
+     el generador no lo tenía; ahora vive acá, que es de donde sale todo. */
   const AUTO_KEY = "igpp_autoabrir";
   const AUTO_TTL = 15 * 60 * 1000;
 
   function cookie(n) {
-    const m = document.cookie.match("(^|;)\\s*" + n + "\\s*=\\s*([^;]+)");
-    return m ? m[2] : null;
+    for (const p of document.cookie.split(";")) {
+      const i = p.indexOf("=");
+      if (i > 0 && p.slice(0, i).trim() === n) return p.slice(i + 1).trim();
+    }
+    return null;
   }
   function haySesion() { return !!cookie("ds_user_id"); }
   function pedirAutoAbrir() {
@@ -197,7 +208,7 @@ async function IGPanelPro(){
   // dirección: abrir un enlace es una navegación, y las navegaciones no las bloquea la
   // CSP. Es la única vía que funciona, y solo si la persona decide tocarlo.
   var PAGINA='https://nook-a01.github.io/panel/instagram/';
-  var BUILD='1.2';
+  var BUILD='1.3';
   // =======================================
 
   var gc=function(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return m?m[2]:null;};
@@ -520,6 +531,9 @@ async function IGPanelPro(){
   '.igpp-cb:focus-visible,.igpp-input:focus-visible,.igpp-user:focus-visible'+
   '{outline:3px solid #b98cff;outline-offset:2px;border-radius:10px}'+
   '.igpp-tab.on{color:#fff;background:linear-gradient(45deg,rgba(64,93,230,.25),rgba(193,53,132,.25));border-color:#3a3a55}'+
+  '.igpp-pend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 18px;'+
+    'background:#1a1406;border-bottom:1px solid #5a4410;color:#ffd166;font-size:.9rem}'+
+  '.igpp-pend button{flex:none;padding:6px 12px;font-size:.85rem}'+
   '.igpp-body{padding:20px 24px;overflow:auto;flex:1;font-size:1rem}'+
   '.igpp-chip{display:inline-flex;align-items:center;gap:7px;background:#1a1a28;border:1px solid #2a2a40;border-radius:999px;padding:7px 14px;font-size:.9rem;color:#c9c9d8}'+
   '.igpp-btn{background:#1c1c2b;color:#f4f4f8;border:1px solid #2c2c44;border-radius:12px;padding:11px 17px;cursor:pointer;font-size:.98rem;font-weight:600;transition:filter .12s}'+
@@ -696,6 +710,19 @@ async function IGPanelPro(){
     tabBtns[td[0]]=b; tabsBar.appendChild(b);
   });
   panel.appendChild(tabsBar);
+
+  // ---------------- lo que queda sin registrar ----------------
+  // Cada baja se anota en este teléfono apenas se concreta, pero para que salga
+  // de acá hay que abrir una pestaña, y abrir una pestaña sin que la persona
+  // toque algo lo bloquea el navegador. Por eso hay un botón: aparece solo
+  // cuando quedó algo sin mandar y se va solo cuando se mandó. Antes esto
+  // viajaba únicamente al tocar "Entrar", así que el que daba de baja y no
+  // volvía a abrir el panel nunca lo registraba.
+  var barraPend=document.createElement('div');
+  barraPend.className='igpp-pend';
+  barraPend.style.display='none';
+  panel.appendChild(barraPend);
+
   var body=document.createElement('div'); body.className='igpp-body'; panel.appendChild(body);
 
   // pie: se saca el enlace de avisar, porque ahora el aviso pasa por la puerta de
@@ -721,6 +748,35 @@ async function IGPanelPro(){
     var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
     l.push(u); if(l.length>500) l=l.slice(-500); // techo por si algo se desmadra
     lsSet(LS.pendUnf,l);
+    try{ refrescarPendientes(); }catch(e){}
+  }
+
+  function pendientes(){
+    var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
+    return { bajas:l.length, escaneos:lsGet(LS.pendScan,0)||0 };
+  }
+  function refrescarPendientes(){
+    if(!barraPend) return;
+    var p=pendientes();
+    if(!PAGINA || (!p.bajas && !p.escaneos)){ barraPend.style.display='none'; return; }
+    barraPend.style.display='';
+    barraPend.innerHTML='';
+    var t=document.createElement('span');
+    t.style.flex='1';
+    t.textContent = p.bajas
+      ? 'Quedan ' + p.bajas + (p.bajas===1 ? ' baja sin registrar' : ' bajas sin registrar')
+      : 'Queda un escaneo sin registrar';
+    var b=document.createElement('button');
+    b.className='igpp-primary';
+    b.textContent='Registrar';
+    b.onclick=function(){
+      if(avisar()===false){
+        t.textContent='El navegador bloqueó la ventana. Permitila y tocá Registrar otra vez.';
+        return;
+      }
+      refrescarPendientes();
+    };
+    barraPend.appendChild(t); barraPend.appendChild(b);
   }
 
   // ---------------- SINCRONIZACIÓN entre dispositivos ----------------
@@ -809,7 +865,9 @@ async function IGPanelPro(){
   // largo máximo del enlace quedan guardados para la próxima apertura.
   function avisar(){
     var u=(state.counts&&state.counts.username)||'';
-    if(!u) return;
+    // Sin nombre y sin bajas no hay nada que contar. Con bajas se manda igual:
+    // lo que importa es a QUÉ cuenta le dieron de baja.
+    if(!u && !pendientes().bajas) return;
 
     var eventos=[{ev:'open'},{ev:'registro'}];
     var ps=lsGet(LS.pendScan,0)||0;
@@ -837,6 +895,7 @@ async function IGPanelPro(){
     }).then(function(){
       lsSet(LS.pendScan,null);
       lsSet(LS.pendUnf,null);
+      try{ refrescarPendientes(); }catch(e){}
     },function(){});
   }
 
@@ -1430,6 +1489,9 @@ async function IGPanelPro(){
   // el reloj vuelve a pasar por acá con la cola ya vacía.
   function colaTerminada(q){
     q.status='done'; // las bajas ya se anotaron una por una al concretarse
+    // Terminó de dar de baja: que vea el botón para registrarlas ahora, y no
+    // la próxima vez que abra el panel —que para mucha gente es nunca—.
+    try{ refrescarPendientes(); }catch(e){}
   }
 
   async function tickCheck(){
@@ -2142,6 +2204,7 @@ async function IGPanelPro(){
   // hay que mostrar la puerta de entrada o el panel directamente.
   checkAccount().then(function(){
     if(exigirRegistro()) switchTab('analysis');
+    try{ refrescarPendientes(); }catch(e){}
   });
   var existingQ=loadQ();
   if(existingQ&&existingQ.status==='running'){ startTimerLoop(); }

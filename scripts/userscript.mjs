@@ -35,7 +35,7 @@ const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "docs/instagram/panel.user.js";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
 const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
-const VERSION = "1.4.0";
+const VERSION = "1.4.2";
 
 const html = readFileSync(ORIGEN, "utf8");
 let panel = extraerPanel(html);
@@ -183,6 +183,62 @@ const cuerpo = `
 
   let abriendo = false;
 
+  /* Abrir solo después del login.
+     El enlace que se reparte es instagram.com/?igpp=abrir. Si ya hay sesión,
+     el panel se abre al toque. Si Instagram primero manda a iniciar sesión, la
+     marca queda guardada 15 minutos y el panel se abre apenas vuelve la sesión
+     de verdad: si no, la persona se logueaba y se quedaba mirando el feed sin
+     entender qué pasó. Esto estaba arreglado a mano en el archivo generado y
+     el generador no lo tenía; ahora vive acá, que es de donde sale todo. */
+  const AUTO_KEY = "igpp_autoabrir";
+  const AUTO_TTL = 15 * 60 * 1000;
+
+  function cookie(n) {
+    for (const p of document.cookie.split(";")) {
+      const i = p.indexOf("=");
+      if (i > 0 && p.slice(0, i).trim() === n) return p.slice(i + 1).trim();
+    }
+    return null;
+  }
+  function haySesion() { return !!cookie("ds_user_id"); }
+  function pedirAutoAbrir() {
+    try { localStorage.setItem(AUTO_KEY, String(Date.now())); } catch (e) {}
+  }
+  function limpiarAutoAbrir() {
+    try { localStorage.removeItem(AUTO_KEY); } catch (e) {}
+  }
+  function autoPendiente() {
+    try {
+      const ts = parseInt(localStorage.getItem(AUTO_KEY) || "0", 10);
+      if (!ts) return false;
+      if (Date.now() - ts > AUTO_TTL) { limpiarAutoAbrir(); return false; }
+      return true;
+    } catch (e) { return false; }
+  }
+  function avisoLogin() {
+    if (document.getElementById("igpp-login-note")) return;
+    const n = document.createElement("div");
+    n.id = "igpp-login-note";
+    n.textContent = "Cuando termines de iniciar sesión en Instagram, el panel se abre solo.";
+    n.style.cssText = [
+      "position:fixed", "left:12px", "right:12px",
+      "bottom:calc(72px + env(safe-area-inset-bottom))",
+      "z-index:2147482999", "background:#000", "color:#CCFF00",
+      "border:2px solid #CCFF00", "padding:10px 12px",
+      "font:700 13px system-ui,-apple-system,Segoe UI,sans-serif",
+      "text-align:center", "box-shadow:0 2px 14px rgba(0,0,0,.45)",
+    ].join(";");
+    document.documentElement.appendChild(n);
+  }
+  function revisarAutoAbrir() {
+    if (!autoPendiente() || document.getElementById("igpp-root")) return;
+    if (!haySesion()) { avisoLogin(); return; }
+    limpiarAutoAbrir();
+    const n = document.getElementById("igpp-login-note");
+    if (n) n.remove();
+    setTimeout(() => { if (!document.getElementById("igpp-root")) fab.click(); }, 500);
+  }
+
   const fab = document.createElement("button");
   fab.id = "igpp-fab";
   fab.setAttribute("aria-label", "Abrir el Panel de Instagram");
@@ -211,16 +267,19 @@ const cuerpo = `
 
   document.documentElement.appendChild(fab);
 
-  // Llegaste por el enlace del panel (instagram.com/?igpp=abrir): se abre solo
-  // UNA vez y se limpia la dirección, así recargar no lo vuelve a abrir.
+  // Llegaste por el enlace del panel (instagram.com/?igpp=abrir): si ya hay
+  // sesión se abre solo. Si Instagram primero pide login, queda una marca local
+  // por 15 minutos y se abre apenas vuelve la sesión real de Instagram.
   if (/[?&]igpp=abrir(&|$)/.test(location.search)) {
+    pedirAutoAbrir();
     try {
       const u = new URL(location.href);
       u.searchParams.delete("igpp");
       history.replaceState(history.state, "", u.pathname + u.search + u.hash);
     } catch (e) {}
-    setTimeout(() => { if (!document.getElementById("igpp-root")) fab.click(); }, 1500);
   }
+  revisarAutoAbrir();
+  setInterval(revisarAutoAbrir, 1200);
 
 ${panel}
 })();

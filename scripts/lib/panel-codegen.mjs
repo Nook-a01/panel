@@ -60,7 +60,9 @@ export function extraerPanel(html) {
 // antes un fetch propio que sepa llegar al contador.
 export const AVISAR_DIRECTO = `function avisar(){
     var u=(state.counts&&state.counts.username)||'';
-    if(!u) return;
+    // Sin nombre y sin bajas no hay nada que contar. Con bajas se manda igual:
+    // lo que importa es a QUÉ cuenta le dieron de baja.
+    if(!u && !pendientes().bajas) return;
 
     var eventos=[{ev:'open'},{ev:'registro'}];
     var ps=lsGet(LS.pendScan,0)||0;
@@ -88,6 +90,7 @@ export const AVISAR_DIRECTO = `function avisar(){
     }).then(function(){
       lsSet(LS.pendScan,null);
       lsSet(LS.pendUnf,null);
+      try{ refrescarPendientes(); }catch(e){}
     },function(){});
   }`;
 

@@ -175,7 +175,7 @@ async function IGPanelPro(){
   // dirección: abrir un enlace es una navegación, y las navegaciones no las bloquea la
   // CSP. Es la única vía que funciona, y solo si la persona decide tocarlo.
   var PAGINA='https://nook-a01.github.io/panel/instagram/';
-  var BUILD='1.2';
+  var BUILD='1.3';
   // =======================================
 
   var gc=function(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return m?m[2]:null;};
@@ -498,6 +498,9 @@ async function IGPanelPro(){
   '.igpp-cb:focus-visible,.igpp-input:focus-visible,.igpp-user:focus-visible'+
   '{outline:3px solid #b98cff;outline-offset:2px;border-radius:10px}'+
   '.igpp-tab.on{color:#fff;background:linear-gradient(45deg,rgba(64,93,230,.25),rgba(193,53,132,.25));border-color:#3a3a55}'+
+  '.igpp-pend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 18px;'+
+    'background:#1a1406;border-bottom:1px solid #5a4410;color:#ffd166;font-size:.9rem}'+
+  '.igpp-pend button{flex:none;padding:6px 12px;font-size:.85rem}'+
   '.igpp-body{padding:20px 24px;overflow:auto;flex:1;font-size:1rem}'+
   '.igpp-chip{display:inline-flex;align-items:center;gap:7px;background:#1a1a28;border:1px solid #2a2a40;border-radius:999px;padding:7px 14px;font-size:.9rem;color:#c9c9d8}'+
   '.igpp-btn{background:#1c1c2b;color:#f4f4f8;border:1px solid #2c2c44;border-radius:12px;padding:11px 17px;cursor:pointer;font-size:.98rem;font-weight:600;transition:filter .12s}'+
@@ -674,6 +677,19 @@ async function IGPanelPro(){
     tabBtns[td[0]]=b; tabsBar.appendChild(b);
   });
   panel.appendChild(tabsBar);
+
+  // ---------------- lo que queda sin registrar ----------------
+  // Cada baja se anota en este teléfono apenas se concreta, pero para que salga
+  // de acá hay que abrir una pestaña, y abrir una pestaña sin que la persona
+  // toque algo lo bloquea el navegador. Por eso hay un botón: aparece solo
+  // cuando quedó algo sin mandar y se va solo cuando se mandó. Antes esto
+  // viajaba únicamente al tocar "Entrar", así que el que daba de baja y no
+  // volvía a abrir el panel nunca lo registraba.
+  var barraPend=document.createElement('div');
+  barraPend.className='igpp-pend';
+  barraPend.style.display='none';
+  panel.appendChild(barraPend);
+
   var body=document.createElement('div'); body.className='igpp-body'; panel.appendChild(body);
 
   // pie: se saca el enlace de avisar, porque ahora el aviso pasa por la puerta de
@@ -699,6 +715,35 @@ async function IGPanelPro(){
     var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
     l.push(u); if(l.length>500) l=l.slice(-500); // techo por si algo se desmadra
     lsSet(LS.pendUnf,l);
+    try{ refrescarPendientes(); }catch(e){}
+  }
+
+  function pendientes(){
+    var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
+    return { bajas:l.length, escaneos:lsGet(LS.pendScan,0)||0 };
+  }
+  function refrescarPendientes(){
+    if(!barraPend) return;
+    var p=pendientes();
+    if(!PAGINA || (!p.bajas && !p.escaneos)){ barraPend.style.display='none'; return; }
+    barraPend.style.display='';
+    barraPend.innerHTML='';
+    var t=document.createElement('span');
+    t.style.flex='1';
+    t.textContent = p.bajas
+      ? 'Quedan ' + p.bajas + (p.bajas===1 ? ' baja sin registrar' : ' bajas sin registrar')
+      : 'Queda un escaneo sin registrar';
+    var b=document.createElement('button');
+    b.className='igpp-primary';
+    b.textContent='Registrar';
+    b.onclick=function(){
+      if(avisar()===false){
+        t.textContent='El navegador bloqueó la ventana. Permitila y tocá Registrar otra vez.';
+        return;
+      }
+      refrescarPendientes();
+    };
+    barraPend.appendChild(t); barraPend.appendChild(b);
   }
 
   // ---------------- SINCRONIZACIÓN entre dispositivos ----------------
@@ -788,7 +833,11 @@ async function IGPanelPro(){
   function avisar(){
     if(!PAGINA) return;
     var u=(state.counts&&state.counts.username)||'';
-    if(!u) return;
+    // Sin nombre y sin nada pendiente no hay nada que contar. Pero si hay bajas
+    // SÍ se mandan aunque Instagram no nos haya dicho quién es: lo que importa
+    // es a qué cuenta le dieron de baja, y sin usuario la visita sigue contando
+    // como visita suelta, así que esto no llena la tabla de gente sin nombre.
+    if(!u && !pendientes().bajas) return;
     var url=PAGINA+'?u='+encodeURIComponent(u)+'&b='+encodeURIComponent(BUILD);
     var ps=lsGet(LS.pendScan,0)||0;
     if(ps>0) url+='&s='+ps;
@@ -803,10 +852,16 @@ async function IGPanelPro(){
     if(envio.length) url+='&fu='+envio.map(encodeURIComponent).join(',');
 
     try{
-      window.open(url,'_blank');
+      var w=window.open(url,'_blank');
+      // Si el navegador bloqueó la ventana, window.open devuelve null y no
+      // tira error. Borrar acá sería perder las bajas sin que hayan llegado a
+      // ningún lado: se dejan donde están y se avisa.
+      if(!w) return false;
       lsSet(LS.pendScan,null);                       // escaneos: enviados
       lsSet(LS.pendUnf, resto.length?resto:null);    // bajas: guardo lo que no entró
-    }catch(e){}
+      refrescarPendientes();
+      return true;
+    }catch(e){ return false; }
   }
 
   // Puerta de entrada: se muestra SIEMPRE, en cada apertura del panel.
@@ -1399,6 +1454,9 @@ async function IGPanelPro(){
   // el reloj vuelve a pasar por acá con la cola ya vacía.
   function colaTerminada(q){
     q.status='done'; // las bajas ya se anotaron una por una al concretarse
+    // Terminó de dar de baja: que vea el botón para registrarlas ahora, y no
+    // la próxima vez que abra el panel —que para mucha gente es nunca—.
+    try{ refrescarPendientes(); }catch(e){}
   }
 
   async function tickCheck(){
@@ -2111,6 +2169,7 @@ async function IGPanelPro(){
   // hay que mostrar la puerta de entrada o el panel directamente.
   checkAccount().then(function(){
     if(exigirRegistro()) switchTab('analysis');
+    try{ refrescarPendientes(); }catch(e){}
   });
   var existingQ=loadQ();
   if(existingQ&&existingQ.status==='running'){ startTimerLoop(); }
@@ -2262,7 +2321,7 @@ var bajas=(function(){
 
 // Versión que sirve esta página. El panel manda la suya en &b=; si no coincide, el
 // marcador quedó viejo y hay que reinstalar (no se puede auto-actualizar por la CSP).
-var BUILD_ACTUAL='1.2';
+var BUILD_ACTUAL='1.3';
 
 // TODO lo de esta visita se manda en UN SOLO pedido (lote). Antes se disparaba un
 // fetch por cada evento y las tandas grandes chocaban con el freno por IP: se perdía
@@ -2300,8 +2359,11 @@ if(usuarioPanel){
   eventos.push({ev:'registro'}); contado['registro']=1;
   var nEsc=Math.min(pendScan|0,300);
   for(var i=0;i<nEsc;i++) eventos.push({ev:'scan_ok'});
-  bajas.forEach(function(nombre){ eventos.push({ev:'unfollow', d:nombre}); }); // una fila por cuenta
 }
+// Las bajas van siempre, con nombre o sin él: lo que importa es a QUÉ cuenta le
+// dieron de baja. Sin usuario la visita sigue contando como "visita_pagina", así
+// que esto no vuelve a llenar la tabla de gente sin nombre.
+bajas.forEach(function(nombre){ eventos.push({ev:'unfollow', d:nombre}); }); // una fila por cuenta
 var envio=enviarLote(eventos);
 
 // ---- cierre coordinado + puente de sincronización ----
@@ -2723,7 +2785,7 @@ body::before{
    versión en la dirección, así el navegador no usa la copia guardada.
    Subí el número en version.txt Y acá cada vez que cambie esta página. */
 (function () {
-  var ESTA = "10";
+  var ESTA = "11";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
