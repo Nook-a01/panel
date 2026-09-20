@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-20T01:06:56.842Z",
+ "actualizado": "2026-09-20T06:13:58.140Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -27,12 +27,12 @@
       "equipo": "Instituto (Córdoba)",
       "abrev": "IACC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-      "pj": "9",
-      "pts": "19",
-      "g": "6",
+      "pj": "10",
+      "pts": "22",
+      "g": "7",
       "e": "1",
       "p": "2",
-      "dg": "+4",
+      "dg": "+6",
       "mio": false,
       "pos": 1
      },
@@ -196,12 +196,12 @@
       "equipo": "Talleres (Córdoba)",
       "abrev": "TALL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-      "pj": "9",
+      "pj": "10",
       "pts": "8",
       "g": "2",
       "e": "2",
-      "p": "5",
-      "dg": "-4",
+      "p": "6",
+      "dg": "-6",
       "mio": false,
       "pos": 14
      },
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -964,9 +962,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1076,9 +1073,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1089,9 +1085,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1115,9 +1110,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1128,9 +1122,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1177,9 +1170,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1377,14 +1369,27 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "25",
-      "pts": "54",
-      "g": "16",
+      "pj": "26",
+      "pts": "57",
+      "g": "17",
       "e": "6",
       "p": "3",
-      "dg": "+29",
+      "dg": "+32",
       "mio": false,
       "pos": 1
+     },
+     {
+      "equipo": "New England Revolution",
+      "abrev": "NE",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "pj": "26",
+      "pts": "46",
+      "g": "14",
+      "e": "4",
+      "p": "8",
+      "dg": "+12",
+      "mio": false,
+      "pos": 2
      },
      {
       "equipo": "Inter Miami CF",
@@ -1397,31 +1402,18 @@
       "p": "4",
       "dg": "+15",
       "mio": true,
-      "pos": 2
-     },
-     {
-      "equipo": "New England Revolution",
-      "abrev": "NE",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "25",
-      "pts": "43",
-      "g": "13",
-      "e": "4",
-      "p": "8",
-      "dg": "+10",
-      "mio": false,
       "pos": 3
      },
      {
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "25",
-      "pts": "40",
-      "g": "11",
+      "pj": "26",
+      "pts": "43",
+      "g": "12",
       "e": "7",
       "p": "7",
-      "dg": "+9",
+      "dg": "+10",
       "mio": false,
       "pos": 4
      },
@@ -1429,40 +1421,53 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "24",
+      "pj": "25",
       "pts": "39",
       "g": "11",
       "e": "6",
-      "p": "7",
-      "dg": "+10",
+      "p": "8",
+      "dg": "+7",
       "mio": false,
       "pos": 5
-     },
-     {
-      "equipo": "Orlando City SC",
-      "abrev": "ORL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "25",
-      "pts": "34",
-      "g": "10",
-      "e": "4",
-      "p": "11",
-      "dg": "-12",
-      "mio": false,
-      "pos": 6
      },
      {
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "25",
-      "pts": "33",
-      "g": "9",
+      "pj": "26",
+      "pts": "36",
+      "g": "10",
       "e": "6",
       "p": "10",
-      "dg": "+7",
+      "dg": "+8",
+      "mio": false,
+      "pos": 6
+     },
+     {
+      "equipo": "Orlando City SC",
+      "abrev": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "pj": "26",
+      "pts": "34",
+      "g": "10",
+      "e": "4",
+      "p": "12",
+      "dg": "-14",
       "mio": false,
       "pos": 7
+     },
+     {
+      "equipo": "FC Cincinnati",
+      "abrev": "CIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "pj": "25",
+      "pts": "33",
+      "g": "8",
+      "e": "9",
+      "p": "8",
+      "dg": "-7",
+      "mio": false,
+      "pos": 8
      },
      {
       "equipo": "Red Bull New York",
@@ -1475,7 +1480,7 @@
       "p": "11",
       "dg": "-14",
       "mio": false,
-      "pos": 8
+      "pos": 9
      },
      {
       "equipo": "New York City FC",
@@ -1488,38 +1493,12 @@
       "p": "10",
       "dg": "+5",
       "mio": false,
-      "pos": 9
-     },
-     {
-      "equipo": "FC Cincinnati",
-      "abrev": "CIN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "24",
-      "pts": "32",
-      "g": "8",
-      "e": "8",
-      "p": "8",
-      "dg": "-7",
-      "mio": false,
       "pos": 10
      },
      {
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "24",
-      "pts": "29",
-      "g": "6",
-      "e": "11",
-      "p": "7",
-      "dg": "-7",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "Toronto FC",
-      "abrev": "TOR",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
       "pj": "25",
       "pts": "29",
       "g": "6",
@@ -1527,18 +1506,31 @@
       "p": "8",
       "dg": "-8",
       "mio": false,
+      "pos": 11
+     },
+     {
+      "equipo": "Toronto FC",
+      "abrev": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "pj": "26",
+      "pts": "29",
+      "g": "6",
+      "e": "11",
+      "p": "9",
+      "dg": "-10",
+      "mio": false,
       "pos": 12
      },
      {
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "25",
-      "pts": "23",
-      "g": "6",
+      "pj": "26",
+      "pts": "26",
+      "g": "7",
       "e": "5",
       "p": "14",
-      "dg": "-7",
+      "dg": "-5",
       "mio": false,
       "pos": 13
      },
@@ -1546,12 +1538,12 @@
       "equipo": "Atlanta United FC",
       "abrev": "ATL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "25",
-      "pts": "23",
-      "g": "6",
+      "pj": "26",
+      "pts": "26",
+      "g": "7",
       "e": "5",
       "p": "14",
-      "dg": "-14",
+      "dg": "-13",
       "mio": false,
       "pos": 14
      },
@@ -1559,12 +1551,12 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "25",
+      "pj": "26",
       "pts": "21",
       "g": "5",
       "e": "6",
-      "p": "14",
-      "dg": "-20",
+      "p": "15",
+      "dg": "-22",
       "mio": false,
       "pos": 15
      }
@@ -1617,8 +1609,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1703,9 +1696,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1753,9 +1745,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1766,9 +1757,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1815,9 +1805,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Italy",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Yannick_Bright_NYCFC_Miami_24_Sep_2025-010_%28cropped%29.jpg/330px-Yannick_Bright_NYCFC_Miami_24_Sep_2025-010_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "399971",
@@ -1913,9 +1902,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "387661",
@@ -1980,6 +1968,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Nashville SC vs. Chicago Fire FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Nashville SC vs. Chicago Fire FC, 09/19/2026",
+     "fecha": "2026-09-20T04:14:44Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0920/7a7605c1-6504-4070-be0c-6b7d42ad176e/7a7605c1-6504-4070-be0c-6b7d42ad176e.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49986060/nashville-sc-vs-chicago-fire-fc-game-highlights"
+    },
+    {
      "titulo": "Teenager Julian Hall scores lone goal in Red Bulls' victory over NYCFC",
      "resumen": "Julian Hall scored early in the second half and keeper Ethan Horvath was never tested for the New York Red Bulls in a 1-0 victory over New York City FC on Friday night at Yankee Stadium.",
      "fecha": "2026-09-19T02:41:23Z",
@@ -2013,13 +2008,6 @@
      "fecha": "2026-09-18T18:33:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0918/r1718616_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49973553/kily-gonzalez-inter-miami-sporting-decisions-listen-lionel-messi"
-    },
-    {
-     "titulo": "Red Bulls teen Hall undecided on USMNT future despite 1st call-up",
-     "resumen": "New York Red Bulls teenage forward Julian Hall said the decision on his international allegiance was still \"not solidified,\" despite earning a first call-up to the U.S. men's national team on Thursday.",
-     "fecha": "2026-09-17T22:08:13Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1718291_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49967712/julian-hall-usa-poland-new-york-red-bulls"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2694,46 +2682,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "UFC 331: Live results and analysis for Van vs. Pantoja 2",
-     "resumen": "Follow as Alexandre Pantoja attempts to reclaim the flyweight title against Joshua Van at UFC 331.",
-     "fecha": "2026-09-20T00:35:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1718144_1296x729_16-9.jpg",
+     "titulo": "White: No hard feeling toward Aspinall despite Hearn signing",
+     "resumen": "Dana White says he has no hard feelings toward former heavyweight champion Tom Aspinall despite his relationship with Eddie Hearn.",
+     "fecha": "2026-09-20T05:50:21Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1112/r1574535_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/ufc/story/_/id/49986949/white-no-hard-feeling-aspinall-hearn-signing"
+    },
+    {
+     "titulo": "Joshua Van dominates Alexandre Pantoja in rematch to retain UFC title",
+     "resumen": "UFC flyweight champion Joshua Van defeated Alexandre Pantoja in their first fight 10 months ago. Van beat Pantoja in the rematch too.",
+     "fecha": "2026-09-20T05:42:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719314_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/49986556/joshua-van-dominates-alexandre-pantoja-rematch-retain-ufc-title"
+    },
+    {
+     "titulo": "UFC 331 results: Van dominates Pantoja to retain men's flyweight title",
+     "resumen": "Joshua Van and Arman Tsarukyan earned big wins on a contender for fight card of the year. Here are the UFC 331 highlights.",
+     "fecha": "2026-09-20T05:12:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719300_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49953092/ufc-331-live-results-analysis-joshua-van-vs-alexandre-pantoja-2"
     },
     {
-     "titulo": "Conor McGregor expected to fight in bare-knuckle once UFC deal expires",
-     "resumen": "David Feldman, founder of the Bare Knuckle Fighting Championship (BKFC), told ESPN he would \"bet everything\" that Conor McGregor fights for the promotion once his UFC contract expires.",
-     "fecha": "2026-09-18T17:27:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0918/r1718645_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/49973843/conor-mcgregor-bkfc-fight-bare-knuckle-ufc-deal-expires"
-    },
-    {
-     "titulo": "UFC 331 preview and picks: Pantoja sees opportunity in disaster",
-     "resumen": "Top storylines and coaches' analysis for UFC 331 in Los Angeles.",
-     "fecha": "2026-09-17T17:32:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0916/r1717594_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/49957909/ufc-331-preview-predictions-joshua-van-alexandre-pantoja"
+     "titulo": "Small changes in biggest weight class in MMA divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-09-20T04:59:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0914/r1716711_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     },
     {
      "titulo": "Alexa Grasso shows off flyweight's elite status in women's P4P top 10",
      "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
-     "fecha": "2026-09-16T12:27:27Z",
+     "fecha": "2026-09-20T04:49:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1717174_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     },
     {
-     "titulo": "UFC's Islam Makhachev questions validity of Jon Jones' wins streak",
-     "resumen": "UFC champ Islam Makhachev believes Jon Jones' failed drug tests and issues outside the Octagon invalidate Jones' place among the UFC's all-time streaks for consecutive wins.",
-     "fecha": "2026-09-15T18:09:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0816/r1702425_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49949666/ufc-islam-makhachev-questions-validity-jon-jones-win-streak"
-    },
-    {
-     "titulo": "Ex-UFC champ Cejudo set to box 'Euphoria' actor Walton Sept. 26",
-     "resumen": "Retired UFC champion Henry Cejudo has a new opponent for his professional boxing debut on Sept. 26 -- actor and professional boxing prospect Javon \"Wanna\" Walton.",
-     "fecha": "2026-09-15T16:00:02Z",
-     "imagen": "https://a.espncdn.com/photo/2024/0227/r1296908_600x400_3-2.jpg",
-     "link": "https://www.espn.com/boxing/story/_/id/49949147/former-ufc-champ-cejudo-face-euphoria-actor-boxing-debut"
+     "titulo": "Arman Tsarukyan brutally knocks out Mauricio Ruffy",
+     "resumen": "Arman Tsarukyan hits a clean elbow right to Mauricio Ruffy's face in a nasty first round knockout at UFC 331.",
+     "fecha": "2026-09-20T03:57:50Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0919/dm_260919_UFC_Highlight_Arman_Tsarukyan_brutally_knocks_out_Mauricio_Ruffy_20260920_AUS_ONLY/dm_260919_UFC_Highlight_Arman_Tsarukyan_brutally_knocks_out_Mauricio_Ruffy_20260920_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49986178/arman-tsarukyan-brutally-knocks-mauricio-ruffy"
     }
    ],
    "resultados": [
@@ -2838,7 +2826,7 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "categoria": "Heavyweight",
      "record": "10-0-0",
-     "peleas": 3,
+     "peleas": 4,
      "gano": 3
     },
     {
@@ -2959,6 +2947,15 @@
      "gano": 2
     },
     {
+     "id": "3948876",
+     "nombre": "Alonzo Menifield",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Light Heavyweight",
+     "record": "19-6-1",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
      "id": "5145766",
      "nombre": "Jean Silva",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
@@ -2991,6 +2988,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
      "categoria": "W Flyweight",
      "record": "18-5-1",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "5120301",
+     "nombre": "Joshua Van",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mya.png",
+     "categoria": "Flyweight",
+     "record": "18-2-0",
      "peleas": 2,
      "gano": 2
     },
@@ -3080,7 +3086,7 @@
      "nombre": "Mauricio Ruffy",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "Lightweight",
-     "record": "14-2-0",
+     "record": "14-3-0",
      "peleas": 3,
      "gano": 2
     },
@@ -3099,7 +3105,7 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ser.png",
      "categoria": "Welterweight",
      "record": "14-3-0",
-     "peleas": 2,
+     "peleas": 3,
      "gano": 2
     },
     {
@@ -3108,24 +3114,6 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
      "categoria": "Catch Weight",
      "record": "14-7-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5146696",
-     "nombre": "Luke Riley",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-     "categoria": "Featherweight",
-     "record": "14-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5099732",
-     "nombre": "Alden Coria",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Flyweight",
-     "record": "13-3-0",
      "peleas": 3,
      "gano": 2
     }

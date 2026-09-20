@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-20T01:06:56.842Z",
+ "actualizado": "2026-09-20T06:13:58.140Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -748,7 +748,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
@@ -1562,7 +1562,7 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC 334",
+   "titulo": "UFC 334: Gane vs. Hokit",
    "inicio": "2026-11-14T22:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
