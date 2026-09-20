@@ -21,15 +21,16 @@ export const CONFIG = {
   //   { hours: 24 }  -> un día antes
   //   { hours: 1 }   -> una hora antes
   //
-  // VACÍO A PROPÓSITO: cada entrada de esta lista manda UNA notificación por
-  // CADA evento. Con dos entradas y varios equipos seguidos, eso eran muchas
-  // notificaciones por día. Ahora el único aviso es el resumen de las 10 de la
-  // mañana, que lista todos los partidos del día en una sola notificación.
+  // UNA SOLA ENTRADA, a pedido suyo (20/9/2026): el aviso de una hora antes.
   //
-  // Si alguna vez querés volver a los avisos por evento, agregá acá lo que
-  // necesites — por ejemplo [{ hours: 1, etiqueta: "en 1 hora" }] — y
-  // reactivá el cron de .github/workflows/avisar.yml.
-  avisos: [],
+  // Estuvo vacío desde el 11/9 porque cada entrada manda una notificación por
+  // CADA evento, y con DOS entradas (un día antes y una hora antes) sumado a
+  // seis equipos eran demasiadas por día. Con una sola queda en uno o dos
+  // avisos diarios, que es lo que él pidió.
+  //
+  // El resumen de las 10 de la mañana sigue igual y es otra cosa: ese junta
+  // todos los partidos del día en una notificación sola.
+  avisos: [{ hours: 1, etiqueta: "en 1 hora" }],
 
   // Los intereses. Poné activo:false para silenciar uno sin borrarlo.
   feeds: [

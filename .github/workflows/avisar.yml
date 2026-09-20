@@ -3,21 +3,19 @@ name: Enviar avisos
 # Corre sobre el repo panel (antes vivia en mis-deportes).
 
 on:
-  # APAGADO A PROPÓSITO (11/9/2026).
+  # PRENDIDO DE NUEVO el 20/9/2026, a pedido suyo.
   #
-  # Esta tarea manda los avisos por evento, que salen de CONFIG.avisos.
-  # Esa lista quedó vacía: ahora el único aviso diario es el resumen de las
-  # 10 de la mañana (.github/workflows/diario.yml), que junta todos los
-  # partidos del día en una sola notificación.
+  # Manda los avisos por evento, que salen de CONFIG.avisos. Entre el 11 y el
+  # 20 de septiembre estuvo apagado porque esa lista quedó vacía y correr esto
+  # cada 15 minutos sin nada que mandar sólo gastaba minutos.
   #
-  # Correr esto cada 15 minutos con la lista vacía no manda nada y solo
-  # gasta minutos de GitHub Actions.
+  # Ahora la lista tiene UNA entrada —una hora antes— así que son uno o dos
+  # avisos por día. Si algún día vuelven a molestar, lo primero es vaciar
+  # CONFIG.avisos en config.mjs; apagar sólo este reloj deja el aviso a medias.
   #
-  # Para reactivarlo: descomentá las dos líneas de abajo y volvé a poner
-  # entradas en CONFIG.avisos (config.mjs).
-  #
-  # schedule:
-  #   - cron: "*/15 * * * *"   # cada 15 minutos
+  # El repo es público, así que estos minutos de GitHub Actions no se cobran.
+  schedule:
+    - cron: "*/15 * * * *"   # cada 15 minutos
   workflow_dispatch:
     inputs:
       prueba:
