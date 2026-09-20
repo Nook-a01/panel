@@ -2,7 +2,7 @@
 // @name         Lector de Mercado Pago y tarjeta — Panel de plata
 // @namespace    https://nook-a01.github.io/panel/
 // @description  Lee tu saldo y tus movimientos de Mercado Pago, y el consumo de tu tarjeta en BBVA, y los guarda en tu panel privado.
-// @version      1.3.0
+// @version      1.4.0
 // @match        https://www.mercadopago.com.ar/*
 // @match        https://online.bbva.com.ar/*
 // @run-at       document-idle
@@ -81,6 +81,7 @@
       'a[href*="/banking/balance/movements/"], a[href*="/activities/detail/"]'
     );
     const porId = new Map();
+    const porClave = new Map();
 
     enlaces.forEach(a => {
       const id = (a.getAttribute("href") || "").split("/").filter(Boolean).pop();
@@ -106,6 +107,25 @@
         /transferencia|dinero|pago|cobro|retiro|recarga|devoluci|ingreso|compra|débito|credito|crédito/i.test(t)
       ) || "";
       const detalle = titulos.find(t => t !== tipo) || tipo || "Movimiento";
+
+      // La misma fila aparece con dos enlaces distintos (uno a
+      // /banking/balance/movements/ y otro a /activities/detail/), cada uno con
+      // su propio id: si se manda el movimiento por cada enlace, la app lo
+      // importa dos veces. Se guarda uno solo por fila, y gana el id de
+      // /movements/, que es el estable.
+      const clave = fecha + "|" + Math.abs(monto) + "|" + detalle;
+      const esDeMovements = (a.getAttribute("href") || "").includes("/banking/balance/movements/");
+      const previo = porClave.get(clave);
+      if (previo) {
+        if (esDeMovements && !previo.esDeMovements) {
+          const mov = porId.get(previo.id);
+          porId.delete(previo.id);
+          if (mov) porId.set(id, Object.assign({}, mov, { id }));
+          porClave.set(clave, { id, esDeMovements: true });
+        }
+        return;
+      }
+      porClave.set(clave, { id, esDeMovements });
 
       if (!porId.has(id)) {
         porId.set(id, {

@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "8";
+  var ESTA = "9";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -2887,10 +2887,18 @@ async function mpTraer(silencioso){
   // Los movimientos se identifican por el id de Mercado Pago, así importar dos
   // veces no duplica nada.
   const yaEstan = new Set(S.movs.flatMap(m=> [m.src, m.mpSrc]).filter(s=> s && String(s).startsWith('mp:')));
+  // Segunda red: el id de Mercado Pago cambió de formato más de una vez, y cada
+  // cambio duplicó todo lo ya importado. Fecha + monto + detalle no cambia, así
+  // que también se mira por ahí. Dos pagos idénticos el mismo día (dos cafés de
+  // $4.000) son rarísimos comparados con el daño de duplicar un mes entero.
+  const huella = m => m.fecha + '|' + (Number(m.monto)||0) + '|' + (m.detalle || m.desc || '');
+  const yaPorHuella = new Set(S.movs.filter(m=> m.srcTipo==='mp').map(huella));
 
   (d.movimientos||[]).forEach(m=>{
     const src = 'mp:' + m.id;
     if(yaEstan.has(src)) return;
+    if(yaPorHuella.has(huella(m))) return;
+    yaPorHuella.add(huella(m));
     const esIngreso = m.tipo === 'ingreso';
     // Guardar o sacar plata de una reserva de Mercado Pago figura como un
     // movimiento, pero no es gasto ni ingreso real: es plata que se mueve de un
