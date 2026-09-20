@@ -1788,9 +1788,45 @@ function pintarVidrio(c){
   ).join('');
 
   const nom = ['primera','segunda','tercera','cuarta','quinta'][masAlta] || ('semana '+(masAlta+1));
-  $('#hoyVidrioPie').textContent = semanas > 1
+  const pie = $('#hoyVidrioPie');
+  pie.textContent = semanas > 1
     ? 'Por semana · la más alta fue la ' + nom
     : 'Lo que va del mes';
+  // Se guarda para poder volver a él cuando el dedo o el cursor sale de una barra.
+  pie.dataset.base = pie.textContent;
+}
+
+/* ── el vidrio responde al cursor ───────────────────────────────────
+   Se inclina hacia donde está el puntero, y al pasar por una barra el
+   pie dice cuánto fue esa semana. Se engancha UNA sola vez y por
+   delegación: la tarjeta se vuelve a dibujar en cada render, y los
+   oyentes puestos en cada barra se perderían en el camino. */
+let vidrioEnganchado = false;
+function engancharVidrio(){
+  if(vidrioEnganchado) return;
+  const v = $('#hoyVidrio'); if(!v) return;
+  vidrioEnganchado = true;
+
+  if(!QUIETO_PLATA && matchMedia('(hover:hover)').matches){
+    v.addEventListener('pointermove', e => {
+      const r = v.getBoundingClientRect();
+      const mx = (e.clientX - r.left) / r.width - .5;
+      const my = (e.clientY - r.top) / r.height - .5;
+      v.style.transform = 'perspective(720px) rotateX(' + (-my*5).toFixed(2) +
+        'deg) rotateY(' + (mx*7).toFixed(2) + 'deg) translateY(-2px)';
+    }, { passive:true });
+    v.addEventListener('pointerleave', ()=>{ v.style.transform = ''; });
+  }
+
+  const barras = $('#hoyVidrioBarras'), pie = $('#hoyVidrioPie');
+  if(!barras || !pie) return;
+  barras.addEventListener('pointerover', e => {
+    const b = e.target.closest('i[title]');
+    if(b) pie.textContent = b.title;
+  });
+  barras.addEventListener('pointerleave', ()=>{
+    if(pie.dataset.base) pie.textContent = pie.dataset.base;
+  });
 }
 
 /* ── la línea del mes ──────────────────────────────────────────────
@@ -1853,6 +1889,7 @@ function subirNumero(el, destino, dura){
 function animarHoy(){
   const vista = $('#v-hoy');
   if(!vista || !vista.classList.contains('on')) return;
+  try{ engancharVidrio(); }catch(e){}
 
   // El número grande. Se lee del texto ya pintado para no recalcular nada.
   const big = $('#hoyLibreV');
@@ -4254,7 +4291,112 @@ html.ya-plata .linea .guia{transform:scaleX(1) !important; transition:none !impo
   .linea .guia{transform:scaleX(1) !important}
   .hito.ahora .bola{animation:none}
   .vidrio-barras i{transition:none}
+
+
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   CUANDO PASÁS EL CURSOR O EL DEDO
+
+   Dos mundos distintos y hay que tratarlos distinto:
+
+   · Con MOUSE hay "pasar por encima". Todo eso va adentro de
+     @media (hover:hover) — en un teléfono, un :hover se queda pegado
+     después de tocar y el elemento parece trabado.
+
+   · Con DEDO no hay hover: la única respuesta posible es al apretar.
+     Por eso cada cosa tocable se hunde un poco con :active, que es
+     lo que da la sensación de que respondió.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── lo tocable se hunde al apretar, con mouse o con dedo ── */
+.btn, nav.tabs button, .subtabs button, .seg button, .fab,
+#hoyProx .p .pagar, .acc2 button, .verdet, .lnk-mas{
+  transition:transform .14s var(--curva), background .2s, color .2s,
+             border-color .2s, box-shadow .25s var(--curva), filter .2s;
+}
+.btn:active, nav.tabs button:active, .subtabs button:active, .seg button:active,
+#hoyProx .p .pagar:active, .acc2 button:active, .verdet:active{ transform:scale(.955) }
+.fab:active{ transform:scale(.9) }
+
+@media (hover:hover){
+  /* ── los bloques se levantan y se les enciende el borde ── */
+  .blq, .card, .tile{
+    transition:transform .3s var(--curva), border-color .3s, box-shadow .3s var(--curva);
+  }
+  .blq:hover, .card:hover, .tile:hover{
+    transform:translateY(-2px);
+    border-color:var(--line-2);
+    box-shadow:0 22px 46px -28px rgba(0,0,0,.95);
+  }
+  /* El número grande no se mueve: es el ancla de la pantalla. Lo que hace
+     es encender su brasa. */
+  .blq-libre:hover{ transform:none }
+  .blq-libre::after{ transition:opacity .45s var(--curva), transform .45s var(--curva) }
+  .blq-libre:hover::after{ opacity:1; transform:scale(1.18) }
+
+  /* ── las pastillas de arriba ── */
+  nav.tabs button:hover{ transform:translateY(-2px); border-color:var(--accent); color:var(--ink) }
+  nav.tabs button[aria-current="true"]:hover{ transform:translateY(-2px); filter:brightness(1.08) }
+
+  /* ── los botones ── */
+  .btn:hover{ transform:translateY(-1px) }
+  .btn.pri:hover{ box-shadow:0 12px 26px -12px rgba(255,122,47,.75) }
+  .btn.dgr:hover{ box-shadow:0 12px 26px -12px rgba(255,107,107,.6) }
+
+  /* ── cada pago de "lo que viene" ── */
+  #hoyProx .p{
+    transition:background .22s, transform .22s var(--curva), padding-left .22s var(--curva);
+    border-radius:10px;
+  }
+  #hoyProx .p:hover{
+    background:var(--surface-2);
+    padding-left:10px;
+  }
+  /* El botón de "ya pagué" asoma recién cuando estás encima de su fila:
+     así la lista se lee sin cuatro botones gritando a la vez. */
+  #hoyProx .p .pagar{ opacity:.45; transition:opacity .22s, transform .14s var(--curva) }
+  #hoyProx .p:hover .pagar{ opacity:1 }
+  #hoyProx .p .pagar:hover{ transform:translateY(-1px); border-color:var(--accent); color:var(--accent) }
+
+  /* ── los hitos de la línea del mes ── */
+  .hito .bola{ transition:transform .28s var(--curva), box-shadow .28s var(--curva) }
+  .hito:hover .bola{ transform:scale(1.14) }
+  .hito.hecho:hover .bola{ box-shadow:0 0 0 7px rgba(255,122,47,.16) }
+  .hito .et{ transition:color .22s }
+  .hito:hover .et{ color:var(--accent-ink) }
+
+  /* ── las barritas de la tarjeta de vidrio ── */
+  .vidrio-barras i{ transition:height .9s var(--curva), background .2s, transform .2s var(--curva) }
+  .vidrio-barras:hover i{ background:rgba(255,255,255,.12) }
+  .vidrio-barras i:hover{ background:var(--accent-ink); transform:scaleY(1.06) }
+  .vidrio-barras i.pico:hover{ background:var(--accent) }
+
+  /* ── las filas de las listas largas ── */
+  .fila:hover, tr:hover > td{ background:var(--surface-2) }
+
+  /* ── el botón flotante ── */
+  .fab:hover{ transform:scale(1.07) rotate(-6deg); box-shadow:0 16px 34px -12px rgba(255,122,47,.85) }
+
+  /* ── los enlaces de texto ── */
+  .lnk:hover, .lnk-mas:hover{ color:var(--accent-ink) }
+}
+
+/* En pantalla táctil la fila no tiene hover, así que el botón de pagar
+   se ve siempre: si no, no habría forma de llegar a él. */
+@media (hover:none){
+  #hoyProx .p .pagar{ opacity:1 }
+  #hoyProx .p:active{ background:var(--surface-2) }
+  .blq:active, .card:active{ transform:scale(.995) }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .btn, nav.tabs button, .blq, .card, .tile, .fab, .hito .bola,
+  #hoyProx .p, .vidrio-barras i, .vidrio{ transition:none !important }
+  .btn:active, nav.tabs button:active, .fab:active, .blq:hover,
+  .card:hover, .tile:hover, .hito:hover .bola{ transform:none !important }
+}
+
 
 .blq-libre .lnk{color:var(--cyan)}
 .saldo-hoy input{background:rgba(5,6,10,.75); border-color:var(--line-2); color:var(--ink)}
