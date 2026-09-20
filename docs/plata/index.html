@@ -4206,8 +4206,11 @@ nav.tabs button[aria-current="true"]{background:var(--ink); border-color:var(--i
 .vidrio-pie{font:400 11px var(--f-mono); letter-spacing:.05em; color:var(--ink-3); margin-top:9px}
 
 /* ── LA LÍNEA DEL MES ─────────────────────────────────────────────── */
-.tramo{margin:16px 0 4px}
-.tramo h3{font-family:var(--f-display); font-size:15px; font-weight:700; letter-spacing:-.01em; margin:0 0 14px}
+/* La línea va adentro de su propio bloque de carbón: suelta sobre el fuego
+   los rótulos quedaban en blanco sobre naranja y costaba leerlos. */
+.tramo{margin:16px 0 12px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:clamp(14px,2.4vw,20px)}
+.tramo h3{font-family:var(--f-display); font-size:15px; font-weight:700; letter-spacing:-.01em; margin:0 0 16px}
 .linea{position:relative; display:grid; gap:14px 6px; grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (min-width:600px){ .linea{grid-template-columns:repeat(4,minmax(0,1fr)); gap:0} }
 .guia{display:none}
