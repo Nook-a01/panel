@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "7";
+  var ESTA = "8";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -1453,10 +1453,20 @@ function esSusc(r){ return r.susc === true || (r.susc !== false && RE_SUSC.test(
 // Lo que gastaste en el día a día entre dos fechas. No cuenta los fijos ni las
 // cuotas, ni el pago de Mercado Pago que corresponde a un fijo ya marcado: si
 // no, el día que pagás el alquiler parecería que te fuiste de mambo.
+// Cuánto hay cargado como fijo en cada categoría, por mes. Sirve para no
+// contar dos veces un pago que ya es un fijo.
+function fijoMensualPorCat(){
+  const out = {};
+  S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false)
+    .forEach(r=>{ out[r.catId] = (out[r.catId]||0) + equivMensual(r); });
+  (S.cuotas||[]).forEach(c=>{ out[c.catId] = (out[c.catId]||0) + (Number(c.monto)||0); });
+  return out;
+}
+
 function gastoVariableEntre(desde, hasta){
   const fijos = S.movs.filter(m=> confirmado(m) && m.tipo==='gasto' && (m.srcTipo==='fijo' || m.srcTipo==='cuota')
                                 && m.fecha >= iso(new Date(parseISO(desde).getTime() - 7*86400000)) && m.fecha <= hasta);
-  const usados = new Set(), porDia = {};
+  const usados = new Set(), porDia = {}, porCat = {};
   let total = 0;
   S.movs.forEach(m=>{
     if(!confirmado(m) || !cuentaComoGasto(m) || esTarjeta(m) || m.srcTipo==='fijo' || m.srcTipo==='cuota') return;
@@ -1468,7 +1478,26 @@ function gastoVariableEntre(desde, hasta){
       if(f){ usados.add(f.id); return; }
     }
     total += v; porDia[m.fecha] = (porDia[m.fecha]||0) + v;
+    porCat[m.catId] = (porCat[m.catId]||0) + v;
   });
+  // El emparejado de arriba es por monto, así que falla justo cuando más
+  // importa: si el alquiler subió y el fijo cargado ya no coincide con lo que
+  // pagaste, ese pago pasa a contarse como gasto del día a día Y como fijo.
+  // Por categoría no falla: de lo gastado en cada una se descuenta lo que esa
+  // categoría tiene cargado como fijo (prorrateado si el período es más corto
+  // que un mes). Nunca más de lo gastado, así que no puede dar negativo.
+  const fijoCat = fijoMensualPorCat();
+  const parte = Math.min(1, Math.max(1, diasEntreISO(hasta, desde) + 1) / 30.4);
+  let yaEsFijo = 0;
+  Object.keys(porCat).forEach(id=>{
+    yaEsFijo += Math.min(porCat[id], (fijoCat[id]||0) * parte);
+  });
+  if(yaEsFijo > 0 && total > 0){
+    // Los cuadraditos del día tienen que seguir sumando lo mismo que el total.
+    const factor = Math.max(0, total - yaEsFijo) / total;
+    Object.keys(porDia).forEach(f=> porDia[f] = porDia[f] * factor);
+    total = Math.max(0, total - yaEsFijo);
+  }
   return {total, porDia};
 }
 function gastoVariableTipico(c){
