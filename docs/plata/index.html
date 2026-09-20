@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "6";
+  var ESTA = "7";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -1551,13 +1551,14 @@ function renderHoy(){
   const gas = S.recs.filter(r=> r.tipo==='gasto' && r.activo!==false && !ap.cubiertos.has(r.id));
   const tIng = ing.reduce((a,r)=> a + equivMensual(r), 0);
   const tGas = gas.reduce((a,r)=> a + equivMensual(r), 0) + cuotasDelMes(c.refCobro.slice(0,7));
-  // Lo que le pasa la madre el mes que viene: el total menos lo que ya gastó
-  // este mes con su tarjeta.
+  // La plata de la madre ya está cargada como ingreso en Fijos, así que entra
+  // en tIng: sumarla otra vez acá la contaba dos veces. Lo que sí hay que
+  // restar es lo gastado con su tarjeta, que ella descuenta del mes que viene.
   const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
   const tj = tarjetaDelBanco();
   const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
   const ayudaProx = Math.max(0, ayudaBase - gastadoTarj);
-  const trasFijos = tIng + ayudaProx - tGas;
+  const trasFijos = tIng - gastadoTarj - tGas;
   const vt = gastoVariableTipico(c);
   const podes = vt ? trasFijos - vt.valor : null;
   $('#hoyAhorroHint').textContent = 'por mes';
@@ -1566,7 +1567,7 @@ function renderHoy(){
   } else {
     let h = '<p class="frase">Cobrás <b>'+money(tIng)+'</b> y tus fijos son <b>'+money(tGas)+'</b>.</p>';
     if(ayudaBase > 0)
-      h += '<p class="frase">Tu mamá te pasa <b>'+money(ayudaBase)+'</b>, menos lo que gastaste con su tarjeta: el mes que viene te quedan <b class="'+(gastadoTarj ? 't-falta' : 't-ahorro')+'">'+money(ayudaProx)+'</b>.</p>';
+      h += '<p class="frase">De los <b>'+money(ayudaBase)+'</b> de tu mamá ya gastaste <b class="t-falta">'+money(gastadoTarj)+'</b> con su tarjeta: el mes que viene te va a pasar <b class="'+(gastadoTarj ? 't-falta' : 't-ahorro')+'">'+money(ayudaProx)+'</b>.</p>';
     h += '<p class="frase">En total te quedan <b>'+money(trasFijos)+'</b>.</p>';
     if(vt){
       h += '<p class="frase">En el día a día (comida, salidas, viajes, compras) venís gastando unos <b class="t-pagos">'+money(vt.valor)+'</b> por mes'
@@ -1721,7 +1722,7 @@ function detalleTarjeta(tj){
     + (tj.dolares ? '<div class="dl"><span>En dólares (se pesifican al cierre)</span><b>USD '+tj.dolares.toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</b></div>' : '')
     + (tj.cierre ? '<div class="dl"><span>Cierra</span><b>'+esc(tj.cierre)+'</b></div>' : '')
     + (tj.vencimiento ? '<div class="dl"><span>Vence</span><b>'+esc(tj.vencimiento)+'</b></div>' : '')
-    + '<div class="dl tip">Lo lee tu banco: es el total del resumen en curso, no sólo lo que pasó por Mercado Pago. Se actualiza cada vez que abrís tu tarjeta en la página del banco'
+    + '<div class="dl tip">Lo lee tu banco: es el total del resumen en curso, no sólo lo que pasó por Mercado Pago. Tu mamá te pasa esto de menos, así que se descuenta de lo que te entra. Se actualiza cada vez que abrís tu tarjeta en la página del banco'
       + (tj.leidoEn ? ' (última lectura '+esc(mpHaceCuanto(tj.leidoEn))+')' : '') + '.</div></div>';
 }
 
@@ -1731,17 +1732,16 @@ function pintarMesQue(c){
   const ms = movsMes(ym);
   const tIng = ms.filter(m=> m.tipo==='ingreso' && !esNoGasto(m.catId)).reduce((a,m)=>a+(+m.monto||0),0);
   const tFij = ms.filter(m=> m.tipo==='gasto' && (m.srcTipo==='fijo' || m.srcTipo==='cuota')).reduce((a,m)=>a+(+m.monto||0),0);
-  // La plata que le pasa la madre: el total menos lo que ya gastó este mes con
-  // su tarjeta, porque eso se lo descuentan del mes siguiente.
+  // Lo que le pasa la madre ya está en "Te entra" (es un ingreso de Fijos). Acá
+  // sólo se le descuenta lo gastado con su tarjeta, que es lo que ella resta.
   const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
   const tj = tarjetaDelBanco();
   const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
-  const ayudaProx = Math.max(0, ayudaBase - gastadoTarj);
   if(!tIng && !tFij && !ayudaBase){ el.hidden = true; return; }
   el.hidden = false;
 
   const dim = daysInMonth(ym);
-  const queda = tIng + ayudaProx - tFij;
+  const queda = tIng - gastadoTarj - tFij;
   const vt = gastoVariableTipico(c);          // lo que gastás por mes en el día a día
   const tipico = vt ? vt.valor : null;
   const cierra = tipico == null ? null : queda - tipico;
@@ -1749,8 +1749,7 @@ function pintarMesQue(c){
   let h = '<h3>El mes que viene · '+esc(ymLabel(ym))+'</h3>'
     + '<button type="button" class="l det" data-det="ing"><span>Te entra <i class="q">ver</i></span><b>'+money(tIng)+'</b></button>'
     + (detMes==='ing' ? detalleDeMes(ms.filter(m=> m.tipo==='ingreso' && !esNoGasto(m.catId)), '+') : '')
-    + (ayudaBase > 0 ? '<div class="l"><span>Te pasa tu mamá</span><b>'+money(ayudaBase)+'</b></div>' : '')
-    + (ayudaBase > 0 && gastadoTarj > 0
+    + (gastadoTarj > 0
         ? '<button type="button" class="l det" data-det="ayuda"><span>Menos lo que gastaste con su tarjeta'
             + (tj && tj.cierre ? ' (cierra el '+esc(tj.cierre.slice(0,5))+')' : '')
             + ' <i class="q">ver</i></span><b class="mal">−'+money(gastadoTarj)+'</b></button>'
