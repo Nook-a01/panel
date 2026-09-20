@@ -8,50 +8,91 @@
 <!-- Esta página maneja la clave de administrador, así que se cierra igual que
      el panel: nada externo, sólo lo que está acá adentro y el contador. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://wispy-poetry-97f9.hamcqc.workers.dev; base-uri 'none'; form-action 'none'">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#04060a">
+<!-- El ícono de la pestaña va escrito acá adentro, no en un archivo aparte:
+     la política de contenido de esta página deja imágenes propias y data:,
+     y así no queda un archivo suelto que se pueda quedar viejo en la caché.
+     Son tres barritas, como el gráfico del tablero. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2304060a'/%3E%3Crect x='5' y='19' width='5' height='8' fill='%234de3ff'/%3E%3Crect x='13' y='13' width='5' height='14' fill='%234de3ff'/%3E%3Crect x='21' y='6' width='5' height='21' fill='%23CCFF00'/%3E%3C/svg%3E">
 <style>
 :root{
   --acido:#CCFF00;
+  --cian:#4de3ff;
   --shock:#FF2D7A;
-  --tinta:#fff;
-  --apagado:#8b8b8b;
-  --linea:#fff;
-  --f:ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  --m:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --ambar:#f2b544;
+  --papel:#04060a;
+  --caja:#080c12;
+  --tinta:#e9f4fb;
+  --apagado:#6d8798;
+  --linea:#14222e;
+  --f:'Archivo', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --m:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --curva:cubic-bezier(.51,.01,.2,1);
   color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0;border-radius:0}
 body{
-  background:#000;
+  background:var(--papel);
   color:var(--tinta);
   font-family:var(--f);
   font-size:16px;
   line-height:1.5;
   padding:max(1rem, env(safe-area-inset-top)) 1rem calc(env(safe-area-inset-bottom) + 4rem);
+  overflow-x:hidden;
 }
-.hoja{max-width:1100px;margin:0 auto}
 
+/* ── el fondo vivo ────────────────────────────────────────────
+   Una grilla de líneas que se corre muy despacio y se enciende
+   cerca del puntero, un velo de rayas finas y un haz que baja.
+   Todo se apaga solo con prefers-reduced-motion y cuando la
+   pestaña no está a la vista: no tiene sentido gastar batería
+   dibujando algo que nadie mira. */
+#rejilla{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.5;pointer-events:none}
+.scan{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.3) 0 1px,transparent 1px 3px)}
+.haz{position:fixed;left:0;right:0;height:140px;z-index:1;pointer-events:none;opacity:.5;
+  background:linear-gradient(180deg,transparent,rgba(77,227,255,.07),transparent);
+  animation:baja 7s linear infinite}
+@keyframes baja{from{transform:translateY(-140px)}to{transform:translateY(100vh)}}
+
+.hoja{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+
+/* ── cabecera ── */
+.cab{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  border-bottom:1px solid var(--linea);padding-bottom:.9rem}
 h1{
   font-size:clamp(1.5rem,6vw,2.6rem);
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:-.02em;
+  letter-spacing:-.025em;
   line-height:.95;
 }
+.punto{display:inline-block;width:.62em;height:.62em;background:var(--acido);
+  vertical-align:-.02em;margin-right:.4em;box-shadow:0 0 18px var(--acido);
+  animation:pulso 2.4s ease-in-out infinite}
+@keyframes pulso{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hud{font-family:var(--m);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--apagado);text-align:right;line-height:1.9;margin-left:auto}
+.hud .on{color:var(--acido)}
+.cursor{animation:parp 1.1s steps(1) infinite}
+@keyframes parp{0%,50%{opacity:1}51%,100%{opacity:.1}}
+
 h2{
-  font-size:clamp(.95rem,3.4vw,1.2rem);
-  font-weight:900;
+  font-family:var(--m);
+  font-size:.7rem;
+  font-weight:500;
+  letter-spacing:.22em;
   text-transform:uppercase;
-  letter-spacing:-.01em;
-  border-bottom:3px solid var(--linea);
-  padding-bottom:.3rem;
-  margin:2.2rem 0 1rem;
+  color:var(--cian);
+  margin:2.4rem 0 .9rem;
+  display:flex;align-items:center;gap:.7rem;
 }
-.punto{display:inline-block;width:.7em;height:.7em;background:var(--acido);vertical-align:-.05em;margin-right:.35em}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--linea),transparent)}
 
 /* ── conexión ── */
 .conexion{
-  border:2px solid var(--linea);
+  border:1px solid var(--linea);
+  background:var(--caja);
   padding:1rem;
   margin:1.2rem 0 0;
   display:grid;
@@ -61,40 +102,43 @@ h2{
 label{
   display:block;
   font-family:var(--m);
-  font-size:.66rem;
-  letter-spacing:.1em;
+  font-size:.62rem;
+  letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--apagado);
-  margin-bottom:.3rem;
+  margin-bottom:.35rem;
 }
 input{
   width:100%;
-  background:#0d0d0d;
-  border:2px solid #333;
+  background:#050810;
+  border:1px solid var(--linea);
   color:var(--tinta);
   font-family:var(--m);
   font-size:.82rem;
-  padding:.6rem .7rem;
+  padding:.62rem .7rem;
+  transition:border-color .18s, box-shadow .18s;
 }
-input:focus{outline:none;border-color:var(--acido)}
+input:focus{outline:none;border-color:var(--cian);box-shadow:0 0 0 1px var(--cian), 0 0 18px -4px var(--cian)}
 button{
-  background:#000;
-  border:2px solid var(--linea);
+  background:transparent;
+  border:1px solid var(--tinta);
   color:var(--tinta);
-  font-family:var(--f);
-  font-weight:800;
+  font-family:var(--m);
+  font-weight:500;
   text-transform:uppercase;
-  letter-spacing:.04em;
-  font-size:.82rem;
-  padding:.65em 1.1em;
+  letter-spacing:.12em;
+  font-size:.7rem;
+  padding:.78em 1.1em;
   cursor:pointer;
-  transition:background .11s linear, color .11s linear;
+  transition:background .16s, color .16s, box-shadow .16s;
 }
-button:hover:not(:disabled){background:var(--acido);color:#000}
-button:disabled{opacity:.45;cursor:default}
+button:hover:not(:disabled){background:var(--acido);color:#000;border-color:var(--acido);
+  box-shadow:0 0 22px -6px var(--acido)}
+button:disabled{opacity:.4;cursor:default}
+button:focus-visible{outline:2px solid var(--cian);outline-offset:2px}
 button.fuerte{background:var(--acido);color:#000;border-color:var(--acido)}
 button.peligro{border-color:var(--shock);color:var(--shock)}
-button.peligro:hover:not(:disabled){background:var(--shock);color:#000}
+button.peligro:hover:not(:disabled){background:var(--shock);color:#000;box-shadow:0 0 22px -6px var(--shock)}
 
 .aviso{margin-top:.8rem;font-family:var(--m);font-size:.76rem}
 .aviso.mal{color:var(--shock)}
@@ -103,46 +147,69 @@ button.peligro:hover:not(:disabled){background:var(--shock);color:#000}
 /* ── números grandes ── */
 .kpis{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:2px;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;
   background:var(--linea);
-  border:2px solid var(--linea);
+  border:1px solid var(--linea);
 }
-.kpi{background:#000;padding:.9rem}
+.kpi{background:var(--caja);padding:1rem .9rem;position:relative;overflow:hidden}
+/* la rayita de abajo se llena cuando el número terminó de subir */
+.kpi::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;
+  background:var(--cian);transform:scaleX(0);transform-origin:left;
+  transition:transform .9s var(--curva)}
+.kpi.listo::after{transform:scaleX(1)}
 .kpi .n{
-  font-size:clamp(1.6rem,5vw,2.4rem);
-  font-weight:900;
+  font-family:var(--m);
+  font-size:clamp(1.7rem,4.6vw,2.5rem);
+  font-weight:500;
   line-height:1;
+  letter-spacing:-.02em;
   font-variant-numeric:tabular-nums;
 }
-.kpi .n.ac{color:var(--acido)}
+.kpi .n.ac{color:var(--acido);text-shadow:0 0 22px rgba(204,255,0,.35)}
 .kpi .r{
   font-family:var(--m);
   font-size:.62rem;
-  letter-spacing:.09em;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--apagado);
-  margin-top:.4rem;
+  color:var(--tinta);
+  margin-top:.5rem;
 }
-.kpi .p{font-size:.74rem;color:var(--apagado);margin-top:.15rem}
+.kpi .p{font-family:var(--m);font-size:.6rem;letter-spacing:.06em;color:var(--apagado);margin-top:.15rem}
 
 /* ── barras ── */
-.barras{display:grid;gap:.5rem}
-.barra{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:center}
+.barras{display:grid;gap:.75rem;border:1px solid var(--linea);background:var(--caja);padding:1rem}
+.barra{display:grid;grid-template-columns:1fr auto;gap:.3rem .5rem;align-items:baseline}
 .barra .et{font-size:.85rem;min-width:0;overflow-wrap:break-word}
-.barra .vl{font-family:var(--m);font-size:.8rem;font-weight:600;white-space:nowrap}
-.barra .pista{grid-column:1/-1;height:10px;background:#171717;border:1px solid #333}
-.barra .pista i{display:block;height:100%;background:var(--acido)}
-.barra.sec .pista i{background:var(--shock)}
+.barra .vl{font-family:var(--m);font-size:.74rem;font-weight:500;white-space:nowrap;color:var(--acido)}
+.barra .pista{grid-column:1/-1;height:8px;background:#0c141b;border:1px solid var(--linea);overflow:hidden}
+.barra .pista i{display:block;height:100%;width:0;background:var(--acido);
+  box-shadow:0 0 14px rgba(204,255,0,.45);
+  transition:width 1.1s var(--curva)}
+.barras.sec .vl{color:var(--cian)}
+.barras.sec .pista i{background:var(--cian);box-shadow:0 0 14px rgba(77,227,255,.45)}
 
 /* ── gráfico de días ── */
-.grafico{border:2px solid var(--linea);padding:.9rem;overflow-x:auto}
+.grafico{position:relative;border:1px solid var(--linea);background:var(--caja);padding:.9rem;overflow-x:auto}
 .grafico svg{display:block;width:100%;min-width:420px;height:170px}
+/* las dos líneas se dibujan de izquierda a derecha */
+.traza,.traza2{stroke-dasharray:3000;stroke-dashoffset:3000;
+  animation:dibuja 2.1s var(--curva) forwards}
+.traza2{animation-delay:.15s}
+.traza{animation-delay:.4s}
+@keyframes dibuja{to{stroke-dashoffset:0}}
+.relleno{opacity:0;animation:aparece-relleno .9s ease 1.6s forwards}
+.pico-hoy{opacity:0;animation:aparece .5s ease 2.2s forwards}
+@keyframes aparece{to{opacity:1}}
+@keyframes aparece-relleno{to{opacity:.13}}
 
 /* ── horas ── */
-.horas{display:flex;align-items:flex-end;gap:2px;height:110px;border:2px solid var(--linea);padding:.6rem}
-.horas .h{flex:1;background:#222;position:relative;min-height:2px}
-.horas .h.pico{background:var(--acido)}
+.horas{display:flex;align-items:flex-end;gap:2px;height:110px;
+  border:1px solid var(--linea);background:var(--caja);padding:.6rem}
+.horas .h{flex:1;background:linear-gradient(180deg,var(--cian),#12506b);position:relative;
+  min-height:2px;height:0;transition:height .9s var(--curva)}
+.horas .h.pico{background:linear-gradient(180deg,var(--acido),#5c7300);
+  box-shadow:0 0 18px -4px var(--acido)}
 .horas .h span{
   position:absolute;bottom:-1.15rem;left:50%;transform:translateX(-50%);
   font-family:var(--m);font-size:.52rem;color:var(--apagado);
@@ -150,55 +217,65 @@ button.peligro:hover:not(:disabled){background:var(--shock);color:#000}
 .horas-pie{margin-top:1.3rem;font-family:var(--m);font-size:.66rem;color:var(--apagado)}
 
 /* ── tabla de personas ── */
-.tabla-caja{border:2px solid var(--linea);overflow-x:auto}
+.tabla-caja{border:1px solid var(--linea);background:var(--caja);overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:38rem}
 th{
   font-family:var(--m);
-  font-size:.6rem;
-  letter-spacing:.1em;
+  font-size:.58rem;
+  letter-spacing:.16em;
   text-transform:uppercase;
   color:var(--apagado);
   text-align:left;
-  padding:.6rem .5rem;
-  border-bottom:2px solid var(--linea);
+  padding:.7rem .6rem;
+  border-bottom:1px solid var(--linea);
+  background:#060a10;
   white-space:nowrap;
 }
-td{padding:.55rem .5rem;border-bottom:1px solid #222;vertical-align:top}
+td{padding:.6rem .6rem;border-bottom:1px solid #0e1821;vertical-align:top}
 tr:last-child td{border-bottom:0}
+/* cada fila entra corrida; el retraso lo pone el JS */
+tbody tr{opacity:0;transform:translateX(-10px);animation:fila .45s var(--curva) forwards}
+tbody tr:hover td{background:rgba(77,227,255,.05)}
 td.num{font-family:var(--m);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-a{color:var(--acido);text-decoration-thickness:2px;text-underline-offset:3px}
-a:hover{color:var(--shock)}
-.anon{color:var(--apagado);font-style:italic}
+@keyframes fila{to{opacity:1;transform:none}}
+a{color:var(--cian);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--acido)}
+.anon{color:var(--apagado);font-family:var(--m);font-size:.74rem}
 .eti{
-  display:inline-block;font-family:var(--m);font-size:.58rem;letter-spacing:.06em;
-  text-transform:uppercase;padding:.14em .4em;border:1px solid currentColor;
+  display:inline-block;font-family:var(--m);font-size:.56rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.2em .45em;border:1px solid currentColor;
 }
 .eti.vivo{color:var(--acido)}
-.eti.frio{color:#e8b33a}
+.eti.frio{color:var(--ambar)}
 .eti.ido{color:var(--shock)}
 .eti.plat{color:var(--apagado)}
 .abrir{
   background:none;border:0;color:var(--apagado);font-family:var(--m);
-  font-size:.7rem;padding:.2rem .3rem;text-transform:none;letter-spacing:0;
+  font-size:.68rem;padding:.2rem .3rem;text-transform:none;letter-spacing:0;
 }
-.abrir:hover{background:none;color:var(--acido)}
-tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
+.abrir:hover:not(:disabled){background:none;color:var(--cian);box-shadow:none}
+tr.detalle td{background:#050810;padding:.7rem .8rem}
+tr.detalle{animation:none;opacity:1;transform:none}
 .linea-ev{
   display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;
   font-family:var(--m);font-size:.72rem;padding:.22rem 0;
-  border-bottom:1px solid #1a1a1a;
+  border-bottom:1px solid #0e1821;
 }
 .linea-ev:last-child{border-bottom:0}
 .linea-ev .cuando{color:var(--apagado);white-space:nowrap}
 .linea-ev .que{color:var(--tinta)}
-.linea-ev .quien{color:var(--acido);white-space:nowrap}
+.linea-ev .quien{color:var(--cian);white-space:nowrap}
 
 .vacio{color:var(--apagado);font-size:.9rem;padding:1.4rem 0;text-align:center}
-.nota{color:var(--apagado);font-size:.78rem;margin-top:.6rem;line-height:1.5}
+.nota{color:var(--apagado);font-family:var(--m);font-size:.7rem;letter-spacing:.04em;
+  margin-top:.6rem;line-height:1.6}
 
-.zona-riesgo{border:2px solid var(--shock);padding:1rem;margin-top:2.5rem}
-.zona-riesgo h2{border-bottom-color:var(--shock);color:var(--shock);margin-top:0}
-.riesgo-botones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
+.zona-riesgo{border:1px solid #3a1420;
+  background:linear-gradient(180deg,rgba(255,45,122,.05),transparent);
+  padding:1.1rem;margin-top:3rem}
+.zona-riesgo h2{color:var(--shock);margin-top:0}
+.zona-riesgo h2::after{background:linear-gradient(90deg,#3a1420,transparent)}
+.riesgo-botones{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.9rem}
 
 #panel{display:none}
 
@@ -207,18 +284,50 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
   left:max(.7rem,env(safe-area-inset-left));
   bottom:max(.7rem,env(safe-area-inset-bottom));
   display:inline-flex;align-items:center;gap:.45em;
-  padding:.5em .85em .5em .7em;
-  border:2px solid var(--acido);background:#000;color:var(--acido);
-  font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+  padding:.6em .9em;
+  border:1px solid var(--acido);background:rgba(4,6,10,.85);color:var(--acido);
+  font-family:var(--m);font-weight:500;font-size:.66rem;
+  text-transform:uppercase;letter-spacing:.14em;
   text-decoration:none;
+  transition:background .16s, color .16s;
 }
 .volver:hover{background:var(--acido);color:#000}
+
+/* Red de seguridad: cuando el JS avisa que ya pasó el tiempo, todo lo que
+   entra animado queda puesto sí o sí. Si la pestaña está de fondo o el
+   teléfono se bloqueó, el navegador frena las animaciones a mitad de camino
+   y la página se queda vacía. Ya pasó en la portada; acá no se repite. */
+html.ya-esta tbody tr{opacity:1;transform:none;animation:none}
+html.ya-esta .traza,html.ya-esta .traza2{stroke-dashoffset:0;animation:none}
+html.ya-esta .relleno{opacity:.13;animation:none}
+html.ya-esta .pico-hoy{opacity:1;animation:none}
+
+/* Si el sistema pide menos movimiento, no se mueve nada y todo
+   queda en su estado final: nunca escondido esperando una animación. */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  tbody tr{opacity:1;transform:none}
+  .traza,.traza2{stroke-dashoffset:0}
+  .relleno,.pico-hoy{opacity:1}
+  .haz{display:none}
+}
 </style>
 </head>
 <body>
+
+<canvas id="rejilla" aria-hidden="true"></canvas>
+<div class="scan" aria-hidden="true"></div>
+<div class="haz" aria-hidden="true"></div>
+
 <div class="hoja">
 
-  <h1><span class="punto"></span>Tablero</h1>
+  <div class="cab">
+    <h1><span class="punto"></span>Tablero</h1>
+    <p class="hud">
+      <span class="on">&#9679; contador en línea</span><br>
+      <span id="reloj">--:--:--</span> <span class="cursor">_</span>
+    </p>
+  </div>
   <p class="nota">Quién usa el Panel de Instagram, cuándo y qué mira.</p>
 
   <div class="conexion">
@@ -293,6 +402,9 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
 
   const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
   const LS_URL = "igtablero_url", LS_KEY = "igtablero_key";
+  // Si el sistema pide menos movimiento, nada se anima y todo queda puesto.
+  const QUIETO = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   const $ = id => document.getElementById(id);
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
@@ -395,6 +507,43 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
     secciones(d.secciones || []);
     horas(d.por_hora || []);
     $("cuando").textContent = "Datos al " + reloj(d.generado);
+    // Con setTimeout y no con requestAnimationFrame: en una pestaña que está
+    // de fondo el navegador no llama nunca a requestAnimationFrame, y las
+    // barras se quedarían vacías para siempre.
+    setTimeout(llenar, 0);
+    setTimeout(redDeSeguridad, 1800);
+  }
+
+  /* Pase lo que pase, a los 1,8 segundos está todo puesto: los números en su
+     valor, las barras llenas y las filas visibles. Sin esto, una pestaña
+     abierta de fondo muestra un tablero en blanco. */
+  function redDeSeguridad() {
+    document.documentElement.classList.add("ya-esta");
+    document.querySelectorAll(".kpi").forEach(caja => {
+      caja.classList.add("listo");
+      caja.querySelector(".n").textContent =
+        (Number(caja.dataset.n) || 0).toLocaleString("es-AR");
+    });
+    document.querySelectorAll(".barra .pista i[data-w]")
+      .forEach(i => { i.style.width = i.dataset.w + "%"; });
+    document.querySelectorAll(".horas .h[data-alto]")
+      .forEach(b => { b.style.height = b.dataset.alto + "%"; });
+  }
+
+  /* Las barras y las horas nacen en cero y se llenan de a una. El ancho se
+     pone DESPUÉS de que el elemento está en la página: puesto en el mismo
+     HTML no hay transición, el navegador lo dibuja ya lleno. */
+  function llenar() {
+    document.querySelectorAll(".barra .pista i[data-w]").forEach((i, k) => {
+      const w = i.dataset.w + "%";
+      if (QUIETO) { i.style.width = w; return; }
+      setTimeout(() => { i.style.width = w; }, 60 + k * 70);
+    });
+    document.querySelectorAll(".horas .h[data-alto]").forEach((b, k) => {
+      const h = b.dataset.alto + "%";
+      if (QUIETO) { b.style.height = h; return; }
+      setTimeout(() => { b.style.height = h; }, 60 + k * 26);
+    });
   }
 
   function kpis(d) {
@@ -409,11 +558,26 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       { n: d.visitas_total, r: "Aperturas totales", p: "desde el arranque" },
     ];
     $("kpis").innerHTML = filas.map(f => `
-      <div class="kpi">
-        <div class="n${f.ac ? " ac" : ""}">${esc(f.n ?? 0)}</div>
+      <div class="kpi" data-n="${Number(f.n) || 0}">
+        <div class="n${f.ac ? " ac" : ""}">0</div>
         <div class="r">${esc(f.r)}</div>
         <div class="p">${esc(f.p)}</div>
       </div>`).join("");
+
+    // El número sube desde cero, con freno al final. Si el sistema pide menos
+    // movimiento se escribe de una: nunca queda un 0 esperando una animación.
+    document.querySelectorAll(".kpi").forEach((caja, i) => {
+      const destino = Number(caja.dataset.n) || 0, el = caja.querySelector(".n");
+      setTimeout(() => caja.classList.add("listo"), 120 + i * 110);
+      if (QUIETO) { el.textContent = destino.toLocaleString("es-AR"); return; }
+      const arranque = performance.now() + i * 110, dura = 900;
+      (function sube(t) {
+        const p = Math.min(1, (t - arranque) / dura);
+        if (p > 0) el.textContent =
+          Math.round(destino * (1 - Math.pow(1 - p, 3))).toLocaleString("es-AR");
+        if (p < 1) requestAnimationFrame(sube);
+      })(performance.now());
+    });
   }
 
   /* El gráfico se dibuja a mano en SVG. No hace falta una librería
@@ -446,9 +610,13 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       <line x1="${mI}" y1="${mA}" x2="${W - mD}" y2="${mA}" stroke="#1c1c1c" stroke-width="1"/>
       <text x="4" y="${mA + 5}" fill="#8b8b8b" font-size="11" font-family="monospace">${tope}</text>
       <text x="4" y="${mA + alto}" fill="#8b8b8b" font-size="11" font-family="monospace">0</text>
-      <path d="${area}" fill="#CCFF00" opacity=".13"/>
-      <path d="${linea("visitas")}" fill="none" stroke="#FF2D7A" stroke-width="1.5" opacity=".85"/>
-      <path d="${linea("personas")}" fill="none" stroke="#CCFF00" stroke-width="2.5"/>
+      <path class="relleno" d="${area}" fill="#CCFF00"/>
+      <path class="traza2" d="${linea("visitas")}" fill="none" stroke="#FF2D7A" stroke-width="1.5" opacity=".85"/>
+      <path class="traza" d="${linea("personas")}" fill="none" stroke="#CCFF00" stroke-width="2.5"/>
+      <g class="pico-hoy">
+        <circle cx="${x(serie.length - 1).toFixed(1)}" cy="${y(serie[serie.length - 1].personas).toFixed(1)}" r="4" fill="#CCFF00"/>
+        <circle cx="${x(serie.length - 1).toFixed(1)}" cy="${y(serie[serie.length - 1].personas).toFixed(1)}" r="9" fill="none" stroke="#CCFF00" stroke-width="1" opacity=".5"/>
+      </g>
       ${marcas.map(({ s, i }) =>
         `<text x="${x(i).toFixed(1)}" y="${H - 8}" fill="#8b8b8b" font-size="11"
            font-family="monospace" text-anchor="middle">${fecha(s.dia)}</text>`).join("")}
@@ -484,7 +652,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       <div class="barra">
         <span class="et">${esc(f.et)}</span>
         <span class="vl">${f.v} · ${total ? Math.round(f.v / total * 100) : 0}%</span>
-        <span class="pista"><i style="width:${total ? (f.v / total * 100).toFixed(1) : 0}%"></i></span>
+        <span class="pista"><i data-w="${total ? (f.v / total * 100).toFixed(1) : 0}"></i></span>
       </div>`).join("");
 
     $("retencion-nota").textContent =
@@ -532,7 +700,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       const suyos = porPersona.get(p.id) || [];
 
       return `
-      <tr>
+      <tr style="animation-delay:${160 + Math.min(i, 25) * 60}ms">
         <td>${quien}<br><span class="eti ${est[0]}">${est[1]}</span></td>
         <td><span class="eti plat">${esc(DONDE[p.plataforma] || p.plataforma || "?")}</span></td>
         <td class="num">${esc(p.visitas ?? 0)}</td>
@@ -567,7 +735,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
       <div class="barra">
         <span class="et">${esc(nombreEvento(s.evento))}</span>
         <span class="vl">${s.veces} · ${s.personas} pers.</span>
-        <span class="pista"><i style="width:${(s.veces / tope * 100).toFixed(1)}%"></i></span>
+        <span class="pista"><i data-w="${(s.veces / tope * 100).toFixed(1)}"></i></span>
       </div>`).join("");
   }
 
@@ -576,7 +744,7 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
     if (!total) { $("horas").innerHTML = '<p class="vacio">Sin datos de horario todavía.</p>'; $("horas-pie").textContent = ""; return; }
     const tope = Math.max(...porHora);
     $("horas").innerHTML = porHora.map((v, h) => `
-      <div class="h${v === tope ? " pico" : ""}" style="height:${Math.max(2, v / tope * 100)}%"
+      <div class="h${v === tope ? " pico" : ""}" data-alto="${Math.max(2, v / tope * 100)}"
            title="${h}:00 · ${v} aperturas">${h % 6 === 0 ? `<span>${h}</span>` : ""}</div>`).join("");
 
     const pico = porHora.indexOf(tope);
@@ -638,6 +806,53 @@ tr.detalle td{background:#0a0a0a;padding:.7rem .8rem}
   $("borrar-todo").addEventListener("click", e =>
     borrar(e.target, { modo: "todo" },
       "¿Borrar TODO? Se pierden todas las personas y toda la actividad. No se puede deshacer."));
+
+  /* ── el reloj de arriba ── */
+  (function tic() {
+    $("reloj").textContent = new Date().toLocaleTimeString("es-AR",
+      { hour12: false, timeZone: "America/Argentina/Buenos_Aires" });
+    setTimeout(tic, 1000);
+  })();
+
+  /* ── la grilla del fondo ──────────────────────────────────────
+     Se dibuja en un canvas y se enciende cerca del puntero. Se para
+     sola cuando la pestaña no está a la vista: dibujar algo que
+     nadie mira es gastar batería al pedo. */
+  if (!QUIETO) {
+    const cv = $("rejilla"), ctx = cv.getContext("2d");
+    let W = 0, H = 0, dpr = 1, an = 0;
+    const r = { x: -1e4, y: -1e4 };
+
+    function medir() {
+      dpr = Math.min(devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function dibujar(t) {
+      ctx.clearRect(0, 0, W, H);
+      const P = 44, d = (t / 200) % P;
+      for (let x = -P; x < W + P; x += P) {
+        const c = Math.max(0, 1 - Math.abs(x + d - r.x) / 240);
+        ctx.strokeStyle = "rgba(77,227,255," + (.035 + c * .22).toFixed(3) + ")";
+        ctx.beginPath(); ctx.moveTo(x + d, 0); ctx.lineTo(x + d, H); ctx.stroke();
+      }
+      for (let y = -P; y < H + P; y += P) {
+        const c = Math.max(0, 1 - Math.abs(y + d - r.y) / 240);
+        ctx.strokeStyle = "rgba(77,227,255," + (.03 + c * .18).toFixed(3) + ")";
+        ctx.beginPath(); ctx.moveTo(0, y + d); ctx.lineTo(W, y + d); ctx.stroke();
+      }
+      an = requestAnimationFrame(dibujar);
+    }
+    const arrancar = () => { if (!an) an = requestAnimationFrame(dibujar); };
+    const parar = () => { if (an) { cancelAnimationFrame(an); an = 0; } };
+
+    addEventListener("resize", medir);
+    addEventListener("pointermove", e => { r.x = e.clientX; r.y = e.clientY; }, { passive: true });
+    addEventListener("pointerleave", () => { r.x = r.y = -1e4; });
+    document.addEventListener("visibilitychange", () => document.hidden ? parar() : arrancar());
+    medir(); arrancar();
+  }
 
   // Si la clave ya estaba guardada, se entra solo.
   if ($("url").value && $("key").value) pedir();
