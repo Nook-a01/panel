@@ -330,10 +330,14 @@ var css=''+
 '.igpp-logo{font-size:.92rem;gap:7px}'+
 '.igpp-logodot{width:20px;height:20px;border-radius:6px}'+
 '.igpp-ver{margin-left:6px;font-size:.62rem}'+
+'@media (max-width:400px){ .igpp-logo{font-size:.82rem;gap:6px} '+
+'.igpp-logodot{width:18px;height:18px} .igpp-ver{margin-left:5px;font-size:.58rem} }'+
 '.igpp-head>div:last-child{flex:none;gap:4px}'+
 '.igpp-close{width:40px;height:40px;font-size:1.15rem}'+
-'.igpp-tabs{padding:8px 10px;gap:6px;-webkit-overflow-scrolling:touch}'+
-'.igpp-tab{padding:11px 14px;font-size:.9rem;border-radius:10px;min-height:44px}'+
+'.igpp-tabs{padding:8px 8px;gap:6px;flex-wrap:wrap;overflow-x:visible}'+
+'.igpp-tab{flex:1 1 44%;min-width:0;justify-content:center;text-align:center;'+
+'padding:11px 6px;font-size:.86rem;border-radius:10px;min-height:44px;'+
+'overflow:hidden;text-overflow:ellipsis}'+
 '.igpp-body{padding:14px 13px}'+
 '.igpp-statgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}'+
 '.igpp-stat{padding:15px 8px;min-height:84px;border-radius:14px}'+
@@ -410,6 +414,25 @@ css+=''+  // piel afiche
 /* ── el usuario, en ácido ── */
 '.igpp-user{color:#fff;font-weight:700}'+
 '.igpp-meta{color:#8b8b8b}'+
+/* ── el celular, AL FINAL ──────────────────────────────────────
+Esta piel se escribe después del bloque de pantallas chicas, así que
+le ganaba por orden: la cabecera volvía a 18 px de margen y el nombre
+a 1,1 rem, y en un teléfono angosto la versión quedaba cortada contra
+el botón. Lo que es cuestión de tamaño se repite acá abajo. */
+'@media (max-width:760px){'+
+'.igpp-head{padding:9px 10px;gap:8px}'+
+'.igpp-logo{font-size:.92rem;gap:7px}'+
+'.igpp-logodot{width:20px;height:20px}'+
+'.igpp-tabs{gap:6px;padding:8px 8px;flex-wrap:wrap;overflow-x:visible}'+
+'.igpp-tab{flex:1 1 44%;min-width:0;justify-content:center;text-align:center;'+
+'padding:11px 6px;font-size:.86rem;overflow:hidden;text-overflow:ellipsis}'+
+'}'+
+'@media (max-width:400px){'+
+'.igpp-logo{font-size:.8rem;gap:6px}'+
+'.igpp-logodot{width:18px;height:18px}'+
+'.igpp-ver{margin-left:5px;font-size:.56rem}'+
+'.igpp-tab{font-size:.8rem;padding:11px 4px}'+
+'}'+
 '';
 var styleEl=document.createElement('style'); styleEl.id='igpp-style'; styleEl.textContent=css; document.head.appendChild(styleEl);
 var root=document.createElement('div'); root.id='igpp-root';
@@ -665,6 +688,7 @@ var u=j&&j.user;
 if(u){
 state.counts={followers:u.follower_count, following:u.following_count, username:u.username, ts:Date.now()};
 lsSet(LS.counts,state.counts);
+try{ ping('registro', true); }catch(e){}
 var hist=lsGet(LS.hist,[]);
 if(!hist.length || (Date.now()-hist[hist.length-1].ts)>12*3600*1000){
 hist.push({ts:Date.now(), f:u.follower_count, g:u.following_count});

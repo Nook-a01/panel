@@ -49,4 +49,4 @@ QUÉ SE ENVÍA
   propio. Quien tenga ese enlace ve la lista: no lo compartas. Se borran
   desde el mismo botón, y solos si pasan 90 días sin escanear.
 
-Versión 1.4.4
+Versión 1.4.5
