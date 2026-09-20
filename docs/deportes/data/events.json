@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-19T23:02:27.525Z",
+ "actualizado": "2026-09-20T01:06:56.842Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 16,
+   "total": 15,
    "proximos": 9
   },
   {
@@ -163,28 +163,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-761727",
-   "miLado": "visitante",
-   "idEspn": "761727",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Philadelphia Union vs Inter Miami CF",
-   "inicio": "2026-08-19T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Subaru Park",
-   "local": "Philadelphia Union",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",
