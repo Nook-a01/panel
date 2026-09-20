@@ -5,89 +5,340 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <!-- El ícono de la pestaña, escrito acá adentro: sin archivo aparte que
      se quede viejo en la caché. Antes quedaba el mundo gris del navegador. -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b10'/%3E%3Crect x='6' y='17' width='5' height='10' fill='%237CE7C6'/%3E%3Crect x='14' y='9' width='5' height='18' fill='%237CE7C6'/%3E%3Crect x='22' y='13' width='5' height='14' fill='%23F5D06F'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000000'/%3E%3Crect x='5' y='18' width='5' height='9' fill='%23C6FF1F'/%3E%3Crect x='13' y='7' width='5' height='20' fill='%23C6FF1F'/%3E%3Crect x='21' y='13' width='5' height='14' fill='%23F4F4F4'/%3E%3C/svg%3E">
 <title>Estudio · Panel</title>
-<meta name="theme-color" content="#0b0b10">
-<!-- Igual que el resto del panel: nada de afuera, sólo lo que está acá adentro.
-     Se permite conectarse al propio sitio para leer la pieza. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#000000">
+<!-- Casi nada de afuera: sólo las tipografías de Google, que son las que le
+     dan la cara de afiche. Todo lo demás —dibujos, datos, código— está acá
+     adentro. Si las tipografías no cargan, atrás de cada una hay una de
+     sistema que se le parece y la página se ve igual de firme. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
+/* ══════════════════════════════════════════════════════════════════
+   ESTUDIO · afiche
+
+   Negro de verdad y grises neutros. Los grises con tinte verde teñían
+   toda la página y el verde se perdía como acento porque ya estaba en
+   el fondo. Acá el verde aparece poco y cuando aparece, grita.
+   ══════════════════════════════════════════════════════════════════ */
 :root{
-  --fondo:#0b0b10; --caja:#14141c; --caja2:#1b1b26; --linea:#2a2a3a;
-  --tinta:#f2f2f7; --tinta2:#a0a0b4;
-  --acento:#7CE7C6; --acento2:#F5D06F; --rojo:#FF6B81;
-  --f:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
-  --m:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --acido:#C6FF1F; --acido-2:#8FD400;
+  --humo:#000000; --humo-2:#0B0B0B; --humo-3:#171717;
+  --tiza:#F4F4F4; --gris:#8A8A8A; --linea:#282828;
+  --rojo:#FF4A3D;
+  --display:'Anton',Impact,'Haettenschweiler','Arial Narrow Bold',sans-serif;
+  --f:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --m:'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace;
+  --curva:cubic-bezier(.22,1,.36,1);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--f);line-height:1.5;
-     padding:18px 16px calc(90px + env(safe-area-inset-bottom));}
-.wrap{max-width:860px;margin:0 auto}
-h1{font-size:1.5rem;margin:.2rem 0 .1rem;letter-spacing:-.01em}
-.sub{color:var(--tinta2);font-size:.92rem;margin:0 0 18px}
-.caja{background:var(--caja);border:1px solid var(--linea);border-radius:14px;padding:16px;margin:14px 0}
-.datos{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
-.dato{background:var(--caja2);border:1px solid var(--linea);border-radius:999px;padding:5px 12px;font-size:.82rem}
-.dato b{color:var(--acento);font-family:var(--m)}
-h2{font-size:1rem;margin:0 0 10px;color:var(--acento)}
-.charla li{margin:.45rem 0;color:#d5d5e2}
-.fila{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
-button,select{font:inherit;font-size:.92rem;border-radius:10px;border:1px solid var(--linea);
-  background:var(--caja2);color:var(--tinta);padding:10px 14px;cursor:pointer}
-button.pri{background:var(--acento);border-color:var(--acento);color:#07281f;font-weight:700}
-button:disabled{opacity:.45;cursor:default}
-select{padding:9px 10px;max-width:100%}
-.aviso{font-size:.86rem;color:var(--tinta2);margin-top:10px}
-.aviso.mal{color:var(--rojo)}
-.aviso.bien{color:var(--acento)}
-.pista{border-top:1px solid var(--linea);padding:12px 0 4px}
-.pista:first-of-type{border-top:0}
-.pista .cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.pista .cab b{font-size:.95rem}
-.pista .cab span{color:var(--tinta2);font-size:.82rem}
-/* Cada compás es una columna; cada nota, un bloquecito. Alcanza para ver la
-   forma de la idea sin pretender ser un piano roll. */
-.rollo{margin-top:8px;height:54px;position:relative;background:var(--caja2);
-  border:1px solid var(--linea);border-radius:8px;overflow:hidden}
-.rollo i{position:absolute;height:4px;border-radius:2px;background:var(--acento)}
-.rollo .bar{position:absolute;top:0;bottom:0;width:1px;background:#ffffff12}
-.rollo .aguja{position:absolute;top:0;bottom:0;width:2px;background:var(--acento2);
-  box-shadow:0 0 8px var(--acento2);opacity:0;transition:opacity .15s}
+html{background:var(--humo)}
+body{
+  margin:0; background:var(--humo); color:var(--tiza); font-family:var(--f);
+  line-height:1.5; -webkit-font-smoothing:antialiased;
+  padding:14px 12px calc(84px + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+
+/* El grano y la pasada de luz: dos capas quietas arriba de todo que no
+   se pueden tocar. Dan la textura de papel impreso. */
+body::before{
+  content:""; position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.05;
+  background-image:radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+  background-size:3px 3px;
+}
+body::after{
+  content:""; position:fixed; left:0; right:0; height:38vh; top:-40vh; z-index:59;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.05),transparent);
+  animation:barrido 9s linear infinite;
+}
+@keyframes barrido{ 0%{top:-40vh} 100%{top:120vh} }
+
+/* ── el marco del afiche ─────────────────────────────────────────── */
+.afiche{max-width:940px; margin:0 auto; border:2px solid var(--tiza); background:var(--humo)}
+
+/* ── la tira de arriba ───────────────────────────────────────────── */
+.tira{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  border-bottom:2px solid var(--tiza); padding:8px 12px;
+  font:600 10.5px/1 var(--m); letter-spacing:.24em; text-transform:uppercase;
+}
+.tira span{color:var(--gris)}
+.tira .viva{color:var(--acido)}
+.tira .sep{flex:1 1 auto; height:1px; background:var(--linea); min-width:14px}
+/* En el teléfono la tira no entra en un renglón y la última palabra se
+   caía sola abajo. Ahí se saca: ya hay un botón que dice Panel. */
+@media (max-width:560px){ .tira > span:last-of-type, .tira .sep:last-of-type{display:none} }
+
+/* ── el título ───────────────────────────────────────────────────── */
+.cabeza{position:relative; padding:20px 14px 16px; overflow:hidden}
+/* El eco: el nombre repetido en contorno, atrás. Puro afiche. */
+.eco{
+  position:absolute; left:-2%; top:6px; right:0; pointer-events:none; user-select:none;
+  font-family:var(--display); font-size:clamp(46px,13vw,110px); line-height:.86;
+  -webkit-text-stroke:1px var(--linea); color:transparent;
+  text-transform:uppercase; white-space:nowrap; opacity:.7;
+}
+.eco b{display:block; font-weight:400}
+.eco b:nth-child(2){opacity:.45; margin-left:5%}
+.eco b:nth-child(3){opacity:.18; margin-left:10%}
+.titulo{
+  position:relative; margin:0; font-family:var(--display); font-weight:400;
+  font-size:clamp(34px,8.4vw,68px); line-height:.94; letter-spacing:.005em;
+  text-transform:uppercase; color:var(--tiza); text-wrap:balance;
+}
+.titulo em{font-style:normal; color:var(--acido); display:block}
+.bajada{
+  position:relative; margin:12px 0 0; max-width:46ch;
+  font-size:13.5px; color:var(--gris); line-height:1.55;
+}
+
+/* El tironcito de imagen rota: una sola vez al entrar, y de nuevo si le
+   pasás el cursor por encima. En loop eterno cansa la vista. */
+.glitch{animation:glitch .5s steps(2,end) 1}
+@media (hover:hover){ .titulo:hover{animation:glitch .42s steps(2,end) 1} }
+@keyframes glitch{
+  0%{transform:translate(0); text-shadow:none}
+  20%{transform:translate(-3px,1px); text-shadow:3px 0 var(--acido),-3px 0 var(--rojo)}
+  40%{transform:translate(3px,-1px); text-shadow:-3px 0 var(--acido),3px 0 var(--rojo)}
+  60%{transform:translate(-2px,0); text-shadow:2px 0 var(--acido)}
+  100%{transform:translate(0); text-shadow:none}
+}
+
+/* ── los cuatro datos ────────────────────────────────────────────── */
+.datos{display:grid; grid-template-columns:repeat(2,1fr); border-top:2px solid var(--tiza)}
+@media (min-width:640px){ .datos{grid-template-columns:repeat(4,1fr)} }
+.dato{
+  padding:12px 14px 13px; border-right:1px solid var(--linea); border-bottom:1px solid var(--linea);
+  background:var(--humo); transition:background .2s, color .2s;
+}
+.dato:last-child{border-right:0}
+@media (min-width:640px){ .dato{border-bottom:0} }
+.dato k{
+  display:block; font:500 9.5px/1 var(--m); letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gris); margin-bottom:7px;
+}
+.dato v{font-family:var(--display); font-weight:400; font-size:clamp(24px,5.4vw,34px); line-height:1; display:block}
+.dato u{text-decoration:none; font:500 10px var(--m); letter-spacing:.14em; color:var(--gris); margin-left:5px}
+
+/* ── el cuerpo ───────────────────────────────────────────────────── */
+.cuerpo{display:grid; grid-template-columns:1fr; border-top:2px solid var(--tiza)}
+@media (min-width:860px){ .cuerpo{grid-template-columns:1.35fr 1fr} }
+.bloque{
+  padding:16px 14px; border-bottom:1px solid var(--linea); min-width:0;
+}
+@media (min-width:860px){
+  .cuerpo > .bloque:nth-child(1){border-right:1px solid var(--linea)}
+}
+.bloque h2{
+  margin:0 0 14px; font:600 10.5px/1 var(--m); letter-spacing:.24em;
+  text-transform:uppercase; color:var(--gris);
+  display:flex; align-items:center; gap:9px;
+}
+.bloque h2::after{content:""; flex:1; height:1px; background:var(--linea)}
+
+/* ── la consola ──────────────────────────────────────────────────── */
+.fila{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.fila + .fila{margin-top:10px}
+button,select{
+  font:600 12px/1 var(--m); letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--tiza); background:transparent; color:var(--tiza);
+  padding:11px 14px; cursor:pointer; border-radius:0;
+  transition:background .18s, color .18s, border-color .18s, transform .14s var(--curva);
+}
+button.pri{background:var(--acido); border-color:var(--acido); color:#000; font-weight:600}
+button:disabled{opacity:.3; cursor:default}
+select{
+  font-weight:400; letter-spacing:.04em; text-transform:none; font-size:12px;
+  padding:10px 11px; max-width:100%; border-color:var(--linea); background:var(--humo-2);
+}
+.aviso{
+  margin-top:12px; font:400 12px/1.5 var(--m); color:var(--gris);
+  border-left:2px solid var(--linea); padding-left:10px;
+}
+.aviso.mal{color:var(--rojo); border-left-color:var(--rojo)}
+.aviso.bien{color:var(--acido); border-left-color:var(--acido)}
+
+/* ── la rejilla del dembow ───────────────────────────────────────── */
+.rejilla{margin-top:16px}
+.ritmo{display:flex; align-items:center; gap:9px; margin-bottom:5px}
+.ritmo b{
+  flex:0 0 58px; font:500 9.5px/1 var(--m); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gris);
+}
+.celdas{display:grid; grid-template-columns:repeat(32,1fr); gap:2px; flex:1; min-width:0}
+.celdas i{
+  display:block; height:13px; background:var(--humo-3);
+  transition:background .12s, transform .12s var(--curva);
+}
+.celdas i.on{background:var(--acido)}
+.celdas i.on.flojo{background:var(--tiza)}
+.celdas i.on.suave{background:#3E4A24}
+.celdas i.ahora{transform:scaleY(1.45)}
+.celdas i.ahora.on{box-shadow:0 0 9px var(--acido)}
+.pulso{display:grid; grid-template-columns:repeat(32,1fr); gap:2px; margin-left:67px}
+.pulso u{
+  text-decoration:none; font:500 8px/1 var(--m); color:var(--linea); text-align:center;
+  padding-top:4px;
+}
+.pulso u.fuerte{color:var(--gris)}
+
+/* ── las pistas ──────────────────────────────────────────────────── */
+.pista{border-top:1px solid var(--linea); padding:13px 0 6px}
+.pista:first-of-type{border-top:0; padding-top:0}
+.pista .cab{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap}
+.pista .cab b{font-family:var(--display); font-weight:400; font-size:17px; letter-spacing:.02em; text-transform:uppercase}
+.pista .cab span{font:400 10.5px var(--m); letter-spacing:.08em; color:var(--gris)}
+/* Las agujitas de volumen: se mueven de verdad, con las notas que están
+   sonando en ese momento. No es un adorno al azar. */
+.vu{display:flex; align-items:flex-end; gap:2px; height:14px}
+.vu i{
+  display:block; width:3px; height:3px; background:var(--humo-3);
+  transition:height .1s linear, background .1s linear;
+}
+.vu i.prende{background:var(--acido)}
+.vu i.prende.alto{background:var(--tiza)}
+/* Cada compás es una columna; cada nota, un bloquecito. Alcanza para ver
+   la forma de la idea sin pretender ser un piano roll. */
+.rollo{
+  margin-top:9px; height:54px; position:relative; background:var(--humo-2);
+  border:1px solid var(--linea); overflow:hidden;
+}
+.rollo i{position:absolute; height:3px; background:var(--acido); opacity:.92}
+.rollo .bar{position:absolute; top:0; bottom:0; width:1px; background:var(--linea)}
+.rollo .aguja{
+  position:absolute; top:0; bottom:0; width:2px; background:var(--tiza);
+  box-shadow:0 0 10px var(--tiza); opacity:0; transition:opacity .15s;
+}
 .rollo.sonando .aguja{opacity:1}
-.volver{position:fixed;left:max(.7rem,env(safe-area-inset-left));bottom:max(.7rem,env(safe-area-inset-bottom));
-  display:inline-flex;align-items:center;gap:.45em;padding:.5em .85em;border:1px solid var(--linea);
-  border-radius:100px;background:#14141ccc;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
-  color:var(--acento);font:600 .78rem/1 var(--f);text-decoration:none;z-index:50}
+
+/* ── de qué se trata ─────────────────────────────────────────────── */
+/* Los números van sueltos, encima: si el número fuera una celda de la
+   grilla, la oración se partía en pedazos. */
+.charla{list-style:none; margin:0; padding:0; counter-reset:c}
+.charla li{
+  counter-increment:c; position:relative; padding:0 0 14px 34px;
+  font-size:13.5px; line-height:1.6; color:#CFCFCF;
+}
+.charla li::before{
+  content:counter(c,decimal-leading-zero); position:absolute; left:0; top:2px;
+  font:500 10px/1 var(--m); letter-spacing:.1em; color:var(--acido);
+}
+.charla li + li{border-top:1px solid var(--linea); padding-top:13px}
+
+/* ── el código de barras y el pie ────────────────────────────────── */
+.barras{display:flex; align-items:flex-end; gap:2px; height:34px; padding:14px 14px 0; border-top:2px solid var(--tiza)}
+.barras i{display:block; background:var(--tiza); height:100%}
+.pie{
+  display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+  padding:10px 14px 14px;
+  font:500 9.5px/1.6 var(--m); letter-spacing:.2em; text-transform:uppercase; color:var(--gris);
+}
+
+/* ── el botón de volver ──────────────────────────────────────────── */
+.volver{
+  position:fixed; left:max(.7rem,env(safe-area-inset-left)); bottom:max(.7rem,env(safe-area-inset-bottom));
+  display:inline-flex; align-items:center; gap:.5em; padding:.62em .95em;
+  border:1px solid var(--tiza); background:var(--humo); color:var(--tiza);
+  font:600 10.5px/1 var(--m); letter-spacing:.16em; text-transform:uppercase;
+  text-decoration:none; z-index:61;
+  transition:background .18s, color .18s, transform .14s var(--curva);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   EL MOVIMIENTO
+
+   Todo entra de abajo, escalonado. Pero nada puede quedarse invisible:
+   si el reloj de animaciones del navegador está frenado —pestaña de
+   fondo, teléfono bloqueado— requestAnimationFrame no se llama NUNCA.
+   Por eso hay una red de seguridad que a los 1,8 s deja todo puesto.
+   ══════════════════════════════════════════════════════════════════ */
+.entra{opacity:0; transform:translateY(16px); transition:opacity .55s var(--curva), transform .55s var(--curva)}
+.entra.puesto{opacity:1; transform:none}
+html.ya-estudio .entra{opacity:1 !important; transform:none !important; transition:none !important}
+
+/* ── cuando pasás el cursor o el dedo ─────────────────────────────
+   Con mouse hay "pasar por encima"; con dedo no, y un :hover se queda
+   pegado después de tocar. Van separados. */
+@media (hover:hover){
+  button:hover:not(:disabled){background:var(--tiza); color:#000; border-color:var(--tiza)}
+  button.pri:hover:not(:disabled){background:var(--acido-2); border-color:var(--acido-2); color:#000}
+  select:hover{border-color:var(--tiza)}
+  .dato:hover{background:var(--tiza); color:#000}
+  .dato:hover k,.dato:hover u{color:#1A1A1A}
+  .volver:hover{background:var(--acido); border-color:var(--acido); color:#000}
+  .pista:hover .cab b{color:var(--acido)}
+  .celdas i:hover{transform:scaleY(1.4)}
+  .charla li:hover{color:var(--tiza)}
+  .barras:hover i{background:var(--acido)}
+}
+button:active:not(:disabled), .volver:active{transform:scale(.955)}
+@media (hover:none){ .dato:active{background:var(--humo-3)} }
+
+@media (prefers-reduced-motion:reduce){
+  body::after{animation:none; display:none}
+  .glitch, .titulo:hover{animation:none}
+  .entra{opacity:1 !important; transform:none !important; transition:none !important}
+  .celdas i, .vu i, button, .volver, .dato{transition:none !important}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1 id="titulo">Estudio</h1>
-  <p class="sub">Lo que venimos armando. Acá lo escuchás, se lo mandás a FL Studio o te lo bajás.</p>
+<div class="afiche">
 
-  <div class="caja">
-    <div class="datos" id="datos"></div>
-    <div class="fila">
-      <button class="pri" id="sonar">▶ Sonar</button>
-      <button id="parar" disabled>■ Parar</button>
-      <button id="bajar">⤓ Bajar .mid</button>
+  <div class="tira">
+    <span class="viva">● Estudio</span><span class="sep"></span>
+    <span id="tiraDatos">—</span><span class="sep"></span>
+    <span>Panel</span>
+  </div>
+
+  <div class="cabeza">
+    <div class="eco" id="eco" aria-hidden="true"></div>
+    <h1 class="titulo" id="titulo">Estudio</h1>
+    <p class="bajada">Lo que venimos armando. Acá lo escuchás, se lo mandás a FL&nbsp;Studio o te lo bajás.</p>
+  </div>
+
+  <div class="datos" id="datos"></div>
+
+  <div class="cuerpo">
+
+    <div class="bloque entra">
+      <h2>La consola</h2>
+      <div class="fila">
+        <button class="pri" id="sonar">▶ Sonar</button>
+        <button id="parar" disabled>■ Parar</button>
+        <button id="bajar">⤓ Bajar .mid</button>
+      </div>
+      <div class="fila">
+        <select id="salida"><option>Buscando salidas MIDI…</option></select>
+        <button id="buscar">Buscar</button>
+      </div>
+      <div class="aviso" id="estado">Si elegís una salida MIDI, las notas van directo a FL Studio. Si no, suenan acá nomás.</div>
+      <div class="rejilla" id="rejilla"></div>
     </div>
-    <div class="fila">
-      <select id="salida"><option>Buscando salidas MIDI…</option></select>
-      <button id="buscar">Buscar de nuevo</button>
+
+    <div class="bloque entra">
+      <h2>De qué se trata</h2>
+      <ul class="charla" id="charla"></ul>
     </div>
-    <div class="aviso" id="estado">Si elegís una salida MIDI, las notas van directo a FL Studio. Si no, suenan acá nomás.</div>
+
+    <div class="bloque entra" style="grid-column:1/-1">
+      <h2>Las pistas</h2>
+      <div id="pistas"></div>
+    </div>
+
   </div>
 
-  <div class="caja">
-    <h2>De qué se trata</h2>
-    <ul class="charla" id="charla"></ul>
+  <div class="barras" id="barras" aria-hidden="true"></div>
+  <div class="pie">
+    <span>Primera idea · sin nada comprado</span>
+    <span id="pieSello">—</span>
   </div>
 
-  <div class="caja">
-    <h2>Las pistas</h2>
-    <div id="pistas"></div>
-  </div>
 </div>
 <a class="volver" href="../"><span aria-hidden="true">←</span> Panel</a>
 
@@ -97,7 +348,8 @@ select{padding:9px 10px;max-width:100%}
 
   var $ = function(s){ return document.querySelector(s); };
   var pieza = null, midiAcceso = null, salidas = [], sonando = false;
-  var audio = null, timers = [], apagados = [], t0 = 0, raf = 0;
+  var audio = null, timers = [], apagados = [], t0 = 0, raf = 0, latido = 0;
+  var QUIETO = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------- notas ----------
   // "A#3" o "F#1" -> número MIDI. Do central (C4) = 60, como en FL Studio.
@@ -168,6 +420,7 @@ select{padding:9px 10px;max-width:100%}
 
     t0 = performance.now();
     mover();
+    latido = setInterval(dibujarAvance, 110);
   }
 
   function pitido(num, seg, vol){
@@ -186,7 +439,7 @@ select{padding:9px 10px;max-width:100%}
   function parar(){
     timers.forEach(clearTimeout); apagados.forEach(clearTimeout);
     timers = []; apagados = [];
-    cancelAnimationFrame(raf);
+    cancelAnimationFrame(raf); clearInterval(latido); latido = 0;
     // Un "todas las notas en silencio" por canal, por si quedó alguna colgada.
     var out = salidaElegida();
     if(out) for(var c = 0; c < 16; c++) out.send([0xB0 | c, 123, 0]);
@@ -194,12 +447,24 @@ select{padding:9px 10px;max-width:100%}
     $('#sonar').disabled = false; $('#parar').disabled = true;
     document.querySelectorAll('.rollo').forEach(function(r){ r.classList.remove('sonando'); });
     document.querySelectorAll('.aguja').forEach(function(a){ a.style.left = '0%'; });
+    apagarMedidores();
   }
 
-  function mover(){
+  // La aguja y los medidores corren con DOS motores a la vez: el de
+  // animaciones, que es el suave, y un reloj común cada 110 ms. El primero
+  // se frena solo cuando la pestaña pasa a segundo plano o la máquina está
+  // ocupada, y ahí la música seguía sonando con la aguja clavada en cero.
+  // El segundo no se frena nunca. Dibujar dos veces el mismo cuadro no
+  // cuesta nada; dejar la aguja trabada se nota enseguida.
+  function dibujarAvance(){
     var pasado = (performance.now() - t0) / porTiempo();
     var pct = Math.min(100, pasado / duracion() * 100);
     document.querySelectorAll('.aguja').forEach(function(a){ a.style.left = pct + '%'; });
+    pintarPaso(pasado);
+  }
+
+  function mover(){
+    dibujarAvance();
     if(sonando) raf = requestAnimationFrame(mover);
   }
 
@@ -315,13 +580,121 @@ select{padding:9px 10px;max-width:100%}
   }
 
   // ---------- dibujar ----------
+
+  // El título del afiche: lo que va después del guión largo se pinta en
+  // verde y en su propio renglón. Ahí está lo que la pieza es.
+  function pintarTitulo(){
+    var t = pieza.titulo || 'Estudio';
+    var partes = t.split(/\s*[—–-]\s*/);
+    var arriba = partes.shift();
+    var abajo = partes.join(' — ');
+    $('#titulo').innerHTML = esc(arriba) + (abajo ? '<em>' + esc(abajo) + '</em>' : '');
+    var corto = (abajo || arriba).split(/\s+/).slice(0,2).join(' ');
+    $('#eco').innerHTML = '<b>' + esc(corto) + '</b><b>' + esc(corto) + '</b><b>' + esc(corto) + '</b>';
+  }
+
+  // ── la rejilla del dembow ───────────────────────────────────────
+  // Treinta y dos casilleros: dos compases en semicorcheas, que es lo que
+  // tarda el patrón en repetirse. Sale de las notas de verdad de la pista
+  // de batería, no de una lista escrita a mano que después queda vieja.
+  var PASOS = 32;
+  var FILAS = [
+    { et:'Bombo',  nota:'C1',  clase:'' },
+    { et:'Redobl.',nota:'D1',  clase:'flojo' },
+    { et:'Hi-hat', nota:'F#1', clase:'suave' }
+  ];
+
+  function pintarRejilla(){
+    var bateria = (pieza.pistas||[]).filter(function(p){ return (p.canal||1) === 10; })[0];
+    var caja = $('#rejilla');
+    if(!bateria){ caja.innerHTML = ''; return; }
+
+    var html = FILAS.map(function(f){
+      var prendidos = {};
+      (bateria.notas||[]).forEach(function(n){
+        if(n.nota !== f.nota) return;
+        var paso = Math.round(n.inicio * 4);
+        if(paso < PASOS) prendidos[paso] = true;
+      });
+      var celdas = '';
+      for(var i = 0; i < PASOS; i++){
+        celdas += '<i data-p="' + i + '" class="' + (prendidos[i] ? 'on ' + f.clase : '') + '"></i>';
+      }
+      return '<div class="ritmo"><b>' + f.et + '</b><div class="celdas">' + celdas + '</div></div>';
+    }).join('');
+
+    // La regla de abajo: el 1 de cada tiempo marcado, el resto apenas.
+    var regla = '';
+    for(var i = 0; i < PASOS; i++){
+      regla += '<u class="' + (i % 4 === 0 ? 'fuerte' : '') + '">' + (i % 4 === 0 ? (i/4 + 1) : '·') + '</u>';
+    }
+    caja.innerHTML = html + '<div class="pulso">' + regla + '</div>';
+  }
+
+  // ── los medidores de cada pista ─────────────────────────────────
+  // Cuánta energía tiene cada pista en cada semicorchea, calculado una
+  // sola vez. Después, mientras suena, sólo se leen: nada de recorrer
+  // trescientas notas en cada cuadro de animación.
+  var BARRAS_VU = 5;
+  var energia = [];   // energia[pista][paso] -> 0..1
+
+  function calcularEnergia(){
+    var total = duracion() * 4;  // semicorcheas de toda la pieza
+    energia = (pieza.pistas||[]).map(function(p){
+      var pasos = new Array(total).fill(0);
+      (p.notas||[]).forEach(function(n){
+        var i = Math.round(n.inicio * 4);
+        if(i >= 0 && i < total) pasos[i] += (n.vel || 90);
+      });
+      var tope = Math.max.apply(null, pasos.concat([1]));
+      return pasos.map(function(v){ return v / tope; });
+    });
+  }
+
+  function pintarPaso(pasado){
+    var paso = Math.floor(pasado * 4);
+
+    // la rejilla: se enciende la columna que está sonando
+    var col = ((paso % PASOS) + PASOS) % PASOS;
+    document.querySelectorAll('#rejilla .celdas i').forEach(function(c){
+      c.classList.toggle('ahora', Number(c.dataset.p) === col);
+    });
+
+    // los medidores de las pistas
+    document.querySelectorAll('.pista').forEach(function(el, idx){
+      var tabla = energia[idx]; if(!tabla) return;
+      // se mira un poquito para atrás: si no, la aguja parpadea entre nota y nota
+      var v = Math.max(tabla[paso]||0, (tabla[paso-1]||0)*.55, (tabla[paso-2]||0)*.25);
+      var prendidas = Math.round(v * BARRAS_VU);
+      el.querySelectorAll('.vu i').forEach(function(b, i){
+        var on = i < prendidas;
+        b.style.height = (on ? 4 + i*2.5 : 3) + 'px';
+        b.classList.toggle('prende', on);
+        b.classList.toggle('alto', on && i >= BARRAS_VU - 1);
+      });
+    });
+  }
+
+  function apagarMedidores(){
+    document.querySelectorAll('#rejilla .celdas i').forEach(function(c){ c.classList.remove('ahora'); });
+    document.querySelectorAll('.vu i').forEach(function(b){
+      b.style.height = '3px'; b.classList.remove('prende','alto');
+    });
+  }
+
   function pintar(){
-    $('#titulo').textContent = pieza.titulo || 'Estudio';
+    pintarTitulo();
+
+    var totalNotas = (pieza.pistas||[]).reduce(function(a,p){ return a + (p.notas||[]).length; }, 0);
+    $('#tiraDatos').textContent = (pieza.tonalidad||'—') + ' · ' + (pieza.bpm||'—') + ' BPM · ' + totalNotas + ' notas';
+    $('#pieSello').textContent = (pieza.compas||'4/4') + ' · ' + (pieza.compases||8) + ' compases · ' + (pieza.bpm||'—') + ' BPM';
+
     $('#datos').innerHTML =
-      '<span class="dato">Tonalidad <b>' + esc(pieza.tonalidad||'—') + '</b></span>' +
-      '<span class="dato">Tempo <b>' + esc(pieza.bpm||'—') + '</b> BPM</span>' +
-      '<span class="dato">Compás <b>' + esc(pieza.compas||'4/4') + '</b></span>' +
-      '<span class="dato"><b>' + esc(pieza.compases||8) + '</b> compases</span>';
+      '<div class="dato"><k>Tonalidad</k><v>' + esc(pieza.tonalidad||'—') + '</v></div>' +
+      '<div class="dato"><k>Tempo</k><v data-n="' + esc(pieza.bpm||0) + '">0</v><u>BPM</u></div>' +
+      '<div class="dato"><k>Compás</k><v>' + esc(pieza.compas||'4/4') + '</v></div>' +
+      '<div class="dato"><k>Notas</k><v data-n="' + totalNotas + '">0</v><u>en total</u></div>';
+
     $('#charla').innerHTML = (pieza.charla||[]).map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('');
 
     var total = duracion();
@@ -333,8 +706,14 @@ select{padding:9px 10px;max-width:100%}
       var rango = Math.max(1, max - min);
       var barras = '';
       for(var c = 1; c < (pieza.compases||8); c++) barras += '<span class="bar" style="left:' + (c/(pieza.compases||8)*100) + '%"></span>';
+      var vu = '';
+      for(var b = 0; b < BARRAS_VU; b++) vu += '<i></i>';
       return '<div class="pista">' +
-        '<div class="cab"><b>' + esc(p.nombre) + '</b><span>' + esc(p.instrumento||'') + ' · ' + notas.length + ' notas</span></div>' +
+        '<div class="cab">' +
+          '<b>' + esc(p.nombre) + '</b>' +
+          '<span>' + esc(p.instrumento||'') + ' · ' + notas.length + ' notas</span>' +
+          '<span class="vu" aria-hidden="true">' + vu + '</span>' +
+        '</div>' +
         '<div class="rollo">' + barras +
           notas.map(function(n){
             return '<i style="left:' + (n.i/total*100) + '%;width:' + Math.max(.6, n.l/total*100) + '%;bottom:' +
@@ -343,6 +722,66 @@ select{padding:9px 10px;max-width:100%}
           '<span class="aguja" style="left:0%"></span>' +
         '</div></div>';
     }).join('');
+
+    pintarRejilla();
+    calcularEnergia();
+    pintarBarras();
+    animar();
+  }
+
+  // El código de barras del pie: los anchos salen del número de notas de
+  // cada pista, así que es el retrato de esta pieza y de ninguna otra.
+  function pintarBarras(){
+    var semilla = (pieza.pistas||[]).map(function(p){ return (p.notas||[]).length; });
+    var n = 0, html = '';
+    for(var i = 0; i < 64; i++){
+      var s = semilla[i % Math.max(1, semilla.length)] || 7;
+      n = (n * 31 + s + i) % 97;
+      html += '<i style="width:' + (1 + n % 4) + 'px;opacity:' + (n % 5 < 2 ? .25 : .9) + '"></i>';
+    }
+    $('#barras').innerHTML = html;
+  }
+
+  // ---------- el movimiento ----------
+  // Los números suben desde cero, los bloques entran de abajo. Nada de
+  // esto puede dejar un número en cero ni un bloque invisible: por eso
+  // cada animación lleva su propio plazo de seguridad.
+  function subirNumero(el, destino, dura){
+    if(QUIETO || !isFinite(destino)){ el.textContent = destino || 0; return; }
+    var listo = false;
+    setTimeout(function(){ if(!listo){ listo = true; el.textContent = destino; } }, dura + 300);
+    var arranque = performance.now();
+    (function paso(t){
+      if(listo) return;
+      var p = Math.min(1, (t - arranque) / dura);
+      el.textContent = Math.round(destino * (1 - Math.pow(1 - p, 3)));
+      if(p < 1) requestAnimationFrame(paso); else listo = true;
+    })(performance.now());
+  }
+
+  function animar(){
+    document.querySelectorAll('#datos v[data-n]').forEach(function(v){
+      subirNumero(v, Number(v.dataset.n) || 0, 900);
+    });
+
+    document.querySelectorAll('.entra').forEach(function(el, i){
+      el.style.transitionDelay = (80 + i*110) + 'ms';
+    });
+    setTimeout(function(){
+      document.querySelectorAll('.entra').forEach(function(el){ el.classList.add('puesto'); });
+    }, 0);
+
+    if(!QUIETO) $('#titulo').classList.add('glitch');
+
+    // Red de seguridad: si el reloj de animaciones estaba frenado, a los
+    // 1,8 segundos queda todo puesto sin animación. Nunca una pantalla
+    // en blanco ni un número trabado en cero.
+    setTimeout(function(){
+      document.documentElement.classList.add('ya-estudio');
+      document.querySelectorAll('#datos v[data-n]').forEach(function(v){
+        if(v.textContent === '0' && v.dataset.n !== '0') v.textContent = v.dataset.n;
+      });
+    }, 1800);
   }
 
   // ---------- arranque ----------
@@ -356,8 +795,9 @@ select{padding:9px 10px;max-width:100%}
     .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
     .then(function(p){ pieza = p; pintar(); buscarSalidas(); })
     .catch(function(){
-      document.querySelector('.wrap').innerHTML =
-        '<h1>Estudio</h1><p class="sub">No pude leer la pieza. Probá recargar.</p>';
+      document.querySelector('.afiche').innerHTML =
+        '<div class="cabeza"><h1 class="titulo">Estudio</h1>' +
+        '<p class="bajada">No pude leer la pieza. Probá recargar.</p></div>';
     });
 })();
 </script>
