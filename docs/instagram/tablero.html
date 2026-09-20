@@ -282,6 +282,11 @@ button.p.enlace:hover:not(:disabled){background:none;color:var(--acido);box-shad
 .horas-pie b{color:var(--tinta)}
 
 /* ── tabla de personas ── */
+.filtro{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 .8rem;cursor:pointer;
+  font-family:var(--m);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--apagado)}
+.filtro input{width:16px;height:16px;accent-color:var(--cian);cursor:pointer}
+.filtro:hover{color:var(--cian)}
+
 .tabla-caja{border:1px solid var(--linea);background:var(--caja);overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:38rem}
 th{
@@ -443,6 +448,10 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     <p class="nota" id="retencion-nota"></p>
 
     <h2>Quiénes usan el panel</h2>
+    <!-- Las fichas sin nombre son gente de verdad usando el panel: lo que falta
+         es el nombre, no la persona. Por eso se esconden, no se borran. El
+         interruptor las vuelve a mostrar cuando haga falta. -->
+    <label class="filtro"><input type="checkbox" id="ver-anon"> <span id="ver-anon-txt">Mostrar los sin nombre</span></label>
     <div class="tabla-caja">
       <table>
         <thead><tr>
@@ -913,6 +922,8 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
      los que no dieron nombre queden siempre al final, en los dos
      sentidos, en vez de mezclarse entre los @usuario. */
   let GENTE = [];
+  // Se recuerda en este navegador. Arranca apagado: la tabla se lee mejor.
+  let VER_ANON = (function(){ try { return localStorage.getItem("igtablero_anon") === "1"; } catch (e) { return false; } })();
   let ORDEN = { col: "veces", dir: -1 };
   const CLAVES = {
     persona: p => (p.usuario ? "1" + p.usuario.toLowerCase() : "2" + String(p.id || "")),
@@ -949,8 +960,16 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
          - quien sólo MIRÓ la página de instalación: no abrió nada
        Los segundos no saben quién sos (ahí no hay sesión de Instagram) y
        ensuciaban el número que importa. Van aparte. */
-    const lista = ordenar(GENTE.filter(p => (p.visitas || 0) > 0 || p.usuario));
-    const soloMiraron = GENTE.length - lista.length;
+    const usaron = GENTE.filter(p => (p.visitas || 0) > 0 || p.usuario);
+    const anonimos = usaron.filter(p => !p.usuario).length;
+    // Con el interruptor apagado quedan sólo los que dieron su nombre: las otras
+    // no se borran, se esconden. Ochenta y tres filas iguales tapaban las trece
+    // que sí dicen algo.
+    const lista = ordenar(VER_ANON ? usaron : usaron.filter(p => p.usuario));
+    const soloMiraron = GENTE.length - usaron.length;
+    $("ver-anon-txt").textContent = anonimos
+      ? (VER_ANON ? "Ocultar los " + anonimos + " sin nombre" : "Mostrar los " + anonimos + " sin nombre")
+      : "No hay fichas sin nombre";
     marcarEncabezado();
     $("solo-miraron").textContent = soloMiraron
       ? `Además, ${soloMiraron} ${soloMiraron === 1 ? "persona miró" : "personas miraron"} la página de instalación sin llegar a usar el panel.`
@@ -1002,7 +1021,9 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     }).join("");
 
     $("personas-nota").textContent =
-      `${lista.length} personas usaron el panel. "Veces" es cuántas veces abrieron el panel, sumando todos sus aparatos; ` +
+      `${lista.length} ${lista.length === 1 ? "persona" : "personas"} en la tabla` +
+      (VER_ANON || !anonimos ? ". " : `, y ${anonimos} escondidas por no tener nombre. `) +
+      `"Veces" es cuántas veces abrieron el panel, sumando todos sus aparatos; ` +
       `"Días", en cuántos días distintos; "Bajas", a cuánta gente dejaron de seguir desde acá. ` +
       `Tocá "ver" para desplegar qué hizo cada uno.`;
   }
@@ -1194,6 +1215,13 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   });
 
   // Desplegar la actividad de una persona.
+  $("ver-anon").checked = VER_ANON;
+  $("ver-anon").addEventListener("change", e => {
+    VER_ANON = e.target.checked;
+    try { localStorage.setItem("igtablero_anon", VER_ANON ? "1" : "0"); } catch (err) {}
+    personas();
+  });
+
   $("kpis").addEventListener("click", e => {
     const b = e.target.closest("[data-ver]");
     if (!b) return;
