@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "13";
+  var ESTA = "14";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -1254,11 +1254,17 @@ function calc(){
     saldo += (m.tipo==='ingreso' ? 1 : -1) * (Number(m.monto)||0);
   });
 
-  // Lo pendiente cuenta hasta el próximo cobro, no hasta fin de mes: si cobrás el
-  // 5, lo que vence el 2 del mes que viene también sale de esta plata.
   const refCobro = proximoCobro(hoy);
-  const diasHasta = Math.max(1, diasEntreISO(refCobro, hoy));
   const ap = apartados();
+  // Hasta cuándo tiene que durarte la plata que tenés HOY: hasta que entre
+  // plata nueva, o hasta que se acabe el mes, lo que pase primero. Antes esto
+  // llegaba hasta el cobro completo (para él, el 10º día hábil, o sea el 14),
+  // y entonces se tragaba el alquiler y los servicios del mes siguiente, que
+  // se pagan justamente con ese sueldo. El cartel quedaba en rojo siempre y no
+  // servía para decidir nada.
+  const vent = finDeVentana(hoy, refCobro, ap);
+  const finVentana = vent.fin, motivoVentana = vent.motivo;
+  const diasHasta = Math.max(1, diasEntreISO(finVentana, hoy));
   const inicioMes = hoyYM + '-01';
 
   let comprometido=0, porCobrar=0, vencido=0, pendCubierto=0, tarjetaMes=0, inversionMes=0;
@@ -1270,7 +1276,7 @@ function calc(){
       if(m.tipo==='gasto' && esNoGasto(m.catId) && !esTarjeta(m)) inversionMes += v;
       return;
     }
-    if(m.fecha < inicioMes || m.fecha > refCobro) return;
+    if(m.fecha < inicioMes || m.fecha > finVentana) return;
     if(m.tipo==='gasto'){
       if(esTarjeta(m)){ if(ymOf(m.fecha)===hoyYM) tarjetaMes += v; return; }
       // Lo que se paga con plata apartada no sale de lo libre mientras alcance.
@@ -1297,8 +1303,23 @@ function calc(){
   const proyeccion = saldo + porCobrar - comprometido - ritmo*diasRestMes;
 
   return {hoy, hoyYM, saldo, comprometido, porCobrar, vencido, reserva, libre, libreConIngresos,
-          diasHasta, refCobro, ritmo, gastadoVar, diasRestMes, proyeccion, diaMes:d,
+          diasHasta, refCobro, finVentana, motivoVentana, ritmo, gastadoVar, diasRestMes, proyeccion, diaMes:d,
           tarjetaMes, inversionMes, apartado, pendCubierto, faltaApartado};
+}
+
+// Dónde termina la ventana de "esta plata te tiene que durar hasta…".
+function finDeVentana(hoy, refCobro, ap){
+  const ym = ymOf(hoy);
+  const finMes = dayOfMonth(ym, daysInMonth(ym));
+  // El primer ingreso posterior a hoy que de verdad vas a poder gastar: los
+  // apartados (la plata de la abuela, que es del psicólogo) no cuentan.
+  const prox = S.movs
+    .filter(m=> m.tipo==='ingreso' && m.fecha > hoy && !esNoGasto(m.catId) && !ap.ingresos.has(recDeMov(m)))
+    .map(m=> m.fecha).sort()[0] || null;
+  let fin = finMes, motivo = 'mes';
+  if(refCobro < fin){ fin = refCobro; motivo = 'cobro'; }
+  if(prox && prox < fin){ fin = prox; motivo = 'ingreso'; }
+  return {fin, motivo};
 }
 
 function presupuestoMes(ym){
@@ -1559,11 +1580,17 @@ function renderHoy(){
   } else {
     $('#hoyLibreV').hidden = false;
     $('#hoyLibre').classList.toggle('neg', c.libre < 0);
-    $('#hoyLibreK').textContent = c.libre >= 0 ? 'Podés gastar hasta que cobres' : 'Te falta plata hasta que cobres';
+    const hastaK = c.motivoVentana === 'cobro' ? 'hasta que cobres'
+                 : c.motivoVentana === 'ingreso' ? 'hasta que te entre plata'
+                 : 'hasta fin de mes';
+    $('#hoyLibreK').textContent = (c.libre >= 0 ? 'Podés gastar ' : 'Te falta plata ') + hastaK;
     contar($('#hoyLibreV'), Math.abs(c.libre));
     const partes = [];
     if(c.libre > 0) partes.push('≈ '+money(c.libre / c.diasHasta)+' por día');
-    partes.push('faltan '+c.diasHasta+(c.diasHasta===1?' día':' días')+', cobrás el '+fmtDay(c.refCobro));
+    const porQue = c.motivoVentana === 'cobro' ? 'cobrás el '+fmtDay(c.finVentana)
+                 : c.motivoVentana === 'ingreso' ? 'te entra plata el '+fmtDay(c.finVentana)
+                 : 'hasta el '+fmtDay(c.finVentana);
+    partes.push('faltan '+c.diasHasta+(c.diasHasta===1?' día':' días')+', '+porQue);
     const viejo = leido && horas > 26
       ? '<div class="aviso-viejo">Ojo: tu saldo es de '+esc(mpHaceCuanto(leido))+'. Se actualiza solo cuando la compu lee Mercado Pago.</div>'
       : '';
@@ -1828,9 +1855,9 @@ function pintarMesQue(c){
   if(tipico == null){
     h += '<div class="fin">Todavía no tengo cuánto gastás en el día a día. Aparece solo cuando la compu lee Mercado Pago unos días.</div>';
   } else if(cierra >= 0){
-    h += '<div class="fin">Gastando como venís ('+money(tipico)+' por mes), <b class="ok">llegás y te sobran '+money(cierra)+'</b>.</div>';
+    h += '<div class="fin">Podés gastar hasta <b class="ok">'+money(queda/dim)+' por día</b> y venís gastando <b>'+money(tipico/dim)+'</b>: llegás bien.</div>';
   } else {
-    h += '<div class="fin">Gastando como venís ('+money(tipico)+' por mes), <b class="mal">te faltan '+money(-cierra)+'</b>.</div>'
+    h += '<div class="fin">Para llegar tenés que gastar hasta <b class="ok">'+money(queda/dim)+' por día</b>. Venís gastando <b class="mal">'+money(tipico/dim)+' por día</b>.</div>'
        + '<button type="button" data-recortar="'+Math.round(-cierra)+'">Ver de dónde recortarlo</button>';
   }
   el.innerHTML = h;
