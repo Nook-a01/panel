@@ -305,7 +305,12 @@ body{
 }
 
 /* ── pantalla ancha: las tiras se paran en columnas ───────── */
-@media (min-width:900px) and (min-height:520px){
+/* Las cinco columnas verticales piden MUCHO ancho. A 1200 px cada una
+   quedaba de 230 px por 770 de alto: una tira finita con todo el texto
+   amontonado abajo y la mitad de arriba vacía. Ahora el afiche de
+   columnas arranca recién a 1600 px, que es donde cada una pasa de los
+   300 px; abajo de eso van apiladas, que a esa altura se leen mejor. */
+@media (min-width:1600px) and (min-height:520px){
   .tiras{ flex-direction:row; gap:3px; padding:0 1rem 1rem }
   .tira{
     /* En columnas sí se reparten el ancho por igual. */
@@ -335,7 +340,7 @@ body{
      No se usa el ancho de la propia tira (cqi) porque al apuntar la
      columna se ensancha y el título cambiaría de tamaño en plena
      animación. */
-  .tira h2{ font-size:clamp(1.05rem, calc((100vw - 17rem - 12px) / 34), 2.05rem) }
+  .tira h2{ font-size:clamp(1.35rem, calc((100vw - 17rem - 12px) / 32), 2.3rem) }
   .que{ max-width:30ch }
 }
 
@@ -346,7 +351,7 @@ body{
    El dibujo de fondo baja y el velo se hace horizontal: en la tira
    apilada el texto ocupa todo el alto, así que un velo que sólo tapa
    la parte de abajo dejaba las líneas cruzando el título. */
-@media (max-width:899.98px), (max-height:519.98px){
+@media (max-width:1599.98px), (max-height:519.98px){
   .tiras{ gap:.55rem }
   .tira{
     align-items:flex-start;
@@ -357,6 +362,19 @@ body{
   .cuerpo{ padding-right:1.6rem }
   .que{ max-width:none }
   .tira .arte{ opacity:calc(var(--img-op, .22) * .55) }
+
+  /* En una compu la tira apilada mide más de mil píxeles de ancho: el
+     título puede crecer y el texto no tiene por qué estirarse de punta a
+     punta, que a esa medida se lee peor que en dos líneas cortas. */
+  @media (min-width:900px){
+    .tiras{ gap:2px }
+    .tira{ padding:1.25rem 1.6rem 1.35rem 1.8rem }
+    .tira h2{ font-size:clamp(1.5rem, 2.2vw, 2rem) }
+    .que{ max-width:78ch; font-size:.95rem }
+    .num{ top:1.35rem; right:1.5rem }
+    .flecha{ right:1.5rem; bottom:1.1rem; font-size:1.35rem }
+    .cuerpo{ padding-right:3rem }
+  }
   .tira .arte::after{
     background:linear-gradient(90deg,
       color-mix(in srgb, var(--fondo) 94%, transparent) 0%,

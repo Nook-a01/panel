@@ -72,7 +72,7 @@ async function IGPanelPro(){
   // dirección: abrir un enlace es una navegación, y las navegaciones no las bloquea la
   // CSP. Es la única vía que funciona, y solo si la persona decide tocarlo.
   var PAGINA='https://nook-a01.github.io/panel/instagram/';
-  var BUILD='1.3';
+  var BUILD='1.4';
   // =======================================
 
   var gc=function(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return m?m[2]:null;};
@@ -380,7 +380,10 @@ async function IGPanelPro(){
   '#igpp-root *{box-sizing:border-box;font-family:inherit}'+
   '.igpp-panel{background:linear-gradient(180deg,#12121c,#0c0c14);color:#f4f4f8;width:min(920px,97vw);max-height:95vh;border-radius:22px;border:1px solid #26263a;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.7);font-size:16px}'+
   '.igpp-head{padding:16px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #232336;background:rgba(255,255,255,.02)}'+
-  '.igpp-logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.25rem}'+
+  '.igpp-logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.25rem;'+
+    'min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
+  '.igpp-head>.igpp-logo{flex:1 1 auto}'+
+  '.igpp-ver{font-size:.68rem;opacity:.55;font-weight:400;margin-left:8px;flex:none}'+
   '.igpp-logodot{width:30px;height:30px;border-radius:9px;background:linear-gradient(45deg,#405de6,#c13584,#f56040);box-shadow:0 3px 14px rgba(193,53,132,.5)}'+
   '.igpp-close{background:rgba(255,255,255,.06);color:#fff;border:1px solid #2a2a40;border-radius:11px;width:40px;height:40px;cursor:pointer;font-size:1.2rem}'+
   '.igpp-close:hover{background:rgba(255,60,100,.2)}'+
@@ -395,6 +398,7 @@ async function IGPanelPro(){
   '.igpp-cb:focus-visible,.igpp-input:focus-visible,.igpp-user:focus-visible'+
   '{outline:3px solid #b98cff;outline-offset:2px;border-radius:10px}'+
   '.igpp-tab.on{color:#fff;background:linear-gradient(45deg,rgba(64,93,230,.25),rgba(193,53,132,.25));border-color:#3a3a55}'+
+  '.igpp-comova{font-size:.82rem;color:#9a9ab0;line-height:1.5;margin:0 0 10px}'+
   '.igpp-body{padding:20px 24px;overflow:auto;flex:1;font-size:1rem}'+
   '.igpp-chip{display:inline-flex;align-items:center;gap:7px;background:#1a1a28;border:1px solid #2a2a40;border-radius:999px;padding:7px 14px;font-size:.9rem;color:#c9c9d8}'+
   '.igpp-btn{background:#1c1c2b;color:#f4f4f8;border:1px solid #2c2c44;border-radius:12px;padding:11px 17px;cursor:pointer;font-size:.98rem;font-weight:600;transition:filter .12s}'+
@@ -437,11 +441,16 @@ async function IGPanelPro(){
   '@media (max-width:760px){'+
     '#igpp-root{padding:0;align-items:stretch}'+
     '.igpp-panel{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0;border:none;font-size:15px}'+
-    '.igpp-head{padding:11px 13px}'+
-    '.igpp-logo{font-size:1rem;gap:8px}'+
-    '.igpp-logodot{width:24px;height:24px;border-radius:7px}'+
-    // 44px es el mínimo para que un dedo acierte sin errarle al botón de al lado.
-    '.igpp-close{width:44px;height:44px;font-size:1.3rem}'+
+    '.igpp-head{padding:9px 10px;gap:8px}'+
+    // El nombre entra en una sola línea: en un teléfono angosto se partía en
+    // "PANEL DE" arriba e "INSTAGRAM" abajo, y la versión quedaba pegada al botón.
+    '.igpp-logo{font-size:.92rem;gap:7px}'+
+    '.igpp-logodot{width:20px;height:20px;border-radius:6px}'+
+    '.igpp-ver{margin-left:6px;font-size:.62rem}'+
+    '.igpp-head>div:last-child{flex:none;gap:4px}'+
+    // 40px sigue siendo cómodo para el dedo y deja lugar al nombre: con 44
+    // los dos botones se comían un cuarto de la pantalla.
+    '.igpp-close{width:40px;height:40px;font-size:1.15rem}'+
     '.igpp-tabs{padding:8px 10px;gap:6px;-webkit-overflow-scrolling:touch}'+
     '.igpp-tab{padding:11px 14px;font-size:.9rem;border-radius:10px;min-height:44px}'+
     '.igpp-body{padding:14px 13px}'+
@@ -545,7 +554,7 @@ async function IGPanelPro(){
 
   var head=document.createElement('div'); head.className='igpp-head';
   var logo=document.createElement('div'); logo.className='igpp-logo';
-  logo.innerHTML='<span class="igpp-logodot"></span> Panel de <span style="background:linear-gradient(45deg,#c13584,#f56040);-webkit-background-clip:text;background-clip:text;color:transparent">Instagram</span> <span style="font-size:.68rem;opacity:.55;font-weight:400;margin-left:6px">v'+BUILD+'</span>';
+  logo.innerHTML='<span class="igpp-logodot"></span> Panel de <span style="background:linear-gradient(45deg,#c13584,#f56040);-webkit-background-clip:text;background-clip:text;color:transparent">Instagram</span> <span class="igpp-ver">v'+BUILD+'</span>';
   var closeBtn=document.createElement('button'); closeBtn.className='igpp-close'; closeBtn.textContent='✕';
   closeBtn.setAttribute('aria-label','Cerrar el panel'); closeBtn.title='Cerrar el panel';
   closeBtn.onclick=function(){
@@ -1285,8 +1294,8 @@ async function IGPanelPro(){
     var sel=pool().filter(function(u){ return state.selected.has(u.id); });
     var batches=Math.ceil(sel.length/BATCH_SIZE);
     var estMin=Math.max(0,batches-1)*5;
-    var ok=confirm('Vas a poner en cola '+sel.length+' cuenta(s).\n\n• Se procesan en tandas de 5 (con pausas cortas entre cada una)\n• 5 minutos de espera entre tanda y tanda\n• Tiempo estimado: ~'+estMin+' min\n• Se pausa sola si Instagram bloquea la acción\n• La pestaña de Instagram debe seguir abierta (minimizada sirve)\n\n¿Continuar?');
-    if(!ok) return;
+    // Sin cartel del navegador: lo que decía va escrito abajo, en la caja de
+    // la cola, donde se puede leer mientras corre en vez de aceptarlo a ciegas.
     var q=loadQ();
     var newItems=sel.map(function(u){ return {id:u.id, username:u.username}; });
     if(q && q.queue){
@@ -1384,6 +1393,13 @@ async function IGPanelPro(){
     var statusLabel=q.status==='running'?'▶ En proceso':(q.status==='paused'?'⏸ Pausado':(q.status==='done'?'✅ Completado':'⏹ Detenido'));
     var left=document.createElement('div'); left.innerHTML='<b>'+statusLabel+'</b> · '+q.index+'/'+q.queue.length+' procesados';
     top.appendChild(left);
+    // Lo que antes se leía en un cartel que había que aceptar. Acá queda a la
+    // vista todo el tiempo, que es cuando sirve.
+    var comoVa=document.createElement('div');
+    comoVa.className='igpp-comova';
+    comoVa.textContent = q.status==='running'
+      ? 'De a 5 por tanda, con 5 minutos entre tanda y tanda. Dejá esta pestaña abierta (minimizada sirve). Se pausa sola si Instagram corta.'
+      : 'De a 5 por tanda, con 5 minutos entre tanda y tanda.';
     var btns=document.createElement('div'); btns.style.cssText='display:flex;gap:6px';
     if(q.status==='running'){
       var pauseB=document.createElement('button'); pauseB.className='igpp-btn'; pauseB.textContent='⏸ Pausar';
@@ -1400,6 +1416,7 @@ async function IGPanelPro(){
       clearB.onclick=function(){ saveQ(null); renderQueueUI(container); }; btns.appendChild(clearB);
     }
     top.appendChild(btns); box.appendChild(top);
+    box.appendChild(comoVa);
 
     var totalQ=q.queue.length;
     var pw=document.createElement('div'); pw.className='igpp-progresswrap';

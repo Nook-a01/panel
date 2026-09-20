@@ -35,7 +35,7 @@ const ORIGEN = "docs/instagram/index.html";
 const SALIDA = "docs/instagram/panel.user.js";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
 const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
-const VERSION = "1.4.3";
+const VERSION = "1.4.4";
 
 const html = readFileSync(ORIGEN, "utf8");
 let panel = extraerPanel(html);

@@ -27,7 +27,7 @@ const SALIDA = "extension";
 const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
 // El servidor del Panel: ahí se sube el escaneo para verlo en el celular.
 const PANEL_WORKER = "https://plata.hamcqc.workers.dev";
-const VERSION = "1.4.3";
+const VERSION = "1.4.4";
 
 /* ─────────── 2. el guion que corre adentro de Instagram ─────────── */
 
