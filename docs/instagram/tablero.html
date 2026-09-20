@@ -31,6 +31,11 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+/* Esconder algo con el atributo hidden tiene que ganarle siempre. Sin esto,
+   cualquier clase con display:grid o display:flex deja el elemento a la vista
+   aunque el código lo haya escondido: es lo que pasaba con el formulario de
+   la clave, que seguía apareciendo después de entrar. */
+[hidden]{display:none!important}
 body{
   background:var(--papel);
   color:var(--tinta);
@@ -98,7 +103,7 @@ h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--li
   display:grid;
   gap:.6rem;
 }
-@media (min-width:640px){ .conexion{grid-template-columns:1fr 1fr auto;align-items:end} }
+@media (min-width:640px){ .conexion{grid-template-columns:1fr auto;align-items:end} }
 label{
   display:block;
   font-family:var(--m);
@@ -140,6 +145,14 @@ button.fuerte{background:var(--acido);color:#000;border-color:var(--acido)}
 button.peligro{border-color:var(--shock);color:var(--shock)}
 button.peligro:hover:not(:disabled){background:var(--shock);color:#000;box-shadow:0 0 22px -6px var(--shock)}
 
+/* La barrita que reemplaza al formulario cuando ya entraste. */
+.sesion{display:none;align-items:center;gap:.9rem;margin:1.2rem 0 0;
+  font-family:var(--m);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase}
+.sesion:not([hidden]){display:flex}
+.sesion .on{color:var(--acido)}
+button.chico{border-color:var(--linea);color:var(--apagado);padding:.45em .8em;font-size:.6rem}
+button.chico:hover:not(:disabled){background:transparent;color:var(--cian);border-color:var(--cian);box-shadow:none}
+
 .aviso{margin-top:.8rem;font-family:var(--m);font-size:.76rem}
 .aviso.mal{color:var(--shock)}
 .aviso.bien{color:var(--acido)}
@@ -177,6 +190,31 @@ button.peligro:hover:not(:disabled){background:var(--shock);color:#000;box-shado
 }
 .kpi .p{font-family:var(--m);font-size:.6rem;letter-spacing:.06em;color:var(--apagado);margin-top:.15rem}
 
+/* La lista de @usuarios que se despliega tocando el número. */
+.usuarios{display:none;flex-wrap:wrap;gap:.4rem;border:1px solid var(--linea);
+  border-top:0;background:var(--caja);padding:.9rem}
+.usuarios:not([hidden]){display:flex}
+.chip{display:inline-block;font-family:var(--m);font-size:.7rem;
+  color:var(--cian);text-decoration:none;border:1px solid var(--linea);padding:.28em .6em}
+.chip:hover{border-color:var(--cian);background:rgba(77,227,255,.08);color:var(--cian)}
+button.p.enlace{background:none;border:0;padding:0;font-family:var(--m);font-size:.6rem;
+  letter-spacing:.06em;color:var(--cian);text-transform:none;cursor:pointer;margin-top:.15rem;
+  text-align:left}
+button.p.enlace:hover:not(:disabled){background:none;color:var(--acido);box-shadow:none}
+
+/* A quién dejan de seguir. */
+.bajas{display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea)}
+.baja{display:grid;grid-template-columns:auto auto 1fr;gap:.7rem;align-items:center;
+  background:var(--caja);padding:.6rem .8rem}
+.baja .veces{font-family:var(--m);font-size:.66rem;color:var(--acido);white-space:nowrap}
+.baja .porquien{font-family:var(--m);font-size:.64rem;color:var(--apagado);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bajas .vacio{background:var(--caja)}
+@media (max-width:560px){
+  .baja{grid-template-columns:1fr auto}
+  .baja .porquien{grid-column:1/-1;white-space:normal}
+}
+
 /* ── barras ── */
 .barras{display:grid;gap:.75rem;border:1px solid var(--linea);background:var(--caja);padding:1rem}
 .barra{display:grid;grid-template-columns:1fr auto;gap:.3rem .5rem;align-items:baseline}
@@ -203,18 +241,45 @@ button.peligro:hover:not(:disabled){background:var(--shock);color:#000;box-shado
 @keyframes aparece{to{opacity:1}}
 @keyframes aparece-relleno{to{opacity:.13}}
 
-/* ── horas ── */
-.horas{display:flex;align-items:flex-end;gap:2px;height:110px;
-  border:1px solid var(--linea);background:var(--caja);padding:.6rem}
-.horas .h{flex:1;background:linear-gradient(180deg,var(--cian),#12506b);position:relative;
+/* ── leyenda del gráfico de días ── */
+.leyenda{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:.7rem}
+.ll{display:flex;align-items:center;gap:.4rem;font-family:var(--m);font-size:.6rem;
+  letter-spacing:.06em;color:var(--apagado)}
+.ll i{display:block;flex:none}
+.ll-gruesa{width:16px;height:3px;background:var(--acido)}
+.ll-fina{width:16px;height:1px;background:var(--shock)}
+.ll-caja{width:10px;height:10px;background:rgba(255,255,255,.1);border:1px solid var(--linea)}
+#grafico-nota b{color:var(--tinta)}
+#grafico-nota .sube{color:var(--acido)}
+#grafico-nota .cae{color:var(--shock)}
+
+/* ── horas: franjas arriba, escala a la izquierda, hora abajo ── */
+.horas{border:1px solid var(--linea);background:var(--caja);padding:.8rem}
+.franjas{display:flex;gap:2px;margin:0 0 .5rem 2.5rem}
+.franja{background:rgba(255,255,255,.03);border-top:1px solid var(--linea);
+  padding:.3rem .5rem;display:flex;justify-content:space-between;gap:.5rem;min-width:0}
+.franja.par{background:rgba(255,255,255,.06)}
+.fr-et{font-family:var(--m);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--apagado);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fr-n{font-family:var(--m);font-size:.58rem;color:var(--cian)}
+.cuerpo-horas{display:flex;gap:.5rem}
+.escala{display:flex;flex-direction:column;justify-content:space-between;
+  width:2rem;height:150px;text-align:right;
+  font-family:var(--m);font-size:.55rem;color:var(--apagado)}
+.col{flex:1;min-width:0}
+.barras24{display:flex;align-items:flex-end;gap:2px;height:150px;
+  border-bottom:1px solid var(--linea)}
+.barras24 .h{flex:1;background:linear-gradient(180deg,var(--cian),#12506b);position:relative;
   min-height:2px;height:0;transition:height .9s var(--curva)}
-.horas .h.pico{background:linear-gradient(180deg,var(--acido),#5c7300);
+.barras24 .h:hover{filter:brightness(1.4)}
+.barras24 .h.pico{background:linear-gradient(180deg,var(--acido),#5c7300);
   box-shadow:0 0 18px -4px var(--acido)}
-.horas .h span{
-  position:absolute;bottom:-1.15rem;left:50%;transform:translateX(-50%);
-  font-family:var(--m);font-size:.52rem;color:var(--apagado);
-}
-.horas-pie{margin-top:1.3rem;font-family:var(--m);font-size:.66rem;color:var(--apagado)}
+.cima{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
+  font-family:var(--m);font-size:.58rem;color:var(--acido);padding-bottom:.15rem}
+.ejes{display:flex;gap:2px;margin-top:.3rem}
+.ej{flex:1;text-align:center;font-family:var(--m);font-size:.5rem;color:var(--apagado);overflow:hidden}
+.horas-pie{margin-top:.9rem;font-family:var(--m);font-size:.66rem;color:var(--apagado);line-height:1.6}
+.horas-pie b{color:var(--tinta)}
 
 /* ── tabla de personas ── */
 .tabla-caja{border:1px solid var(--linea);background:var(--caja);overflow-x:auto}
@@ -330,32 +395,39 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   </div>
   <p class="nota">Quién usa el Panel de Instagram, cuándo y qué mira.</p>
 
-  <div class="conexion">
-    <div>
-      <label for="url">Dirección del contador</label>
-      <input id="url" spellcheck="false" autocomplete="off">
-    </div>
+  <!-- La dirección del contador es siempre la misma y está escrita en el código:
+       no había nada que elegir ahí, así que se fue. Queda sólo la clave, y una vez
+       puesta no se vuelve a pedir. -->
+  <div class="conexion" id="conexion">
     <div>
       <label for="key">Clave de administrador</label>
       <input id="key" type="password" autocomplete="current-password" placeholder="••••••••••••">
     </div>
-    <button id="entrar" class="fuerte">Ver</button>
+    <button id="entrar" class="fuerte">Entrar</button>
   </div>
-  <p class="nota">
-    La clave se guarda sólo en este navegador y viaja en un encabezado, no en la
-    dirección: así no queda en el historial ni en registros del servidor.
+  <p class="nota" id="nota-clave">
+    Esta página es pública: cualquiera que sepa la dirección la puede abrir. La clave
+    es lo único que tapa los nombres y la actividad de la gente que usa el panel.
+    Se guarda sólo en este navegador y viaja en un encabezado, así que no queda en el
+    historial ni en registros del servidor. La próxima vez entrás solo.
   </p>
+  <div class="sesion" id="sesion" hidden>
+    <span class="on">&#9679; conectado</span>
+    <button class="chico" id="cambiar">Cambiar la clave</button>
+  </div>
   <p id="aviso" class="aviso"></p>
 
   <div id="panel">
 
     <h2>De un vistazo</h2>
     <div class="kpis" id="kpis"></div>
+    <div class="usuarios" id="usuarios" hidden></div>
     <p class="nota" id="cuando"></p>
+    <p class="nota" id="cuando-fichas"></p>
 
     <h2>Cómo viene creciendo</h2>
     <div class="grafico" id="grafico"></div>
-    <p class="nota">Últimos 30 días. La línea llena es cuánta gente distinta entró cada día; la fina, cuántas aperturas hubo en total.</p>
+    <p class="nota" id="grafico-nota"></p>
 
     <h2>¿Lo siguen usando?</h2>
     <div class="barras" id="retencion"></div>
@@ -366,7 +438,8 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       <table>
         <thead><tr>
           <th>Persona</th><th>Dónde</th><th class="num">Veces</th>
-          <th class="num">Días</th><th>Desde</th><th>Última vez</th><th></th>
+          <th class="num">Días</th><th class="num">Bajas</th>
+          <th>Desde</th><th>Última vez</th><th></th>
         </tr></thead>
         <tbody id="personas"></tbody>
       </table>
@@ -376,6 +449,10 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
 
     <h2>Qué parte usan</h2>
     <div class="barras sec" id="secciones"></div>
+
+    <h2>A quién dejan de seguir</h2>
+    <div class="bajas" id="bajas"></div>
+    <p class="nota" id="bajas-nota"></p>
 
     <h2>A qué hora lo usan</h2>
     <div class="horas" id="horas"></div>
@@ -401,7 +478,7 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   "use strict";
 
   const CONTADOR = "https://wispy-poetry-97f9.hamcqc.workers.dev";
-  const LS_URL = "igtablero_url", LS_KEY = "igtablero_key";
+  const LS_KEY = "igtablero_key";
   // Si el sistema pide menos movimiento, nada se anima y todo queda puesto.
   const QUIETO = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -462,19 +539,19 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   let DATOS = null;
 
   async function pedir() {
-    const base = $("url").value.trim().replace(/\/+$/, "");
+    const base = CONTADOR;
     const key = $("key").value.trim();
     const av = $("aviso");
     av.className = "aviso"; av.textContent = "";
 
-    if (!base || !key) {
+    if (!key) {
       av.className = "aviso mal";
-      av.textContent = "Faltan la dirección y la clave.";
+      av.textContent = "Falta la clave.";
       return;
     }
 
     $("entrar").disabled = true;
-    $("entrar").textContent = "Cargando…";
+    $("entrar").textContent = "Entrando…";
     try {
       const r = await fetch(base + "/stats", {
         cache: "no-store",
@@ -483,28 +560,35 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       const d = await r.json();
       if (!r.ok) throw new Error(d && d.error ? d.error : "HTTP " + r.status);
 
-      localStorage.setItem(LS_URL, base);
       localStorage.setItem(LS_KEY, key);
       DATOS = d;
       pintar(d);
       $("panel").style.display = "block";
+      // Ya entró: el formulario no tiene por qué seguir ocupando la pantalla.
+      $("conexion").hidden = true;
+      $("nota-clave").hidden = true;
+      $("sesion").hidden = false;
     } catch (e) {
       av.className = "aviso mal";
       av.textContent = "No se pudo leer: " + e.message;
       $("panel").style.display = "none";
     } finally {
       $("entrar").disabled = false;
-      $("entrar").textContent = "Ver";
+      $("entrar").textContent = "Entrar";
     }
   }
 
   /* ── pintar todo ────────────────────────────────────────── */
   function pintar(d) {
-    kpis(d);
+    // Primero se juntan las fichas repetidas: todo lo demás cuenta personas,
+    // no instalaciones.
+    const gente = unificar(d.personas || [], d.actividad || []);
+    kpis(d, gente);
     grafico(d.serie_30d || []);
-    retencion(d.personas || []);
-    personas(d.personas || [], d.actividad || []);
+    retencion(gente);
+    personas(gente);
     secciones(d.secciones || []);
+    bajas(gente);
     horas(d.por_hora || []);
     $("cuando").textContent = "Datos al " + reloj(d.generado);
     // Con setTimeout y no con requestAnimationFrame: en una pestaña que está
@@ -546,14 +630,74 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     });
   }
 
-  function kpis(d) {
-    const nuevos = (d.personas || []).filter(p =>
-      p.alta && diasEntre(p.alta, dia(HOY)) <= 7).length;
+  /* ── una persona, una fila ────────────────────────────────────
+     El contador guarda una ficha por INSTALACIÓN, no por persona, y la
+     misma persona genera varias sin hacer nada raro:
+
+       · el panel adentro de Instagram se identifica con un número que
+         vive en el almacenamiento de instagram.com;
+       · la pestaña puente que abre esta página usa otro, que vive en el
+         almacenamiento de nook-a01.github.io;
+       · y cada aparato —el celular y la compu— tiene los suyos.
+
+     Por eso @nook.a01 aparecía tres veces. Acá se juntan por @usuario.
+     Quien nunca dio su nombre queda suelto: no hay forma de saber si es
+     la misma persona, y adivinar sería peor que mostrarlo aparte. */
+  function unificar(lista, actividad) {
+    const porFicha = new Map();
+    for (const a of actividad) {
+      if (!porFicha.has(a.instalacion)) porFicha.set(a.instalacion, []);
+      porFicha.get(a.instalacion).push(a);
+    }
+
+    const juntas = new Map();
+    const sueltas = [];
+    for (const p of lista) {
+      if (!p.usuario) { sueltas.push(Object.assign({}, p, { ids: [p.id], plataformas: [p.plataforma], fichas: 1 })); continue; }
+      const k = String(p.usuario).toLowerCase();
+      if (!juntas.has(k)) {
+        juntas.set(k, Object.assign({}, p, { ids: [p.id], plataformas: [p.plataforma], fichas: 1 }));
+        continue;
+      }
+      const g = juntas.get(k);
+      g.ids.push(p.id);
+      g.plataformas.push(p.plataforma);
+      g.fichas++;
+      g.visitas = (g.visitas || 0) + (p.visitas || 0);
+      if (p.alta && (!g.alta || p.alta < g.alta)) g.alta = p.alta;
+      if (p.ultimo && (!g.ultimo || p.ultimo > g.ultimo)) g.ultimo = p.ultimo;
+      // Los días NO se suman: el día que usó el celular y la compu es uno solo.
+      g.dias = Math.max(g.dias || 0, p.dias || 0);
+    }
+
+    const gente = [].concat([...juntas.values()], sueltas);
+    for (const g of gente) {
+      g.plataformas = [...new Set(g.plataformas.filter(Boolean))];
+      g.eventos = [].concat(...g.ids.map(id => porFicha.get(id) || []))
+        .sort((a, b) => String(b.ts).localeCompare(String(a.ts)));
+      // Si hay actividad registrada, los días distintos salen de ahí: es el
+      // único número que no se puede contar dos veces.
+      const dd = new Set(g.eventos.map(e => String(e.ts).slice(0, 10)));
+      if (dd.size) g.dias = dd.size;
+    }
+    gente.sort((a, b) => (b.visitas || 0) - (a.visitas || 0));
+    return gente;
+  }
+
+  function kpis(d, gente) {
+    const hoyStr = dia(HOY);
+    const desde = iso => (iso ? diasEntre(iso, hoyStr) : 9999);
+    const conNombre = gente.filter(p => p.usuario);
+    const nuevos = gente.filter(p => desde(p.alta) <= 7).length;
+    const fichas = Number(d.usuarios_total) || 0;
 
     const filas = [
-      { n: d.usuarios_total, r: "Personas", p: (d.usuarios_con_nombre || 0) + " con @usuario" },
-      { n: d.activos_7d, r: "Activos 7 días", p: "de " + d.usuarios_total, ac: true },
-      { n: d.activos_hoy, r: "Activos hoy", p: (d.visitas_hoy || 0) + " aperturas" },
+      { n: gente.length, r: "Personas",
+        p: conNombre.length + " con @usuario", ver: conNombre.length ? "usuarios" : "" },
+      { n: gente.filter(p => desde(p.ultimo) <= 7).length, r: "Activos 7 días",
+        p: "de " + gente.length, ac: true },
+      { n: gente.filter(p => desde(p.ultimo) <= 0).length, r: "Activos hoy",
+        p: (d.visitas_hoy || 0) + " aperturas" },
       { n: nuevos, r: "Nuevos esta semana", p: "se sumaron", ac: nuevos > 0 },
       { n: d.visitas_total, r: "Aperturas totales", p: "desde el arranque" },
     ];
@@ -561,8 +705,21 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       <div class="kpi" data-n="${Number(f.n) || 0}">
         <div class="n${f.ac ? " ac" : ""}">0</div>
         <div class="r">${esc(f.r)}</div>
-        <div class="p">${esc(f.p)}</div>
+        ${f.ver
+          ? `<button class="p enlace" data-ver="${f.ver}">${esc(f.p)} &#9662;</button>`
+          : `<div class="p">${esc(f.p)}</div>`}
       </div>`).join("");
+
+    // Quiénes son los que dieron su nombre. Él lo pidió: el número solo no
+    // sirve para nada, lo que quiere es la lista.
+    $("usuarios").innerHTML = conNombre.length
+      ? conNombre.map(p => `<a class="chip" href="https://www.instagram.com/${encodeURIComponent(p.usuario)}/"
+           target="_blank" rel="noopener noreferrer">@${esc(p.usuario)}</a>`).join("")
+      : '<p class="vacio">Todavía nadie dio su nombre.</p>';
+
+    $("cuando-fichas").textContent = fichas && fichas !== gente.length
+      ? `El contador guarda ${fichas} fichas de instalación; acá están juntadas en ${gente.length} personas (la misma persona suma una ficha por aparato y por navegador).`
+      : "";
 
     // El número sube desde cero, con freno al final. Si el sistema pide menos
     // movimiento se escribe de una: nunca queda un 0 esperando una animación.
@@ -582,11 +739,19 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
 
   /* El gráfico se dibuja a mano en SVG. No hace falta una librería
      para dos líneas, y la política de contenido de esta página no
-     deja traer nada de afuera igual. */
+     deja traer nada de afuera igual.
+
+     Son dos preguntas distintas, no dos adornos:
+       · PERSONAS (verde, gruesa, con puntos): cuánta gente DISTINTA
+         entró ese día. Si sube, el panel está llegando a más gente.
+       · APERTURAS (rosa, fina): cuántas veces se abrió en total ese
+         día. Si sube la rosa y la verde no se mueve, es poca gente
+         usándolo mucho — que no es lo mismo, y conviene saberlo.
+     La distancia entre las dos es "cuántas veces vuelve cada uno". */
   function grafico(serie) {
     if (!serie.length) { $("grafico").innerHTML = '<p class="vacio">Todavía no hay días con actividad.</p>'; return; }
 
-    const W = 900, H = 170, mI = 34, mD = 8, mA = 12, mB = 26;
+    const W = 900, H = 230, mI = 44, mD = 14, mA = 18, mB = 44;
     const ancho = W - mI - mD, alto = H - mA - mB;
     const tope = Math.max(1, ...serie.map(s => Math.max(s.visitas, s.personas)));
 
@@ -597,37 +762,100 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       serie.map((s, i) => "L" + x(i).toFixed(1) + " " + y(s.personas).toFixed(1)).join(" ") +
       " L" + x(serie.length - 1).toFixed(1) + " " + (mA + alto) + " Z";
 
-    // Sólo unas pocas fechas abajo: con treinta no se lee ninguna. La última
-    // siempre va, y se descarta la anterior si le queda encima — si no, los
-    // días 29 y 30 se pisan y se lee "30/0830/08".
+    // Cuatro rayas horizontales con su número: sin eso no se sabe si el pico
+    // es de 3 o de 300.
+    const pasos = 4;
+    let rejas = "";
+    for (let k = 0; k <= pasos; k++) {
+      const v = Math.round(tope / pasos * k), yy = y(v);
+      rejas += `<line x1="${mI}" y1="${yy.toFixed(1)}" x2="${W - mD}" y2="${yy.toFixed(1)}"
+        stroke="${k ? "#14222e" : "#24384a"}" stroke-width="1"/>
+        <text x="${mI - 8}" y="${(yy + 4).toFixed(1)}" text-anchor="end" fill="#6d8798"
+          font-size="12" font-family="ui-monospace,monospace">${v}</text>`;
+    }
+
+    // Los sábados y domingos van con un fondo apenas más claro: se ve de una
+    // si lo usan más el fin de semana.
+    let findes = "";
+    serie.forEach((s, i) => {
+      const d = new Date(s.dia + "T12:00:00").getDay();
+      if (d !== 0 && d !== 6) return;
+      const medio = serie.length > 1 ? ancho / (serie.length - 1) : ancho;
+      findes += `<rect x="${(x(i) - medio / 2).toFixed(1)}" y="${mA}" width="${medio.toFixed(1)}"
+        height="${alto}" fill="#ffffff" opacity=".022"/>`;
+    });
+
+    // Una fecha cada siete días, y la última siempre. Con treinta no se lee
+    // ninguna, y los días 29 y 30 se pisaban hasta quedar "30/0830/08".
     const ultima = serie.length - 1;
     const marcas = serie.map((s, i) => ({ s, i }))
       .filter(({ i }) => i === ultima || (i % 7 === 0 && ultima - i >= 4));
 
+    // Un rectángulo invisible por día con su resumen: parándose encima sale
+    // el globito del navegador con los números exactos de ese día.
+    const paso = serie.length > 1 ? ancho / (serie.length - 1) : ancho;
+    const globos = serie.map((s, i) =>
+      `<rect x="${(x(i) - paso / 2).toFixed(1)}" y="${mA}" width="${paso.toFixed(1)}" height="${alto}"
+        fill="transparent"><title>${esc(fecha(s.dia))} · ${s.personas} ${s.personas === 1 ? "persona" : "personas"} · ${s.visitas} ${s.visitas === 1 ? "apertura" : "aperturas"}</title></rect>`).join("");
+
+    const puntos = serie.map((s, i) =>
+      `<circle cx="${x(i).toFixed(1)}" cy="${y(s.personas).toFixed(1)}" r="2.6" fill="#CCFF00" opacity=".85"/>`).join("");
+
     $("grafico").innerHTML = `
+    <div class="leyenda">
+      <span class="ll"><i class="ll-gruesa"></i>Personas distintas por día</span>
+      <span class="ll"><i class="ll-fina"></i>Aperturas en total</span>
+      <span class="ll ll-fin"><i class="ll-caja"></i>Sábado y domingo</span>
+    </div>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Uso de los últimos 30 días">
-      <line x1="${mI}" y1="${mA + alto}" x2="${W - mD}" y2="${mA + alto}" stroke="#333" stroke-width="1"/>
-      <line x1="${mI}" y1="${mA}" x2="${W - mD}" y2="${mA}" stroke="#1c1c1c" stroke-width="1"/>
-      <text x="4" y="${mA + 5}" fill="#8b8b8b" font-size="11" font-family="monospace">${tope}</text>
-      <text x="4" y="${mA + alto}" fill="#8b8b8b" font-size="11" font-family="monospace">0</text>
+      ${findes}
+      ${rejas}
       <path class="relleno" d="${area}" fill="#CCFF00"/>
       <path class="traza2" d="${linea("visitas")}" fill="none" stroke="#FF2D7A" stroke-width="1.5" opacity=".85"/>
-      <path class="traza" d="${linea("personas")}" fill="none" stroke="#CCFF00" stroke-width="2.5"/>
+      <path class="traza" d="${linea("personas")}" fill="none" stroke="#CCFF00" stroke-width="2.5"
+        stroke-linejoin="round" stroke-linecap="round"/>
       <g class="pico-hoy">
-        <circle cx="${x(serie.length - 1).toFixed(1)}" cy="${y(serie[serie.length - 1].personas).toFixed(1)}" r="4" fill="#CCFF00"/>
-        <circle cx="${x(serie.length - 1).toFixed(1)}" cy="${y(serie[serie.length - 1].personas).toFixed(1)}" r="9" fill="none" stroke="#CCFF00" stroke-width="1" opacity=".5"/>
+        ${puntos}
+        <circle cx="${x(ultima).toFixed(1)}" cy="${y(serie[ultima].personas).toFixed(1)}" r="4.5" fill="#CCFF00"/>
+        <circle cx="${x(ultima).toFixed(1)}" cy="${y(serie[ultima].personas).toFixed(1)}" r="10" fill="none"
+          stroke="#CCFF00" stroke-width="1" opacity=".5"/>
       </g>
       ${marcas.map(({ s, i }) =>
-        `<text x="${x(i).toFixed(1)}" y="${H - 8}" fill="#8b8b8b" font-size="11"
-           font-family="monospace" text-anchor="middle">${fecha(s.dia)}</text>`).join("")}
+        `<text x="${x(i).toFixed(1)}" y="${H - 22}" fill="#6d8798" font-size="12"
+           font-family="ui-monospace,monospace" text-anchor="middle">${esc(fecha(s.dia))}</text>`).join("")}
+      ${globos}
     </svg>`;
+
+    // La explicación, con los números del período: sin esto hay que mirar el
+    // dibujo y adivinar.
+    const sumaP = serie.reduce((a, s) => a + s.personas, 0);
+    const sumaV = serie.reduce((a, s) => a + s.visitas, 0);
+    const mejor = serie.reduce((a, s) => (s.personas > a.personas ? s : a), serie[0]);
+    const ultimos7 = serie.slice(-7).reduce((a, s) => a + s.personas, 0);
+    const previos7 = serie.slice(-14, -7).reduce((a, s) => a + s.personas, 0);
+    const cambio = previos7 ? Math.round((ultimos7 - previos7) / previos7 * 100) : null;
+    const veces = sumaP ? (sumaV / sumaP).toFixed(1) : "0";
+
+    $("grafico-nota").innerHTML =
+      `<b>La línea verde gruesa</b> es cuánta gente <b>distinta</b> entró cada día. ` +
+      `<b>La rosa fina</b> es cuántas veces se abrió el panel en total ese día: ` +
+      `si la rosa se despega de la verde, es poca gente entrando muchas veces.<br>` +
+      `En estos 30 días: <b>${sumaV.toLocaleString("es-AR")} aperturas</b> de ` +
+      `<b>${sumaP.toLocaleString("es-AR")} visitas de gente</b>, o sea ${veces} aperturas por persona y por día. ` +
+      `El mejor día fue el ${esc(fecha(mejor.dia))} con ${mejor.personas} ${mejor.personas === 1 ? "persona" : "personas"}.` +
+      (cambio === null ? "" :
+        ` Esta semana ${cambio >= 0 ? "subió" : "bajó"} <b class="${cambio >= 0 ? "sube" : "cae"}">${Math.abs(cambio)}%</b> contra la anterior.`) +
+      `<br>Parate encima de cualquier día para ver sus números exactos.`;
   }
 
   /* ¿Siguen usándolo o lo probaron y lo dejaron? Es la pregunta que
      dice si la herramienta sirve. Se responde con la última vez que
      entró cada uno. */
-  function retencion(personas) {
-    if (!personas.length) { $("retencion").innerHTML = '<p class="vacio">Todavía no hay nadie.</p>'; return; }
+  /* ¿Siguen usándolo o lo probaron y lo dejaron? Es la pregunta que
+     dice si la herramienta sirve. Se responde con la última vez que
+     entró cada uno. */
+  function retencion(gente) {
+    if (!gente.length) { $("retencion").innerHTML = '<p class="vacio">Todavía no hay nadie.</p>'; return; }
 
     const hoyStr = dia(HOY);
     const grupo = p => {
@@ -638,10 +866,10 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       return "ido";
     };
     const cuenta = { vivo: 0, frio: 0, ido: 0, nunca: 0 };
-    for (const p of personas) cuenta[grupo(p)]++;
+    for (const p of gente) cuenta[grupo(p)]++;
 
-    const unaVez = personas.filter(p => (p.visitas || 0) <= 1).length;
-    const total = personas.length;
+    const unaVez = gente.filter(p => (p.visitas || 0) <= 1).length;
+    const total = gente.length;
 
     const filas = [
       { et: "Lo usaron esta semana", v: cuenta.vivo },
@@ -660,30 +888,19 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       `Es el número que más dice: si crece, el problema está en el primer uso.`;
   }
 
-  function personas(todos, actividad) {
+  function personas(gente) {
     /* Dos cosas distintas que estaban mezcladas:
-
-       - quien USÓ el panel: tiene aperturas registradas
-       - quien sólo MIRÓ la página de instalación: no abrió nada
-
-       Los segundos aparecían en la tabla como "sin nombre", porque la
-       página de instalación no sabe quién sos (ahí no hay sesión de
-       Instagram) y contaba cada visita como si fuera una apertura. Eso
-       ensuciaba el número que importa. Ahora van aparte. */
-    const lista = todos.filter(p => (p.visitas || 0) > 0 || p.usuario);
-    const soloMiraron = todos.length - lista.length;
+         - quien USÓ el panel: tiene aperturas registradas
+         - quien sólo MIRÓ la página de instalación: no abrió nada
+       Los segundos no saben quién sos (ahí no hay sesión de Instagram) y
+       ensuciaban el número que importa. Van aparte. */
+    const lista = gente.filter(p => (p.visitas || 0) > 0 || p.usuario);
+    const soloMiraron = gente.length - lista.length;
     $("solo-miraron").textContent = soloMiraron
       ? `Además, ${soloMiraron} ${soloMiraron === 1 ? "persona miró" : "personas miraron"} la página de instalación sin llegar a usar el panel.`
       : "";
 
-    if (!lista.length) { $("personas").innerHTML = '<tr><td colspan="7" class="vacio">Todavía no hay nadie.</td></tr>'; return; }
-
-    // La actividad viene toda junta; se agrupa por persona una sola vez.
-    const porPersona = new Map();
-    for (const a of actividad) {
-      if (!porPersona.has(a.instalacion)) porPersona.set(a.instalacion, []);
-      porPersona.get(a.instalacion).push(a);
-    }
+    if (!lista.length) { $("personas").innerHTML = '<tr><td colspan="8" class="vacio">Todavía no hay nadie.</td></tr>'; return; }
 
     const hoyStr = dia(HOY);
     $("personas").innerHTML = lista.map((p, i) => {
@@ -697,25 +914,31 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
              target="_blank" rel="noopener noreferrer">@${esc(p.usuario)}</a>`
         : `<span class="anon">sin nombre · ${esc(String(p.id).slice(0, 8))}</span>`;
 
-      const suyos = porPersona.get(p.id) || [];
+      const donde = (p.plataformas.length ? p.plataformas : ["?"])
+        .map(x => `<span class="eti plat">${esc(DONDE[x] || x || "?")}</span>`).join(" ");
+      const fichas = p.fichas > 1 ? `<span class="eti plat" title="Aparatos o navegadores distintos de la misma persona">${p.fichas} fichas</span>` : "";
+
+      const suyos = p.eventos || [];
+      const bajas = suyos.filter(a => a.evento === "unfollow").length;
 
       return `
       <tr style="animation-delay:${160 + Math.min(i, 25) * 60}ms">
         <td>${quien}<br><span class="eti ${est[0]}">${est[1]}</span></td>
-        <td><span class="eti plat">${esc(DONDE[p.plataforma] || p.plataforma || "?")}</span></td>
+        <td>${donde} ${fichas}</td>
         <td class="num">${esc(p.visitas ?? 0)}</td>
         <td class="num">${esc(p.dias ?? 0)}</td>
+        <td class="num">${bajas || "—"}</td>
         <td>${esc(fecha(p.alta))}</td>
         <td>${esc(hace(p.ultimo))}</td>
-        <td>${suyos.length ? `<button class="abrir" data-abrir="${i}">ver ${suyos.length} ▾</button>` : ""}</td>
+        <td>${suyos.length ? `<button class="abrir" data-abrir="${i}">ver ${suyos.length} &#9662;</button>` : ""}</td>
       </tr>
       ${suyos.length ? `
-      <tr class="detalle" id="det-${i}" hidden><td colspan="7">
+      <tr class="detalle" id="det-${i}" hidden><td colspan="8">
         ${suyos.slice(0, 60).map(a => `
           <div class="linea-ev">
             <span class="cuando">${esc(reloj(a.ts))}</span>
             <span class="que">${esc(nombreEvento(a.evento))}${
-              a.detalle ? " · " + esc(a.detalle) : ""}</span>
+              quienBaja(a) ? ' · <b>@' + esc(quienBaja(a)) + '</b>' : ""}</span>
             <span class="quien">${a.hora != null ? esc(a.hora) + "h suyas" : ""}</span>
           </div>`).join("")}
         ${suyos.length > 60 ? `<p class="nota">…y ${suyos.length - 60} más.</p>` : ""}
@@ -723,10 +946,52 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     }).join("");
 
     $("personas-nota").textContent =
-      `${lista.length} personas usaron el panel. "Veces" es cuántas veces abrió el panel; "Días", en cuántos días distintos. ` +
+      `${lista.length} personas usaron el panel. "Veces" es cuántas veces abrieron el panel, sumando todos sus aparatos; ` +
+      `"Días", en cuántos días distintos; "Bajas", a cuánta gente dejaron de seguir desde acá. ` +
       `Tocá "ver" para desplegar qué hizo cada uno.`;
   }
 
+  /* El nombre de la cuenta que dejaron de seguir. El panel lo manda como "d";
+     según la versión del contador puede volver como "detalle" o como "d". */
+  const quienBaja = a => a.detalle || a.d || "";
+
+  /* ── a quién dejan de seguir ──────────────────────────────────
+     Es lo que él quiere ver: no sólo que entraron, sino qué hicieron.
+     Se agrupa por cuenta dada de baja y se dice quién la dio. */
+  function bajas(gente) {
+    const cuentas = new Map();
+    for (const p of gente) {
+      for (const a of (p.eventos || [])) {
+        if (a.evento !== "unfollow") continue;
+        const nombre = quienBaja(a);
+        if (!nombre) continue;
+        const k = String(nombre).toLowerCase();
+        if (!cuentas.has(k)) cuentas.set(k, { nombre, veces: 0, quienes: new Set() });
+        const c = cuentas.get(k);
+        c.veces++;
+        if (p.usuario) c.quienes.add(p.usuario);
+      }
+    }
+    const lista = [...cuentas.values()].sort((a, b) => b.veces - a.veces);
+    if (!lista.length) {
+      $("bajas").innerHTML = '<p class="vacio">Todavía nadie dejó de seguir a nadie desde el panel.</p>';
+      $("bajas-nota").textContent = "";
+      return;
+    }
+    $("bajas").innerHTML = lista.slice(0, 60).map(c => `
+      <div class="baja">
+        <a class="chip" href="https://www.instagram.com/${encodeURIComponent(c.nombre)}/"
+           target="_blank" rel="noopener noreferrer">@${esc(c.nombre)}</a>
+        <span class="veces">${c.veces}${c.veces === 1 ? " baja" : " bajas"}</span>
+        <span class="porquien">${[...c.quienes].slice(0, 6).map(u => "@" + esc(u)).join(", ") ||
+          "de alguien sin nombre"}${c.quienes.size > 6 ? " y " + (c.quienes.size - 6) + " más" : ""}</span>
+      </div>`).join("");
+    const total = lista.reduce((a, c) => a + c.veces, 0);
+    $("bajas-nota").textContent =
+      `${total} bajas sobre ${lista.length} cuentas distintas` +
+      (lista.length > 60 ? ", se muestran las 60 más repetidas" : "") +
+      `. La cuenta de arriba es la que más gente dejó de seguir.`;
+  }
   function secciones(lista) {
     const utiles = lista.filter(s => s.evento !== "open");
     if (!utiles.length) { $("secciones").innerHTML = '<p class="vacio">Todavía nadie tocó ninguna sección.</p>'; return; }
@@ -739,23 +1004,75 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       </div>`).join("");
   }
 
+  /* A qué hora lo usan. Antes eran 24 barritas peladas con una etiqueta
+     cada seis horas: se veía el pico y nada más. Ahora además lleva las
+     cuatro franjas del día de fondo, la escala a la izquierda, la hora
+     abajo cada dos, y el número de cada barra al pararse encima.
+
+     La hora es la LOCAL de cada persona, no la del servidor: el panel la
+     manda ya calculada. Por eso sirve para saber cuándo conviene avisar. */
   function horas(porHora) {
     const total = porHora.reduce((a, b) => a + b, 0);
     if (!total) { $("horas").innerHTML = '<p class="vacio">Sin datos de horario todavía.</p>'; $("horas-pie").textContent = ""; return; }
     const tope = Math.max(...porHora);
-    $("horas").innerHTML = porHora.map((v, h) => `
-      <div class="h${v === tope ? " pico" : ""}" data-alto="${Math.max(2, v / tope * 100)}"
-           title="${h}:00 · ${v} aperturas">${h % 6 === 0 ? `<span>${h}</span>` : ""}</div>`).join("");
 
-    const pico = porHora.indexOf(tope);
-    $("horas-pie").textContent =
-      `Hora local de cada persona, no la del servidor. El pico es a las ${pico}:00 (${tope} aperturas).`;
+    const FRANJAS = [
+      { de: 0,  a: 6,  et: "Madrugada" },
+      { de: 6,  a: 12, et: "Mañana" },
+      { de: 12, a: 19, et: "Tarde" },
+      { de: 19, a: 24, et: "Noche" },
+    ];
+    const bandas = FRANJAS.map((f, k) => {
+      const suma = porHora.slice(f.de, f.a).reduce((a, b) => a + b, 0);
+      return `<div class="franja${k % 2 ? " par" : ""}" style="flex:${f.a - f.de}">
+        <span class="fr-et">${f.et}</span>
+        <span class="fr-n">${Math.round(suma / total * 100)}%</span>
+      </div>`;
+    }).join("");
+
+    const barras = porHora.map((v, h) => `
+      <div class="h${v === tope ? " pico" : ""}" data-alto="${Math.max(2, v / tope * 100)}"
+           title="${h}:00 a ${h}:59 · ${v} ${v === 1 ? "apertura" : "aperturas"}">
+        ${v === tope ? `<b class="cima">${v}</b>` : ""}
+      </div>`).join("");
+
+    const ejes = porHora.map((v, h) =>
+      `<span class="ej">${h % 2 === 0 ? String(h).padStart(2, "0") : ""}</span>`).join("");
+
+    const escala = [tope, Math.round(tope / 2), 0]
+      .map(v => `<span>${v}</span>`).join("");
+
+    $("horas").innerHTML = `
+      <div class="franjas">${bandas}</div>
+      <div class="cuerpo-horas">
+        <div class="escala">${escala}</div>
+        <div class="col">
+          <div class="barras24">${barras}</div>
+          <div class="ejes">${ejes}</div>
+        </div>
+      </div>`;
+
+    // Las tres horas más fuertes, que es lo accionable: cuándo avisar.
+    const top3 = porHora.map((v, h) => ({ v, h })).sort((a, b) => b.v - a.v).slice(0, 3)
+      .filter(o => o.v > 0);
+    const dosDigitos = h => String(h).padStart(2, "0") + ":00";
+    const mejorFranja = FRANJAS
+      .map(f => ({ f, suma: porHora.slice(f.de, f.a).reduce((a, b) => a + b, 0) }))
+      .sort((a, b) => b.suma - a.suma)[0];
+
+    $("horas-pie").innerHTML =
+      `Hora <b>local de cada persona</b>, no la del servidor. ` +
+      `El pico es a las <b>${dosDigitos(top3[0].h)}</b> con ${top3[0].v} ${top3[0].v === 1 ? "apertura" : "aperturas"}` +
+      (top3.length > 1 ? `, y le siguen las ${top3.slice(1).map(o => dosDigitos(o.h)).join(" y las ")}` : "") +
+      `. La franja más fuerte es la <b>${mejorFranja.f.et.toLowerCase()}</b>, con el ` +
+      `${Math.round(mejorFranja.suma / total * 100)}% de las ${total.toLocaleString("es-AR")} aperturas. ` +
+      `Parate encima de una barra para ver su número.`;
   }
 
   /* ── borrado ────────────────────────────────────────────── */
   async function borrar(boton, opciones, confirmacion) {
     if (!confirm(confirmacion)) return;
-    const base = $("url").value.trim().replace(/\/+$/, "");
+    const base = CONTADOR;
     const key = $("key").value.trim();
     const av = $("aviso-borrar");
     av.className = "aviso"; av.textContent = "";
@@ -783,14 +1100,30 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   }
 
   /* ── arranque ───────────────────────────────────────────── */
-  $("url").value = localStorage.getItem(LS_URL) || CONTADOR;
   $("key").value = localStorage.getItem(LS_KEY) || "";
 
   $("entrar").addEventListener("click", pedir);
-  for (const id of ["url", "key"])
-    $(id).addEventListener("keydown", e => { if (e.key === "Enter") pedir(); });
+  $("cambiar").addEventListener("click", () => {
+    try { localStorage.removeItem(LS_KEY); } catch (e) {}
+    $("key").value = "";
+    $("panel").style.display = "none";
+    $("sesion").hidden = true;
+    $("conexion").hidden = false;
+    $("nota-clave").hidden = false;
+    $("key").focus();
+  });
+  $("key").addEventListener("keydown", e => { if (e.key === "Enter") pedir(); });
 
   // Desplegar la actividad de una persona.
+  $("kpis").addEventListener("click", e => {
+    const b = e.target.closest("[data-ver]");
+    if (!b) return;
+    const caja = $("usuarios");
+    caja.hidden = !caja.hidden;
+    b.innerHTML = b.innerHTML.replace(caja.hidden ? "&#9652;" : "&#9662;",
+                                      caja.hidden ? "&#9662;" : "&#9652;");
+  });
+
   $("personas").addEventListener("click", e => {
     const b = e.target.closest("[data-abrir]");
     if (!b) return;
@@ -855,7 +1188,7 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   }
 
   // Si la clave ya estaba guardada, se entra solo.
-  if ($("url").value && $("key").value) pedir();
+  if ($("key").value) pedir();
 })();
 </script>
 </body>
