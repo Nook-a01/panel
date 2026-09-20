@@ -45,48 +45,55 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600;800&family=Silkscreen&display=swap">
 
 <style>
+/* ═══════════════════════════════════════════════════════════════
+   LA PINTURA — el fuego
+
+   Referencia que él eligió para esta app: un tablero oscuro flotando
+   sobre un degradado naranja a rojo. Es una decisión de una sola piel:
+   no hay versión clara. Antes había dos (clara y oscura, según el
+   sistema); el naranja sobre papel blanco perdía todo lo que hace que
+   la referencia funcione, así que la app se planta en oscuro siempre
+   y pinta el fondo ella misma.
+
+   Todo lo demás de la app sigue leyendo estos mismos nombres, así que
+   cambiando acá arriba se repinta hasta el último botón.
+   ═══════════════════════════════════════════════════════════════ */
 :root{
-  --bg:#EDF2FA; --surface:#FFFFFF; --surface-2:#F4F7FC; --surface-3:#E5EBF5;
-  --ink:#0E1A2B; --ink-2:#435268; --ink-3:#66758D;
-  --line:#DAE2EE; --line-2:#C0CBDC;
-  --accent:#1D5FD8; --accent-ink:#123F94; --accent-soft:#DFE9FC; --on-accent:#FFFFFF;
-  --warn:#A95A06; --warn-soft:#FCEBD5;
-  --crit:#C0304A; --crit-soft:#FBE0E5;
-  --orange-soft:#FFE8D4; --orange-ink:#6E3405;
-  --violet-soft:#ECE5FD; --violet-ink:#43208A;
-  --green-soft:#DAF3E3; --green-ink:#115230;
-  --shadow:0 1px 2px rgba(14,26,43,.05), 0 10px 26px -18px rgba(14,26,43,.35);
-  --radius:14px;
+  --fuego:#FF7A2F; --fuego-2:#E8391C; --brasa:#B4210F;
+  --menta:#6FE3B8;
+
+  --bg:#140D0A; --surface:#1E1512; --surface-2:#241913; --surface-3:#2E201A;
+  --ink:#FFF2E9; --ink-2:#D8B9A6; --ink-3:#C4A08D;
+  --line:#33241D; --line-2:#48332A;
+  --accent:#FF7A2F; --accent-ink:#FFB184; --accent-soft:#3A1C0E; --on-accent:#2A0E06;
+  --warn:#F0A04B; --warn-soft:#3A2712;
+  --crit:#FF6B6B; --crit-soft:#3C1920;
+  --orange-soft:#3A2414; --orange-ink:#FFC596;
+  --violet-soft:#2B1E2E; --violet-ink:#F0B9D8;
+  --green-soft:#10302A; --green-ink:#6FE3B8;
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 18px 40px -22px rgba(0,0,0,.85);
+  --radius:16px;
+  --curva:cubic-bezier(.22,1,.36,1);
   --f-display:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0B111C; --surface:#131B29; --surface-2:#192335; --surface-3:#212D42;
-    --ink:#E6EDF7; --ink-2:#A8B6CA; --ink-3:#8190A7;
-    --line:#233046; --line-2:#334260;
-    --accent:#5E93FF; --accent-ink:#A3C2FF; --accent-soft:#18284A; --on-accent:#07101F;
-    --warn:#F0A04B; --warn-soft:#3A2712;
-    --crit:#FF6F85; --crit-soft:#3C1920;
-    --orange-soft:#3A2414; --orange-ink:#FFC596;
-    --violet-soft:#271F45; --violet-ink:#D0BDFF;
-    --green-soft:#11301F; --green-ink:#9DE4BA;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.8);
-  }
+
+/* El fuego de fondo: va fijo detrás de todo, con dos manchas que se
+   mueven lentísimo. Es lo único que se ve por fuera del tablero. */
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:linear-gradient(155deg,var(--fuego) 0%,var(--fuego-2) 52%,#8E1A0C 100%);
 }
-:root[data-theme="dark"]{
-  --bg:#0B111C; --surface:#131B29; --surface-2:#192335; --surface-3:#212D42;
-  --ink:#E6EDF7; --ink-2:#A8B6CA; --ink-3:#8190A7;
-  --line:#233046; --line-2:#334260;
-  --accent:#5E93FF; --accent-ink:#A3C2FF; --accent-soft:#18284A; --on-accent:#07101F;
-  --warn:#F0A04B; --warn-soft:#3A2712;
-  --crit:#FF6F85; --crit-soft:#3C1920;
-  --orange-soft:#3A2414; --orange-ink:#FFC596;
-  --violet-soft:#271F45; --violet-ink:#D0BDFF;
-  --green-soft:#11301F; --green-ink:#9DE4BA;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 30px -18px rgba(0,0,0,.8);
+body::after{
+  content:""; position:fixed; z-index:-1; pointer-events:none;
+  width:70vmax; height:70vmax; right:-18vmax; top:-26vmax; border-radius:50%;
+  background:#FF9A4D; filter:blur(90px); opacity:.75;
+  animation:vaiven 24s var(--curva) infinite alternate;
 }
+@keyframes vaiven{to{transform:translate3d(-12vw,12vh,0) scale(1.15)}}
+@media (prefers-reduced-motion:reduce){ body::after{animation:none} }
 
 *{box-sizing:border-box}
 body{
@@ -214,9 +221,9 @@ input:focus,select:focus,textarea:focus{outline:none; border-color:var(--accent)
   font-weight:500; font-size:14px; color:var(--ink); transition:background .15s,border-color .15s;
 }
 .btn:hover{background:var(--surface-2)}
-.btn.pri{background:var(--accent); border-color:var(--accent); color:#fff}
-:root[data-theme="dark"] .btn.pri, :root:not([data-theme="light"]) .btn.pri{color:#08201D}
-@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .btn.pri{color:#fff}}
+/* Una sola piel: el botón principal siempre lleva el naranja de fuego con
+   la letra en marrón oscuro. Antes cambiaba según el tema del sistema. */
+.btn.pri{background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:700}
 .btn.pri:hover{filter:brightness(1.06)}
 .btn.sm{padding:5px 10px; font-size:12.5px; border-radius:7px}
 .btn.gh{border-color:transparent; background:transparent; color:var(--ink-2)}
@@ -333,7 +340,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 .subtabs button[aria-current="true"]{background:var(--accent-soft); color:var(--accent-ink); border-color:transparent; font-weight:600}
 .btn.pri, :root .btn.pri, :root:not([data-theme="light"]) .btn.pri, :root[data-theme="dark"] .btn.pri{color:var(--on-accent)}
 .seg button[aria-pressed="true"], :root[data-theme="dark"] .seg button[aria-pressed="true"]{color:var(--on-accent)}
-.fab, :root[data-theme="dark"] .fab{color:var(--on-accent); box-shadow:0 10px 24px -10px rgba(29,95,216,.75)}
+.fab, :root[data-theme="dark"] .fab{color:var(--on-accent); box-shadow:0 10px 26px -10px rgba(255,122,47,.7)}
 .chat-msg.mio, :root[data-theme="dark"] .chat-msg.mio, :root:not([data-theme="light"]) .chat-msg.mio{color:var(--on-accent)}
 
 /* ---------- hoy ---------- */
