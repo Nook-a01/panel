@@ -296,6 +296,15 @@ th{
   background:#060a10;
   white-space:nowrap;
 }
+th.ord{cursor:pointer;-webkit-user-select:none;user-select:none;transition:color .15s}
+th.ord:hover,th.ord:focus-visible{color:var(--cian);outline:none}
+th.ord:focus-visible{text-decoration:underline}
+th.ord i{font-style:normal;opacity:.25;margin-left:.35em}
+th.ord i::after{content:"↕"}
+th.ord.act{color:var(--cian)}
+th.ord.act i{opacity:1}
+th.ord.act.abajo i::after{content:"▼"}
+th.ord.act.arriba i::after{content:"▲"}
 td{padding:.6rem .6rem;border-bottom:1px solid #0e1821;vertical-align:top}
 tr:last-child td{border-bottom:0}
 /* cada fila entra corrida; el retraso lo pone el JS */
@@ -437,9 +446,14 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     <div class="tabla-caja">
       <table>
         <thead><tr>
-          <th>Persona</th><th>Dónde</th><th class="num">Veces</th>
-          <th class="num">Días</th><th class="num">Bajas</th>
-          <th>Desde</th><th>Última vez</th><th></th>
+          <th class="ord" data-ord="persona" tabindex="0">Persona<i></i></th>
+          <th class="ord" data-ord="donde" tabindex="0">Dónde<i></i></th>
+          <th class="ord num" data-ord="veces" tabindex="0">Veces<i></i></th>
+          <th class="ord num" data-ord="dias" tabindex="0">Días<i></i></th>
+          <th class="ord num" data-ord="bajas" tabindex="0">Bajas<i></i></th>
+          <th class="ord" data-ord="desde" tabindex="0">Desde<i></i></th>
+          <th class="ord" data-ord="ultima" tabindex="0">Última vez<i></i></th>
+          <th></th>
         </tr></thead>
         <tbody id="personas"></tbody>
       </table>
@@ -586,7 +600,8 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     kpis(d, gente);
     grafico(d.serie_30d || []);
     retencion(gente);
-    personas(gente);
+    GENTE = gente;
+    personas();
     secciones(d.secciones || []);
     bajas(gente);
     horas(d.por_hora || []);
@@ -679,6 +694,7 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       // único número que no se puede contar dos veces.
       const dd = new Set(g.eventos.map(e => String(e.ts).slice(0, 10)));
       if (dd.size) g.dias = dd.size;
+      g.bajas = g.eventos.filter(e => e.evento === "unfollow").length;
     }
     gente.sort((a, b) => (b.visitas || 0) - (a.visitas || 0));
     return gente;
@@ -888,14 +904,54 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       `Es el número que más dice: si crece, el problema está en el primer uso.`;
   }
 
-  function personas(gente) {
+  /* ── el orden de la tabla ─────────────────────────────────────
+     Se toca el encabezado y la tabla se reordena por esa columna; si
+     se toca de nuevo, se da vuelta. Arranca por las veces que entró
+     cada uno, de mayor a menor, que es como estaba antes.
+
+     El "1" y el "2" adelante de los textos no son adorno: hacen que
+     los que no dieron nombre queden siempre al final, en los dos
+     sentidos, en vez de mezclarse entre los @usuario. */
+  let GENTE = [];
+  let ORDEN = { col: "veces", dir: -1 };
+  const CLAVES = {
+    persona: p => (p.usuario ? "1" + p.usuario.toLowerCase() : "2" + String(p.id || "")),
+    donde:   p => (p.plataformas && p.plataformas.length
+                    ? "1" + p.plataformas.map(x => DONDE[x] || x || "").sort().join(" ") : "2"),
+    veces:   p => Number(p.visitas) || 0,
+    dias:    p => Number(p.dias) || 0,
+    bajas:   p => Number(p.bajas) || 0,
+    desde:   p => p.alta || "",
+    ultima:  p => p.ultimo || "",
+  };
+  function ordenar(lista) {
+    const f = CLAVES[ORDEN.col] || CLAVES.veces;
+    return lista.slice().sort((a, b) => {
+      const x = f(a), y = f(b);
+      if (x < y) return -ORDEN.dir;
+      if (x > y) return ORDEN.dir;
+      // Empate: primero el que más entró, así la tabla no baila entre dibujados.
+      return (b.visitas || 0) - (a.visitas || 0);
+    });
+  }
+  function marcarEncabezado() {
+    document.querySelectorAll("th.ord").forEach(th => {
+      const act = th.dataset.ord === ORDEN.col;
+      th.classList.toggle("act", act);
+      th.classList.toggle("abajo", act && ORDEN.dir < 0);
+      th.classList.toggle("arriba", act && ORDEN.dir > 0);
+    });
+  }
+
+  function personas() {
     /* Dos cosas distintas que estaban mezcladas:
          - quien USÓ el panel: tiene aperturas registradas
          - quien sólo MIRÓ la página de instalación: no abrió nada
        Los segundos no saben quién sos (ahí no hay sesión de Instagram) y
        ensuciaban el número que importa. Van aparte. */
-    const lista = gente.filter(p => (p.visitas || 0) > 0 || p.usuario);
-    const soloMiraron = gente.length - lista.length;
+    const lista = ordenar(GENTE.filter(p => (p.visitas || 0) > 0 || p.usuario));
+    const soloMiraron = GENTE.length - lista.length;
+    marcarEncabezado();
     $("solo-miraron").textContent = soloMiraron
       ? `Además, ${soloMiraron} ${soloMiraron === 1 ? "persona miró" : "personas miraron"} la página de instalación sin llegar a usar el panel.`
       : "";
@@ -1113,6 +1169,29 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
     $("key").focus();
   });
   $("key").addEventListener("keydown", e => { if (e.key === "Enter") pedir(); });
+
+  // Ordenar la tabla tocando el encabezado.
+  function ordenarPor(th) {
+    const col = th.dataset.ord;
+    if (!col) return;
+    // La misma columna se da vuelta; una nueva arranca como conviene leerla:
+    // los textos de la A a la Z, y los números y las fechas de mayor a menor.
+    ORDEN = ORDEN.col === col
+      ? { col, dir: -ORDEN.dir }
+      : { col, dir: (col === "persona" || col === "donde") ? 1 : -1 };
+    personas();
+  }
+  document.querySelector("thead").addEventListener("click", e => {
+    const th = e.target.closest("th.ord");
+    if (th) ordenarPor(th);
+  });
+  document.querySelector("thead").addEventListener("keydown", e => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const th = e.target.closest("th.ord");
+    if (!th) return;
+    e.preventDefault();
+    ordenarPor(th);
+  });
 
   // Desplegar la actividad de una persona.
   $("kpis").addEventListener("click", e => {
