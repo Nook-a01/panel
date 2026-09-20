@@ -18,7 +18,8 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "10";
+  var ESTA = "11";
+  try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -2813,17 +2814,24 @@ function renderAjustes(){
   renderMpCruces();
   renderStoreInfo();
 }
+// Para saber de un vistazo si el celular ya agarró la versión nueva: sin esto
+// hay que adivinar mirando si tal número cambió.
+function versionTxt(){
+  const v = (typeof window!=="undefined" && window.__plataVersion) || "?";
+  return '<div style="font-size:12px;color:var(--ink-3);margin-top:6px">Versión '+esc(String(v))+'</div>';
+}
+
 function renderStoreInfo(){
   const el = $('#storeInfo'); if(!el) return;
   const n = S.movs.length;
   if(apiFilesOk===true){
     el.className='notice info';
-    el.innerHTML='<span>Guardado en tu panel privado: lo que cambiás acá lo ves en el celular y al revés. '+n+' movimientos.</span>';
+    el.innerHTML='<span>Guardado en tu panel privado: lo que cambiás acá lo ves en el celular y al revés. '+n+' movimientos.</span>'+versionTxt();
   } else if(apiFilesOk===false){
     el.className='notice warn';
-    el.innerHTML='<span>Ahora mismo guardo solo en este navegador ('+n+' movimientos): lo que cambies acá no llega al otro aparato. Escribí la clave de tu panel en Mercado Pago, más arriba.</span>';
+    el.innerHTML='<span>Ahora mismo guardo solo en este navegador ('+n+' movimientos): lo que cambies acá no llega al otro aparato. Escribí la clave de tu panel en Mercado Pago, más arriba.</span>'+versionTxt();
   } else {
-    el.className='notice info'; el.innerHTML='<span>'+n+' movimientos guardados.</span>';
+    el.className='notice info'; el.innerHTML='<span>'+n+' movimientos guardados.</span>'+versionTxt();
   }
 }
 
