@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "11";
+  var ESTA = "12";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -714,11 +714,11 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 <!-- ===================== HISTORIAL ===================== -->
 <section class="view" id="v-historial">
   <div class="stack">
-    <div class="notice info">Cada mes con lo que entró, lo que gastaste de tu plata, lo que pagaron tus viejos con las tarjetas de crédito y lo que movés a inversiones. Tocá un mes para verlo en detalle.</div>
+    <div class="notice info">Cada mes con lo que entró, lo que gastaste de tu plata, lo que pusiste en la tarjeta de tu mamá (que ella te descuenta al mes siguiente) y lo que movés a inversiones. Tocá un mes para verlo en detalle.</div>
     <div class="card">
       <div class="hd"><h3>Mes a mes</h3><span class="hint" id="histHint"></span></div>
       <div class="bd">
-        <div class="tablewrap"><table id="histTable"><thead><tr><th>Mes</th><th class="r">Entró</th><th class="r">Salió del saldo</th><th class="r">Pagan tus viejos</th><th class="r">Neto</th><th class="r">A inversión</th><th></th></tr></thead><tbody></tbody></table></div>
+        <div class="tablewrap"><table id="histTable"><thead><tr><th>Mes</th><th class="r">Entró</th><th class="r">Salió del saldo</th><th class="r">Con la tarjeta de mamá</th><th class="r">Neto</th><th class="r">A inversión</th><th></th></tr></thead><tbody></tbody></table></div>
       </div>
     </div>
     <div class="card">
@@ -1306,8 +1306,29 @@ function presupuestoMes(ym){
   return {filas, topeTotal, gastadoTotal};
 }
 
+// Hasta qué día sabemos lo que entró de verdad: la última lectura de Mercado
+// Pago, o el día del saldo que cargó a mano.
+function corteDeLoReal(){
+  const t = S.mp && S.mp.actualizado;
+  if(t){ const d = new Date(t); if(!isNaN(d)) return iso(d); }
+  return S.cfg.fechaCorte || null;
+}
+
+// Los ingresos que vienen de Fijos son un pronóstico: "el 4 cobro el sueldo".
+// Cuando Mercado Pago ya leyó ese día, lo que entró de verdad está entre los
+// movimientos, así que sumar también el pronóstico contaba el sueldo dos veces
+// (en septiembre inflaba el mes en $1.520.000). Los pronósticos a futuro sí se
+// cuentan: todavía no pasaron.
+function ingresoYaPasado(m, corte){
+  return m.tipo==='ingreso' && m.srcTipo==='fijo' && !!corte && m.fecha <= corte;
+}
+
 function resumenMes(ym, incluirPend){
-  const ms = movsMes(ym).filter(m=> incluirPend || confirmado(m));
+  const todos = movsMes(ym);
+  // Sólo se descarta el pronóstico en meses donde hay lecturas de Mercado Pago:
+  // en los meses viejos, cargados a mano, el fijo es el único dato que hay.
+  const corte = todos.some(m=> m.srcTipo==='mp') ? corteDeLoReal() : null;
+  const ms = todos.filter(m=> (incluirPend || confirmado(m)) && !ingresoYaPasado(m, corte));
   const ing = ms.filter(m=>m.tipo==='ingreso' && !esNoGasto(m.catId)).reduce((a,m)=>a+(+m.monto||0),0);
   const gas = ms.filter(m=> cuentaComoGasto(m) && !esTarjeta(m)).reduce((a,m)=>a+(+m.monto||0),0);
   const tar = ms.filter(m=> m.tipo==='gasto' && esTarjeta(m)).reduce((a,m)=>a+(+m.monto||0),0);
