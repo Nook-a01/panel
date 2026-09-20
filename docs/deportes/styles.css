@@ -150,7 +150,9 @@ body{
 #anillo{
   position:relative;z-index:10;
   display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
-  padding:4px 12px 14px;max-width:900px;margin:0 auto;
+  /* 14 arriba y no 4: la chapita del número sobresale 9 px por encima de
+     la ficha, y como esta tira recorta lo que se sale, quedaba cortada. */
+  padding:14px 12px 14px;max-width:900px;margin:0 auto;
   -webkit-overflow-scrolling:touch;
 }
 #anillo::-webkit-scrollbar{display:none}

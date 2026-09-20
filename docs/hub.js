@@ -23,6 +23,23 @@ const $ = s => document.querySelector(s);
   $("#fecha").textContent = txt;
 }
 
+/* ── 1.5 en la compu, cada sección en una pestaña nueva ───────
+   Él lo pidió así: tocar una placa no tiene por qué hacerle perder la
+   portada. En el teléfono NO: ahí el Panel está instalado como app y
+   abrir pestañas sueltas es un estorbo, no una ayuda. La diferencia se
+   mide por el puntero (un mouse de verdad) y por que no esté corriendo
+   como app instalada. */
+{
+  const conMouse = matchMedia("(pointer:fine)").matches;
+  const comoApp  = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  if (conMouse && !comoApp) {
+    for (const t of document.querySelectorAll(".tira")) {
+      t.target = "_blank";
+      t.rel = "noopener";   // la pestaña nueva no queda con un hilo a esta
+    }
+  }
+}
+
 /* ── 2. entrada escalonada ────────────────────────────────────
    Cada tira aparece 70 ms después de la anterior. El barrido
    completo dura medio segundo, que es lo que tarda en enfocarse
