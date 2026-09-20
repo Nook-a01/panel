@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "9";
+  var ESTA = "10";
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : ""; })
@@ -1448,6 +1448,14 @@ function tarjetaDelBanco(){
            vencimiento: t.vencimiento || null, leidoEn: t.leidoEn || null };
 }
 
+// Lo gastado con la tarjeta de la madre este mes, que ella descuenta del mes
+// que viene. Sale del banco si hay lectura fresca; si no, de lo que ve MP.
+function gastadoConTarjeta(){
+  const tj = tarjetaDelBanco();
+  if(tj) return tj.pesos;
+  return Number(calc().tarjetaMes) || 0;
+}
+
 function esSusc(r){ return r.susc === true || (r.susc !== false && RE_SUSC.test(r.nombre || '')); }
 
 // Lo que gastaste en el día a día entre dos fechas. No cuenta los fijos ni las
@@ -2126,7 +2134,10 @@ function renderPlan(){
   const tIng = ing.reduce((a,m)=>a+(+m.monto||0),0);
   const tFij = fijos.reduce((a,m)=>a+(+m.monto||0),0);
   const tCuo = cuot.reduce((a,m)=>a+(+m.monto||0),0);
-  const libre = tIng - tFij - tCuo;
+  // Lo gastado con la tarjeta de la madre sale de la plata del mes que viene:
+  // sin esto el Plan mostraba más plata que la pantalla de Hoy.
+  const tTar = gastadoConTarjeta();
+  const libre = tIng - tTar - tFij - tCuo;
   const dim = daysInMonth(ym);
 
   $('#planEyebrow').textContent = 'Para el día a día en '+ymLabel(ym);
@@ -2134,7 +2145,9 @@ function renderPlan(){
   $('#planBig').className = 'big num ' + (libre>=0?'pos':'neg');
   $('#planHero').className = 'hero' + (libre<0?' is-crit':'');
   $('#planNote').innerHTML = 'Entran <b>'+money(tIng)+'</b>. Se van <b>'+money(tFij)+'</b> en fijos y <b>'+money(tCuo)
-    +'</b> en cuotas. Lo que sobra es para comer, moverte y todo lo demás.';
+    +'</b> en cuotas'
+    + (tTar > 0 ? ', y <b>'+money(tTar)+'</b> que tu mamá te descuenta por lo que gastaste con su tarjeta' : '')
+    +'. Lo que sobra es para comer, moverte y todo lo demás.';
   $('#planPerday').innerHTML =
     tilePD(money(Math.max(0, libre/dim)), 'por día durante los '+dim+' días')
     + tilePD(money(Math.max(0, libre/Math.max(1,Math.round(dim/7)))), 'por semana')
@@ -2157,10 +2170,11 @@ function renderPlan(){
   const topeTotal = cats.reduce((a,c)=>a+(Number(c.tope)||0),0);
   const esperado = c => Math.max(tipicoDe(c.id), FIJO[c.id]||0);
   const tipicoTotal = cats.reduce((a,c)=>a+esperado(c),0);
-  const cierrePlan = tIng - topeTotal;
-  const cierreTipico = tIng - tipicoTotal;
+  const cierrePlan = tIng - tTar - topeTotal;
+  const cierreTipico = tIng - tTar - tipicoTotal;
   $('#planCierre').innerHTML =
      '<div class="kv"><span>Entra</span><b>'+money(tIng)+'</b></div>'
+    +(tTar > 0 ? '<div class="kv"><span>Menos la tarjeta de tu mamá</span><b>−'+money(tTar)+'</b></div>' : '')
     +'<div class="kv"><span>Si respetás los topes</span><b>'+money(topeTotal)+'</b></div>'
     +'<div class="kv"><span style="font-weight:600;color:var(--ink)">Cerrás con</span><b style="color:'+(cierrePlan>=0?'var(--accent)':'var(--crit)')+'">'
       +(cierrePlan>=0?'+':'−')+money(Math.abs(cierrePlan))+'</b></div>'
@@ -2169,25 +2183,26 @@ function renderPlan(){
     +'<div class="kv"><span style="font-weight:600;color:var(--ink)">Cerrás con</span><b style="color:'+(cierreTipico>=0?'var(--accent)':'var(--crit)')+'">'
       +(cierreTipico>=0?'+':'−')+money(Math.abs(cierreTipico))+'</b></div>';
 
-  // dependencia de la tarjeta de los viejos
-  const ult3 = mesesCerrados().slice(-3);
-  const pagaron = ult3.map(m=> resumenDeMes(m,false).tar||0);
-  const promPag = pagaron.length ? pagaron.reduce((a,b)=>a+b,0)/pagaron.length : 0;
+  // La tarjeta de la madre no la paga nadie por él: lo que gasta ahí se lo
+  // descuentan de la plata que ella le pasa el mes siguiente.
   const av = $('#planAviso');
-  if(promPag > 80000){
+  const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
+  if(tTar > 0){
     av.hidden = false;
-    av.innerHTML = '<span>En los últimos '+ult3.length+' meses tus viejos te cubrieron <b>'+money(promPag)
-      +'</b> por mes con las tarjetas de crédito. Este plan da por sentado que eso sigue: si dejara de pasar, '
-      +'ese monto se te suma al gasto propio.</span>';
+    av.innerHTML = '<span>Gastaste <b>'+money(tTar)+'</b> con la tarjeta de tu mamá. Eso no lo paga ella: '
+      + (ayudaBase > 0
+          ? 'de los '+money(ayudaBase)+' que te pasa el mes que viene te van a quedar <b>'+money(Math.max(0, ayudaBase - tTar))+'</b>.'
+          : 'te lo descuenta de lo que te pasa el mes que viene.')
+      +'</span>';
   } else av.hidden = true;
 
   // cuánto podés ahorrar
   const mejor = c => Math.max(mejorDe(c.id), FIJO[c.id]||0);
   const mejorTotal = cats.reduce((a,c)=>a+mejor(c),0);
   const esc3 = [
-    {k:'Gastando como siempre', v: tIng - tipicoTotal, d:'sin cambiar nada'},
-    {k:'Respetando los topes',  v: tIng - topeTotal,   d:'el plan que tenés cargado'},
-    {k:'En tu mejor versión',   v: tIng - mejorTotal,  d:'como en tus mejores meses del año'}
+    {k:'Gastando como siempre', v: tIng - tTar - tipicoTotal, d:'sin cambiar nada'},
+    {k:'Respetando los topes',  v: tIng - tTar - topeTotal,   d:'el plan que tenés cargado'},
+    {k:'En tu mejor versión',   v: tIng - tTar - mejorTotal,  d:'como en tus mejores meses del año'}
   ];
   $('#planAhorro').innerHTML = esc3.map(e=>
     '<div class="kv"><span>'+esc(e.k)+'<div style="font-size:12px;color:var(--ink-3)">'+esc(e.d)+'</div></span>'
