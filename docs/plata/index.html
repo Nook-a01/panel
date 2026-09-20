@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "14";
+  var ESTA = "15";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -3224,9 +3224,10 @@ function irA(v){
   $('#subtabs').hidden = !enMas;
   $$('#subtabs button').forEach(b=> b.setAttribute('aria-current', String(b.dataset.v===v)));
   $$('section.view').forEach(s=> s.classList.toggle('on', s.id==='v-'+v));
-  // En Hoy y en Ajustar los botones grandes hacen lo mismo que el flotante:
-  // con los dos se pisan y confunden.
-  $('#fab').hidden = (v==='hoy' || v==='ajuste');
+  // El flotante «+ Cargar» carga un movimiento: sólo tiene sentido donde se
+  // ven movimientos. En el resto no hacía nada y en el teléfono tapaba lo de
+  // abajo (en Ajustes se comía los campos del saldo y la fecha).
+  $('#fab').hidden = !(v==='movs' || v==='fijos');
   window.scrollTo({top:0, behavior:'instant'});
   render();
 }
@@ -4116,6 +4117,18 @@ input, textarea, select, [contenteditable]{caret-color:auto}
 
   /* Las tres secciones y el engranaje en una sola fila: se ven todas sin arrastrar. */
   nav.tabs{ gap:6px; margin-top:8px }
+
+  /* Medido a 371px: la barra del engranaje necesitaba 647px, así que mostraba
+     3 de sus 7 botones y los otros 4 había que arrastrarlos de costado, sin que
+     nada lo indicara. Bajan de renglón y se ven todos. */
+  .subtabs{ flex-wrap:wrap; row-gap:6px; overflow-x:visible; padding-bottom:9px }
+  .subtabs button{ flex:0 1 auto; min-width:0 }
+
+  /* Con las dos barras desplegadas el encabezado pegajoso medía 172px de 844:
+     una quinta parte de la pantalla, y encima tapaba lo que quedaba abajo
+     (el botón «Olvidar clave» quedaba cortado por la mitad). En el teléfono se
+     va con la página; las secciones están a un scroll hacia arriba. */
+  header.top{ position:static }
   nav.tabs button{ flex:1 1 0; min-width:0; padding:8px 4px; font-size:13px }
   nav.tabs .tab-mas{ flex:0 0 auto; padding:8px 12px }
   .blq{ padding:14px 15px }
