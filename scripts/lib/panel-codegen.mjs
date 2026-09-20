@@ -90,7 +90,6 @@ export const AVISAR_DIRECTO = `function avisar(){
     }).then(function(){
       lsSet(LS.pendScan,null);
       lsSet(LS.pendUnf,null);
-      try{ refrescarPendientes(); }catch(e){}
     },function(){});
   }`;
 

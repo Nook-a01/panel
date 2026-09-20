@@ -281,9 +281,6 @@ var css=''+
 '.igpp-cb:focus-visible,.igpp-input:focus-visible,.igpp-user:focus-visible'+
 '{outline:3px solid #b98cff;outline-offset:2px;border-radius:10px}'+
 '.igpp-tab.on{color:#fff;background:linear-gradient(45deg,rgba(64,93,230,.25),rgba(193,53,132,.25));border-color:#3a3a55}'+
-'.igpp-pend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 18px;'+
-'background:#1a1406;border-bottom:1px solid #5a4410;color:#ffd166;font-size:.9rem}'+
-'.igpp-pend button{flex:none;padding:6px 12px;font-size:.85rem}'+
 '.igpp-body{padding:20px 24px;overflow:auto;flex:1;font-size:1rem}'+
 '.igpp-chip{display:inline-flex;align-items:center;gap:7px;background:#1a1a28;border:1px solid #2a2a40;border-radius:999px;padding:7px 14px;font-size:.9rem;color:#c9c9d8}'+
 '.igpp-btn{background:#1c1c2b;color:#f4f4f8;border:1px solid #2c2c44;border-radius:12px;padding:11px 17px;cursor:pointer;font-size:.98rem;font-weight:600;transition:filter .12s}'+
@@ -441,11 +438,8 @@ b.onclick=function(){ switchTab(td[0]); };
 tabBtns[td[0]]=b; tabsBar.appendChild(b);
 });
 panel.appendChild(tabsBar);
-var barraPend=document.createElement('div');
-barraPend.className='igpp-pend';
-barraPend.style.display='none';
-panel.appendChild(barraPend);
 var body=document.createElement('div'); body.className='igpp-body'; panel.appendChild(body);
+engancharEnvio(panel);
 var pintarPie=function(){};
 if(PAGINA){
 var foot=document.createElement('div'); foot.className='igpp-foot';
@@ -461,34 +455,31 @@ if(!u) return;
 var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
 l.push(u); if(l.length>500) l=l.slice(-500); // techo por si algo se desmadra
 lsSet(LS.pendUnf,l);
-try{ refrescarPendientes(); }catch(e){}
 }
 function pendientes(){
 var l=lsGet(LS.pendUnf,[]); if(!Array.isArray(l)) l=[];
 return { bajas:l.length, escaneos:lsGet(LS.pendScan,0)||0 };
 }
-function refrescarPendientes(){
-if(!barraPend) return;
+/* Las bajas viajan solas. Nadie tiene que registrar nada.
+Por qué va colgado de un toque y no sale sin más: desde instagram.com no
+hay ninguna vía silenciosa hacia el contador. Su política de contenido no
+deja la conexión directa (connect-src), ni el pixel de imagen (img-src),
+ni una ventana invisible (frame-src) — están los tres revisados. Lo único
+que queda es abrir una pestaña, y una pestaña que se abre sin que nadie
+toque nada la bloquea el navegador.
+Así que se engancha del PRIMER toque que la persona haga adentro del
+panel, que es algo que va a hacer igual: cambiar de pestaña, marcar a
+alguien, cerrar. La pestaña que se abre es un parpadeo y se cierra sola.
+El tope de 20 segundos evita abrir dos si toca rápido dos veces. */
+var ultimoEnvio=0;
+function engancharEnvio(raiz){
+raiz.addEventListener('click', function(){
 var p=pendientes();
-if(!PAGINA || (!p.bajas && !p.escaneos)){ barraPend.style.display='none'; return; }
-barraPend.style.display='';
-barraPend.innerHTML='';
-var t=document.createElement('span');
-t.style.flex='1';
-t.textContent = p.bajas
-? 'Quedan ' + p.bajas + (p.bajas===1 ? ' baja sin registrar' : ' bajas sin registrar')
-: 'Queda un escaneo sin registrar';
-var b=document.createElement('button');
-b.className='igpp-primary';
-b.textContent='Registrar';
-b.onclick=function(){
-if(avisar()===false){
-t.textContent='El navegador bloqueó la ventana. Permitila y tocá Registrar otra vez.';
-return;
-}
-refrescarPendientes();
-};
-barraPend.appendChild(t); barraPend.appendChild(b);
+if(!p.bajas && !p.escaneos) return;
+if(Date.now()-ultimoEnvio < 20000) return;
+ultimoEnvio=Date.now();
+try{ avisar(); }catch(e){}
+}, true);
 }
 var ORIGEN_PAGINA=(function(){ try{ return new URL(PAGINA).origin; }catch(e){ return 'https://nook-a01.github.io'; } })();
 var LS_SYNCKEY='igpp_synckey', LS_LASTSYNC='igpp_lastsync';
@@ -579,7 +570,6 @@ var w=window.open(url,'_blank');
 if(!w) return false;
 lsSet(LS.pendScan,null);                       // escaneos: enviados
 lsSet(LS.pendUnf, resto.length?resto:null);    // bajas: guardo lo que no entró
-refrescarPendientes();
 return true;
 }catch(e){ return false; }
 }
@@ -1079,7 +1069,6 @@ return {ok:false, blocked:false, note:'Instagram respondió HTTP '+r.status+' ('
 }
 function colaTerminada(q){
 q.status='done'; // las bajas ya se anotaron una por una al concretarse
-try{ refrescarPendientes(); }catch(e){}
 }
 async function tickCheck(){
 if(qBusy){ return; }
@@ -1719,7 +1708,6 @@ body.appendChild(tips);
 }
 checkAccount().then(function(){
 if(exigirRegistro()) switchTab('analysis');
-try{ refrescarPendientes(); }catch(e){}
 });
 var existingQ=loadQ();
 if(existingQ&&existingQ.status==='running'){ startTimerLoop(); }
