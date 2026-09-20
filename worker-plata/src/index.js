@@ -283,14 +283,22 @@ export default {
           if (previo && base !== undefined && (previo.updatedAt || null) !== (base || null))
             return json({ ok: true, conservado: true, estado: previo });
 
-          // Sin baseUpdatedAt (una app vieja que todavía no se actualizó) queda
-          // la regla anterior: gana el más nuevo.
-          const tPrevio   = previo   ? new Date(previo.updatedAt   || 0).getTime() : -1;
-          const tEntrante = new Date(entrante.updatedAt || 0).getTime();
-          if (previo && base === undefined && tPrevio > tEntrante)
-            return json({ ok: true, conservado: true, estado: previo });
+          // Una app vieja no manda baseUpdatedAt. Mientras ninguna la mandaba,
+          // valía la regla anterior (gana el más nuevo). Pero en cuanto una app
+          // al día guardó algo, esa regla vuelve a dejar que la pestaña vieja
+          // pise todo, que es justo lo que veníamos arreglando: entonces se le
+          // devuelve lo guardado y la app vieja lo adopta sola.
+          const exigeBase = (await env.PLATA.get("app_exige_base")) === "1";
+          if (previo && base === undefined) {
+            if (exigeBase) return json({ ok: true, conservado: true, estado: previo });
+            const tPrevio   = new Date(previo.updatedAt   || 0).getTime();
+            const tEntrante = new Date(entrante.updatedAt || 0).getTime();
+            if (tPrevio > tEntrante)
+              return json({ ok: true, conservado: true, estado: previo });
+          }
 
           delete entrante.baseUpdatedAt;
+          if (base !== undefined && !exigeBase) await env.PLATA.put("app_exige_base", "1");
 
           await env.PLATA.put("app", JSON.stringify(entrante));
           return json({ ok: true, conservado: false, guardadoEn: entrante.updatedAt });
