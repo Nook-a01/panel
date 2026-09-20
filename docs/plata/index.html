@@ -510,10 +510,20 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
 <section class="view on" id="v-hoy">
   <div class="hoy">
     <div class="marquee" aria-hidden="true"><div class="marquee-in" id="hoyMarqueeIn"></div></div>
-    <div class="blq blq-libre" id="hoyLibre">
-      <div class="blq-k" id="hoyLibreK">Podés gastar hasta que cobres</div>
-      <div class="blq-big num" id="hoyLibreV">$0</div>
-      <div class="blq-s" id="hoyLibreS"></div>
+    <!-- El número grande y la tarjeta de vidrio van uno al lado del otro en la
+         compu, y uno abajo del otro en el teléfono. -->
+    <div class="tapa">
+      <div class="blq blq-libre" id="hoyLibre">
+        <div class="blq-k" id="hoyLibreK">Podés gastar hasta que cobres</div>
+        <div class="blq-big num" id="hoyLibreV">$0</div>
+        <div class="blq-s" id="hoyLibreS"></div>
+      </div>
+      <div class="vidrio" id="hoyVidrio" hidden>
+        <div class="vidrio-k">Gastado este mes</div>
+        <div class="vidrio-n num" id="hoyVidrioN">$0</div>
+        <div class="vidrio-barras" id="hoyVidrioBarras"></div>
+        <div class="vidrio-pie" id="hoyVidrioPie"></div>
+      </div>
     </div>
 
     <!-- Lo simple: por día, tres renglones, lo que viene y los dos botones.
@@ -523,6 +533,12 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
       <div class="plan-linea" id="hoyPlan" hidden></div>
       <div class="resumen" id="hoyResumen"></div>
       <div class="mesque" id="hoyMesQue" hidden></div>
+      <!-- La línea del mes: dónde estás parado entre que cobraste y volvés a
+           cobrar. Los hitos salen de tus propios movimientos. -->
+      <div class="tramo" id="hoyTramo" hidden>
+        <h3>Cómo viene el mes</h3>
+        <div class="linea" id="hoyLinea"><span class="guia" aria-hidden="true"></span></div>
+      </div>
       <div class="prox"><h3>Lo que viene</h3><div id="hoyProx"></div></div>
       <div class="acc2">
         <button type="button" class="g" id="hoyGaste">− Gasté</button>
@@ -1738,6 +1754,144 @@ function ponerDetalle(v){
   $('#hoyVerDet').textContent = v ? 'Ocultar el detalle ▴' : 'Ver el detalle ▾';
 }
 
+
+/* ── la tarjeta de vidrio: cuánto llevás gastado este mes ──────────
+   Las barritas son las semanas del mes, no días: con treinta barras no
+   se distingue nada. La más alta se pinta en fuego. */
+function pintarVidrio(c){
+  const caja = $('#hoyVidrio');
+  if(!caja) return;
+  const ym = c.hoyYM;
+  const delMes = S.movs.filter(m => ymOf(m.fecha) === ym && m.tipo === 'gasto'
+    && confirmado(m) && !esNoGasto(m.catId));
+  const total = delMes.reduce((a,m)=> a + (Number(m.monto)||0), 0);
+
+  if(!total){ caja.hidden = true; return; }
+  caja.hidden = false;
+
+  // Cuántas semanas lleva el mes hasta hoy, de a siete días desde el 1.
+  const semanas = Math.ceil(c.diaMes / 7);
+  const porSemana = new Array(semanas).fill(0);
+  delMes.forEach(m => {
+    const dia = Number(String(m.fecha).slice(8,10)) || 1;
+    const i = Math.min(semanas - 1, Math.floor((dia - 1) / 7));
+    porSemana[i] += Number(m.monto) || 0;
+  });
+  const tope = Math.max(...porSemana, 1);
+  const masAlta = porSemana.indexOf(tope);
+
+  $('#hoyVidrioN').dataset.n = total;
+  $('#hoyVidrioN').textContent = money(0);
+  $('#hoyVidrioBarras').innerHTML = porSemana.map((v,i)=>
+    '<i class="' + (i === masAlta ? 'pico' : '') + '" data-h="' +
+    Math.max(6, Math.round(v / tope * 100)) + '" title="Semana ' + (i+1) + ': ' + money(v) + '"></i>'
+  ).join('');
+
+  const nom = ['primera','segunda','tercera','cuarta','quinta'][masAlta] || ('semana '+(masAlta+1));
+  $('#hoyVidrioPie').textContent = semanas > 1
+    ? 'Por semana · la más alta fue la ' + nom
+    : 'Lo que va del mes';
+}
+
+/* ── la línea del mes ──────────────────────────────────────────────
+   Cuatro hitos como mucho, en orden: cuándo entró la última plata, el
+   último fijo que pagaste, dónde estás parado hoy, y cuándo volvés a
+   cobrar. Los que ya pasaron van en fuego; hoy va en menta. */
+function pintarLinea(c){
+  const caja = $('#hoyTramo'); if(!caja) return;
+  const linea = $('#hoyLinea');
+  const hitos = [];
+
+  const ultIngreso = S.movs
+    .filter(m => m.tipo === 'ingreso' && confirmado(m) && m.fecha <= c.hoy && !esNoGasto(m.catId))
+    .sort((a,b)=> a.fecha < b.fecha ? 1 : -1)[0];
+  if(ultIngreso) hitos.push({ f: ultIngreso.fecha, et: 'Te entró plata', ico: '✓' });
+
+  const ultFijo = S.movs
+    .filter(m => m.tipo === 'gasto' && confirmado(m) && m.fecha <= c.hoy && recDeMov(m))
+    .sort((a,b)=> a.fecha < b.fecha ? 1 : -1)[0];
+  if(ultFijo) hitos.push({ f: ultFijo.fecha, et: (ultFijo.desc || catName(ultFijo.catId)), ico: '✓' });
+
+  hitos.push({ f: c.hoy, et: 'Estás acá', ico: '●', ahora: true });
+  if(c.refCobro && c.refCobro > c.hoy) hitos.push({ f: c.refCobro, et: 'Volvés a cobrar', ico: '↻' });
+
+  // Sin al menos tres puntos la línea no cuenta nada: mejor no mostrarla.
+  if(hitos.length < 3){ caja.hidden = true; return; }
+  caja.hidden = false;
+
+  hitos.sort((a,b)=> a.f < b.f ? -1 : a.f > b.f ? 1 : 0);
+  linea.innerHTML = '<span class="guia" aria-hidden="true"></span>' + hitos.map(h =>
+    '<div class="hito ' + (h.ahora ? 'ahora' : (h.f < c.hoy ? 'hecho' : '')) + '">' +
+      '<span class="bola">' + h.ico + '</span>' +
+      '<span class="et">' + esc(h.et) + '</span>' +
+      '<span class="dia">' + esc(fmtDay(h.f)) + '</span>' +
+    '</div>').join('');
+}
+
+/* ── el movimiento ─────────────────────────────────────────────────
+   Los números suben desde cero y las barras crecen. Nada de esto puede
+   dejar un número en blanco: si el reloj de animaciones del navegador
+   está frenado —pestaña de fondo, teléfono bloqueado— requestAnimationFrame
+   no se llama NUNCA. Por eso cada animación lleva su propio plazo de
+   seguridad que escribe el valor final pase lo que pase. */
+const QUIETO_PLATA = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function subirNumero(el, destino, dura){
+  const escribir = v => { el.textContent = money(Math.round(v)); };
+  if(QUIETO_PLATA || !isFinite(destino)){ escribir(destino||0); return; }
+  let listo = false;
+  setTimeout(()=>{ if(!listo){ listo = true; escribir(destino); } }, dura + 300);
+  const t0 = performance.now();
+  (function paso(t){
+    if(listo) return;
+    const p = Math.min(1, (t - t0) / dura);
+    escribir(destino * (1 - Math.pow(1 - p, 3)));
+    if(p < 1) requestAnimationFrame(paso); else listo = true;
+  })(performance.now());
+}
+
+function animarHoy(){
+  const vista = $('#v-hoy');
+  if(!vista || !vista.classList.contains('on')) return;
+
+  // El número grande. Se lee del texto ya pintado para no recalcular nada.
+  const big = $('#hoyLibreV');
+  if(big && !QUIETO_PLATA){
+    const destino = Number(String(big.textContent).replace(/[^0-9-]/g,'')) || 0;
+    if(destino) subirNumero(big, destino, 950);
+  }
+  const vn = $('#hoyVidrioN');
+  if(vn && vn.dataset.n) subirNumero(vn, Number(vn.dataset.n)||0, 900);
+
+  // Las barras de la tarjeta crecen una atrás de otra.
+  document.querySelectorAll('#hoyVidrioBarras i[data-h]').forEach((b,i)=>{
+    const h = b.dataset.h + '%';
+    if(QUIETO_PLATA){ b.style.height = h; return; }
+    setTimeout(()=>{ b.style.height = h; }, 140 + i*80);
+  });
+
+  // La línea y las filas entran escalonadas.
+  document.querySelectorAll('#hoyLinea .hito').forEach((h,i)=>{
+    h.style.transitionDelay = (120 + i*130) + 'ms';
+  });
+  document.querySelectorAll('#hoyProx .p').forEach((p,i)=>{
+    p.style.transitionDelay = (i*70) + 'ms';
+  });
+
+  requestAnimationFrame(()=>{
+    const l = $('#hoyLinea'); if(l) l.classList.add('viva');
+    const px = $('#hoyProx'); if(px) px.classList.add('viva');
+  });
+  // Red de seguridad: si el reloj estaba frenado, a los 2 segundos queda
+  // todo puesto sin animación. Nunca una pantalla en blanco.
+  setTimeout(()=>{
+    const l = $('#hoyLinea'); if(l) l.classList.add('viva');
+    const px = $('#hoyProx'); if(px) px.classList.add('viva');
+    document.querySelectorAll('#hoyVidrioBarras i[data-h]').forEach(b=>{ b.style.height = b.dataset.h + '%'; });
+    document.documentElement.classList.add('ya-plata');
+  }, 2000);
+}
+
 function renderSimple(c, proximos, sinSaldo){
   // por día
   const pd = $('#hoyPorDia');
@@ -1777,6 +1931,10 @@ function renderSimple(c, proximos, sinSaldo){
       + '<div class="ptot"><span>Total · '+proximos.length+(proximos.length===1?' pago':' pagos')+'</span><b class="num">'
         + money(proximos.reduce(function(a,m){ return a + (Number(m.monto)||0); }, 0)) + '</b></div>'
     : '<div class="nada">No tenés pagos pendientes. 🎉</div>';
+
+  // la tarjeta de vidrio y la línea del mes
+  pintarVidrio(c);
+  pintarLinea(c);
 
   // ¿cómo llego a fin del mes que viene?
   pintarMesQue(c);
@@ -3211,7 +3369,9 @@ function render(){
   // El mes sólo importa donde se ve un mes: en Hoy manda el próximo cobro.
   $('#mNav').hidden = !(vista==='movs' || vista==='presu');
   refreshSelects();
-  if(vista==='hoy') renderHoy();
+  // Al pintar Hoy arrancan las animaciones. Van después del dibujado, nunca
+  // antes: animar algo que todavía no está en la página no hace nada.
+  if(vista==='hoy'){ renderHoy(); try{ animarHoy(); }catch(e){} }
   else if(vista==='movs') renderMovs();
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
@@ -4019,6 +4179,80 @@ nav.tabs button[aria-current="true"]{background:var(--ink); border-color:var(--i
 .blq-libre.neg .blq-big{background:none; color:var(--crit)}
 .blq-s{color:var(--ink-2); font-size:15px; line-height:1.5}
 .blq-det{color:var(--ink-3); opacity:1}
+
+/* ── EL NÚMERO Y LA TARJETA, LADO A LADO ─────────────────────────── */
+.tapa{display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:12px}
+@media (min-width:820px){ .tapa{grid-template-columns:1.25fr .75fr; align-items:stretch} }
+.tapa > .blq-libre{margin:0}
+
+/* La tarjeta de vidrio esmerilado de la referencia. */
+.vidrio{
+  /* Vidrio sobre CARBÓN, no sobre el fuego: translúcido a secas dejaba pasar
+     el degradado y la tarjeta se veía naranja lavada, sin contraste. */
+  background:linear-gradient(150deg, rgba(48,33,26,.92), rgba(26,18,15,.94));
+  -webkit-backdrop-filter:blur(16px) saturate(140%); backdrop-filter:blur(16px) saturate(140%);
+  border:1px solid rgba(255,255,255,.13); border-radius:var(--radius);
+  box-shadow:0 18px 40px -26px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.08);
+  padding:clamp(14px,2.4vw,20px); display:flex; flex-direction:column;
+  transition:transform .35s var(--curva);
+}
+.vidrio-k{font:500 11.5px var(--f-mono); letter-spacing:.18em; text-transform:uppercase; color:var(--ink-3)}
+.vidrio-n{font-family:var(--f-display); font-weight:600; font-size:clamp(22px,4vw,30px);
+  letter-spacing:-.03em; margin:6px 0 0; color:var(--ink)}
+.vidrio-barras{display:flex; align-items:flex-end; gap:5px; height:52px; margin-top:auto; padding-top:14px}
+.vidrio-barras i{flex:1; display:block; height:0; border-radius:4px 4px 2px 2px;
+  background:rgba(255,255,255,.2); transition:height .9s var(--curva)}
+.vidrio-barras i.pico{background:linear-gradient(180deg, var(--accent), var(--fuego-2, #E8391C))}
+.vidrio-pie{font:400 11px var(--f-mono); letter-spacing:.05em; color:var(--ink-3); margin-top:9px}
+
+/* ── LA LÍNEA DEL MES ─────────────────────────────────────────────── */
+.tramo{margin:16px 0 4px}
+.tramo h3{font-family:var(--f-display); font-size:15px; font-weight:700; letter-spacing:-.01em; margin:0 0 14px}
+.linea{position:relative; display:grid; gap:14px 6px; grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:600px){ .linea{grid-template-columns:repeat(4,minmax(0,1fr)); gap:0} }
+.guia{display:none}
+@media (min-width:600px){
+  .linea .guia{
+    display:block; position:absolute; left:12.5%; right:12.5%; top:21px; height:2px;
+    background:repeating-linear-gradient(90deg, var(--line-2) 0 8px, transparent 8px 14px);
+    transform:scaleX(0); transform-origin:left; transition:transform 1.1s var(--curva);
+  }
+  .linea.viva .guia{transform:scaleX(1)}
+}
+.hito{position:relative; text-align:center; min-width:0;
+  opacity:0; transform:translateY(10px);
+  transition:opacity .5s var(--curva), transform .5s var(--curva)}
+.linea.viva .hito{opacity:1; transform:none}
+.hito .bola{width:42px; height:42px; margin:0 auto; border-radius:50%;
+  display:grid; place-items:center; font-size:15px; position:relative; z-index:2;
+  background:var(--surface-2); border:1px solid var(--line-2); color:var(--ink-2)}
+.hito.hecho .bola{background:linear-gradient(140deg, var(--accent), #E8391C); border-color:transparent; color:var(--on-accent)}
+.hito.ahora .bola{background:var(--green-ink); border-color:transparent; color:#06251B;
+  animation:latido-hito 2.4s ease-in-out infinite}
+@keyframes latido-hito{0%,100%{box-shadow:0 0 0 0 rgba(111,227,184,.45)} 50%{box-shadow:0 0 0 11px rgba(111,227,184,0)}}
+/* Cada texto en su renglón: pegados no se entiende dónde termina uno. */
+.hito .et{display:block; font-size:12.5px; font-weight:600; margin-top:8px; line-height:1.25;
+  overflow-wrap:break-word; color:var(--ink)}
+.hito .dia{display:block; font:400 10.5px var(--f-mono); letter-spacing:.08em; color:var(--ink-3); margin-top:3px}
+
+/* ── las filas de "lo que viene" entran corridas ──────────────────── */
+#hoyProx .p{opacity:0; transform:translateX(-8px);
+  transition:opacity .45s var(--curva), transform .45s var(--curva)}
+#hoyProx.viva .p{opacity:1; transform:none}
+
+/* Red de seguridad: cuando el JS avisa que ya pasó el tiempo, todo queda
+   puesto aunque el navegador no haya animado nada. */
+html.ya-plata .hito,
+html.ya-plata #hoyProx .p{opacity:1 !important; transform:none !important; transition:none !important}
+html.ya-plata .linea .guia{transform:scaleX(1) !important; transition:none !important}
+
+@media (prefers-reduced-motion:reduce){
+  .hito, #hoyProx .p{opacity:1 !important; transform:none !important}
+  .linea .guia{transform:scaleX(1) !important}
+  .hito.ahora .bola{animation:none}
+  .vidrio-barras i{transition:none}
+}
+
 .blq-libre .lnk{color:var(--cyan)}
 .saldo-hoy input{background:rgba(5,6,10,.75); border-color:var(--line-2); color:var(--ink)}
 .blq-libre .saldo-hoy .btn{background:var(--cyan); color:#05060A; border-color:var(--cyan)}
