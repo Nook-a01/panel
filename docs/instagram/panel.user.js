@@ -11,7 +11,7 @@
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @connect      plata.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.4.2
+// @version      1.4.3
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
