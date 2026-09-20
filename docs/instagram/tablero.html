@@ -210,6 +210,14 @@ button.p.enlace:hover:not(:disabled){background:none;color:var(--acido);box-shad
 .baja .porquien{font-family:var(--m);font-size:.64rem;color:var(--apagado);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bajas .vacio{background:var(--caja)}
+/* El resto de las cuentas queda plegado hasta que se toca el botón. */
+.bajas .baja.plegada{display:none}
+.bajas.abierto .baja.plegada{display:grid}
+.desplegar{width:100%;margin-top:1px;font-family:var(--m);font-size:.64rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--cian);
+  background:var(--caja);border:1px solid var(--linea);padding:.75rem;cursor:pointer}
+.desplegar:hover:not(:disabled){background:rgba(77,227,255,.08);color:var(--cian);
+  border-color:var(--cian);box-shadow:none}
 @media (max-width:560px){
   .baja{grid-template-columns:1fr auto}
   .baja .porquien{grid-column:1/-1;white-space:normal}
@@ -1036,6 +1044,9 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
      Es lo que él quiere ver: no sólo que entraron, sino qué hicieron.
      Se agrupa por cuenta dada de baja y se dice quién la dio. */
   function bajas(gente) {
+    // Al repintar hay que sacar el botón de antes, si no se apilan.
+    const viejo = document.querySelector(".desplegar");
+    if (viejo) viejo.remove();
     const cuentas = new Map();
     for (const p of gente) {
       for (const a of (p.eventos || [])) {
@@ -1055,14 +1066,34 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
       $("bajas-nota").textContent = "";
       return;
     }
-    $("bajas").innerHTML = lista.slice(0, 60).map(c => `
-      <div class="baja">
+    // Se muestran las primeras y el resto queda plegado: sesenta filas seguidas
+    // hacían de esta sección la más larga del tablero, y las de abajo son todas
+    // de una sola baja.
+    const ASOMA = 8;
+    $("bajas").innerHTML = lista.slice(0, 60).map((c, i) => `
+      <div class="baja${i >= ASOMA ? " plegada" : ""}">
         <a class="chip" href="https://www.instagram.com/${encodeURIComponent(c.nombre)}/"
            target="_blank" rel="noopener noreferrer">@${esc(c.nombre)}</a>
         <span class="veces">${c.veces}${c.veces === 1 ? " baja" : " bajas"}</span>
         <span class="porquien">${[...c.quienes].slice(0, 6).map(u => "@" + esc(u)).join(", ") ||
           "de alguien sin nombre"}${c.quienes.size > 6 ? " y " + (c.quienes.size - 6) + " más" : ""}</span>
       </div>`).join("");
+
+    if (lista.length > ASOMA) {
+      const escondidas = Math.min(lista.length, 60) - ASOMA;
+      const b = document.createElement("button");
+      b.className = "desplegar";
+      b.type = "button";
+      b.textContent = "Ver las otras " + escondidas + " cuentas ▾";
+      b.addEventListener("click", () => {
+        const abierto = $("bajas").classList.toggle("abierto");
+        b.textContent = abierto
+          ? "Ver menos ▴"
+          : "Ver las otras " + escondidas + " cuentas ▾";
+      });
+      $("bajas").after(b);
+    }
+
     const total = lista.reduce((a, c) => a + c.veces, 0);
     $("bajas-nota").textContent =
       `${total} bajas sobre ${lista.length} cuentas distintas` +
