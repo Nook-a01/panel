@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-20T18:46:41.418Z",
+ "actualizado": "2026-09-20T21:32:05.224Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -76,6 +76,19 @@
       "pos": 4
      },
      {
+      "equipo": "Boca Juniors",
+      "abrev": "CABJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "pj": "10",
+      "pts": "17",
+      "g": "4",
+      "e": "5",
+      "p": "1",
+      "dg": "+3",
+      "mio": true,
+      "pos": 5
+     },
+     {
       "equipo": "Independiente",
       "abrev": "IND",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
@@ -86,19 +99,6 @@
       "p": "3",
       "dg": "+2",
       "mio": false,
-      "pos": 5
-     },
-     {
-      "equipo": "Boca Juniors",
-      "abrev": "CABJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "pj": "9",
-      "pts": "14",
-      "g": "3",
-      "e": "5",
-      "p": "1",
-      "dg": "+1",
-      "mio": true,
       "pos": 6
      },
      {
@@ -144,12 +144,12 @@
       "equipo": "San Lorenzo",
       "abrev": "SLO",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "9",
+      "pj": "10",
       "pts": "11",
       "g": "3",
       "e": "2",
-      "p": "4",
-      "dg": "-2",
+      "p": "5",
+      "dg": "-4",
       "mio": false,
       "pos": 10
      },
