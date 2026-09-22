@@ -56,6 +56,10 @@ td.n{font-family:var(--m);color:var(--acento2);text-align:right}
   background:var(--caja2);color:var(--tinta);padding:7px 9px;width:auto}
 .campo input[type=number]{width:76px}
 small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:break-all}
+.paso{display:inline-block;width:15px;height:15px;margin:1px;border-radius:3px;background:var(--acento)}
+.pl{display:inline-block;width:170px;font-size:.8rem;color:var(--tinta2)}
+.curva{display:flex;align-items:flex-end;gap:1px;height:56px;margin-top:8px;padding:0 1px;border-bottom:1px solid var(--linea)}
+.curva i{flex:1;background:var(--acento);opacity:.8;border-radius:1px 1px 0 0;min-width:1px}
 </style>
 </head>
 <body>
@@ -66,6 +70,7 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
 
 <nav>
   <button data-h="componer" class="on">Componer</button>
+  <button data-h="ref">Referencias</button>
   <button data-h="tocar">Tocar</button>
   <button data-h="plugins">Plugins</button>
   <button data-h="samples">Samples</button>
@@ -76,6 +81,13 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
   <section class="hoja on" id="h-componer">
     <div class="caja">
       <h2>Armar una canción entera</h2>
+      <div class="fila" style="margin-bottom:10px">
+        <label class="campo">Base
+          <select id="gBase"><option value="">Un género</option></select>
+        </label>
+        <label class="campo">Duración <input type="text" id="gDur" size="5" placeholder="3:00"></label>
+        <span class="aviso" style="margin:0" id="gBaseAviso">Con una referencia, el tempo, la tonalidad, los acordes, la forma y el ritmo salen de ella.</span>
+      </div>
       <div class="fila">
         <label class="campo">Género
           <select id="gGenero">
@@ -110,9 +122,29 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
         <li>Tocá <b>Guardar .mid</b> en la pestaña Tocar.</li>
         <li>En FL Studio: <b>Archivo → Importar → Archivo MIDI</b>, y elegí ese archivo.</li>
         <li>Te crea un canal y un patrón por pista. Ahí les ponés tus plugins y tus samples.</li>
+        <li>Para los instrumentos, seguí esta tabla (lo elegís en la pestaña Tocar, en cada pista):</li>
       </ol>
+      <div id="guiaFL"></div>
       <div class="aviso">No se puede escribir el proyecto .flp directamente: Image-Line nunca publicó ese formato. El MIDI es el camino que sí funciona.</div>
     </div>
+  </section>
+
+  <!-- REFERENCIAS -->
+  <section class="hoja" id="h-ref">
+    <div class="caja">
+      <h2>Canciones de referencia</h2>
+      <div class="fila">
+        <button class="b pri" id="refAgregar">Agregar canciones…</button>
+        <button class="b" id="refActualizar">Actualizar lista</button>
+        <span class="chip">Carpeta <b id="refCarpeta" style="font-size:.72rem">—</b></span>
+      </div>
+      <div class="aviso">
+        Copiá tus canciones (mp3, wav, flac…) a esa carpeta, o agregalas con el botón. Se miden en tu computadora
+        y no salen de acá. Sirve para tomar el estilo —tempo, groove, acordes, forma, cuánta energía tiene cada parte—,
+        no para copiar la melodía. La voz no se separa: la canción que sale es instrumental.
+      </div>
+    </div>
+    <div id="refLista"></div>
   </section>
 
   <!-- TOCAR -->
@@ -195,6 +227,7 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
 </main>
 
 <script src="compositor.js"></script>
+<script src="analizador.js"></script>
 <script src="estudio.js"></script>
 </body>
 </html>
