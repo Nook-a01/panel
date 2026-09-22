@@ -393,3 +393,77 @@ body{
   .tira{ opacity:1; transform:none }
   #fondo{ display:none }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   LAS PIELES: cada baldosa con la cara de su app
+
+   Hasta acá las cinco eran la misma baldosa pintada de otro color.
+   De acá para abajo cada una toma la forma, la tipografía y la
+   textura de su página, pero todas conservan el mismo esqueleto
+   —número, título, la línea de abajo, la flecha— y el mismo alto.
+   Si cada una fuera distinta también por fuera, esto dejaría de
+   leerse como un panel y pasaría a ser cinco cosas amontonadas.
+
+   Las que todavía no tienen su página rediseñada no llevan piel
+   propia: se la ponemos el día que le toque a su app, y así no hay
+   que pintarlas dos veces.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── 02 · PLATA EN MANO ──────────────────────────────────────────
+   La app es fuego sobre carbón y una tarjeta de vidrio esmerilado.
+   Acá el fuego entra por el ángulo de arriba a la derecha, igual que
+   en la página, y el vidrio es un brillo que cruza toda la baldosa:
+   una tarjeta de verdad, en el teléfono, le pisaría el texto. */
+.tira[data-lado="plata"]{
+  border-radius:18px;
+  background:
+    radial-gradient(120% 150% at 88% 6%, rgba(255,122,47,.30), transparent 60%),
+    radial-gradient(100% 130% at 4% 104%, rgba(142,26,12,.48), transparent 68%),
+    var(--fondo);
+}
+.tira[data-lado="plata"] h2{
+  font-family:'Space Grotesk','Archivo',system-ui,sans-serif;
+  font-weight:500;
+  letter-spacing:-.032em;
+}
+.tira[data-lado="plata"] .mini{ border-radius:100px }
+/* El vidrio. Va por encima del velo del dibujo —de ahí el z-index—
+   porque si queda debajo no se ve nada. */
+.tira[data-lado="plata"] .arte::before{
+  content:"";
+  position:absolute; inset:0; z-index:1;
+  border-top:1px solid rgba(255,255,255,.15);
+  border-radius:18px 18px 0 0;
+  background:linear-gradient(152deg,
+    rgba(255,255,255,.11) 0%, rgba(255,255,255,.025) 36%, transparent 58%);
+}
+
+/* ── 05 · ESTUDIO ────────────────────────────────────────────────
+   La app es un afiche: marco blanco, esquinas duras y Anton. La
+   barrita de color de la izquierda se saca, porque lo que identifica
+   a esta baldosa es el marco. */
+.tira[data-lado="musica"]{
+  border-radius:0;
+  border:2px solid #F4F4F4;
+  background:#000;
+}
+.tira[data-lado="musica"] h2{
+  font-family:'Anton',Impact,'Haettenschweiler','Arial Narrow Bold',sans-serif;
+  font-weight:400;
+  letter-spacing:.008em;
+  text-transform:uppercase;
+}
+.tira[data-lado="musica"] .num{ letter-spacing:.2em; color:#8A8A8A }
+.tira[data-lado="musica"] .mini{ border-radius:0 }
+.tira[data-lado="musica"]::after{ width:0 }
+/* La rejilla del dembow, abajo de todo: el bombo cada cuatro tiempos
+   en verde y el hi-hat en cada corchea, apenas. Es el mismo patrón
+   que toca la pieza adentro de la app. */
+.tira[data-lado="musica"] .arte::before{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:7px; z-index:1;
+  background:
+    repeating-linear-gradient(90deg, #C6FF1F 0 2.1%, transparent 2.1% 25%),
+    repeating-linear-gradient(90deg, rgba(198,255,31,.4) 0 2.1%, transparent 2.1% 6.25%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 2.1%, transparent 2.1% 3.125%);
+}
