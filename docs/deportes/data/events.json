@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22T04:53:05.865Z",
+ "actualizado": "2026-09-22T09:56:08.074Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
+   "total": 2,
    "proximos": 0
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-703953",
-   "miLado": "local",
-   "idEspn": "703953",
-   "liga": "conmebol.america",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Argentina vs Colombia",
-   "inicio": "2024-07-15T01:15Z",
-   "horaConfirmada": true,
-   "competicion": "Copa América",
-   "sede": "Hard Rock Stadium",
-   "local": "Argentina",
-   "visitante": "Colombia",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
   {
    "id": "espn-684665",
    "miLado": "visitante",
