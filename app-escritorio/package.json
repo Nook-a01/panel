@@ -22,6 +22,7 @@
       "estudio.html",
       "estudio.js",
       "compositor.js",
+      "analizador.js",
       "pieza-inicial.json",
       "icono.png",
       "package.json"

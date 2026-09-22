@@ -106,6 +106,33 @@ async function escanearSamples(raiz) {
   return { ruta: raiz, total, cortado, porExt, grupos };
 }
 
+/* ---------------- referencias ----------------
+   Canciones que le pasás para que las mida. Sólo se pueden leer las que están
+   en la carpeta de referencias o las que agregaste vos con el botón: la
+   pantalla no puede pedir cualquier archivo del disco. */
+const DIR_REF = "D:\\Referencias";
+const AUDIO_REF = new Set([".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aif", ".aiff"]);
+const TOPE_REF = 300 * 1024 * 1024;
+
+async function listarReferencias() {
+  const extras = await leerJson(datos("referencias.json"), []);
+  const rutas = new Set(extras);
+  try {
+    for (const e of await fs.readdir(DIR_REF, { withFileTypes: true })) {
+      if (e.isFile() && AUDIO_REF.has(path.extname(e.name).toLowerCase())) rutas.add(path.join(DIR_REF, e.name));
+    }
+  } catch { /* la carpeta puede no existir todavía */ }
+  const archivos = [];
+  for (const ruta of rutas) {
+    try {
+      const st = await fs.stat(ruta);
+      archivos.push({ nombre: path.basename(ruta), ruta, bytes: st.size, mtime: Math.round(st.mtimeMs), agregada: extras.includes(ruta) });
+    } catch { /* si el archivo ya no está, se saltea */ }
+  }
+  archivos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  return { carpeta: DIR_REF, existe: await existe(DIR_REF), archivos };
+}
+
 /* ---------------- versiones ----------------
    Una idea no es un archivo, son varios intentos. Cada versión es su propio
    archivo con su nombre y su fecha, y el índice dice cuál estás escuchando.
@@ -245,6 +272,44 @@ function registrar() {
   });
 
   ipcMain.handle("estudio:samples", (_e, ruta) => escanearSamples(ruta));
+
+  ipcMain.handle("estudio:ref-listar", () => listarReferencias());
+
+  ipcMain.handle("estudio:ref-agregar", async () => {
+    const r = await dialog.showOpenDialog({
+      title: "Elegí canciones de referencia",
+      properties: ["openFile", "multiSelections"],
+      filters: [{ name: "Audio", extensions: ["mp3", "wav", "flac", "ogg", "m4a", "aac", "aif", "aiff"] }],
+    });
+    if (!r.canceled && r.filePaths.length) {
+      const extras = await leerJson(datos("referencias.json"), []);
+      for (const f of r.filePaths) if (!extras.includes(f)) extras.push(f);
+      await escribirJson(datos("referencias.json"), extras);
+    }
+    return listarReferencias();
+  });
+
+  ipcMain.handle("estudio:ref-quitar", async (_e, ruta) => {
+    const extras = await leerJson(datos("referencias.json"), []);
+    await escribirJson(datos("referencias.json"), extras.filter(x => x !== ruta));
+    return listarReferencias();
+  });
+
+  ipcMain.handle("estudio:ref-leer", async (_e, ruta) => {
+    const l = await listarReferencias();
+    const a = l.archivos.find(x => x.ruta === ruta);
+    if (!a) throw new Error("Ese archivo no está en la lista de referencias.");
+    if (a.bytes > TOPE_REF) throw new Error("El archivo pesa más de 300 MB.");
+    return fs.readFile(ruta);
+  });
+
+  ipcMain.handle("estudio:fichas", () => leerJson(datos("fichas.json"), {}));
+  ipcMain.handle("estudio:ficha-guardar", async (_e, ruta, ficha) => {
+    const todas = await leerJson(datos("fichas.json"), {});
+    todas[ruta] = ficha;
+    await escribirJson(datos("fichas.json"), todas);
+    return true;
+  });
 
   ipcMain.handle("estudio:leer-pieza", () => piezaActual());
   ipcMain.handle("estudio:guardar-pieza", (_e, pieza) => guardarActual(pieza));

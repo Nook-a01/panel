@@ -143,6 +143,59 @@
     if (sonando) raf = requestAnimationFrame(mover);
   }
 
+  /* ---------------- instrumento de cada pista ---------------- */
+  // Un .mid no puede llevar el plugin, sólo las notas. Lo que elegís acá queda
+  // guardado en la versión y se muestra como guía para armar los canales en FL.
+  var catalogo = [];
+  async function cargarCatalogo() {
+    var r = await window.estudio.plugins();
+    var porNombre = {};
+    r.carpetas.forEach(function (c) {
+      c.plugins.forEach(function (p) {
+        var k = p.nombre.toLowerCase();
+        // El mismo plugin suele estar en VST3 y en VST2: se deja el VST3.
+        if (!porNombre[k] || (p.clase === "VST3" && porNombre[k].clase !== "VST3")) porNombre[k] = p;
+      });
+    });
+    catalogo = Object.keys(porNombre).map(function (k) { return porNombre[k]; })
+      .sort(function (a, b) { return a.nombre.localeCompare(b.nombre); });
+  }
+  function opcionesPlugin(pista) {
+    var elegido = (pieza.plugins || {})[pista];
+    var lista = catalogo.slice();
+    if (elegido && !lista.some(function (x) { return x.nombre === elegido.nombre; })) lista.unshift(elegido);
+    return '<option value="">FLEX (el que trae FL)</option>' + lista.map(function (p) {
+      return '<option value="' + esc(p.nombre) + '"' + (elegido && elegido.nombre === p.nombre ? " selected" : "") + ">" +
+        esc(p.nombre) + "</option>";
+    }).join("");
+  }
+  $("#pistas").addEventListener("change", function (e) {
+    var s = e.target.closest("select[data-pista]");
+    if (!s || !pieza) return;
+    var nom = s.dataset.pista;
+    pieza.plugins = pieza.plugins || {};
+    if (!s.value) delete pieza.plugins[nom];
+    else {
+      var c = catalogo.filter(function (x) { return x.nombre === s.value; })[0] || pieza.plugins[nom];
+      pieza.plugins[nom] = { nombre: c.nombre, clase: c.clase };
+    }
+    guardar();
+    pintarGuia();
+  });
+  function pintarGuia() {
+    var caja = $("#guiaFL");
+    var filas = [];
+    ((pieza && pieza.pistas) || []).forEach(function (p, i) {
+      if (p.percusion) return;
+      var el = (pieza.plugins || {})[p.nombre];
+      filas.push("<tr><td class=\"n\">" + (i + 1) + "</td><td>" + esc(p.nombre) + "</td><td>" +
+        (el ? "<b>" + esc(el.nombre) + "</b> <small class=\"ruta\">" + esc(el.clase) + "</small>" : "FLEX (el que trae FL)") + "</td></tr>");
+    });
+    caja.innerHTML = filas.length ? '<div class="lista entera" style="margin-top:10px"><table><thead><tr>' +
+      "<th>Canal en FL</th><th>Pista</th><th>Instrumento que elegiste</th></tr></thead><tbody>" +
+      filas.join("") + "</tbody></table></div>" : "";
+  }
+
   /* ---------------- dibujar la pieza ---------------- */
   function pintarPieza() {
     if (!pieza) { $("#cab").textContent = "Todavía no hay ninguna pieza"; return; }
@@ -166,8 +219,12 @@
         ns.map(function (n) {
           return '<i style="left:' + (n.i / total * 100) + "%;width:" + Math.max(0.6, n.l / total * 100) +
             "%;bottom:" + (6 + (n.v - min) / rango * 38) + 'px"></i>';
-        }).join("") + '<span class="aguja"></span></div></div>';
+        }).join("") + '<span class="aguja"></span></div>' +
+        (p.percusion ? "" : '<div class="fila" style="margin-top:8px"><label class="campo">Instrumento en FL ' +
+          '<select data-pista="' + esc(p.nombre) + '">' + opcionesPlugin(p.nombre) + "</select></label></div>") +
+        "</div>";
     }).join("");
+    pintarGuia();
   }
 
   /* ---------------- versiones ---------------- */
@@ -336,12 +393,16 @@
     $("#gAviso").textContent = "";
     parar();
     try {
+      var ref = null, base = $("#gBase").value;
+      if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: Number($("#gBpm").value) || null });
       var nueva = window.Compositor.componer({
         genero: $("#gGenero").value,
         tonalidad: $("#gTon").value.trim() || "Am",
         bpm: Number($("#gBpm").value) || null,
         semilla: Number($("#gSemilla").value) || 1,
         titulo: "Canción " + $("#gSemilla").value,
+        ref: ref,
+        duracion: leerDuracion($("#gDur").value),
       });
       var r = await window.estudio.versionDesde(nueva);
       pieza = r.pieza;
@@ -397,6 +458,122 @@
     b.disabled = false; b.textContent = "Buscar mis plugins";
   };
 
+  /* ---------------- referencias ---------------- */
+  var fichas = {}, refs = [], analizando = false;
+  var mmss = function (s) { return Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0"); };
+
+  // "3:00" son tres minutos; "2,5" son dos minutos y medio; vacío = sin tocar.
+  function leerDuracion(t) {
+    t = String(t || "").trim();
+    if (!t) return null;
+    var m = t.match(/^(\d+):(\d{1,2})$/), s;
+    if (m) s = Number(m[1]) * 60 + Number(m[2]);
+    else { var n = Number(t.replace(",", ".")); s = n > 0 ? Math.round(n * 60) : null; }
+    return s ? Math.max(60, Math.min(600, s)) : null;
+  }
+
+  var fichaVigente = function (a) { var f = fichas[a.ruta]; return f && f.bytes === a.bytes && f.mtime === a.mtime ? f : null; };
+
+  function fichaHtml(f) {
+    var chips =
+      '<span class="chip">Tempo <b>' + esc(f.tempo.bpm) + "</b> BPM</span>" +
+      '<span class="chip">Tonalidad <b>' + esc(f.tonalidad.nombre) + "</b></span>" +
+      '<span class="chip">Dura <b>' + esc(mmss(f.duracion)) + "</b></span>" +
+      '<span class="chip"><b>' + esc(f.compas.compases) + "</b> compases</span>" +
+      '<span class="chip">Swing <b>' + Math.round(f.swing.s16 * 100) + "%</b></span>" +
+      '<span class="chip">Nivel <b>' + esc(f.nivel.rmsDb) + "</b> dB</span>";
+    var nombres = { kick: "Grave (bombo y bajo)", caja: "Medio-agudo (caja, clap)", hat: "Agudo (hi-hat)" };
+    var grilla = ["kick", "caja", "hat"].map(function (k) {
+      return '<div style="margin-top:3px"><span class="pl">' + nombres[k] + "</span>" +
+        f.patrones[k].map(function (v, i) {
+          return '<i class="paso" style="opacity:' + (0.1 + 0.9 * v).toFixed(2) + (i % 4 === 3 ? ";margin-right:9px" : "") + '"></i>';
+        }).join("") + "</div>";
+    }).join("");
+    var mn = Math.min.apply(null, f.curva), mx = Math.max.apply(null, f.curva), rg = Math.max(1, mx - mn);
+    var curva = '<div class="curva">' + f.curva.map(function (v, i) {
+      return '<i title="compás ' + (i + 1) + ": " + v + ' dB" style="height:' + (10 + 90 * (v - mn) / rg).toFixed(0) + '%"></i>';
+    }).join("") + "</div>";
+    var secs = '<div class="lista entera" style="margin-top:10px"><table><thead><tr><th>Parte</th><th>Compás</th><th>Dura</th><th>Energía</th></tr></thead><tbody>' +
+      f.forma.map(function (s) {
+        return "<tr><td>" + esc(s.nombre) + '</td><td class="n">' + s.desdeCompas + '</td><td class="n">' + s.compases + '</td><td class="n">' + s.energia + " / 5</td></tr>";
+      }).join("") + "</tbody></table></div>";
+    var v = f.acordes.vuelta;
+    return '<div class="fila" style="margin-top:10px">' + chips + "</div>" +
+      '<div class="aviso">Tonalidades posibles: ' + esc(f.tonalidad.candidatos.join(", ")) + ". Tempos posibles: " + esc(f.tempo.candidatos.join(", ")) +
+      ' BPM (si el principal está a la mitad o al doble de lo que sentís, decímelo).</div>' +
+      '<div style="margin-top:12px"><b style="font-size:.85rem;color:var(--acento2)">Dónde caen los golpes (un compás, 16 pasos)</b>' + grilla + "</div>" +
+      '<div style="margin-top:12px"><b style="font-size:.85rem;color:var(--acento2)">Vuelta de acordes</b> <span class="chip">' +
+        (v.nombres.length ? esc(v.nombres.join(" – ")) + " · se repite " + (v.acuerdo * 100).toFixed(0) + "%" : "sin vuelta clara") + "</span></div>" +
+      '<div style="margin-top:12px"><b style="font-size:.85rem;color:var(--acento2)">Energía compás a compás</b>' + curva + "</div>" +
+      secs;
+  }
+
+  async function pintarReferencias() {
+    var r = await window.estudio.refListar();
+    refs = r.archivos;
+    fichas = await window.estudio.fichas();
+    $("#refCarpeta").textContent = r.carpeta;
+    $("#refLista").innerHTML = refs.length ? refs.map(function (a) {
+      var f = fichaVigente(a);
+      return '<div class="caja" data-ref="' + esc(a.ruta) + '"><div class="fila" style="justify-content:space-between">' +
+        "<div><b>" + esc(a.nombre) + '</b> <small class="ruta">' + (a.bytes / 1048576).toFixed(1) + " MB</small></div>" +
+        '<div class="fila"><button class="b pri" data-analizar="' + esc(a.ruta) + '">' + (f ? "Analizar de nuevo" : "Analizar") + "</button>" +
+        (a.agregada ? '<button class="b" data-quitar="' + esc(a.ruta) + '">Quitar</button>' : "") + "</div></div>" +
+        '<div class="aviso" data-estado>' + (f ? "" : "Todavía sin analizar.") + "</div>" +
+        (f ? fichaHtml(f) : "") + "</div>";
+    }).join("") : '<div class="caja vacio">' + (r.existe ? "La carpeta está vacía." : "La carpeta todavía no existe.") +
+      " Copiá ahí tus canciones de referencia y tocá «Actualizar lista».</div>";
+    var sel = $("#gBase"), antes = sel.value;
+    sel.innerHTML = '<option value="">Un género</option>' + refs.filter(fichaVigente).map(function (a) {
+      return '<option value="' + esc(a.ruta) + '">Referencia: ' + esc(a.nombre.replace(/\.[^.]+$/, "")) + "</option>";
+    }).join("");
+    if (antes && fichas[antes]) sel.value = antes;
+  }
+
+  async function analizarReferencia(ruta) {
+    if (analizando) return;
+    var a = refs.filter(function (x) { return x.ruta === ruta; })[0];
+    var caja = document.querySelector('[data-ref="' + CSS.escape(ruta) + '"]');
+    if (!a || !caja) return;
+    var estado = caja.querySelector("[data-estado]"), botones = document.querySelectorAll("#refLista button");
+    var dice = function (t, clase) { estado.textContent = t; estado.className = "aviso " + (clase || ""); };
+    analizando = true; botones.forEach(function (b) { b.disabled = true; });
+    try {
+      dice("Leyendo el archivo…");
+      var bytes = await window.estudio.refLeer(ruta);
+      var ab = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
+      dice("Decodificando el audio…");
+      var buf = await new OfflineAudioContext(2, 1, window.Analizador.SR).decodeAudioData(ab);
+      var canales = [];
+      for (var i = 0; i < buf.numberOfChannels; i++) canales.push(buf.getChannelData(i));
+      var mono = window.Analizador.aMono(canales, buf.sampleRate);
+      var ficha = await window.Analizador.analizar(mono, { progreso: dice });
+      ficha.archivo = a.nombre.replace(/\.[^.]+$/, "");
+      ficha.bytes = a.bytes; ficha.mtime = a.mtime;
+      await window.estudio.guardarFicha(ruta, ficha);
+      analizando = false;
+      await pintarReferencias();
+    } catch (e) {
+      analizando = false;
+      dice("No pude analizarla: " + e.message, "mal");
+      botones.forEach(function (b) { b.disabled = false; });
+    }
+  }
+
+  $("#refLista").addEventListener("click", async function (e) {
+    var an = e.target.closest("[data-analizar]"), qu = e.target.closest("[data-quitar]");
+    if (an) analizarReferencia(an.dataset.analizar);
+    if (qu) { await window.estudio.refQuitar(qu.dataset.quitar); pintarReferencias(); }
+  });
+  $("#refAgregar").onclick = async function () { await window.estudio.refAgregar(); pintarReferencias(); };
+  $("#refActualizar").onclick = function () { pintarReferencias(); };
+  $("#gBase").onchange = function () {
+    var f = fichas[this.value];
+    $("#gBaseAviso").textContent = f
+      ? "Va a salir a " + f.tempo.bpm + " BPM en " + f.tonalidad.nombre + ", con la forma de la referencia (" + mmss(f.duracion) + "). Si ponés una duración, la forma se ajusta."
+      : "Con una referencia, el tempo, la tonalidad, los acordes, la forma y el ritmo salen de ella.";
+  };
+
   /* ---------------- samples ---------------- */
   async function pintarSamples() {
     var carpetas = await window.estudio.carpetas();
@@ -450,6 +627,7 @@
   window.addEventListener("beforeunload", parar);
 
   (async function () {
+    try { await cargarCatalogo(); } catch (e) { /* sin lista, queda sólo FLEX */ }
     pieza = await window.estudio.leerPieza();
     await pintarVersiones();
     pintarPieza();
@@ -457,5 +635,6 @@
     pintarMapa();
     buscarSalidas();
     pintarSamples();
+    try { await pintarReferencias(); } catch (e) { /* sin referencias no pasa nada */ }
   })();
 })();
