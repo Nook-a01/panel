@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22T00:05:34.751Z",
+ "actualizado": "2026-09-22T04:53:05.865Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -848,7 +848,7 @@
    "sport": "ufc",
    "emoji": "🥊",
    "titulo": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-   "inicio": "2026-09-26T19:00Z",
+   "inicio": "2026-09-26T21:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "Meta APEX",
@@ -935,7 +935,7 @@
    "sport": "ufc",
    "emoji": "🥊",
    "titulo": "UFC 332: Silva vs. Wang",
-   "inicio": "2026-10-03T21:00Z",
+   "inicio": "2026-10-03T20:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "Delta Center",

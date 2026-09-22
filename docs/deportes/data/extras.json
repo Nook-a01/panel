@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22T00:05:34.751Z",
+ "actualizado": "2026-09-22T04:53:05.865Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -102,6 +102,19 @@
       "pos": 6
      },
      {
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "10",
+      "pts": "16",
+      "g": "5",
+      "e": "1",
+      "p": "4",
+      "dg": "+4",
+      "mio": false,
+      "pos": 7
+     },
+     {
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
@@ -110,19 +123,6 @@
       "g": "4",
       "e": "4",
       "p": "2",
-      "dg": "+3",
-      "mio": false,
-      "pos": 7
-     },
-     {
-      "equipo": "Lanús",
-      "abrev": "LAN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "9",
-      "pts": "13",
-      "g": "4",
-      "e": "1",
-      "p": "4",
       "dg": "+3",
       "mio": false,
       "pos": 8
@@ -157,12 +157,12 @@
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-      "pj": "9",
+      "pj": "10",
       "pts": "10",
       "g": "3",
       "e": "1",
-      "p": "5",
-      "dg": "0",
+      "p": "6",
+      "dg": "-1",
       "mio": false,
       "pos": 11
      },
@@ -953,323 +953,7 @@
      }
     ]
    },
-   "plantel": [
-    {
-     "id": "177927",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Juan Musso",
-     "dorsal": "1",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "167192",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gerónimo Rulli",
-     "dorsal": "12",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/167192.png",
-     "lesionado": false
-    },
-    {
-     "id": "158626",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Emiliano Martínez",
-     "dorsal": "23",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "233945",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Marcos Senesi",
-     "dorsal": "2",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233945.png",
-     "lesionado": false
-    },
-    {
-     "id": "145190",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nicolás Tagliafico",
-     "dorsal": "3",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 34,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/145190.png",
-     "lesionado": false
-    },
-    {
-     "id": "228262",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gonzalo Montiel",
-     "dorsal": "4",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "233937",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lisandro Martínez",
-     "dorsal": "6",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233937.png",
-     "lesionado": false
-    },
-    {
-     "id": "96970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Cristian Romero",
-     "dorsal": "13",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "119289",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nicolás Otamendi",
-     "dorsal": "19",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 38,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "249663",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Facundo Medina",
-     "dorsal": "25",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "164826",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nahuel Molina",
-     "dorsal": "26",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "153115",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Leandro Paredes",
-     "dorsal": "5",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "174466",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rodrigo De Paul",
-     "dorsal": "7",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "320760",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Valentín Barco",
-     "dorsal": "8",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 22,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "207343",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Giovani Lo Celso",
-     "dorsal": "11",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 30,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "228393",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Exequiel Palacios",
-     "dorsal": "14",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "277208",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Thiago Almada",
-     "dorsal": "16",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/277208.png",
-     "lesionado": false
-    },
-    {
-     "id": "337970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nico Paz",
-     "dorsal": "18",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 22,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "249299",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Alexis Mac Allister",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "285450",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Enzo Fernández",
-     "dorsal": "24",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "277206",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Julián Álvarez",
-     "dorsal": "9",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 26,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "45843",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lionel Messi",
-     "dorsal": "10",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
-     "lesionado": false
-    },
-    {
-     "id": "76017",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Nico González",
-     "dorsal": "15",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 28,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "323838",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Giuliano Simeone",
-     "dorsal": "17",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 23,
-     "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "311743",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "José Manuel López",
-     "dorsal": "21",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "219713",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lautaro Martínez",
-     "dorsal": "22",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 29,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    }
-   ],
+   "plantel": null,
    "noticias": [
     {
      "titulo": "Why this 3-week international break is longest ever (and why that's a good thing)",
@@ -1277,34 +961,6 @@
      "fecha": "2026-09-21T07:52:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1716998_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49940653/why-3-week-international-break-longest-ever-why-thats-good-thing"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-09-21T02:08:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Patrick Vieira insists he expects to win trophies as Senegal boss",
-     "resumen": "Patrick Vieira insists he expects to win trophies as Senegal boss",
-     "fecha": "2026-09-18T19:21:43Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0918/dm_260918_COM_SOC_Presser_Patrick_Vieira_insists_he_expects_to_win_trophies_as_Senegal_boss_20260918_GLOBA/dm_260918_COM_SOC_Presser_Patrick_Vieira_insists_he_expects_to_win_trophies_as_Senegal_boss_20260918_GLOBA.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49974557/patrick-vieira-insists-expects-win-trophies-senegal-boss"
-    },
-    {
-     "titulo": "UEFA, Concacaf call on Infantino to make $10m payments to all FIFA members",
-     "resumen": "FIFA's member federations should each get an extra $10 million (£7.4m) from its swelling cash reserves after a successful World Cup, the soccer body's vice presidents from Europe and North America said in a letter Friday.",
-     "fecha": "2026-09-18T17:21:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0918/r1718671_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49974050/uefa-concacaf-call-infantino-make-10m-payments-all-fifa-members"
-    },
-    {
-     "titulo": "Tuchel: No point in torturing ourselves over World Cup exit",
-     "resumen": "Tuchel: No point in torturing ourselves over World Cup exit",
-     "fecha": "2026-09-18T12:27:25Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0918/dm_260918_Tuchel_No_point_in_torturing_ourselves_over_World_Cup_exit/dm_260918_Tuchel_No_point_in_torturing_ourselves_over_World_Cup_exit.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49972364/no-point-torturing-ourselves-world-cup-exit"
     },
     {
      "titulo": "VIDEO: Hislop: USMNT will benefit long-term from Pochettino's brave selections",
@@ -1581,8 +1237,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1629,8 +1286,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1959,6 +1617,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Sources: Higuain at center of refs' union beef with MLS NEXT Pro",
+     "resumen": "The union that represents MLS and USL referees launched a scathing critique of MLS NEXT Pro over its handling of an incident in which a coach committed what it described as \"two deliberate acts of physical abuse and sexism towards a female official.\"",
+     "fecha": "2026-09-22T01:06:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719648_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49991564/refs-union-ban-crew-2-coach-higuain"
+    },
+    {
      "titulo": "MLS Power Rankings: Union skyrocket as unbeaten streak reaches 11 games",
      "resumen": "Can anyone stop the Philadelphia Union? Their latest win powered them up the charts in this week's edition of ESPN's MLS Power Rankings.",
      "fecha": "2026-09-21T17:33:41Z",
@@ -1985,13 +1650,6 @@
      "fecha": "2026-09-21T01:30:27Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0921/599d3bee-dfa0-4e58-bef4-3f5df9062466/599d3bee-dfa0-4e58-bef4-3f5df9062466.jpg",
      "link": "https://www.espn.com/video/clip/_/id/49995264/lionel-messi-curls-free-kick-inter-miami"
-    },
-    {
-     "titulo": "Sources: Higuain at center of refs' union beef with MLS NEXT Pro",
-     "resumen": "The union that represents MLS and USL referees launched a scathing critique of MLS NEXT Pro over its handling of an incident in which a coach committed what it described as \"two deliberate acts of physical abuse and sexism towards a female official.\"",
-     "fecha": "2026-09-21T00:43:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719648_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49991564/refs-union-ban-crew-2-coach-higuain"
     },
     {
      "titulo": "Nashville SC vs. Chicago Fire FC - Game Highlights",
@@ -2673,9 +2331,9 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Jones takes responsibility for Steveson leaving octagon early",
+     "titulo": "Jones takes responsibility for Steveson leaving Octagon early",
      "resumen": "Jon Jones took responsibility for Gable Steveson's quick exit after a historic upset on Saturday, saying his instant reaction was to \"get my friend to the back to make sure he was OK.\"",
-     "fecha": "2026-09-21T23:50:31Z",
+     "fecha": "2026-09-22T04:28:01Z",
      "imagen": "https://a.espncdn.com/photo/2026/0921/r1720205_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/ufc/story/_/id/50001249/jones-takes-responsibility-steveson-leaving-octagon-early"
     },
