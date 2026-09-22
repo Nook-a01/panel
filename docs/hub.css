@@ -409,6 +409,11 @@ body{
    que pintarlas dos veces.
    ══════════════════════════════════════════════════════════════════ */
 
+.tira .filete{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  display:none;
+}
+
 /* ── 02 · PLATA EN MANO ──────────────────────────────────────────
    La app es fuego sobre carbón y una tarjeta de vidrio esmerilado.
    Acá el fuego entra por el ángulo de arriba a la derecha, igual que
@@ -427,11 +432,9 @@ body{
   letter-spacing:-.032em;
 }
 .tira[data-lado="plata"] .mini{ border-radius:100px }
-/* El vidrio. Va por encima del velo del dibujo —de ahí el z-index—
-   porque si queda debajo no se ve nada. */
-.tira[data-lado="plata"] .arte::before{
-  content:"";
-  position:absolute; inset:0; z-index:1;
+/* El vidrio esmerilado, cruzando toda la baldosa. */
+.tira[data-lado="plata"] .filete{
+  display:block;
   border-top:1px solid rgba(255,255,255,.15);
   border-radius:18px 18px 0 0;
   background:linear-gradient(152deg,
@@ -459,11 +462,39 @@ body{
 /* La rejilla del dembow, abajo de todo: el bombo cada cuatro tiempos
    en verde y el hi-hat en cada corchea, apenas. Es el mismo patrón
    que toca la pieza adentro de la app. */
-.tira[data-lado="musica"] .arte::before{
-  content:"";
-  position:absolute; left:0; right:0; bottom:0; height:7px; z-index:1;
+.tira[data-lado="musica"] .filete{
+  display:block; top:auto; height:7px;
   background:
     repeating-linear-gradient(90deg, #C6FF1F 0 2.1%, transparent 2.1% 25%),
     repeating-linear-gradient(90deg, rgba(198,255,31,.4) 0 2.1%, transparent 2.1% 6.25%),
     repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 2.1%, transparent 2.1% 3.125%);
+}
+
+/* ── 04 · CAMPAMENTO ─────────────────────────────────────────────
+   La app es una revista: papel, condensada en versales y azul, rojo
+   y amarillo plenos. Es la única baldosa clara del panel, y eso está
+   bien: su página también es la única clara. El velo del dibujo se
+   invierte —acá el papel es el fondo, no la tinta— y el dibujo va
+   mucho más tenue, porque sobre claro cualquier trazo grita. */
+.tira[data-lado="campamento"]{
+  border-radius:0;
+  border:2px solid var(--texto);
+  background:var(--fondo);
+}
+.tira[data-lado="campamento"] h2{
+  font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;
+  font-weight:800;
+  font-size:clamp(1.5rem, 5.8vw, 2.6rem);
+  letter-spacing:.005em;
+  text-transform:uppercase;
+}
+.tira[data-lado="campamento"] .num{letter-spacing:.2em}
+.tira[data-lado="campamento"] .mini{border-radius:0}
+/* La barrita de la izquierda se va: el marco es lo que identifica. */
+.tira[data-lado="campamento"]::after{width:0}
+/* Los cuatro colores de las cuatro semanas, como en la app. */
+.tira[data-lado="campamento"] .filete{
+  display:block; top:auto; height:7px;
+  background:linear-gradient(90deg,
+    var(--t) 0 25%, var(--t2) 25% 50%, #FFD12E 50% 75%, var(--texto) 75% 100%);
 }

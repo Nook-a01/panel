@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- El ícono de la pestaña, escrito acá adentro: sin archivo aparte que
      se quede viejo en la caché. Antes quedaba el mundo gris del navegador. -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121216'/%3E%3Cpath d='M16 6 L27 26 H5 Z' fill='%23ff9a4d'/%3E%3Cpath d='M16 14 L21 26 H11 Z' fill='%23121216'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231D3FD6'/%3E%3Cpath d='M16 5 L28 27 H4 Z' fill='%23FFD12E'/%3E%3Cpath d='M16 14 L21 27 H11 Z' fill='%23E8402E'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#1D3FD6">
 <title>Nook · Campamento de 30 días</title>
 <style>
   :root{
@@ -199,21 +200,26 @@ a.ir-teoria{ color:var(--accent); text-decoration:underline; text-underline-offs
 <header>
   <div class="wrap">
     <div class="kicker">Nook · Productor</div>
-    <h1>Campamento de 30 días</h1>
+    <h1>Campamento<em>de 30 días</em></h1>
     <p class="sub">Teoría aplicada + práctica diaria en FL Studio, 30–45 min por día. Reggaetón, trap, afrobeats y house estilo Claptone — todo con los plugins y librerías que ya tenés.</p>
+  </div>
+</header>
+
+<div class="avance">
+  <div class="wrap">
     <div class="progress-row">
       <div class="day-chip" id="dayChip">Día 1 de 30</div>
       <div class="bar"><div id="barFill"></div></div>
       <div class="bar-label" id="barLabel"></div>
     </div>
   </div>
-</header>
+</div>
 
 <nav><div class="wrap"><div class="tabs">
-  <button class="tab active" data-tab="hoy">🎧 Hoy</button>
-  <button class="tab" data-tab="plan">📅 Plan de 30 días</button>
-  <button class="tab" data-tab="teoria">🎹 Teoría</button>
-  <button class="tab" data-tab="recursos">🧰 Tus recursos</button>
+  <button class="tab active" data-tab="hoy">Hoy</button>
+  <button class="tab" data-tab="plan">Plan de 30 días</button>
+  <button class="tab" data-tab="teoria">Teoría</button>
+  <button class="tab" data-tab="recursos">Tus recursos</button>
 </div></div></nav>
 
 <div class="wrap">
@@ -281,14 +287,14 @@ a.ir-teoria{ color:var(--accent); text-decoration:underline; text-underline-offs
     <h3>La escala menor: tu casa</h3>
     <p>El 90% del reggaetón, trap, afro y deep house está en escala <strong>menor</strong> (suena emotiva/oscura; la mayor suena alegre, se usa menos en estos géneros). Tu escala base para todo el plan:</p>
     <div class="prog" style="margin-bottom:8px;"><div class="name">La menor (Am) — solo teclas blancas</div><div class="notes">A · B · C · D · E · F · G</div><div class="use">Empezá acá siempre. Cuando la domines, movete a otras.</div></div>
-    <table>
+    <div class="tabla-caja"><table>
       <tr><th>Escala</th><th>Notas</th><th>La escuchás en</th></tr>
       <tr><td><b>Am</b> (La menor)</td><td class="mono">A B C D E F G</td><td>Todos lados. Tu punto de partida.</td></tr>
       <tr><td><b>Em</b> (Mi menor)</td><td class="mono">E F# G A B C D</td><td>Trap, reggaetón. Una sola tecla negra (F#).</td></tr>
       <tr><td><b>Dm</b> (Re menor)</td><td class="mono">D E F G A A# C</td><td>House, afro. Cálida.</td></tr>
       <tr><td><b>Fm</b> (Fa menor)</td><td class="mono">F G G# A# C C# D#</td><td>Trap oscuro, drill.</td></tr>
       <tr><td><b>Am armónica</b></td><td class="mono">A B C D E F <b style="color:var(--accent)">G#</b></td><td>Trap árabe/dark. Una nota cambia todo (día 8).</td></tr>
-    </table>
+    </table></div>
     <div class="callout"><b>¿En qué escala está un sample?</b> Arrastralo al playlist, abrilo con el ícono de onda y fijate si el nombre trae la tonalidad (ej: "142 BPM D Min" = Re menor). Si no la trae: tocá notas de Am por encima hasta encontrar la que "encaja" como tónica — o usá un MIDI del mismo pack y mirá qué notas usa.</div>
   </div>
 
@@ -391,7 +397,7 @@ a.ir-teoria{ color:var(--accent); text-decoration:underline; text-underline-offs
   <div class="card" id="teoria-8">
     <h2>8. Estructura: de loop a canción</h2>
     <p>Las canciones se arman en <strong>bloques de 8 compases</strong>. La regla de oro: <strong>cada 8 compases, algo entra o algo sale.</strong></p>
-    <table>
+    <div class="tabla-caja"><table>
       <tr><th>Sección</th><th>Compases</th><th>Qué suena</th></tr>
       <tr><td><b>Intro</b></td><td>8</td><td>1-2 elementos (drums solos, o acordes solos). Genera expectativa.</td></tr>
       <tr><td><b>Verso / Sección A</b></td><td>16</td><td>Casi todo, menos 1-2 elementos que guardás.</td></tr>
@@ -399,7 +405,7 @@ a.ir-teoria{ color:var(--accent); text-decoration:underline; text-underline-offs
       <tr><td><b>Sección B</b></td><td>16</td><td>Como A pero con una variación (otra melodía, sin hats...).</td></tr>
       <tr><td><b>Hook 2</b></td><td>8-16</td><td>Repetí el hook (podés sumarle una capa extra).</td></tr>
       <tr><td><b>Outro</b></td><td>8</td><td>Vas apagando elementos hasta cerrar.</td></tr>
-    </table>
+    </table></div>
     <p class="muted">En house la lógica es la misma pero más estirada (bloques de 16-32) y el "hook" se llama drop.</p>
   </div>
 
@@ -712,10 +718,10 @@ function dayCard(day, opts={}){
       <span class="chev">▶</span>
     </div>
     <div class="day-body">
-      <div class="blk"><div class="lbl">📖 Teoría (10 min)</div><ul>${day.teoria.map(x=>`<li>${enlazarTeoria(x)}</li>`).join('')}</ul></div>
-      <div class="blk"><div class="lbl">🎹 Práctica en FL Studio (25 min)</div><ul>${day.practica.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="lbl">Teoría · 10 min</div><ul>${day.teoria.map(x=>`<li>${enlazarTeoria(x)}</li>`).join('')}</ul></div>
+      <div class="blk"><div class="lbl">Práctica en FL Studio · 25 min</div><ul>${day.practica.map(x=>`<li>${x}</li>`).join('')}</ul></div>
       <div class="constraint">${day.constraint}</div>
-      <div class="win">${day.win}</div>
+      <div class="win">${String(day.win).split('✅ ').join('')}</div>
     </div>`;
   el.querySelector('.day-head').addEventListener('click', (e)=>{
     if(e.target.classList.contains('check')) return;
@@ -736,13 +742,18 @@ function updateProgress(){
   const hechos = done.size;
   const pct = Math.round(hechos / 30 * 100);
   // El chip dice lo que hiciste, no qué día del calendario es.
-  document.getElementById('dayChip').textContent =
-    hechos === 30 ? '30 de 30 — terminaste' : `Día ${TODAY} · ${hechos} de 30 hechos`;
+  const chip = document.getElementById('dayChip');
+  chip.innerHTML = '<b>' + String(hechos === 30 ? 30 : TODAY).padStart(2,'0') +
+                   '</b><span>/30</span>';
+  chip.setAttribute('aria-label',
+    hechos === 30 ? '30 de 30, terminaste' : 'Día ' + TODAY + ' de 30');
   try{ localStorage.setItem('campamento-dia', String(TODAY)); }catch(e){}
   document.getElementById('barFill').style.width = Math.max(3, pct) + '%';
   const wk = weekOf(DAYS[TODAY-1]);
   document.getElementById('barLabel').textContent =
-    hechos === 0 ? 'Todavía no marcaste ningún día' : wk.title.split('·')[1].trim();
+    hechos === 30 ? 'Terminaste los 30 días'
+    : hechos === 0 ? 'Todavía no marcaste ningún día'
+    : hechos + ' de 30 hechos · ' + wk.title.split('·')[1].trim();
 }
 
 // ---- teoría: convertir las menciones en enlaces ----
@@ -967,477 +978,350 @@ bajarHechos().then(function(hubo){ if(hubo){ TODAY = diaActual(); repintar(); } 
 </style>
 <a class="volver-panel" href="../" aria-label="Volver al Panel"><span aria-hidden="true">←</span>Panel</a>
 
-<!-- piel: piel-cuaderno -->
+<!-- piel: piel-editorial -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&display=swap">
-<style id="piel-cuaderno">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style id="piel-editorial">
+/* ══════════════════════════════════════════════════════════════════
+   CAMPAMENTO · editorial
+
+   Azul, rojo y amarillo plenos —sin degradados, sin sombras blandas—
+   y una condensada enorme para los títulos. Aire de revista: bloques
+   de color a sangre, filetes negros finos, numeración grande.
+
+   El cuerpo del texto queda sobre papel. Esta app es para LEER —hay
+   tablas de escalas, recetas de acordes, listas de pasos— y el color
+   pleno sirve para separar secciones, no para pintar párrafos.
+
+   Esta piel va AL FINAL a propósito: le gana por orden a los estilos
+   del principio del archivo. Cambiar los de arriba no se ve.
+   ══════════════════════════════════════════════════════════════════ */
 :root{
-  --bg:#E7DEC9;
-  --surface:#FBF6E9; --surface2:#F3ECDA;
-  --border:#241C13;
-  --ink:#1F180F; --ink2:#5A4E3C; --ink3:#6D6150;
-  --accent:#9C3D10; --accent-ink:#FFF7EC;
-  --w1:#9C3D10; --w2:#6B4FA8; --w3:#2E7D5B; --w4:#C43B6B;
-  --good:#2E7D5B;
-  --resalte:#F5D547;
-  --radius:16px;
-  --f-tit:'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --azul:#1D3FD6; --azul-2:#1631A8;
+  --rojo:#E8402E;
+  --amarillo:#FFD12E;
+  --papel:#F4F1E8; --papel-2:#EAE5D6;
+  --tinta:#0E0E0E; --tinta-2:#4A463D;
+
+  /* Los nombres viejos que usa el resto del archivo, apuntando a la
+     paleta nueva: así no hay que cazar cada uso uno por uno. */
+  --bg:var(--papel);
+  --surface:var(--papel); --surface2:var(--papel-2);
+  --border:var(--tinta);
+  --ink:var(--tinta); --ink2:var(--tinta-2); --ink3:var(--tinta-2);
+  --accent:var(--rojo); --accent-ink:var(--papel);
+  --w1:var(--azul); --w2:var(--rojo); --w3:var(--amarillo); --w4:var(--tinta);
+  --good:var(--azul);
+  --resalte:var(--amarillo);
+  --radius:0;
+
+  --d:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;
+  --f:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --m:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --f-tit:var(--d);
+
+  /* El aire de la página en dos medidas, no en números sueltos por
+     todos lados. Fijos se nota enseguida: 18px sobran en un teléfono
+     y quedan cortos en una pantalla grande. */
+  --gutter:clamp(16px,4.2vw,30px);
+  --aire:clamp(22px,5vw,38px);
   color-scheme:light;
 }
 
 body{
-  background:var(--bg);
-  color:var(--ink);
-  /* El renglón del cuaderno, muy tenue. */
-  background-image:repeating-linear-gradient(
-    to bottom, transparent 0 33px, rgba(36,28,19,.055) 33px 34px);
+  background:var(--papel); background-image:none;
+  color:var(--tinta); font-family:var(--f); line-height:1.55;
+}
+.wrap{
+  max-width:1060px; margin:0 auto;
+  padding-left:max(var(--gutter), env(safe-area-inset-left));
+  padding-right:max(var(--gutter), env(safe-area-inset-right));
 }
 
-/* ── títulos con la palo seco gorda ───────────────────────────── */
-h1, h2, h3, .day-title, .kicker, .dnum, .tab{
-  font-family:var(--f-tit);
-  letter-spacing:-.02em;
-}
-h1{ font-weight:800; font-size:clamp(1.8rem, 7vw, 2.9rem); line-height:1 }
-h2{ font-weight:700 }
-.kicker{
-  font-weight:700; text-transform:uppercase; letter-spacing:.12em;
-  font-size:.7rem; color:var(--accent);
-}
-
-/* ── todo bloque es una calcomanía: borde grueso y sombra dura ── */
-.card, .res, .win, .note-grid > *, .day-head, section > div[class]{
-  background:var(--surface);
-  border:2px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:4px 4px 0 var(--border);
-}
-
-/* ── la cabecera ──────────────────────────────────────────────────
-   Traía un degradado que arrancaba casi negro y terminaba en el color
-   de fondo. Con el fondo oscuro de antes era una transición; con el
-   papel arena queda una mancha oscura arriba y el título ilegible.
-   Se reemplaza por el mismo papel, con un filete abajo que separa. */
+/* ── LA TAPA ───────────────────────────────────────────────────── */
 header{
-  background-image:none;
-  background-color:var(--bg);
-  border-bottom:2px solid var(--border);
+  background:var(--azul); background-image:none;
+  color:var(--papel); border-bottom:0;
+  padding:clamp(14px,3vw,20px) 0 clamp(18px,3.6vw,26px);
+}
+.kicker{
+  font:600 11px/1 var(--m); letter-spacing:.24em; text-transform:uppercase;
+  color:var(--amarillo);
+  padding-bottom:clamp(11px,2.2vw,15px);
+  border-bottom:1px solid rgba(244,241,232,.3);
+}
+header h1{
+  font-family:var(--d); font-weight:800; text-transform:uppercase;
+  font-size:clamp(44px,15vw,150px); line-height:.82; letter-spacing:-.015em;
+  margin:clamp(10px,2.4vw,18px) 0 0; color:var(--papel);
+}
+header h1 em{font-style:normal; color:var(--amarillo); display:block}
+header .sub{
+  margin:clamp(12px,2.6vw,18px) 0 0; max-width:52ch;
+  font-size:14.5px; line-height:1.6; color:rgba(244,241,232,.85);
 }
 
-/* ── el día de hoy, resaltado con marcador ────────────────────── */
-.day-head{ background:var(--surface2) }
-/* El resaltador va sobre el nombre del día, no sobre el bloque entero:
-   .day-title es el contenedor de dos líneas, y pintarlo marcaba la de
-   abajo. El trazo es una franja detrás del texto, no un recuadro, para
-   que se lea como marcado a mano. */
-.day-title .n{
-  font-weight:800;
-  background:linear-gradient(to top, var(--resalte) 0 42%, transparent 42%);
-  display:inline;
-  padding:0 .12em;
-  color:var(--ink);
+/* ── LA FRANJA DE AVANCE ───────────────────────────────────────── */
+.avance{background:var(--rojo); color:var(--papel)}
+.avance .wrap{
+  display:flex; align-items:center; gap:clamp(12px,3vw,30px); flex-wrap:wrap;
+  padding-top:clamp(10px,2.2vw,14px); padding-bottom:clamp(10px,2.2vw,14px);
 }
-.day-title .g{ color:var(--ink2) }
-.dnum{
-  background:var(--accent);
-  color:var(--accent-ink);
-  border:2px solid var(--border);
-  border-radius:12px;
-  font-weight:800;
-  box-shadow:3px 3px 0 var(--border);
-}
-
-/* ── la barra de solapas ──────────────────────────────────────────
-   Tenía el gris escrito a mano, no por variable, así que no lo tocaba
-   el cambio de paleta y quedaba una franja negra cruzando el papel. */
-nav{
-  background:var(--surface);
-  border-bottom:2px solid var(--border);
-  backdrop-filter:none; -webkit-backdrop-filter:none;
-}
-
-/* ── las solapas: botones gordos con relieve ──────────────────── */
-.tabs{ gap:.55rem }
-.tab{
-  background:var(--surface);
-  border:2px solid var(--border);
-  border-radius:100px;
-  color:var(--ink);
-  font-weight:700;
-  padding:.5em 1.05em;
-  box-shadow:3px 3px 0 var(--border);
-  transition:transform .13s cubic-bezier(.51,.01,.2,1), box-shadow .13s ease;
-}
-/* Al apretarlo se hunde: la sombra se achica y el botón baja. Es el
-   gesto de un botón físico, que es de lo que va todo el cuaderno. */
-.tab:hover{ transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--border) }
-.tab:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
-.tab.on, .tab.active{
-  background:var(--accent);
-  color:var(--accent-ink);
-}
-
-/* ── la barra de avance: un termómetro con borde ──────────────── */
-/* Esta regla apuntaba también a `.prog` pelado. La barra de avance NO usa
-   esa clase (usa `.bar`), así que no llegaba a ninguna barra: lo único que
-   alcanzaba eran las 21 fichas de acordes de la teoría, y las dejaba
-   ilegibles. Queda acotada a la barra de verdad. */
-.progress-row .bar{
-  background:var(--surface);
-  border:2px solid var(--border);
-  border-radius:100px;
-  overflow:hidden;
-  box-shadow:3px 3px 0 var(--border);
-}
-.progress-row .bar > *{ background:var(--accent) }
+.progress-row{display:contents}
 .day-chip{
-  background:var(--accent);
-  color:var(--accent-ink);
-  border:2px solid var(--border);
-  border-radius:100px;
-  font-family:var(--f-tit);
-  font-weight:800;
-  box-shadow:3px 3px 0 var(--border);
+  font-family:var(--d); font-weight:800; font-size:clamp(38px,9vw,64px);
+  line-height:.86; letter-spacing:-.02em; color:var(--papel);
+  background:none; border:0; border-radius:0; padding:0;
+}
+.day-chip b{font-weight:800}
+.day-chip span{font-size:.45em; font-weight:700; color:rgba(244,241,232,.72)}
+.bar{
+  flex:1; min-width:110px; height:12px; border-radius:0; overflow:hidden;
+  background:rgba(14,14,14,.28);
+}
+.bar > div{background:var(--amarillo); border-radius:0}
+.bar-label{
+  font:500 11px/1.4 var(--m); letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(244,241,232,.9);
+}
+@media (max-width:460px){ .bar-label{flex:1 0 100%} }
+
+/* ── LAS SOLAPAS ────────────────────────────────────────────────── */
+nav{background:var(--papel); border:0; position:static; box-shadow:none}
+nav .wrap{padding-top:0; padding-bottom:0}
+.tabs{
+  display:flex; flex-wrap:wrap; gap:0; padding:0; overflow:visible;
+  border-bottom:2px solid var(--tinta);
+}
+.tab{
+  flex:1 1 auto;
+  font:700 16px/1 var(--d); letter-spacing:.09em; text-transform:uppercase;
+  padding:13px clamp(12px,3vw,20px);
+  border:0; border-right:1px solid var(--tinta); border-radius:0;
+  background:transparent; color:var(--tinta); cursor:pointer; white-space:nowrap;
+  box-shadow:none;
+  transition:background .16s, color .16s;
+}
+.tab:last-child{border-right:0}
+.tab.active{background:var(--tinta); color:var(--papel); border-color:var(--tinta)}
+@media (hover:hover){ .tab:hover:not(.active){background:var(--amarillo)} }
+/* Cuatro solapas no entran en un renglón de teléfono. Se doblan en dos
+   por dos, y las de arriba llevan filete abajo para que se lea como una
+   grilla y no como un renglón cortado. */
+@media (max-width:620px){
+  /* En un teléfono angosto «Plan de 30 días» no entra en media pantalla.
+     Con el renglón forzado cada solapa se quedaba con una fila entera y
+     quedaban cuatro filas. Acá el texto puede partirse en dos. */
+  .tab{
+    flex:1 1 50%; min-width:0; font-size:15px; padding:12px 8px;
+    white-space:normal; line-height:1.05;
+  }
+  .tab:nth-child(-n+2){border-bottom:1px solid var(--tinta)}
+  .tab:nth-child(2n){border-right:0}
 }
 
-/* ── las etiquetas de color de cada semana ────────────────────── */
-.pill, .week-dot{
-  border:2px solid var(--border);
-  border-radius:100px;
-  font-family:var(--f-tit);
-  font-weight:700;
-  font-size:.7rem;
+/* ── LOS BLOQUES DE TEXTO ───────────────────────────────────────
+   Dejan de ser calcomanías con sombra dura: acá un bloque se separa
+   con un filete y con aire, como en una revista. La sombra sumaba
+   ruido en una página que ya tiene cuatro colores plenos. */
+.card, .res, .win, .day, .week-h, .note-grid > *, .day-head, section > div[class]{
+  background:transparent; border:0; border-radius:0; box-shadow:none;
 }
-
-/* ── el monoespaciado de las notas musicales, como una etiqueta ─ */
-.mono{
-  background:var(--surface2);
-  border:1px solid var(--border);
-  border-radius:6px;
-  padding:.1em .38em;
-  color:var(--ink);
+section.panel{padding:0}
+.card{
+  padding:var(--aire) 0; border-bottom:2px solid var(--tinta); margin:0;
 }
-
-/* ── el recuadro de victoria del día ──────────────────────────── */
-.win{
-  background:#EAF3EC;
-  border-color:var(--good);
-  box-shadow:4px 4px 0 var(--good);
-  color:var(--ink);
+.card:last-child{border-bottom:0}
+h2{
+  font-family:var(--d); font-weight:800; text-transform:uppercase;
+  font-size:clamp(26px,5.6vw,46px); line-height:.92; letter-spacing:-.015em;
+  margin:0 0 clamp(12px,2.4vw,18px); color:var(--tinta); text-wrap:balance;
 }
-
-.muted{ color:var(--ink2) }
-
-/* ── el botón de volver, con el mismo relieve ─────────────────── */
-.volver-panel{
-  background:var(--surface);
-  border:2px solid var(--border);
-  color:var(--accent);
-  font-family:var(--f-tit);
-  font-weight:800;
-  box-shadow:3px 3px 0 var(--border);
+h3{
+  font-family:var(--d); font-weight:700; text-transform:uppercase;
+  font-size:clamp(18px,3.4vw,24px); line-height:1; letter-spacing:0;
+  margin:clamp(18px,3vw,26px) 0 10px; color:var(--tinta);
 }
-.volver-panel:active{ transform:translate(3px,3px); box-shadow:0 0 0 var(--border) }
+p{margin:0 0 12px; font-size:14.5px; line-height:1.62}
+.muted{color:var(--tinta-2); font-size:13.5px}
+.mono{font-family:var(--m); font-size:.92em; background:var(--papel-2); padding:.1em .35em}
 
-/* El botón se aparta al bajar. Es fijo, así que si se queda quieto tapa
-   lo que haya debajo — y no es adorno lo que tapa: en Instagram cubría el
-   botón de elegir plataforma, que hay que poder tocar. Baja al desplazarse
-   hacia abajo y vuelve al subir, que es cuando lo estás buscando. */
-.volver-panel{
-  transition:transform .28s cubic-bezier(.51,.01,.2,1), opacity .2s ease;
+/* ── LA CABECERA DE SEMANA ──────────────────────────────────────
+   Bloque de color pleno: es el único lugar donde el color hace de
+   índice y no de adorno. Mirás el bloque y sabés en qué semana estás. */
+.week-h{
+  display:flex; align-items:flex-start; gap:12px;
+  padding:clamp(14px,3vw,19px); margin:clamp(16px,3vw,24px) 0 2px;
+  background:var(--tinta); color:var(--papel);
 }
-.volver-panel.escondido{
-  transform:translateY(160%);
-  opacity:0;
-  pointer-events:none;
+.week-h .week-dot{
+  width:14px; height:14px; border-radius:0; flex:none; margin-top:5px;
 }
-@media (prefers-reduced-motion:reduce){
-  .volver-panel.escondido{ transform:none; opacity:1; pointer-events:auto }
+.week-h .t{
+  font-family:var(--d); font-weight:800; text-transform:uppercase;
+  font-size:clamp(19px,3.4vw,26px); line-height:1; letter-spacing:-.005em;
 }
+.week-h .d{margin-top:6px; font-size:13.5px; line-height:1.5; opacity:.82}
 
-body{
-  padding-top:env(safe-area-inset-top);
-  padding-bottom:calc(env(safe-area-inset-bottom) + 3.6rem);
+/* ── EL DÍA ─────────────────────────────────────────────────────── */
+.day{border-bottom:1px solid var(--tinta); background:transparent}
+/* El día de hoy no lleva recuadro: lo marca el resaltador amarillo sobre
+   el título, como en una revista. El borde y el halo vienen de los estilos
+   del principio y hay que apagarlos con el mismo peso o no se van. */
+.day.today-hl{background:transparent; border-color:var(--tinta); box-shadow:none}
+.day-head{
+  display:flex; align-items:center; gap:clamp(10px,2.4vw,16px);
+  padding:clamp(12px,2.6vw,16px) 0; cursor:pointer; background:transparent;
 }
-body::before{
-  content:"";
-  position:fixed; top:0; left:0; right:0;
-  height:env(safe-area-inset-top);
-  background:var(--bg);
-  z-index:9998;
-  pointer-events:none;
+.day-head:hover{background:transparent}
+.dnum{
+  font-family:var(--d); font-weight:800; font-size:clamp(26px,5vw,40px);
+  line-height:.85; letter-spacing:-.02em;
+  background:none !important; color:var(--rojo);
+  border:0; border-radius:0; box-shadow:none; padding:0; flex:none; min-width:1.9em;
 }
-
-/* La barra que queda pegada arriba tiene que frenar debajo del reloj,
-   no en el borde de la pantalla. */
-nav{ top:env(safe-area-inset-top) }
-
-/* ═══════════════════════════════════════════════════════════════
-   TARJETAS DE ACORDES Y ESCALAS
-   ═══════════════════════════════════════════════════════════════
-   Arriba había una regla con el comentario «la barra de avance: un
-   termómetro con borde» que apuntaba a `.prog` pelado. La barra de avance
-   no usa esa clase — usa `.bar` — así que esa regla no tocaba ninguna
-   barra: lo único que alcanzaba eran las 21 tarjetas de acordes de la
-   teoría, y `.prog > *{background:var(--accent)}` les pintaba cada línea
-   de texto de color sólido. Quedaban ilegibles: una pastilla roja con
-   barras adentro donde tendría que decir «Am · A C E · tu acorde base».
-
-   Acá se rehacen como lo que son: fichas musicales. El nombre del acorde
-   manda, las notas se leen como teclas sueltas, y el para-qué queda de pie
-   de foto. */
-
-.note-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:12px;
-  margin-top:12px;
+.day-title{flex:1; min-width:0}
+.day-title .n{
+  font-family:var(--d); font-weight:700; text-transform:uppercase;
+  font-size:clamp(17px,3.2vw,23px); line-height:1.02; letter-spacing:-.005em;
+  background:none; padding:0; display:block; color:var(--tinta);
 }
+.day-title .g{
+  margin-top:4px; font:500 10.5px/1.4 var(--m); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--tinta-2);
+}
+/* El día de hoy es el único que lleva el resaltador amarillo. */
+.day.today-hl > .day-head .day-title .n{
+  background:linear-gradient(to top, var(--amarillo) 0 40%, transparent 40%);
+  display:inline; padding:0 .1em;
+}
+.check{
+  flex:none; width:38px; height:38px; border-radius:0;
+  border:2px solid var(--tinta); background:transparent; color:var(--tinta);
+  font-size:17px; cursor:pointer; box-shadow:none;
+  transition:background .16s, color .16s;
+}
+.check.on{background:var(--azul); border-color:var(--azul); color:var(--papel)}
+@media (hover:hover){ .check:hover{background:var(--amarillo)} }
+.chev{color:var(--tinta-2); font-size:11px}
 
+.day-body{padding:0 0 clamp(14px,3vw,20px)}
+.blk{margin-bottom:clamp(14px,2.8vw,20px)}
+.blk .lbl{
+  font:600 11px/1 var(--m); letter-spacing:.24em; text-transform:uppercase;
+  color:var(--rojo); margin-bottom:11px;
+}
+.blk ul{margin:0; padding:0; list-style:none; counter-reset:p}
+.blk li{
+  counter-increment:p; position:relative; padding:0 0 11px 30px;
+  font-size:14.5px; line-height:1.6;
+}
+.blk li::before{
+  content:counter(p,decimal-leading-zero); position:absolute; left:0; top:3px;
+  font:600 10.5px/1 var(--m); letter-spacing:.06em; color:var(--tinta-2);
+}
+.blk li + li{border-top:1px solid var(--papel-2); padding-top:11px}
+
+/* Los dos bloques de color que cierran el día. */
+.constraint, .win{
+  padding:clamp(14px,3vw,18px); border:0; border-radius:0; box-shadow:none;
+  font-size:14.5px; line-height:1.55; margin:0;
+}
+.constraint{background:var(--amarillo); color:var(--tinta)}
+.win{background:var(--azul); color:var(--papel); margin-top:2px}
+
+/* ── LOS RECURSOS ──────────────────────────────────────────────── */
+.res{
+  display:flex; gap:clamp(11px,2.4vw,16px); align-items:flex-start;
+  padding:clamp(13px,2.6vw,18px) 0; border-top:1px solid var(--papel-2);
+}
+.res:first-of-type{border-top:0}
+.res .ic{font-size:22px; flex:none; line-height:1.2}
+.res .rn{
+  font-family:var(--d); font-weight:700; text-transform:uppercase;
+  font-size:clamp(16px,3vw,21px); line-height:1.05; margin-bottom:5px;
+}
+.res .rd{font-size:14px; line-height:1.6; color:var(--tinta-2)}
+
+/* ── LAS PROGRESIONES Y LOS AVISOS ─────────────────────────────── */
 .prog{
-  /* Se reponen los valores que la regla de la barra había pisado. */
-  background:var(--surface);
-  border:2px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:4px 4px 0 var(--border);
-  overflow:visible;
-  padding:13px 14px 12px;
-  display:flex;
-  flex-direction:column;
-  gap:9px;
-  transition:transform .12s ease, box-shadow .12s ease;
+  padding:clamp(13px,2.6vw,17px); background:var(--papel-2);
+  border:0; border-left:3px solid var(--azul); border-radius:0; box-shadow:none;
 }
-.prog:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--border) }
-
-/* Y se desarma la que las rompía. */
-.prog > *{ background:none }
-
 .prog .name{
-  font-family:var(--f-tit);
-  font-weight:800;
-  font-size:1.02rem;
-  line-height:1.2;
-  letter-spacing:-.02em;
-  color:var(--ink);
-  margin:0;
+  font-family:var(--d); font-weight:700; text-transform:uppercase;
+  font-size:clamp(16px,3vw,20px); line-height:1.05; margin-bottom:7px;
+}
+.prog .use{margin-top:7px; font-size:13.5px; color:var(--tinta-2)}
+.callout{
+  padding:clamp(13px,2.6vw,17px); background:var(--amarillo); color:var(--tinta);
+  border:0; border-radius:0; box-shadow:none; font-size:14.5px; line-height:1.55;
+  margin:clamp(13px,2.6vw,18px) 0;
 }
 
-/* Las notas, como teclas. El separador original (+ o ·) se reemplaza por
-   una ficha por nota: se cuentan de un vistazo, que es como se usan. */
-.prog .notes{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-  color:var(--accent);
-  font-weight:600;
-  margin:0;
-}
-.nota{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:29px;
-  padding:3px 7px;
-  border:1.5px solid var(--border);
-  border-radius:7px;
-  background:var(--surface2);
-  color:var(--ink);
-  font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  font-size:.82rem;
-  font-weight:700;
-  line-height:1.35;
-}
-/* Las alteradas (las teclas negras del piano) van oscuras, como en el piano. */
-.nota.negra{
-  background:var(--border);
-  color:var(--surface);
-  border-color:var(--border);
-}
-/* El «+» o el «·» que separaba, ahora mudo pero presente para quien lee con lector de pantalla. */
-.nota-sep{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0) }
+/* La caja que scrollea: la tabla se mueve de costado adentro de ella
+   y la página nunca. Sin esto, 460px de ancho mínimo empujan toda la
+   pantalla de un teléfono. */
+.tabla-caja{overflow-x:auto; border-top:1px solid var(--tinta); -webkit-overflow-scrolling:touch}
+.tabla-caja th{border-bottom:1px solid var(--tinta)}
 
-.prog .use{
-  color:var(--ink3);
-  font-size:.79rem;
-  line-height:1.4;
-  margin:0;
-  padding-top:1px;
-  border-top:1px dashed var(--border);
-  margin-top:auto;
-  padding-top:8px;
-  opacity:.9;
+/* ── LAS TABLAS ─────────────────────────────────────────────────
+   Filetes finos y nada más: son datos para consultar, no un bloque
+   decorativo. La caja se mueve de costado sola; la página nunca. */
+table{
+  border-collapse:collapse; width:100%; min-width:460px; font-size:14px;
+  border:0; box-shadow:none; background:transparent;
 }
+th{
+  text-align:left; font:600 10.5px/1 var(--m); letter-spacing:.18em;
+  text-transform:uppercase; color:var(--tinta-2);
+  padding:11px 12px 11px 0; border-bottom:1px solid var(--tinta); background:transparent;
+}
+td{
+  padding:11px 12px 11px 0; border-bottom:1px solid var(--papel-2);
+  vertical-align:top; background:transparent;
+}
+td b{font-family:var(--d); font-weight:700; font-size:1.18em; text-transform:uppercase}
 
-/* La escala base del plan es la ficha principal: se distingue del resto. */
-.prog.destacada{
-  background:var(--accent);
-  border-color:var(--border);
-  box-shadow:5px 5px 0 var(--border);
-}
-.prog.destacada .name{ color:var(--accent-ink) }
-.prog.destacada .use{ color:var(--accent-ink); opacity:.82; border-top-color:rgba(255,247,236,.35) }
-.prog.destacada .nota{ background:var(--accent-ink); color:var(--accent); border-color:var(--accent-ink) }
-.prog.destacada .nota.negra{ background:var(--border); color:var(--accent-ink); border-color:var(--border) }
-
-#panel-teoria td.notas-tabla{ display:flex; flex-wrap:wrap; gap:4px }
-
-/* ── tablas de la teoría ──────────────────────────────────────────
-   Eran filas sin respiro sobre el papel. Se les da encabezado marcado,
-   filas alternadas y las notas en la misma tipografía de las fichas. */
-#panel-teoria table{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0;
-  margin-top:12px;
-  border:2px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:4px 4px 0 var(--border);
-}
-#panel-teoria th{
-  background:var(--border);
-  color:var(--surface);
-  font-family:var(--f-tit);
-  font-size:.68rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  text-align:left;
-  padding:9px 12px;
-}
-#panel-teoria td{
-  padding:10px 12px;
-  border-top:1px solid rgba(36,28,19,.14);
-  vertical-align:top;
-  font-size:.9rem;
-}
-#panel-teoria tbody tr:nth-child(even) td,
-#panel-teoria tr:nth-child(even) td{ background:var(--surface2) }
-#panel-teoria td.mono, #panel-teoria .mono{
-  font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  font-size:.84rem;
-  letter-spacing:.02em;
-}
-
-/* ── los avisos de FL Studio ──────────────────────────────────────
-   Son el dato accionable de cada sección; merecen leerse distinto al
-   cuerpo y no como un párrafo más. */
-#panel-teoria .callout{
-  position:relative;
-  background:var(--surface2);
-  border:2px solid var(--border);
-  border-left-width:7px;
-  border-radius:12px;
-  padding:12px 14px;
-  margin-top:14px;
-  font-size:.89rem;
-  line-height:1.5;
-  box-shadow:3px 3px 0 var(--border);
-}
-
-/* ── jerarquía dentro de cada sección ─────────────────────────── */
-#panel-teoria h3{
-  font-size:.95rem;
-  margin-top:18px;
-  margin-bottom:2px;
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-#panel-teoria h3::after{
-  content:"";
-  flex:1;
-  height:2px;
-  background:repeating-linear-gradient(90deg,var(--border) 0 5px,transparent 5px 9px);
-  opacity:.4;
-}
-#panel-teoria .card > p{ margin-top:9px }
-#panel-teoria .card{ padding:20px 20px 22px }
-#panel-teoria .card h2{
-  font-size:1.28rem;
-  padding-bottom:11px;
-  margin-bottom:3px;
-  border-bottom:2px solid var(--border);
-}
-
-/* ── índice ───────────────────────────────────────────────────── */
+/* ── EL ÍNDICE DE TEORÍA ───────────────────────────────────────── */
+.indice-teoria{display:grid; grid-template-columns:1fr; gap:2px}
+@media (min-width:620px){ .indice-teoria{grid-template-columns:1fr 1fr} }
 .indice-teoria a{
-  background:var(--surface2);
-  border:2px solid var(--border);
-  border-radius:11px;
-  box-shadow:3px 3px 0 var(--border);
-  padding:11px 13px;
-  font-family:var(--f-tit);
-  font-weight:600;
-  font-size:.88rem;
-  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+  display:flex; align-items:baseline; gap:10px;
+  padding:12px 14px; background:var(--papel-2); color:var(--tinta);
+  border:0; border-radius:0; box-shadow:none; text-decoration:none;
+  font-family:var(--d); font-weight:700; text-transform:uppercase;
+  font-size:16px; line-height:1.05; letter-spacing:.01em;
+  transition:background .16s, color .16s;
 }
-.indice-teoria a:hover{
-  background:var(--accent);
-  color:var(--accent-ink);
-  transform:translate(-2px,-2px);
-  box-shadow:5px 5px 0 var(--border);
+.indice-teoria a b{color:var(--rojo); font-family:var(--m); font-size:11px; font-weight:600}
+@media (hover:hover){
+  .indice-teoria a:hover{background:var(--azul); color:var(--papel)}
+  .indice-teoria a:hover b{color:var(--amarillo)}
 }
-.indice-teoria a b{
-  font-family:var(--f-tit);
-  opacity:1;
-  background:var(--border);
-  color:var(--surface);
-  width:21px; height:21px;
-  display:inline-flex; align-items:center; justify-content:center;
-  border-radius:6px;
-  font-size:.72rem;
-}
-.indice-teoria a:hover b{ background:var(--accent-ink); color:var(--accent) }
+.ir-teoria{color:var(--azul); font-weight:600}
 
-a.ir-teoria{
-  color:var(--accent);
-  font-weight:700;
-  text-decoration-thickness:2px;
-  text-underline-offset:3px;
+/* ── EL BOTÓN DE VOLVER ────────────────────────────────────────── */
+.volver-panel{
+  border:2px solid var(--tinta) !important; border-radius:0 !important;
+  background:var(--papel) !important; color:var(--tinta) !important;
+  font:700 11px/1 var(--m) !important; letter-spacing:.16em; text-transform:uppercase;
+  box-shadow:none !important;
 }
-a.ir-teoria:hover{ background:var(--resalte); color:var(--ink); border-radius:3px }
-
-/* El parpadeo al aterrizar, en el color del cuaderno. */
-@keyframes resaltar{
-  0%   { box-shadow:0 0 0 4px var(--resalte), 4px 4px 0 var(--border) }
-  100% { box-shadow:0 0 0 0 transparent,     4px 4px 0 var(--border) }
+@media (hover:hover){
+  .volver-panel:hover{background:var(--amarillo) !important}
 }
 
-/* ── teléfono ─────────────────────────────────────────────────── */
-@media(max-width:560px){
-  .note-grid{ grid-template-columns:1fr 1fr; gap:9px }
-  .prog{ padding:11px 11px 10px; gap:7px }
-  .prog .name{ font-size:.92rem }
-  .nota{ min-width:26px; padding:2px 5px; font-size:.76rem }
-  .prog .use{ font-size:.74rem }
-  #panel-teoria .card{ padding:16px 15px 18px }
-  #panel-teoria th, #panel-teoria td{ padding:8px 9px; font-size:.83rem }
-
-  /* Cada fila de tabla, una ficha. La columna de notas medía 90px y las siete
-     teclas se partían en cuatro renglones por fila. */
-  #panel-teoria table.apilable{ box-shadow:4px 4px 0 var(--border) }
-  #panel-teoria table.apilable tr:first-child{ display:none }
-  #panel-teoria table.apilable tr{
-    display:block; padding:11px 12px;
-    border-top:2px solid var(--border);
-  }
-  #panel-teoria table.apilable tr:nth-child(2){ border-top:0 }
-  #panel-teoria table.apilable td{
-    display:block; border:0; padding:3px 0; background:none !important;
-  }
-  #panel-teoria table.apilable td::before{
-    content:attr(data-th);
-    display:block;
-    font-family:var(--f-tit);
-    font-size:.6rem; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--ink3); font-weight:700; margin-bottom:3px;
-  }
-  #panel-teoria table.apilable td:first-child{ font-size:1rem; font-weight:700 }
-  #panel-teoria table.apilable td:first-child::before{ content:none }
-  .indice-teoria{ grid-template-columns:1fr 1fr; gap:7px }
-  .indice-teoria a{ padding:9px 10px; font-size:.78rem }
+/* ── EL PIE DE LA PÁGINA ───────────────────────────────────────── */
+body{
+  padding-bottom:calc(clamp(24px,4vw,40px) + env(safe-area-inset-bottom));
 }
 
+@media (prefers-reduced-motion:reduce){
+  .tab, .check, .indice-teoria a, .volver-panel{transition:none !important}
+}
 </style>
 
 <script>
@@ -1463,5 +1347,5 @@ a.ir-teoria:hover{ background:var(--resalte); color:var(--ink); border-radius:3p
   }, { passive: true });
 })();
 </script>
-<!-- /piel: piel-cuaderno --></body>
+<!-- /piel: piel-editorial --></body>
 </html>
