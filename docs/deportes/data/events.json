@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-22T14:51:45.220Z",
+ "actualizado": "2026-09-23T00:16:55.530Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 15,
+   "total": 14,
    "proximos": 8
   },
   {
@@ -71,7 +71,7 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 15,
+   "total": 14,
    "proximos": 10
   }
  ],
@@ -163,50 +163,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-600060493",
-   "miLado": null,
-   "idEspn": "600060493",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Hernandez vs. Rodrigues",
-   "inicio": "2026-08-22T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Golden 1 Center",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
-  {
-   "id": "espn-761742",
-   "miLado": "local",
-   "idEspn": "761742",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs Toronto FC",
-   "inicio": "2026-08-22T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "Toronto FC",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-   "finalizado": true,
-   "marcador": "1 - 2"
   },
   {
    "feedId": "f1",
