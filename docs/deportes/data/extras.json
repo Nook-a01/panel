@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23T11:33:18.897Z",
+ "actualizado": "2026-09-23T16:56:01.928Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -963,9 +962,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -988,9 +986,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1025,9 +1022,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1063,9 +1059,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1101,9 +1096,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1272,11 +1266,33 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "After Messi and Neymar, who will be next No. 10s for Brazil, Argentina?",
+     "resumen": "With Lionel Messi and Neymar set to leave the Argentina and Brazil teams, respectively, who will step up to wear two of South America's most historic shirts?",
+     "fecha": "2026-09-23T14:52:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0922/r1720466_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50006618/after-lionel-messi-neymar-brazil-argentinas-next-number-10"
+    },
+    {
+     "titulo": "Guimaraes: World Cup penalty miss vs. Norway is a scar that still hurts",
+     "resumen": "Guimaraes: World Cup penalty miss vs. Norway is a scar that still hurts",
+     "fecha": "2026-09-23T14:44:29Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0923/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50013350/world-cup-penalty-miss-vs-norway-scar-hurts"
+    },
+    {
+     "titulo": "UEFA's Aleksander Ceferin: Trust still broken in football after FIFA, Gianni Infantino controversy",
+     "resumen": "UEFA president Aleksander Ceferin has said trust in world football is still broken despite FIFA abandoning its controversial plan to sell a stake in its commercial rights to private investors.",
+     "fecha": "2026-09-23T12:48:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0803/r1697001_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50012609/trust-broken-football-fifa-gianni-infantino-uefa-aleksander-ceferin"
+    },
     {
      "titulo": "Gomez: Jonathan David and Julian Alvarez should play side-by-side",
      "resumen": "Gomez: Jonathan David and Julian Alvarez should play side-by-side",
@@ -1306,39 +1322,11 @@
      "link": "https://www.espn.com/video/clip/_/id/50003632/best-yet-come-spanish-national-team"
     },
     {
-     "titulo": "Grading Bafana Bafana players' overseas moves since the FIFA World Cup",
-     "resumen": "South Africa returned to the FIFA World Cup in 2026 after a 16-year absence, and since their round of 32 exit at the hands of Canada, Bafana Bafana players have secured several noteworthy moves abroad.",
-     "fecha": "2026-09-22T07:35:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0915/r1716934_1158x651_16-9.png",
-     "link": "https://www.espn.com/espn/story/_/id/49947673/grading-bafana-bafana-players-overseas-moves-fifa-world-cup"
-    },
-    {
-     "titulo": "Infantino open to FIFA governance review, reforms after backlash",
-     "resumen": "FIFA President Gianni Infantino has indicated he'd be open to an independent review of its governance system and signaled a willingness to consider reforms.",
-     "fecha": "2026-09-22T01:11:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0806/r1698399_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50001668/infantino-open-fifa-governance-review-reforms-backlash"
-    },
-    {
      "titulo": "Why this 3-week international break is longest ever (and why that's a good thing)",
      "resumen": "Fans have grown used to international games interrupting the club season, but this break will be a week longer than before. It's not as bad as it sounds.",
      "fecha": "2026-09-21T07:52:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/0915/r1716998_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49940653/why-3-week-international-break-longest-ever-why-thats-good-thing"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-09-21T02:08:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674593_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "VIDEO: Hislop: USMNT will benefit long-term from Pochettino's brave selections",
-     "resumen": "VIDEO: Hislop: USMNT will benefit long-term from Pochettino's brave selections ",
-     "fecha": "2026-09-18T12:00:14Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0918/dm_260918_COM_SOC_Analysis_Hislop3A_USMNT_will_benefit_long_term_from_PochettinoE28099s_brave_selections_GLOBAL_20/dm_260918_COM_SOC_Analysis_Hislop3A_USMNT_will_benefit_long_term_from_PochettinoE28099s_brave_selections_GLOBAL_20.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/49971933/hislop-usmnt-benefit-long-term-pochettino-brave-selections"
     }
    ],
    "resultados": null,
@@ -1605,8 +1593,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1617,8 +1606,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1629,8 +1619,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1701,8 +1692,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1737,9 +1729,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1763,8 +1754,9 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg/330px-Telasco_Segovia_NE_Revolution_Inter_Miami_7.9.25-017_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "199032",
@@ -1895,8 +1887,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "387661",
@@ -2134,9 +2127,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2310,9 +2304,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2618,46 +2613,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton on F1 races becoming shorter in 2027: 'Makes no sense'",
+     "resumen": "Lewis Hamilton has criticized plans to make grands prix 15 kilometres shorter next year, saying it \"makes absolutely no sense.\"",
+     "fecha": "2026-09-23T15:59:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720863_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011892/lewis-hamilton-f1-races-becoming-shorter-2027-makes-no-sense-azerbaijan-grand-prix-baku-formula-1"
+    },
+    {
+     "titulo": "Alpine's Pierre Gasly warns against 'disturbing' threats after teammate Franco Colapinto incident",
+     "resumen": "Pierre Gasly has hit out at the \"disturbing\" threats he, his girlfriend and his family received after he held up Argentine teammate Franco Colapinto in the closing stages of the Spanish Grand Prix two weeks ago.",
+     "fecha": "2026-09-23T15:50:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011890/alpines-pierre-gasly-warns-disturbing-threats-teammate-franco-colapinto-incident-formula-1"
+    },
+    {
+     "titulo": "Lewis Hamilton 'hopes' F1 will race in the Middle East despite ongoing conflict",
+     "resumen": "Lewis Hamilton \"hopes\" Formula 1 presses ahead with ending this season in the Middle East despite the ongoing United States-Iran conflict.",
+     "fecha": "2026-09-23T15:35:57Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720861_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011891/lewis-hamilton-hopes-f1-race-middle-east-ongoing-conflict"
+    },
+    {
+     "titulo": "Fernando Alonso highlights ongoing talks with F1 bosses around rules: 'Circuits were killed'",
+     "resumen": "Fernando Alonso has said his ongoing talks with Formula 1 -- which will dictate whether he keeps racing into 2026 -- have centred around how the sport's new engines have \"killed\" so many race venues this year.",
+     "fecha": "2026-09-23T14:55:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720834_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011888/fernando-alonso-highlights-ongoing-talks-f1-bosses-rules-circuits-were-killed-azerbaijan-grand-prix-baku-formula-1"
+    },
+    {
+     "titulo": "Isack Hadjar expects wrist injury to 'still be painful' on Azerbaijan Grand Prix return",
+     "resumen": "Isack Hadjar is still expecting to feel pain from his fractured wrist despite returning to the cockpit of his Red Bull at this weekend's Azerbaijan Grand Prix.",
+     "fecha": "2026-09-23T12:49:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720782_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011887/isack-hadjar-expects-wrist-injury-painful-azerbaijan-grand-prix-return-baku-formula-1"
+    },
+    {
      "titulo": "Haas' Esteban Ocon future in F1 unclear: 'Free agent' for 2027 season",
      "resumen": "Esteban Ocon has hinted he might leave Haas at the end of the season, saying \"at the moment\" he's a free agent for 2027.",
      "fecha": "2026-09-23T11:27:33Z",
      "imagen": "https://a.espncdn.com/photo/2026/0923/r1720769_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50011886/haas-esteban-ocon-future-f1-unclear-free-agent-2027-season-formula-1"
-    },
-    {
-     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
-     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
-     "fecha": "2026-09-23T08:29:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
-    },
-    {
-     "titulo": "Isack Hadjar signs Red Bull extension to race alongside Max Verstappen in 2027",
-     "resumen": "Red Bull has confirmed Isack Hadjar will remain as one of its race drivers in 2027, completing the team's line-up alongside Max Verstappen.",
-     "fecha": "2026-09-23T08:25:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720744_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011696/isack-hadjar-signs-red-bull-extension-race-alongside-max-verstappen-2027"
-    },
-    {
-     "titulo": "Why is the Azerbaijan Grand Prix on a Saturday, not a Sunday? Baku schedule shift explained",
-     "resumen": "Why is the Azerbaijan Grand Prix taking place on a Saturday? Here's why F1 has moved the entire Baku race weekend forward by a day.",
-     "fecha": "2026-09-23T07:41:08Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0921/r1548812_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50003145/explained-2026-azerbaijan-grand-prix-saturday-sunday-schedule-baku"
-    },
-    {
-     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
-     "fecha": "2026-09-23T07:40:32Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Ugo Ugochukwu celebrates Nigerian roots after winning FIA Formula 3 championship",
-     "resumen": "Newly crowned FIA Formula 3 champion Ugo Ugochukwu says he is proud to represent his Nigerian heritage on the international stage, even though he races under the United States flag.",
-     "fecha": "2026-09-22T09:16:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0922/r1720321_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50003915/ugo-ugochukwu-celebrates-nigerian-roots-winning-fia-formula-3-championship"
     }
    ],
    "resultados": null,
@@ -2674,6 +2669,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "The performance bonuses for Van, Tsarukyan? Spots in P4P top 10",
+     "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
+     "fecha": "2026-09-23T11:52:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0922/r1720581_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
     {
      "titulo": "PFL CEO John Martin resigns nearly 2 months after merger with MVP",
      "resumen": "PFL CEO John Martin announced Tuesday that he has resigned less than two months after MVP and PFL merged fight promotions.",
@@ -2701,13 +2703,6 @@
      "fecha": "2026-09-21T15:24:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0920/r1719297_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/49965679/ufc-331-takeaways-arman-tsarukyan-cements-place-lightweight-greats"
-    },
-    {
-     "titulo": "Joshua Van dominates Alexandre Pantoja to retain UFC title",
-     "resumen": "UFC flyweight champion Joshua Van defeated Alexandre Pantoja in their first fight 10 months ago. Van beat Pantoja in the rematch too.",
-     "fecha": "2026-09-20T15:51:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719314_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/49986556/joshua-van-dominates-alexandre-pantoja-rematch-retain-ufc-title"
     },
     {
      "titulo": "White: No hard feelings toward Aspinall despite Hearn signing",

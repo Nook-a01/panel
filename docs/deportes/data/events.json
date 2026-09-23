@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23T11:33:18.897Z",
+ "actualizado": "2026-09-23T16:56:01.928Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 24,
+   "total": 23,
    "proximos": 19
   },
   {
@@ -163,27 +163,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 12",
-   "sede": "Circuit Park Zandvoort, Netherlands",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-12",
-   "anio": 2026,
-   "ronda": "12",
-   "sesion": "Carrera",
-   "titulo": "GP Dutch",
-   "inicio": "2026-08-23T13:00:00.000Z"
   },
   {
    "id": "espn-401841517",
