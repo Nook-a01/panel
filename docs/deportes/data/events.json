@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23T00:31:24.335Z",
+ "actualizado": "2026-09-23T11:33:18.897Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -784,10 +784,10 @@
    "sport": "futbol",
    "emoji": "⚽",
    "titulo": "Racing Club vs Boca Juniors",
-   "inicio": "2026-09-27T18:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-09-27T20:00Z",
+   "horaConfirmada": true,
    "competicion": "Copa Argentina",
-   "sede": "",
+   "sede": "Gigante de Arroyito",
    "local": "Racing Club",
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
