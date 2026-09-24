@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-23T16:56:01.928Z",
+ "actualizado": "2026-09-24T04:47:37.230Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 15,
+   "total": 14,
    "proximos": 7
   },
   {
@@ -163,28 +163,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-401841517",
-   "miLado": "visitante",
-   "idEspn": "401841517",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Racing Club vs Boca Juniors",
-   "inicio": "2026-08-24T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Presidente Perón (Cilindro de Avellaneda)",
-   "local": "Racing Club",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "1 - 1"
   },
   {
    "id": "espn-401841527",
