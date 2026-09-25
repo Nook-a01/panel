@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-25T07:46:22.141Z",
+ "actualizado": "2026-09-25T13:45:24.013Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -242,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -962,9 +961,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1267,11 +1265,54 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "Can Patrick Vieira rescue Senegal from their post-AFCON final hellscape?",
+     "resumen": "Senegal, surely, must be asking what on earth they have done to receive the misfortune and wretched experiences they've endured since January, when they won, and then lost, the AFCON final.",
+     "fecha": "2026-09-25T13:05:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0818/r1703391_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50025741/can-patrick-vieira-rescue-senegal-their-post-afcon-final-hellscape"
+    },
+    {
+     "titulo": "Late Brazil equaliser cancels out Irankunda's stunning strike",
+     "resumen": "The Socceroos have let slip a famous victory over Brazil, conceding a goal to the five-time world champions in the final minute and having to settle for a 1-1 draw in Townsville.",
+     "fecha": "2026-09-25T13:03:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721659_1296x729_16-9.jpg",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401881899"
+    },
+    {
+     "titulo": "As it happened: Irankunda stunner not enough to earn Australia win over Brazil",
+     "resumen": "The Socceroos have played out an entertaining draw against Brazil in Queensland. Catch up on all the action from Townsville in the live blog.",
+     "fecha": "2026-09-25T12:49:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721628_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50017773/socceroos-vs-brazil-live-australia-nestory-irankunda-goal-happened"
+    },
+    {
+     "titulo": "Irankunda scores a worldie for the Socceroos",
+     "resumen": "Nestory Irankunda scores a special free kick for Australia against global powerhouse Brazil.",
+     "fecha": "2026-09-25T12:29:28Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0925/dm_260925_Soccer_HIGHLIGHT_Irankunda_scores_a_worldie_for_the_Socceroos_20260925_AUS/dm_260925_Soccer_HIGHLIGHT_Irankunda_scores_a_worldie_for_the_Socceroos_20260925_AUS.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50026932/irankunda-scores-worldie-socceroos"
+    },
+    {
+     "titulo": "Premier League, LaLiga, Serie A, Bundesliga demand FIFA reform amid Gianni Infantino re-election bid",
+     "resumen": "The top leagues in England, Italy, Germany and Spain have issued a joint-statement demanding governance reform at FIFA, amid Gianni Infantino's bid to be re-elected as president in 2027.",
+     "fecha": "2026-09-25T10:12:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50025809/premier-league-bundesliga-la-liga-serie-gianni-infantino-fifa-reform-statement"
+    },
+    {
+     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
+     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
+     "fecha": "2026-09-25T09:53:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
+    },
     {
      "titulo": "Scaloni: Messi deserves tribute in final Argentina game",
      "resumen": "Scaloni: Messi deserves tribute in final Argentina game",
@@ -1287,32 +1328,11 @@
      "link": "https://www.espn.com/video/clip/_/id/50020606/vinicius-jr-not-best-moment"
     },
     {
-     "titulo": "Connelly's must-see international soccer: Klopp vs. Xavi",
-     "resumen": "FIFA has served up a veritable feast of soccer with the first-ever three-week September international window. So what should you look out for? Bill Connelly casts his eye across the fixture list.",
-     "fecha": "2026-09-24T14:29:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721155_1295x729_16-9.png",
-     "link": "https://www.espn.com/soccer/story/_/id/50015081/connellys-see-international-soccer-klopp-vs-xavi"
-    },
-    {
      "titulo": "Gianni Infantino says he is 'committed to doing what is right' for FIFA",
      "resumen": "FIFA president Gianni Infantino says he has \"never been more determined and committed\" to doing \"what is right for the game\" after pledging to conduct an independent review of the organisation's governance.",
      "fecha": "2026-09-24T11:12:58Z",
      "imagen": "https://a.espncdn.com/photo/2026/0808/r1699291_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50019011/gianni-infantino-says-committed-doing-right-fifa"
-    },
-    {
-     "titulo": "Brazil boss Carlo Ancelotti targeting 'new generation' of players ahead of next Copa América and World Cup",
-     "resumen": "Coming up against a former pupil, Brazil boss Carlo Ancelotti is expecting Australia to provide the Seleção with a tough, compact, and well-organised opponent as he begins the process of finding a \"new generation\" of players.",
-     "fecha": "2026-09-24T11:12:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721207_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50018874/brazil-boss-carlo-ancelotti-targeting-new-generation-players-ahead-next-copa-america-world-cup"
-    },
-    {
-     "titulo": "Gordon: Scar from England's World Cup exit will never heal",
-     "resumen": "Gordon: Scar from England's World Cup exit will never heal",
-     "fecha": "2026-09-24T08:44:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_Gordon_Scar_from_Englands_World_Cup_exit_will_never_heal/dm_260924_Gordon_Scar_from_Englands_World_Cup_exit_will_never_heal.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50018336/scar-england-world-cup-exit-never-heal"
     },
     {
      "titulo": "Gianni Infantino accused of 'woefully inadequate' co-operation with probe into Donald Trump links",
@@ -1334,20 +1354,6 @@
      "fecha": "2026-09-23T14:44:29Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0923/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50013350/world-cup-penalty-miss-vs-norway-scar-hurts"
-    },
-    {
-     "titulo": "UEFA's Aleksander Ceferin: Trust still broken in football after FIFA, Gianni Infantino controversy",
-     "resumen": "UEFA president Aleksander Ceferin has said trust in world football is still broken despite FIFA abandoning its controversial plan to sell a stake in its commercial rights to private investors.",
-     "fecha": "2026-09-23T12:48:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0803/r1697001_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50012609/trust-broken-football-fifa-gianni-infantino-uefa-aleksander-ceferin"
-    },
-    {
-     "titulo": "Gomez: Jonathan David and Julian Alvarez should play side-by-side",
-     "resumen": "Gomez: Jonathan David and Julian Alvarez should play side-by-side",
-     "fecha": "2026-09-22T10:22:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0922/dm_260922_Gomez_Jonathan_David_and_Julian_Alvarez_should_play_sidebyside/dm_260922_Gomez_Jonathan_David_and_Julian_Alvarez_should_play_sidebyside.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50004142/jonathan-david-julian-alvarez-play-side-side"
     }
    ],
    "resultados": null,
@@ -1614,8 +1620,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1700,8 +1707,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1712,8 +1720,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1748,8 +1757,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -2143,9 +2153,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2303,9 +2314,10 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 12,
@@ -2319,9 +2331,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2627,46 +2640,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Mercedes' George Russell takes thrilling pole for Azerbaijan Grand Prix",
+     "resumen": "George Russell stamped his authority around Baku and cruised to pole position for Saturday's Azerbaijan Grand Prix.",
+     "fecha": "2026-09-25T13:36:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721667_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011913/mercedes-george-russell-takes-thrilling-pole-azerbaijan-grand-prix-baku-formula-1"
+    },
+    {
+     "titulo": "Kimi Antonelli hits wall and suffers early exit from Azerbaijan Grand Prix qualifying",
+     "resumen": "Championship leader Kimi Antonelli is set to start 16th on the grid at the Azerbaijan Grand Prix after hitting the wall at Turn 1 and damaging his car beyond repair in the opening session of qualifying on Friday.",
+     "fecha": "2026-09-25T12:39:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721652_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011915/kimi-antonelli-hits-wall-suffers-early-exit-azerbaijan-grand-prix-qualifying-baku-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen pips George Russell in closing stages of Azerbaijan GP final practice",
+     "resumen": "Red Bull's Max Verstappen pipped George Russell to the line in the closing stages of the final practice session at the Azerbaijan Grand Prix.",
+     "fecha": "2026-09-25T10:02:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721236_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011909/max-verstappen-pips-george-russell-closing-stages-azerbaijan-grand-prix-final-practice-baku-formula-1"
+    },
+    {
+     "titulo": "Christian Horner on F1 return: Ferrari team principal would be 'the dream'",
+     "resumen": "Christian Horner has described returning to Formula 1 as Ferrari team principal as \"the dream,\" saying it is the only role he would consider that does not involve a share of ownership in a team.",
+     "fecha": "2026-09-25T09:27:47Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0706/r1685235_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011911/christian-horner-formula-1-return-ferrari-team-principal-dream"
+    },
+    {
+     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
+     "fecha": "2026-09-25T08:39:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
      "titulo": "Why is the Azerbaijan Grand Prix on a Saturday, not a Sunday? Baku schedule shift explained",
      "resumen": "Why is the Azerbaijan Grand Prix taking place on a Saturday? Here's why F1 has moved the entire Baku race weekend forward by a day.",
      "fecha": "2026-09-25T06:30:40Z",
      "imagen": "https://a.espncdn.com/photo/2025/0921/r1548812_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50003145/explained-2026-azerbaijan-grand-prix-saturday-sunday-schedule-baku"
-    },
-    {
-     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
-     "fecha": "2026-09-25T06:30:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Norris labels McLaren pace 'pants' after Baku practice",
-     "resumen": "Norris labels McLaren pace 'pants' after Baku practice",
-     "fecha": "2026-09-24T16:33:58Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_Norris_labels_McLaren_pace_pants_after_Baku_practice/dm_260924_Norris_labels_McLaren_pace_pants_after_Baku_practice.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50021135/norris-labels-mclaren-pace-pants-baku-practice"
-    },
-    {
-     "titulo": "Antonelli happy with recovery after car issue in Baku practice",
-     "resumen": "Antonelli happy with recovery after car issue in Baku practice",
-     "fecha": "2026-09-24T16:33:44Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_Antonelli_happy_with_recovery_after_car_issue_in_Baku_practice/dm_260924_Antonelli_happy_with_recovery_after_car_issue_in_Baku_practice.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50021133/antonelli-happy-recovery-car-issue-baku-practice"
-    },
-    {
-     "titulo": "F1 teams to expect decision on Qatar, Abu Dhabi and where 2026 season will end by mid-October",
-     "resumen": "Formula 1 teams have been told they may need to wait until mid-October before the sport makes a final decision on where the 2026 season will finish.",
-     "fecha": "2026-09-24T15:37:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721304_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011899/f1-teams-expect-decision-qatar-abu-dhabi-where-2026-season-end-mid-october"
-    },
-    {
-     "titulo": "Jamie Chadwick becomes first woman to test drive Williams F1 car since 2015: 'Best day of my life'",
-     "resumen": "Jamie Chadwick tested a Williams Formula 1 car this week, an experience she said helped her complete \"a dream I've had since I was a little girl.\"",
-     "fecha": "2026-09-24T14:54:52Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721283_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011898/jamie-chadwick-becomes-first-woman-test-drive-williams-f1-car-2015-best-day-my-life"
     }
    ],
    "resultados": null,
