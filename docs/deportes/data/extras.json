@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-25T01:28:58.362Z",
+ "actualizado": "2026-09-25T07:46:22.141Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -880,6 +879,16 @@
   "argentina": {
    "compitiendo": [
     {
+     "nombre": "Copa América",
+     "liga": "conmebol.america",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "FIFA World Cup Qualifying - CONMEBOL",
+     "liga": "fifa.worldq.conmebol",
+     "ruta": "soccer"
+    },
+    {
      "nombre": "FIFA World Cup",
      "liga": "fifa.world",
      "ruta": "soccer"
@@ -1015,9 +1024,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1102,9 +1110,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1139,9 +1146,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1608,9 +1614,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1621,8 +1626,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1633,8 +1639,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1693,9 +1700,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1706,9 +1712,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1755,9 +1760,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1785,13 +1789,13 @@
     },
     {
      "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
      "nombre": "David Ayala",
      "dorsal": "22",
      "posicion": "Midfielder",
      "posCorta": "M",
-     "edad": 24,
-     "pais": "Argentina",
+     "edad": 26,
+     "pais": "Mexico",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
      "lesionado": false
     },
@@ -2055,6 +2059,11 @@
   },
   "pumas": {
    "compitiendo": [
+    {
+     "nombre": "The Rugby Championship",
+     "liga": "244293",
+     "ruta": "rugby"
+    },
     {
      "nombre": "International Test Match",
      "liga": "289234",
@@ -2618,11 +2627,18 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "George Russell leads Kimi Antonelli to Mercedes one-two in second practice at Azerbaijan GP",
-     "resumen": "George Russell continued to improve throughout the second practice session to finish top of the timesheets at the Azerbaijan Grand Prix.",
-     "fecha": "2026-09-24T16:35:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721238_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011897/george-russell-leads-kimi-antonelli-mercedes-one-two-second-practice-azerbaijan-grand-prix-baku-formula-1"
+     "titulo": "Why is the Azerbaijan Grand Prix on a Saturday, not a Sunday? Baku schedule shift explained",
+     "resumen": "Why is the Azerbaijan Grand Prix taking place on a Saturday? Here's why F1 has moved the entire Baku race weekend forward by a day.",
+     "fecha": "2026-09-25T06:30:40Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0921/r1548812_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50003145/explained-2026-azerbaijan-grand-prix-saturday-sunday-schedule-baku"
+    },
+    {
+     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
+     "fecha": "2026-09-25T06:30:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     },
     {
      "titulo": "Norris labels McLaren pace 'pants' after Baku practice",
@@ -2651,13 +2667,6 @@
      "fecha": "2026-09-24T14:54:52Z",
      "imagen": "https://a.espncdn.com/photo/2026/0924/r1721283_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50011898/jamie-chadwick-becomes-first-woman-test-drive-williams-f1-car-2015-best-day-my-life"
-    },
-    {
-     "titulo": "Azerbaijan GP: George Russell fastest in first practice; Kimi Antonelli suffers mechanical issue",
-     "resumen": "George Russell got his Azerbaijan Grand Prix weekend off to a good start after he topped first practice, while his teammate Kimi Antonelli was forced to end his session early.",
-     "fecha": "2026-09-24T10:16:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721184_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011896/george-russell-fastest-first-practice-kimi-antonelli-suffers-technical-issue-azerbaijan-grand-prix-baku-formula-1"
     }
    ],
    "resultados": null,
