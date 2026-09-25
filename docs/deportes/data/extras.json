@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-25T18:35:04.267Z",
+ "actualizado": "2026-09-25T22:19:10.220Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1049,8 +1049,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1194,9 +1195,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1243,8 +1243,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1274,18 +1275,39 @@
    ],
    "noticias": [
     {
+     "titulo": "Tony Popovic backs Nestroy Irankunda's star to continue to rise",
+     "resumen": "After his stunning free kick almost delivered the Socceroos a famous win against Brazil, Socceroos coach Tony Popovic says that Nestory Irankunda is only going to get better.",
+     "fecha": "2026-09-25T21:43:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721628_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50029200/brazil-australia-friendly-tony-popovic-backs-nestroy-irankunda-star-continue-rise"
+    },
+    {
+     "titulo": "Pochettino shares 'regret' over Balogun controversy, impact on USMNT",
+     "resumen": "USMNT coach Mauricio Pochettino said he regrets not being more involved in the process of appealing Folarin Balogun's suspension at this summer's World Cup, adding that the incident changed the energy around his squad.",
+     "fecha": "2026-09-25T20:50:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721773_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50028671/folarin-balogun-mauricio-pochettino-red-card-suspension-usa-world-cup"
+    },
+    {
+     "titulo": "Kane: I'd be extremely proud to win the Ballon d'Or",
+     "resumen": "Kane: I'd be extremely proud to win the Ballon d'Or",
+     "fecha": "2026-09-25T20:15:37Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0925/dm_260925_Kane_Id_be_extremely_proud_to_win_the_Ballon_dOr/dm_260925_Kane_Id_be_extremely_proud_to_win_the_Ballon_dOr.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50028953/extremely-proud-win-ballon-dor"
+    },
+    {
+     "titulo": "Ancelotti unhappy with pitch after Brazil draw in Australia",
+     "resumen": "Members of both Brazil's and Australia's squads have voiced their displeasure with the playing surface at the Queensland Country Bank Stadium following their 1-1 draw on Friday evening.",
+     "fecha": "2026-09-25T18:33:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721752_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50028484/brazil-australia-friendly-townsville-pitch-carlo-ancelotti"
+    },
+    {
      "titulo": "Williams goal sees India hold Panama in FIFA international friendly",
      "resumen": "Ryan Williams scored the opener against a much-changed Panama outfit. ",
      "fecha": "2026-09-25T16:56:24Z",
      "imagen": null,
      "link": "http://www.espn.com/in/recap?gameId=401914098"
-    },
-    {
-     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
-     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
-     "fecha": "2026-09-25T13:46:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
     },
     {
      "titulo": "Can Patrick Vieira rescue Senegal from their post-AFCON final hellscape?",
@@ -1302,13 +1324,6 @@
      "link": "http://www.espn.com/soccer/report/_/gameId/401881899"
     },
     {
-     "titulo": "As it happened: Irankunda stunner not enough to earn Australia win over Brazil",
-     "resumen": "The Socceroos have played out an entertaining draw against Brazil in Queensland. Catch up on all the action from Townsville in the live blog.",
-     "fecha": "2026-09-25T12:49:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721628_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50017773/socceroos-vs-brazil-live-australia-nestory-irankunda-goal-happened"
-    },
-    {
      "titulo": "Irankunda scores a worldie for the Socceroos",
      "resumen": "Nestory Irankunda scores a special free kick for Australia against global powerhouse Brazil.",
      "fecha": "2026-09-25T12:29:28Z",
@@ -1321,13 +1336,6 @@
      "fecha": "2026-09-25T10:12:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/0925/r1721593_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50025809/premier-league-bundesliga-la-liga-serie-gianni-infantino-fifa-reform-statement"
-    },
-    {
-     "titulo": "Scaloni: Messi deserves tribute in final Argentina game",
-     "resumen": "Scaloni: Messi deserves tribute in final Argentina game",
-     "fecha": "2026-09-24T19:32:40Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_COM_SOC_Presser_Scaloni_Messi_deserves_tribute_in_final_Argentina_game_20260924_GLOBAL/dm_260924_COM_SOC_Presser_Scaloni_Messi_deserves_tribute_in_final_Argentina_game_20260924_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50022346/messi-deserves-tribute-final-argentina-game"
     },
     {
      "titulo": "Gianni Infantino says he is 'committed to doing what is right' for FIFA",
@@ -1349,13 +1357,6 @@
      "fecha": "2026-09-23T14:52:45Z",
      "imagen": "https://a.espncdn.com/photo/2026/0922/r1720466_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50006618/after-lionel-messi-neymar-brazil-argentinas-next-number-10"
-    },
-    {
-     "titulo": "Guimaraes: World Cup penalty miss vs. Norway is a scar that still hurts",
-     "resumen": "Guimaraes: World Cup penalty miss vs. Norway is a scar that still hurts",
-     "fecha": "2026-09-23T14:44:29Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0923/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts/dm_260923_Guimaraes_World_Cup_penalty_miss_vs_Norway_is_a_scar_that_still_hurts.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50013350/world-cup-penalty-miss-vs-norway-scar-hurts"
     }
    ],
    "resultados": null,
@@ -1575,8 +1576,414 @@
      }
     ]
    },
-   "plantel": null,
+   "plantel": [
+    {
+     "id": "256444",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Luis Barraza",
+     "dorsal": "13",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 29,
+     "pais": "USA",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/256444.png",
+     "lesionado": false
+    },
+    {
+     "id": "297047",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rocco Ríos Novo",
+     "dorsal": "34",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 24,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "231059",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+     "nombre": "Dayne St. Clair",
+     "dorsal": "97",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 29,
+     "pais": "Canada",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/231059.png",
+     "lesionado": false
+    },
+    {
+     "id": "315617",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gonzalo Luján",
+     "dorsal": "2",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "231241",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+     "nombre": "Sergio Reguilón",
+     "dorsal": "3",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Spain",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "285473",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Facundo Mura",
+     "dorsal": "4",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "402696",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+     "nombre": "Fricio Caicedo",
+     "dorsal": "15",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 18,
+     "pais": "Ecuador",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "314952",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "nombre": "Micael",
+     "dorsal": "16",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 26,
+     "pais": "Brazil",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/314952.png",
+     "lesionado": false
+    },
+    {
+     "id": "316269",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
+     "nombre": "Ian Fray",
+     "dorsal": "17",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 24,
+     "pais": "Jamaica",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
+     "lesionado": false
+    },
+    {
+     "id": "364401",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Tyler Hall",
+     "dorsal": "26",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "310279",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Maximiliano Falcón",
+     "dorsal": "37",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Uruguay",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "359239",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png",
+     "nombre": "Israel Boatwright",
+     "dorsal": "62",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 21,
+     "pais": "Dominican Republic",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "401415",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Daniel Sumalla",
+     "dorsal": "70",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399951",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Cesar Abadia-Reda",
+     "dorsal": "76",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "173666",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "nombre": "Casemiro",
+     "dorsal": "5",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 34,
+     "pais": "Brazil",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "174466",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo De Paul",
+     "dorsal": "7",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "315594",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
+     "nombre": "Telasco Segovia",
+     "dorsal": "8",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 23,
+     "pais": "Venezuela",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "290715",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "nombre": "David Ayala",
+     "dorsal": "22",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 26,
+     "pais": "Mexico",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
+     "lesionado": false
+    },
+    {
+     "id": "329025",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+     "nombre": "Yannick Bright",
+     "dorsal": "42",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Italy",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399971",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Ian Urkidi",
+     "dorsal": "55",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "401414",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Preston Plambeck",
+     "dorsal": "59",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "297328",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+     "nombre": "Matías Galarza",
+     "dorsal": "80",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 24,
+     "pais": "Paraguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "406938",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Alexander Shaw",
+     "dorsal": "88",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 18,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "125088",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+     "nombre": "Luis Suárez",
+     "dorsal": "9",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Uruguay",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "45843",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lionel Messi",
+     "dorsal": "10",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
+     "lesionado": false
+    },
+    {
+     "id": "228394",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "nombre": "Germán Berterame",
+     "dorsal": "19",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 27,
+     "pais": "Mexico",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "315801",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Tadeo Allende",
+     "dorsal": "21",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "387661",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Mateo Silvetti",
+     "dorsal": "24",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "401418",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Diego Rey",
+     "dorsal": "52",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "359953",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+     "nombre": "Lovens Delinois",
+     "dorsal": "54",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 21,
+     "pais": "Haiti",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "399970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Dániel Pintér",
+     "dorsal": "56",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "361433",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "nombre": "Riquelme",
+     "dorsal": null,
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 20,
+     "pais": "Brazil",
+     "foto": null,
+     "lesionado": false
+    }
+   ],
    "noticias": [
+    {
+     "titulo": "Mauricio Pochettino: Cavan Sullivan ready for USMNT debut",
+     "resumen": "USMNT coach Mauricio Pochettino said 16-year-old phenom Cavan Sullivan is ready to play for the USMNT during the current international window, but was non-committal as to what role he would play in Saturday's friendly against Peru.",
+     "fecha": "2026-09-25T20:18:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50028147/mauricio-pochettino-cavan-sullivan-ready-usmnt-debut"
+    },
     {
      "titulo": "Embolo out of Switzerland squad over fake COVID-19 documents",
      "resumen": "World Cup quarterfinalist Switzerland has lost a second player from its Nations League squad because of years-old cases of fake COVID-19 documents.",
@@ -1611,13 +2018,6 @@
      "fecha": "2026-09-22T20:55:20Z",
      "imagen": "https://a.espncdn.com/photo/2026/0922/r1720571_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50008173/columbus-crew-2-fires-higuain-fallout-ref-abuse"
-    },
-    {
-     "titulo": "MLS Power Rankings: Union skyrocket as unbeaten streak reaches 11 games",
-     "resumen": "Can anyone stop the Philadelphia Union? Their latest win powered them up the charts in this week's edition of ESPN's MLS Power Rankings.",
-     "fecha": "2026-09-21T17:33:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1718089_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49998607/mls-power-rankings-philadelphia-union-skyrocket-unbeaten-streak-reaches-11-games"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
