@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-25T13:45:24.013Z",
+ "actualizado": "2026-09-25T18:35:04.267Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -961,8 +963,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1046,9 +1049,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1192,8 +1194,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1240,9 +1243,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1271,6 +1273,20 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Williams goal sees India hold Panama in FIFA international friendly",
+     "resumen": "Ryan Williams scored the opener against a much-changed Panama outfit. ",
+     "fecha": "2026-09-25T16:56:24Z",
+     "imagen": null,
+     "link": "http://www.espn.com/in/recap?gameId=401914098"
+    },
+    {
+     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
+     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
+     "fecha": "2026-09-25T13:46:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
+    },
     {
      "titulo": "Can Patrick Vieira rescue Senegal from their post-AFCON final hellscape?",
      "resumen": "Senegal, surely, must be asking what on earth they have done to receive the misfortune and wretched experiences they've endured since January, when they won, and then lost, the AFCON final.",
@@ -1307,25 +1323,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50025809/premier-league-bundesliga-la-liga-serie-gianni-infantino-fifa-reform-statement"
     },
     {
-     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
-     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
-     "fecha": "2026-09-25T09:53:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
-    },
-    {
      "titulo": "Scaloni: Messi deserves tribute in final Argentina game",
      "resumen": "Scaloni: Messi deserves tribute in final Argentina game",
      "fecha": "2026-09-24T19:32:40Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_COM_SOC_Presser_Scaloni_Messi_deserves_tribute_in_final_Argentina_game_20260924_GLOBAL/dm_260924_COM_SOC_Presser_Scaloni_Messi_deserves_tribute_in_final_Argentina_game_20260924_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50022346/messi-deserves-tribute-final-argentina-game"
-    },
-    {
-     "titulo": "Ancelotti: Vinícius Jr. is not in his best moment",
-     "resumen": "Ancelotti: Vinícius Jr. is not in his best moment",
-     "fecha": "2026-09-24T15:00:00Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0924/dm_260924_Ancelotti_Vinicius_Jr_is_not_in_his_best_moment/dm_260924_Ancelotti_Vinicius_Jr_is_not_in_his_best_moment.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50020606/vinicius-jr-not-best-moment"
     },
     {
      "titulo": "Gianni Infantino says he is 'committed to doing what is right' for FIFA",
@@ -1573,412 +1575,15 @@
      }
     ]
    },
-   "plantel": [
-    {
-     "id": "256444",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Luis Barraza",
-     "dorsal": "13",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 29,
-     "pais": "USA",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/256444.png",
-     "lesionado": false
-    },
-    {
-     "id": "297047",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rocco Ríos Novo",
-     "dorsal": "34",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 24,
-     "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "231059",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-     "nombre": "Dayne St. Clair",
-     "dorsal": "97",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 29,
-     "pais": "Canada",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/231059.png",
-     "lesionado": false
-    },
-    {
-     "id": "315617",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gonzalo Luján",
-     "dorsal": "2",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "231241",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-     "nombre": "Sergio Reguilón",
-     "dorsal": "3",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "285473",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Facundo Mura",
-     "dorsal": "4",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "402696",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
-     "nombre": "Fricio Caicedo",
-     "dorsal": "15",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 18,
-     "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "314952",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Micael",
-     "dorsal": "16",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 26,
-     "pais": "Brazil",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/314952.png",
-     "lesionado": false
-    },
-    {
-     "id": "316269",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
-     "nombre": "Ian Fray",
-     "dorsal": "17",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 24,
-     "pais": "Jamaica",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
-     "lesionado": false
-    },
-    {
-     "id": "364401",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Tyler Hall",
-     "dorsal": "26",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "310279",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
-     "nombre": "Maximiliano Falcón",
-     "dorsal": "37",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "359239",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png",
-     "nombre": "Israel Boatwright",
-     "dorsal": "62",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 21,
-     "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "401415",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Daniel Sumalla",
-     "dorsal": "70",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399951",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Cesar Abadia-Reda",
-     "dorsal": "76",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "173666",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Casemiro",
-     "dorsal": "5",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 34,
-     "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "174466",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rodrigo De Paul",
-     "dorsal": "7",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "315594",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
-     "nombre": "Telasco Segovia",
-     "dorsal": "8",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 23,
-     "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "nombre": "David Ayala",
-     "dorsal": "22",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 26,
-     "pais": "Mexico",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
-     "lesionado": false
-    },
-    {
-     "id": "329025",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-     "nombre": "Yannick Bright",
-     "dorsal": "42",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Italy",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399971",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Ian Urkidi",
-     "dorsal": "55",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "401414",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Preston Plambeck",
-     "dorsal": "59",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "297328",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-     "nombre": "Matías Galarza",
-     "dorsal": "80",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 24,
-     "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "406938",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Alexander Shaw",
-     "dorsal": "88",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 18,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "125088",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
-     "nombre": "Luis Suárez",
-     "dorsal": "9",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "45843",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lionel Messi",
-     "dorsal": "10",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
-     "lesionado": false
-    },
-    {
-     "id": "228394",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "nombre": "Germán Berterame",
-     "dorsal": "19",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 27,
-     "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "315801",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Tadeo Allende",
-     "dorsal": "21",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "387661",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Mateo Silvetti",
-     "dorsal": "24",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "401418",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Diego Rey",
-     "dorsal": "52",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "359953",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
-     "nombre": "Lovens Delinois",
-     "dorsal": "54",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 21,
-     "pais": "Haiti",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Dániel Pintér",
-     "dorsal": "56",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "361433",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Riquelme",
-     "dorsal": null,
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
-    }
-   ],
+   "plantel": null,
    "noticias": [
+    {
+     "titulo": "Embolo out of Switzerland squad over fake COVID-19 documents",
+     "resumen": "World Cup quarterfinalist Switzerland has lost a second player from its Nations League squad because of years-old cases of fake COVID-19 documents.",
+     "fecha": "2026-09-25T17:39:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721732_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50028180/breel-embolo-switzerland-covid-19-fake-granit-xhaka"
+    },
     {
      "titulo": "Goose at Dodger Stadium during Padres-Dodgers recalls past wildlife interruptions",
      "resumen": "A goose slid on Dodger Stadium's field during Padres-Dodgers. It's not the first time a creature stole the show at a sporting event.",
@@ -2013,13 +1618,6 @@
      "fecha": "2026-09-21T17:33:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/0917/r1718089_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/49998607/mls-power-rankings-philadelphia-union-skyrocket-unbeaten-streak-reaches-11-games"
-    },
-    {
-     "titulo": "Dreyer outduels Messi as San Diego hands Miami 4th straight draw",
-     "resumen": "Lionel Messi scored his 101st goal for Inter Miami CF, but Anders Dreyer scored twice for San Diego FC, as the teams played to a 2-2 draw on Sunday night.",
-     "fecha": "2026-09-21T02:38:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0921/r1719866_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/49995557/dreyer-outduels-messi-san-diego-miami-4th-straight-draw"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2138,7 +1736,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 14 carreras",
+    "titulo": "Temporada 2026 · tras 15 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2153,10 +1751,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2314,10 +1911,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2331,10 +1927,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2642,14 +2237,35 @@
     {
      "titulo": "Mercedes' George Russell takes thrilling pole for Azerbaijan Grand Prix",
      "resumen": "George Russell stamped his authority around Baku and cruised to pole position for Saturday's Azerbaijan Grand Prix.",
-     "fecha": "2026-09-25T13:36:54Z",
+     "fecha": "2026-09-25T17:01:15Z",
      "imagen": "https://a.espncdn.com/photo/2026/0925/r1721667_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50011913/mercedes-george-russell-takes-thrilling-pole-azerbaijan-grand-prix-baku-formula-1"
     },
     {
+     "titulo": "Max Verstappen labels Azerbaijan GP qualifying a 'disaster,' starts eighth",
+     "resumen": "Max Verstappen saw Red Bull's encouraging pace disappear in a \"disaster\" qualifying in Baku, where he will start from eighth on the grid for the Azerbaijan Grand Prix.",
+     "fecha": "2026-09-25T16:42:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721708_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011917/max-verstappen-labels-azerbaijan-grand-prix-qualifying-disaster-starts-eighth-baku-formula-1"
+    },
+    {
+     "titulo": "George Russell 'shocked' by Azerbaijan GP pole: 'The biggest margin in my whole career'",
+     "resumen": "George Russell has said he was \"shocked\" when he learned he had secured pole position by the biggest margin of his career during Friday's qualifying for the Azerbaijan Grand Prix.",
+     "fecha": "2026-09-25T15:16:13Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721682_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011916/george-russell-shocked-azerbaijan-gp-pole-biggest-margin-my-whole-career-baku-formula-1"
+    },
+    {
+     "titulo": "George Russell 'felt at one with the car' in Azerbaijan pole lap",
+     "resumen": "George Russell 'felt at one with the car' in Azerbaijan pole lap",
+     "fecha": "2026-09-25T15:14:37Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0925/dm_260925_George_Russell_felt_at_one_with_the_car_in_Azerbaijan_pole_lap/dm_260925_George_Russell_felt_at_one_with_the_car_in_Azerbaijan_pole_lap.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50027682/george-russell-felt-one-car-azerbaijan-pole-lap"
+    },
+    {
      "titulo": "Kimi Antonelli hits wall and suffers early exit from Azerbaijan Grand Prix qualifying",
      "resumen": "Championship leader Kimi Antonelli is set to start 16th on the grid at the Azerbaijan Grand Prix after hitting the wall at Turn 1 and damaging his car beyond repair in the opening session of qualifying on Friday.",
-     "fecha": "2026-09-25T12:39:45Z",
+     "fecha": "2026-09-25T13:58:35Z",
      "imagen": "https://a.espncdn.com/photo/2026/0925/r1721652_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50011915/kimi-antonelli-hits-wall-suffers-early-exit-azerbaijan-grand-prix-qualifying-baku-formula-1"
     },
@@ -2659,27 +2275,6 @@
      "fecha": "2026-09-25T10:02:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/0924/r1721236_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50011909/max-verstappen-pips-george-russell-closing-stages-azerbaijan-grand-prix-final-practice-baku-formula-1"
-    },
-    {
-     "titulo": "Christian Horner on F1 return: Ferrari team principal would be 'the dream'",
-     "resumen": "Christian Horner has described returning to Formula 1 as Ferrari team principal as \"the dream,\" saying it is the only role he would consider that does not involve a share of ownership in a team.",
-     "fecha": "2026-09-25T09:27:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0706/r1685235_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011911/christian-horner-formula-1-return-ferrari-team-principal-dream"
-    },
-    {
-     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
-     "fecha": "2026-09-25T08:39:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Why is the Azerbaijan Grand Prix on a Saturday, not a Sunday? Baku schedule shift explained",
-     "resumen": "Why is the Azerbaijan Grand Prix taking place on a Saturday? Here's why F1 has moved the entire Baku race weekend forward by a day.",
-     "fecha": "2026-09-25T06:30:40Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0921/r1548812_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50003145/explained-2026-azerbaijan-grand-prix-saturday-sunday-schedule-baku"
     }
    ],
    "resultados": null,
