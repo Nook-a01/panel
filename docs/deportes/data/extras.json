@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26T13:03:49.811Z",
+ "actualizado": "2026-09-26T17:08:46.006Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -961,8 +963,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -985,8 +988,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1058,8 +1062,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1238,8 +1243,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1262,8 +1268,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1716,9 +1723,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1765,9 +1771,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1978,7 +1983,7 @@
     {
      "titulo": "Mauricio Pochettino: Cavan Sullivan ready for USMNT debut",
      "resumen": "USMNT coach Mauricio Pochettino said 16-year-old phenom Cavan Sullivan is ready to play for the USMNT during the current international window, but was non-committal as to what role he would play in Saturday's friendly against Peru.",
-     "fecha": "2026-09-25T20:18:23Z",
+     "fecha": "2026-09-26T16:00:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712111_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50028147/mauricio-pochettino-cavan-sullivan-ready-usmnt-debut"
     },
@@ -2142,7 +2147,7 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "292",
+      "pts": "302",
       "g": "8",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
@@ -2159,8 +2164,8 @@
       "equipo": "George Russell",
       "abrev": "RUS",
       "detalle": "Mercedes",
-      "pts": "211",
-      "g": "2",
+      "pts": "236",
+      "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
       "color": "#00D2BE",
@@ -2175,7 +2180,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "191",
+      "pts": "199",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2207,7 +2212,7 @@
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "167",
+      "pts": "179",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2223,7 +2228,7 @@
       "equipo": "Max Verstappen",
       "abrev": "VER",
       "detalle": "Red Bull",
-      "pts": "145",
+      "pts": "163",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "nacionalidad": "Dutch",
@@ -2246,16 +2251,17 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "71",
+      "pts": "86",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2278,9 +2284,10 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 10,
@@ -2303,7 +2310,7 @@
       "equipo": "Arvid Lindblad",
       "abrev": "LIN",
       "detalle": "RB F1 Team",
-      "pts": "31",
+      "pts": "37",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2335,7 +2342,7 @@
       "equipo": "Oliver Bearman",
       "abrev": "BEA",
       "detalle": "Haas F1 Team",
-      "pts": "18",
+      "pts": "20",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2358,9 +2365,10 @@
       "color": "#FF2D00",
       "numero": "5",
       "driverId": "bortoleto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 15,
@@ -2380,10 +2388,26 @@
      },
      {
       "pos": 16,
+      "equipo": "Esteban Ocon",
+      "abrev": "OCO",
+      "detalle": "Haas F1 Team",
+      "pts": "7",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#5A5A5A",
+      "numero": "31",
+      "driverId": "ocon",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4678.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 17,
       "equipo": "Carlos Sainz",
       "abrev": "SAI",
       "detalle": "Williams",
-      "pts": "6",
+      "pts": "7",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
       "nacionalidad": "Spanish",
@@ -2395,7 +2419,7 @@
       "mio": false
      },
      {
-      "pos": 17,
+      "pos": 18,
       "equipo": "Alexander Albon",
       "abrev": "ALB",
       "detalle": "Williams",
@@ -2407,22 +2431,6 @@
       "numero": "23",
       "driverId": "albon",
       "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5592.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 18,
-      "equipo": "Esteban Ocon",
-      "abrev": "OCO",
-      "detalle": "Haas F1 Team",
-      "pts": "3",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-      "nacionalidad": "French",
-      "color": "#5A5A5A",
-      "numero": "31",
-      "driverId": "ocon",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4678.png",
       "logo": null,
       "mio": false
      },
@@ -2512,8 +2520,8 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "503",
-      "g": "10",
+      "pts": "538",
+      "g": "11",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "logo": null,
@@ -2523,7 +2531,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "358",
+      "pts": "378",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2545,7 +2553,7 @@
       "pos": 4,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "230",
+      "pts": "263",
       "g": "0",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2556,7 +2564,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "77",
+      "pts": "83",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2578,7 +2586,7 @@
       "pos": 7,
       "equipo": "Haas F1 Team",
       "detalle": "American",
-      "pts": "21",
+      "pts": "27",
       "g": "0",
       "color": "#5A5A5A",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -2600,7 +2608,7 @@
       "pos": 9,
       "equipo": "Williams",
       "detalle": "British",
-      "pts": "11",
+      "pts": "12",
       "g": "0",
       "color": "#FFFFFF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2634,46 +2642,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Azerbaijan Grand Prix: George Russell fights off Max Verstappen to take dominant win",
-     "resumen": "George Russell held off a threatening Max Verstappen in the closing stages to take a dominant victory at the Azerbaijan Grand Prix.",
-     "fecha": "2026-09-26T12:59:21Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0926/r1721980_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011927/george-russell-fights-max-verstappen-take-dominant-win-baku-formula-1"
+     "titulo": "Lando Norris: Drivers should have 'one-race ban' after collision with Franco Colapinto at Azerbaijan GP",
+     "resumen": "Lando Norris has said Franco Colapinto should be banned for the pile-up which ended his Azerbaijan Grand Prix, adding \"[there's] some drivers that shouldn't be in Formula 1.\"",
+     "fecha": "2026-09-26T17:02:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722010_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011930/lando-norris-takes-aim-franco-colapinto-collision-azerbaijan-grand-prix-some-drivers-formula-1-baku"
     },
     {
-     "titulo": "Azerbaijan Grand Prix LIVE! F1 Baku race updates, commentary and results",
-     "resumen": "George Russell converted pole position into a dominant race win at the Azerbaijan Grand Prix.",
-     "fecha": "2026-09-26T12:52:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0926/r1721994_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011986/azerbaijan-grand-prix-2026-live-baku-updates-results-analysis-commentary"
+     "titulo": "George Russell warns 'pressure' is on Kimi Antonelli after 'most dominant weekend in my career'",
+     "resumen": "George Russell delivered the most dominant performance of his career to win in Azerbaijan -- and then told world championship rival Kimi Antonelli: \"The pressure is all on you.\"",
+     "fecha": "2026-09-26T16:40:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722058_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011939/george-russell-warns-pressure-kimi-antonelli-most-dominant-weekend-my-career-azerbaijan-grand-prix-baku-formula-1"
     },
     {
-     "titulo": "Max Verstappen says he prefers F1 not to race in Middle East due to ongoing conflict",
-     "resumen": "Max Verstappen said if it was up to him Formula 1 would not finish the season in Qatar and Abu Dhabi due to the ongoing United States-Iran conflict.",
-     "fecha": "2026-09-26T09:22:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721708_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50031807/max-verstappen-lewis-hamilton-f1-middle-east-iran"
+     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
+     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
+     "fecha": "2026-09-26T15:31:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
     },
     {
-     "titulo": "Why is the Azerbaijan Grand Prix on a Saturday, not a Sunday? Baku schedule shift explained",
-     "resumen": "Why is the Azerbaijan Grand Prix taking place on a Saturday? Here's why F1 has moved the entire Baku race weekend forward by a day.",
-     "fecha": "2026-09-26T07:15:37Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0921/r1548812_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50003145/explained-2026-azerbaijan-grand-prix-saturday-sunday-schedule-baku"
+     "titulo": "Formula 1 start times: When does each 2026 race begin?",
+     "resumen": "The first half of the Formula 1 2026 season has been full of ups and downs for teams and drivers across the grid.",
+     "fecha": "2026-09-26T15:19:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
     },
     {
-     "titulo": "Azerbaijan Grand Prix 2026: Race start time in Baku, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is heading to the streets of Baku for this year's Azerbaijan Grand Prix as we roll into the business end of the season.",
-     "fecha": "2026-09-26T07:12:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0917/r1717992_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49963170/azerbaijan-grand-prix-2026-circuit-baku-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+     "titulo": "Russell: Final stint of Azerbaijan GP most fun I've had in F1",
+     "resumen": "Russell: Final stint of Azerbaijan GP most fun I've had in F1",
+     "fecha": "2026-09-26T15:10:25Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0926/dm_260926_COM_F1_Presser_Rodri_You_cannot_take_away_Manchester_Citys_achievements_20260926_GLOBAL/dm_260926_COM_F1_Presser_Rodri_You_cannot_take_away_Manchester_Citys_achievements_20260926_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50033528/final-stint-azerbaijan-gp-most-fun-had-f1"
     },
     {
-     "titulo": "Max Verstappen labels Azerbaijan GP qualifying a 'disaster,' starts eighth",
-     "resumen": "Max Verstappen saw Red Bull's encouraging pace disappear in a \"disaster\" qualifying in Baku, where he will start from eighth on the grid for the Azerbaijan Grand Prix.",
-     "fecha": "2026-09-25T16:42:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721708_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011917/max-verstappen-labels-azerbaijan-grand-prix-qualifying-disaster-starts-eighth-baku-formula-1"
+     "titulo": "Azerbaijan GP: Kimi Antonelli dawns on 'worst' race weekend of the season despite gaining 11 places",
+     "resumen": "Kimi Antonelli was relieved to have made it through a risk-free, \"damage-safe mode\" race weekend at the Azerbaijan Grand Prix, where he recovered to finish fifth from 16th on the grid.",
+     "fecha": "2026-09-26T15:09:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722021_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50011931/kimi-antonelli-dawns-worst-race-weekend-season-gaining-11-places-baku-formula-1"
     }
    ],
    "resultados": null,
