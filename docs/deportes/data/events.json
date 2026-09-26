@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26T13:03:49.811Z",
+ "actualizado": "2026-09-26T22:48:06.855Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -72,7 +72,7 @@
    "ruta": "mma",
    "liga": "ufc",
    "total": 14,
-   "proximos": 10
+   "proximos": 9
   }
  ],
  "eventos": [
