@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26T17:08:46.006Z",
+ "actualizado": "2026-09-26T19:50:52.501Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -963,9 +962,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1049,9 +1047,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1268,9 +1265,8 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
@@ -1623,9 +1619,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1636,9 +1631,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -2154,10 +2148,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2251,10 +2244,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2284,10 +2276,9 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 10,
@@ -2365,10 +2356,9 @@
       "color": "#FF2D00",
       "numero": "5",
       "driverId": "bortoleto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 15,
@@ -2642,6 +2632,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Russell's win won't kick-start title challenge, but Baku rewards his faith in trying 2026",
+     "resumen": "Kimi Antonelli has been Mercedes' clear-cut No. 1 driver this season, but George Russell's persistence was rewarded with a win in Baku on Saturday",
+     "fecha": "2026-09-26T19:04:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722096_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50034826/mercedes-george-russell-win-wont-kickstart-f1-title-challenge-azerbaijan-gp-baku-rewards-faith-trying-2026"
+    },
+    {
+     "titulo": "Azerbaijan Grand Prix: Alpine to consider next steps after Colapinto, Gasly DNF",
+     "resumen": "Alpine will \"consider what course of action should be taken\" internally over the Franco Colapinto mistake which took himself and teammate Pierre Gasly out of the Azerbaijan Grand Prix.",
+     "fecha": "2026-09-26T17:47:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722075_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50034178/alpine-consider-course-action-franco-colapinto-pierre-gasly-dnf-baku"
+    },
+    {
      "titulo": "Lando Norris: Drivers should have 'one-race ban' after collision with Franco Colapinto at Azerbaijan GP",
      "resumen": "Lando Norris has said Franco Colapinto should be banned for the pile-up which ended his Azerbaijan Grand Prix, adding \"[there's] some drivers that shouldn't be in Formula 1.\"",
      "fecha": "2026-09-26T17:02:12Z",
@@ -2668,20 +2672,6 @@
      "fecha": "2026-09-26T15:19:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
-    },
-    {
-     "titulo": "Russell: Final stint of Azerbaijan GP most fun I've had in F1",
-     "resumen": "Russell: Final stint of Azerbaijan GP most fun I've had in F1",
-     "fecha": "2026-09-26T15:10:25Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0926/dm_260926_COM_F1_Presser_Rodri_You_cannot_take_away_Manchester_Citys_achievements_20260926_GLOBAL/dm_260926_COM_F1_Presser_Rodri_You_cannot_take_away_Manchester_Citys_achievements_20260926_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50033528/final-stint-azerbaijan-gp-most-fun-had-f1"
-    },
-    {
-     "titulo": "Azerbaijan GP: Kimi Antonelli dawns on 'worst' race weekend of the season despite gaining 11 places",
-     "resumen": "Kimi Antonelli was relieved to have made it through a risk-free, \"damage-safe mode\" race weekend at the Azerbaijan Grand Prix, where he recovered to finish fifth from 16th on the grid.",
-     "fecha": "2026-09-26T15:09:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722021_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50011931/kimi-antonelli-dawns-worst-race-weekend-season-gaining-11-places-baku-formula-1"
     }
    ],
    "resultados": null,
