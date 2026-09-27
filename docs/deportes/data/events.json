@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-26T22:48:06.855Z",
+ "actualizado": "2026-09-27T08:07:36.752Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -727,7 +727,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
