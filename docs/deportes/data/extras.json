@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-28T06:51:37.191Z",
+ "actualizado": "2026-09-28T15:25:46.684Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -885,6 +885,11 @@
      "ruta": "soccer"
     },
     {
+     "nombre": "FIFA World Cup Qualifying - CONMEBOL",
+     "liga": "fifa.worldq.conmebol",
+     "ruta": "soccer"
+    },
+    {
      "nombre": "FIFA World Cup",
      "liga": "fifa.world",
      "ruta": "soccer"
@@ -948,8 +953,354 @@
      }
     ]
    },
-   "plantel": null,
+   "plantel": [
+    {
+     "id": "177927",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Juan Musso",
+     "dorsal": "1",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "167192",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gerónimo Rulli",
+     "dorsal": "12",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 34,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/167192.png",
+     "lesionado": false
+    },
+    {
+     "id": "158626",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Emiliano Martínez",
+     "dorsal": "23",
+     "posicion": "Goalkeeper",
+     "posCorta": "G",
+     "edad": 34,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "233945",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Marcos Senesi",
+     "dorsal": "2",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233945.png",
+     "lesionado": false
+    },
+    {
+     "id": "145190",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nicolás Tagliafico",
+     "dorsal": "3",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 34,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/145190.png",
+     "lesionado": false
+    },
+    {
+     "id": "228262",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Gonzalo Montiel",
+     "dorsal": "4",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "233937",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lisandro Martínez",
+     "dorsal": "6",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/233937.png",
+     "lesionado": false
+    },
+    {
+     "id": "96970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Cristian Romero",
+     "dorsal": "13",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "119289",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nicolás Otamendi",
+     "dorsal": "19",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 38,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "249663",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Facundo Medina",
+     "dorsal": "25",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "164826",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nahuel Molina",
+     "dorsal": "26",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "153115",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Leandro Paredes",
+     "dorsal": "5",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "174466",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Rodrigo De Paul",
+     "dorsal": "7",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 32,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "320760",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Valentín Barco",
+     "dorsal": "8",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 22,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "207343",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Giovani Lo Celso",
+     "dorsal": "11",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 30,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "228393",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Exequiel Palacios",
+     "dorsal": "14",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "277208",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Thiago Almada",
+     "dorsal": "16",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/277208.png",
+     "lesionado": false
+    },
+    {
+     "id": "337970",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nico Paz",
+     "dorsal": "18",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 22,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "249299",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Alexis Mac Allister",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 27,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "285450",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Enzo Fernández",
+     "dorsal": "24",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "277206",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Julián Álvarez",
+     "dorsal": "9",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 26,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "45843",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lionel Messi",
+     "dorsal": "10",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 39,
+     "pais": "Argentina",
+     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
+     "lesionado": false
+    },
+    {
+     "id": "76017",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Nico González",
+     "dorsal": "15",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 28,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "323838",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Giuliano Simeone",
+     "dorsal": "17",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 23,
+     "pais": "Argentina",
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
+    },
+    {
+     "id": "311743",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "José Manuel López",
+     "dorsal": "21",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "219713",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Lautaro Martínez",
+     "dorsal": "22",
+     "posicion": "Forward",
+     "posCorta": "F",
+     "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    }
+   ],
    "noticias": [
+    {
+     "titulo": "Will anyone stop Infantino? FIFA president is confident U20 World Cup cameo says otherwise",
+     "resumen": "Under fire from UEFA, Infantino is back to business as usual and inching closer to reelection as FIFA president.",
+     "fecha": "2026-09-28T14:30:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0927/r1722644_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50045992/gianni-infantino-fifa-president-scandal-u20-world-cup-uefa-victor-montigliani"
+    },
+    {
+     "titulo": "Ancelotti: Brazil is the most historical national team ever",
+     "resumen": "Ancelotti: Brazil is the most historical national team ever",
+     "fecha": "2026-09-28T13:57:05Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0928/dm_260928_Ancelotti_Brazil_is_the_most_historical_national_team_ever/dm_260928_Ancelotti_Brazil_is_the_most_historical_national_team_ever.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50051881/brazil-most-historical-national-team-ever"
+    },
+    {
+     "titulo": "Vozinha struggling with World Cup fame: 'I'd choose the life I had before'",
+     "resumen": "Viral World Cup goalkeeper Vozinha has revealed he is struggling with his newfound fame, saying that he would like to go back to a time before he was so well-known.",
+     "fecha": "2026-09-28T09:21:26Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722870_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50050816/vozinha-world-cup-fame-struggling-cape-verde"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-09-28T07:57:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722794_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "Popovic challenges Socceroos to back up vs. Brazil with Asian Cup in mind",
      "resumen": "Brazil are expected to raise their intensity in Tuesday's return fixture in Brisbane. With his eyes firmly set on next January's Asian Cup, Tony Popovic is likewise challenging the Socceroos to lift their level if they want to claim a famous victory.",
@@ -1005,34 +1356,6 @@
      "fecha": "2026-09-25T20:50:48Z",
      "imagen": "https://a.espncdn.com/photo/2026/0925/r1721773_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50028671/folarin-balogun-mauricio-pochettino-red-card-suspension-usa-world-cup"
-    },
-    {
-     "titulo": "Kane: I'd be extremely proud to win the Ballon d'Or",
-     "resumen": "Kane: I'd be extremely proud to win the Ballon d'Or",
-     "fecha": "2026-09-25T20:15:37Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0925/dm_260925_Kane_Id_be_extremely_proud_to_win_the_Ballon_dOr/dm_260925_Kane_Id_be_extremely_proud_to_win_the_Ballon_dOr.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50028953/extremely-proud-win-ballon-dor"
-    },
-    {
-     "titulo": "Can Patrick Vieira rescue Senegal from their post-AFCON final hellscape?",
-     "resumen": "Senegal, surely, must be asking what on earth they have done to receive the misfortune and wretched experiences they've endured since January, when they won, and then lost, the AFCON final.",
-     "fecha": "2026-09-25T13:05:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0818/r1703391_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50025741/can-patrick-vieira-rescue-senegal-their-post-afcon-final-hellscape"
-    },
-    {
-     "titulo": "Premier League, LaLiga, Serie A, Bundesliga demand FIFA reform amid Gianni Infantino re-election bid",
-     "resumen": "The top leagues in England, Italy, Germany and Spain have issued a joint-statement demanding governance reform at FIFA, amid Gianni Infantino's bid to be re-elected as president in 2027.",
-     "fecha": "2026-09-25T10:12:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721593_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50025809/premier-league-bundesliga-la-liga-serie-gianni-infantino-fifa-reform-statement"
-    },
-    {
-     "titulo": "Gianni Infantino says he is 'committed to doing what is right' for FIFA",
-     "resumen": "FIFA president Gianni Infantino says he has \"never been more determined and committed\" to doing \"what is right for the game\" after pledging to conduct an independent review of the organisation's governance.",
-     "fecha": "2026-09-24T11:12:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0808/r1699291_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50019011/gianni-infantino-says-committed-doing-right-fifa"
     }
    ],
    "resultados": null,
@@ -1253,7 +1576,92 @@
     ]
    },
    "plantel": null,
-   "noticias": null,
+   "noticias": [
+    {
+     "titulo": "MLS Power Rankings: No Cavan? No problem for surging Philadelphia",
+     "resumen": "Philadelphia lost three star youngsters to international duty, yet the Union continued their march toward the top of ESPN's MLS Power Rankings.",
+     "fecha": "2026-09-28T15:19:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722956_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50051629/mls-power-rankings-no-cavan-sullivan-no-problem-surging-philadelphia-union"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-09-28T07:57:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722794_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "Struggling LAFC fires 1st-year coach Marc Dos Santos",
+     "resumen": "LAFC fired head coach Marc Dos Santos on Sunday night, late in his disappointing first season in charge.",
+     "fecha": "2026-09-28T01:59:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722808_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50049197/lafc-fires-coach-marc-dos-santos"
+    },
+    {
+     "titulo": "Columbus stuns Miami late after Messi's free-kick golazo",
+     "resumen": "Jamal Thiaré scored in the eighth minute of second-half stoppage time to give the Columbus Crew a stunning 2-1 win over MLS Cup holders Inter Miami on Sunday.",
+     "fecha": "2026-09-28T01:55:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722803_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50048622/lionel-messi-free-kick-goal-inter-miami-columbus-crew"
+    },
+    {
+     "titulo": "Columbus Crew SC vs. Inter Miami CF - Game Highlights",
+     "resumen": "Watch the Game Highlights from Columbus Crew SC vs. Inter Miami CF, 09/27/2026",
+     "fecha": "2026-09-28T01:29:55Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/0928/491a9087-fd2f-4393-b3bc-91fcce0ddd48/491a9087-fd2f-4393-b3bc-91fcce0ddd48.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50049058/columbus-crew-sc-vs-inter-miami-cf-game-highlights"
+    },
+    {
+     "titulo": "Iloski hat trick sees Union win 6th straight, bolster playoff spot",
+     "resumen": "Milan Iloski scored three goals, his second hat trick this season, Indiana Vassilev added a goal and two assists, and the Philadelphia Union beat Orlando City SC 4-2 on Saturday night for their sixth consecutive win.",
+     "fecha": "2026-09-27T03:03:19Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761834.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761834"
+    },
+    {
+     "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
+     "resumen": "All 27 United States-based MLS teams will compete in the 2027 edition of the U.S. Open Cup for the first time since 2023.",
+     "fecha": "2026-09-02T12:02:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0901/r1710028_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/49795119/us-mls-teams-make-full-return-open-cup-2027"
+    },
+    {
+     "titulo": "Herrington focused on world cup amid Barcelona interest",
+     "resumen": "Socceroos defender Lucas Herrington is not focused on speculation linking him with a move to Spanish giants Barcelona, trying to stay 'present' at the World Cup.",
+     "fecha": "2026-06-28T21:34:52Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0628/dm_260628_Soccer_PressConference_Herrington_focused_on_world_cup_amid_Barcelona_interest_20260828/dm_260628_Soccer_PressConference_Herrington_focused_on_world_cup_amid_Barcelona_interest_20260828.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49209984/herrington-focused-world-cup-amid-barcelona-interest"
+    },
+    {
+     "titulo": "Irvine -  \"Clear line on the rule\"",
+     "resumen": "Ahead of Australia's final Group D matchup against Paraguay, Socceroos midfielder Jackson Irvine weighed on the controversial new red card offence for covering your mouth during play.",
+     "fecha": "2026-06-21T01:38:47Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0620/dm_260620_Soccer_PressConference_Irvine_clear_line_on_the_rule_20260620/dm_260620_Soccer_PressConference_Irvine_clear_line_on_the_rule_20260620.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/49131127/irvine-clear-line-rule"
+    },
+    {
+     "titulo": "Should Casemiro join Inter Miami or LA Galaxy?",
+     "resumen": "Gab & Juls debate Casemiro's links with a move to Major League Soccer.",
+     "fecha": "2026-05-21T11:39:18Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0521/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/48834114/should-casemiro-join-inter-miami-la-galaxy"
+    },
+    {
+     "titulo": "Why has Javier Mascherano left Inter Miami?",
+     "resumen": "Lizzy Becherano reacts to Javier Mascherano's departure from Inter Miami.",
+     "fecha": "2026-04-14T18:06:05Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0414/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip?id=48485505"
+    },
+    {
+     "titulo": "Magic of the Cup: 14-year-old rewrites U.S. Open Cup history",
+     "resumen": "The U.S. Open Cup is a 113-year-old competition, and 14-year-old Braiden Kalonji wrote his name in history by becoming its youngest-ever goal scorer.",
+     "fecha": "2026-03-19T14:53:11Z",
+     "imagen": "https://a.espncdn.com/photo/2022/0917/r1063199_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/48248748/magic-cup-14-year-old-braiden-kalonji-rewrites-us-open-cup-history"
+    }
+   ],
    "resultados": null,
    "peleadores": null
   },
@@ -1827,6 +2235,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lando Norris apologises to Franco Colapinto after calling for ban",
+     "resumen": "Reigning Formula 1 champion Lando Norris has apologised to Franco Colapinto after he called for the Alpine driver to be banned following Saturday's Azerbaijan Grand Prix.",
+     "fecha": "2026-09-28T09:39:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0927/r1722355_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50050898/lando-norris-apologises-franco-colapinto-calling-ban"
+    },
+    {
+     "titulo": "Bahrain Grand Prix in Malaysia 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Next up on the calendar is the Bahrain Grand Prix, but there's a quirk -- the 16th round of the season is actually taking place almost 4,000 miles away in Malaysia.",
+     "fecha": "2026-09-28T06:55:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0927/r1722364_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49971200/bahrain-grand-prix-malaysia-2026-circuit-sepang-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
      "titulo": "Ferrari boss Fred Vasseur vents frustration over Christian Horner's F1 job search",
      "resumen": "Ferrari team principal Fred Vasseur has expressed frustration over the persistent speculation about his future at Maranello.",
      "fecha": "2026-09-27T13:50:13Z",
@@ -1841,13 +2263,6 @@
      "link": "https://www.espn.com/f1/story/_/id/50011977/lando-norris-subjected-online-abuse-calling-franco-colapinto-ban-alpine-condemn-hate"
     },
     {
-     "titulo": "Bahrain Grand Prix in Malaysia 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Next up on the calendar is the Bahrain Grand Prix, but there's a quirk -- the 16th round of the season is actually taking place almost 4,000 miles away in Malaysia.",
-     "fecha": "2026-09-27T13:08:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0927/r1722364_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49971200/bahrain-grand-prix-malaysia-2026-circuit-sepang-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
      "titulo": "Charles Leclerc admits Ferrari's rivals have taken 'big steps forwards': 'We must not lie to ourselves'",
      "resumen": "Charles Leclerc has admitted Ferrari no longer had the best chassis in Formula 1 and that he was running the team's upgraded engine at the Azerbaijan Grand Prix, its fifth straight race without a podium finish.",
      "fecha": "2026-09-27T09:40:18Z",
@@ -1860,13 +2275,6 @@
      "fecha": "2026-09-26T19:04:52Z",
      "imagen": "https://a.espncdn.com/photo/2026/0926/r1722096_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/50034826/mercedes-george-russell-win-wont-kickstart-f1-title-challenge-azerbaijan-gp-baku-rewards-faith-trying-2026"
-    },
-    {
-     "titulo": "Azerbaijan Grand Prix: Alpine to consider next steps after Colapinto, Gasly DNF",
-     "resumen": "Alpine will \"consider what course of action should be taken\" internally over the Franco Colapinto mistake which took himself and teammate Pierre Gasly out of the Azerbaijan Grand Prix.",
-     "fecha": "2026-09-26T17:47:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0926/r1722075_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50034178/alpine-consider-course-action-franco-colapinto-pierre-gasly-dnf-baku"
     }
    ],
    "resultados": null,
