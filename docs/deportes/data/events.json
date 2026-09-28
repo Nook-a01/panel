@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-27T22:08:39.642Z",
+ "actualizado": "2026-09-28T00:44:14.260Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
+   "total": 2,
    "proximos": 0
   },
   {
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 14,
-   "proximos": 8
+   "proximos": 7
   },
   {
    "id": "pumas",
@@ -95,28 +95,6 @@
    "visitante": "Colombia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-684665",
-   "miLado": "visitante",
-   "idEspn": "684665",
-   "liga": "fifa.worldq.conmebol",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Ecuador vs Argentina",
-   "inicio": "2025-09-09T23:00Z",
-   "horaConfirmada": true,
-   "competicion": "FIFA World Cup Qualifying - CONMEBOL",
-   "sede": "Estadio Banco Pichincha",
-   "local": "Ecuador",
-   "visitante": "Argentina",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
   },
@@ -749,8 +727,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 3"
   },
   {
    "id": "espn-761844",
