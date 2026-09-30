@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-30T00:25:48.750Z",
+ "actualizado": "2026-09-30T06:41:39.387Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,8 +11,8 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 13,
-   "proximos": 6
+   "total": 14,
+   "proximos": 7
   },
   {
    "id": "argentina",
@@ -23,8 +23,8 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
-   "proximos": 0
+   "total": 4,
+   "proximos": 1
   },
   {
    "id": "intermiami",
@@ -687,6 +687,28 @@
    "marcador": null
   },
   {
+   "id": "espn-401921545",
+   "miLado": "local",
+   "idEspn": "401921545",
+   "liga": "fifa.friendly",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Argentina vs Bolivia",
+   "inicio": "2026-10-01T00:00Z",
+   "horaConfirmada": true,
+   "competicion": "International Friendly",
+   "sede": "Mario Alberto Kempes",
+   "local": "Argentina",
+   "visitante": "Bolivia",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-401841594",
    "miLado": "local",
    "idEspn": "401841594",
@@ -898,6 +920,28 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401913958",
+   "miLado": "local",
+   "idEspn": "401913958",
+   "liga": "conmebol.sudamericana",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Boca Juniors vs Vasco da Gama",
+   "inicio": "2026-10-14T00:30Z",
+   "horaConfirmada": true,
+   "competicion": "CONMEBOL Sudamericana",
+   "sede": "Alberto José Armando (La Bombonera)",
+   "local": "Boca Juniors",
+   "visitante": "Vasco da Gama",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
    "finalizado": false,
    "marcador": null
   },
