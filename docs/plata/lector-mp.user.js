@@ -2,7 +2,7 @@
 // @name         Lector de Mercado Pago y tarjeta — Panel de plata
 // @namespace    https://nook-a01.github.io/panel/
 // @description  Lee tu saldo y tus movimientos de Mercado Pago, y el consumo de tu tarjeta en BBVA, y los guarda en tu panel privado.
-// @version      1.5.0
+// @version      1.5.1
 // @match        https://www.mercadopago.com.ar/*
 // @match        https://online.bbva.com.ar/*
 // @run-at       document-idle
@@ -107,11 +107,15 @@
         /transferencia|dinero|pago|cobro|retiro|recarga|devoluci|ingreso|compra|débito|credito|crédito/i.test(t)
       ) || "";
       const detalle = titulos.find(t => t !== tipo) || tipo || "Movimiento";
-      // El medio de pago ("Mastercard crédito", "Dinero disponible") es otro
-      // title de la fila. Sin él, la app no distingue lo que se pagó con la
-      // tarjeta de la madre de lo que salió del saldo.
-      const medio = titulos.find(t => t !== tipo && t !== detalle &&
-        /mastercard|visa|cr[ée]dito|d[ée]bito|prepaga|dinero disponible/i.test(t)) || "";
+      // El medio de pago ("Mastercard crédito", "Dinero disponible") no tiene
+      // title: es texto suelto de la fila. Sin él, la app no distingue lo que
+      // se pagó con la tarjeta de la madre de lo que salió del saldo.
+      const textos = [...caja.querySelectorAll("span, p")]
+        .filter(e => !e.children.length)
+        .map(e => (e.textContent || "").trim());
+      const medio = titulos.concat(textos).find(t => t && t.length < 40 &&
+        t !== tipo && t !== detalle &&
+        /^(mastercard|visa|american express|cabal|naranja|maestro|dinero disponible)/i.test(t)) || "";
 
       // La misma fila aparece con dos enlaces distintos (uno a
       // /banking/balance/movements/ y otro a /activities/detail/), cada uno con
