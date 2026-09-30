@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Plata en Mano</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'><rect width='16' height='16' rx='3' fill='%2305060A'/><g fill='%233CF2FF'><rect x='7' y='2' width='2' height='2'/><rect x='5' y='4' width='6' height='2'/><rect x='4' y='5' width='2' height='3'/><rect x='5' y='7' width='6' height='2'/><rect x='10' y='8' width='2' height='3'/><rect x='4' y='10' width='6' height='2'/><rect x='7' y='12' width='2' height='2'/></g><rect x='13' y='2' width='1' height='1' fill='%23FF5CC8'/></svg>">
-<meta name="theme-color" content="#05060A">
+<meta name="theme-color" content="#081B36">
 <link rel="apple-touch-icon" href="../iconos/panel-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Plata">
@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "16";
+  var ESTA = "17";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -4633,8 +4633,234 @@ input, textarea, select, [contenteditable]{caret-color:auto}
   }
 }
 </style>
+<style id="piel-plano">
+/* ══════════════════════════════════════════════════════════════════
+   EL PLANO
+   La app como un plano técnico: papel de ingeniería azul, líneas finas,
+   rótulos numerados y cotas, como ver la máquina por dentro. Referencias
+   que él pidió: el revés de cupnoodle (uragawa), la grilla de píxeles de
+   la Million Dollar Homepage, las ondas de ripples3 y el juego de Metronomy.
+
+   Va después de todas las pieles: los :root repetidos le ganan en peso a
+   los de más arriba, y el resto gana por estar último. Las pieles de antes
+   quedan debajo porque tienen la estructura (grillas, animaciones, lo del
+   teléfono); ésta sólo cambia cómo se ve.
+   ══════════════════════════════════════════════════════════════════ */
+:root:root:root:root{
+  --bg:#081B36; --surface:#0C2548; --surface-2:#113059; --surface-3:#173C6C;
+  --ink:#EAF3FF; --ink-2:#B4CAE8; --ink-3:#86A2C9;
+  --line:#1F3F69; --line-2:#335A8C;
+  --cyan:#7FDBFF; --lapiz:#FFD23F;
+  --accent:#FFD23F; --accent-ink:#FFE384; --accent-soft:rgba(255,210,63,.13); --on-accent:#1B1500;
+  --warn:#FFB86B; --warn-soft:rgba(255,184,107,.14);
+  --crit:#FF8080; --crit-soft:rgba(255,128,128,.14);
+  --verde:#7CF0B0; --lima:#FFD23F; --naranja:#FFB86B; --violeta:#B9A6FF; --rosa:#FF9BC2;
+  --orange-soft:rgba(255,184,107,.1); --orange-ink:#FFCF9C;
+  --violet-soft:rgba(185,166,255,.1); --violet-ink:#D2C6FF;
+  --green-soft:rgba(124,240,176,.1); --green-ink:#7CF0B0;
+  --shadow:none; --radius:4px;
+  --f-display:'Space Grotesk',system-ui,sans-serif;
+  --f-body:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --f-pixel:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  /* Las cuatro esquinas de cada bloque, como marcas de corte de un plano. */
+  --esq:10px;
+  --esquinas:
+    linear-gradient(var(--cyan),var(--cyan)) top left / var(--esq) 1px no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) top left / 1px var(--esq) no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) top right / var(--esq) 1px no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) top right / 1px var(--esq) no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) bottom left / var(--esq) 1px no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) bottom left / 1px var(--esq) no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) bottom right / var(--esq) 1px no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) bottom right / 1px var(--esq) no-repeat;
+}
+
+/* El papel: azul de plano con la cuadrícula fina y la gruesa. */
+html{background:var(--bg)}
+html::before{
+  background:
+    linear-gradient(rgba(127,219,255,.11) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(90deg, rgba(127,219,255,.11) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(rgba(127,219,255,.045) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(127,219,255,.045) 1px, transparent 1px) 0 0 / 24px 24px,
+    radial-gradient(120% 90% at 50% 0%, #0D2A52 0%, #081B36 55%, #050F21 100%);
+}
+body::after{display:none}
+
+/* Los rótulos de cada figura se numeran solos: FIG. 01, FIG. 02… */
+body{counter-reset:fig}
+.blq-hd h3, .tramo h3, .prox h3, .card > .hd h3{
+  font:600 11.5px var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--cyan);
+}
+.blq-hd h3::before, .tramo h3::before, .prox h3::before, .card > .hd h3::before{
+  counter-increment:fig; content:"FIG." counter(fig, decimal-leading-zero) " — ";
+  color:var(--ink-3); font-weight:400;
+}
+
+/* ── el encabezado ── */
+header.top{background:rgba(8,27,54,.86); border-bottom:1px solid var(--line-2)}
+.brand .mark{font:700 16px var(--f-mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink)}
+.brand .mark::after{color:var(--lapiz)}
+.brand .sub{font:400 11px var(--f-mono); letter-spacing:.14em; color:var(--ink-3)}
+.brand .sub::before{content:"// "; color:var(--line-2)}
+.monthnav{background:transparent; border-color:var(--line-2); border-radius:3px}
+.monthnav button{border-radius:2px}
+.monthnav .label{font-family:var(--f-mono); font-weight:600; font-size:12.5px; letter-spacing:.04em}
+.chip{border-radius:3px; font-family:var(--f-mono); background:transparent; border-color:var(--line-2)}
+.chip.ok{background:transparent; color:var(--verde); border-color:rgba(124,240,176,.4)}
+.chip.ok .dot{background:var(--verde)}
+.pill-mp{border-radius:3px}
+.pill-mp.ok{color:var(--verde); border-color:rgba(124,240,176,.4)}
+.pill-mp.ok::before{background:var(--verde)}
+@keyframes latido{0%{box-shadow:0 0 0 0 rgba(124,240,176,.55)}70%{box-shadow:0 0 0 8px rgba(124,240,176,0)}100%{box-shadow:0 0 0 0 rgba(124,240,176,0)}}
+
+nav.tabs button, .subtabs button{border-radius:3px; border-color:var(--line-2); color:var(--ink-2); letter-spacing:.03em}
+nav.tabs button[aria-current="true"]{background:var(--lapiz); border-color:var(--lapiz); color:var(--on-accent)}
+.subtabs button[aria-current="true"]{background:var(--accent-soft); border-color:var(--lapiz); color:var(--accent-ink)}
+
+/* ── los bloques: papel un poco más claro, borde fino y esquinas marcadas ── */
+.card, .blq, .tile, .hero, .tramo, .vidrio, .resumen, .mesque, .pordia, .plan-linea{
+  border-radius:var(--radius); box-shadow:none;
+}
+.card, .blq, .tile, .hero, .tramo, .vidrio, .resumen, .mesque, .pordia, .plan-linea, .prox{
+  background:var(--esquinas), rgba(12,37,72,.9);
+  border:1px solid var(--line);
+  -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+}
+.blq-pagos, .blq-susc, .blq-ahorro, .blq-tarjeta, .blq-apart, .blq-mapa{border-color:var(--line)}
+.blq-pagos .blq-hd h3, .blq-susc .blq-hd h3, .blq-ahorro .blq-hd h3, .blq-tarjeta .blq-hd h3,
+.blq-apart .blq-hd h3, .blq-mapa .blq-hd h3{color:var(--cyan)}
+
+/* ── el número grande, acotado como en un plano ── */
+.blq-libre, .blq-libre.neg{background:var(--esquinas), rgba(12,37,72,.92); border:1px solid var(--line-2)}
+.blq-libre::after{display:none}
+.blq-libre.neg{border-color:rgba(255,128,128,.55)}
+.blq-k{font:600 11px var(--f-mono); letter-spacing:.18em; color:var(--cyan)}
+.blq-libre.neg .blq-k{color:var(--crit)}
+.blq-big{display:table; font-family:var(--f-display); font-weight:300; color:var(--ink); letter-spacing:-.04em}
+/* La cota: una línea con topes en las puntas, del ancho justo del número. */
+.blq-big::after{
+  content:""; display:block; height:9px; margin-top:12px;
+  background:
+    linear-gradient(var(--lapiz),var(--lapiz)) center / 100% 1px no-repeat,
+    linear-gradient(var(--lapiz),var(--lapiz)) left center / 1px 100% no-repeat,
+    linear-gradient(var(--lapiz),var(--lapiz)) right center / 1px 100% no-repeat;
+  transform-origin:left; animation:cota .9s var(--curva) .15s both;
+}
+@keyframes cota{from{transform:scaleX(0)}}
+.blq-libre.neg .blq-big::after{
+  background:
+    linear-gradient(var(--crit),var(--crit)) center / 100% 1px no-repeat,
+    linear-gradient(var(--crit),var(--crit)) left center / 1px 100% no-repeat,
+    linear-gradient(var(--crit),var(--crit)) right center / 1px 100% no-repeat;
+}
+.blq-s{color:var(--ink-2)}
+.blq-libre .lnk{color:var(--lapiz)}
+.blq-libre .saldo-hoy .btn{background:var(--lapiz); color:var(--on-accent); border-color:var(--lapiz)}
+
+/* ── gastado este mes: barras rayadas como en un corte ── */
+.vidrio{background:var(--esquinas), rgba(12,37,72,.9); border-color:var(--line)}
+.vidrio-k{color:var(--cyan)}
+.vidrio-barras i{border-radius:0; background:repeating-linear-gradient(135deg, rgba(127,219,255,.55) 0 1.5px, transparent 1.5px 5px); box-shadow:inset 0 0 0 1px rgba(127,219,255,.6)}
+.vidrio-barras i.pico{background:repeating-linear-gradient(135deg, var(--lapiz) 0 2px, rgba(255,210,63,.35) 2px 5px); box-shadow:inset 0 0 0 1px var(--lapiz)}
+@media (hover:hover){
+  .vidrio-barras:hover i{background:repeating-linear-gradient(135deg, rgba(127,219,255,.3) 0 1.5px, transparent 1.5px 5px)}
+  .vidrio-barras i:hover, .vidrio-barras i.pico:hover{background:var(--lapiz)}
+}
+
+/* ── la cinta de próximos pagos ── */
+.marquee{border-radius:0; border:1px dashed var(--line-2); background:rgba(5,15,33,.7); color:var(--lapiz); font:500 11px var(--f-mono); letter-spacing:.08em}
+
+/* ── la línea del mes: nodos de un circuito ── */
+.linea .guia{background:repeating-linear-gradient(90deg, var(--cyan) 0 6px, transparent 6px 12px); opacity:.55}
+.hito .bola{border-radius:2px; background:var(--bg); border:1px solid var(--line-2); color:var(--ink-2); font-family:var(--f-mono)}
+.hito.hecho .bola{background:var(--lapiz); color:var(--on-accent); border-color:var(--lapiz)}
+.hito.ahora .bola{background:var(--verde); color:#052316; border-color:var(--verde)}
+@keyframes latido-hito{0%,100%{box-shadow:0 0 0 0 rgba(124,240,176,.45)} 50%{box-shadow:0 0 0 10px rgba(124,240,176,0)}}
+.hito .dia{color:var(--cyan)}
+@media (hover:hover){
+  .hito.hecho:hover .bola{box-shadow:0 0 0 7px rgba(255,210,63,.16)}
+}
+
+/* ── los cuadraditos: una grilla de píxeles, sin redondear ── */
+.ritmo{gap:2px}
+.ritmo b, .mapa b, .dias-fila i{border-radius:0}
+.ritmo .d-verde{background:var(--verde)} .ritmo .d-amarillo{background:var(--lapiz)} .ritmo .d-rojo{background:var(--crit)}
+.ritmo .d-fut{box-shadow:inset 0 0 0 1px var(--line-2); background:repeating-linear-gradient(135deg, rgba(127,219,255,.08) 0 1px, transparent 1px 4px)}
+.ritmo .d-hoy{box-shadow:0 0 0 2px var(--bg), 0 0 0 3px var(--lapiz)}
+.m-libre{background:var(--cyan)} .m-pagos{background:var(--naranja)} .m-apart{background:var(--violeta)} .m-ahorro{background:var(--verde)}
+.dias-fila i.ya{background:rgba(127,219,255,.5)}
+.dias-fila i.hoy{background:var(--lapiz); border-color:var(--lapiz)}
+.dias-ley{font:400 10px var(--f-mono); letter-spacing:.08em}
+.mapa-ley button, .blq-hint{font-family:var(--f-mono)}
+.mapa-ley button{border-radius:3px}
+.mapa-ley button i{border-radius:0}
+
+/* ── textos con cifras ── */
+.frase b.t-libre{color:var(--cyan)} .frase b.t-pagos{color:var(--naranja)} .frase b.t-apart{color:var(--violeta)}
+.frase b.t-ahorro{color:var(--verde)} .frase b.t-falta{color:var(--crit)}
+.ok-mes{color:var(--verde)}
+.s-verde{background:var(--verde); box-shadow:0 0 10px rgba(124,240,176,.6)}
+.s-amarillo{background:var(--lapiz); box-shadow:0 0 10px rgba(255,210,63,.6)}
+.s-rojo{background:var(--crit); box-shadow:0 0 10px rgba(255,128,128,.6)}
+.tbarra{border-radius:0; background:repeating-linear-gradient(90deg, var(--surface-3) 0 1px, transparent 1px 10px), var(--surface-2)}
+.tbarra i{border-radius:0}
+.tbarra .tb-ok{background:var(--verde)} .tbarra .tb-medio{background:var(--lapiz)} .tbarra .tb-mal{background:var(--crit)}
+.rep-barra i{border-radius:0}
+.rep-barra .r-libre{background-color:var(--cyan)} .rep-barra .r-pagos{background-color:var(--naranja)}
+.rep-barra .r-apart{background-color:var(--violeta)} .rep-barra .r-ahorro{background-color:var(--verde)}
+.chipito{border-radius:2px; border-color:rgba(185,166,255,.5); color:var(--violet-ink)}
+.fgrupo h4{color:var(--cyan); font-family:var(--f-mono); letter-spacing:.1em; text-transform:uppercase; font-size:12px}
+
+/* ── controles ── */
+.btn{border-radius:3px}
+.btn.pri{background:var(--lapiz) !important; border-color:var(--lapiz) !important; color:var(--on-accent) !important}
+.seg button[aria-pressed="true"]{background:var(--lapiz) !important; color:var(--on-accent) !important}
+input[type=text],input[type=number],input[type=date],input[type=month],input[type=password],select,textarea{
+  background:rgba(4,14,30,.7); border-color:var(--line-2); border-radius:3px; color:var(--ink);
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible{outline:1px solid var(--lapiz); outline-offset:1px}
+:focus-visible{outline-color:var(--lapiz)}
+.fab{border-radius:3px !important; background:var(--lapiz) !important; color:var(--on-accent) !important; box-shadow:0 0 0 1px rgba(255,210,63,.5), 0 10px 30px -10px rgba(255,210,63,.6) !important}
+.acc2 button, .verdet{border-radius:3px}
+.acc2 button{font-family:var(--f-mono); letter-spacing:.06em; text-transform:uppercase}
+.acc2 .g{background:var(--crit-soft); color:var(--crit); border:1px solid var(--crit)}
+.acc2 .c{background:var(--green-soft); color:var(--verde); border:1px solid var(--verde)}
+@media (hover:hover){
+  .acc2 .g:hover{background:var(--crit); color:#2A0707}
+  .acc2 .c:hover{background:var(--verde); color:#052316}
+}
+.notice{border-radius:3px}
+.notice.info{background:rgba(127,219,255,.08); color:var(--ink-2); border:1px dashed var(--line-2)}
+.frec-edit{border-radius:3px; background:rgba(4,14,30,.6)}
+.chat-msg.mio{background:var(--lapiz) !important; color:var(--on-accent) !important}
+.volver-panel{background:rgba(8,27,54,.9); color:var(--ink-2); border:1px solid var(--line-2); border-radius:3px}
+.toast{background:var(--lapiz); color:var(--on-accent); border-radius:3px}
+dialog{background:var(--esquinas), #0C2548; color:var(--ink); border:1px solid var(--line-2); border-radius:var(--radius)}
+th{color:var(--cyan); font-family:var(--f-mono); letter-spacing:.08em}
+
+@media (hover:hover){
+  .blq:hover, .card:hover, .tile:hover{border-color:var(--line-2); box-shadow:none}
+  nav.tabs button:hover{border-color:var(--lapiz)}
+  .btn.pri:hover{box-shadow:0 10px 24px -12px rgba(255,210,63,.7)}
+  .fab:hover{transform:scale(1.06); box-shadow:0 14px 30px -12px rgba(255,210,63,.8) !important}
+  .lnk:hover, .lnk-mas:hover{color:var(--lapiz)}
+  #hoyProx .p .pagar:hover{border-color:var(--lapiz); color:var(--lapiz)}
+  .fila .btn.sm:hover{border-color:var(--verde); color:var(--verde)}
+}
+@media (prefers-reduced-motion:reduce){ .blq-big::after{animation:none} }
+/* Un monto no se corta: el signo queda pegado a la cifra. */
+.mesque b, .resumen b, .frase b{white-space:nowrap}
+@media(max-width:640px){
+  /* La letra de máquina es más ancha: en el teléfono "Movimientos" no entraba. */
+  nav.tabs button{font-size:12px; letter-spacing:0}
+  .brand .mark{font-size:15px}
+}
+</style>
 <script>
-/* El fondo: una grilla de puntos que respira y hace ondas donde tocás. */
+/* El fondo: los cruces de la cuadrícula del plano. Respiran apenas y, donde
+   tocás o pasás el mouse, la cuadrícula se ondula como agua. */
 (() => {
   const cv = document.getElementById('fondo');
   if(!cv || !cv.getContext) return;
@@ -4657,18 +4883,30 @@ input, textarea, select, [contenteditable]{caret-color:auto}
   }
   function dibujar(ahora){
     cx.clearRect(0, 0, W, H);
-    const t = ahora / 1000;
-    for(let y = PASO / 2; y < H; y += PASO){
-      for(let x = PASO / 2; x < W; x += PASO){
-        let e = 0.09 + 0.06 * Math.sin(x * 0.012 + t * 0.6) * Math.cos(y * 0.01 - t * 0.4);
+    for(let y = 0; y <= H + PASO; y += PASO){
+      for(let x = 0; x <= W + PASO; x += PASO){
+        let e = 0, dx = 0, dy = 0;
         for(const o of ondas){
-          const edad = (ahora - o.t) / 1000, dif = Math.abs(Math.hypot(x - o.x, y - o.y) - edad * 280);
-          if(dif < 42) e += (1 - dif / 42) * Math.max(0, 1 - edad / 2.2) * 0.9;
+          const edad = (ahora - o.t) / 1000;
+          const d = Math.hypot(x - o.x, y - o.y) || 1;
+          const dif = d - edad * 300;
+          if(Math.abs(dif) < 60){
+            const f = Math.cos(dif / 60 * Math.PI / 2) * Math.max(0, 1 - edad / 2.4);
+            e += f;
+            // El punto se corre en la dirección de la onda, como agua.
+            dx += (x - o.x) / d * f * 5; dy += (y - o.y) / d * f * 5;
+          }
         }
-        if(e < 0.035) continue;
-        const fuerte = e > 0.35, s = fuerte ? 2.4 : 1.6;
-        cx.fillStyle = fuerte ? 'rgba(60,242,255,' + Math.min(1, e) + ')' : 'rgba(120,140,255,' + e + ')';
-        cx.fillRect(x - s / 2, y - s / 2, s, s);
+        const mayor = x % 120 === 0 && y % 120 === 0;
+        const a = Math.min(1, (mayor ? .32 : .12) + e * .8);
+        if(a < .1) continue;
+        const px = x + dx, py = y + dy, s = mayor ? 4 : 2 + e * 2;
+        cx.strokeStyle = e > .25 ? 'rgba(255,210,63,' + a + ')' : 'rgba(127,219,255,' + a + ')';
+        cx.lineWidth = 1;
+        cx.beginPath();
+        cx.moveTo(px - s, py); cx.lineTo(px + s, py);
+        cx.moveTo(px, py - s); cx.lineTo(px, py + s);
+        cx.stroke();
       }
     }
   }
@@ -4677,7 +4915,7 @@ input, textarea, select, [contenteditable]{caret-color:auto}
     if(ahora - ultimo < 33) return;
     ultimo = ahora;
     ondas = ondas.filter(o => ahora - o.t < 2400);
-    if(Math.random() < 0.006) onda(Math.random() * W, Math.random() * H);
+    if(Math.random() < 0.004) onda(Math.random() * W, Math.random() * H);
     dibujar(ahora);
   }
   window.plataOnda = onda;
@@ -4698,5 +4936,5 @@ input, textarea, select, [contenteditable]{caret-color:auto}
   if(!quieto) raf = requestAnimationFrame(bucle);
 })();
 </script>
-<!-- /piel: neón --></body>
+<!-- /piel: plano --></body>
 </html>
