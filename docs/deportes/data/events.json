@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-30T19:17:52.791Z",
+ "actualizado": "2026-09-30T23:47:18.338Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
+   "total": 4,
    "proximos": 1
   },
   {
@@ -95,6 +95,28 @@
    "visitante": "Colombia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+   "finalizado": true,
+   "marcador": "1 - 0"
+  },
+  {
+   "id": "espn-684665",
+   "miLado": "visitante",
+   "idEspn": "684665",
+   "liga": "fifa.worldq.conmebol",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Ecuador vs Argentina",
+   "inicio": "2025-09-09T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "FIFA World Cup Qualifying - CONMEBOL",
+   "sede": "Estadio Banco Pichincha",
+   "local": "Ecuador",
+   "visitante": "Argentina",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
   },
@@ -1410,7 +1432,7 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC Fight Night: Qatar",
+   "titulo": "UFC Fight Night: Procházka vs. Stirling",
    "inicio": "2026-11-21T14:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
