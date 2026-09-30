@@ -2,7 +2,7 @@
 // @name         Lector de Mercado Pago y tarjeta — Panel de plata
 // @namespace    https://nook-a01.github.io/panel/
 // @description  Lee tu saldo y tus movimientos de Mercado Pago, y el consumo de tu tarjeta en BBVA, y los guarda en tu panel privado.
-// @version      1.4.0
+// @version      1.5.0
 // @match        https://www.mercadopago.com.ar/*
 // @match        https://online.bbva.com.ar/*
 // @run-at       document-idle
@@ -107,6 +107,11 @@
         /transferencia|dinero|pago|cobro|retiro|recarga|devoluci|ingreso|compra|débito|credito|crédito/i.test(t)
       ) || "";
       const detalle = titulos.find(t => t !== tipo) || tipo || "Movimiento";
+      // El medio de pago ("Mastercard crédito", "Dinero disponible") es otro
+      // title de la fila. Sin él, la app no distingue lo que se pagó con la
+      // tarjeta de la madre de lo que salió del saldo.
+      const medio = titulos.find(t => t !== tipo && t !== detalle &&
+        /mastercard|visa|cr[ée]dito|d[ée]bito|prepaga|dinero disponible/i.test(t)) || "";
 
       // La misma fila aparece con dos enlaces distintos (uno a
       // /banking/balance/movements/ y otro a /activities/detail/), cada uno con
@@ -135,6 +140,7 @@
           monto: Math.abs(monto),
           tipo: monto < 0 ? "gasto" : "ingreso",
           descripcionTipo: tipo,
+          medio,
           // Mover plata a una reserva no es gastar. Se marca acá, mirando TODOS
           // los textos de la fila y no sólo el que quedó como tipo: según el
           // orden del HTML, ese podría ser "Dinero disponible" y se escaparía.
@@ -349,6 +355,9 @@
 
   function leerTarjeta() {
     const t = (document.body.innerText || "").replace(/\u00a0/g, " ");
+    // Cuando el banco no puede mostrar los consumos igual pone cero pesos arriba
+    // del cartel de error. Mandar ese cero hacía creer que la tarjeta no se usó.
+    if (/no es posible mostrar la informaci[óo]n/i.test(t)) return null;
     const num = s => Number(String(s).replace(/\./g, "").replace(",", "."));
     const pesos = t.match(/Consumo en pesos\s*\$?\s*([\d.]+,\d{2})/i);
     if (!pesos) return null;

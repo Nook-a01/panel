@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "15";
+  var ESTA = "16";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -1523,8 +1523,11 @@ function tarjetaDelBanco(){
 // que viene. Sale del banco si hay lectura fresca; si no, de lo que ve MP.
 function gastadoConTarjeta(){
   const tj = tarjetaDelBanco();
-  if(tj) return tj.pesos;
-  return Number(calc().tarjetaMes) || 0;
+  const enMP = Number(calc().tarjetaMes) || 0;
+  // El banco a veces no muestra los consumos y la lectura queda en cero aunque
+  // Mercado Pago tenga pagos con la tarjeta: en ese caso vale lo que se ve ahí.
+  if(tj) return Math.max(tj.pesos, enMP);
+  return enMP;
 }
 
 function esSusc(r){ return r.susc === true || (r.susc !== false && RE_SUSC.test(r.nombre || '')); }
@@ -1670,7 +1673,7 @@ function renderHoy(){
   // restar es lo gastado con su tarjeta, que ella descuenta del mes que viene.
   const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
   const tj = tarjetaDelBanco();
-  const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
+  const gastadoTarj = gastadoConTarjeta();
   const ayudaProx = Math.max(0, ayudaBase - gastadoTarj);
   const trasFijos = tIng - gastadoTarj - tGas;
   const vt = gastoVariableTipico(c);
@@ -2029,7 +2032,7 @@ function pintarMesQue(c){
   // sólo se le descuenta lo gastado con su tarjeta, que es lo que ella resta.
   const ayudaBase = Number(S.cfg.ayudaTarjeta)||0;
   const tj = tarjetaDelBanco();
-  const gastadoTarj = tj ? tj.pesos : c.tarjetaMes;
+  const gastadoTarj = gastadoConTarjeta();
   if(!tIng && !tFij && !ayudaBase){ el.hidden = true; return; }
   el.hidden = false;
 
@@ -3172,10 +3175,25 @@ async function mpTraer(silencioso){
   const huella = m => m.fecha + '|' + (Number(m.monto)||0) + '|' + (m.detalle || m.desc || '');
   const yaPorHuella = new Set(S.movs.filter(m=> m.srcTipo==='mp').map(huella));
 
+  // Los pagos con la tarjeta de crédito de la madre llegan como "Mastercard
+  // crédito": no salen de su saldo, se descuentan de la plata que ella le pasa
+  // al mes siguiente. Se marcan como medio "credito" para contarlos aparte. La
+  // prepaga y el débito son plata de él, aunque digan Mastercard o Visa.
+  const medioDe = m => {
+    if(m.medio) return (/cr[ée]dito/i.test(m.medio) && !/prepag|d[ée]bito/i.test(m.medio)) ? 'credito' : 'saldo';
+    return /mastercard|visa|cr[ée]dito|credito|tarjeta/i.test(m.descripcionTipo || '') ? 'credito' : 'saldo';
+  };
+
   (d.movimientos||[]).forEach(m=>{
     const src = 'mp:' + m.id;
-    if(yaEstan.has(src)) return;
-    if(yaPorHuella.has(huella(m))) return;
+    const medio = medioDe(m);
+    if(yaEstan.has(src) || yaPorHuella.has(huella(m))){
+      // Hasta la versión 1.5 del lector no llegaba el medio de pago y todo
+      // entraba como saldo. Cuando el lector lo vuelve a ver, se corrige.
+      const ya = S.movs.find(x=> x.srcTipo==='mp' && (x.src===src || x.mpSrc===src || huella(x)===huella(m)));
+      if(ya && m.medio && ya.medio !== medio) ya.medio = medio;
+      return;
+    }
     yaPorHuella.add(huella(m));
     const esIngreso = m.tipo === 'ingreso';
     // Guardar o sacar plata de una reserva de Mercado Pago figura como un
@@ -3183,10 +3201,6 @@ async function mpTraer(silencioso){
     // bolsillo tuyo a otro. Se importa igual (para verlo en el historial) pero
     // con una categoría que no cuenta ni como gasto ni como ingreso.
     const esReserva = m.esReserva || /reservad/i.test(m.descripcionTipo || '');
-    // Los pagos con la tarjeta de crédito de la madre llegan como "Mastercard
-    // crédito": no salen de su saldo, se descuentan de la plata que ella le pasa
-    // al mes siguiente. Se marcan como medio "credito" para contarlos aparte.
-    const medio = /mastercard|visa|cr[ée]dito|credito|tarjeta/i.test((m.descripcionTipo || '') + ' ' + (m.medio || '')) ? 'credito' : 'saldo';
     S.movs.push({
       id: uid(),
       fecha: m.fecha,
