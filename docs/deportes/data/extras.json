@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-01T05:49:35.271Z",
+ "actualizado": "2026-10-01T13:10:27.734Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,8 +242,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -409,7 +409,7 @@
      "dorsal": "51",
      "posicion": "Defender",
      "posCorta": "D",
-     "edad": 20,
+     "edad": 21,
      "pais": "Paraguay",
      "foto": null,
      "lesionado": false
@@ -967,8 +967,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -991,8 +992,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1051,8 +1053,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1063,9 +1066,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1196,8 +1198,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1275,9 +1278,9 @@
    ],
    "noticias": [
     {
-     "titulo": "Argentina beat Bolivia in first game of post-Lionel Messi era",
+     "titulo": "Argentina beat Bolivia as post-Lionel Messi era nears",
      "resumen": "Argentina did what they normally do against CONMEBOL foe Bolivia on Wednesday night in Córdoba: they won the match handily, but did it without Lionel Messi.",
-     "fecha": "2026-10-01T02:39:46Z",
+     "fecha": "2026-10-01T06:05:15Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724282_1296x729_16-9.jpg",
      "link": "http://www.espn.com/soccer/report/_/gameId/401921545"
     },
@@ -1647,9 +1650,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1708,9 +1710,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1721,9 +1722,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1799,13 +1799,13 @@
     },
     {
      "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
      "nombre": "David Ayala",
      "dorsal": "22",
      "posicion": "Midfielder",
      "posCorta": "M",
-     "edad": 26,
-     "pais": "Mexico",
+     "edad": 24,
+     "pais": "Argentina",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
      "lesionado": false
     },
@@ -2082,6 +2082,11 @@
   "pumas": {
    "compitiendo": [
     {
+     "nombre": "The Rugby Championship",
+     "liga": "244293",
+     "ruta": "rugby"
+    },
+    {
      "nombre": "International Test Match",
      "liga": "289234",
      "ruta": "rugby"
@@ -2090,6 +2095,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Kiss irked over Paisami suspension, coy on replacement",
+     "resumen": "Wallabies coach Les Kiss faces a midfield reshuffle after Hunter Paisami's four-week ban, eyeing several options ahead of the crucial Eden Park Bledisloe clash.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724345_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/50075310/australia-wallabies-rugby-les-kiss-irked-hunter-paisami-suspension-coy-replacement"
+    },
     {
      "titulo": "Get rugby back to '03 popularity: RWC winner Horan",
      "resumen": "Former Wallabies star and two-time World Cup winner Tim Horan has backed Australia to shock the rugby world and claim the illustrious Rugby World Cup trophy a year out from Rugby World Cup 2027.",
@@ -2124,13 +2136,6 @@
      "fecha": null,
      "imagen": "https://a.espncdn.com/photo/2026/0617/r1674537_1296x729_16-9.jpg",
      "link": "https://www.espn.com/rugby/story/_/id/49088851/put-my-hand-world-cup-wallabies-james-slipper-not-ruling-record-fifth-rugby-world-cup"
-    },
-    {
-     "titulo": "Wallabies to face Ireland in 2027, will play seven Tests before Rugby World Cup",
-     "resumen": "The Wallabies will return to Canberra for a Test match for the first time in 10 years after Rugby Australia confirmed a final Rugby World Cup warmup match against Ireland next year.",
-     "fecha": null,
-     "imagen": "https://a.espncdn.com/photo/2026/0330/r1636151_1296x518_5-2.jpg",
-     "link": "https://www.espn.com/rugby/story/_/id/48350306/wallabies-face-ireland-2027-play-seven-tests-rugby-world-cup"
     }
    ],
    "resultados": null,
@@ -2368,10 +2373,9 @@
       "color": "#FF2D00",
       "numero": "5",
       "driverId": "bortoleto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 15,
@@ -2645,46 +2649,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Ayrton Senna's Honda NSX could fetch £800,000 at London auction",
-     "resumen": "A 1991 Honda NSX that once belonged to Ayrton Senna will go up for auction in London at the end of October.",
-     "fecha": "2026-09-30T10:32:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0930/r1723830_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50065976/ayrton-senna-honda-nsx-fetch-800000-london-auction"
+     "titulo": "Lewis Hamilton hits out at Ferrari hierarchy in Fred Vasseur defence: 'Point fingers somewhere else'",
+     "resumen": "Lewis Hamilton has reiterated his full support for Ferrari boss Fred Vasseur and said critics should \"point fingers somewhere else,\" suggesting those higher up in the team's hierarchy must also take responsibility for its struggles.",
+     "fecha": "2026-10-01T12:45:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724351_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074896/lewis-hamilton-hits-ferrari-hierarchy-fred-vasseur-defence-point-fingers-somewhere-else-bahrain-gp-malaysia-sepang-formula-1"
     },
     {
-     "titulo": "Why is the Bahrain Grand Prix taking place in Malaysia, 4,000 miles away? F1's unusual race explained",
-     "resumen": "Formula 1's next race has an odd quirk -- it is unofficially the rescheduled Bahrain Grand Prix, but it is taking place at Malaysia's Sepang International Circuit in Kuala Lumpur.",
-     "fecha": "2026-09-30T08:36:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721219_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50013220/why-bahrain-grand-prix-taking-place-malaysia-4000-miles-away-f1-unusual-race-explained"
+     "titulo": "Fernando Alonso refuses to watch F1 from the sofa while he still has 'fire' inside to do better",
+     "resumen": "Fernando Alonso has said he signed for another year of Formula 1 despite knowing 2027 could be just as painful as this year -- but believes an uncompetitive year beats watching races on the sofa at home knowing he could do better.",
+     "fecha": "2026-10-01T12:44:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724336_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074878/fernando-alonso-refuses-watch-f1-sofa-has-fire-do-better-bahrain-gp-malaysia-sepang-formula-1"
     },
     {
-     "titulo": "Esteban Ocon to leave Haas but vows F1 career isn't over",
-     "resumen": "Esteban Ocon will leave Haas at the end of the season, the driver and team confirmed on Wednesday, with the Frenchman defiantly vowing \"this is absolutely not the end of my Formula 1 career.\"",
-     "fecha": "2026-09-30T08:13:08Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0325/r1469057_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50064900/esteban-ocon-leaving-haas-vows-f1-career-over"
+     "titulo": "Lando Norris urges F1 and social media giants to help tackle abuse after Franco Colapinto ban feud",
+     "resumen": "Lando Norris has called on Formula 1 and social media companies to do more to combat online abuse after the torrent of messages he received following last weekend's Azerbaijan Grand Prix.",
+     "fecha": "2026-10-01T12:41:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724395_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074897/lando-norris-urges-f1-social-media-giants-help-tackle-abuse-franco-colapinto-ban-feud-bahrain-gp-malaysia-sepang-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen steps in for GT race at Portimão amid two F1 triple-headers",
+     "resumen": "This weekend's Bahrain Grand Prix in Malaysia will be the second of seven consecutive race weekends for Max Verstappen after he confirmed he has added a GT race at Portimão to his schedule for later this month.",
+     "fecha": "2026-10-01T08:41:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724344_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074895/max-verstappen-steps-gt-race-portimao-amid-two-f1-triple-headers-gt-world-challenge"
     },
     {
      "titulo": "Bahrain Grand Prix in Malaysia 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Next up on the calendar is the Bahrain Grand Prix, but there's a quirk -- the 16th round of the season is actually taking place almost 4,000 miles away in Malaysia.",
-     "fecha": "2026-09-30T07:30:33Z",
+     "fecha": "2026-10-01T07:26:52Z",
      "imagen": "https://a.espncdn.com/photo/2026/0927/r1722364_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49971200/bahrain-grand-prix-malaysia-2026-circuit-sepang-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     },
     {
-     "titulo": "Ferrari gives Fred Vasseur 'full confidence' amid Christian Horner speculation",
-     "resumen": "Ferrari has insisted it has \"full confidence\" in Fred Vasseur amid mounting speculation about both his job and the potential of Christian Horner replacing him.",
-     "fecha": "2026-09-29T13:27:04Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0530/r1500349_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50057207/ferrari-gives-fred-vasseur-full-confidence-amid-christian-horner-speculation"
-    },
-    {
-     "titulo": "Fernando Alonso, 45, extends F1 career by signing new contract at Aston Martin",
-     "resumen": "Fernando Alonso will race into his 24th season in Formula 1 after signing a new contract at Aston Martin.",
-     "fecha": "2026-09-29T12:16:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0929/r1723354_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50057662/fernando-alonso-45-extends-f1-career-signing-new-contract-aston-martin-2027"
+     "titulo": "Bahrain Grand Prix in Malaysia: Where were today's drivers when F1 last raced at Sepang?",
+     "resumen": "Formula 1 is heading to Malaysia for the Bahrain Grand Prix; the south-east Asian nation providing an unusual setting for a race.",
+     "fecha": "2026-10-01T07:10:46Z",
+     "imagen": "https://a.espncdn.com/photo/2017/1009/r271313_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49480377/bahrain-grand-prix-malaysia-where-were-todays-f1-drivers-last-race-2017"
     }
    ],
    "resultados": null,
