@@ -1,8 +1,8 @@
 import { marcadores, detallePartido, fichaJugador, detalleGP, carteleraUFC, infoTorneo,
          historialPeleador, jugadasRugby, formaReciente,
-         fichaPiloto, accionesPelea } from "./api.js?v=26";
+         fichaPiloto, accionesPelea } from "./api.js?v=27";
 import { banderaDePiloto as banderaPorNacionalidad,
-         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=26";
+         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=27";
 
 let DATOS = null, EXTRA = null;
 
@@ -1721,14 +1721,11 @@ async function estadoNoti() {
   if (sub && Notification.permission === "granted") {
     btn.classList.add("on");
     txt.textContent = "ACTIVOS";
-    btn.onclick = async () => {
-      try {
-        await navigator.clipboard.writeText(JSON.stringify(sub));
-        mostrarAviso("<b>Suscripción copiada</b>Sólo hace falta si querés reconfigurarla.", "ok");
-      } catch {
-        mostrarAviso("<b>Avisos activos</b>Te aviso 1 día antes, 1 hora antes, y los domingos el resumen de la semana.", "ok");
-      }
-    };
+    // Tocar el botón con los avisos ya activos REHACE la suscripción.
+    // Antes copiaba la que hubiera, y si las claves VAPID habían rotado
+    // esa copia ya estaba muerta: el envío devolvía 400 y no había forma
+    // de notarlo desde el teléfono.
+    btn.onclick = activarNoti;
     return;
   }
   txt.textContent = "AVISOS";
@@ -1753,18 +1750,27 @@ async function activarNoti() {
     // Si ya había una suscripción hecha con otra clave, hay que darla de
     // baja primero: el navegador se niega a crear una segunda con una
     // applicationServerKey distinta, y la vieja ya no recibe nada.
+    // Se da de baja lo que haya, siempre. No se consulta con qué clave
+    // fue creada: Safari no siempre expone sub.options, y el navegador se
+    // niega a crear una segunda suscripción con otra clave.
     const previa = await reg.pushManager.getSubscription();
-    if (previa && !(await subAlDia(previa, key.publicKey))) {
-      try { await previa.unsubscribe(); } catch {}
-    }
+    if (previa) { try { await previa.unsubscribe(); } catch {} }
     const sub = await reg.pushManager.subscribe({
       userVisibleOnly: true, applicationServerKey: b64aBytes(key.publicKey),
     });
+    const texto = JSON.stringify(sub);
     let copiado = false;
-    try { await navigator.clipboard.writeText(JSON.stringify(sub)); copiado = true; } catch {}
-    mostrarAviso("<b>✅ Avisos activados</b>" + (copiado
-      ? "Copié tu suscripción. Pegala en el secreto <code>PUSH_SUBSCRIPTION</code> de GitHub."
-      : "Tocá 🔔 otra vez para copiar tu suscripción."), "ok", 15000);
+    try { await navigator.clipboard.writeText(texto); copiado = true; } catch {}
+    // El cuadro de texto va siempre: en el iPhone el portapapeles falla
+    // sin ruido, y sin esto no hay manera de sacar la suscripción del
+    // teléfono. Queda seleccionable para copiarla a mano.
+    mostrarAviso(
+      "<b>✅ Avisos activados</b>" +
+      (copiado ? "Copié tu suscripción al portapapeles. " : "") +
+      "Pegala en el secreto <code>PUSH_SUBSCRIPTION</code> de GitHub." +
+      '<textarea readonly style="width:100%;height:5.5em;margin-top:.6em;font-size:11px;' +
+      'font-family:ui-monospace,monospace;user-select:all;-webkit-user-select:all">' +
+      esc(texto) + "</textarea>", "ok", 0);
     btn.disabled = false;
     estadoNoti();
   } catch (e) {
