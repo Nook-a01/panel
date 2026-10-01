@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-30T23:47:18.338Z",
+ "actualizado": "2026-10-01T05:49:35.271Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -990,9 +991,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1051,9 +1051,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1064,8 +1063,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1275,6 +1275,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Argentina beat Bolivia in first game of post-Lionel Messi era",
+     "resumen": "Argentina did what they normally do against CONMEBOL foe Bolivia on Wednesday night in Córdoba: they won the match handily, but did it without Lionel Messi.",
+     "fecha": "2026-10-01T02:39:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724282_1296x729_16-9.jpg",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401921545"
+    },
+    {
      "titulo": "Pochettino 'so happy' after USMNT beat Chile",
      "resumen": "Pochettino 'so happy' after USMNT beat Chile",
      "fecha": "2026-09-30T12:27:41Z",
@@ -1315,13 +1322,6 @@
      "fecha": "2026-09-29T21:29:34Z",
      "imagen": "https://a.espncdn.com/photo/2026/0929/r1723629_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50061434/fifa-president-nasser-al-khelaifi-psg-gianni-infantino-election"
-    },
-    {
-     "titulo": "Ancelotti: 'Fundamental' Vinícius Jr. deserves patience with Brazil",
-     "resumen": "Ancelotti: 'Fundamental' Vinícius Jr. deserves patience with Brazil",
-     "fecha": "2026-09-29T15:35:42Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0929/dm_260929_COM_SOC_Presser_Ancelotti_Fundamental_Vinicius_Jr_deserves_patience_with_Brazil_20260929_GLO/dm_260929_COM_SOC_Presser_Ancelotti_Fundamental_Vinicius_Jr_deserves_patience_with_Brazil_20260929_GLO.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50059305/fundamental-vinicius-jr-deserves-patience-brazil"
     },
     {
      "titulo": "Pochettino labels Man City's charges as a 'period of deception'",
@@ -1500,12 +1500,12 @@
       "equipo": "Red Bull New York",
       "abrev": "RBNY",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "26",
+      "pj": "27",
       "pts": "33",
       "g": "9",
       "e": "6",
-      "p": "11",
-      "dg": "-14",
+      "p": "12",
+      "dg": "-17",
       "mio": false,
       "pos": 10
      },
@@ -1598,9 +1598,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1623,9 +1622,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1994,6 +1992,13 @@
    ],
    "noticias": [
     {
+     "titulo": "St. Louis up to 2nd place with unbeaten run now at 17 games",
+     "resumen": "Simon Becher and Tomas Ostrak each scored late in the second half as St. Louis City SC beat the New York Red Bulls 3-0 on Wednesday night.",
+     "fecha": "2026-10-01T02:19:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724277_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50073462/st-louis-2nd-place-unbeaten-run-now-17-games"
+    },
+    {
      "titulo": "Philadelphia Union, USMNT's Cavan Sullivan becomes youngest MLS Player of the Month",
      "resumen": "Philadelphia Union and USMNT midfielder Cavan Sullivan became the youngest player in MLS history to be named Player of the Month on Wednesday when he was awarded the honors for September.",
      "fecha": "2026-09-30T14:32:53Z",
@@ -2027,13 +2032,6 @@
      "fecha": "2026-09-28T07:57:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/0928/r1722794_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Struggling LAFC fires 1st-year coach Marc Dos Santos",
-     "resumen": "LAFC fired head coach Marc Dos Santos on Sunday night, late in his disappointing first season in charge.",
-     "fecha": "2026-09-28T01:59:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722808_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50049197/lafc-fires-coach-marc-dos-santos"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2084,11 +2082,6 @@
   "pumas": {
    "compitiendo": [
     {
-     "nombre": "The Rugby Championship",
-     "liga": "244293",
-     "ruta": "rugby"
-    },
-    {
      "nombre": "International Test Match",
      "liga": "289234",
      "ruta": "rugby"
@@ -2097,6 +2090,20 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Get rugby back to '03 popularity: RWC winner Horan",
+     "resumen": "Former Wallabies star and two-time World Cup winner Tim Horan has backed Australia to shock the rugby world and claim the illustrious Rugby World Cup trophy a year out from Rugby World Cup 2027.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724319_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/50074295/australia-wallabies-rugby-world-cup-tim-horan-get-rugby-back-2003-popularity"
+    },
+    {
+     "titulo": "Wallabies Depth Chart: Picking Australia's lineup one year out from the World Cup",
+     "resumen": "It doesn't get much bigger than a home World Cup, and with so much rugby yet to play out, this is ESPN's attempt at predicting how the Wallabies will line up.",
+     "fecha": null,
+     "imagen": "https://a.espncdn.com/photo/2026/0930/r1723810_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/rugby/story/_/id/50049690/wallabies-depth-chart-picking-australia-lineup-one-year-rugby-world-cup"
+    },
     {
      "titulo": "Survival of the fittest? The Wallabies could yet need their late-30s playmakers",
      "resumen": "Carter Gordon may have shaken off a calf niggle to play on Sunday, but the Wallabies playmaker's injury travails since his return from rugby league remain a genuine concern. It may yet open the door for James O'Connor or Bernard Foley.",
@@ -2124,20 +2131,6 @@
      "fecha": null,
      "imagen": "https://a.espncdn.com/photo/2026/0330/r1636151_1296x518_5-2.jpg",
      "link": "https://www.espn.com/rugby/story/_/id/48350306/wallabies-face-ireland-2027-play-seven-tests-rugby-world-cup"
-    },
-    {
-     "titulo": "Andy Farrell not talking to RFU about England role 'at present' -- Bill Sweeney",
-     "resumen": "Rugby Football Union chief executive Bill Sweeney insists there has been no contact with Andy Farrell as part of England's succession planning for the time beyond next year's World Cup.",
-     "fecha": null,
-     "imagen": "https://a.espncdn.com/photo/2025/0618/r1508156_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/rugby/story/_/id/48321020/andy-farrell-not-talking-rfu-england-role-present-bill-sweeney"
-    },
-    {
-     "titulo": "Argentina working towards 2035 Rugby World Cup bid",
-     "resumen": "Argentina will bid to stage the 2035 World Cup as part of a wider South American tournament that will also include Brazil, Chile and Uruguay.",
-     "fecha": null,
-     "imagen": "https://a.espncdn.com/photo/2026/0318/r1630421_1296x518_5-2.jpg",
-     "link": "https://www.espn.com/rugby/story/_/id/48243560/argentina-working-towards-2035-rugby-world-cup-bid"
     }
    ],
    "resultados": null,
@@ -2375,9 +2368,10 @@
       "color": "#FF2D00",
       "numero": "5",
       "driverId": "bortoleto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg/330px-Gabriel_Bortoleto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8581%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 15,
@@ -2792,7 +2786,7 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "Flyweight",
      "record": "17-5-0",
-     "peleas": 3,
+     "peleas": 4,
      "gano": 3
     },
     {
@@ -2837,7 +2831,7 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
      "categoria": "Light Heavyweight",
      "record": "11-0-0",
-     "peleas": 3,
+     "peleas": 4,
      "gano": 3
     },
     {

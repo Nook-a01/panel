@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-30T23:47:18.338Z",
+ "actualizado": "2026-10-01T05:49:35.271Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -24,7 +24,7 @@
    "ruta": "soccer",
    "liga": "fifa.world",
    "total": 4,
-   "proximos": 1
+   "proximos": 0
   },
   {
    "id": "intermiami",
@@ -47,7 +47,7 @@
    "color": "#38d0ff",
    "ruta": "rugby",
    "liga": "289234",
-   "total": 2,
+   "total": 1,
    "proximos": 0
   },
   {
@@ -119,28 +119,6 @@
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "finalizado": true,
    "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-603129",
-   "miLado": "local",
-   "idEspn": "603129",
-   "liga": "244293",
-   "ruta": "rugby",
-   "feedId": "pumas",
-   "feedLabel": "Los Pumas",
-   "sport": "rugby",
-   "emoji": "🏉",
-   "titulo": "Argentina vs South Africa",
-   "inicio": "2025-10-04T13:00Z",
-   "horaConfirmada": true,
-   "competicion": "The Rugby Championship",
-   "sede": "Allianz Stadium",
-   "local": "Argentina",
-   "visitante": "South Africa",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
-   "finalizado": true,
-   "marcador": "27 - 29"
   },
   {
    "id": "espn-760517",
@@ -705,8 +683,8 @@
    "visitante": "Bolivia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "4 - 0"
   },
   {
    "id": "espn-401841594",
@@ -1436,7 +1414,7 @@
    "inicio": "2026-11-21T14:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
-   "sede": "",
+   "sede": "ABHA Arena",
    "local": null,
    "visitante": null,
    "logoLocal": null,
