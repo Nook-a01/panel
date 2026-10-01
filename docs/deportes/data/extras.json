@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-01T13:10:27.734Z",
+ "actualizado": "2026-10-01T18:52:25.102Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -879,16 +880,6 @@
   "argentina": {
    "compitiendo": [
     {
-     "nombre": "Copa América",
-     "liga": "conmebol.america",
-     "ruta": "soccer"
-    },
-    {
-     "nombre": "FIFA World Cup Qualifying - CONMEBOL",
-     "liga": "fifa.worldq.conmebol",
-     "ruta": "soccer"
-    },
-    {
      "nombre": "FIFA World Cup",
      "liga": "fifa.world",
      "ruta": "soccer"
@@ -1066,8 +1057,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1078,8 +1070,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1198,9 +1191,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1278,6 +1270,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Zidane set for Italy reunion with no 'regrets' about WC final headbutt",
+     "resumen": "Twenty years after being sent off in the 2006 World Cup final, Zinedine Zidane faces Italy again on Friday, this time in a suit as France's coach.",
+     "fecha": "2026-10-01T18:36:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724560_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50077965/france-italy-zinedine-zidane-world-cup-final-marco-materazzi"
+    },
+    {
+     "titulo": "U.S. Soccer's post-World Cup vibes: Lamenting a missed opportunity, embracing excitement",
+     "resumen": "The USMNT's World Cup was a paradox. Did inspiring a nation of future fans make it a success, or does the embarrassing exit mean it was a failure?",
+     "fecha": "2026-10-01T18:29:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721313_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50020939/us-soccer-men-national-team-post-world-cup-vibes-lamenting-missed-opportunity-embracing-excitement"
+    },
+    {
+     "titulo": "Who is better prepared for 2030 World Cup cycle: USA or Mexico?",
+     "resumen": "Mexico and the U.S. have taken drastically different approaches since the World Cup. Their meeting Saturday will provide the first clues about which has the upper hand.",
+     "fecha": "2026-10-01T14:29:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0930/r1724083_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50068589/who-better-prepared-2030-world-cup-cycle-usa-mexico"
+    },
+    {
      "titulo": "Argentina beat Bolivia as post-Lionel Messi era nears",
      "resumen": "Argentina did what they normally do against CONMEBOL foe Bolivia on Wednesday night in Córdoba: they won the match handily, but did it without Lionel Messi.",
      "fecha": "2026-10-01T06:05:15Z",
@@ -1297,13 +1310,6 @@
      "fecha": "2026-09-30T02:48:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/0930/r1723735_1296x729_16-9.jpg",
      "link": "http://www.espn.com/soccer/report/_/gameId/401905189"
-    },
-    {
-     "titulo": "Socceroos shift focus to Asian Cup after strong series vs. Brazil",
-     "resumen": "After two impressive performances against Brazil, the Socceroos say they're ready to shift their focus towards the coming Asian Cup and embrace the challenge and expectations of being one of the continent's best.",
-     "fecha": "2026-09-30T01:46:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0929/r1723632_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50061551/socceroos-shift-focus-asian-cup-strong-series-vs-brazil"
     },
     {
      "titulo": "Connor Metcalfe thunders home screamer vs. Brazil",
@@ -1334,13 +1340,6 @@
      "link": "https://www.espn.com/video/clip/_/id/50058472/pochettino-labels-man-city-charges-period-deception"
     },
     {
-     "titulo": "U.S. Soccer's post-World Cup vibes: Lamenting a missed opportunity, embracing excitement",
-     "resumen": "The USMNT's World Cup was a paradox. Did inspiring a nation of future fans make it a success, or does the embarrassing exit mean it was a failure?",
-     "fecha": "2026-09-29T07:20:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721313_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50020939/us-soccer-men-national-team-post-world-cup-vibes-lamenting-missed-opportunity-embracing-excitement"
-    },
-    {
      "titulo": "FIFA agrees in principle to federation payments from WC windfall",
      "resumen": "FIFA president Gianni Infantino has come out in favor of a tentative proposal from UEFA and Concacaf that FIFA distributes funds to member associations as a result of record revenues from this summer's World Cup.",
      "fecha": "2026-09-28T21:41:02Z",
@@ -1353,13 +1352,6 @@
      "fecha": "2026-09-28T16:59:49Z",
      "imagen": "https://a.espncdn.com/photo/2026/0927/r1722644_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50045992/gianni-infantino-fifa-president-scandal-u20-world-cup-uefa-victor-montigliani"
-    },
-    {
-     "titulo": "Vozinha struggling with World Cup fame: 'I'd choose the life I had before'",
-     "resumen": "Viral World Cup goalkeeper Vozinha has revealed he is struggling with his newfound fame, saying that he would like to go back to a time before he was so well-known.",
-     "fecha": "2026-09-28T09:21:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722870_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50050816/vozinha-world-cup-fame-struggling-cape-verde"
     }
    ],
    "resultados": null,
@@ -1601,8 +1593,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1625,8 +1618,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -2082,11 +2076,6 @@
   "pumas": {
    "compitiendo": [
     {
-     "nombre": "The Rugby Championship",
-     "liga": "244293",
-     "ruta": "rugby"
-    },
-    {
      "nombre": "International Test Match",
      "liga": "289234",
      "ruta": "rugby"
@@ -2261,9 +2250,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2649,6 +2639,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lando Norris urges F1 and social media giants to help tackle abuse after Franco Colapinto ban feud",
+     "resumen": "Lando Norris called on Formula 1 and social media companies to do more to combat online abuse after the torrent of messages he received following last weekend's Azerbaijan Grand Prix.",
+     "fecha": "2026-10-01T13:54:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724395_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074897/lando-norris-urges-f1-social-media-giants-help-tackle-abuse-franco-colapinto-ban-feud-bahrain-gp-malaysia-sepang-formula-1"
+    },
+    {
      "titulo": "Lewis Hamilton hits out at Ferrari hierarchy in Fred Vasseur defence: 'Point fingers somewhere else'",
      "resumen": "Lewis Hamilton has reiterated his full support for Ferrari boss Fred Vasseur and said critics should \"point fingers somewhere else,\" suggesting those higher up in the team's hierarchy must also take responsibility for its struggles.",
      "fecha": "2026-10-01T12:45:11Z",
@@ -2661,13 +2658,6 @@
      "fecha": "2026-10-01T12:44:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724336_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50074878/fernando-alonso-refuses-watch-f1-sofa-has-fire-do-better-bahrain-gp-malaysia-sepang-formula-1"
-    },
-    {
-     "titulo": "Lando Norris urges F1 and social media giants to help tackle abuse after Franco Colapinto ban feud",
-     "resumen": "Lando Norris has called on Formula 1 and social media companies to do more to combat online abuse after the torrent of messages he received following last weekend's Azerbaijan Grand Prix.",
-     "fecha": "2026-10-01T12:41:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724395_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50074897/lando-norris-urges-f1-social-media-giants-help-tackle-abuse-franco-colapinto-ban-feud-bahrain-gp-malaysia-sepang-formula-1"
     },
     {
      "titulo": "Max Verstappen steps in for GT race at Portimão amid two F1 triple-headers",
@@ -2706,6 +2696,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "UFC 332 preview and picks: Why haven't there been more women's fights?",
+     "resumen": "Top storylines and coaches' analysis for UFC 332 in Salt Lake City.",
+     "fecha": "2026-10-01T17:55:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724515_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50077602/ufc-332-preview-predictions-natalia-silva-vs-wang-cong"
+    },
+    {
      "titulo": "UFC bantamweight Barcelos out of hospital after health scare",
      "resumen": "UFC bantamweight Raoni Barcelos has been discharged from the hospital, following a frightening incident at UFC Fight Night on Sept. 26 in Las Vegas.",
      "fecha": "2026-09-30T16:08:45Z",
@@ -2739,13 +2736,6 @@
      "fecha": "2026-09-28T18:58:08Z",
      "imagen": "https://a.espncdn.com/photo/2026/0927/r1722302_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50053733/ufc-bantamweight-barcelos-doing-great-hospitalization"
-    },
-    {
-     "titulo": "Raúl Rosas Jr. defeats Raoni Barcelos by TKO in round five",
-     "resumen": "Raúl Rosas Jr. scores a strange TKO victory against Raoni Barcelos in round 5, after the Brazilian appears to be knocked out by the cage.",
-     "fecha": "2026-09-27T07:30:55Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0927/dm_260927_MMA_Highlight_Raul_Rosas_Jr_defeats_Raoni_Barcelos_by_TKO_in_round_five_20260927_AUS_ONLY/dm_260927_MMA_Highlight_Raul_Rosas_Jr_defeats_Raoni_Barcelos_by_TKO_in_round_five_20260927_AUS_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50040457/raul-rosas-jr-defeats-raoni-barcelos-tko-round-five"
     }
    ],
    "resultados": [
