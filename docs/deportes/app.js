@@ -1,8 +1,8 @@
 import { marcadores, detallePartido, fichaJugador, detalleGP, carteleraUFC, infoTorneo,
          historialPeleador, jugadasRugby, formaReciente,
-         fichaPiloto, accionesPelea } from "./api.js?v=25";
+         fichaPiloto, accionesPelea } from "./api.js?v=26";
 import { banderaDePiloto as banderaPorNacionalidad,
-         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=25";
+         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=26";
 
 let DATOS = null, EXTRA = null;
 
@@ -1655,6 +1655,33 @@ const b64aBytes = b64 => {
   const s = (b64 + "=".repeat((4 - b64.length % 4) % 4)).replace(/-/g, "+").replace(/_/g, "/");
   return Uint8Array.from(atob(s), c => c.charCodeAt(0));
 };
+// El camino inverso: sirve para comparar la clave con la que se creó una
+// suscripción contra la que publica el servidor hoy.
+const bytesAb64 = buf => {
+  const bin = String.fromCharCode(...new Uint8Array(buf));
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+};
+// La clave pública que publica el servidor. Se pide sin caché porque al
+// rotarla el archivo cambia y la copia vieja dejaría todo desincronizado.
+const clavePublica = async () => {
+  try {
+    const r = await fetch("data/vapid-public.json?v=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) return null;
+    const j = await r.json();
+    return j?.publicKey || null;
+  } catch { return null; }
+};
+// Una suscripción sólo sirve si se creó con la clave que el servidor usa
+// hoy. Si rotaste las VAPID, la vieja queda muerta: el servicio de push
+// responde 400 y el aviso nunca llega.
+const subAlDia = async (sub, clave) => {
+  if (!sub || !clave) return true;
+  try {
+    const usada = sub.options?.applicationServerKey;
+    if (!usada) return true;
+    return bytesAb64(usada) === clave;
+  } catch { return true; }
+};
 const enStandalone = () =>
   matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 const esIOS = () =>
@@ -1678,6 +1705,18 @@ async function estadoNoti() {
 
   const reg = await navigator.serviceWorker.ready;
   const sub = await reg.pushManager.getSubscription();
+  const clave = await clavePublica();
+
+  if (sub && Notification.permission === "granted" && !(await subAlDia(sub, clave))) {
+    // Rotaron las claves VAPID. La suscripción vieja ya no recibe nada.
+    btn.classList.remove("on");
+    txt.textContent = "RENOVAR";
+    btn.onclick = activarNoti;
+    mostrarAviso(
+      "<b>Hay que renovar los avisos</b>Cambiaron las claves del servidor. " +
+      "Tocá 🔔 para volver a activarlos.", "", 12000);
+    return;
+  }
 
   if (sub && Notification.permission === "granted") {
     btn.classList.add("on");
@@ -1711,6 +1750,13 @@ async function activarNoti() {
       btn.disabled = false; return;
     }
     const reg = await navigator.serviceWorker.ready;
+    // Si ya había una suscripción hecha con otra clave, hay que darla de
+    // baja primero: el navegador se niega a crear una segunda con una
+    // applicationServerKey distinta, y la vieja ya no recibe nada.
+    const previa = await reg.pushManager.getSubscription();
+    if (previa && !(await subAlDia(previa, key.publicKey))) {
+      try { await previa.unsubscribe(); } catch {}
+    }
     const sub = await reg.pushManager.subscribe({
       userVisibleOnly: true, applicationServerKey: b64aBytes(key.publicKey),
     });

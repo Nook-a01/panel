@@ -11,7 +11,7 @@
 // vieja después de publicar, hasta limpiar la caché a mano.
 // Los escudos sí se guardan para siempre: no cambian nunca.
 
-const CACHE   = "panel-v25";
+const CACHE   = "panel-v26";
 const ESCUDOS = "panel-escudos";
 
 const BASICOS = [
