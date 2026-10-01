@@ -74,8 +74,16 @@ async function enviar(payload) {
       // 404/410 = la suscripción ya no existe (borraste la app o revocaste permisos)
       if (e.statusCode === 404 || e.statusCode === 410)
         console.warn("   ! suscripción vencida, hay que volver a activar los avisos en el celular");
-      else
+      else {
+        // e.message es siempre el mismo texto genérico. Lo que explica el
+        // fallo viene en el cuerpo de la respuesta del servicio de push:
+        // sin esto, un 400 por claves VAPID rotadas es indistinguible de
+        // un payload mal armado.
+        const host = (() => { try { return new URL(sub.endpoint).host; } catch { return "?"; } })();
         console.warn("   ! error al enviar (" + e.statusCode + "): " + e.message);
+        console.warn("     servicio: " + host);
+        if (e.body) console.warn("     respuesta: " + String(e.body).slice(0, 300));
+      }
     }
   }
   return alguno;
