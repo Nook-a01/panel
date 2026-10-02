@@ -1,21 +1,21 @@
-name: Resumen de la mañana
+﻿name: Resumen de la maÃ±ana
 
 # Corre sobre el repo panel (antes vivia en mis-deportes).
 
 on:
   schedule:
-    # 11:37 UTC ≈ 08:37 en Argentina.
+    # 11:37 UTC â‰ˆ 08:37 en Argentina.
     #
-    # El minuto 37 no es capricho: GitHub demora más las tareas que caen
-    # en punto, porque es cuando más carga tiene. Y este aviso es el que
+    # El minuto 37 no es capricho: GitHub demora mÃ¡s las tareas que caen
+    # en punto, porque es cuando mÃ¡s carga tiene. Y este aviso es el que
     # mejor tolera la demora: si sale a las 8 o a las 10, sirve igual.
     #
     # Se programa dos veces por las dudas: si GitHub saltea la primera,
     # la segunda cubre. El propio aviso no se repite porque lleva la
     # misma etiqueta y el celular reemplaza el anterior.
-    # 13:07 UTC = 10:07 en Argentina — el aviso de las 10 de la mañana.
+    # 13:07 UTC = 10:07 en Argentina â€” el aviso de las 10 de la maÃ±ana.
     # 13:37 UTC = 10:37 como respaldo, por si GitHub saltea la primera.
-    # El minuto no es en punto a propósito (ver la nota de arriba).
+    # El minuto no es en punto a propÃ³sito (ver la nota de arriba).
     - cron: "7 13 * * *"
     - cron: "37 13 * * *"
   workflow_dispatch:
@@ -45,11 +45,12 @@ jobs:
           VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
           VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
           PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          CLAVE_APP:         ${{ secrets.CLAVE_APP }}
         run: node scripts/send-push.mjs --diario
 
-      # Deja constancia de que el resumen de hoy ya salió, para que la
-      # segunda corrida del día no lo repita.
-      - name: Recordar que ya se mandó
+      # Deja constancia de que el resumen de hoy ya saliÃ³, para que la
+      # segunda corrida del dÃ­a no lo repita.
+      - name: Recordar que ya se mandÃ³
         run: |
           git config user.name  "Resumen diario"
           git config user.email "actions@github.com"

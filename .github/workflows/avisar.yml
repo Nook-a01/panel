@@ -1,4 +1,4 @@
-name: Enviar avisos
+﻿name: Enviar avisos
 
 # Corre sobre el repo panel (antes vivia en mis-deportes).
 
@@ -6,28 +6,28 @@ on:
   # PRENDIDO DE NUEVO el 20/9/2026, a pedido suyo.
   #
   # Manda los avisos por evento, que salen de CONFIG.avisos. Entre el 11 y el
-  # 20 de septiembre estuvo apagado porque esa lista quedó vacía y correr esto
-  # cada 15 minutos sin nada que mandar sólo gastaba minutos.
+  # 20 de septiembre estuvo apagado porque esa lista quedÃ³ vacÃ­a y correr esto
+  # cada 15 minutos sin nada que mandar sÃ³lo gastaba minutos.
   #
-  # Ahora la lista tiene UNA entrada —una hora antes— así que son uno o dos
-  # avisos por día. Si algún día vuelven a molestar, lo primero es vaciar
-  # CONFIG.avisos en config.mjs; apagar sólo este reloj deja el aviso a medias.
+  # Ahora la lista tiene UNA entrada â€”una hora antesâ€” asÃ­ que son uno o dos
+  # avisos por dÃ­a. Si algÃºn dÃ­a vuelven a molestar, lo primero es vaciar
+  # CONFIG.avisos en config.mjs; apagar sÃ³lo este reloj deja el aviso a medias.
   #
-  # El repo es público, así que estos minutos de GitHub Actions no se cobran.
+  # El repo es pÃºblico, asÃ­ que estos minutos de GitHub Actions no se cobran.
   schedule:
     - cron: "*/15 * * * *"   # cada 15 minutos
   workflow_dispatch:
     inputs:
       prueba:
-        description: "Mandar una notificación de prueba en vez de revisar el calendario"
+        description: "Mandar una notificaciÃ³n de prueba en vez de revisar el calendario"
         type: boolean
         default: false
 
 permissions:
   contents: write
 
-# Si un envío todavía está corriendo, el siguiente espera.
-# Así nunca hay dos procesos escribiendo el estado a la vez.
+# Si un envÃ­o todavÃ­a estÃ¡ corriendo, el siguiente espera.
+# AsÃ­ nunca hay dos procesos escribiendo el estado a la vez.
 concurrency:
   group: avisos
   cancel-in-progress: false
@@ -50,16 +50,17 @@ jobs:
           VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
           VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
           PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          CLAVE_APP:         ${{ secrets.CLAVE_APP }}
         run: node scripts/send-push.mjs ${{ inputs.prueba && '--test' || '' }}
 
       - name: Recordar lo ya enviado
         if: ${{ !inputs.prueba }}
         run: |
-          git config user.name  "Avisos automáticos"
+          git config user.name  "Avisos automÃ¡ticos"
           git config user.email "actions@github.com"
           git add estado/enviados.json
           git diff --staged --quiet && exit 0
           git commit -m "Avisos enviados"
-          # Otro envío pudo haber escrito mientras tanto: reintentamos sobre lo último.
+          # Otro envÃ­o pudo haber escrito mientras tanto: reintentamos sobre lo Ãºltimo.
           git pull --rebase --autostash || true
           git push

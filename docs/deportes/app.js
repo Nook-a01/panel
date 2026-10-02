@@ -1,8 +1,8 @@
 import { marcadores, detallePartido, fichaJugador, detalleGP, carteleraUFC, infoTorneo,
          historialPeleador, jugadasRugby, formaReciente,
-         fichaPiloto, accionesPelea } from "./api.js?v=27";
+         fichaPiloto, accionesPelea } from "./api.js?v=28";
 import { banderaDePiloto as banderaPorNacionalidad,
-         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=27";
+         colorDeEscuderia as colorPorEscuderia } from "./f1-datos.js?v=28";
 
 let DATOS = null, EXTRA = null;
 
@@ -1671,6 +1671,31 @@ const clavePublica = async () => {
     return j?.publicKey || null;
   } catch { return null; }
 };
+// El Panel anota la suscripción en el Worker, para que GitHub la lea de
+// ahí al mandar los avisos. Sin esto hay que copiar un JSON de 300
+// caracteres desde la pantalla del teléfono y pegarlo en un secreto de
+// GitHub: se corta a la mitad y el aviso nunca llega.
+//
+// La clave es la misma de la sección Plata. Las dos páginas viven en el
+// mismo dominio, así que comparten el almacenamiento del navegador.
+const WORKER_PANEL = "https://plata.hamcqc.workers.dev";
+const clavePanel = () => {
+  try { return localStorage.getItem("plata-mp-clave") || ""; } catch { return ""; }
+};
+async function anotarSuscripcion(sub) {
+  const clave = clavePanel();
+  if (!clave) return { ok: false, motivo: "sin-clave" };
+  try {
+    const r = await fetch(WORKER_PANEL + "/push-subs", {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: "Bearer " + clave },
+      body: JSON.stringify(sub),
+    });
+    if (!r.ok) return { ok: false, motivo: "http-" + r.status };
+    return { ok: true };
+  } catch (e) { return { ok: false, motivo: "red" }; }
+}
+
 // Una suscripción sólo sirve si se creó con la clave que el servidor usa
 // hoy. Si rotaste las VAPID, la vieja queda muerta: el servicio de push
 // responde 400 y el aviso nunca llega.
@@ -1759,6 +1784,14 @@ async function activarNoti() {
       userVisibleOnly: true, applicationServerKey: b64aBytes(key.publicKey),
     });
     const texto = JSON.stringify(sub);
+    const anotada = await anotarSuscripcion(sub);
+    if (anotada.ok) {
+      mostrarAviso("<b>✅ Avisos activados</b>" +
+        "Este aparato quedó anotado solo. No hay que copiar ni pegar nada.", "ok", 9000);
+      btn.disabled = false;
+      estadoNoti();
+      return;
+    }
     let copiado = false;
     try { await navigator.clipboard.writeText(texto); copiado = true; } catch {}
     // El cuadro de texto va siempre: en el iPhone el portapapeles falla

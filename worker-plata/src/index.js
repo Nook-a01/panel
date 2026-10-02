@@ -32,6 +32,10 @@
 //   GET/POST /campamento → los días marcados del plan de 30 días
 //   GET/POST /vivos      → último marcador avisado de cada partido en juego
 //   GET/POST /instagram  → lo último que leyó el panel de Instagram, para verlo en el celular
+//   GET/POST /push-subs  → las suscripciones de avisos de cada aparato. El Panel las
+//                          anota solo al activar la campanita; GitHub las lee al enviar.
+//                          Existe para que nadie tenga que copiar y pegar un JSON de 300
+//                          caracteres desde la pantalla de un teléfono.
 //   GET  /foto?u=       → la foto de perfil de esa cuenta, traída por el Worker
 //   GET/POST/DELETE /ig/<código> → el panel de Instagram de otra persona (SIN clave:
 //                          el código de 32 caracteres al azar ES la llave)
@@ -374,6 +378,37 @@ export default {
       // Instagram (X-Frame-Options: DENY, y sin CORS). Así que lee la compu y
       // el teléfono muestra lo leído. Es la misma idea que el lector de
       // Mercado Pago.
+      // ---- suscripciones de avisos ----
+      //
+      // Una suscripción identifica a UN aparato. Se guardan por endpoint:
+      // si el mismo teléfono se vuelve a suscribir, pisa la suya y no
+      // queda un duplicado muerto al lado del bueno.
+      if (url.pathname === "/push-subs") {
+        const guardadas = JSON.parse((await env.PLATA.get("push-subs")) || "[]");
+
+        if (request.method === "POST") {
+          const sub = await request.json();
+          if (!sub || typeof sub !== "object" || typeof sub.endpoint !== "string")
+            return json({ error: "Eso no es una suscripción." }, 400);
+
+          const sinEsta = guardadas.filter(x => x && x.endpoint !== sub.endpoint);
+          sinEsta.push(sub);
+          await env.PLATA.put("push-subs", JSON.stringify(sinEsta));
+          return json({ ok: true, aparatos: sinEsta.length });
+        }
+
+        if (request.method === "DELETE") {
+          const sub = await request.json().catch(() => null);
+          const quedan = sub && sub.endpoint
+            ? guardadas.filter(x => x && x.endpoint !== sub.endpoint)
+            : [];
+          await env.PLATA.put("push-subs", JSON.stringify(quedan));
+          return json({ ok: true, aparatos: quedan.length });
+        }
+
+        return new Response(JSON.stringify(guardadas), { headers: cabeceras });
+      }
+
       if (url.pathname === "/instagram") {
         if (request.method === "GET") {
           const g = await env.PLATA.get("instagram");
