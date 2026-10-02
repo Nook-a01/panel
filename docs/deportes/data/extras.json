@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-02T02:14:18.804Z",
+ "actualizado": "2026-10-02T08:32:49.420Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1249,8 +1249,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1273,12 +1274,25 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
+    {
+     "titulo": "Is Rafa Marquez ready to push Mexico above the USMNT and beyond?",
+     "resumen": "Rafa Marquez, a fierce rival of the USMNT as a player, now leads Mexico as an inexperienced head coach looking to surpass the Americans.",
+     "fecha": "2026-10-02T07:37:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724578_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50056282/is-rafa-marquez-ready-push-mexico-usmnt-beyond"
+    },
+    {
+     "titulo": "From the USMNT to Germany, why club coaches are taking over national teams",
+     "resumen": "Pochettino with the U.S., Klopp with Germany, Tuchel with England and more: Are these famous coaches worth it for national teams?",
+     "fecha": "2026-10-02T07:34:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0806/r1698479_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50079068/from-usmnt-germany-why-club-coaches-taking-national-teams"
+    },
     {
      "titulo": "Zidane set for Italy reunion with no 'regrets' about WC final headbutt",
      "resumen": "Twenty years after being sent off in the 2006 World Cup final, Zinedine Zidane faces Italy again on Friday, this time in a suit as France's coach.",
@@ -1322,20 +1336,6 @@
      "link": "http://www.espn.com/soccer/report/_/gameId/401905189"
     },
     {
-     "titulo": "Connor Metcalfe thunders home screamer vs. Brazil",
-     "resumen": "Alessandro Circati and Connor Metcalfe provide moments of brilliance in the Socceroos' 4-2 loss to Brazil.",
-     "fecha": "2026-09-30T01:46:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0929/Int_260929_Soccer_Highlight_Connor_Metcalfe_thunders_home_screamer_vs_Brazil_2026930_AUS/Int_260929_Soccer_Highlight_Connor_Metcalfe_thunders_home_screamer_vs_Brazil_2026930_AUS.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50063417/connor-metcalfe-thunders-home-screamer-vs-brazil"
-    },
-    {
-     "titulo": "Brazil's stars shine in 4-2 win over Socceroos",
-     "resumen": "Vanderson opens the scoring in the third minute, with Raphinha & Vinicius Junior securing the victory from the spot.",
-     "fecha": "2026-09-30T01:39:56Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0929/Int_260929_Soccer_Highlight_Brazils_stars_shine_in_4-2_win_over_Socceroos_2026930_AUS_ONLY/Int_260929_Soccer_Highlight_Brazils_stars_shine_in_4-2_win_over_Socceroos_2026930_AUS_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50063381/brazil-stars-shine-4-2-win-socceroos"
-    },
-    {
      "titulo": "PSG chief Al-Khelaifi has 'zero interest' in FIFA presidency",
      "resumen": "European soccer's search for a candidate to challenge Gianni Infantino in the FIFA presidential election will not land on clubs' leader Nasser Al-Khelaifi.",
      "fecha": "2026-09-29T21:29:34Z",
@@ -1355,13 +1355,6 @@
      "fecha": "2026-09-28T21:41:02Z",
      "imagen": "https://a.espncdn.com/photo/2026/0827/r1707823_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50054758/fifa-agrees-federation-payments-wc-revenue"
-    },
-    {
-     "titulo": "Will anyone stop Infantino? FIFA president is confident U20 World Cup cameo says otherwise",
-     "resumen": "Under fire from UEFA, Infantino is back to business as usual and inching closer to reelection as FIFA president.",
-     "fecha": "2026-09-28T16:59:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0927/r1722644_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50045992/gianni-infantino-fifa-president-scandal-u20-world-cup-uefa-victor-montigliani"
     }
    ],
    "resultados": null,
@@ -1581,465 +1574,8 @@
      }
     ]
    },
-   "plantel": [
-    {
-     "id": "256444",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Luis Barraza",
-     "dorsal": "13",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 29,
-     "pais": "USA",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/256444.png",
-     "lesionado": false
-    },
-    {
-     "id": "297047",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rocco Ríos Novo",
-     "dorsal": "34",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 24,
-     "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "231059",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-     "nombre": "Dayne St. Clair",
-     "dorsal": "97",
-     "posicion": "Goalkeeper",
-     "posCorta": "G",
-     "edad": 29,
-     "pais": "Canada",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/231059.png",
-     "lesionado": false
-    },
-    {
-     "id": "315617",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Gonzalo Luján",
-     "dorsal": "2",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "231241",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-     "nombre": "Sergio Reguilón",
-     "dorsal": "3",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "285473",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Facundo Mura",
-     "dorsal": "4",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "402696",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
-     "nombre": "Fricio Caicedo",
-     "dorsal": "15",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 18,
-     "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "314952",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Micael",
-     "dorsal": "16",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 26,
-     "pais": "Brazil",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/314952.png",
-     "lesionado": false
-    },
-    {
-     "id": "316269",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
-     "nombre": "Ian Fray",
-     "dorsal": "17",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 24,
-     "pais": "Jamaica",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
-     "lesionado": false
-    },
-    {
-     "id": "364401",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Tyler Hall",
-     "dorsal": "26",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "310279",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
-     "nombre": "Maximiliano Falcón",
-     "dorsal": "37",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 29,
-     "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "359239",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png",
-     "nombre": "Israel Boatwright",
-     "dorsal": "62",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 21,
-     "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
-    },
-    {
-     "id": "401415",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Daniel Sumalla",
-     "dorsal": "70",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399951",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Cesar Abadia-Reda",
-     "dorsal": "76",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "173666",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Casemiro",
-     "dorsal": "5",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 34,
-     "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "174466",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Rodrigo De Paul",
-     "dorsal": "7",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 32,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "315594",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
-     "nombre": "Telasco Segovia",
-     "dorsal": "8",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 23,
-     "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "David Ayala",
-     "dorsal": "22",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 24,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
-     "lesionado": false
-    },
-    {
-     "id": "329025",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-     "nombre": "Yannick Bright",
-     "dorsal": "42",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 25,
-     "pais": "Italy",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399971",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Ian Urkidi",
-     "dorsal": "55",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "401414",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Preston Plambeck",
-     "dorsal": "59",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "297328",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-     "nombre": "Matías Galarza",
-     "dorsal": "80",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 24,
-     "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "406938",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Alexander Shaw",
-     "dorsal": "88",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 18,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "125088",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
-     "nombre": "Luis Suárez",
-     "dorsal": "9",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "45843",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Lionel Messi",
-     "dorsal": "10",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 39,
-     "pais": "Argentina",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/45843.png",
-     "lesionado": false
-    },
-    {
-     "id": "361433",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Riquelme",
-     "dorsal": "11",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "228394",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "nombre": "Germán Berterame",
-     "dorsal": "19",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 27,
-     "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "315801",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Tadeo Allende",
-     "dorsal": "21",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 27,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "387661",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Mateo Silvetti",
-     "dorsal": "24",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399946",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Idoh Zeltzer-Zubida",
-     "dorsal": "47",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 21,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "401418",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Diego Rey",
-     "dorsal": "52",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 20,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "359953",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
-     "nombre": "Lovens Delinois",
-     "dorsal": "54",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 21,
-     "pais": "Haiti",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "399970",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Dániel Pintér",
-     "dorsal": "56",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 19,
-     "pais": "USA",
-     "foto": null,
-     "lesionado": false
-    }
-   ],
+   "plantel": null,
    "noticias": [
-    {
-     "titulo": "St. Louis up to 2nd place with unbeaten run now at 17 games",
-     "resumen": "Simon Becher and Tomas Ostrak each scored late in the second half as St. Louis City SC beat the New York Red Bulls 3-0 on Wednesday night.",
-     "fecha": "2026-10-01T02:19:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724277_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50073462/st-louis-2nd-place-unbeaten-run-now-17-games"
-    },
-    {
-     "titulo": "Philadelphia Union, USMNT's Cavan Sullivan becomes youngest MLS Player of the Month",
-     "resumen": "Philadelphia Union and USMNT midfielder Cavan Sullivan became the youngest player in MLS history to be named Player of the Month on Wednesday when he was awarded the honors for September.",
-     "fecha": "2026-09-30T14:32:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0903/r1711097_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50067664/philadelphia-union-usmnt-cavan-sullivan-becomes-youngest-mls-player-month"
-    },
-    {
-     "titulo": "Does Inter Miami have problems moving into the post-season?",
-     "resumen": "Does Inter Miami have problems moving into the post-season?",
-     "fecha": "2026-09-30T08:20:54Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/dm_260930_COM_SOC_Analysis_Does_Inter_Miami_have_problems_moving_into_the_post-season3F__GLOBAL_2026-09-30/dm_260930_COM_SOC_Analysis_Does_Inter_Miami_have_problems_moving_into_the_post-season3F__GLOBAL_2026-09-30.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50065445/does-inter-miami-problems-moving-post-season"
-    },
-    {
-     "titulo": "Five stats: Why USMNT should be excited about Cavan Sullivan",
-     "resumen": "Is the hype around Cavan Sullivan's USMNT future too much? No, it's actually not enough -- and here are five reasons why.",
-     "fecha": "2026-09-29T07:18:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0928/r1723197_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50055017/usmnt-cavan-sullivan-stats-list-ranking-analysis-best-prospect"
-    },
-    {
-     "titulo": "MLS Power Rankings: No Cavan? No problem for surging Philadelphia",
-     "resumen": "Philadelphia lost three star youngsters to international duty, yet the Union continued their march toward the top of ESPN's MLS Power Rankings.",
-     "fecha": "2026-09-28T15:35:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722956_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50051629/mls-power-rankings-no-cavan-sullivan-no-problem-surging-philadelphia-union"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-09-28T07:57:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0928/r1722794_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
      "resumen": "All 27 United States-based MLS teams will compete in the 2027 edition of the U.S. Open Cup for the first time since 2023.",
@@ -2656,11 +2192,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Bahrain Grand Prix in Malaysia: Where were today's drivers when F1 last raced at Sepang?",
+     "resumen": "Formula 1 is heading to Malaysia for the Bahrain Grand Prix; the south-east Asian nation providing an unusual setting for a race.",
+     "fecha": "2026-10-02T06:19:40Z",
+     "imagen": "https://a.espncdn.com/photo/2017/1009/r271313_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49480377/bahrain-grand-prix-malaysia-where-were-todays-f1-drivers-last-race-2017"
+    },
+    {
      "titulo": "Bahrain Grand Prix in Malaysia 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Next up on the calendar is the Bahrain Grand Prix, but there's a quirk -- the 16th round of the season is actually taking place almost 4,000 miles away in Malaysia.",
-     "fecha": "2026-10-01T23:51:12Z",
+     "fecha": "2026-10-02T06:18:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/0927/r1722364_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49971200/bahrain-grand-prix-malaysia-2026-circuit-sepang-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Why is the Bahrain Grand Prix taking place in Malaysia, 4,000 miles away? F1's unusual race explained",
+     "resumen": "Formula 1's next race has an odd quirk -- it is unofficially the rescheduled Bahrain Grand Prix, but it is taking place at Malaysia's Sepang International Circuit in Kuala Lumpur.",
+     "fecha": "2026-10-02T06:18:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0924/r1721219_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50013220/why-bahrain-grand-prix-taking-place-malaysia-4000-miles-away-f1-unusual-race-explained"
+    },
+    {
+     "titulo": "Bahrain GP in Malaysia: Max Verstappen leads first practice from George Russell",
+     "resumen": "Red Bull's Max Verstappen set the pace in the first practice session at the Bahrain Grand Prix in Malaysia.",
+     "fecha": "2026-10-02T05:59:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1002/r1724817_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074922/max-verstappen-leads-first-practice-george-russell-bahrain-gp-malaysia-sepang-formula-1"
     },
     {
      "titulo": "Lando Norris urges F1 and social media giants to help tackle abuse after Franco Colapinto ban feud",
@@ -2675,27 +2232,6 @@
      "fecha": "2026-10-01T12:45:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724351_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50074896/lewis-hamilton-hits-ferrari-hierarchy-fred-vasseur-defence-point-fingers-somewhere-else-bahrain-gp-malaysia-sepang-formula-1"
-    },
-    {
-     "titulo": "Fernando Alonso refuses to watch F1 from the sofa while he still has 'fire' inside to do better",
-     "resumen": "Fernando Alonso has said he signed for another year of Formula 1 despite knowing 2027 could be just as painful as this year -- but believes an uncompetitive year beats watching races on the sofa at home knowing he could do better.",
-     "fecha": "2026-10-01T12:44:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724336_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50074878/fernando-alonso-refuses-watch-f1-sofa-has-fire-do-better-bahrain-gp-malaysia-sepang-formula-1"
-    },
-    {
-     "titulo": "Max Verstappen steps in for GT race at Portimão amid two F1 triple-headers",
-     "resumen": "This weekend's Bahrain Grand Prix in Malaysia will be the second of seven consecutive race weekends for Max Verstappen after he confirmed he has added a GT race at Portimão to his schedule for later this month.",
-     "fecha": "2026-10-01T08:41:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724344_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50074895/max-verstappen-steps-gt-race-portimao-amid-two-f1-triple-headers-gt-world-challenge"
-    },
-    {
-     "titulo": "Bahrain Grand Prix in Malaysia: Where were today's drivers when F1 last raced at Sepang?",
-     "resumen": "Formula 1 is heading to Malaysia for the Bahrain Grand Prix; the south-east Asian nation providing an unusual setting for a race.",
-     "fecha": "2026-10-01T07:10:46Z",
-     "imagen": "https://a.espncdn.com/photo/2017/1009/r271313_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49480377/bahrain-grand-prix-malaysia-where-were-todays-f1-drivers-last-race-2017"
     }
    ],
    "resultados": null,
