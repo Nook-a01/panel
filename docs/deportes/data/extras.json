@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-05T09:01:20.061Z",
+ "actualizado": "2026-10-05T18:25:44.814Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -616,9 +616,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -711,7 +710,7 @@
      "dorsal": "44",
      "posicion": "Forward",
      "posCorta": "F",
-     "edad": 18,
+     "edad": 19,
      "pais": "Argentina",
      "foto": null,
      "lesionado": false
@@ -1003,9 +1002,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1077,9 +1075,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1126,9 +1123,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1139,9 +1135,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1164,9 +1159,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1292,6 +1286,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Tuchel: There are no words left to describe Kane",
+     "resumen": "Tuchel: There are no words left to describe Kane",
+     "fecha": "2026-10-05T13:50:37Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1005/dm_261005_Tuchel_There_are_no_words_left_to_describe_Kane/dm_261005_Tuchel_There_are_no_words_left_to_describe_Kane.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50109199/there-no-words-left-describe-kane"
+    },
+    {
+     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
+     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
+     "fecha": "2026-10-05T09:43:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
+    },
+    {
      "titulo": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
      "resumen": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
      "fecha": "2026-10-04T22:20:03Z",
@@ -1313,13 +1321,6 @@
      "link": "https://www.espn.com/video/clip/_/id/50099893/messi-final-argentina-match-unforgettable"
     },
     {
-     "titulo": "Argentina score 7 past makeshift Burkina Faso after travel woes",
-     "resumen": "Argentina routed Burkina Faso 7-0 on Saturday in an international friendly in Buenos Aires, extending its strong start to the post-World Cup period.",
-     "fecha": "2026-10-04T12:16:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725623_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50097420/argentina-burkina-faso-friendly-lautaro-martinez"
-    },
-    {
      "titulo": "Who most deserves the Ballon d'Or? Whittling down the 30-man short list",
      "resumen": "Kylian Mbappé, Lamine Yamal and Harry Kane are the three favorites to win the 2026 Ballon d'Or, but who actually deserves to win it?",
      "fecha": "2026-10-04T10:38:08Z",
@@ -1339,13 +1340,6 @@
      "fecha": "2026-10-04T06:34:34Z",
      "imagen": "https://a.espncdn.com/photo/2026/1004/r1725630_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50096908/usa-mexico-cavan-sullivan-mauricio-pochettino-analysis-highlights"
-    },
-    {
-     "titulo": "USMNT player ratings: Sullivan, Hall 9/10 in big win vs. Mexico",
-     "resumen": "Cavan Sullivan proved that the youngsters are all right as he and Julian Hall scored in a 3-0 win over 10-man Mexico on Saturday night.",
-     "fecha": "2026-10-04T05:46:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725592_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50095800/usmnt-player-ratings-sullivan-hall-9-10-big-win-vs-mexico"
     },
     {
      "titulo": "Márquez bemoans 'terrible mistakes' as Mexico humbled by USMNT",
@@ -1608,9 +1602,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1633,9 +1626,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1646,9 +1638,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1659,9 +1650,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1720,9 +1710,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1733,9 +1722,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1782,9 +1770,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2354,10 +2341,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2663,25 +2649,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-05T15:51:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Could Malaysia return to F1 calendar? The state of play despite Sepang travel chaos",
+     "resumen": "Malaysia's Sepang circuit hosted a popular -- and, as it stands, one-off -- return to the Formula 1 calendar, although it was overshadowed by three days of travel chaos and nightmare experiences for fans.",
+     "fecha": "2026-10-05T12:02:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726254_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50082903/could-malaysia-return-f1-calendar-state-play-sepang-travel-chaos"
+    },
+    {
      "titulo": "Bahrain GP was the worst indictment of F1's new engine regs yet",
      "resumen": "There was a lot to love about Sunday's race. But it will forever be overshadowed by the mess caused by the new F1 engines.",
-     "fecha": "2026-10-04T20:14:50Z",
+     "fecha": "2026-10-05T09:39:15Z",
      "imagen": "https://a.espncdn.com/photo/2026/1004/r1725857_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/50100614/formula-1-2026-bahrain-grand-prix-malaysia-engine-delays-happened-verstappen"
     },
     {
-     "titulo": "'Totally unacceptable:' F1 drivers slam delayed start to Bahrain Grand Prix in Malaysia",
-     "resumen": "\"Horrible\", \"sad\", and \"totally unacceptable\" were among the reactions of Formula 1's drivers to the sport's attempt at racing in wet conditions at Sunday's Bahrain Grand Prix in Malaysia.",
-     "fecha": "2026-10-04T18:01:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725683_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50099567/totally-unacceptable-f1-drivers-lando-norris-carlos-sainz-sergio-perez-lance-stroll-slam-farcical-bahrain-grand-prix-malaysia"
-    },
-    {
-     "titulo": "Lewis Hamilton: No plans to visit casino with Ferrari strategists after slick tyre gamble",
-     "resumen": "Lewis Hamilton joked that he has no plans to visit a casino with Ferrari's strategists after they gambled -- and lost -- on using slick tyres at the start of the Bahrain Grand Prix in Malaysia on Sunday.",
-     "fecha": "2026-10-04T14:26:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725745_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50074965/bahrain-gp-malaysia-sepang-formula-1-lewis-hamilton-ferrari-slick-tyres"
+     "titulo": "Max Verstappen praises Red Bull on 'very special' Bahrain Grand Prix win after 'tough start to year'",
+     "resumen": "Max Verstappen praised Red Bull's resilience through a tough start to 2026 after he delivered the team an \"amazing\" first win with its own engine at the Bahrain Grand Prix in Malaysia.",
+     "fecha": "2026-10-05T09:31:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726235_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50074976/max-verstappen-praises-red-bull-very-special-bahrain-grand-prix-win-tough-start-year-bahrain-gp-malaysia-sepang-formula-1"
     },
     {
      "titulo": "Russell: Bahrain Grand Prix was another failure",
@@ -2696,13 +2689,6 @@
      "fecha": "2026-10-04T14:22:42Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Max_Verstappen_reflects_on_very_special_Bahrain_GP_win_20260904_GLOBAL/dm_261004_COM_F1_Presser_Max_Verstappen_reflects_on_very_special_Bahrain_GP_win_20260904_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50099753/max-verstappen-reflects-very-special-bahrain-gp-win"
-    },
-    {
-     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
-     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
-     "fecha": "2026-10-04T13:06:13Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0824/r1706147_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
     }
    ],
    "resultados": null,
@@ -2720,6 +2706,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "The performance bonuses for Van, Tsarukyan? Spots in P4P top 10",
+     "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
+     "fecha": "2026-10-05T18:24:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0922/r1720581_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
+    {
+     "titulo": "What's next: Will Silva's first title defense be against Shevchenko?",
+     "resumen": "The most likely opponent and a wild card for the winners and losers on the UFC 332 main card.",
+     "fecha": "2026-10-05T13:47:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726263_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50094347/next-fights-ufc-322-fighters-natalia-silva-payton-talbott"
+    },
+    {
      "titulo": "UFC 332 takeaways: Talbott, Silva validate their top billing",
      "resumen": "Payton Talbott finished another former champion in Deiveson Figueiredo on a night full of knockouts at UFC 332.",
      "fecha": "2026-10-04T05:15:58Z",
@@ -2727,25 +2727,11 @@
      "link": "https://www.espn.com/mma/story/_/id/50093793/ufc-332-takeaways-payton-talbott-natalia-silva-validate-their-top-billing"
     },
     {
-     "titulo": "UFC 332 sees record 9 first-round knockouts, 11 total finishes",
-     "resumen": "It was a record-setting night at UFC 332, which featured nine first-round knockouts and 11 total finishes, both the most on a single card.",
-     "fecha": "2026-10-04T04:27:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725551_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50095968/ufc-332-sees-record-9-first-round-knockouts-11-total-finishes"
-    },
-    {
      "titulo": "Natalia Silva captures women's flyweight title with unanimous decision win over Wang Cong",
      "resumen": "Natalia Silva captures women's flyweight title with unanimous decision win over Wang Cong",
      "fecha": "2026-10-04T04:24:37Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1004/0131a000-43f5-4686-be21-12d2429eb338/0131a000-43f5-4686-be21-12d2429eb338.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50096829/natalia-silva-captures-women-flyweight-title-unanimous-decision-win-wang-cong"
-    },
-    {
-     "titulo": "The performance bonuses for Van, Tsarukyan? Spots in P4P top 10",
-     "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
-     "fecha": "2026-10-04T04:00:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0922/r1720581_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     },
     {
      "titulo": "All-time UFC women's flyweight champions",
@@ -2786,12 +2772,6 @@
      "fecha": "2026-09-12T18:00Z",
      "marcador": null,
      "sede": "Desert Diamond Arena"
-    },
-    {
-     "titulo": "UFC Fight Night: Hooker vs. Parnasse",
-     "fecha": "2026-09-05T16:00Z",
-     "marcador": null,
-     "sede": "Accor Arena"
     }
    ],
    "peleadores": [

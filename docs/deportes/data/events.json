@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-05T04:43:35.320Z",
+ "actualizado": "2026-10-05T18:25:44.814Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 23,
+   "total": 22,
    "proximos": 15
   },
   {
@@ -71,54 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 13,
+   "total": 12,
    "proximos": 8
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 13",
-   "sede": "Autodromo Nazionale di Monza, Italy",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-13-q",
-   "anio": 2026,
-   "ronda": "13",
-   "sesion": "Clasificación",
-   "titulo": "GP Italian · Clasificación",
-   "inicio": "2026-09-05T14:00:00.000Z"
-  },
-  {
-   "id": "espn-600059993",
-   "miLado": null,
-   "idEspn": "600059993",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Hooker vs. Parnasse",
-   "inicio": "2026-09-05T16:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Accor Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-401841539",
    "miLado": "visitante",
