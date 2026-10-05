@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-04T23:07:55.202Z",
+ "actualizado": "2026-10-05T04:43:35.320Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,8 +11,8 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 13,
-   "proximos": 6
+   "total": 15,
+   "proximos": 8
   },
   {
    "id": "argentina",
@@ -23,8 +23,8 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 5,
-   "proximos": 0
+   "total": 3,
+   "proximos": 1
   },
   {
    "id": "intermiami",
@@ -48,7 +48,7 @@
    "ruta": "rugby",
    "liga": "289234",
    "total": 2,
-   "proximos": 0
+   "proximos": 1
   },
   {
    "id": "f1",
@@ -76,94 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-703953",
-   "miLado": "local",
-   "idEspn": "703953",
-   "liga": "conmebol.america",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Argentina vs Colombia",
-   "inicio": "2024-07-15T01:15Z",
-   "horaConfirmada": true,
-   "competicion": "Copa América",
-   "sede": "Hard Rock Stadium",
-   "local": "Argentina",
-   "visitante": "Colombia",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-684665",
-   "miLado": "visitante",
-   "idEspn": "684665",
-   "liga": "fifa.worldq.conmebol",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Ecuador vs Argentina",
-   "inicio": "2025-09-09T23:00Z",
-   "horaConfirmada": true,
-   "competicion": "FIFA World Cup Qualifying - CONMEBOL",
-   "sede": "Estadio Banco Pichincha",
-   "local": "Ecuador",
-   "visitante": "Argentina",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
-  {
-   "id": "espn-603129",
-   "miLado": "local",
-   "idEspn": "603129",
-   "liga": "244293",
-   "ruta": "rugby",
-   "feedId": "pumas",
-   "feedLabel": "Los Pumas",
-   "sport": "rugby",
-   "emoji": "🏉",
-   "titulo": "Argentina vs South Africa",
-   "inicio": "2025-10-04T13:00Z",
-   "horaConfirmada": true,
-   "competicion": "The Rugby Championship",
-   "sede": "Allianz Stadium",
-   "local": "Argentina",
-   "visitante": "South Africa",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/5.png",
-   "finalizado": true,
-   "marcador": "27 - 29"
-  },
-  {
-   "id": "espn-760517",
-   "miLado": "visitante",
-   "idEspn": "760517",
-   "liga": "fifa.world",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Spain vs Argentina",
-   "inicio": "2026-07-19T19:00Z",
-   "horaConfirmada": true,
-   "competicion": "FIFA World Cup",
-   "sede": "MetLife Stadium",
-   "local": "Spain",
-   "visitante": "Argentina",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
@@ -465,8 +377,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 1"
   },
   {
    "id": "espn-401901377",
@@ -553,8 +465,8 @@
    "visitante": "San Diego FC",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",
@@ -661,8 +573,8 @@
    "visitante": "Inter Miami CF",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 1"
   },
   {
    "id": "espn-401921545",
@@ -705,8 +617,8 @@
    "visitante": "Unión (Santa Fe)",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "3 - 0"
   },
   {
    "feedId": "f1",
@@ -770,8 +682,8 @@
    "visitante": "Burkina Faso",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bka.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "7 - 0"
   },
   {
    "feedId": "f1",
@@ -793,6 +705,50 @@
    "sesion": "Carrera",
    "titulo": "GP Bahrain Grand Prix in Malaysia",
    "inicio": "2026-10-04T07:00:00.000Z"
+  },
+  {
+   "id": "espn-401921408",
+   "miLado": "local",
+   "idEspn": "401921408",
+   "liga": "fifa.friendly",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Argentina vs Benin",
+   "inicio": "2026-10-06T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "International Friendly",
+   "sede": "Estadio Más Monumental",
+   "local": "Argentina",
+   "visitante": "Benin",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ben.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401841607",
+   "miLado": "visitante",
+   "idEspn": "401841607",
+   "liga": "arg.1",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Instituto (Córdoba) vs Boca Juniors",
+   "inicio": "2026-10-09T22:30Z",
+   "horaConfirmada": true,
+   "competicion": "Argentine Liga Profesional de Fútbol",
+   "sede": "Monumental Presidente Perón",
+   "local": "Instituto (Córdoba)",
+   "visitante": "Boca Juniors",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "finalizado": false,
+   "marcador": null
   },
   {
    "feedId": "f1",
@@ -900,28 +856,6 @@
    "sesion": "Carrera",
    "titulo": "GP Singapore",
    "inicio": "2026-10-11T12:00:00.000Z"
-  },
-  {
-   "id": "espn-401841607",
-   "miLado": "visitante",
-   "idEspn": "401841607",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Instituto (Córdoba) vs Boca Juniors",
-   "inicio": "2026-10-11T18:00Z",
-   "horaConfirmada": false,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Monumental Presidente Perón",
-   "local": "Instituto (Córdoba)",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
   },
   {
    "id": "espn-401913958",
@@ -1034,6 +968,28 @@
    "marcador": null
   },
   {
+   "id": "espn-401913957",
+   "miLado": "visitante",
+   "idEspn": "401913957",
+   "liga": "conmebol.sudamericana",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Vasco da Gama vs Boca Juniors",
+   "inicio": "2026-10-21T00:30Z",
+   "horaConfirmada": true,
+   "competicion": "CONMEBOL Sudamericana",
+   "sede": "",
+   "local": "Vasco da Gama",
+   "visitante": "Boca Juniors",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-600061267",
    "miLado": null,
    "idEspn": "600061267",
@@ -1090,7 +1046,7 @@
    "inicio": "2026-10-24T21:30Z",
    "horaConfirmada": true,
    "competicion": "MLS",
-   "sede": "Red Bull Arena",
+   "sede": "Sports Illustrated Stadium",
    "local": "Red Bull New York",
    "visitante": "Inter Miami CF",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
@@ -1260,7 +1216,7 @@
    "sport": "futbol",
    "emoji": "🩷",
    "titulo": "New England Revolution vs Inter Miami CF",
-   "inicio": "2026-11-01T23:00Z",
+   "inicio": "2026-11-02T00:00Z",
    "horaConfirmada": true,
    "competicion": "MLS",
    "sede": "Gillette Stadium",
@@ -1376,6 +1332,28 @@
    "visitante": "Defensa y Justicia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401926286",
+   "miLado": "visitante",
+   "idEspn": "401926286",
+   "liga": "arg.copa",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Banfield vs Boca Juniors",
+   "inicio": "2026-11-14T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "Copa Argentina",
+   "sede": "",
+   "local": "Banfield",
+   "visitante": "Boca Juniors",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "finalizado": false,
    "marcador": null
   },
@@ -1568,6 +1546,28 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-603510",
+   "miLado": "local",
+   "idEspn": "603510",
+   "liga": "164205",
+   "ruta": "rugby",
+   "feedId": "pumas",
+   "feedLabel": "Los Pumas",
+   "sport": "rugby",
+   "emoji": "🏉",
+   "titulo": "Argentina vs Canada",
+   "inicio": "2027-10-04T08:45Z",
+   "horaConfirmada": true,
+   "competicion": "Rugby World Cup",
+   "sede": "Suncorp Stadium",
+   "local": "Argentina",
+   "visitante": "Canada",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25.png",
    "finalizado": false,
    "marcador": null
   }
