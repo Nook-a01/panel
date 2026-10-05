@@ -17,6 +17,7 @@
 import webpush from "web-push";
 import { readFileSync, existsSync } from "node:fs";
 import { CONFIG } from "../config.mjs";
+import { suscripciones } from "./lib/suscripciones.mjs";
 
 const DRY = process.argv.includes("--dry-run");
 const WORKER = "https://plata.hamcqc.workers.dev";
@@ -28,13 +29,6 @@ function credenciales() {
   const f = new URL("../.vapid.json", import.meta.url);
   if (existsSync(f)) return JSON.parse(readFileSync(f, "utf8"));
   return null;
-}
-function suscripciones() {
-  const crudo = process.env.PUSH_SUBSCRIPTION;
-  if (crudo) { const v = JSON.parse(crudo); return Array.isArray(v) ? v : [v]; }
-  const f = new URL("../.subscriptions.json", import.meta.url);
-  if (existsSync(f)) { const v = JSON.parse(readFileSync(f, "utf8")); return Array.isArray(v) ? v : [v]; }
-  return [];
 }
 
 /* ---------- fechas en tu zona, no en la del servidor de GitHub ---------- */
@@ -159,7 +153,9 @@ const payload = {
 
 if (DRY) { console.log("[dry-run] " + payload.title + " — " + payload.body); return 0; }
 
-const subs = suscripciones();
+// Mismas suscripciones que Deportes: las del Worker, con el secreto como
+// respaldo. Antes un PUSH_SUBSCRIPTION mal pegado tiraba el resumen entero.
+const subs = await suscripciones();
 if (!subs.length) { console.log("· Nadie suscrito todavía; no hay a quién avisar."); return 0; }
 
 webpush.setVapidDetails(CONFIG.contacto, vapid.publicKey, vapid.privateKey);
