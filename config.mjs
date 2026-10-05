@@ -57,7 +57,7 @@ export const CONFIG = {
       escudo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/countries/500/arg.png&h=120&w=120",
       activo: true,
       source: "espn-soccer",
-      leagues: ["fifa.world", "fifa.friendly", "fifa.worldq.conmebol", "conmebol.america", "fifa.finalissima"],
+      leagues: ["fifa.world", "fifa.friendly", "fifa.worldq.conmebol", "conmebol.america"],
       matchTeamId: "202",
       matchName: /\bargentina\b/i,
     },

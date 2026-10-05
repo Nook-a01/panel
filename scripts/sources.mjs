@@ -6,7 +6,9 @@ async function getJSON(url, { retries = 2 } = {}) {
   for (let i = 0; i <= retries; i++) {
     try {
       const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(20000) });
-      if (r.status === 404 || r.status === 400) return null; // liga inexistente: se ignora
+      if (r.status === 404) return null; // liga inexistente: se ignora
+      // Un 400 es una consulta que ESPN dejó de aceptar: que se vea en el log.
+      if (r.status === 400) { console.warn(`   ! ESPN rechazó ${url.slice(0, 110)} (HTTP 400)`); return null; }
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return await r.json();
     } catch (e) {
@@ -98,8 +100,12 @@ async function fetchESPN(feed, desde, hasta, deporteRuta, log = console.log) {
     // Las copas chicas (Campeones Cup) responden 403 al pedido por rango de
     // fechas. Si ningún mes contestó, se pide la liga sin fechas: devuelve lo
     // actual y lo próximo, que para una copa de un partido alcanza.
-    const pedidos = monthChunks(desde, hasta).map(([a, b]) =>
-      `${ESPN}/${deporteRuta}/${liga}/scoreboard?dates=${yyyymmdd(a)}-${yyyymmdd(b)}&limit=500`);
+    // Desde fines de septiembre de 2026 ESPN responde 400 a los rangos
+    // ("20261001-20261031") en fútbol y rugby, y getJSON lo tomaba como
+    // liga inexistente: el calendario quedaba vacío sin avisar. El mes
+    // entero ("202610") sí funciona.
+    const pedidos = monthChunks(desde, hasta).map(([a]) =>
+      `${ESPN}/${deporteRuta}/${liga}/scoreboard?dates=${yyyymmdd(a).slice(0, 6)}&limit=500`);
     const respuestas = [];
     for (const url of pedidos) respuestas.push(await getJSON(url));
     if (respuestas.every(d => !d)) {
@@ -109,6 +115,9 @@ async function fetchESPN(feed, desde, hasta, deporteRuta, log = console.log) {
       if (!d?.events) continue;
       const ligaNombre = d.leagues?.[0]?.name || liga;
       for (const ev of d.events) {
+        // El mes completo puede pasarse de la ventana pedida en las puntas.
+        const t = new Date(ev.date);
+        if (t < desde || t > hasta) continue;
         // UFC: nos interesan todos los eventos, no un "equipo"
         // Algunos feeds descartan eventos por su nombre (ver excluirTitulo).
         if (feed.excluirTitulo && feed.excluirTitulo.test(ev.name || "")) continue;
