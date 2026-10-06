@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-05T18:25:44.814Z",
+ "actualizado": "2026-10-06T00:48:07.690Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 15,
+   "total": 14,
    "proximos": 8
   },
   {
@@ -47,7 +47,7 @@
    "color": "#38d0ff",
    "ruta": "rugby",
    "liga": "289234",
-   "total": 2,
+   "total": 1,
    "proximos": 1
   },
   {
@@ -76,50 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841539",
-   "miLado": "visitante",
-   "idEspn": "401841539",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Gimnasia (Mendoza) vs Boca Juniors",
-   "inicio": "2026-09-05T19:30Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Estadio Víctor Antonio Legrotaglie",
-   "local": "Gimnasia (Mendoza)",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
-  },
-  {
-   "id": "espn-603461",
-   "miLado": "local",
-   "idEspn": "603461",
-   "liga": "289234",
-   "ruta": "rugby",
-   "feedId": "pumas",
-   "feedLabel": "Los Pumas",
-   "sport": "rugby",
-   "emoji": "🏉",
-   "titulo": "Argentina vs Australia",
-   "inicio": "2026-09-05T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "International Test Match",
-   "sede": "Estadio Malvinas Argentinas",
-   "local": "Argentina",
-   "visitante": "Australia",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/6.png",
-   "finalizado": true,
-   "marcador": "28 - 28"
-  },
   {
    "id": "espn-761777",
    "miLado": "local",
