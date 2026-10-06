@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "19";
+  var ESTA = "20";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -3174,6 +3174,8 @@ async function mpTraer(silencioso){
   // $4.000) son rarísimos comparados con el daño de duplicar un mes entero.
   const huella = m => m.fecha + '|' + (Number(m.monto)||0) + '|' + (m.detalle || m.desc || '');
   const yaPorHuella = new Set(S.movs.filter(m=> m.srcTipo==='mp').map(huella));
+  // Al unir, el fijo se queda con la fecha y el monto exactos del pago.
+  const yaUnidos = new Set(S.movs.filter(m=> m.mpSrc).map(m=> m.tipo + '|' + m.fecha + '|' + (Number(m.monto)||0)));
 
   // Los pagos con la tarjeta de crédito de la madre llegan como "Mastercard
   // crédito": no salen de su saldo, se descuentan de la plata que ella le pasa
@@ -3187,6 +3189,10 @@ async function mpTraer(silencioso){
   (d.movimientos||[]).forEach(m=>{
     const src = 'mp:' + m.id;
     const medio = medioDe(m);
+    // Mercado Pago le da dos códigos distintos al mismo movimiento (uno en
+    // Inicio y otro en Actividad). Si ya está unido a un fijo con uno de los
+    // dos, el otro no tiene que volver a entrar como movimiento aparte.
+    if(yaUnidos.has(m.tipo + '|' + m.fecha + '|' + (Number(m.monto)||0))) return;
     if(yaEstan.has(src) || yaPorHuella.has(huella(m))){
       // Hasta la versión 1.5 del lector no llegaba el medio de pago y todo
       // entraba como saldo. Cuando el lector lo vuelve a ver, se corrige.
