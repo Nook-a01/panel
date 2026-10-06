@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "20";
+  var ESTA = "21";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -3312,7 +3312,9 @@ function cruzarConMP(){
   // Mercado Pago quedaba "por cobrar" y el número de Hoy lo contaba dos veces.
   const pendientes = delMes.filter(m => !confirmado(m)
     && (m.srcTipo==='fijo' || m.srcTipo==='cuota'));
-  const pagos = delMes.filter(m => m.srcTipo==='mp' && confirmado(m));
+  // Guardar plata en una reserva de Mercado Pago no es pagar: si la reserva
+  // se llama como el fijo ("Psicólogo"), se unía y el fijo quedaba pagado.
+  const pagos = delMes.filter(m => m.srcTipo==='mp' && confirmado(m) && !esNoGasto(m.catId));
   if(!pendientes.length || !pagos.length) return [];
 
   // Sólo por monto se unían cosas que no tenían nada que ver: una suscripción
