@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-06T00:48:07.690Z",
+ "actualizado": "2026-10-06T07:33:01.167Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -1185,8 +1184,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1862,8 +1862,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Matias_Galarza_France_v_Paraguay_4_July_2026-193.jpg/330px-Matias_Galarza_France_v_Paraguay_4_July_2026-193.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "406938",
@@ -2344,9 +2345,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,

@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-06T00:48:07.690Z",
+ "actualizado": "2026-10-06T07:33:01.167Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 13,
+   "total": 12,
    "proximos": 7
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761777",
-   "miLado": "local",
-   "idEspn": "761777",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs Atlanta United FC",
-   "inicio": "2026-09-06T01:05Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "Atlanta United FC",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
