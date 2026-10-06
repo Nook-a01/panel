@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300" width="900" height="1300" preserveAspectRatio="xMidYMid slice">
-<rect x="186" y="430" width="528" height="268" fill="#FF9A4D" opacity="0.45" rx="8"/>
-<rect x="202" y="446" width="496" height="236" fill="#FF6A33" opacity="0.3" rx="5"/>
-<ellipse cx="450" cy="564" rx="84" ry="98" fill="#FF6A33" opacity="0.5"/>
-<ellipse cx="450" cy="564" rx="62" ry="76" fill="#FF9A4D" opacity="0.62"/>
-<rect x="224" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="670" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="239" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="655" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="254" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="640" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="269" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="625" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="284" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="610" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="299" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="595" y="486" width="6" height="156" fill="#FF6A33" opacity="0.45"/>
-<rect x="220" y="464" width="20" height="20" fill="#FF6A33" opacity="0.75"/>
-<rect x="660" y="644" width="20" height="20" fill="#FF6A33" opacity="0.75"/>
-<ellipse cx="618" cy="890" rx="86" ry="24" fill="#FF9A4D" opacity="0.4"/>
-<ellipse cx="618" cy="884" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<ellipse cx="618" cy="866" rx="86" ry="24" fill="#FF9A4D" opacity="0.47"/>
-<ellipse cx="618" cy="860" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<ellipse cx="618" cy="842" rx="86" ry="24" fill="#FF9A4D" opacity="0.54"/>
-<ellipse cx="618" cy="836" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<ellipse cx="618" cy="818" rx="86" ry="24" fill="#FF9A4D" opacity="0.61"/>
-<ellipse cx="618" cy="812" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<ellipse cx="618" cy="794" rx="86" ry="24" fill="#FF9A4D" opacity="0.68"/>
-<ellipse cx="618" cy="788" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<ellipse cx="618" cy="770" rx="86" ry="24" fill="#FF9A4D" opacity="0.75"/>
-<ellipse cx="618" cy="764" rx="86" ry="24" fill="#FF6A33" opacity="0.26"/>
-<circle cx="282" cy="830" r="74" fill="#FF9A4D" opacity="0.45"/>
-<circle cx="282" cy="830" r="52" fill="#FF6A33" opacity="0.4"/>
-<circle cx="282" cy="830" r="26" fill="#FF9A4D" opacity="0.5"/>
+<rect x="186" y="430" width="528" height="268" fill="#FFD23F" opacity="0.45" rx="8"/>
+<rect x="202" y="446" width="496" height="236" fill="#86A2C9" opacity="0.3" rx="5"/>
+<ellipse cx="450" cy="564" rx="84" ry="98" fill="#86A2C9" opacity="0.5"/>
+<ellipse cx="450" cy="564" rx="62" ry="76" fill="#FFD23F" opacity="0.62"/>
+<rect x="224" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="670" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="239" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="655" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="254" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="640" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="269" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="625" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="284" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="610" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="299" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="595" y="486" width="6" height="156" fill="#86A2C9" opacity="0.45"/>
+<rect x="220" y="464" width="20" height="20" fill="#86A2C9" opacity="0.75"/>
+<rect x="660" y="644" width="20" height="20" fill="#86A2C9" opacity="0.75"/>
+<ellipse cx="618" cy="890" rx="86" ry="24" fill="#FFD23F" opacity="0.4"/>
+<ellipse cx="618" cy="884" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<ellipse cx="618" cy="866" rx="86" ry="24" fill="#FFD23F" opacity="0.47"/>
+<ellipse cx="618" cy="860" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<ellipse cx="618" cy="842" rx="86" ry="24" fill="#FFD23F" opacity="0.54"/>
+<ellipse cx="618" cy="836" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<ellipse cx="618" cy="818" rx="86" ry="24" fill="#FFD23F" opacity="0.61"/>
+<ellipse cx="618" cy="812" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<ellipse cx="618" cy="794" rx="86" ry="24" fill="#FFD23F" opacity="0.68"/>
+<ellipse cx="618" cy="788" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<ellipse cx="618" cy="770" rx="86" ry="24" fill="#FFD23F" opacity="0.75"/>
+<ellipse cx="618" cy="764" rx="86" ry="24" fill="#86A2C9" opacity="0.26"/>
+<circle cx="282" cy="830" r="74" fill="#FFD23F" opacity="0.45"/>
+<circle cx="282" cy="830" r="52" fill="#86A2C9" opacity="0.4"/>
+<circle cx="282" cy="830" r="26" fill="#FFD23F" opacity="0.5"/>
 </svg>

@@ -404,9 +404,12 @@ body{
    Si cada una fuera distinta también por fuera, esto dejaría de
    leerse como un panel y pasaría a ser cinco cosas amontonadas.
 
-   Las que todavía no tienen su página rediseñada no llevan piel
-   propia: se la ponemos el día que le toque a su app, y así no hay
-   que pintarlas dos veces.
+   Lo que las mantiene en armonía, además del esqueleto: todas son
+   oscuras y saturadas (Campamento entra por su portada azul, no por
+   el papel), todas tienen las mismas esquinas redondeadas de 14 px y
+   las mismas pastillas, ninguna usa sombra que se salga de su caja, y
+   cada una tiene un solo acento fuerte. La forma es del panel; el
+   color, la letra y la textura son de cada app.
    ══════════════════════════════════════════════════════════════════ */
 
 .tira .filete{
@@ -414,39 +417,115 @@ body{
   display:none;
 }
 
-/* ── 02 · PLATA EN MANO ──────────────────────────────────────────
-   La app es fuego sobre carbón y una tarjeta de vidrio esmerilado.
-   Acá el fuego entra por el ángulo de arriba a la derecha, igual que
-   en la página, y el vidrio es un brillo que cruza toda la baldosa:
-   una tarjeta de verdad, en el teléfono, le pisaría el texto. */
-.tira[data-lado="plata"]{
-  border-radius:18px;
-  background:
-    radial-gradient(120% 150% at 88% 6%, rgba(255,122,47,.30), transparent 60%),
-    radial-gradient(100% 130% at 4% 104%, rgba(142,26,12,.48), transparent 68%),
-    var(--fondo);
+/* ── 01 · DEPORTES ───────────────────────────────────────────────
+   La app es una sala de arcade: negro violeta, Press Start 2P con la
+   sombra doble magenta y cian del logo, VT323 para los datos, marcos
+   gruesos y scanlines. La sombra corrida de las fichas no se copia
+   tal cual porque pisaría a la baldosa de abajo; va como bisel
+   adentro del marco. */
+.tira[data-lado="deportes"]{
+  border:3px solid var(--texto);
+  box-shadow:inset -4px -4px 0 rgba(255,0,200,.35), inset 4px 4px 0 rgba(0,255,240,.18);
 }
-.tira[data-lado="plata"] h2{
-  font-family:'Space Grotesk','Archivo',system-ui,sans-serif;
-  font-weight:500;
-  letter-spacing:-.032em;
+.tira[data-lado="deportes"]::after{ width:0 }
+.tira[data-lado="deportes"] h2{
+  font-family:'Press Start 2P','Courier New',monospace;
+  font-weight:400;
+  font-size:clamp(1rem, 3.6vw, 1.45rem);
+  line-height:1.35;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  text-shadow:2px 2px 0 #ff00c8, 4px 4px 0 #00fff0;
+  margin-bottom:.6rem;
 }
-.tira[data-lado="plata"] .mini{ border-radius:100px }
-/* El vidrio esmerilado, cruzando toda la baldosa. */
-.tira[data-lado="plata"] .filete{
+.tira[data-lado="deportes"] .vivo{
+  font-family:'VT323','Courier New',monospace;
+  font-size:1.1rem;
+  letter-spacing:.04em;
+}
+.tira[data-lado="deportes"] .num{ font-family:'VT323',monospace; font-size:1rem; letter-spacing:.08em }
+/* Las scanlines del monitor, igual que en la página. */
+.tira[data-lado="deportes"] .filete{
   display:block;
-  border-top:1px solid rgba(255,255,255,.15);
-  border-radius:18px 18px 0 0;
-  background:linear-gradient(152deg,
-    rgba(255,255,255,.11) 0%, rgba(255,255,255,.025) 36%, transparent 58%);
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.28) 0 1px, transparent 1px 3px);
+  mix-blend-mode:multiply;
 }
 
+/* ── 02 · PLATA EN MANO ──────────────────────────────────────────
+   La app pasó a ser un plano de ingeniería: azul noche, cuadrícula
+   fina, JetBrains Mono en versales con el cursor "_" y un amarillo
+   de marcador como único acento. Las esquinas son las marcas de
+   corte de un plano impreso. */
+.tira[data-lado="plata"]{
+  border:1px solid #335A8C;
+  background:
+    linear-gradient(rgba(134,162,201,.08) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(134,162,201,.08) 1px, transparent 1px) 0 0 / 22px 22px,
+    var(--fondo);
+}
+.tira[data-lado="plata"]::after{ width:0 }
+.tira[data-lado="plata"] h2{
+  font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  font-weight:800;
+  font-size:clamp(1.15rem, 4.4vw, 1.9rem);
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.tira[data-lado="plata"] h2::after{
+  content:"_";
+  color:var(--t);
+  animation:cursor 1.1s steps(1) infinite;
+}
+@keyframes cursor{ 50%{ opacity:0 } }
+.tira[data-lado="plata"] .vivo{ font-family:'JetBrains Mono',ui-monospace,monospace }
+.tira[data-lado="plata"] .filete{
+  display:block; inset:10px;
+  --m:var(--t);
+  background:
+    linear-gradient(var(--m),var(--m)) 0 0 / 12px 2px,
+    linear-gradient(var(--m),var(--m)) 0 0 / 2px 12px,
+    linear-gradient(var(--m),var(--m)) 100% 0 / 12px 2px,
+    linear-gradient(var(--m),var(--m)) 100% 0 / 2px 12px,
+    linear-gradient(var(--m),var(--m)) 0 100% / 12px 2px,
+    linear-gradient(var(--m),var(--m)) 0 100% / 2px 12px,
+    linear-gradient(var(--m),var(--m)) 100% 100% / 12px 2px,
+    linear-gradient(var(--m),var(--m)) 100% 100% / 2px 12px;
+  background-repeat:no-repeat;
+  opacity:.7;
+}
+
+/* ── 03 · INSTAGRAM ──────────────────────────────────────────────
+   La baldosa lleva al Tablero, no a Instagram: casi negro, Archivo
+   negra en versales con el cuadrado ácido adelante y todo lo demás
+   en mono. El cian es el segundo color del tablero; acá sólo entra
+   en el barrido, para no confundirse con el verde de Estudio. */
+.tira[data-lado="instagram"]{
+  border:1px solid #14222e;
+  background:
+    linear-gradient(90deg, rgba(77,227,255,.05) 1px, transparent 1px) 0 0 / 48px 100%,
+    var(--fondo);
+}
+.tira[data-lado="instagram"]::after{ width:0 }
+.tira[data-lado="instagram"] h2{
+  font-weight:900;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+  display:flex; align-items:center; gap:.32em;
+}
+.tira[data-lado="instagram"] h2::before{
+  content:"";
+  flex:none;
+  width:.42em; height:.42em;
+  background:var(--t);
+  box-shadow:0 0 0 .1em #04060a, 0 0 0 .16em var(--t), 0 0 14px rgba(204,255,0,.45);
+}
+.tira[data-lado="instagram"] .que{ font-family:var(--mono); font-size:clamp(.72rem, 2.3vw, .82rem) }
+
 /* ── 05 · ESTUDIO ────────────────────────────────────────────────
-   La app es un afiche: marco blanco, esquinas duras y Anton. La
-   barrita de color de la izquierda se saca, porque lo que identifica
-   a esta baldosa es el marco. */
+   La app es un afiche: marco blanco y Anton. Las esquinas siguen las
+   del resto del panel. La barrita de color de la izquierda se saca,
+   porque lo que identifica a esta baldosa es el marco. */
 .tira[data-lado="musica"]{
-  border-radius:0;
   border:2px solid #F4F4F4;
   background:#000;
 }
@@ -457,7 +536,6 @@ body{
   text-transform:uppercase;
 }
 .tira[data-lado="musica"] .num{ letter-spacing:.2em; color:#8A8A8A }
-.tira[data-lado="musica"] .mini{ border-radius:0 }
 .tira[data-lado="musica"]::after{ width:0 }
 /* La rejilla del dembow, abajo de todo: el bombo cada cuatro tiempos
    en verde y el hi-hat en cada corchea, apenas. Es el mismo patrón
@@ -471,14 +549,11 @@ body{
 }
 
 /* ── 04 · CAMPAMENTO ─────────────────────────────────────────────
-   La app es una revista: papel, condensada en versales y azul, rojo
-   y amarillo plenos. Es la única baldosa clara del panel, y eso está
-   bien: su página también es la única clara. El velo del dibujo se
-   invierte —acá el papel es el fondo, no la tinta— y el dibujo va
-   mucho más tenue, porque sobre claro cualquier trazo grita. */
+   La app es una revista que abre con una portada azul plena, título
+   en condensada blanca y amarillo. La baldosa toma esa portada y no
+   el papel de adentro: una tira blanca en medio de cuatro oscuras
+   rompía el conjunto. Abajo, la franja de colores de la página. */
 .tira[data-lado="campamento"]{
-  border-radius:0;
-  border:2px solid var(--texto);
   background:var(--fondo);
 }
 .tira[data-lado="campamento"] h2{
@@ -489,12 +564,10 @@ body{
   text-transform:uppercase;
 }
 .tira[data-lado="campamento"] .num{letter-spacing:.2em}
-.tira[data-lado="campamento"] .mini{border-radius:0}
-/* La barrita de la izquierda se va: el marco es lo que identifica. */
 .tira[data-lado="campamento"]::after{width:0}
-/* Los cuatro colores de las cuatro semanas, como en la app. */
+/* La franja roja de la página y los colores de la portada. */
 .tira[data-lado="campamento"] .filete{
   display:block; top:auto; height:7px;
   background:linear-gradient(90deg,
-    var(--t) 0 25%, var(--t2) 25% 50%, #FFD12E 50% 75%, var(--texto) 75% 100%);
+    var(--t2) 0 50%, var(--t) 50% 75%, var(--texto) 75% 100%);
 }
