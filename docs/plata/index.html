@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "18";
+  var ESTA = "19";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -3309,25 +3309,47 @@ function cruzarConMP(){
   const pagos = delMes.filter(m => m.srcTipo==='mp' && confirmado(m));
   if(!pendientes.length || !pagos.length) return [];
 
+  // Sólo por monto se unían cosas que no tenían nada que ver: una suscripción
+  // con una transferencia a un comercio que justo costó parecido, o con una
+  // recarga del mismo monto, y ese pago desaparecía de la lista. Ahora:
+  // · si el nombre coincide (Edesur con Edesur), se acepta aunque el monto
+  //   haya cambiado bastante, como pasa con los servicios todos los meses;
+  // · si el nombre no dice nada (el alquiler se transfiere a una persona),
+  //   tiene que ser casi el mismo monto y no uno chico, que se repite seguido.
   const usados = new Set(), cruces = [];
   pendientes.forEach(p => {
     const monto = Number(p.monto)||0;
-    // Un servicio nunca sale igual dos meses seguidos: se tolera un 1%, con un
-    // piso de $500 para que los montos chicos no queden afuera por monedas.
-    const margen = Math.max(500, monto * 0.01);
     let mejor = null;
     pagos.forEach(g => {
       if(usados.has(g.id) || g.tipo !== p.tipo) return;
       const dif = Math.abs((Number(g.monto)||0) - monto);
-      if(dif > margen) return;
       const dias = Math.abs(diasEntreISO(g.fecha, p.fecha));
-      if(dias > MP_DIAS_MARGEN) return;
-      if(!mejor || dif < mejor.dif || (dif === mejor.dif && dias < mejor.dias))
-        mejor = {pago:g, dif, dias};
+      const nombre = nombreParecido(p.desc, g.desc);
+      if(nombre){
+        if(dif > Math.max(500, monto * 0.35) || dias > MP_DIAS_NOMBRE) return;
+      } else {
+        if(monto < MP_MONTO_SIN_NOMBRE || dif > monto * 0.01 || dias > MP_DIAS_MARGEN) return;
+      }
+      // Gana el que coincide en nombre; entre iguales, el monto más parecido.
+      const puntos = (nombre ? 0 : 1e12) + dif * 100 + dias;
+      if(!mejor || puntos < mejor.puntos) mejor = {pago:g, dif, dias, puntos};
     });
     if(mejor){ usados.add(mejor.pago.id); cruces.push({fijo:p, pago:mejor.pago, dias:mejor.dias}); }
   });
   return cruces;
+}
+
+const MP_DIAS_NOMBRE = 20;
+const MP_MONTO_SIN_NOMBRE = 15000;
+// Palabras que aparecen en muchos movimientos y no dicen de quién es el pago.
+const PALABRAS_VACIAS = new Set(['pago','pagos','transferencia','enviada','recibida','dinero',
+  'cuota','cuotas','sesiones','mercado','libre','servicio','compra','online','tienda','fisica']);
+function nombreParecido(a, b){
+  const pal = s => new Set(norm(s).replace(/[^a-z0-9 ]/g,' ').split(/\s+/)
+    .filter(w => w.length >= 4 && !/^\d+$/.test(w) && !PALABRAS_VACIAS.has(w)));
+  const A = pal(a), B = pal(b);
+  for(const w of A) if(B.has(w)) return true;
+  return false;
 }
 
 function renderMpCruces(){
