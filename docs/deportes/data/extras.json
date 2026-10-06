@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-06T07:33:01.167Z",
+ "actualizado": "2026-10-06T15:09:43.890Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1184,9 +1185,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1288,6 +1288,48 @@
    ],
    "noticias": [
     {
+     "titulo": "Ogden: Haaland will not be at Manchester City next season",
+     "resumen": "Ogden: Haaland will not be at Manchester City next season",
+     "fecha": "2026-10-06T14:48:36Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Ogden_Haaland_will_not_be_at_Manchester_City_next_season/dm_261006_Ogden_Haaland_will_not_be_at_Manchester_City_next_season.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50117025/haaland-not-manchester-city-next-season"
+    },
+    {
+     "titulo": "Why Pochettino 'celebrates' coaches like Jesse Marsch",
+     "resumen": "Why Pochettino 'celebrates' coaches like Jesse Marsch",
+     "fecha": "2026-10-06T13:47:15Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Why_Pochettino_celebrates_coaches_like_Jesse_Marsch/dm_261006_Why_Pochettino_celebrates_coaches_like_Jesse_Marsch.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50116628/why-pochettino-celebrates-coaches-jesse-marsch"
+    },
+    {
+     "titulo": "Nigeria considers FIFA compensation claim after DR Congo eligibility revelations",
+     "resumen": "A top Nigerian National Sports Commission official says Nigeria have been vindicated over their challenge to DR Congo's use of ineligible players in World Cup qualifying.",
+     "fecha": "2026-10-06T11:59:21Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0604/r1502303_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50115954/nigeria-considers-fifa-compensation-claim-dr-congo-eligibility-revelations"
+    },
+    {
+     "titulo": "Who will come out on top in the heated rivalry between USMNT and Canada?",
+     "resumen": "Who will come out on top in the heated rivalry between USMNT and Canada?",
+     "fecha": "2026-10-06T09:59:08Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_COM_SOC_Analysis_Who_will_come_out_on_top_in_the_heated_rivalry_between_USMNT_and_Canad3F_GLOBAL_2/dm_261006_COM_SOC_Analysis_Who_will_come_out_on_top_in_the_heated_rivalry_between_USMNT_and_Canad3F_GLOBAL_2.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50115629/who-come-top-heated-rivalry-usmnt-canada"
+    },
+    {
+     "titulo": "How emotional will Messi's last game for Argentina be for the fans?",
+     "resumen": "How emotional will Messi's last game for Argentina be for the fans?",
+     "fecha": "2026-10-06T09:58:11Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_COM_SOC_Analysis_How_emotional_will_MessiE28099s_last_game_for_Argentina_be_for_the_fans3F__GLOBAL_2026-/dm_261006_COM_SOC_Analysis_How_emotional_will_MessiE28099s_last_game_for_Argentina_be_for_the_fans3F__GLOBAL_2026-.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50115628/how-emotional-messi-last-game-argentina-fans"
+    },
+    {
+     "titulo": "How far can USMNT's Cavan Sullivan go?",
+     "resumen": "How far can USMNT's Cavan Sullivan go?",
+     "fecha": "2026-10-06T09:57:13Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_COM_SOC_Analysis__How_far_can_USMNTE28099s_Cavan_Sullivan_go3F_GLOBAL_2026-10-06/dm_261006_COM_SOC_Analysis__How_far_can_USMNTE28099s_Cavan_Sullivan_go3F_GLOBAL_2026-10-06.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50115630/how-far-usmnt-cavan-sullivan-go"
+    },
+    {
      "titulo": "Was Marsch right about Balogun's red card turning fans against the USMNT?",
      "resumen": "Was Marsch right about Balogun's red card turning fans against the USMNT?",
      "fecha": "2026-10-05T22:16:36Z",
@@ -1295,32 +1337,11 @@
      "link": "https://www.espn.com/video/clip/_/id/50112454/was-marsch-right-balogun-red-card-turning-fans-usmnt"
     },
     {
-     "titulo": "Tuchel: There are no words left to describe Kane",
-     "resumen": "Tuchel: There are no words left to describe Kane",
-     "fecha": "2026-10-05T13:50:37Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1005/dm_261005_Tuchel_There_are_no_words_left_to_describe_Kane/dm_261005_Tuchel_There_are_no_words_left_to_describe_Kane.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50109199/there-no-words-left-describe-kane"
-    },
-    {
-     "titulo": "Lionel Messi's special kit for final Argentina match unveiled",
-     "resumen": "Lionel Messi will wear a special jersey for his final Argentina match before he retires from international soccer, and it's a shirt worthy of the occasion.",
-     "fecha": "2026-10-05T09:43:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0925/r1721590_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50026144/lionel-messi-special-kit-final-argentina-match-unveiled"
-    },
-    {
      "titulo": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
      "resumen": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
      "fecha": "2026-10-04T22:20:03Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50104524/usmnt-vs-canada-more-just-match-jesse-marsch"
-    },
-    {
-     "titulo": "Jones: Sullivan and USMNT youngsters have nothing to lose, plenty to learn",
-     "resumen": "Jones: Sullivan and USMNT youngsters have nothing to lose, plenty to learn",
-     "fecha": "2026-10-04T22:19:50Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_SOC_ANALYSIS_Jones_Sullivan_and_USMNT_youngsters_have_nothing_to_lose_plenty_to_learn_2026_1/dm_261004_COM_SOC_ANALYSIS_Jones_Sullivan_and_USMNT_youngsters_have_nothing_to_lose_plenty_to_learn_2026_1.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50104452/sullivan-usmnt-youngsters-lose-plenty-learn"
     },
     {
      "titulo": "Scaloni: Messi's final Argentina match will be unforgettable",
@@ -1344,25 +1365,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50098546/afc-introduce-nations-league-shake-world-cup-asian-cup-qualification"
     },
     {
-     "titulo": "Márquez bemoans 'terrible mistakes' as Mexico humbled by USMNT",
-     "resumen": "Mexico national team coach Rafael Márquez says his players practically gifted the goals to the United States in a 3-0 loss on Saturday night at State Farm Stadium outside Phoenix.",
-     "fecha": "2026-10-04T05:45:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725631_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50097676/mexico-usa-rafael-marquez-coach-2026-friendly"
-    },
-    {
      "titulo": "Zidane: 'Not proud, but no regrets' over 2006 World Cup final clash with Materazzi",
      "resumen": "Zidane: 'Not proud, but no regrets' over 2006 World Cup final clash with Materazzi",
      "fecha": "2026-10-02T14:58:36Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1002/dm_261002_Zidane_Not_proud_but_no_regrets_over_2006_World_Cup_final_clash_with_Materazzi/dm_261002_Zidane_Not_proud_but_no_regrets_over_2006_World_Cup_final_clash_with_Materazzi.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50084975/not-proud-no-regrets-2006-world-cup-final-clash-materazzi"
-    },
-    {
-     "titulo": "FIFA World Cup report highlights increased tactical strategies but no 'winning formula'",
-     "resumen": "FIFA's technical report on the 2026 World Cup has highlighted an increased number of tactical strategies at the tournament but concluded there was not necessarily a \"winning formula\".",
-     "fecha": "2026-10-02T12:09:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0704/r1684092_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50084016/fifa-world-cup-report-highlights-increased-tactical-strategies-no-winning-formula"
     }
    ],
    "resultados": null,
@@ -1862,9 +1869,8 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Matias_Galarza_France_v_Paraguay_4_July_2026-193.jpg/330px-Matias_Galarza_France_v_Paraguay_4_July_2026-193.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "406938",
@@ -2100,6 +2106,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "France are ready to join Springboks, All Blacks, as rugby's third superpower",
+     "resumen": "With the Rugby World Cup less than a year away, France appear to be the Northern Hemisphere team best placed to challenge the Springboks and the All Blacks.",
+     "fecha": null,
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0908/dm_260908_Rugby_Interview_Wallabies_should_add_OConnor_for_Springboks_Bledisloe_20260908_NO_TARGET/dm_260908_Rugby_Interview_Wallabies_should_add_OConnor_for_Springboks_Bledisloe_20260908_NO_TARGET.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50115290/france-ready-join-springboks-all-blacks-rugby-third-superpower"
+    },
+    {
      "titulo": "Kiss irked over Paisami suspension, coy on replacement",
      "resumen": "Wallabies coach Les Kiss faces a midfield reshuffle after Hunter Paisami's four-week ban, eyeing several options ahead of the crucial Eden Park Bledisloe clash.",
      "fecha": null,
@@ -2133,13 +2146,6 @@
      "fecha": null,
      "imagen": "https://a.espncdn.com/photo/2026/0828/r1707946_1296x518_5-2.jpg",
      "link": "https://www.espn.com/rugby/story/_/id/49747952/wallabies-two-good-xvs-why-rotation-dirty-word-les-kiss"
-    },
-    {
-     "titulo": "'I'll put my hand up for the World Cup': Wallabies' James Slipper not ruling out record fifth World Cup",
-     "resumen": "Recently retired Wallabies prop James Slipper is in line to make a shock return to the gold jersey less than a year after he farewelled the group through a front-row injury crisis, with a record fifth World Cup not ruled out.",
-     "fecha": null,
-     "imagen": "https://a.espncdn.com/photo/2026/0617/r1674537_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/rugby/story/_/id/49088851/put-my-hand-world-cup-wallabies-james-slipper-not-ruling-record-fifth-rugby-world-cup"
     }
    ],
    "resultados": null,
@@ -2345,10 +2351,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2654,6 +2659,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "George Russell's F1 engine nightmare to continue with Singapore GP grid penalty - sources",
+     "resumen": "George Russell is set to start Sunday's Singapore Grand Prix from the back of the grid as a knock-on effect of his engine failure at the Bahrain Grand Prix in Malaysia, sources have told ESPN.",
+     "fecha": "2026-10-06T10:38:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725727_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50115745/george-russell-f1-engine-nightmare-singapore-grand-prix-grid-penalty-sources"
+    },
+    {
      "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
      "fecha": "2026-10-05T15:51:44Z",
@@ -2687,13 +2699,6 @@
      "fecha": "2026-10-04T14:25:43Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Russell_Bahrain_Grand_Prix_was_another_failure_20260904_GLOBAL/dm_261004_COM_F1_Presser_Russell_Bahrain_Grand_Prix_was_another_failure_20260904_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50099765/bahrain-grand-prix-was-another-failure"
-    },
-    {
-     "titulo": "Max Verstappen reflects on 'very special' Bahrain GP win",
-     "resumen": "Max Verstappen reflects on 'very special' Bahrain GP win",
-     "fecha": "2026-10-04T14:22:42Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Max_Verstappen_reflects_on_very_special_Bahrain_GP_win_20260904_GLOBAL/dm_261004_COM_F1_Presser_Max_Verstappen_reflects_on_very_special_Bahrain_GP_win_20260904_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50099753/max-verstappen-reflects-very-special-bahrain-gp-win"
     }
    ],
    "resultados": null,
@@ -2710,6 +2715,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Matchmaking, inactivity -- and, yes, fights -- shift MMA divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-10-06T12:54:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726521_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
     {
      "titulo": "The performance bonuses for Van, Tsarukyan? Spots in P4P top 10",
      "resumen": "Former UFC champion puts elite status of women's flyweight division on display in ESPN's P4P top 10.",
@@ -2737,13 +2749,6 @@
      "fecha": "2026-10-04T04:24:37Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1004/0131a000-43f5-4686-be21-12d2429eb338/0131a000-43f5-4686-be21-12d2429eb338.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50096829/natalia-silva-captures-women-flyweight-title-unanimous-decision-win-wang-cong"
-    },
-    {
-     "titulo": "All-time UFC women's flyweight champions",
-     "resumen": "Check out which fighter has held the belt -- and how long she held it -- in the women's 125-pound division.",
-     "fecha": "2026-10-04T03:56:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725600_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24149628/all-ufc-women-flyweight-champions"
     },
     {
      "titulo": "UFC 332 results: Silva wins women's flyweight title in record-setting night",

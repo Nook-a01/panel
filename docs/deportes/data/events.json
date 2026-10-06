@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-06T07:33:01.167Z",
+ "actualizado": "2026-10-06T15:09:43.890Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 22,
+   "total": 21,
    "proximos": 15
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 13",
-   "sede": "Autodromo Nazionale di Monza, Italy",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-13",
-   "anio": 2026,
-   "ronda": "13",
-   "sesion": "Carrera",
-   "titulo": "GP Italian",
-   "inicio": "2026-09-06T13:00:00.000Z"
-  },
   {
    "id": "espn-401912542",
    "miLado": "local",
