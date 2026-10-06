@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "17";
+  var ESTA = "18";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -3302,9 +3302,11 @@ function diasEntreISO(a, b){
 function cruzarConMP(){
   const ym = todayISO().slice(0,7);
   const delMes = movsMes(ym);
-  const pendientes = delMes.filter(m => m.tipo==='gasto' && !confirmado(m)
+  // Vale para los dos lados: un sueldo cargado en Fijos que ya entró por
+  // Mercado Pago quedaba "por cobrar" y el número de Hoy lo contaba dos veces.
+  const pendientes = delMes.filter(m => !confirmado(m)
     && (m.srcTipo==='fijo' || m.srcTipo==='cuota'));
-  const pagos = delMes.filter(m => m.tipo==='gasto' && m.srcTipo==='mp' && confirmado(m));
+  const pagos = delMes.filter(m => m.srcTipo==='mp' && confirmado(m));
   if(!pendientes.length || !pagos.length) return [];
 
   const usados = new Set(), cruces = [];
@@ -3315,7 +3317,7 @@ function cruzarConMP(){
     const margen = Math.max(500, monto * 0.01);
     let mejor = null;
     pagos.forEach(g => {
-      if(usados.has(g.id)) return;
+      if(usados.has(g.id) || g.tipo !== p.tipo) return;
       const dif = Math.abs((Number(g.monto)||0) - monto);
       if(dif > margen) return;
       const dias = Math.abs(diasEntreISO(g.fecha, p.fecha));
@@ -3336,9 +3338,9 @@ function renderMpCruces(){
   const uno = cruces.length === 1;
   caja.innerHTML =
     '<div class="notice warn" style="margin:12px 0 10px">'
-      + (uno ? 'Hay 1 gasto fijo que figura sin pagar, pero en Mercado Pago aparece un pago que parece ser ese mismo.'
-             : 'Hay ' + cruces.length + ' gastos fijos que figuran sin pagar, pero en Mercado Pago aparecen pagos que parecen ser esos mismos.')
-      + ' Mientras sigan sin marcar, se te descuentan dos veces.</div>'
+      + (uno ? 'Hay 1 fijo que figura pendiente, pero en Mercado Pago aparece un movimiento que parece ser ese mismo.'
+             : 'Hay ' + cruces.length + ' fijos que figuran pendientes, pero en Mercado Pago aparecen movimientos que parecen ser esos mismos.')
+      + ' Mientras sigan sin marcar, se cuentan dos veces.</div>'
     + '<div class="tablewrap"><table><thead><tr>'
       // Los títulos son cortos a propósito: en el teléfono cada fila se apila y
       // el título de la columna se repite al lado de cada dato. Uno largo se corta.
