@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-07T00:40:48.552Z",
+ "actualizado": "2026-10-07T07:12:54.770Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -595,8 +595,8 @@
    "visitante": "Benin",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ben.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "3 - 0"
   },
   {
    "id": "espn-401841607",
