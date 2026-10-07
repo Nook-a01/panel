@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-07T14:29:35.634Z",
+ "actualizado": "2026-10-07T20:36:01.495Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,9 +425,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -617,9 +617,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -1154,8 +1153,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1166,9 +1166,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1277,8 +1276,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1294,6 +1294,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Ex-Tottenham defender Ramon Vega to challenge FIFA president Gianni Infantino",
+     "resumen": "Former Tottenham Hotspur defender Ramon Vega says he will challenge Gianni Infantino for the FIFA presidency.",
+     "fecha": "2026-10-07T18:28:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727457_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50126573/fifa-president-election-ramon-vega-gianni-infantino"
+    },
     {
      "titulo": "2030 World Cup Power Rankings: Who are the top 15 nations in the men's game?",
      "resumen": "With the 2026 World Cup well and truly behind us, the first fall international break saw all the top teams playing four times in three weeks. Which sides look strongest and most likely to contend in four years' time?",
@@ -1363,13 +1370,6 @@
      "fecha": "2026-10-04T22:20:03Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50104524/usmnt-vs-canada-more-just-match-jesse-marsch"
-    },
-    {
-     "titulo": "Scaloni: Messi's final Argentina match will be unforgettable",
-     "resumen": "Scaloni: Messi's final Argentina match will be unforgettable",
-     "fecha": "2026-10-04T14:48:16Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50099893/messi-final-argentina-match-unforgettable"
     }
    ],
    "resultados": null,
@@ -1611,9 +1611,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1636,9 +1635,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1661,9 +1659,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -2005,6 +2002,13 @@
    ],
    "noticias": [
     {
+     "titulo": "How Jason Sudeikis and 'Ted Lasso' became champions for women's soccer",
+     "resumen": "The cast of the hit comedy as well as NWSL veterans reflect on bringing authentic stories of women's soccer to a new stage.",
+     "fecha": "2026-10-07T15:33:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724537_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50112795/ted-lasso-season-4-women-soccer"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-10-07T11:17:27Z",
@@ -2038,13 +2042,6 @@
      "fecha": "2026-10-04T06:37:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1004/r1725648_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50097898/usa-mexico-mauricio-pochettino-julian-hall-cavan-sullivan"
-    },
-    {
-     "titulo": "Seattle Sounders FC vs. Sporting Kansas City - Game Highlights",
-     "resumen": "Watch the Game Highlights from Seattle Sounders FC vs. Sporting Kansas City, 10/01/2026",
-     "fecha": "2026-10-02T04:15:17Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1002/7c7b1729-786e-4887-a956-477e39f06e71/7c7b1729-786e-4887-a956-477e39f06e71.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50082091/seattle-sounders-fc-vs-sporting-kansas-city-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2658,8 +2655,8 @@
    "noticias": [
     {
      "titulo": "Max Verstappen says F1 paddock 'less stressful' without Christian Horner",
-     "resumen": "Max Verstappen has claimed the F1 paddock is \"less stressful\" following Christian Horner's exit from the sport because \"it is not nice when you constantly have tension between people\".",
-     "fecha": "2026-10-07T14:24:31Z",
+     "resumen": "Max Verstappen said the F1 paddock is \"less stressful\" following Christian Horner's exit from the sport because \"it is not nice when you constantly have tension between people.\"",
+     "fecha": "2026-10-07T14:28:24Z",
      "imagen": "https://a.espncdn.com/photo/2026/1007/r1727300_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50124553/max-verstappen-claims-f1-paddock-less-stressful-christian-horner"
     },
@@ -2714,6 +2711,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "UFC 332 takeaways: Talbott, Silva validate their top billing",
+     "resumen": "Payton Talbott finished another former champion in Deiveson Figueiredo on a night full of knockouts at UFC 332.",
+     "fecha": "2026-10-07T17:30:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725556_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50093793/ufc-332-takeaways-payton-talbott-natalia-silva-validate-their-top-billing"
+    },
+    {
      "titulo": "Silva rises in P4P women's top 10, making most of golden opportunity",
      "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
      "fecha": "2026-10-07T13:22:55Z",
@@ -2740,13 +2744,6 @@
      "fecha": "2026-10-05T13:47:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/1005/r1726263_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50094347/next-fights-ufc-322-fighters-natalia-silva-payton-talbott"
-    },
-    {
-     "titulo": "UFC 332 takeaways: Talbott, Silva validate their top billing",
-     "resumen": "Payton Talbott finished another former champion in Deiveson Figueiredo on a night full of knockouts at UFC 332.",
-     "fecha": "2026-10-04T05:15:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725556_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50093793/ufc-332-takeaways-payton-talbott-natalia-silva-validate-their-top-billing"
     },
     {
      "titulo": "Natalia Silva captures women's flyweight title with unanimous decision win over Wang Cong",
