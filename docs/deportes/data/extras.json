@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-08T07:22:28.371Z",
+ "actualizado": "2026-10-08T15:34:56.554Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -616,9 +615,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -978,9 +976,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1040,9 +1037,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1065,8 +1061,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1089,9 +1086,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1102,9 +1098,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1115,9 +1110,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1128,9 +1122,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1291,6 +1284,41 @@
    ],
    "noticias": [
     {
+     "titulo": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
+     "resumen": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
+     "fecha": "2026-10-08T10:02:23Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Presser_CAS_General_Secretary_promises_AFCON_final_verdict_as_soon_as_possible__202610/dm_261008_COM_SOC_Presser_CAS_General_Secretary_promises_AFCON_final_verdict_as_soon_as_possible__202610.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50131761/cas-general-secretary-promises-afcon-final-verdict-soon-possible"
+    },
+    {
+     "titulo": "Hislop: Sullivan didn't look out of place for the USMNT",
+     "resumen": "Hislop: Sullivan didn't look out of place for the USMNT",
+     "fecha": "2026-10-08T09:25:54Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50131573/sullivan-look-place-usmnt"
+    },
+    {
+     "titulo": "Where does Messi rank in the top five players of all time?",
+     "resumen": "Where does Messi rank in the top five players of all time?",
+     "fecha": "2026-10-08T08:50:56Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50131464/where-does-messi-rank-top-five-players-all"
+    },
+    {
+     "titulo": "Debutants in line for Super Eagles first team after Russia efforts, says Eric Chelle",
+     "resumen": "Nigeria coach Eric Chelle said the players who earned Tuesday's 3-3 draw against Russia may have forced their way into his senior squad, following their performances in Nizhny Novgorod.",
+     "fecha": "2026-10-08T07:21:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720759_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50131139/debutants-line-super-eagles-first-team-russia-efforts-says-eric-chelle"
+    },
+    {
+     "titulo": "AFCON qualifiers - Renard returns, Ghana unravel, and Nigeria make unwanted history",
+     "resumen": "The opening rounds of the 2027 Africa Cup of Nations qualifying - and the international friendlies that followed - have left many of the continent's established contenders with plenty of areas to improve.",
+     "fecha": "2026-10-08T07:04:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727722_1088x612_16-9.png",
+     "link": "https://www.espn.com/espn/story/_/id/50131006/afcon-qualifiers-renard-returns-ghana-unravel-nigeria-make-unwanted-history"
+    },
+    {
      "titulo": "Could Messi become part of Argentina's coaching staff?",
      "resumen": "Could Messi become part of Argentina's coaching staff?",
      "fecha": "2026-10-07T22:24:07Z",
@@ -1319,34 +1347,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
-     "titulo": "England teammates praise Kane, 'it's definitely possible' he could win the Ballon d'Or",
-     "resumen": "England teammates praise Kane, 'it's definitely possible' he could win the Ballon d'Or",
-     "fecha": "2026-10-07T08:48:11Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1007/dm_261007_England_teammates_praise_Kane_its_definitely_possible_he_could_win_the_Ballon_dOr/dm_261007_England_teammates_praise_Kane_its_definitely_possible_he_could_win_the_Ballon_dOr.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50123519/england-teammates-praise-kane-definitely-possible-win-ballon-dor"
-    },
-    {
-     "titulo": "Kelechi Iheanacho makes a case, Umar brothers make history as experimental Super Eagles hold Russia to draw",
-     "resumen": "A young and experimental Nigeria side pulled back a two-goal deficit to claim a 3-3 draw with Russia in an international friendly match in Nizhny Novgorod on Tuesday.",
-     "fecha": "2026-10-07T07:48:58Z",
-     "imagen": "https://a.espncdn.com/photo/2024/0122/r1280712_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50122834/kelechi-iheanacho-makes-case-umar-brothers-make-history-experimental-super-eagles-hold-russia-draw"
-    },
-    {
-     "titulo": "Messi scores in farewell as Argentina beat Benin",
-     "resumen": "Lionel Messi enjoyed a fairy tale farewell as he scored on his last appearance for Argentina in a 3-0 win over Benin in Buenos Aires.",
-     "fecha": "2026-10-07T01:46:01Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy.jpg",
-     "link": "http://www.espn.com/soccer/report/_/gameId/401921408"
-    },
-    {
-     "titulo": "Hislop: International break has been 'too much' for players",
-     "resumen": "Hislop: International break has been 'too much' for players",
-     "fecha": "2026-10-06T22:30:06Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Hislop_International_break_has_been_too_much_for_players/dm_261006_Hislop_International_break_has_been_too_much_for_players.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50119999/international-break-too-much-players"
-    },
-    {
      "titulo": "Hislop: Messi's World Cup final run 'underlines his legacy'",
      "resumen": "Hislop: Messi's World Cup final run 'underlines his legacy'",
      "fecha": "2026-10-06T22:29:48Z",
@@ -1359,13 +1359,6 @@
      "fecha": "2026-10-06T11:59:21Z",
      "imagen": "https://a.espncdn.com/photo/2025/0604/r1502303_1296x729_16-9.jpg",
      "link": "https://www.espn.com/espn/story/_/id/50115954/nigeria-considers-fifa-compensation-claim-dr-congo-eligibility-revelations"
-    },
-    {
-     "titulo": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
-     "resumen": "Jones: USMNT vs. Canada is more than just a match for Jesse Marsch",
-     "fecha": "2026-10-04T22:20:03Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4/dm_261004_COM_SOC_ANALYSIS_Jones_USMNT_vs_Canada_is_more_than_just_a_match_for_Jesse_Marsch_2026_10_4.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50104524/usmnt-vs-canada-more-just-match-jesse-marsch"
     }
    ],
    "resultados": null,
@@ -1632,9 +1625,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1645,9 +1637,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1719,9 +1710,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1732,9 +1722,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1781,9 +1770,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2006,9 +1994,23 @@
     {
      "titulo": "Harry Kane arrival would be 'fulfilment of a dream' - MLS commissioner",
      "resumen": "MLS commissioner Don Garber would love Harry Kane to follow Lionel Messi across the pond and says the England skipper's interest helps fulfil a dream that Sir David Beckham kept alive.",
-     "fecha": "2026-10-08T07:19:16Z",
+     "fecha": "2026-10-08T11:29:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/0916/r1717388_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50131138/harry-kane-encouraged-end-career-us-mls-commissioner"
+    },
+    {
+     "titulo": "Hislop: Sullivan didn't look out of place for the USMNT",
+     "resumen": "Hislop: Sullivan didn't look out of place for the USMNT",
+     "fecha": "2026-10-08T09:25:54Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50131573/sullivan-look-place-usmnt"
+    },
+    {
+     "titulo": "Where does Messi rank in the top five players of all time?",
+     "resumen": "Where does Messi rank in the top five players of all time?",
+     "fecha": "2026-10-08T08:50:56Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50131464/where-does-messi-rank-top-five-players-all"
     },
     {
      "titulo": "How Jason Sudeikis and 'Ted Lasso' became champions for women's soccer",
@@ -2030,20 +2032,6 @@
      "fecha": "2026-10-07T03:31:27Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761660.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761660"
-    },
-    {
-     "titulo": "Chicago Fire FC vs. Vancouver Whitecaps - Game Highlights",
-     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Vancouver Whitecaps, 10/06/2026",
-     "fecha": "2026-10-07T03:05:47Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1007/e01dd1e6-5019-4316-94cc-0e2f853933c8/e01dd1e6-5019-4316-94cc-0e2f853933c8.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50121897/chicago-fire-fc-vs-vancouver-whitecaps-game-highlights"
-    },
-    {
-     "titulo": "Scaloni: Messi's final Argentina match will be unforgettable",
-     "resumen": "Scaloni: Messi's final Argentina match will be unforgettable",
-     "fecha": "2026-10-04T14:48:16Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50099893/messi-final-argentina-match-unforgettable"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2656,46 +2644,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "George Russell and Kimi Antonelli to run different Mercedes packages at Singapore Grand Prix",
+     "resumen": "Title rivals Kimi Antonelli and George Russell will drive different specifications of Mercedes' Formula 1 car at this weekend's Singapore Grand Prix as the team searches for answers over its lack of performance in Malaysia.",
+     "fecha": "2026-10-08T15:23:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727778_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131312/george-russell-kimi-antonelli-run-different-mercedes-packages-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "Rwanda F1 race: Lewis Hamilton, Max Verstappen welcome prospect of Africa return as talks gather pace",
+     "resumen": "Lewis Hamilton and Max Verstappen have welcomed the prospect of Formula 1 returning to Africa amid growing speculation that Rwanda could host a grand prix in the 2030s.",
+     "fecha": "2026-10-08T15:12:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725645_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131313/rwanda-f1-race-lewis-hamilton-max-verstappen-africa-talks-kigali"
+    },
+    {
+     "titulo": "Lewis Hamilton aspires for more wet-weather racing: FIA and young drivers 'more cautious'",
+     "resumen": "Lewis Hamilton feels the caution of Formula 1 bosses and its younger drivers has taken away some of the sport's \"seat of your pants\" wet-weather driving.",
+     "fecha": "2026-10-08T14:11:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727808_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131308/lewis-hamilton-aspires-more-wet-weather-racing-fia-young-drivers-more-cautious-formula-1"
+    },
+    {
+     "titulo": "F1 cars to get software update after Malaysia 'bug' to prevent repeat at future races",
+     "resumen": "Following last weekend's farcical formation lap at the Bahrain Grand Prix in Malaysia, the FIA will introduce new wet-weather engine software in time for the United States Grand Prix later this month.",
+     "fecha": "2026-10-08T10:30:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727754_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131306/f1-cars-get-software-update-malaysia-bug-prevent-repeat-future-races-bahrain-grand-prix-sepang-formula-1"
+    },
+    {
+     "titulo": "Valtteri Bottas cycles impressive 400km from Malaysia to Singapore Grand Prix: 'Snakes were pretty chill'",
+     "resumen": "Valtteri Bottas rode past snakes, jumped over a lizard and got chased by a dog during a four-day, 418 kilometre bike ride from Malaysia to Singapore ahead of this weekend's Formula 1 race.",
+     "fecha": "2026-10-08T09:13:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727738_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131303/valtteri-bottas-cycles-impressive-400km-malaysia-singapore-grand-prix-snakes-were-pretty-chill-marina-bay-circuit-formula-1"
+    },
+    {
      "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
      "fecha": "2026-10-08T06:04:24Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Max Verstappen says F1 paddock 'less stressful' without Christian Horner",
-     "resumen": "Max Verstappen said the F1 paddock is \"less stressful\" following Christian Horner's exit from the sport because \"it is not nice when you constantly have tension between people.\"",
-     "fecha": "2026-10-07T14:28:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727300_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50124553/max-verstappen-claims-f1-paddock-less-stressful-christian-horner"
-    },
-    {
-     "titulo": "Mercedes confirm George Russell engine penalty at Singapore Grand Prix",
-     "resumen": "Mercedes has confirmed that George Russell will serve an engine penalty at the Singapore Grand Prix on Sunday.",
-     "fecha": "2026-10-07T10:11:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0926/r1721980_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50123509/mercedes-confirm-george-russell-engine-penalty-singapore-grand-prix"
-    },
-    {
-     "titulo": "George Russell's F1 engine nightmare to continue with Singapore GP grid penalty - sources",
-     "resumen": "George Russell is set to start Sunday's Singapore Grand Prix from the back of the grid as a knock-on effect of his engine failure at the Bahrain Grand Prix in Malaysia, sources have told ESPN.",
-     "fecha": "2026-10-06T10:38:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725727_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50115745/george-russell-f1-engine-nightmare-singapore-grand-prix-grid-penalty-sources"
-    },
-    {
-     "titulo": "Could Malaysia return to F1 calendar? The state of play despite Sepang travel chaos",
-     "resumen": "Malaysia's Sepang circuit hosted a popular -- and, as it stands, one-off -- return to the Formula 1 calendar, although it was overshadowed by three days of travel chaos and nightmare experiences for fans.",
-     "fecha": "2026-10-05T12:02:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726254_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50082903/could-malaysia-return-f1-calendar-state-play-sepang-travel-chaos"
-    },
-    {
-     "titulo": "Max Verstappen praises Red Bull on 'very special' Bahrain Grand Prix win after 'tough start to year'",
-     "resumen": "Max Verstappen praised Red Bull's resilience through a tough start to 2026 after he delivered the team an \"amazing\" first win with its own engine at the Bahrain Grand Prix in Malaysia.",
-     "fecha": "2026-10-05T09:31:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726235_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50074976/max-verstappen-praises-red-bull-very-special-bahrain-grand-prix-win-tough-start-year-bahrain-gp-malaysia-sepang-formula-1"
     }
    ],
    "resultados": null,
