@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-08T15:34:56.554Z",
+ "actualizado": "2026-10-08T21:18:23.263Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -976,8 +977,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1074,8 +1076,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1284,6 +1287,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Sources: Infantino reelection path clear as Montagliani plans Concacaf stay",
+     "resumen": "Gianni Infantino faces a clear path towards reelection as FIFA president after sources told ESPN that Victor Montagliani plans to stay as Concacaf president.",
+     "fecha": "2026-10-08T18:25:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727909_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50134141/fifa-president-gianni-infantino-victor-montagliani-concacaf"
+    },
+    {
      "titulo": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
      "resumen": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
      "fecha": "2026-10-08T10:02:23Z",
@@ -1352,13 +1362,6 @@
      "fecha": "2026-10-06T22:29:48Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50120434/messi-world-cup-final-run-underlines-legacy"
-    },
-    {
-     "titulo": "Nigeria considers FIFA compensation claim after DR Congo eligibility revelations",
-     "resumen": "A top Nigerian National Sports Commission official says Nigeria have been vindicated over their challenge to DR Congo's use of ineligible players in World Cup qualifying.",
-     "fecha": "2026-10-06T11:59:21Z",
-     "imagen": "https://a.espncdn.com/photo/2025/0604/r1502303_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50115954/nigeria-considers-fifa-compensation-claim-dr-congo-eligibility-revelations"
     }
    ],
    "resultados": null,
@@ -1600,9 +1603,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1649,9 +1651,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1992,9 +1993,9 @@
    ],
    "noticias": [
     {
-     "titulo": "Harry Kane arrival would be 'fulfilment of a dream' - MLS commissioner",
+     "titulo": "Harry Kane interest in MLS 'fulfilment of a dream' - commissioner",
      "resumen": "MLS commissioner Don Garber would love Harry Kane to follow Lionel Messi across the pond and says the England skipper's interest helps fulfil a dream that Sir David Beckham kept alive.",
-     "fecha": "2026-10-08T11:29:07Z",
+     "fecha": "2026-10-08T16:13:02Z",
      "imagen": "https://a.espncdn.com/photo/2026/0916/r1717388_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50131138/harry-kane-encouraged-end-career-us-mls-commissioner"
     },
@@ -2644,6 +2645,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Shai Gilgeous-Alexander joins athletes who became owners",
+     "resumen": "The Oklahoma City Thunder star joins a list of athletes that includes LeBron James, Serena Williams, Wayne Gretzky and Tom Brady.",
+     "fecha": "2026-10-08T21:14:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0527/r1664288_608x342_16-9.jpg",
+     "link": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
+    },
+    {
+     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
+     "resumen": "With an 84-point lead in the drivers' standings, it is looking increasingly likely that Kimi Antonelli will be crowned F1's youngest world champion in the next two months.",
+     "fecha": "2026-10-08T15:52:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
      "titulo": "George Russell and Kimi Antonelli to run different Mercedes packages at Singapore Grand Prix",
      "resumen": "Title rivals Kimi Antonelli and George Russell will drive different specifications of Mercedes' Formula 1 car at this weekend's Singapore Grand Prix as the team searches for answers over its lack of performance in Malaysia.",
      "fecha": "2026-10-08T15:23:23Z",
@@ -2670,20 +2685,6 @@
      "fecha": "2026-10-08T10:30:19Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727754_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131306/f1-cars-get-software-update-malaysia-bug-prevent-repeat-future-races-bahrain-grand-prix-sepang-formula-1"
-    },
-    {
-     "titulo": "Valtteri Bottas cycles impressive 400km from Malaysia to Singapore Grand Prix: 'Snakes were pretty chill'",
-     "resumen": "Valtteri Bottas rode past snakes, jumped over a lizard and got chased by a dog during a four-day, 418 kilometre bike ride from Malaysia to Singapore ahead of this weekend's Formula 1 race.",
-     "fecha": "2026-10-08T09:13:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727738_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131303/valtteri-bottas-cycles-impressive-400km-malaysia-singapore-grand-prix-snakes-were-pretty-chill-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-08T06:04:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     }
    ],
    "resultados": null,
@@ -2700,6 +2701,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Jake Paul cleared to fight; Canelo, Strickland, others on wish list",
+     "resumen": "Jake Paul, who has been cleared to resume fighting after recovering from a broken jaw, has a list of big names he'd like to face in boxing and MMA now that he's back.",
+     "fecha": "2026-10-08T18:12:59Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0917/r1547068_600x400_3-2.jpg",
+     "link": "https://www.espn.com/boxing/story/_/id/50134215/jake-paul-cleared-fight-canelo-mcgregor-others-wish-list"
+    },
     {
      "titulo": "UFC 332 takeaways: Talbott, Silva validate their top billing",
      "resumen": "Payton Talbott finished another former champion in Deiveson Figueiredo on a night full of knockouts at UFC 332.",
@@ -2734,13 +2742,6 @@
      "fecha": "2026-10-05T13:47:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/1005/r1726263_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50094347/next-fights-ufc-322-fighters-natalia-silva-payton-talbott"
-    },
-    {
-     "titulo": "Natalia Silva captures women's flyweight title with unanimous decision win over Wang Cong",
-     "resumen": "Natalia Silva captures women's flyweight title with unanimous decision win over Wang Cong",
-     "fecha": "2026-10-04T04:24:37Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1004/0131a000-43f5-4686-be21-12d2429eb338/0131a000-43f5-4686-be21-12d2429eb338.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50096829/natalia-silva-captures-women-flyweight-title-unanimous-decision-win-wang-cong"
     }
    ],
    "resultados": [
