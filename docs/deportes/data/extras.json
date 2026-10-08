@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-07T20:36:01.495Z",
+ "actualizado": "2026-10-08T00:58:51.201Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -978,9 +977,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1040,9 +1038,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1065,9 +1062,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1115,9 +1111,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1153,9 +1148,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1202,9 +1196,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1276,9 +1269,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1294,6 +1286,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Could Messi become part of Argentina's coaching staff?",
+     "resumen": "Could Messi become part of Argentina's coaching staff?",
+     "fecha": "2026-10-07T22:24:07Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1007/dm_261007_COM_SOC_ANALYSIS_Could_Messi_become_part_of_Argentinas_coaching_staff_2026_10_7/dm_261007_COM_SOC_ANALYSIS_Could_Messi_become_part_of_Argentinas_coaching_staff_2026_10_7.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50127889/could-messi-become-part-argentina-coaching-staff"
+    },
     {
      "titulo": "Ex-Tottenham defender Ramon Vega to challenge FIFA president Gianni Infantino",
      "resumen": "Former Tottenham Hotspur defender Ramon Vega says he will challenge Gianni Infantino for the FIFA presidency.",
@@ -1321,13 +1320,6 @@
      "fecha": "2026-10-07T08:48:11Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1007/dm_261007_England_teammates_praise_Kane_its_definitely_possible_he_could_win_the_Ballon_dOr/dm_261007_England_teammates_praise_Kane_its_definitely_possible_he_could_win_the_Ballon_dOr.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50123519/england-teammates-praise-kane-definitely-possible-win-ballon-dor"
-    },
-    {
-     "titulo": "Ogden: Haaland will not play in the Championship",
-     "resumen": "Ogden: Haaland will not play in the Championship",
-     "fecha": "2026-10-07T07:50:31Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Ogden_Haaland_will_not_be_at_Manchester_City_next_season/dm_261006_Ogden_Haaland_will_not_be_at_Manchester_City_next_season.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50117025/haaland-not-play-championship"
     },
     {
      "titulo": "Kelechi Iheanacho makes a case, Umar brothers make history as experimental Super Eagles hold Russia to draw",
@@ -1924,8 +1916,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315801",
