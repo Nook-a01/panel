@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-08T00:58:51.201Z",
+ "actualizado": "2026-10-08T07:22:28.371Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -616,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -977,8 +978,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1038,8 +1040,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1074,9 +1077,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1087,8 +1089,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1099,8 +1102,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1111,8 +1115,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1256,9 +1261,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1603,8 +1607,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1627,8 +1632,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1639,8 +1645,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1651,8 +1658,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1711,8 +1719,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1723,8 +1732,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1916,9 +1926,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315801",
@@ -1995,6 +2004,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Harry Kane arrival would be 'fulfilment of a dream' - MLS commissioner",
+     "resumen": "MLS commissioner Don Garber would love Harry Kane to follow Lionel Messi across the pond and says the England skipper's interest helps fulfil a dream that Sir David Beckham kept alive.",
+     "fecha": "2026-10-08T07:19:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0916/r1717388_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50131138/harry-kane-encouraged-end-career-us-mls-commissioner"
+    },
+    {
      "titulo": "How Jason Sudeikis and 'Ted Lasso' became champions for women's soccer",
      "resumen": "The cast of the hit comedy as well as NWSL veterans reflect on bringing authentic stories of women's soccer to a new stage.",
      "fecha": "2026-10-07T15:33:46Z",
@@ -2028,13 +2044,6 @@
      "fecha": "2026-10-04T14:48:16Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1004/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL/dm_261004_COM_F1_Presser_Scaloni_Messis_final_Argentina_match_will_be_unforgettable_20260904_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50099893/messi-final-argentina-match-unforgettable"
-    },
-    {
-     "titulo": "USMNT's young stars shine to give Pochettino 'fantastic problem'",
-     "resumen": "USMNT coach Mauricio Pochettino said that the number of players performing at a high level is \"a fantastic problem to have\" after teenagers Cavan Sullivan and Julian Hall propelled the USMNT to 3-0 win over rivals Mexico on Saturday.",
-     "fecha": "2026-10-04T06:37:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725648_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50097898/usa-mexico-mauricio-pochettino-julian-hall-cavan-sullivan"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2647,6 +2656,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-08T06:04:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
      "titulo": "Max Verstappen says F1 paddock 'less stressful' without Christian Horner",
      "resumen": "Max Verstappen said the F1 paddock is \"less stressful\" following Christian Horner's exit from the sport because \"it is not nice when you constantly have tension between people.\"",
      "fecha": "2026-10-07T14:28:24Z",
@@ -2659,13 +2675,6 @@
      "fecha": "2026-10-07T10:11:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/0926/r1721980_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50123509/mercedes-confirm-george-russell-engine-penalty-singapore-grand-prix"
-    },
-    {
-     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-07T06:05:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     },
     {
      "titulo": "George Russell's F1 engine nightmare to continue with Singapore GP grid penalty - sources",
