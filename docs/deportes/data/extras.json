@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-09T09:01:13.595Z",
+ "actualizado": "2026-10-09T16:10:46.547Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -615,9 +615,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -1015,9 +1014,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1053,8 +1051,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1173,9 +1172,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1705,9 +1703,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1898,9 +1895,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315801",
@@ -2321,9 +2317,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2629,46 +2626,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-09T16:00:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
+     "titulo": "Singapore Grand Prix: FIA confirm software issue in sprint qualifying was caused by 'human error'",
+     "resumen": "Formula 1 encountered its second technical mishap in a less than a week after an FIA official forgot to push a button needed to enable full engine power in sprint qualifying for the Singapore Grand Prix.",
+     "fecha": "2026-10-09T15:55:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728271_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131328/fia-confirm-software-issue-sprint-qualifying-was-caused-human-error-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen takes first pole for sprint race at Singapore Grand Prix following another settings issue",
+     "resumen": "Max Verstappen has put his Red Bull on pole position for Saturday's sprint race at the Singapore Grand Prix with minutes to spare.",
+     "fecha": "2026-10-09T15:52:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728240_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131324/max-verstappen-takes-first-pole-sprint-race-singapore-grand-prix-impressive-lap-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "'Watch Teletubbies, not F1': Toto Wolff hits back at 'brainless' Kimi Antonelli driver favouritism claims",
+     "resumen": "Toto Wolff has strongly denied accusations of Mercedes bias in the title battle between Kimi Antonelli and George Russell this season, labelling such theories as \"brainless\" and \"nonsensical.\"",
+     "fecha": "2026-10-09T12:51:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728202_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131326/watch-teletubbies-not-f1-toto-wolff-hits-back-brainless-kimi-antonelli-driver-favouritism-claims-george-russell"
+    },
+    {
+     "titulo": "Singapore Grand Prix: George Russell sets pace in sole practice session ahead of sprint qualifying",
+     "resumen": "George Russell topped the timesheets in the first and only practice session at the Singapore Grand Prix.",
+     "fecha": "2026-10-09T09:56:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728149_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131323/george-russell-sets-pace-sole-practice-session-ahead-sprint-qualifying-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
      "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
      "resumen": "With an 84-point lead in the drivers' standings, it is looking increasingly likely that Kimi Antonelli will be crowned F1's youngest world champion in the next two months.",
      "fecha": "2026-10-09T06:41:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-09T06:40:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Shai Gilgeous-Alexander joins athletes who became owners",
-     "resumen": "The Oklahoma City Thunder star joins a list of athletes that includes LeBron James, Serena Williams, Wayne Gretzky and Tom Brady.",
-     "fecha": "2026-10-08T21:14:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0527/r1664288_608x342_16-9.jpg",
-     "link": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
-    },
-    {
-     "titulo": "George Russell and Kimi Antonelli to run different Mercedes packages at Singapore Grand Prix",
-     "resumen": "Title rivals Kimi Antonelli and George Russell will drive different specifications of Mercedes' Formula 1 car at this weekend's Singapore Grand Prix as the team searches for answers over its lack of performance in Malaysia.",
-     "fecha": "2026-10-08T15:23:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727778_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131312/george-russell-kimi-antonelli-run-different-mercedes-packages-singapore-grand-prix-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Rwanda F1 race: Lewis Hamilton, Max Verstappen welcome prospect of Africa return as talks gather pace",
-     "resumen": "Lewis Hamilton and Max Verstappen have welcomed the prospect of Formula 1 returning to Africa amid growing speculation that Rwanda could host a grand prix in the 2030s.",
-     "fecha": "2026-10-08T15:12:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725645_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131313/rwanda-f1-race-lewis-hamilton-max-verstappen-africa-talks-kigali"
-    },
-    {
-     "titulo": "Lewis Hamilton aspires for more wet-weather racing: FIA and young drivers 'more cautious'",
-     "resumen": "Lewis Hamilton feels the caution of Formula 1 bosses and its younger drivers has taken away some of the sport's \"seat of your pants\" wet-weather driving.",
-     "fecha": "2026-10-08T14:11:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727808_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131308/lewis-hamilton-aspires-more-wet-weather-racing-fia-young-drivers-more-cautious-formula-1"
     }
    ],
    "resultados": null,
