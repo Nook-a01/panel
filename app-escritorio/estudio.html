@@ -19,10 +19,19 @@ header{padding:12px 18px;border-bottom:1px solid var(--linea);display:flex;
        align-items:center;gap:14px;flex:0 0 auto}
 header h1{font-size:1.05rem;margin:0;letter-spacing:-.01em}
 header .pieza{color:var(--tinta2);font-size:.86rem}
-nav{display:flex;gap:6px;padding:10px 18px 0;flex:0 0 auto}
+[hidden]{display:none!important}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px 0;flex:0 0 auto}
 nav button{background:none;border:0;color:var(--tinta2);font:600 .88rem var(--f);
   padding:8px 12px;border-radius:8px 8px 0 0;cursor:pointer}
 nav button.on{color:var(--acento);background:var(--caja);border-bottom:2px solid var(--acento)}
+/* Arriba las cinco secciones; abajo, las sub-pestañas de Componer. */
+nav.secciones{border-bottom:1px solid var(--linea)}
+nav.secciones button{font-size:.95rem;padding:9px 14px}
+nav.sub{padding-top:6px}
+nav.sub button{font-size:.82rem;padding:6px 11px}
+.dato{display:grid;grid-template-columns:7.5rem 1fr;gap:6px 12px;font-size:.88rem}
+.dato dt{color:var(--tinta2)}
+.dato dd{margin:0}
 main{flex:1 1 auto;overflow:auto;padding:16px 18px 28px}
 .hoja{display:none}
 .hoja.on{display:block}
@@ -60,16 +69,58 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
 .pl{display:inline-block;width:170px;font-size:.8rem;color:var(--tinta2)}
 .curva{display:flex;align-items:flex-end;gap:1px;height:56px;margin-top:8px;padding:0 1px;border-bottom:1px solid var(--linea)}
 .curva i{flex:1;background:var(--acento);opacity:.8;border-radius:1px 1px 0 0;min-width:1px}
+.barraCancion{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 18px 0;flex:0 0 auto}
+.barraCancion select{max-width:min(560px,80vw)}
+ol.pasos{margin:0;padding-left:1.2rem;color:#d5d5e2;font-size:.88rem}
+.paso-vc{display:grid;grid-template-columns:1.6rem 1fr auto;gap:4px 10px;align-items:center;
+  padding:9px 0;border-bottom:1px solid #ffffff0a}
+.paso-vc .marca{font-size:1rem;text-align:center}
+.paso-vc .det{font-size:.8rem;color:var(--tinta2)}
+.barra{height:6px;border-radius:3px;background:var(--caja2);overflow:hidden;margin-top:5px}
+.barra i{display:block;height:100%;background:var(--acento)}
+.ok{color:var(--acento)} .mal{color:var(--rojo)}
+.post{border:1px solid var(--linea);border-radius:10px;padding:9px 11px;margin:0 0 8px;background:var(--caja2)}
+.post .cab{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.84rem}
+.post textarea{width:100%;margin-top:6px;font:inherit;font-size:.86rem;background:var(--fondo);color:var(--tinta);
+  border:1px solid var(--linea);border-radius:8px;padding:7px;resize:vertical;min-height:52px}
+.post.aprobado{border-color:#7CE7C655} .post.publicado{opacity:.6}
+.estado{font-size:.75rem;border-radius:999px;padding:2px 9px;border:1px solid var(--linea)}
+.estado.borrador{color:var(--acento2)} .estado.aprobado{color:var(--acento)} .estado.publicado{color:var(--tinta2)}
+.medios{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.medios .m{background:var(--caja2);border:1px solid var(--linea);border-radius:9px;padding:8px 10px;font-size:.84rem}
+pre.cola{max-height:110px;overflow:auto;background:var(--fondo);border:1px solid var(--linea);border-radius:8px;
+  padding:6px 8px;font:.72rem var(--m);color:var(--tinta2);white-space:pre-wrap;margin:6px 0 0}
+input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radius:9px;border:1px solid var(--linea);
+  background:var(--caja2);color:var(--tinta);padding:7px 9px;color-scheme:dark}
 </style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <header>
   <h1>Estudio</h1>
-  <span class="pieza" id="cab">—</span>
+  <div style="display:flex;align-items:center;gap:8px">
+    <button class="b" id="recargar" title="Vuelve a cargar la app con los últimos cambios (también F5)">↻ Actualizar</button>
+    <span class="pieza" id="cab">—</span>
+  </div>
 </header>
 
-<nav>
-  <button data-h="componer" class="on">Componer</button>
+<nav class="secciones">
+  <button data-s="componer" class="on">Componer</button>
+  <button data-s="mezcla">Mezcla</button>
+  <button data-s="videoclip">Videoclip</button>
+  <button data-s="campana">Campaña</button>
+  <button data-s="metricas">Métricas</button>
+</nav>
+
+<!-- Mezcla, Videoclip, Campaña y Métricas trabajan sobre una canción ya guardada. -->
+<div class="barraCancion" id="barraCancion" hidden>
+  <label class="campo">Canción <select id="lzCancion"><option value="">Buscando…</option></select></label>
+  <button class="b" id="lzRecargar">Actualizar</button>
+  <span class="aviso" id="lzCancionAviso" style="margin:0"></span>
+</div>
+
+<nav class="sub" id="subComponer">
+  <button data-h="componer" class="on">Canción</button>
   <button data-h="ref">Referencias</button>
   <button data-h="tocar">Tocar</button>
   <button data-h="plugins">Plugins</button>
@@ -93,6 +144,8 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
           <select id="gGenero">
             <option value="afrobeats">Afrobeats / plena</option>
             <option value="reggaeton">Reggaetón</option>
+            <option value="plena">Plena (estilo LA PLENA)</option>
+            <option value="edm">EDM (estilo I'm Awake)</option>
             <option value="trap">Trap</option>
             <option value="house">House</option>
           </select>
@@ -102,30 +155,39 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
         <label class="campo">Semilla <input type="number" id="gSemilla" value="1"></label>
         <button class="b" id="gDado">🎲</button>
       </div>
-      <div class="fila" style="margin-top:12px">
-        <button class="b pri" id="gArmar">Armar la canción</button>
-        <span class="aviso" id="gAviso" style="margin:0"></span>
+      <div class="fila" style="margin-top:10px">
+        <label class="campo"><input type="checkbox" id="gBanco" checked> Ritmos reales de mi librería</label>
+        <button class="b" id="gAprender">Aprender ritmos</button>
+        <span class="aviso" id="gBancoAviso" style="margin:0">—</span>
       </div>
       <div class="aviso">
         Sale una canción completa con intro, versos, pre, estribillos, puente y outro, en diez pistas.
         Entra como una versión nueva: nunca te pisa lo que ya tenías.
         La misma semilla da siempre la misma canción — si te gustó, volvés a ella; si no, cambiala.
       </div>
-    </div>
-    <div class="caja" id="gMapaCaja" hidden>
-      <h2>Cómo quedó armada</h2>
-      <div id="gMapa"></div>
-    </div>
-    <div class="caja">
-      <h2>Y después, en FL Studio</h2>
-      <ol style="margin:0;padding-left:1.2rem;color:#d5d5e2;font-size:.88rem">
-        <li>Tocá <b>Guardar .mid</b> en la pestaña Tocar.</li>
-        <li>En FL Studio: <b>Archivo → Importar → Archivo MIDI</b>, y elegí ese archivo.</li>
-        <li>Te crea un canal y un patrón por pista. Ahí les ponés tus plugins y tus samples.</li>
-        <li>Para los instrumentos, seguí esta tabla (lo elegís en la pestaña Tocar, en cada pista):</li>
-      </ol>
-      <div id="guiaFL"></div>
-      <div class="aviso">No se puede escribir el proyecto .flp directamente: Image-Line nunca publicó ese formato. El MIDI es el camino que sí funciona.</div>
+      <!-- El botón va al final: primero se elige todo, después se arma. -->
+      <div class="fila" style="margin-top:14px">
+        <button class="b pri" id="gArmar">Armar la canción</button>
+        <span class="aviso" id="gAviso" style="margin:0"></span>
+      </div>
+
+      <!-- Todo en una sola caja (pedido de Agustín, 09/10/2026): lo que antes eran
+           "Cómo quedó armada" y "Y después, en FL Studio" va acá abajo. -->
+      <div id="gMapaCaja" hidden style="margin-top:18px">
+        <h3 style="margin:0 0 6px;font-size:.95rem">Cómo quedó armada</h3>
+        <div id="gMapa"></div>
+      </div>
+
+      <h3 style="margin:18px 0 6px;font-size:.95rem">Para abrirla en FL Studio</h3>
+      <div class="aviso" style="margin:0">
+        En la pestaña <b>Tocar</b> tocá <b>Guardar .mid</b>. Después, en FL Studio:
+        <b>Archivo → Importar → Archivo MIDI</b> y elegís ese archivo. FL arma un canal por cada
+        instrumento (bajo, acordes, batería…) con las notas ya puestas; vos sólo le ponés el sonido.
+      </div>
+      <details style="margin-top:8px">
+        <summary class="aviso" style="margin:0;cursor:pointer">Qué sonido va en cada canal</summary>
+        <div id="guiaFL"></div>
+      </details>
     </div>
   </section>
 
@@ -136,6 +198,7 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
       <div class="fila">
         <button class="b pri" id="refAgregar">Agregar canciones…</button>
         <button class="b" id="refActualizar">Actualizar lista</button>
+        <button class="b" id="refElegir">Elegir carpeta…</button>
         <span class="chip">Carpeta <b id="refCarpeta" style="font-size:.72rem">—</b></span>
       </div>
       <div class="aviso">
@@ -208,7 +271,7 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
         <button class="b pri" id="escPlugins">Buscar mis plugins</button>
         <span class="chip">Encontrados <b id="nPlugins">—</b></span>
       </div>
-      <div class="aviso">Se miran las carpetas donde Windows y FL Studio dejan los VST. No se abre ni se modifica ninguno: sólo se listan.</div>
+      <div class="aviso">Se miran los instrumentos y efectos que trae FL Studio y las carpetas donde Windows deja los VST. No se abre ni se modifica ninguno: sólo se listan.</div>
     </div>
     <div id="listaPlugins"></div>
   </section>
@@ -220,14 +283,140 @@ small.ruta{font-family:var(--m);font-size:.74rem;color:var(--tinta2);word-break:
         <button class="b pri" id="addCarpeta">Agregar una carpeta</button>
         <button class="b" id="abrirDatos">Ver dónde guardo tus cosas</button>
       </div>
-      <div class="aviso">Elegí las carpetas donde tenés tus samples. Se cuentan por tipo y por subcarpeta, para saber con qué contamos.</div>
+      <div class="aviso">Tu librería de FL Studio aparece siempre. Si tenés samples en otras carpetas, agregalas. Se cuentan por tipo y por subcarpeta, para saber con qué contamos.</div>
     </div>
     <div id="listaSamples"></div>
+  </section>
+
+  <!-- MEZCLA, VIDEOCLIP, CAMPAÑA y MÉTRICAS: trabajan sobre una canción de
+       Mis canciones (la elegís arriba, en la barra de canción). La lógica está
+       en lanzamiento.js y lo que toca el disco en lanzamiento-motor.js. -->
+  <section class="hoja" id="h-mezcla">
+    <div class="caja">
+      <h2>Mezcla y master</h2>
+      <ol class="pasos">
+        <li>En FL Studio, el Master termina en un <b>Fruity Limiter</b> con ATT en 0 ms (lo aprendido con la EDM 777: techo CEIL −3 dB y la GAIN para llegar al volumen).</li>
+        <li>FILE → Export → Wave file: <b>WAV bit depth 24Bit int</b>, a 44.100 Hz, en la carpeta de la canción.</li>
+        <li>Acá tocá <b>Medir un WAV de FL…</b>: te dice si llega a −14 LUFS y −1 dBTP, y qué perilla mover si no.</li>
+        <li>Cuando está bien, <b>Usar como master</b>: queda el WAV y se arma el MP3 320. El master anterior no se borra.</li>
+      </ol>
+      <div class="fila" style="margin-top:12px">
+        <button class="b pri" id="mzElegir">Medir un WAV de FL…</button>
+        <button class="b" id="mzMedirMaster">Medir el master actual</button>
+        <button class="b" id="mzAbrir">Abrir la carpeta</button>
+      </div>
+      <div class="aviso" id="mzAviso"></div>
+    </div>
+    <div class="caja" id="mzMedidaCaja" hidden>
+      <h2 id="mzMedidaTitulo">Medición</h2>
+      <div id="mzMedida"></div>
+      <div class="fila" style="margin-top:10px"><button class="b pri" id="mzUsar" hidden>Usar como master</button></div>
+    </div>
+    <div class="caja">
+      <h2>Lo que tiene esta canción</h2>
+      <div id="mzEstado" class="vacio">—</div>
+    </div>
+  </section>
+
+  <section class="hoja" id="h-videoclip">
+    <div class="caja">
+      <h2>Videoclip en tu estudio</h2>
+      <div class="aviso" style="margin-top:0">
+        Se arma con tu modelo (<small class="ruta">D:\Nook\Videos\Blender\music_studio_at_home - Reversion #4</small>), que nunca se modifica:
+        se trabaja sobre una copia. Los pasos largos siguen aunque cierres el Estudio. Mientras renderiza, no apagues la compu:
+        si se apaga, tocá «Seguir renderizando» y sigue desde el último cuadro.
+      </div>
+      <div class="fila" style="margin-top:10px">
+        <label class="campo">Título en los carteles <input type="text" id="vcTitulo" size="22"></label>
+      </div>
+      <div id="vcPasos" style="margin-top:10px"></div>
+      <div class="aviso" id="vcAviso"></div>
+    </div>
+  </section>
+
+  <section class="hoja" id="h-campana">
+    <div class="caja">
+      <h2>Tapa y clips</h2>
+      <div class="fila">
+        <label class="campo">Toma
+          <select id="cpCamara">
+            <option value="Detalle">Detalle (cartel NOOK y monitores)</option>
+            <option value="Animacion">Escritorio</option>
+            <option value="Cenital">Desde arriba</option>
+            <option value="Frente set-up">Frente del set-up</option>
+          </select>
+        </label>
+        <label class="campo">Cuadro <input type="number" id="cpCuadro" value="1200" min="0" step="60"></label>
+        <button class="b pri" id="cpTapa">Armar la tapa 3000 × 3000</button>
+        <button class="b" id="cpClips">Armar 3 clips de 20 s</button>
+        <button class="b" id="cpAbrir">Abrir la carpeta</button>
+      </div>
+      <div class="aviso" id="cpAvisoMedios">La tapa sale de una foto del estudio con las pantallas de esta canción (hace falta el videoclip renderizado). Los clips son las tres partes con más energía.</div>
+      <div id="cpMedios"></div>
+    </div>
+
+    <div class="caja">
+      <h2>Plan de lanzamiento</h2>
+      <div class="fila">
+        <label class="campo">Fecha de salida <input type="date" id="cpFecha"></label>
+        <button class="b pri" id="cpPlan">Armar el plan</button>
+        <button class="b" id="cpIcs">Pasar a mi calendario (.ics)</button>
+      </div>
+      <div class="aviso">Cada post es un borrador. Corregí el texto y marcá <b>Aprobado</b> cuando esté bien; <b>Publicado</b> lo marcás vos después de subirlo. El Estudio no publica nada solo.</div>
+      <div id="cpPlanLista" style="margin-top:10px"></div>
+    </div>
+
+    <div class="caja">
+      <h2>Licencias de los sonidos</h2>
+      <div class="fila"><button class="b" id="cpLic">Revisar los sonidos del .flp</button></div>
+      <div class="aviso">Antes de publicar, cada pack tiene que permitir usarlo en canciones que se venden o se suben a plataformas. Marcá los que confirmaste.</div>
+      <div id="cpLicLista"></div>
+    </div>
+
+    <div class="caja">
+      <h2>Distribuidora (Spotify y Apple Music)</h2>
+      <div id="cpDistro"></div>
+    </div>
+  </section>
+
+  <section class="hoja" id="h-metricas">
+    <div class="caja">
+      <h2>YouTube</h2>
+      <div class="fila">
+        <label class="campo">Clave de la API <input type="password" id="mtClave" size="28" placeholder="la escribís vos"></label>
+        <button class="b" id="mtClaveGuardar">Guardar clave</button>
+        <span class="chip">Clave <b id="mtHayClave">—</b></span>
+      </div>
+      <div class="fila" style="margin-top:8px">
+        <label class="campo">Links de tus videos <input type="text" id="mtVideos" size="48" placeholder="https://youtu.be/… separados por coma"></label>
+        <button class="b" id="mtVideosGuardar">Guardar</button>
+        <button class="b pri" id="mtYoutube">Actualizar YouTube</button>
+      </div>
+      <div class="aviso">La clave se saca en console.cloud.google.com (YouTube Data API v3) y queda sólo en esta compu. Con ella se leen vistas, me gusta y comentarios, nada más.</div>
+    </div>
+    <div class="caja">
+      <h2>TikTok, Spotify y Apple Music</h2>
+      <div class="fila">
+        <select id="mtRed"><option>TikTok</option><option>Spotify</option><option>Apple Music</option><option>YouTube</option></select>
+        <input type="text" id="mtCancion" placeholder="canción" size="16">
+        <input type="text" id="mtMetrica" placeholder="métrica (reproducciones…)" size="20">
+        <input type="text" id="mtValor" placeholder="número" size="8">
+        <button class="b" id="mtAgregar">Agregar</button>
+        <button class="b" id="mtCsv">Importar CSV…</button>
+      </div>
+      <div class="aviso">No tienen una API abierta: los números salen de lo que exportan TikTok Studio, Spotify for Artists o la distribuidora (CSV), o se cargan a mano.</div>
+    </div>
+    <div class="caja">
+      <h2>Semana a semana</h2>
+      <div id="mtTablero" class="vacio">Todavía no hay números.</div>
+    </div>
   </section>
 </main>
 
 <script src="compositor.js"></script>
 <script src="analizador.js"></script>
 <script src="estudio.js"></script>
+<script src="lanzamiento.js"></script>
+<script src="efectos.js"></script>
 </body>
 </html>

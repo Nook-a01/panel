@@ -23,6 +23,12 @@
       "estudio.js",
       "compositor.js",
       "analizador.js",
+      "aprender-ritmos.js",
+      "lanzamiento-motor.js",
+      "lanzamiento.js",
+      "efectos.js",
+      "estilo.css",
+      "videoclip/**",
       "pieza-inicial.json",
       "icono.png",
       "package.json"

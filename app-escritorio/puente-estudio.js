@@ -14,6 +14,9 @@ contextBridge.exposeInMainWorld("estudio", {
 
   refListar:       ()      => ipcRenderer.invoke("estudio:ref-listar"),
   refAgregar:      ()      => ipcRenderer.invoke("estudio:ref-agregar"),
+  refCarpeta:      ()      => ipcRenderer.invoke("estudio:ref-carpeta"),
+  bancoRitmos:     ()      => ipcRenderer.invoke("estudio:banco-ritmos"),
+  aprenderRitmos:  ()      => ipcRenderer.invoke("estudio:aprender-ritmos"),
   refQuitar:       (ruta)  => ipcRenderer.invoke("estudio:ref-quitar", ruta),
   refLeer:         (ruta)  => ipcRenderer.invoke("estudio:ref-leer", ruta),
   fichas:          ()      => ipcRenderer.invoke("estudio:fichas"),
@@ -33,4 +36,36 @@ contextBridge.exposeInMainWorld("estudio", {
 
   donde:           ()      => ipcRenderer.invoke("estudio:donde"),
   abrirCarpeta:    ()      => ipcRenderer.invoke("estudio:abrir-carpeta"),
+});
+
+// Mezcla, Videoclip, Campaña y Métricas (lanzamiento-motor.js). Todas trabajan
+// sobre una canción de Mis canciones, que se nombra por su carpeta relativa.
+contextBridge.exposeInMainWorld("lanzamiento", {
+  canciones:       ()            => ipcRenderer.invoke("lz:canciones"),
+  abrir:           (id, rel)     => ipcRenderer.invoke("lz:abrir", id, rel),
+
+  mezcla:          (id)          => ipcRenderer.invoke("lz:mezcla", id),
+  medirMaster:     (id)          => ipcRenderer.invoke("lz:medir-master", id),
+  elegirWav:       (id)          => ipcRenderer.invoke("lz:elegir-wav", id),
+  usarMaster:      (id, wav)     => ipcRenderer.invoke("lz:usar-master", id, wav),
+
+  videoclip:       (id)          => ipcRenderer.invoke("lz:videoclip", id),
+  pasoVideoclip:   (id, paso, o) => ipcRenderer.invoke("lz:videoclip-paso", id, paso, o),
+
+  campana:         (id)          => ipcRenderer.invoke("lz:campana", id),
+  armarPlan:       (id, fecha)   => ipcRenderer.invoke("lz:campana-plan", id, fecha),
+  guardarCampana:  (id, cambios) => ipcRenderer.invoke("lz:campana-guardar", id, cambios),
+  exportarIcs:     (id)          => ipcRenderer.invoke("lz:campana-ics", id),
+  armarTapa:       (id, o)       => ipcRenderer.invoke("lz:campana-tapa", id, o),
+  armarClips:      (id)          => ipcRenderer.invoke("lz:campana-clips", id),
+  licencias:       (id)          => ipcRenderer.invoke("lz:licencias", id),
+
+  metricas:        ()            => ipcRenderer.invoke("lz:metricas"),
+  agregarMetrica:  (e)           => ipcRenderer.invoke("lz:metrica-agregar", e),
+  borrarMetrica:   (i)           => ipcRenderer.invoke("lz:metrica-borrar", i),
+  videosYoutube:   (ids)         => ipcRenderer.invoke("lz:youtube-videos", ids),
+  claveYoutube:    (clave)       => ipcRenderer.invoke("lz:youtube-clave", clave),
+  hayClaveYoutube: ()            => ipcRenderer.invoke("lz:youtube-hay-clave"),
+  actualizarYoutube: ()          => ipcRenderer.invoke("lz:youtube-actualizar"),
+  importarCsv:     (red)         => ipcRenderer.invoke("lz:importar-csv", red),
 });
