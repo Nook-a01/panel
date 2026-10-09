@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-09T16:10:46.547Z",
+ "actualizado": "2026-10-09T20:52:48.187Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -952,9 +953,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1232,9 +1232,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1579,9 +1578,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1616,9 +1614,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1629,9 +1626,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1690,9 +1686,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1973,6 +1968,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Miami coach urges MLS fans to enjoy Lionel Messi after Argentina adiós",
+     "resumen": "Inter Miami coach Cristian \"Kily\" González said Argentina will miss Lionel Messi following the captain's international retirement before urging fans to enjoy his time with the MLS club.",
+     "fecha": "2026-10-09T17:44:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727143_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50140867/miami-coach-urges-mls-fans-enjoy-lionel-messi-argentina-adios"
+    },
+    {
      "titulo": "Harry Kane interest in MLS 'fulfilment of a dream' - commissioner",
      "resumen": "MLS commissioner Don Garber would love Harry Kane to follow Lionel Messi across the pond and says the England skipper's interest helps fulfil a dream that Sir David Beckham kept alive.",
      "fecha": "2026-10-08T16:13:02Z",
@@ -2006,13 +2008,6 @@
      "fecha": "2026-10-07T11:17:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Fire beat Whitecaps in matchup of ex-Bayern teammates Lewandowski, Müller",
-     "resumen": "Philip Zinckernagel scored early in the second half and Maren Haile-Selassie had a late goal and an assist as Chicago Fire FC beat the Vancouver Whitecaps 3-1 on Tuesday night.",
-     "fecha": "2026-10-07T03:31:27Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761660.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761660"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2317,10 +2312,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2626,18 +2620,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Singapore Grand Prix: FIA confirms software issue in sprint qualifying was caused by 'human error'",
+     "resumen": "Formula 1 encountered its second technical mishap in a less than a week after an FIA official forgot to push a button needed to enable full engine power in sprint qualifying for the Singapore Grand Prix.",
+     "fecha": "2026-10-09T16:27:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728271_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131328/fia-confirm-software-issue-sprint-qualifying-was-caused-human-error-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
      "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
      "fecha": "2026-10-09T16:00:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Singapore Grand Prix: FIA confirm software issue in sprint qualifying was caused by 'human error'",
-     "resumen": "Formula 1 encountered its second technical mishap in a less than a week after an FIA official forgot to push a button needed to enable full engine power in sprint qualifying for the Singapore Grand Prix.",
-     "fecha": "2026-10-09T15:55:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728271_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131328/fia-confirm-software-issue-sprint-qualifying-was-caused-human-error-singapore-grand-prix-marina-bay-circuit-formula-1"
     },
     {
      "titulo": "Max Verstappen takes first pole for sprint race at Singapore Grand Prix following another settings issue",
