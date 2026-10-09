@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-08T15:34:56.554Z",
+ "actualizado": "2026-10-09T02:07:54.097Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 14,
+   "total": 13,
    "proximos": 8
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401912542",
-   "miLado": "local",
-   "idEspn": "401912542",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs São Paulo",
-   "inicio": "2026-09-09T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Alberto José Armando (La Bombonera)",
-   "local": "Boca Juniors",
-   "visitante": "São Paulo",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png",
-   "finalizado": true,
-   "marcador": "1 - 0"
-  },
   {
    "id": "espn-761792",
    "miLado": "visitante",

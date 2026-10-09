@@ -1,16 +1,16 @@
 {
- "actualizado": "2026-10-08T21:18:23.263Z",
+ "actualizado": "2026-10-09T02:07:54.097Z",
  "feeds": {
   "boca": {
    "compitiendo": [
     {
-     "nombre": "CONMEBOL Sudamericana",
-     "liga": "conmebol.sudamericana",
+     "nombre": "Argentine Liga Profesional de Fútbol",
+     "liga": "arg.1",
      "ruta": "soccer"
     },
     {
-     "nombre": "Argentine Liga Profesional de Fútbol",
-     "liga": "arg.1",
+     "nombre": "CONMEBOL Sudamericana",
+     "liga": "conmebol.sudamericana",
      "ruta": "soccer"
     },
     {
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -443,23 +442,11 @@
      "id": "202025",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
      "nombre": "Carlos Palacios",
-     "dorsal": "7",
+     "dorsal": "8",
      "posicion": "Midfielder",
      "posCorta": "M",
      "edad": 26,
      "pais": "Chile",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "256199",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Tomás Belmonte",
-     "dorsal": "8",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 28,
-     "pais": "Argentina",
      "foto": null,
      "lesionado": false
     },
@@ -519,6 +506,18 @@
      "posicion": "Midfielder",
      "posCorta": "M",
      "edad": 29,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "256199",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Tomás Belmonte",
+     "dorsal": "30",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 28,
      "pais": "Argentina",
      "foto": null,
      "lesionado": false
@@ -712,8 +711,9 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Leonel-flores_w862.webp/330px-Leonel-flores_w862.webp?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421348",
@@ -728,34 +728,10 @@
      "lesionado": false
     },
     {
-     "id": "421349",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Miguel Ventos",
-     "dorsal": "45",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 21,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
      "id": "404208",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
      "nombre": "Joaquín Piñeyro",
      "dorsal": "49",
-     "posicion": "Forward",
-     "posCorta": "F",
-     "edad": 18,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "421351",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Juan Pussetto",
-     "dorsal": "52",
      "posicion": "Forward",
      "posCorta": "F",
      "edad": 18,
@@ -977,9 +953,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1039,8 +1014,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1125,8 +1101,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1149,8 +1126,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1185,8 +1163,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1603,8 +1582,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1627,8 +1607,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1639,8 +1620,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1651,8 +1633,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1771,8 +1754,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
