@@ -68,6 +68,10 @@ main{position:relative;z-index:3;padding:10px 26px 140px;scroll-behavior:auto}
 .portada .letra{display:inline-block;transform:translateY(105%);opacity:0;animation:sube .9s var(--curva) forwards}
 @keyframes sube{to{transform:none;opacity:1}}
 .portada .linea{overflow:hidden;display:block;padding-top:.18em;margin-top:-.18em}
+.portada.chica{grid-template-columns:1fr;padding:7vh 4px 2vh;margin-top:2vh;border-top:1px solid var(--linea)}
+.portada.chica .n{display:none}
+.portada.chica h2{font-size:clamp(26px,3.6vw,46px);color:var(--rosa2)}
+.portada.chica p{grid-column:1;font-size:.92rem}
 
 /* tarjetas de vidrio que suben */
 .caja{position:relative;background:var(--caja);border:1px solid var(--linea);border-radius:22px;padding:22px 24px;

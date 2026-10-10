@@ -11,31 +11,25 @@
   var timers = [], apagados = [], t0 = 0, raf = 0;
 
   /* ---------------- pestañas ----------------
-     Arriba, las cinco secciones. Componer tiene sus propias sub-pestañas
-     (Canción, Referencias, Tocar, Plugins, Samples) y se acuerda de la última
-     que abriste; las otras secciones son una sola hoja cada una. */
-  var subActual = "componer";
+     Abajo, las cinco secciones. Componer es UNA sola página larga (10/10/2026,
+     pedido de Agustín): Canción, Referencias, Tocar, Plugins y Samples, una
+     debajo de la otra. Las otras secciones son una sola hoja cada una. */
+  var COMPONER = ["componer", "ref", "tocar", "plugins", "samples"];
   function mostrarHoja(id) {
-    document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", h.id === "h-" + id); });
+    var ids = id === "componer" ? COMPONER : [id];
+    document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", ids.indexOf(h.id.replace(/^h-/, "")) >= 0); });
   }
   document.querySelectorAll("nav.secciones button").forEach(function (b) {
     b.onclick = function () {
       document.querySelectorAll("nav.secciones button").forEach(function (x) { x.classList.toggle("on", x === b); });
       var componer = b.dataset.s === "componer";
-      $("#subComponer").hidden = !componer;
       // Mezcla, Videoclip, Campaña y Métricas eligen la canción en su propia barra (lanzamiento.js).
       $("#barraCancion").hidden = componer;
-      mostrarHoja(componer ? subActual : b.dataset.s);
+      mostrarHoja(b.dataset.s);
       document.dispatchEvent(new CustomEvent("seccion", { detail: b.dataset.s }));
     };
   });
-  document.querySelectorAll("nav.sub button").forEach(function (b) {
-    b.onclick = function () {
-      document.querySelectorAll("nav.sub button").forEach(function (x) { x.classList.toggle("on", x === b); });
-      subActual = b.dataset.h;
-      mostrarHoja(subActual);
-    };
-  });
+  mostrarHoja("componer");
 
   function esc(t) {
     return String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;")

@@ -96,13 +96,14 @@
   }
 
   /* ---------------- portada de cada hoja ---------------- */
-  function portada(hoja, clave) {
+  // chica = las partes de Componer que van debajo de la primera: título mediano, sin número.
+  function portada(hoja, clave, chica) {
     var s = SECCIONES[clave];
     if (!s) return;
     var vieja = hoja.querySelector(".portada");
     if (vieja) vieja.remove();
     var p = document.createElement("div");
-    p.className = "portada";
+    p.className = "portada" + (chica ? " chica" : "");
     var letras = s[1].split("").map(function (c, i) {
       return '<span class="letra" style="animation-delay:' + (0.05 + i * 0.035) + 's">' + (c === " " ? "&nbsp;" : c) + "</span>";
     }).join("");
@@ -133,16 +134,25 @@
     });
   }).observe(main, { childList: true, subtree: true });
 
+  var cambioPedido = false;
   function alCambiarHoja() {
-    var hoja = document.querySelector(".hoja.on");
-    if (!hoja) return;
-    var clave = hoja.id.replace(/^h-/, "");
-    portada(hoja, clave);
-    prepararTarjetas(hoja);
-    cambiarAnillo((SECCIONES[clave] || ["", "Estudio"])[1]);
-    objetivo = actual = 0;
-    main.scrollTop = 0;
-    requestAnimationFrame(moverBola);
+    // Varias hojas pueden prenderse juntas (Componer son cinco): una sola pasada.
+    if (cambioPedido) return;
+    cambioPedido = true;
+    requestAnimationFrame(function () {
+      cambioPedido = false;
+      var hojas = document.querySelectorAll(".hoja.on");
+      if (!hojas.length) return;
+      hojas.forEach(function (hoja, i) {
+        portada(hoja, hoja.id.replace(/^h-/, ""), i > 0);
+        prepararTarjetas(hoja);
+      });
+      var clave = hojas[0].id.replace(/^h-/, "");
+      cambiarAnillo((SECCIONES[clave] || ["", "Estudio"])[1]);
+      objetivo = actual = 0;
+      main.scrollTop = 0;
+      requestAnimationFrame(moverBola);
+    });
   }
   // estudio.js cambia la clase "on" de las hojas: se mira ese cambio.
   new MutationObserver(function (cambios) {
