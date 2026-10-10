@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T07:04:44.387Z",
+ "actualizado": "2026-10-10T13:39:21.385Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1628,9 +1628,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -2624,6 +2623,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Singapore Grand Prix: George Russell crashes out of sprint after taking early lead",
+     "resumen": "George Russell crashed out of the lead of the sprint race at the Singapore Grand Prix as his slim championship chances took another brutal blow.",
+     "fecha": "2026-10-10T12:39:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728579_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131337/george-russell-crashes-sprint-taking-early-lead-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen calls on F1 to ditch sprint races 'where you can't pass' after Singapore GP win",
+     "resumen": "Max Verstappen has called on Formula 1 to stop hosting sprint races on circuits where overtaking is difficult after very little passing took place during Saturday's 20-lap sprint in Singapore.",
+     "fecha": "2026-10-10T12:36:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728602_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131340/max-verstappen-calls-f1-ditch-sprint-races-where-cant-pass-singapore-gp-win-lewis-hamilton-charles-leclerc-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen claims sprint victory at Singapore Grand Prix, George Russell crashes out of lead",
+     "resumen": "Red Bull's Max Verstappen converted pole position into a sprint race victory at the Singapore Grand Prix.",
+     "fecha": "2026-10-10T12:35:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728591_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131336/max-verstappen-claims-sprint-victory-singapore-grand-prix-george-russell-crashes-lead-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-10T08:58:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
      "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
      "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
      "fecha": "2026-10-10T06:37:30Z",
@@ -2636,34 +2663,6 @@
      "fecha": "2026-10-09T16:27:16Z",
      "imagen": "https://a.espncdn.com/photo/2026/1009/r1728271_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131328/fia-confirm-software-issue-sprint-qualifying-was-caused-human-error-singapore-grand-prix-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-09T16:00:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Max Verstappen takes first pole for sprint race at Singapore Grand Prix following another settings issue",
-     "resumen": "Max Verstappen has put his Red Bull on pole position for Saturday's sprint race at the Singapore Grand Prix with minutes to spare.",
-     "fecha": "2026-10-09T15:52:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728240_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131324/max-verstappen-takes-first-pole-sprint-race-singapore-grand-prix-impressive-lap-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "'Watch Teletubbies, not F1': Toto Wolff hits back at 'brainless' Kimi Antonelli driver favouritism claims",
-     "resumen": "Toto Wolff has strongly denied accusations of Mercedes bias in the title battle between Kimi Antonelli and George Russell this season, labelling such theories as \"brainless\" and \"nonsensical.\"",
-     "fecha": "2026-10-09T12:51:52Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728202_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131326/watch-teletubbies-not-f1-toto-wolff-hits-back-brainless-kimi-antonelli-driver-favouritism-claims-george-russell"
-    },
-    {
-     "titulo": "Singapore Grand Prix: George Russell sets pace in sole practice session ahead of sprint qualifying",
-     "resumen": "George Russell topped the timesheets in the first and only practice session at the Singapore Grand Prix.",
-     "fecha": "2026-10-09T09:56:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/r1728149_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131323/george-russell-sets-pace-sole-practice-session-ahead-sprint-qualifying-singapore-grand-prix-marina-bay-circuit-formula-1"
     }
    ],
    "resultados": null,
