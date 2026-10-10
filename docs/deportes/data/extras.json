@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T18:33:43.793Z",
+ "actualizado": "2026-10-10T22:30:17.933Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -131,10 +131,10 @@
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-      "pj": "11",
-      "pts": "13",
+      "pj": "12",
+      "pts": "14",
       "g": "4",
-      "e": "1",
+      "e": "2",
       "p": "6",
       "dg": "+2",
       "mio": false,
@@ -196,10 +196,10 @@
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "11",
-      "pts": "9",
+      "pj": "12",
+      "pts": "10",
       "g": "2",
-      "e": "3",
+      "e": "4",
       "p": "6",
       "dg": "-6",
       "mio": false,
@@ -1370,6 +1370,19 @@
       "pos": 1
      },
      {
+      "equipo": "Chicago Fire FC",
+      "abrev": "CHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "pj": "28",
+      "pts": "48",
+      "g": "14",
+      "e": "6",
+      "p": "8",
+      "dg": "+11",
+      "mio": false,
+      "pos": 2
+     },
+     {
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
@@ -1380,7 +1393,7 @@
       "p": "5",
       "dg": "+14",
       "mio": true,
-      "pos": 2
+      "pos": 3
      },
      {
       "equipo": "New England Revolution",
@@ -1392,19 +1405,6 @@
       "e": "4",
       "p": "9",
       "dg": "+9",
-      "mio": false,
-      "pos": 3
-     },
-     {
-      "equipo": "Chicago Fire FC",
-      "abrev": "CHI",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "27",
-      "pts": "45",
-      "g": "13",
-      "e": "6",
-      "p": "8",
-      "dg": "+10",
       "mio": false,
       "pos": 4
      },
@@ -1451,12 +1451,12 @@
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "27",
+      "pj": "28",
       "pts": "33",
       "g": "8",
       "e": "9",
-      "p": "10",
-      "dg": "+5",
+      "p": "11",
+      "dg": "+4",
       "mio": false,
       "pos": 8
      },
@@ -1487,6 +1487,19 @@
       "pos": 10
      },
      {
+      "equipo": "Toronto FC",
+      "abrev": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "pj": "28",
+      "pts": "32",
+      "g": "7",
+      "e": "11",
+      "p": "10",
+      "dg": "-11",
+      "mio": false,
+      "pos": 11
+     },
+     {
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
@@ -1497,7 +1510,7 @@
       "p": "8",
       "dg": "-8",
       "mio": false,
-      "pos": 11
+      "pos": 12
      },
      {
       "equipo": "Columbus Crew",
@@ -1509,19 +1522,6 @@
       "e": "5",
       "p": "14",
       "dg": "-4",
-      "mio": false,
-      "pos": 12
-     },
-     {
-      "equipo": "Toronto FC",
-      "abrev": "TOR",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-      "pj": "27",
-      "pts": "29",
-      "g": "6",
-      "e": "11",
-      "p": "10",
-      "dg": "-12",
       "mio": false,
       "pos": 13
      },
@@ -1542,12 +1542,12 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "27",
+      "pj": "28",
       "pts": "24",
       "g": "6",
       "e": "6",
-      "p": "15",
-      "dg": "-20",
+      "p": "16",
+      "dg": "-21",
       "mio": false,
       "pos": 15
      }
@@ -1626,9 +1626,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1700,8 +1699,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1970,6 +1970,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Chicago Fire FC vs. New York City FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. New York City FC, 10/10/2026",
+     "fecha": "2026-10-10T20:52:06Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1010/e1e57180-6266-4b6b-876c-51af7b765f8b/e1e57180-6266-4b6b-876c-51af7b765f8b.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50150657/chicago-fire-fc-vs-new-york-city-fc-game-highlights"
+    },
+    {
      "titulo": "Miami coach urges MLS fans to enjoy Lionel Messi after Argentina adiós",
      "resumen": "Inter Miami coach Cristian \"Kily\" González said Argentina will miss Lionel Messi following the captain's international retirement before urging fans to enjoy his time with the MLS club.",
      "fecha": "2026-10-09T17:44:02Z",
@@ -2003,13 +2010,6 @@
      "fecha": "2026-10-07T15:33:46Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724537_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50112795/ted-lasso-season-4-women-soccer"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-07T11:17:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2722,6 +2722,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC Fight Night: Allen vs. Duncan",
+     "fecha": "2026-10-10T21:00Z",
+     "marcador": null,
+     "sede": "Meta APEX"
+    },
     {
      "titulo": "UFC 332: Silva vs. Wang",
      "fecha": "2026-10-03T20:00Z",
