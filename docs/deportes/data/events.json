@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-09T02:07:54.097Z",
+ "actualizado": "2026-10-10T00:48:33.275Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 13,
-   "proximos": 8
+   "proximos": 7
   },
   {
    "id": "argentina",
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 12,
+   "total": 11,
    "proximos": 7
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761792",
-   "miLado": "visitante",
-   "idEspn": "761792",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Chicago Fire FC vs Inter Miami CF",
-   "inicio": "2026-09-10T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Soldier Field",
-   "local": "Chicago Fire FC",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "1 - 1"
-  },
   {
    "id": "espn-401841557",
    "miLado": "local",
@@ -595,8 +573,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",
