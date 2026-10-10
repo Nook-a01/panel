@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T00:48:33.275Z",
+ "actualizado": "2026-10-10T07:04:44.387Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -47,8 +47,8 @@
    "color": "#38d0ff",
    "ruta": "rugby",
    "liga": "289234",
-   "total": 1,
-   "proximos": 1
+   "total": 2,
+   "proximos": 2
   },
   {
    "id": "f1",
@@ -1394,6 +1394,28 @@
    "visitante": "Canada",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/25.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-603518",
+   "miLado": "local",
+   "idEspn": "603518",
+   "liga": "164205",
+   "ruta": "rugby",
+   "feedId": "pumas",
+   "feedLabel": "Los Pumas",
+   "sport": "rugby",
+   "emoji": "🏉",
+   "titulo": "Argentina vs Spain",
+   "inicio": "2027-10-10T04:15Z",
+   "horaConfirmada": true,
+   "competicion": "Rugby World Cup",
+   "sede": "Marvel Stadium",
+   "local": "Argentina",
+   "visitante": "Spain",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/spa.png",
    "finalizado": false,
    "marcador": null
   }
