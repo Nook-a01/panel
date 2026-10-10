@@ -1,0 +1,144 @@
+/* Estudio — la piel.
+   Va después del <style> de estudio.html y lo pisa: la estructura y los ids
+   son los mismos, así que estudio.js y lanzamiento.js no se enteran.
+   Idea tomada de sitios de estudio de diseño (paffi.it): un anillo de texto
+   gigante que gira detrás, tarjetas que suben, una pastilla de vidrio para
+   moverse y un cursor propio. Todo hecho a mano, sin librerías. */
+
+:root{
+  --fondo:#0e0d12; --caja:rgba(22,20,30,.62); --caja2:rgba(255,255,255,.06); --linea:rgba(255,255,255,.10);
+  --tinta:#f4f1f7; --tinta2:#a59fb2;
+  --rosa:#ff2bd6; --rosa2:#ff7be6; --acento:#ff2bd6; --acento2:#ffd36f; --menta:#7CE7C6; --rojo:#ff6b81;
+  --f:"Bahnschrift","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --curva:cubic-bezier(.16,1,.3,1);
+}
+
+html,body{background:var(--fondo)}
+body{font-family:var(--f);letter-spacing:.005em}
+::selection{background:var(--rosa);color:#fff}
+
+/* ---------- fondo: anillo de texto 3D + grano ---------- */
+#anillo{position:fixed;inset:0;pointer-events:none;z-index:0;perspective:1400px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center}
+#anillo .rueda{position:relative;transform-style:preserve-3d;will-change:transform}
+#anillo .rueda span{position:absolute;left:50%;top:50%;font:700 clamp(90px,15vw,230px)/1 var(--f);
+  text-transform:uppercase;white-space:nowrap;color:transparent;-webkit-text-stroke:1.4px rgba(255,255,255,.11);
+  backface-visibility:hidden;transform-origin:center}
+#anillo .rueda span.lleno{color:rgba(255,43,214,.07);-webkit-text-stroke:0}
+#anillo.cambia .rueda{transition:opacity .5s;opacity:0}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::before{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:0;
+  background:radial-gradient(40% 35% at var(--mx,50%) var(--my,40%),rgba(255,43,214,.13),transparent 70%),
+             radial-gradient(35% 30% at 80% 90%,rgba(124,231,198,.06),transparent 70%)}
+
+/* ---------- arriba: logo y canción ---------- */
+header{position:relative;z-index:5;border:0;padding:18px 26px 6px;justify-content:space-between}
+header h1{font:700 1.35rem var(--f);letter-spacing:-.02em;text-transform:none}
+header h1 .o{color:var(--rosa)}
+header .pieza{font-size:.82rem;padding:6px 12px;border:1px solid var(--linea);border-radius:999px;
+  background:var(--caja2);backdrop-filter:blur(12px)}
+
+/* ---------- la pastilla de vidrio (secciones) ---------- */
+nav.secciones{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:20;border:1px solid var(--linea);
+  border-radius:999px;padding:6px;gap:2px;flex-wrap:nowrap;white-space:nowrap;background:rgba(20,18,28,.55);backdrop-filter:blur(18px) saturate(1.4);
+  box-shadow:0 18px 50px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+nav.secciones button{position:relative;z-index:1;border-radius:999px;padding:10px 18px;font:600 .9rem var(--f);
+  color:var(--tinta2);border:0;background:none;transition:color .35s var(--curva)}
+nav.secciones button.on{color:#fff;background:none;border:0}
+nav.secciones button .num{font-size:.68rem;opacity:.55;margin-right:6px;font-variant-numeric:tabular-nums}
+nav.secciones .bola{position:absolute;z-index:0;top:6px;bottom:6px;border-radius:999px;background:var(--rosa);
+  box-shadow:0 0 30px rgba(255,43,214,.55);transition:left .55s var(--curva),width .55s var(--curva)}
+nav.sub{position:relative;z-index:5;justify-content:center;padding:4px 18px 0}
+nav.sub button{border-radius:999px;padding:7px 14px;font:600 .8rem var(--f);border:1px solid transparent}
+nav.sub button.on{color:var(--tinta);background:var(--caja2);border-color:var(--linea);border-bottom-color:var(--linea)}
+.barraCancion{position:relative;z-index:5;justify-content:center}
+
+/* ---------- el escenario ---------- */
+main{position:relative;z-index:3;padding:10px 26px 140px;scroll-behavior:auto}
+.hoja{max-width:1100px;margin:0 auto}
+.hoja.on{animation:entraHoja .9s var(--curva) both}
+@keyframes entraHoja{from{opacity:0;transform:translateY(60px) scale(.985)}to{opacity:1;transform:none}}
+
+/* título gigante de cada sección (lo pone efectos.js) */
+.portada{padding:5vh 4px 3vh;display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:end}
+.portada .n{font:700 clamp(54px,9vw,120px)/.8 var(--f);color:transparent;-webkit-text-stroke:1.5px var(--rosa)}
+.portada h2{font:700 clamp(40px,6.4vw,92px)/.9 var(--f);letter-spacing:-.035em;margin:0;color:var(--tinta);text-transform:uppercase}
+.portada p{grid-column:2;margin:6px 0 0;max-width:640px;color:var(--tinta2);font-size:1rem}
+.portada .letra{display:inline-block;transform:translateY(105%);opacity:0;animation:sube .9s var(--curva) forwards}
+@keyframes sube{to{transform:none;opacity:1}}
+.portada .linea{overflow:hidden;display:block;padding-top:.18em;margin-top:-.18em}
+
+/* tarjetas de vidrio que suben */
+.caja{position:relative;background:var(--caja);border:1px solid var(--linea);border-radius:22px;padding:22px 24px;
+  margin:0 0 18px;backdrop-filter:blur(22px) saturate(1.2);box-shadow:0 30px 80px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:transform .9s var(--curva),opacity .9s var(--curva),border-color .4s}
+.caja.oculta{opacity:0;transform:translateY(70px) rotateX(6deg)}
+.caja:hover{border-color:rgba(255,43,214,.28)}
+.caja h2{font:700 1.15rem var(--f);letter-spacing:-.01em;color:var(--tinta);display:flex;align-items:center;gap:10px}
+.caja h2::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rosa);box-shadow:0 0 14px var(--rosa)}
+
+/* botones */
+button.b,select,input[type=text],input[type=number],input[type=date],input[type=password],.campo input,.campo select{
+  border-radius:12px;border:1px solid var(--linea);background:rgba(255,255,255,.05);color:var(--tinta);
+  transition:background .3s,border-color .3s,transform .35s var(--curva),box-shadow .3s}
+button.b{padding:10px 16px;font-weight:600}
+button.b:hover:not(:disabled){background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+button.pri{background:var(--rosa);border-color:var(--rosa);color:#fff;box-shadow:0 10px 30px rgba(255,43,214,.35)}
+button.pri:hover:not(:disabled){background:var(--rosa2);border-color:var(--rosa2);box-shadow:0 14px 40px rgba(255,43,214,.5)}
+button.b:active:not(:disabled){transform:scale(.97)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rosa);box-shadow:0 0 0 3px rgba(255,43,214,.22)}
+.chip{border-radius:999px;background:rgba(255,255,255,.05)}
+.chip b{color:var(--rosa2)}
+.aviso.bien,.ok{color:var(--menta)} .aviso.mal,.mal{color:var(--rojo)}
+td.n{color:var(--acento2)}
+.rollo i,.curva i,.paso,.barra i{background:linear-gradient(90deg,var(--rosa),var(--rosa2))}
+.barra{height:8px;border-radius:999px;background:rgba(255,255,255,.07)}
+.barra i{border-radius:999px;box-shadow:0 0 18px rgba(255,43,214,.6);transition:width 1s var(--curva)}
+
+/* pasos del videoclip: tarjetas numeradas */
+.paso-vc{grid-template-columns:3rem 1fr auto;padding:16px 4px;border-bottom:1px solid var(--linea)}
+.paso-vc .marca{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-size:1rem;
+  border:1px solid var(--linea);background:rgba(255,255,255,.04)}
+.paso-vc b{font-size:1.02rem}
+.post{border-radius:16px;background:rgba(255,255,255,.035);transition:transform .4s var(--curva),border-color .3s}
+.post:hover{transform:translateX(6px);border-color:rgba(255,43,214,.3)}
+.post.aprobado{border-color:rgba(124,231,198,.4)}
+.estado.aprobado{color:var(--menta)} .estado.borrador{color:var(--acento2)}
+.medios .m{border-radius:16px}
+
+/* barra de avance del scroll, a la izquierda */
+#avance{position:fixed;left:9px;top:50%;width:3px;height:120px;transform:translateY(-50%);z-index:20;
+  background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+#avance i{position:absolute;left:0;right:0;top:0;height:24px;background:var(--rosa);border-radius:3px;box-shadow:0 0 12px var(--rosa)}
+
+/* cursor propio */
+@media (pointer:fine){
+  body.cursor-propio, body.cursor-propio button, body.cursor-propio a, body.cursor-propio label{cursor:none}
+  body.cursor-propio input, body.cursor-propio textarea, body.cursor-propio select{cursor:auto}
+}
+#cursor{position:fixed;left:0;top:0;z-index:100;pointer-events:none;width:34px;height:34px;margin:-17px 0 0 -17px;
+  border:1.5px solid rgba(255,255,255,.8);border-radius:50%;mix-blend-mode:difference;
+  transition:width .35s var(--curva),height .35s var(--curva),margin .35s var(--curva),background .3s,border-color .3s;
+  display:grid;place-items:center;font:700 .62rem var(--f);color:#000;text-transform:uppercase;letter-spacing:.05em}
+#cursor.sobre{width:64px;height:64px;margin:-32px 0 0 -32px;background:#fff;border-color:#fff}
+#cursor.texto{width:4px;height:26px;margin:-13px 0 0 -2px;border-radius:2px;background:#fff}
+#cursor-punto{position:fixed;left:0;top:0;z-index:101;pointer-events:none;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;
+  border-radius:50%;background:var(--rosa)}
+
+/* scrollbars finitas */
+::-webkit-scrollbar{width:8px;height:8px} ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:8px}
+::-webkit-scrollbar-track{background:transparent}
+main::-webkit-scrollbar{width:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  #anillo{display:none}
+}
+@media (max-width:760px){
+  nav.secciones{bottom:12px;max-width:calc(100vw - 20px);overflow-x:auto}
+  nav.secciones button{padding:9px 12px}
+  nav.secciones button .num{display:none}
+  #avance{display:none}
+  .portada{grid-template-columns:1fr} .portada p{grid-column:1}
+}

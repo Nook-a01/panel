@@ -9,10 +9,13 @@
 // QUÉ NO HACE
 // No abre nada fuera de esas carpetas, no escribe en ellas y no manda nada a
 // internet. Las piezas se guardan en tu carpeta de datos del programa.
+// (La única excepción es Métricas, en lanzamiento-motor.js: consulta la API de
+// YouTube cuando tocás «Actualizar», con la clave que escribiste vos.)
 
 const { ipcMain, dialog, app, shell } = require("electron");
 const path = require("node:path");
 const fs = require("node:fs/promises");
+const { fork } = require("node:child_process");
 
 // Donde Windows y FL Studio dejan los plugins. Se miran todas y se saltean
 // las que no existan, que es lo normal: nadie tiene las cinco.
@@ -62,8 +65,25 @@ async function pluginsDe(carpeta, clase) {
   return salida;
 }
 
+// Los instrumentos y efectos propios de FL no son VST: cada uno es una carpeta
+// en Plugins\Fruity\Generators o \Effects. Se listan por el nombre de la carpeta.
+const FL_PLUGINS = "D:\\Nook\\Fl Studio\\App\\Plugins\\Fruity";
+async function pluginsDeFL() {
+  const out = [];
+  for (const [sub, clase, tipo] of [["Generators", "FL Studio · instrumentos", "instrumento"], ["Effects", "FL Studio · efectos", "efecto"]]) {
+    const dir = path.join(FL_PLUGINS, sub);
+    let entradas;
+    try { entradas = await fs.readdir(dir, { withFileTypes: true }); } catch { continue; }
+    const lista = entradas.filter(e => e.isDirectory())
+      .map(e => ({ nombre: e.name, clase, tipo, ruta: path.join(dir, e.name) }))
+      .sort((a, b) => a.nombre.localeCompare(b.nombre));
+    if (lista.length) out.push({ ruta: dir, clase, plugins: lista });
+  }
+  return out;
+}
+
 async function escanearPlugins() {
-  const carpetas = [];
+  const carpetas = await pluginsDeFL();
   for (const c of CARPETAS_PLUGINS) {
     if (!(await existe(c.ruta))) continue;
     const lista = await pluginsDe(c.ruta, c.clase);
@@ -109,17 +129,37 @@ async function escanearSamples(raiz) {
 /* ---------------- referencias ----------------
    Canciones que le pasás para que las mida. Sólo se pueden leer las que están
    en la carpeta de referencias o las que agregaste vos con el botón: la
-   pantalla no puede pedir cualquier archivo del disco. */
-const DIR_REF = "D:\\Referencias";
+   pantalla no puede pedir cualquier archivo del disco.
+
+   La carpeta la elegís vos con el diálogo de Windows y queda en ajustes.json.
+   Si nunca elegiste una, se usa D:\Referencias, que era la de antes. */
+const DIR_REF_POR_DEFECTO = "D:\\Referencias";
 const AUDIO_REF = new Set([".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".aif", ".aiff"]);
 const TOPE_REF = 300 * 1024 * 1024;
 
+/* ---------------- banco de ritmos ---------------- */
+const LIBRERIA_FL = "D:\\Nook\\Fl Studio\\Librerias";
+
+function resumenBanco(banco) {
+  const generos = {};
+  Object.entries(banco.generos || {}).forEach(([g, l]) => {
+    generos[g] = { grooves: l.length, completos: l.filter(x => x.kick.length && (x.caja.length || x.hat.length)).length };
+  });
+  return { creado: banco.creado, leidos: banco.archivos.leidos, generos };
+}
+
+async function carpetaRef() {
+  const a = await leerJson(datos("ajustes.json"), {});
+  return typeof a.carpetaReferencias === "string" && a.carpetaReferencias ? a.carpetaReferencias : DIR_REF_POR_DEFECTO;
+}
+
 async function listarReferencias() {
+  const dir = await carpetaRef();
   const extras = await leerJson(datos("referencias.json"), []);
   const rutas = new Set(extras);
   try {
-    for (const e of await fs.readdir(DIR_REF, { withFileTypes: true })) {
-      if (e.isFile() && AUDIO_REF.has(path.extname(e.name).toLowerCase())) rutas.add(path.join(DIR_REF, e.name));
+    for (const e of await fs.readdir(dir, { withFileTypes: true })) {
+      if (e.isFile() && AUDIO_REF.has(path.extname(e.name).toLowerCase())) rutas.add(path.join(dir, e.name));
     }
   } catch { /* la carpeta puede no existir todavía */ }
   const archivos = [];
@@ -130,7 +170,7 @@ async function listarReferencias() {
     } catch { /* si el archivo ya no está, se saltea */ }
   }
   archivos.sort((a, b) => a.nombre.localeCompare(b.nombre));
-  return { carpeta: DIR_REF, existe: await existe(DIR_REF), archivos };
+  return { carpeta: dir, existe: await existe(dir), archivos };
 }
 
 /* ---------------- versiones ----------------
@@ -248,7 +288,12 @@ async function borrarVersion(id) {
 function registrar() {
   ipcMain.handle("estudio:plugins", () => escanearPlugins());
 
-  ipcMain.handle("estudio:carpetas", () => leerJson(datos("carpetas.json"), []));
+  // La librería de FL aparece siempre (no se guarda en carpetas.json, así
+  // "Aprender ritmos" no la lee dos veces); "propias" son las que agregaste.
+  ipcMain.handle("estudio:carpetas", async () => {
+    const propias = (await leerJson(datos("carpetas.json"), [])).filter(c => c !== LIBRERIA_FL);
+    return { fl: (await existe(LIBRERIA_FL)) ? LIBRERIA_FL : null, propias };
+  });
 
   ipcMain.handle("estudio:elegir-carpeta", async () => {
     const r = await dialog.showOpenDialog({
@@ -285,6 +330,55 @@ function registrar() {
       const extras = await leerJson(datos("referencias.json"), []);
       for (const f of r.filePaths) if (!extras.includes(f)) extras.push(f);
       await escribirJson(datos("referencias.json"), extras);
+    }
+    return listarReferencias();
+  });
+
+  // Banco de ritmos aprendido de la librería (ver aprender-ritmos.js). Se lee
+  // la librería de FL y las carpetas de samples que agregaste; sólo se escribe
+  // banco-ritmos.json en la carpeta de datos del Estudio.
+  ipcMain.handle("estudio:banco-ritmos", () => leerJson(datos("banco-ritmos.json"), null));
+  ipcMain.handle("estudio:aprender-ritmos", async () => {
+    const raices = [LIBRERIA_FL].concat(await leerJson(datos("carpetas.json"), []));
+    const vistas = [];
+    for (const r of raices) if (await existe(r) && !vistas.some(v => r.startsWith(v))) vistas.push(r);
+    if (!vistas.length) throw new Error("No encontré la librería de samples (" + LIBRERIA_FL + ").");
+    // Leer cientos de wav tarda unos segundos: corre en otro proceso para que
+    // la ventana no se congele mientras tanto.
+    const bancos = [];
+    for (let i = 0; i < vistas.length; i++) {
+      const salida = datos("banco-ritmos-" + i + ".tmp.json");
+      await fs.mkdir(path.dirname(salida), { recursive: true });
+      await new Promise((ok, mal) => {
+        const hijo = fork(path.join(__dirname, "aprender-ritmos.js"), [vistas[i], salida], { stdio: "ignore" });
+        hijo.on("exit", c => c === 0 ? ok() : mal(new Error("El aprendizaje se cortó (código " + c + ").")));
+        hijo.on("error", mal);
+      });
+      bancos.push(await leerJson(salida, null));
+      await fs.rm(salida, { force: true });
+    }
+    if (bancos.some(b => !b)) throw new Error("No pude leer el banco que se armó.");
+    const banco = bancos[0];
+    bancos.slice(1).forEach(b => {
+      Object.entries(b.generos).forEach(([g, l]) => { banco.generos[g] = (banco.generos[g] || []).concat(l); });
+      banco.archivos.leidos += b.archivos.leidos; banco.archivos.fallidos += b.archivos.fallidos;
+    });
+    banco.raiz = vistas;
+    await escribirJson(datos("banco-ritmos.json"), banco);
+    return resumenBanco(banco);
+  });
+
+  ipcMain.handle("estudio:ref-carpeta", async () => {
+    const actual = await carpetaRef();
+    const r = await dialog.showOpenDialog({
+      title: "Elegí la carpeta de referencias",
+      defaultPath: (await existe(actual)) ? actual : undefined,
+      properties: ["openDirectory", "createDirectory"],
+    });
+    if (!r.canceled && r.filePaths.length) {
+      const a = await leerJson(datos("ajustes.json"), {});
+      a.carpetaReferencias = r.filePaths[0];
+      await escribirJson(datos("ajustes.json"), a);
     }
     return listarReferencias();
   });
@@ -340,6 +434,10 @@ function registrar() {
     shell.openPath(datos());
     return true;
   });
+
+  // Mezcla, Videoclip, Campaña y Métricas viven en su propio archivo, pero
+  // entran por acá: este sigue siendo el único lugar que registra puertas al disco.
+  require("./lanzamiento-motor.js").registrar(datos);
 }
 
 module.exports = { registrar, escanearPlugins, escanearSamples, datos };

@@ -10,11 +10,30 @@
   var pieza = null, salidas = [], sonando = false;
   var timers = [], apagados = [], t0 = 0, raf = 0;
 
-  /* ---------------- pestañas ---------------- */
-  document.querySelectorAll("nav button").forEach(function (b) {
+  /* ---------------- pestañas ----------------
+     Arriba, las cinco secciones. Componer tiene sus propias sub-pestañas
+     (Canción, Referencias, Tocar, Plugins, Samples) y se acuerda de la última
+     que abriste; las otras secciones son una sola hoja cada una. */
+  var subActual = "componer";
+  function mostrarHoja(id) {
+    document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", h.id === "h-" + id); });
+  }
+  document.querySelectorAll("nav.secciones button").forEach(function (b) {
     b.onclick = function () {
-      document.querySelectorAll("nav button").forEach(function (x) { x.classList.toggle("on", x === b); });
-      document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", h.id === "h-" + b.dataset.h); });
+      document.querySelectorAll("nav.secciones button").forEach(function (x) { x.classList.toggle("on", x === b); });
+      var componer = b.dataset.s === "componer";
+      $("#subComponer").hidden = !componer;
+      // Mezcla, Videoclip, Campaña y Métricas eligen la canción en su propia barra (lanzamiento.js).
+      $("#barraCancion").hidden = componer;
+      mostrarHoja(componer ? subActual : b.dataset.s);
+      document.dispatchEvent(new CustomEvent("seccion", { detail: b.dataset.s }));
+    };
+  });
+  document.querySelectorAll("nav.sub button").forEach(function (b) {
+    b.onclick = function () {
+      document.querySelectorAll("nav.sub button").forEach(function (x) { x.classList.toggle("on", x === b); });
+      subActual = b.dataset.h;
+      mostrarHoja(subActual);
     };
   });
 
@@ -153,6 +172,9 @@
     r.carpetas.forEach(function (c) {
       c.plugins.forEach(function (p) {
         var k = p.nombre.toLowerCase();
+        // Para elegir el instrumento de una pista sirven sólo los instrumentos.
+        // FLEX ya es la opción por defecto de la lista.
+        if (p.tipo === "efecto" || k === "flex") return;
         // El mismo plugin suele estar en VST3 y en VST2: se deja el VST3.
         if (!porNombre[k] || (p.clase === "VST3" && porNombre[k].clase !== "VST3")) porNombre[k] = p;
       });
@@ -395,7 +417,9 @@
     try {
       var ref = null, base = $("#gBase").value;
       if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: Number($("#gBpm").value) || null });
+      var banco = $("#gBanco").checked ? await window.estudio.bancoRitmos() : null;
       var nueva = window.Compositor.componer({
+        banco: banco,
         genero: $("#gGenero").value,
         tonalidad: $("#gTon").value.trim() || "Am",
         bpm: Number($("#gBpm").value) || null,
@@ -420,6 +444,37 @@
     }
     b.disabled = false; b.textContent = "Armar la canción";
   };
+
+  /* ---------------- banco de ritmos ---------------- */
+  // Los grooves salen de loops de batería y MIDI de la librería: dónde cae cada
+  // golpe y con qué fuerza, tal como lo tocó el productor.
+  function avisoBanco(r) {
+    var g = (r && r.generos) || {};
+    var gen = $("#gGenero").value, d = g[gen];
+    if (gen === "plena") { $("#gBancoAviso").textContent = "Plena no usa el banco: lleva sus diez capas de batería, medidas en LA PLENA."; return; }
+    $("#gBancoAviso").textContent = !r ? "Todavía no hay banco: tocá «Aprender ritmos»." :
+      d ? d.completos + " grooves completos de " + (gen === "trap" ? "trap/drill" : gen) + " (" + d.grooves + " en total). Aprendido el " + new Date(r.creado).toLocaleDateString("es-AR") + "."
+        : "El banco no tiene ritmos de este género: sale con los dibujos de siempre.";
+  }
+  async function pintarBanco() {
+    var b = await window.estudio.bancoRitmos();
+    if (!b) { avisoBanco(null); return; }
+    var resumen = { creado: b.creado, generos: {} };
+    Object.keys(b.generos).forEach(function (k) {
+      var l = b.generos[k];
+      resumen.generos[k] = { grooves: l.length, completos: l.filter(function (x) { return x.kick.length && (x.caja.length || x.hat.length); }).length };
+    });
+    avisoBanco(resumen);
+  }
+  $("#gAprender").onclick = async function () {
+    var b = this;
+    b.disabled = true; b.textContent = "Aprendiendo…";
+    $("#gBancoAviso").textContent = "Leyendo loops y MIDI de batería de la librería (tarda unos segundos)…";
+    try { avisoBanco(await window.estudio.aprenderRitmos()); }
+    catch (e) { $("#gBancoAviso").textContent = "No pude aprender: " + e.message; }
+    b.disabled = false; b.textContent = "Aprender ritmos";
+  };
+  $("#gGenero").addEventListener("change", function () { pintarBanco(); });
 
   // El mapa de secciones: dónde empieza cada parte, para no perderse en 120
   // compases cuando lo abrís en FL Studio.
@@ -521,8 +576,9 @@
         (a.agregada ? '<button class="b" data-quitar="' + esc(a.ruta) + '">Quitar</button>' : "") + "</div></div>" +
         '<div class="aviso" data-estado>' + (f ? "" : "Todavía sin analizar.") + "</div>" +
         (f ? fichaHtml(f) : "") + "</div>";
-    }).join("") : '<div class="caja vacio">' + (r.existe ? "La carpeta está vacía." : "La carpeta todavía no existe.") +
-      " Copiá ahí tus canciones de referencia y tocá «Actualizar lista».</div>";
+    }).join("") : '<div class="caja vacio">' + (r.existe
+      ? "La carpeta está vacía. Copiá ahí tus canciones de referencia y tocá «Actualizar lista»."
+      : "La carpeta " + esc(r.carpeta) + " no existe. Tocá «Elegir carpeta…» para usar otra.") + "</div>";
     var sel = $("#gBase"), antes = sel.value;
     sel.innerHTML = '<option value="">Un género</option>' + refs.filter(fichaVigente).map(function (a) {
       return '<option value="' + esc(a.ruta) + '">Referencia: ' + esc(a.nombre.replace(/\.[^.]+$/, "")) + "</option>";
@@ -567,6 +623,7 @@
   });
   $("#refAgregar").onclick = async function () { await window.estudio.refAgregar(); pintarReferencias(); };
   $("#refActualizar").onclick = function () { pintarReferencias(); };
+  $("#refElegir").onclick = async function () { await window.estudio.refCarpeta(); pintarReferencias(); };
   $("#gBase").onchange = function () {
     var f = fichas[this.value];
     $("#gBaseAviso").textContent = f
@@ -576,16 +633,20 @@
 
   /* ---------------- samples ---------------- */
   async function pintarSamples() {
-    var carpetas = await window.estudio.carpetas();
+    // La librería de FL va siempre primero y no se puede quitar; las demás son
+    // las que agregaste vos.
+    var r0 = await window.estudio.carpetas();
+    var carpetas = (r0.fl ? [r0.fl] : []).concat(r0.propias);
     if (!carpetas.length) {
-      $("#listaSamples").innerHTML = '<div class="caja vacio">Todavía no agregaste ninguna carpeta.</div>';
+      $("#listaSamples").innerHTML = '<div class="caja vacio">No encontré la librería de FL ni agregaste ninguna carpeta.</div>';
       return;
     }
     $("#listaSamples").innerHTML = carpetas.map(function (ruta) {
+      var esFL = ruta === r0.fl;
       return '<div class="caja" data-ruta="' + esc(ruta) + '">' +
         '<div class="fila" style="justify-content:space-between">' +
-          '<small class="ruta">' + esc(ruta) + "</small>" +
-          '<button class="b" data-olvidar="' + esc(ruta) + '">Quitar</button></div>' +
+          "<div>" + (esFL ? "<b>Librería de FL Studio</b> " : "") + '<small class="ruta">' + esc(ruta) + "</small></div>" +
+          (esFL ? "" : '<button class="b" data-olvidar="' + esc(ruta) + '">Quitar</button>') + "</div>" +
         '<div class="aviso" data-cuenta>Contando…</div></div>';
     }).join("");
 
@@ -620,6 +681,13 @@
   };
   $("#abrirDatos").onclick = function () { window.estudio.abrirCarpeta(); };
 
+  /* ---------------- actualizar la app ---------------- */
+  // Recarga la pantalla con los últimos cambios, sin cerrar la ventana.
+  $("#recargar").onclick = function () { location.reload(); };
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "F5" || (e.ctrlKey && (e.key === "r" || e.key === "R"))) { e.preventDefault(); location.reload(); }
+  });
+
   /* ---------------- arranque ---------------- */
   $("#sonar").onclick = sonar;
   $("#parar").onclick = parar;
@@ -636,5 +704,6 @@
     buscarSalidas();
     pintarSamples();
     try { await pintarReferencias(); } catch (e) { /* sin referencias no pasa nada */ }
+    try { await pintarBanco(); } catch (e) { /* sin banco sale con los dibujos de siempre */ }
   })();
 })();
