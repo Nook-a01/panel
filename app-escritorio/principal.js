@@ -34,9 +34,11 @@ const SECCIONES = [
   { id: "plata",      texto: "💸 Plata",      url: PANEL_WEB + "plata/" },
   { id: "campamento", texto: "🎹 Campamento", url: PANEL_WEB + "campamento/" },
   { id: "instagram",  texto: "📸 Instagram",  url: INSTAGRAM },
-  // El Estudio no es una URL: abre su propia ventana (ver abrirEstudio).
-  { id: "estudio",    texto: "🎛️ Estudio",    url: null },
 ];
+
+// El Estudio es una app de computadora aparte: no aparece en el Panel. Se abre
+// con "electron . --estudio" (así está armado Estudio.lnk) y es su propia ventana.
+const SOLO_ESTUDIO = process.argv.includes("--estudio");
 
 let ventana = null, barra = null, contenido = null;
 
@@ -100,7 +102,6 @@ function acomodar() {
 
 function ir(id) {
   const s = SECCIONES.find(x => x.id === id);
-  // Sin url no es una sección de la vista: es el Estudio, que abre su ventana.
   if (!s || !s.url || !contenido) return;
   contenido.webContents.loadURL(s.url);
 }
@@ -173,6 +174,7 @@ function abrirEstudio() {
   });
   estudio.loadFile(path.join(__dirname, "estudio.html"));
   estudio.on("closed", () => { estudio = null; });
+  return estudio;
 }
 
 app.whenReady().then(() => {
@@ -180,12 +182,18 @@ app.whenReady().then(() => {
 
   // La barra pide cambiar de sección por acá.
   const { ipcMain } = require("electron");
-  ipcMain.on("ir", (_e, id) => { if (id === "estudio") abrirEstudio(); else ir(id); });
+  ipcMain.on("ir", (_e, id) => ir(id));
   ipcMain.on("atras", () => { if (contenido?.webContents.canGoBack()) contenido.webContents.goBack(); });
   ipcMain.on("recargar", () => contenido?.webContents.reload());
 
   require("./estudio-motor.js").registrar();
 
+  if (SOLO_ESTUDIO) {
+    // Sólo el Estudio, sin el Panel. Al cerrarlo se cierra el programa.
+    abrirEstudio().maximize();
+    app.on("activate", () => { if (!estudio) abrirEstudio(); });
+    return;
+  }
   crear();
   app.on("activate", () => { if (!ventana) crear(); });
 });
