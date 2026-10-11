@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-11T01:51:33.231Z",
+ "actualizado": "2026-10-11T08:47:53.504Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1015,8 +1013,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1077,8 +1076,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1089,8 +1089,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1101,8 +1102,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1246,8 +1248,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1258,11 +1261,19 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-11T03:55:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "Sources: Infantino reelection path clear as Montagliani plans Concacaf stay",
      "resumen": "Gianni Infantino faces a clear path towards reelection as FIFA president after sources told ESPN that Victor Montagliani plans to stay as Concacaf president.",
@@ -1327,13 +1338,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/50114003/fifa-world-cup-power-rankings-spain-brazil-germany-usa-mexico-england-argentina-france"
     },
     {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-07T11:17:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
      "titulo": "Hislop: Messi's World Cup final run 'underlines his legacy'",
      "resumen": "Hislop: Messi's World Cup final run 'underlines his legacy'",
      "fecha": "2026-10-06T22:29:48Z",
@@ -1365,12 +1369,12 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "27",
-      "pts": "60",
-      "g": "18",
+      "pj": "28",
+      "pts": "63",
+      "g": "19",
       "e": "6",
       "p": "3",
-      "dg": "+34",
+      "dg": "+37",
       "mio": false,
       "pos": 1
      },
@@ -1580,9 +1584,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1605,9 +1608,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1618,9 +1620,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1631,9 +1632,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1692,9 +1692,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1753,8 +1752,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1975,46 +1975,46 @@
    ],
    "noticias": [
     {
-     "titulo": "Lionel Messi scores twice for Inter Miami in 1st game since Argentina farewell",
-     "resumen": "Four days on from an emotional end to his international career with Argentina, Lionel Messi continued to shine for Inter Miami, scoring twice in a 4-0 home thumping of D.C. United.",
-     "fecha": "2026-10-11T01:43:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1728980_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50152619/lionel-messi-goals-inter-miami-vs-dc-united-mls-argentina"
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-11T03:55:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
-     "titulo": "Chicago Fire FC vs. New York City FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. New York City FC, 10/10/2026",
-     "fecha": "2026-10-10T20:52:06Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1010/e1e57180-6266-4b6b-876c-51af7b765f8b/e1e57180-6266-4b6b-876c-51af7b765f8b.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50150657/chicago-fire-fc-vs-new-york-city-fc-game-highlights"
+     "titulo": "Denkey's double sparks Cincinnati to win over Atlanta",
+     "resumen": "Kevin Denkey scored two goals after a scoreless first half and FC Cincinnati snapped a six-match winless streak with a 3-1 victory over Atlanta United on Saturday night.",
+     "fecha": "2026-10-11T02:56:10Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761850.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761850"
     },
     {
-     "titulo": "Miami coach urges MLS fans to enjoy Lionel Messi after Argentina adiós",
-     "resumen": "Inter Miami coach Cristian \"Kily\" González said Argentina will miss Lionel Messi following the captain's international retirement before urging fans to enjoy his time with the MLS club.",
-     "fecha": "2026-10-09T17:44:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727143_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50140867/miami-coach-urges-mls-fans-enjoy-lionel-messi-argentina-adios"
+     "titulo": "Cavan Sullivan's 2 assists help Union extend club-record unbeaten streak to 13",
+     "resumen": "Teenager Cavan Sullivan had assists on goals by Bruno Damiani and Milan Iloski to help the Philadelphia Union extend their club-record unbeaten streak to 13 with a 2-1 victory over Real Salt Lake on Saturday night.",
+     "fecha": "2026-10-11T02:31:22Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761849.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761849"
     },
     {
-     "titulo": "Harry Kane interest in MLS 'fulfilment of a dream' - commissioner",
-     "resumen": "MLS commissioner Don Garber would love Harry Kane to follow Lionel Messi across the pond and says the England skipper's interest helps fulfil a dream that Sir David Beckham kept alive.",
-     "fecha": "2026-10-08T16:13:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0916/r1717388_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50131138/harry-kane-encouraged-end-career-us-mls-commissioner"
+     "titulo": "Inter Miami CF vs. DC United - Game Highlights",
+     "resumen": "Watch the Game Highlights from Inter Miami CF vs. DC United, 10/10/2026",
+     "fecha": "2026-10-11T02:13:12Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1011/ee521216-e63d-4b0b-a113-818162a482c1/ee521216-e63d-4b0b-a113-818162a482c1.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50153008/inter-miami-cf-vs-dc-united-game-highlights"
     },
     {
-     "titulo": "Hislop: Sullivan didn't look out of place for the USMNT",
-     "resumen": "Hislop: Sullivan didn't look out of place for the USMNT",
-     "fecha": "2026-10-08T09:25:54Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50131573/sullivan-look-place-usmnt"
+     "titulo": "Sounders extend unbeaten streak to 9 with victory over Revs",
+     "resumen": "Seattle got goals from Hassani Dotson, Dejan Joveljić and Paul Arriola to back a clean sheet from Andrew Thomas and the Sounders extended their unbeaten run to nine with a 3-0 victory over the New England Revolution on Saturday night.",
+     "fecha": "2026-10-11T02:04:53Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761851.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761851"
     },
     {
-     "titulo": "Where does Messi rank in the top five players of all time?",
-     "resumen": "Where does Messi rank in the top five players of all time?",
-     "fecha": "2026-10-08T08:50:56Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50131464/where-does-messi-rank-top-five-players-all"
+     "titulo": "Angulo's stoppage-goal lifts Orlando past Columbus",
+     "resumen": "Iván Angulo scored the go-ahead goal in the 89th minute, Antoine Griezmann added a goal and an assist, and Maxime Crépeau had 12 saves to help Orlando City beat the Columbus Crew 3-2 on Saturday night.",
+     "fecha": "2026-10-11T02:03:26Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761848.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761848"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2627,6 +2627,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
+     "resumen": "With an 84-point lead in the drivers' standings, it is looking increasingly likely that Kimi Antonelli will be crowned F1's youngest world champion in the next two months.",
+     "fecha": "2026-10-11T06:46:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-11T06:45:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
+    },
+    {
      "titulo": "Verstappen 'incredibly happy' with Singapore pole",
      "resumen": "Verstappen 'incredibly happy' with Singapore pole",
      "fecha": "2026-10-10T17:39:00Z",
@@ -2641,13 +2655,6 @@
      "link": "https://www.espn.com/f1/story/_/id/50131344/lando-norris-oscar-piastri-collision-singapore-gp-sprint-not-acceptable-mclaren-bossmarina-bay-circuit-formula-1"
     },
     {
-     "titulo": "Max Verstappen tired of guests and VIPs in F1 paddock that resembles 'a zoo'",
-     "resumen": "Max Verstappen does not want to miss his daughter growing up by racing for too long in Formula 1, a paddock he thinks now resembles a zoo due to the amount of guests and VIPs every weekend.",
-     "fecha": "2026-10-10T15:16:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728615_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131338/max-verstappen-tired-guests-vips-f1-paddock-resembles-zoo"
-    },
-    {
      "titulo": "Red Bull's Max Verstappen on pole for Singapore Grand Prix, Ferrari duo behind",
      "resumen": "Max Verstappen has continued his dominance in Singapore after putting his Red Bull on pole position for Sunday's grand prix.",
      "fecha": "2026-10-10T15:13:36Z",
@@ -2660,13 +2667,6 @@
      "fecha": "2026-10-10T14:48:59Z",
      "imagen": "https://a.espncdn.com/photo/2026/1010/r1728649_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131343/mclarens-lando-norris-oscar-piastri-cleared-singapore-sprint-collision-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Max Verstappen calls on F1 to ditch sprint races 'where you can't pass' after Singapore GP win",
-     "resumen": "Max Verstappen has called on Formula 1 to stop hosting sprint races on circuits where overtaking is difficult after very little passing took place during Saturday's 20-lap sprint in Singapore.",
-     "fecha": "2026-10-10T12:36:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728602_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131340/max-verstappen-calls-f1-ditch-sprint-races-where-cant-pass-singapore-gp-win-lewis-hamilton-charles-leclerc-formula-1"
     }
    ],
    "resultados": null,
@@ -2684,6 +2684,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Fili secures a first-round KO against Kamaka III",
+     "resumen": "Andre Fili scores a first-round KO victory against Kai Kamaka III with a devastating head kick.",
+     "fecha": "2026-10-11T04:13:45Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_UFC_Highlight_Fili_secures_a_first_round_KO_against_Kamaka_III_20261011_PH/dm_261011_UFC_Highlight_Fili_secures_a_first_round_KO_against_Kamaka_III_20261011_PH.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50154306/fili-secures-first-round-ko-kamaka-iii"
+    },
+    {
+     "titulo": "Allen submits Duncan in UFC main event, calls out division's best",
+     "resumen": "Brendan Allen stated his case for bigger fights after forcing Christian Leroy Duncan to tap out in the fifth round via rear-naked choke Saturday night.",
+     "fecha": "2026-10-11T03:51:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729027_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50153985/allen-submits-duncan-ufc-main-event-calls-bigger-fights"
+    },
+    {
+     "titulo": "Brendan Allen defeats Christian Leroy Duncan with 5th-round submission",
+     "resumen": "Brendan Allen claims a round five victory over Christian Leroy Duncan via a rear naked choke submission.",
+     "fecha": "2026-10-11T03:50:24Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1010/dm_261010_UFC_Highlight_Brendan_Allen_defeats_Christian_Leroy_Duncan_with_5th_round_submission_20261011_PH/dm_261010_UFC_Highlight_Brendan_Allen_defeats_Christian_Leroy_Duncan_with_5th_round_submission_20261011_PH.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50154138/brendan-allen-defeats-christian-leroy-duncan-5th-round-submission"
+    },
+    {
+     "titulo": "Brendan Allen defeats Christian Leroy Duncan with 5th-round submission",
+     "resumen": "Brendan Allen claims round five victory over Christian Leroy Duncan via a rear naked choke submission.",
+     "fecha": "2026-10-11T03:36:07Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1010/dm_261010_UFC_Highlight_Brendan_Allen_defeats_Christian_Leroy_Duncan_with_5th_round_submission_20261011_AUS/dm_261010_UFC_Highlight_Brendan_Allen_defeats_Christian_Leroy_Duncan_with_5th_round_submission_20261011_AUS.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50154061/brendan-allen-defeats-christian-leroy-duncan-5th-round-submission"
+    },
+    {
      "titulo": "Jake Paul cleared to fight; Canelo, Strickland, others on wish list",
      "resumen": "Jake Paul, who has been cleared to resume fighting after recovering from a broken jaw, has a list of big names he'd like to face in boxing and MMA now that he's back.",
      "fecha": "2026-10-08T18:12:59Z",
@@ -2691,39 +2719,11 @@
      "link": "https://www.espn.com/boxing/story/_/id/50134215/jake-paul-cleared-fight-canelo-mcgregor-others-wish-list"
     },
     {
-     "titulo": "UFC 332 takeaways: Talbott, Silva validate their top billing",
-     "resumen": "Payton Talbott finished another former champion in Deiveson Figueiredo on a night full of knockouts at UFC 332.",
-     "fecha": "2026-10-07T17:30:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725556_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50093793/ufc-332-takeaways-payton-talbott-natalia-silva-validate-their-top-billing"
-    },
-    {
      "titulo": "Silva rises in P4P women's top 10, making most of golden opportunity",
      "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
      "fecha": "2026-10-07T13:22:55Z",
      "imagen": "https://a.espncdn.com/photo/2026/1004/r1725600_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
-    },
-    {
-     "titulo": "Everett, White's personal assistant, earns UFC contract with KO",
-     "resumen": "Sal Everett, who has worked for the UFC as a runner, knocked out Ozzy Martin in the first round of their Contender Series bout to earn a UFC contract.",
-     "fecha": "2026-10-07T01:47:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727122_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50121378/everett-white-personal-assistant-earns-ufc-contract-ko"
-    },
-    {
-     "titulo": "Matchmaking, inactivity -- and, yes, fights -- shift MMA divisional rankings",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-10-06T12:54:21Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726521_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "What's next: Will Silva's first title defense be against Shevchenko?",
-     "resumen": "The most likely opponent and a wild card for the winners and losers on the UFC 332 main card.",
-     "fecha": "2026-10-05T13:47:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726263_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50094347/next-fights-ufc-322-fighters-natalia-silva-payton-talbott"
     }
    ],
    "resultados": [
@@ -2855,6 +2855,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "categoria": "Lightweight",
      "record": "28-5-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "4025699",
+     "nombre": "Brendan Allen",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Middleweight",
+     "record": "28-7-0",
      "peleas": 2,
      "gano": 2
     },
@@ -3025,7 +3034,7 @@
      "nombre": "Ketlen Souza",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "W Strawweight",
-     "record": "17-6-0",
+     "record": "17-7-0",
      "peleas": 3,
      "gano": 2
     },
@@ -3106,17 +3115,8 @@
      "nombre": "Christian Leroy Duncan",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
      "categoria": "Middleweight",
-     "record": "15-2-0",
+     "record": "15-3-0",
      "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5075992",
-     "nombre": "Alexia Thainara",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "W Strawweight",
-     "record": "15-1-0",
-     "peleas": 2,
      "gano": 2
     }
    ]
