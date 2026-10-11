@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-11T08:47:53.504Z",
+ "actualizado": "2026-10-11T15:38:45.853Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -951,9 +953,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -976,9 +977,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1013,9 +1013,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1038,9 +1037,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1051,9 +1049,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1076,9 +1073,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1089,9 +1085,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1102,9 +1097,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1235,9 +1229,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1248,9 +1241,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1261,17 +1253,23 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
     {
+     "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
+     "resumen": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
+     "fecha": "2026-10-11T13:54:15Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50156783/bentancur-red-card-encouraged-tottenham-play-more-character"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-11T03:55:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
+     "fecha": "2026-10-11T12:27:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
@@ -1317,13 +1315,6 @@
      "link": "https://www.espn.com/espn/story/_/id/50131006/afcon-qualifiers-renard-returns-ghana-unravel-nigeria-make-unwanted-history"
     },
     {
-     "titulo": "Could Messi become part of Argentina's coaching staff?",
-     "resumen": "Could Messi become part of Argentina's coaching staff?",
-     "fecha": "2026-10-07T22:24:07Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1007/dm_261007_COM_SOC_ANALYSIS_Could_Messi_become_part_of_Argentinas_coaching_staff_2026_10_7/dm_261007_COM_SOC_ANALYSIS_Could_Messi_become_part_of_Argentinas_coaching_staff_2026_10_7.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50127889/could-messi-become-part-argentina-coaching-staff"
-    },
-    {
      "titulo": "Ex-Tottenham defender Ramon Vega to challenge FIFA president Gianni Infantino",
      "resumen": "Former Tottenham Hotspur defender Ramon Vega says he will challenge Gianni Infantino for the FIFA presidency.",
      "fecha": "2026-10-07T18:28:31Z",
@@ -1336,13 +1327,6 @@
      "fecha": "2026-10-07T12:46:49Z",
      "imagen": "https://a.espncdn.com/photo/2026/0618/soc_wc_power-rankings_16x9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50114003/fifa-world-cup-power-rankings-spain-brazil-germany-usa-mexico-england-argentina-france"
-    },
-    {
-     "titulo": "Hislop: Messi's World Cup final run 'underlines his legacy'",
-     "resumen": "Hislop: Messi's World Cup final run 'underlines his legacy'",
-     "fecha": "2026-10-06T22:29:48Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1006/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy/dm_261006_Hislop_Messis_World_Cup_final_run_underlines_his_legacy.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50120434/messi-world-cup-final-run-underlines-legacy"
     }
    ],
    "resultados": null,
@@ -1584,8 +1568,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1608,8 +1593,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1632,8 +1618,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1752,9 +1739,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1977,8 +1963,8 @@
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-11T03:55:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727271_1296x729_16-9.jpg",
+     "fecha": "2026-10-11T12:27:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
@@ -2627,6 +2613,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen takes back-to-back wins with dominant drive at Singapore GP",
+     "resumen": "Max Verstappen sealed a perfect weekend with victory at the Singapore Grand Prix as Kimi Antonelli moved to the brink of clinching the world championship.",
+     "fecha": "2026-10-11T15:17:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729162_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131352/max-verstappen-takes-back-back-wins-dominant-drive-singapore-grand-prix-marina-bay-circuit-formula-1"
+    },
+    {
+     "titulo": "Kim Kardashian brushes off Martin Brundle snub as she cheers on Lewis Hamilton at Singapore GP",
+     "resumen": "Kim Kardashian put her awkward Monaco exchange with Sky Sports' Martin Brundle in the past as she supported Lewis Hamilton at the Singapore Grand Prix.",
+     "fecha": "2026-10-11T14:49:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729135_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131353/singapore-grand-prix-marina-bay-circuit-formula-1-kim-kardashian-lewis-hamilton"
+    },
+    {
+     "titulo": "Singapore Grand Prix results: Max Verstappen delivers masterclass drive to take victory - as it happened",
+     "resumen": "Red Bull's Max Verstappen converted pole position into a race victory at the Singapore Grand Prix.",
+     "fecha": "2026-10-11T14:20:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729158_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50148143/singapore-grand-prix-marina-bay-circuit-2026-live-updates-results-analysis-commentary"
+    },
+    {
      "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
      "resumen": "With an 84-point lead in the drivers' standings, it is looking increasingly likely that Kimi Antonelli will be crowned F1's youngest world champion in the next two months.",
      "fecha": "2026-10-11T06:46:17Z",
@@ -2646,27 +2653,6 @@
      "fecha": "2026-10-10T17:39:00Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1010/dm_261010_Verstappen_incredibly_happy_with_Singapore_pole/dm_261010_Verstappen_incredibly_happy_with_Singapore_pole.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50148954/verstappen-incredibly-happy-singapore-pole"
-    },
-    {
-     "titulo": "Lando Norris and Oscar Piastri collision at Singapore GP sprint 'not acceptable' - McLaren boss",
-     "resumen": "McLaren team principal Andrea Stella said the collision between his drivers in the Singapore sprint race was \"simply not acceptable.\"",
-     "fecha": "2026-10-10T16:59:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728732_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131344/lando-norris-oscar-piastri-collision-singapore-gp-sprint-not-acceptable-mclaren-bossmarina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Red Bull's Max Verstappen on pole for Singapore Grand Prix, Ferrari duo behind",
-     "resumen": "Max Verstappen has continued his dominance in Singapore after putting his Red Bull on pole position for Sunday's grand prix.",
-     "fecha": "2026-10-10T15:13:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728678_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131314/red-bulls-max-verstappen-pole-singapore-grand-prix-ferrari-duo-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "McLaren's Lando Norris and Oscar Piastri cleared after Singapore sprint collision",
-     "resumen": "Lando Norris and Oscar Piastri's collision at the end of the Singapore sprint race went unpunished by Formula 1's stewards, who declared \"both drivers had contributed to the incident.\"",
-     "fecha": "2026-10-10T14:48:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728649_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131343/mclarens-lando-norris-oscar-piastri-cleared-singapore-sprint-collision-marina-bay-circuit-formula-1"
     }
    ],
    "resultados": null,
