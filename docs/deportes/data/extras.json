@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-11T15:38:45.853Z",
+ "actualizado": "2026-10-11T20:14:50.864Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -141,6 +141,19 @@
       "pos": 9
      },
      {
+      "equipo": "San Lorenzo",
+      "abrev": "SLO",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+      "pj": "12",
+      "pts": "14",
+      "g": "4",
+      "e": "2",
+      "p": "6",
+      "dg": "-6",
+      "mio": false,
+      "pos": 10
+     },
+     {
       "equipo": "Unión (Santa Fe)",
       "abrev": "USF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
@@ -151,31 +164,18 @@
       "p": "7",
       "dg": "-4",
       "mio": false,
-      "pos": 10
+      "pos": 11
      },
      {
       "equipo": "Deportivo Riestra",
       "abrev": "RIE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-      "pj": "11",
+      "pj": "12",
       "pts": "11",
       "g": "2",
       "e": "5",
-      "p": "4",
-      "dg": "-2",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "San Lorenzo",
-      "abrev": "SLO",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "11",
-      "pts": "11",
-      "g": "3",
-      "e": "2",
-      "p": "6",
-      "dg": "-7",
+      "p": "5",
+      "dg": "-3",
       "mio": false,
       "pos": 12
      },
@@ -953,8 +953,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -977,8 +978,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1037,8 +1039,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1097,8 +1100,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1229,8 +1233,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1568,9 +1573,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1593,9 +1597,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1618,9 +1621,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1739,8 +1741,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2122,7 +2125,7 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "325",
+      "pts": "340",
       "g": "8",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
@@ -2138,7 +2141,7 @@
       "equipo": "George Russell",
       "abrev": "RUS",
       "detalle": "Mercedes",
-      "pts": "236",
+      "pts": "238",
       "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2154,7 +2157,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "221",
+      "pts": "229",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2167,10 +2170,26 @@
      },
      {
       "pos": 4,
+      "equipo": "Max Verstappen",
+      "abrev": "VER",
+      "detalle": "Red Bull",
+      "pts": "221",
+      "g": "2",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+      "nacionalidad": "Dutch",
+      "color": "#00327D",
+      "numero": "3",
+      "driverId": "max_verstappen",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 5,
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "197",
+      "pts": "215",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2182,27 +2201,11 @@
       "mio": false
      },
      {
-      "pos": 5,
-      "equipo": "Max Verstappen",
-      "abrev": "VER",
-      "detalle": "Red Bull",
-      "pts": "196",
-      "g": "1",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
-      "nacionalidad": "Dutch",
-      "color": "#00327D",
-      "numero": "3",
-      "driverId": "max_verstappen",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
-      "logo": null,
-      "mio": false
-     },
-     {
       "pos": 6,
       "equipo": "Lando Norris",
       "abrev": "NOR",
       "detalle": "McLaren",
-      "pts": "189",
+      "pts": "201",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2218,7 +2221,7 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "128",
+      "pts": "138",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
@@ -2234,7 +2237,7 @@
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "96",
+      "pts": "97",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2250,7 +2253,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "69",
+      "pts": "75",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2327,6 +2330,22 @@
      },
      {
       "pos": 14,
+      "equipo": "Nico Hülkenberg",
+      "abrev": "HUL",
+      "detalle": "Audi",
+      "pts": "13",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "nacionalidad": "German",
+      "color": "#FF2D00",
+      "numero": "27",
+      "driverId": "hulkenberg",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 15,
       "equipo": "Gabriel Bortoleto",
       "abrev": "BOR",
       "detalle": "Audi",
@@ -2338,22 +2357,6 @@
       "numero": "5",
       "driverId": "bortoleto",
       "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 15,
-      "equipo": "Nico Hülkenberg",
-      "abrev": "HUL",
-      "detalle": "Audi",
-      "pts": "9",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-      "nacionalidad": "German",
-      "color": "#FF2D00",
-      "numero": "27",
-      "driverId": "hulkenberg",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
       "logo": null,
       "mio": false
      },
@@ -2491,7 +2494,7 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "561",
+      "pts": "578",
       "g": "11",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2502,7 +2505,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "418",
+      "pts": "444",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2513,7 +2516,7 @@
       "pos": 3,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "317",
+      "pts": "339",
       "g": "2",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2524,8 +2527,8 @@
       "pos": 4,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "306",
-      "g": "1",
+      "pts": "332",
+      "g": "2",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
       "logo": null,
@@ -2535,7 +2538,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "94",
+      "pts": "100",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2568,7 +2571,7 @@
       "pos": 8,
       "equipo": "Audi",
       "detalle": "German",
-      "pts": "19",
+      "pts": "23",
       "g": "0",
       "color": "#FF2D00",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2613,46 +2616,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Max Verstappen takes back-to-back wins with dominant drive at Singapore GP",
-     "resumen": "Max Verstappen sealed a perfect weekend with victory at the Singapore Grand Prix as Kimi Antonelli moved to the brink of clinching the world championship.",
-     "fecha": "2026-10-11T15:17:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729162_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131352/max-verstappen-takes-back-back-wins-dominant-drive-singapore-grand-prix-marina-bay-circuit-formula-1"
+     "titulo": "'Chucky' Verstappen is back. Luckily for Antonelli and Mercedes, it's too late",
+     "resumen": "Max Verstappen has won two races in a row, and if there was more of the F1 season left, championship leader Kimi Antonelli would have reason to worry.",
+     "fecha": "2026-10-11T17:56:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729274_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50159153/chucky-max-verstappen-back-luckily-kimi-antonelli-mercedes-too-late-f1-championship"
     },
     {
-     "titulo": "Kim Kardashian brushes off Martin Brundle snub as she cheers on Lewis Hamilton at Singapore GP",
-     "resumen": "Kim Kardashian put her awkward Monaco exchange with Sky Sports' Martin Brundle in the past as she supported Lewis Hamilton at the Singapore Grand Prix.",
-     "fecha": "2026-10-11T14:49:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729135_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131353/singapore-grand-prix-marina-bay-circuit-formula-1-kim-kardashian-lewis-hamilton"
+     "titulo": "George Russell praises Red Bull after upgrade success and consecutive wins: 'Team to beat'",
+     "resumen": "George Russell has said Red Bull is now \"the team to beat\" in Formula 1 after Max Verstappen secured his second grand prix victory in a row at Sunday's Singapore Grand Prix.",
+     "fecha": "2026-10-11T17:49:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729261_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131363/george-russell-praises-red-bull-upgrade-success-team-beat-singapore-grand-prix-marina-bay-circuit-formula-1"
     },
     {
-     "titulo": "Singapore Grand Prix results: Max Verstappen delivers masterclass drive to take victory - as it happened",
-     "resumen": "Red Bull's Max Verstappen converted pole position into a race victory at the Singapore Grand Prix.",
-     "fecha": "2026-10-11T14:20:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729158_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50148143/singapore-grand-prix-marina-bay-circuit-2026-live-updates-results-analysis-commentary"
+     "titulo": "Lewis Hamilton calls Singapore GP strategy 'painful lesson' after Ferrari apology",
+     "resumen": "Lewis Hamilton described his decision to ignore a Ferrari pit call as a \"painful lesson\" after it dropped him from third place to sixth in the final 12 laps of Sunday's Singapore Grand Prix.",
+     "fecha": "2026-10-11T17:29:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729202_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131357/lewis-hamilton-calls-singapore-gp-strategy-painful-lesson-ferrari-apology-singapore-grand-prix-marina-bay-circuit-formula-1"
     },
     {
-     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
-     "resumen": "With an 84-point lead in the drivers' standings, it is looking increasingly likely that Kimi Antonelli will be crowned F1's youngest world champion in the next two months.",
-     "fecha": "2026-10-11T06:46:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+     "titulo": "Lando Norris takes responsibility for collision with Oscar Piastri in Singapore: 'I let McLaren down'",
+     "resumen": "Lando Norris has changed his stance on the collision he had with McLaren teammate Oscar Piastri during the Singapore Grand Prix sprint race and has now taken full responsibility for the incident.",
+     "fecha": "2026-10-11T17:26:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729250_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131362/lando-norris-takes-responsibility-collision-oscar-piastri-singapore-grand-prix-marina-bay-circuit-formula-1"
     },
     {
      "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-11T06:45:22Z",
+     "fecha": "2026-10-11T17:13:08Z",
      "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
     },
     {
-     "titulo": "Verstappen 'incredibly happy' with Singapore pole",
-     "resumen": "Verstappen 'incredibly happy' with Singapore pole",
-     "fecha": "2026-10-10T17:39:00Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1010/dm_261010_Verstappen_incredibly_happy_with_Singapore_pole/dm_261010_Verstappen_incredibly_happy_with_Singapore_pole.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50148954/verstappen-incredibly-happy-singapore-pole"
+     "titulo": "Verstappen happy to sign off 'incredible' triple-header with another win",
+     "resumen": "Verstappen happy to sign off 'incredible' triple-header with another win",
+     "fecha": "2026-10-11T16:09:24Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_Verstappen_happy_to_sign_off_incredible_triple_header_with_another_win/dm_261011_Verstappen_happy_to_sign_off_incredible_triple_header_with_another_win.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50158253/verstappen-happy-sign-incredible-triple-header-another-win"
     }
    ],
    "resultados": null,
@@ -2670,18 +2673,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Allen submits Duncan in UFC main event, calls out division's best",
+     "resumen": "Brendan Allen stated his case for bigger fights after forcing Christian Leroy Duncan to tap out in the fifth round via rear-naked choke.",
+     "fecha": "2026-10-11T16:45:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729027_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50153985/allen-submits-duncan-ufc-main-event-calls-bigger-fights"
+    },
+    {
      "titulo": "Fili secures a first-round KO against Kamaka III",
      "resumen": "Andre Fili scores a first-round KO victory against Kai Kamaka III with a devastating head kick.",
      "fecha": "2026-10-11T04:13:45Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_UFC_Highlight_Fili_secures_a_first_round_KO_against_Kamaka_III_20261011_PH/dm_261011_UFC_Highlight_Fili_secures_a_first_round_KO_against_Kamaka_III_20261011_PH.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50154306/fili-secures-first-round-ko-kamaka-iii"
-    },
-    {
-     "titulo": "Allen submits Duncan in UFC main event, calls out division's best",
-     "resumen": "Brendan Allen stated his case for bigger fights after forcing Christian Leroy Duncan to tap out in the fifth round via rear-naked choke Saturday night.",
-     "fecha": "2026-10-11T03:51:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729027_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50153985/allen-submits-duncan-ufc-main-event-calls-bigger-fights"
     },
     {
      "titulo": "Brendan Allen defeats Christian Leroy Duncan with 5th-round submission",
