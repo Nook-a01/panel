@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T22:30:17.933Z",
+ "actualizado": "2026-10-11T01:51:33.231Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -953,8 +953,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -977,8 +978,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1037,8 +1039,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1049,8 +1052,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1229,8 +1233,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1370,6 +1375,19 @@
       "pos": 1
      },
      {
+      "equipo": "Inter Miami CF",
+      "abrev": "MIA",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "pj": "28",
+      "pts": "49",
+      "g": "13",
+      "e": "10",
+      "p": "5",
+      "dg": "+18",
+      "mio": true,
+      "pos": 2
+     },
+     {
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
@@ -1380,44 +1398,31 @@
       "p": "8",
       "dg": "+11",
       "mio": false,
-      "pos": 2
-     },
-     {
-      "equipo": "Inter Miami CF",
-      "abrev": "MIA",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "27",
-      "pts": "46",
-      "g": "12",
-      "e": "10",
-      "p": "5",
-      "dg": "+14",
-      "mio": true,
       "pos": 3
-     },
-     {
-      "equipo": "New England Revolution",
-      "abrev": "NE",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "27",
-      "pts": "46",
-      "g": "14",
-      "e": "4",
-      "p": "9",
-      "dg": "+9",
-      "mio": false,
-      "pos": 4
      },
      {
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "27",
-      "pts": "43",
-      "g": "12",
+      "pj": "28",
+      "pts": "46",
+      "g": "13",
       "e": "7",
       "p": "8",
-      "dg": "+9",
+      "dg": "+10",
+      "mio": false,
+      "pos": 4
+     },
+     {
+      "equipo": "New England Revolution",
+      "abrev": "NE",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "pj": "28",
+      "pts": "46",
+      "g": "14",
+      "e": "4",
+      "p": "10",
+      "dg": "+6",
       "mio": false,
       "pos": 5
      },
@@ -1425,12 +1430,12 @@
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "27",
-      "pts": "39",
-      "g": "11",
+      "pj": "28",
+      "pts": "42",
+      "g": "12",
       "e": "6",
       "p": "10",
-      "dg": "+10",
+      "dg": "+11",
       "mio": false,
       "pos": 6
      },
@@ -1438,14 +1443,40 @@
       "equipo": "Orlando City SC",
       "abrev": "ORL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "27",
-      "pts": "34",
-      "g": "10",
+      "pj": "28",
+      "pts": "37",
+      "g": "11",
       "e": "4",
       "p": "13",
-      "dg": "-16",
+      "dg": "-15",
       "mio": false,
       "pos": 7
+     },
+     {
+      "equipo": "FC Cincinnati",
+      "abrev": "CIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "pj": "27",
+      "pts": "36",
+      "g": "9",
+      "e": "9",
+      "p": "9",
+      "dg": "-7",
+      "mio": false,
+      "pos": 8
+     },
+     {
+      "equipo": "Red Bull New York",
+      "abrev": "RBNY",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "pj": "28",
+      "pts": "36",
+      "g": "10",
+      "e": "6",
+      "p": "12",
+      "dg": "-14",
+      "mio": false,
+      "pos": 9
      },
      {
       "equipo": "New York City FC",
@@ -1457,32 +1488,6 @@
       "e": "9",
       "p": "11",
       "dg": "+4",
-      "mio": false,
-      "pos": 8
-     },
-     {
-      "equipo": "FC Cincinnati",
-      "abrev": "CIN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "26",
-      "pts": "33",
-      "g": "8",
-      "e": "9",
-      "p": "9",
-      "dg": "-9",
-      "mio": false,
-      "pos": 9
-     },
-     {
-      "equipo": "Red Bull New York",
-      "abrev": "RBNY",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "27",
-      "pts": "33",
-      "g": "9",
-      "e": "6",
-      "p": "12",
-      "dg": "-17",
       "mio": false,
       "pos": 10
      },
@@ -1503,12 +1508,12 @@
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "26",
+      "pj": "27",
       "pts": "30",
       "g": "6",
       "e": "12",
-      "p": "8",
-      "dg": "-8",
+      "p": "9",
+      "dg": "-12",
       "mio": false,
       "pos": 12
      },
@@ -1516,12 +1521,12 @@
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "27",
+      "pj": "28",
       "pts": "29",
       "g": "8",
       "e": "5",
-      "p": "14",
-      "dg": "-4",
+      "p": "15",
+      "dg": "-5",
       "mio": false,
       "pos": 13
      },
@@ -1529,12 +1534,12 @@
       "equipo": "Atlanta United FC",
       "abrev": "ATL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "27",
+      "pj": "28",
       "pts": "27",
       "g": "7",
       "e": "6",
-      "p": "14",
-      "dg": "-13",
+      "p": "15",
+      "dg": "-15",
       "mio": false,
       "pos": 14
      },
@@ -1626,8 +1631,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1699,9 +1705,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1970,6 +1975,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Lionel Messi scores twice for Inter Miami in 1st game since Argentina farewell",
+     "resumen": "Four days on from an emotional end to his international career with Argentina, Lionel Messi continued to shine for Inter Miami, scoring twice in a 4-0 home thumping of D.C. United.",
+     "fecha": "2026-10-11T01:43:26Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1728980_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50152619/lionel-messi-goals-inter-miami-vs-dc-united-mls-argentina"
+    },
+    {
      "titulo": "Chicago Fire FC vs. New York City FC - Game Highlights",
      "resumen": "Watch the Game Highlights from Chicago Fire FC vs. New York City FC, 10/10/2026",
      "fecha": "2026-10-10T20:52:06Z",
@@ -2003,13 +2015,6 @@
      "fecha": "2026-10-08T08:50:56Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50131464/where-does-messi-rank-top-five-players-all"
-    },
-    {
-     "titulo": "How Jason Sudeikis and 'Ted Lasso' became champions for women's soccer",
-     "resumen": "The cast of the hit comedy as well as NWSL veterans reflect on bringing authentic stories of women's soccer to a new stage.",
-     "fecha": "2026-10-07T15:33:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724537_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50112795/ted-lasso-season-4-women-soccer"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2123,7 +2128,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 16 carreras",
+    "titulo": "Temporada 2026 · tras 17 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2131,7 +2136,7 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "320",
+      "pts": "325",
       "g": "8",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
@@ -2163,7 +2168,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "214",
+      "pts": "221",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2179,7 +2184,7 @@
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "191",
+      "pts": "197",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2192,26 +2197,10 @@
      },
      {
       "pos": 5,
-      "equipo": "Lando Norris",
-      "abrev": "NOR",
-      "detalle": "McLaren",
-      "pts": "188",
-      "g": "2",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#FF8700",
-      "numero": "1",
-      "driverId": "norris",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5579.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 6,
       "equipo": "Max Verstappen",
       "abrev": "VER",
       "detalle": "Red Bull",
-      "pts": "188",
+      "pts": "196",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "nacionalidad": "Dutch",
@@ -2219,6 +2208,22 @@
       "numero": "3",
       "driverId": "max_verstappen",
       "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 6,
+      "equipo": "Lando Norris",
+      "abrev": "NOR",
+      "detalle": "McLaren",
+      "pts": "189",
+      "g": "2",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#FF8700",
+      "numero": "1",
+      "driverId": "norris",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5579.png",
       "logo": null,
       "mio": false
      },
@@ -2259,7 +2264,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "65",
+      "pts": "69",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2323,7 +2328,7 @@
       "equipo": "Oliver Bearman",
       "abrev": "BEA",
       "detalle": "Haas F1 Team",
-      "pts": "20",
+      "pts": "23",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2355,7 +2360,7 @@
       "equipo": "Nico Hülkenberg",
       "abrev": "HUL",
       "detalle": "Audi",
-      "pts": "7",
+      "pts": "9",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "nacionalidad": "German",
@@ -2500,7 +2505,7 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "556",
+      "pts": "561",
       "g": "11",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2511,7 +2516,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "405",
+      "pts": "418",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2522,7 +2527,7 @@
       "pos": 3,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "316",
+      "pts": "317",
       "g": "2",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2533,7 +2538,7 @@
       "pos": 4,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "298",
+      "pts": "306",
       "g": "1",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2544,7 +2549,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "90",
+      "pts": "94",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2566,7 +2571,7 @@
       "pos": 7,
       "equipo": "Haas F1 Team",
       "detalle": "American",
-      "pts": "27",
+      "pts": "30",
       "g": "0",
       "color": "#5A5A5A",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -2577,7 +2582,7 @@
       "pos": 8,
       "equipo": "Audi",
       "detalle": "German",
-      "pts": "17",
+      "pts": "19",
       "g": "0",
       "color": "#FF2D00",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",

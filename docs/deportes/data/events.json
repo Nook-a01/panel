@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T22:30:17.933Z",
+ "actualizado": "2026-10-11T01:51:33.231Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 11,
-   "proximos": 7
+   "proximos": 6
   },
   {
    "id": "pumas",
@@ -659,8 +659,8 @@
    "visitante": "D.C. United",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "4 - 0"
   },
   {
    "feedId": "f1",
