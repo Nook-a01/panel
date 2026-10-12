@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-11T15:38:45.853Z",
+ "actualizado": "2026-10-12T05:54:07.832Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 13,
+   "total": 12,
    "proximos": 7
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841557",
-   "miLado": "local",
-   "idEspn": "401841557",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Central Córdoba (Santiago del Estero)",
-   "inicio": "2026-09-12T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Alberto José Armando (La Bombonera)",
-   "local": "Boca Juniors",
-   "visitante": "Central Córdoba (Santiago del Estero)",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-   "finalizado": true,
-   "marcador": "3 - 1"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
