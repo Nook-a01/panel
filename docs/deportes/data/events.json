@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-12T15:20:05.762Z",
+ "actualizado": "2026-10-12T22:57:16.566Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 12,
+   "total": 11,
    "proximos": 7
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600060772",
-   "miLado": null,
-   "idEspn": "600060772",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "Noche UFC: Silva vs. Delgado",
-   "inicio": "2026-09-12T18:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Desert Diamond Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-761800",
    "miLado": "local",
@@ -1194,7 +1172,7 @@
    "sport": "ufc",
    "emoji": "🥊",
    "titulo": "UFC Fight Night: Procházka vs. Stirling",
-   "inicio": "2026-11-21T14:00Z",
+   "inicio": "2026-11-21T15:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "ABHA Arena",
