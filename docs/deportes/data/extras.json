@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-12T05:54:07.832Z",
+ "actualizado": "2026-10-12T15:20:05.762Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -422,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -951,9 +954,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -976,9 +978,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1013,8 +1014,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1037,9 +1039,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1050,9 +1051,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1087,8 +1087,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1232,9 +1233,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1697,9 +1697,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1891,9 +1890,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315801",
@@ -2622,6 +2620,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Toto Wolff finds quirky solution to Kimi Antonelli track limits 'stress'",
+     "resumen": "Toto Wolff joked he would shove a pillow under the a--e of Kimi Antonelli before hailing the Italian's maturity as he moved within reach of the world championship.",
+     "fecha": "2026-10-12T11:22:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729617_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131373/toto-wolff-finds-quirky-solution-kimi-antonelli-track-limits-stress-formula-1"
+    },
+    {
+     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-12T10:46:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Red Bull downplay 'team to beat' label by George Russell, Oscar Piastri",
+     "resumen": "Red Bull has downplayed the assessment of rivals that it has re-established itself as the team to beat for the rest of 2026.",
+     "fecha": "2026-10-12T09:14:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131372/red-bull-downplay-team-beat-label-george-russell-oscar-piastri-formula-1"
+    },
+    {
      "titulo": "'Chucky' Verstappen is back. Luckily for Antonelli and Mercedes, it's too late",
      "resumen": "Max Verstappen has won two races in a row, and if there was more of the F1 season left, championship leader Kimi Antonelli would have reason to worry.",
      "fecha": "2026-10-11T17:56:08Z",
@@ -2636,32 +2655,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50131363/george-russell-praises-red-bull-upgrade-success-team-beat-singapore-grand-prix-marina-bay-circuit-formula-1"
     },
     {
-     "titulo": "Lewis Hamilton calls Singapore GP strategy 'painful lesson' after Ferrari apology",
-     "resumen": "Lewis Hamilton described his decision to ignore a Ferrari pit call as a \"painful lesson\" after it dropped him from third place to sixth in the final 12 laps of Sunday's Singapore Grand Prix.",
-     "fecha": "2026-10-11T17:29:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729202_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131357/lewis-hamilton-calls-singapore-gp-strategy-painful-lesson-ferrari-apology-singapore-grand-prix-marina-bay-circuit-formula-1"
-    },
-    {
      "titulo": "Lando Norris takes responsibility for collision with Oscar Piastri in Singapore: 'I let McLaren down'",
      "resumen": "Lando Norris has changed his stance on the collision he had with McLaren teammate Oscar Piastri during the Singapore Grand Prix sprint race and has now taken full responsibility for the incident.",
      "fecha": "2026-10-11T17:26:00Z",
      "imagen": "https://a.espncdn.com/photo/2026/1011/r1729250_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131362/lando-norris-takes-responsibility-collision-oscar-piastri-singapore-grand-prix-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Singapore Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-11T17:13:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1001/r1724433_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50075966/singapore-grand-prix-2026-circuit-marina-bay-circuit-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions-results"
-    },
-    {
-     "titulo": "Verstappen happy to sign off 'incredible' triple-header with another win",
-     "resumen": "Verstappen happy to sign off 'incredible' triple-header with another win",
-     "fecha": "2026-10-11T16:09:24Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_Verstappen_happy_to_sign_off_incredible_triple_header_with_another_win/dm_261011_Verstappen_happy_to_sign_off_incredible_triple_header_with_another_win.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50158253/verstappen-happy-sign-incredible-triple-header-another-win"
     }
    ],
    "resultados": null,
