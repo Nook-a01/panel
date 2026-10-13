@@ -33,6 +33,7 @@ contextBridge.exposeInMainWorld("estudio", {
   borrarVersion:   (id)          => ipcRenderer.invoke("estudio:borrar-version", id),
 
   guardarMidi:     (nombre, bytes) => ipcRenderer.invoke("estudio:guardar-midi", nombre, bytes),
+  guardarMidiDirecto: (nombre, bytes) => ipcRenderer.invoke("estudio:guardar-midi-directo", nombre, bytes),
 
   donde:           ()      => ipcRenderer.invoke("estudio:donde"),
   abrirCarpeta:    ()      => ipcRenderer.invoke("estudio:abrir-carpeta"),

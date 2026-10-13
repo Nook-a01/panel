@@ -14,7 +14,7 @@
      Abajo, las cinco secciones. Componer es UNA sola página larga (10/10/2026,
      pedido de Agustín): Canción, Referencias, Tocar, Plugins y Samples, una
      debajo de la otra. Las otras secciones son una sola hoja cada una. */
-  var COMPONER = ["componer", "ref", "tocar", "plugins", "samples"];
+  var COMPONER = ["componer", "ref", "armar"];   // Tocar, Plugins y Samples quedaron ocultos (13/10/2026)
   function mostrarHoja(id) {
     var ids = id === "componer" ? COMPONER : [id];
     document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", ids.indexOf(h.id.replace(/^h-/, "")) >= 0); });
@@ -410,13 +410,14 @@
     parar();
     try {
       var ref = null, base = $("#gBase").value;
-      if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: Number($("#gBpm").value) || null });
-      var banco = $("#gBanco").checked ? await window.estudio.bancoRitmos() : null;
+      if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: leerBpm() });
+      // Los ritmos reales van siempre que haya banco (se aprende solo al arrancar).
+      var banco = await window.estudio.bancoRitmos();
       var nueva = window.Compositor.componer({
         banco: banco,
         genero: $("#gGenero").value,
-        tonalidad: $("#gTon").value.trim() || "Am",
-        bpm: Number($("#gBpm").value) || null,
+        tonalidad: normalizarTonalidad($("#gTon").value) || "Am",
+        bpm: leerBpm(),
         semilla: Number($("#gSemilla").value) || 1,
         titulo: "Canción " + $("#gSemilla").value,
         ref: ref,
@@ -428,9 +429,10 @@
       pintarPieza(); pintarConfig(); pintarMapa();
       var notas = pieza.pistas.reduce(function (a, p) { return a + p.notas.length; }, 0);
       var seg = Math.round(pieza.compases * 4 * 60 / pieza.bpm);
-      $("#gAviso").textContent = "Listo: " + pieza.compases + " compases, " +
+      var donde = await window.estudio.guardarMidiDirecto((pieza.titulo || "cancion") + ".mid", armarMidi());
+      $("#gAviso").textContent = "Lista: " + pieza.compases + " compases, " +
         Math.floor(seg / 60) + ":" + String(seg % 60).padStart(2, "0") + ", " +
-        pieza.pistas.length + " pistas, " + notas + " notas.";
+        pieza.pistas.length + " pistas, " + notas + " notas. MIDI guardado en " + donde + ". Pedile a Claude que la arme en FL.";
       $("#gAviso").className = "aviso bien";
     } catch (e) {
       $("#gAviso").textContent = "No pude armarla: " + e.message;
@@ -512,6 +514,42 @@
   var mmss = function (s) { return Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0"); };
 
   // "3:00" son tres minutos; "2,5" son dos minutos y medio; vacío = sin tocar.
+  // "245" -> 2:45, "330" -> 3:30, "3" -> 3:00, "3.5" -> 3:30, "2:45" -> 2:45.
+  function normalizarDuracion(t) {
+    t = String(t || "").trim().replace(",", ".");
+    if (!t) return "";
+    var m = t.match(/^(\d+):(\d{1,2})$/), s = null;
+    if (m) s = Number(m[1]) * 60 + Number(m[2]);
+    else if (/^\d{3,4}$/.test(t)) s = Number(t.slice(0, -2)) * 60 + Number(t.slice(-2));
+    else if (/^\d+(\.\d+)?$/.test(t)) s = Math.round(Number(t) * 60);
+    if (!s) return "";
+    s = Math.max(60, Math.min(600, s));
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+  var NOTAS = { do: "C", re: "D", mi: "E", fa: "F", sol: "G", la: "A", si: "B", c: "C", d: "D", e: "E", f: "F", g: "G", a: "A", b: "B" };
+  var NOMBRES = { C: "Do", D: "Re", E: "Mi", F: "Fa", G: "Sol", A: "La", B: "Si" };
+  // "a" -> "A", "am" -> "Am", "la menor" -> "Am", "fa# m" -> "F#m", "Sib mayor" -> "Bb".
+  function normalizarTonalidad(t) {
+    t = String(t || "").trim().toLowerCase().replace(/\s+/g, " ");
+    var m = t.match(/^(do|re|mi|fa|sol|la|si|[a-g])\s?(#|♯|sostenido|b|♭|bemol)?\s?(m|min|menor|-|mayor|maj|m[ae]j)?$/);
+    if (!m) return null;
+    var alt = !m[2] ? "" : /^(#|♯|sostenido)$/.test(m[2]) ? "#" : "b";
+    var menor = m[3] && /^(m|min|menor|-)$/.test(m[3]);
+    return NOTAS[m[1]] + alt + (menor ? "m" : "");
+  }
+  function nombreTonalidad(ton) {
+    var m = String(ton || "").match(/^([A-G])(#|b)?(m)?$/);
+    if (!m) return "";
+    return NOMBRES[m[1]] + (m[2] === "#" ? " sostenido" : m[2] === "b" ? " bemol" : "") + (m[3] ? " menor" : " mayor");
+  }
+  function leerBpm() { var n = parseInt(String($("#gBpm").value).replace(/\D/g, ""), 10); return n >= 40 && n <= 220 ? n : null; }
+  $("#gDur").addEventListener("change", function () { this.value = normalizarDuracion(this.value); });
+  $("#gTon").addEventListener("change", function () {
+    var n = normalizarTonalidad(this.value);
+    if (n) { this.value = n; $("#gTonNombre").textContent = nombreTonalidad(n); $("#gTonNombre").classList.remove("mal"); }
+    else { $("#gTonNombre").textContent = "no entiendo: probá Am, F#m, La menor"; $("#gTonNombre").classList.add("mal"); }
+  });
+  $("#gBpm").addEventListener("change", function () { var n = leerBpm(); this.value = n ? n + " BPM" : ""; });
   function leerDuracion(t) {
     t = String(t || "").trim();
     if (!t) return null;
@@ -698,6 +736,9 @@
     buscarSalidas();
     pintarSamples();
     try { await pintarReferencias(); } catch (e) { /* sin referencias no pasa nada */ }
-    try { await pintarBanco(); } catch (e) { /* sin banco sale con los dibujos de siempre */ }
+    try {
+      await pintarBanco();
+      if (!(await window.estudio.bancoRitmos())) window.estudio.aprenderRitmos().then(pintarBanco).catch(function () {});
+    } catch (e) { /* sin banco sale con los dibujos de siempre */ }
   })();
 })();

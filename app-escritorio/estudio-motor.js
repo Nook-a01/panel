@@ -415,6 +415,16 @@ function registrar() {
   ipcMain.handle("estudio:renombrar-version", (_e, id, nombre) => renombrarVersion(id, nombre));
   ipcMain.handle("estudio:borrar-version", (_e, id) => borrarVersion(id));
 
+  // Al armar una canción, el .mid va derecho a la carpeta de MIDI del Estudio.
+  ipcMain.handle("estudio:guardar-midi-directo", async (_e, nombre, bytes) => {
+    const carpeta = "D:\\Nook\\Fl Studio\\Proyectos\\MIDI del Estudio";
+    const limpio = String(nombre).replace(/[\\/:*?"<>|]/g, "-").replace(/\s+/g, " ").trim() || "cancion.mid";
+    await fs.mkdir(carpeta, { recursive: true });
+    const destino = path.join(carpeta, limpio);
+    await fs.writeFile(destino, Buffer.from(bytes));
+    return destino;
+  });
+
   // Guardar el .mid donde vos quieras, con el diálogo de Windows.
   ipcMain.handle("estudio:guardar-midi", async (_e, nombre, bytes) => {
     const r = await dialog.showSaveDialog({

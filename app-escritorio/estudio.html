@@ -126,9 +126,9 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
       <h2>Armar una canción entera</h2>
       <div class="fila" style="margin-bottom:10px">
         <label class="campo">Base
-          <select id="gBase"><option value="">Un género</option></select>
+          <select id="gBase"><option value="">Sólo el género de abajo</option><option value="" disabled>Referencia: agregá una canción en Referencias ↓</option></select>
         </label>
-        <label class="campo">Duración <input type="text" id="gDur" size="5" placeholder="3:00"></label>
+        <label class="campo">Duración <input type="text" id="gDur" size="5" placeholder="3:00" title="Escribí 245 o 3:30: se entiende solo"></label>
         <span class="aviso" style="margin:0" id="gBaseAviso">Con una referencia, el tempo, la tonalidad, los acordes, la forma y el ritmo salen de ella.</span>
       </div>
       <div class="fila">
@@ -142,44 +142,24 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
             <option value="house">House</option>
           </select>
         </label>
-        <label class="campo">Tonalidad <input type="text" id="gTon" value="Am" size="4" maxlength="6"></label>
-        <label class="campo">Tempo <input type="number" id="gBpm" min="60" max="200" placeholder="del género"> BPM</label>
-        <label class="campo">Semilla <input type="number" id="gSemilla" value="1"></label>
-        <button class="b" id="gDado">🎲</button>
+        <label class="campo">Tonalidad <input type="text" id="gTon" value="Am" size="5" maxlength="12" title="Am, F#m, La menor, Do mayor…"> <span class="chip" id="gTonNombre">La menor</span></label>
+        <label class="campo">Tempo <input type="text" id="gBpm" size="7" placeholder="BPM del género"></label>
+        <label class="campo" title="Un número que elige la variación. La misma variación da siempre la misma canción; cambiala para que salga otra.">Variación <input type="number" id="gSemilla" value="1" min="1"></label>
+        <button class="b" id="gDado" title="Otra variación al azar">🎲</button>
       </div>
-      <div class="fila" style="margin-top:10px">
+      <div class="fila" style="margin-top:10px" hidden>
         <label class="campo"><input type="checkbox" id="gBanco" checked> Ritmos reales de mi librería</label>
         <button class="b" id="gAprender">Aprender ritmos</button>
         <span class="aviso" id="gBancoAviso" style="margin:0">—</span>
       </div>
       <div class="aviso">
         Sale una canción completa con intro, versos, pre, estribillos, puente y outro, en diez pistas.
+        Los ritmos salen de loops reales de tu librería de FL (se aprenden solos la primera vez).
         Entra como una versión nueva: nunca te pisa lo que ya tenías.
-        La misma semilla da siempre la misma canción — si te gustó, volvés a ella; si no, cambiala.
       </div>
-      <!-- El botón va al final: primero se elige todo, después se arma. -->
-      <div class="fila" style="margin-top:14px">
-        <button class="b pri" id="gArmar">Armar la canción</button>
-        <span class="aviso" id="gAviso" style="margin:0"></span>
-      </div>
-
-      <!-- Todo en una sola caja (pedido de Agustín, 09/10/2026): lo que antes eran
-           "Cómo quedó armada" y "Y después, en FL Studio" va acá abajo. -->
-      <div id="gMapaCaja" hidden style="margin-top:18px">
-        <h3 style="margin:0 0 6px;font-size:.95rem">Cómo quedó armada</h3>
-        <div id="gMapa"></div>
-      </div>
-
-      <h3 style="margin:18px 0 6px;font-size:.95rem">Para abrirla en FL Studio</h3>
-      <div class="aviso" style="margin:0">
-        En la pestaña <b>Tocar</b> tocá <b>Guardar .mid</b>. Después, en FL Studio:
-        <b>Archivo → Importar → Archivo MIDI</b> y elegís ese archivo. FL arma un canal por cada
-        instrumento (bajo, acordes, batería…) con las notas ya puestas; vos sólo le ponés el sonido.
-      </div>
-      <details style="margin-top:8px">
-        <summary class="aviso" style="margin:0;cursor:pointer">Qué sonido va en cada canal</summary>
-        <div id="guiaFL"></div>
-      </details>
+      <!-- La tabla de sonidos ya no se muestra (13/10/2026): los elige la app. Queda
+           el div porque estudio.js escribe ahí. -->
+      <div id="guiaFL" hidden></div>
     </div>
   </section>
 
@@ -202,7 +182,28 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
     <div id="refLista"></div>
   </section>
 
-  <!-- TOCAR -->
+  <!-- ARMAR: el último paso de Componer. -->
+  <section class="hoja" id="h-armar">
+    <div class="caja">
+      <h2>Armar la canción en FL Studio</h2>
+      <div class="aviso" style="margin:0 0 12px">
+        Con lo elegido arriba, la app compone la canción, elige los sonidos y guarda el MIDI en
+        <small class="ruta">D:\Nook\Fl Studio\Proyectos\MIDI del Estudio\</small>. Lo que sigue en FL Studio
+        (importar, poner cada sonido, mezclar) lo hace Claude con tu computadora cuando se lo pedís en el chat.
+      </div>
+      <div class="fila">
+        <button class="b pri" id="gArmar">Armar la canción</button>
+        <span class="aviso" id="gAviso" style="margin:0"></span>
+      </div>
+      <div id="gMapaCaja" hidden style="margin-top:18px">
+        <h3 style="margin:0 0 6px;font-size:.95rem">Cómo quedó armada</h3>
+        <div id="gMapa"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOCAR, PLUGINS y SAMPLES ya no se muestran (13/10/2026): la app elige sola
+       instrumentos y samples. Quedan en el HTML porque estudio.js los usa por id. -->
   <section class="hoja" id="h-tocar">
     <div class="caja">
       <h2>Versiones</h2>
@@ -358,7 +359,7 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
       <div id="cpPlanLista" style="margin-top:10px"></div>
     </div>
 
-    <div class="caja">
+    <div class="caja" hidden>
       <h2>Licencias de los sonidos</h2>
       <div class="fila"><button class="b" id="cpLic">Revisar los sonidos del .flp</button></div>
       <div class="aviso">Antes de publicar, cada pack tiene que permitir usarlo en canciones que se venden o se suben a plataformas. Marcá los que confirmaste.</div>

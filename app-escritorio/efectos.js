@@ -19,7 +19,8 @@
 
   var SECCIONES = {
     componer: ["01", "Componer", "La app arma la canción entera y se la manda a FL Studio. Vos elegís el estilo y la escuchás."],
-    ref: ["01", "Referencias", "Canciones que te gustan, medidas en tu compu: tempo, groove, acordes y energía."],
+    ref: ["01", "Referencias", "Canciones que te gustan, medidas en tu compu: tempo, groove, acordes y energía. Elegí una arriba, en Base, para que la canción salga con su estilo."],
+    armar: ["01", "Armar", "El último paso: la app compone, elige los sonidos y deja el MIDI listo."],
     tocar: ["01", "Tocar", "Escuchala, probá otra vuelta y mandala a FL por loopMIDI."],
     plugins: ["01", "Plugins", "Lo que tenés instalado, para elegir con qué suena cada pista."],
     samples: ["01", "Samples", "Tus carpetas de sonidos, contadas por tipo."],
