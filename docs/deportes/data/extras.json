@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-13T11:45:30.483Z",
+ "actualizado": "2026-10-13T19:15:19.646Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1066,9 +1066,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1079,9 +1078,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1270,9 +1268,16 @@
     {
      "titulo": "FIFA president Gianni Infantino received undisclosed $1.7M World Cup payment",
      "resumen": "FIFA president Gianni Infantino appears to have breached FIFA regulations after an IRS filing revealed an undisclosed $1.72 million pay package on top of his declared salary for 2024.",
-     "fecha": "2026-10-13T06:24:32Z",
+     "fecha": "2026-10-13T16:04:19Z",
      "imagen": "https://a.espncdn.com/photo/2026/1013/r1730003_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50171167/fifa-president-gianni-infantino-received-undisclosed-17m-world-cup-payment"
+    },
+    {
+     "titulo": "Netflix buys 2030 World Cup broadcast rights in co-host Spain",
+     "resumen": "Netflix bought exclusive rights to broadcast the 2030 World Cup in co-host Spain on Tuesday in a deal that lets a free-to-air public broadcaster show games each day including the ",
+     "fecha": "2026-10-13T13:50:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0423/r1648066_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50173561/netflix-buys-2030-world-cup-broadcast-rights-cohost-defending-champion-spain"
     },
     {
      "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
@@ -1329,13 +1334,6 @@
      "fecha": "2026-10-08T07:04:53Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727722_1088x612_16-9.png",
      "link": "https://www.espn.com/espn/story/_/id/50131006/afcon-qualifiers-renard-returns-ghana-unravel-nigeria-make-unwanted-history"
-    },
-    {
-     "titulo": "Ex-Tottenham defender Ramon Vega to challenge FIFA president Gianni Infantino",
-     "resumen": "Former Tottenham Hotspur defender Ramon Vega says he will challenge Gianni Infantino for the FIFA presidency.",
-     "fecha": "2026-10-07T18:28:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727457_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50126573/fifa-president-election-ramon-vega-gianni-infantino"
     }
    ],
    "resultados": null,
@@ -1889,9 +1887,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315801",
@@ -2677,6 +2674,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Brendan Allen submits his case for moving up in MMA divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-10-13T12:54:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729828_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
+    {
      "titulo": "Allen submits Duncan in UFC main event, calls out division's best",
      "resumen": "Brendan Allen stated his case for bigger fights after forcing Christian Leroy Duncan to tap out in the fifth round via rear-naked choke.",
      "fecha": "2026-10-11T16:45:50Z",
@@ -2710,13 +2714,6 @@
      "fecha": "2026-10-08T18:12:59Z",
      "imagen": "https://a.espncdn.com/photo/2025/0917/r1547068_600x400_3-2.jpg",
      "link": "https://www.espn.com/boxing/story/_/id/50134215/jake-paul-cleared-fight-canelo-mcgregor-others-wish-list"
-    },
-    {
-     "titulo": "Silva rises in P4P women's top 10, making most of golden opportunity",
-     "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
-     "fecha": "2026-10-07T13:22:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1004/r1725600_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     }
    ],
    "resultados": [

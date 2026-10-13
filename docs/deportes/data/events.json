@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-13T03:32:30.045Z",
+ "actualizado": "2026-10-13T19:15:19.646Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 20,
+   "total": 19,
    "proximos": 12
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 14",
-   "sede": "Madring, Spain",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-14",
-   "anio": 2026,
-   "ronda": "14",
-   "sesion": "Carrera",
-   "titulo": "GP Spanish",
-   "inicio": "2026-09-13T13:00:00.000Z"
-  },
   {
    "id": "espn-401912524",
    "miLado": "visitante",
