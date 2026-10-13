@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-13T03:32:30.045Z",
+ "actualizado": "2026-10-13T11:45:30.483Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1065,8 +1066,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1077,8 +1079,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1089,8 +1092,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1264,6 +1268,13 @@
    ],
    "noticias": [
     {
+     "titulo": "FIFA president Gianni Infantino received undisclosed $1.7M World Cup payment",
+     "resumen": "FIFA president Gianni Infantino appears to have breached FIFA regulations after an IRS filing revealed an undisclosed $1.72 million pay package on top of his declared salary for 2024.",
+     "fecha": "2026-10-13T06:24:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1013/r1730003_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50171167/fifa-president-gianni-infantino-received-undisclosed-17m-world-cup-payment"
+    },
+    {
      "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "resumen": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "fecha": "2026-10-11T13:54:15Z",
@@ -1325,13 +1336,6 @@
      "fecha": "2026-10-07T18:28:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1007/r1727457_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50126573/fifa-president-election-ramon-vega-gianni-infantino"
-    },
-    {
-     "titulo": "2030 World Cup Power Rankings: Who are the top 15 nations in the men's game?",
-     "resumen": "With the 2026 World Cup well and truly behind us, the first fall international break saw all the top teams playing four times in three weeks. Which sides look strongest and most likely to contend in four years' time?",
-     "fecha": "2026-10-07T12:46:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0618/soc_wc_power-rankings_16x9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50114003/fifa-world-cup-power-rankings-spain-brazil-germany-usa-mexico-england-argentina-france"
     }
    ],
    "resultados": null,
@@ -1609,9 +1613,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1886,8 +1889,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315801",
@@ -2616,18 +2620,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Christian Horner: Mercedes' Toto Wolff has it 'easy' at the moment",
+     "resumen": "Former Red Bull team principal Christian Horner has suggested that Mercedes boss Toto Wolff has \"got it quite easy\" at the moment.",
+     "fecha": "2026-10-13T11:29:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1013/r1730076_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50172589/christian-horner-toto-wolff-f1-mercedes-red-bull"
+    },
+    {
+     "titulo": "Formula 1 to return to Africa in 'early 2030s' as Rwanda race confirmed",
+     "resumen": "Formula 1 is set to return to the African continent for the first time since 1993 after the sport confirmed a ten-year deal to host a race in Rwanda from \"the early 2030s.\"",
+     "fecha": "2026-10-13T09:21:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729765_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50167500/formula-1-return-africa-early-2030s-rwanda-race-confirmed"
+    },
+    {
+     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-13T06:19:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
      "titulo": "Toto Wolff finds quirky solution to Kimi Antonelli track limits 'stress'",
      "resumen": "Toto Wolff joked he would shove a pillow under the a--e of Kimi Antonelli before hailing the Italian's maturity as he moved within reach of the world championship.",
      "fecha": "2026-10-12T11:22:01Z",
      "imagen": "https://a.espncdn.com/photo/2026/1012/r1729617_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131373/toto-wolff-finds-quirky-solution-kimi-antonelli-track-limits-stress-formula-1"
-    },
-    {
-     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-12T10:46:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
     },
     {
      "titulo": "Red Bull downplay 'team to beat' label by George Russell, Oscar Piastri",
@@ -2642,20 +2660,6 @@
      "fecha": "2026-10-11T17:56:08Z",
      "imagen": "https://a.espncdn.com/photo/2026/1011/r1729274_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/50159153/chucky-max-verstappen-back-luckily-kimi-antonelli-mercedes-too-late-f1-championship"
-    },
-    {
-     "titulo": "George Russell praises Red Bull after upgrade success and consecutive wins: 'Team to beat'",
-     "resumen": "George Russell has said Red Bull is now \"the team to beat\" in Formula 1 after Max Verstappen secured his second grand prix victory in a row at Sunday's Singapore Grand Prix.",
-     "fecha": "2026-10-11T17:49:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729261_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131363/george-russell-praises-red-bull-upgrade-success-team-beat-singapore-grand-prix-marina-bay-circuit-formula-1"
-    },
-    {
-     "titulo": "Lando Norris takes responsibility for collision with Oscar Piastri in Singapore: 'I let McLaren down'",
-     "resumen": "Lando Norris has changed his stance on the collision he had with McLaren teammate Oscar Piastri during the Singapore Grand Prix sprint race and has now taken full responsibility for the incident.",
-     "fecha": "2026-10-11T17:26:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729250_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131362/lando-norris-takes-responsibility-collision-oscar-piastri-singapore-grand-prix-marina-bay-circuit-formula-1"
     }
    ],
    "resultados": null,
