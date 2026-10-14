@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-14T01:56:34.401Z",
+ "actualizado": "2026-10-14T07:36:18.419Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -594,8 +594,8 @@
    "visitante": "Vasco da Gama",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 1"
   },
   {
    "id": "espn-761861",
