@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-14T07:36:18.419Z",
+ "actualizado": "2026-10-14T13:42:23.842Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -699,7 +699,7 @@
    "inicio": "2026-10-21T00:30Z",
    "horaConfirmada": true,
    "competicion": "CONMEBOL Sudamericana",
-   "sede": "",
+   "sede": "Estadio do Maracana",
    "local": "Vasco da Gama",
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
