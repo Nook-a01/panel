@@ -22,6 +22,10 @@ import os
 import sys
 
 argv = sys.argv[sys.argv.index("--") + 1:]
+# --solo-preparar: deja la copia de trabajo lista (pantallas y audio) y no renderiza,
+# para abrirla en Blender con ventana y verla con play.
+SOLO_PREPARAR = "--solo-preparar" in argv
+argv = [a for a in argv if a != "--solo-preparar"]
 if len(argv) < 3:
     raise SystemExit("Uso: ... -- cancion.wav pantallas\\ salida.mp4 [desde hasta] [escala_%] [muestras]")
 AUDIO, PANTALLAS, SALIDA = (os.path.abspath(a) for a in argv[:3])
@@ -118,6 +122,9 @@ r.use_placeholder = True
 r.use_file_extension = True
 r.filepath = os.path.join(CUADROS, "#####")
 bpy.ops.wm.save_mainfile()
+if SOLO_PREPARAR:
+    print("Preparado (sin renderizar):", blend_nuevo, flush=True)
+    raise SystemExit(0)
 
 print("Renderizando cuadros %d a %d (%d%%, %d muestras) en %s" % (escena.frame_start, escena.frame_end, ESCALA, MUESTRAS, CUADROS), flush=True)
 bpy.ops.render.render(animation=True)

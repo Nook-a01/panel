@@ -447,7 +447,7 @@ function registrar() {
 
   // Mezcla, Videoclip, Campaña y Métricas viven en su propio archivo, pero
   // entran por acá: este sigue siendo el único lugar que registra puertas al disco.
-  require("./lanzamiento-motor.js").registrar(datos);
+  require("./lanzamiento-motor.js").registrar(datos, escanearPlugins);
 }
 
 module.exports = { registrar, escanearPlugins, escanearSamples, datos };

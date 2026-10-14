@@ -152,3 +152,24 @@ select{color-scheme:dark}
 select option{background:#1b1b26;color:var(--tinta)}
 #gTonNombre{font-size:.74rem}
 #gTonNombre.mal{color:var(--rojo);border-color:var(--rojo)}
+
+/* Mezcla: lista de plugins por rol */
+.grupoPlug{margin:8px 0 2px}
+.grupoPlug>b{display:block;color:var(--rosa2);font-size:.82rem;margin-bottom:4px}
+.plug{display:flex;gap:8px;align-items:baseline;font-size:.86rem;padding:3px 0;cursor:pointer}
+.plug .aviso{font-size:.76rem}
+.plug.pro{color:var(--tinta)}
+textarea{width:100%;font:inherit;font-size:.9rem;background:rgba(255,255,255,.05);color:var(--tinta);border:1px solid var(--linea);border-radius:12px;padding:10px;resize:vertical}
+/* Campaña: la grilla como su planilla */
+.grillaCaja{overflow:auto;max-height:70vh;border:1px solid var(--linea);border-radius:12px}
+table.grilla{min-width:1700px;font-size:.8rem}
+table.grilla th{position:sticky;top:0;background:#1a1824;z-index:1;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+table.grilla td{vertical-align:top;padding:5px 6px}
+table.grilla td.sem{white-space:nowrap;color:var(--acento2);font-weight:600}
+table.grilla input,table.grilla select,table.grilla textarea{width:100%;min-width:90px;font-size:.8rem;padding:5px 7px;border-radius:8px}
+table.grilla td.copy{min-width:280px}
+table.grilla td.copy textarea{min-height:56px}
+table.grilla tr.aprobada td{background:rgba(124,231,198,.05)}
+table.grilla tr.subida td{opacity:.55}
+table.grilla tr.pasada td.sem{color:var(--rojo)}
+.clipFila input[type=number]{width:70px}

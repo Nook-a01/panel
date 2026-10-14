@@ -32,7 +32,8 @@ const FFMPEG = [process.env.FFMPEG, path.join(os.homedir(), "AppData", "Local", 
 // node para los scripts: el que trae Electron hace de node con ELECTRON_RUN_AS_NODE.
 const NODE = process.execPath;
 
-let datos = null;   // función de estudio-motor para la carpeta de datos
+let datos = null;     // función de estudio-motor para la carpeta de datos
+let escanear = null;  // escanearPlugins de estudio-motor
 
 async function existe(p) { try { await fs.access(p); return true; } catch { return false; } }
 async function leerJson(p, d) { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return d; } }
@@ -159,10 +160,183 @@ async function usarComoMaster(id, wav) {
   const mp3 = path.join(carpeta, `${titulo} - master.mp3`);
   await correr(FFMPEG, ["-v", "error", "-y", "-i", destino, "-c:a", "libmp3lame", "-b:a", "320k", "-ar", "44100", mp3]);
   const medidaMp3 = await medir(mp3);
-  const todo = { wav: medida, mp3: medidaMp3, fecha: new Date().toISOString(), origen: wav };
+  const previo = await leerJson(path.join(carpeta, "mezcla.json"), {});
+  const todo = Object.assign(previo, { wav: medida, mp3: medidaMp3, fecha: new Date().toISOString(), origen: wav });
   await escribirJson(path.join(carpeta, "mezcla.json"), todo);
   return todo;
 }
+
+/* ---------------- mezcla con referencia ----------------
+   (13/10/2026) Una canción de referencia SÓLO para la mezcla, medida a fondo
+   con ffmpeg: volumen, pico real, rango, balance de graves/medios/agudos,
+   cuánto pega (cresta) y ancho estéreo. Se compara con el master. */
+
+function db(salida, clave) {
+  const m = String(salida).match(new RegExp(clave + ":\\s*(-?[\\d.]+) dB"));
+  return m ? Number(m[1]) : null;
+}
+
+async function nivel(archivo, filtro) {
+  const { err } = await correr(FFMPEG, ["-hide_banner", "-nostats", "-i", archivo, "-af", (filtro ? filtro + "," : "") + "volumedetect", "-f", "null", "-"]);
+  return { medio: db(err, "mean_volume"), maximo: db(err, "max_volume") };
+}
+
+async function analizarMezcla(archivo) {
+  const base = await medir(archivo);
+  const total = await nivel(archivo, "");
+  const graves = await nivel(archivo, "lowpass=f=150,lowpass=f=150");
+  const medios = await nivel(archivo, "highpass=f=300,lowpass=f=3000");
+  const agudos = await nivel(archivo, "highpass=f=5000,highpass=f=5000");
+  const mid = await nivel(archivo, "pan=mono|c0=0.5*c0+0.5*c1");
+  const side = await nivel(archivo, "pan=mono|c0=0.5*c0-0.5*c1");
+  const r1 = x => x == null ? null : Math.round(x * 10) / 10;
+  return Object.assign(base, {
+    archivo,
+    bandas: { graves: r1(graves.medio - total.medio), medios: r1(medios.medio - total.medio), agudos: r1(agudos.medio - total.medio) },
+    cresta: r1(total.maximo - total.medio),
+    ancho: r1(side.medio - mid.medio),
+  });
+}
+
+// Qué le falta al master para parecerse a la referencia, en palabras.
+function compararMezcla(m, ref) {
+  if (!m || !ref) return [];
+  const out = [];
+  const d = (a, b) => a != null && b != null ? Math.round((a - b) * 10) / 10 : null;
+  const dif = (nombre, a, b, umbral, mas, menos) => {
+    const x = d(a, b);
+    if (x == null) return;
+    if (Math.abs(x) <= umbral) out.push({ ok: true, texto: `${nombre}: igual que la referencia (${a} vs ${b}).` });
+    else out.push({ ok: false, texto: `${nombre}: tu master tiene ${Math.abs(x)} ${x > 0 ? mas : menos} (${a} vs ${b}).` });
+  };
+  dif("Volumen (LUFS)", m.integrado, ref.integrado, 1, "dB más", "dB menos");
+  dif("Graves", m.bandas && m.bandas.graves, ref.bandas && ref.bandas.graves, 1.5, "dB más de graves", "dB menos de graves");
+  dif("Medios", m.bandas && m.bandas.medios, ref.bandas && ref.bandas.medios, 1.5, "dB más de medios", "dB menos de medios");
+  dif("Agudos", m.bandas && m.bandas.agudos, ref.bandas && ref.bandas.agudos, 1.5, "dB más de agudos", "dB menos de agudos");
+  dif("Pegada (cresta)", m.cresta, ref.cresta, 1.5, "dB más de pegada (menos comprimido)", "dB menos de pegada (más aplastado)");
+  dif("Ancho estéreo", m.ancho, ref.ancho, 2, "dB más ancho", "dB más angosto");
+  dif("Rango dinámico (LRA)", m.rango, ref.rango, 2, "LU más de variación", "LU menos de variación");
+  return out;
+}
+
+async function elegirReferenciaMezcla(id) {
+  const carpeta = carpetaDe(id);
+  const r = await dialog.showOpenDialog({ title: "Elegí la canción de referencia para la mezcla", properties: ["openFile"],
+    filters: [{ name: "Audio", extensions: ["wav", "mp3", "flac", "m4a", "aac", "ogg", "aif", "aiff"] }] });
+  if (r.canceled || !r.filePaths.length) return null;
+  const analisis = await analizarMezcla(r.filePaths[0]);
+  const m = await leerJson(path.join(carpeta, "mezcla.json"), {});
+  m.referencia = analisis;
+  await escribirJson(path.join(carpeta, "mezcla.json"), m);
+  return analisis;
+}
+
+async function guardarMezcla(id, cambios) {
+  const carpeta = carpetaDe(id);
+  const m = await leerJson(path.join(carpeta, "mezcla.json"), {});
+  if (typeof cambios.notas === "string") m.notas = cambios.notas.slice(0, 5000);
+  if (Array.isArray(cambios.plugins)) m.plugins = cambios.plugins.slice(0, 60).map(String);
+  await escribirJson(path.join(carpeta, "mezcla.json"), m);
+  return m;
+}
+
+// Los plugins de mezcla que andan en FL: los de fábrica (con su rol) y los VST
+// instalados en las carpetas estándar. Nada de lo que falta comprar.
+const ROLES_FL = {
+  "Fruity Parametric EQ 2": ["Ecualización", "El EQ de todas las pistas: cortar graves, limpiar barro, abrir brillo.", true],
+  "EQUO": ["Ecualización", "EQ gráfico con morphing."],
+  "Fruity 7 Band EQ": ["Ecualización", "EQ simple de 7 bandas."],
+  "Fruity Compressor": ["Compresión", "Compresor clásico para bajo, voces y buses.", true],
+  "Fruity Multiband Compressor": ["Compresión", "Compresión por bandas: controla graves sin apagar los agudos."],
+  "Transient Processor": ["Compresión", "Más o menos ataque en bombo, caja y percusión.", true],
+  "Fruity Squeeze": ["Compresión", "Compresor + bitcrush: carácter."],
+  "Maximus": ["Master", "Compresor/limitador multibanda: pegamento y volumen del master.", true],
+  "Fruity Limiter": ["Master", "Limitador del final de la cadena (techo −1 dBTP).", true],
+  "Soundgoodizer": ["Master", "Un Maximus en una perilla: brillo y pegada rápidos."],
+  "Fruity Soft Clipper": ["Master", "Recorte suave antes del limitador."],
+  "Fruity Reeverb 2": ["Reverb", "Reverb principal (envíos).", true],
+  "Fruity Convolver": ["Reverb", "Reverb de impulsos reales: salas y placas."],
+  "Luxeverb": ["Reverb", "Reverb algorítmico premium de FL."],
+  "Fruity Delay 3": ["Delay", "Delay sincronizado con filtro: envíos 1/4 y 1/8.", true],
+  "Fruity Delay 2": ["Delay", "Delay simple."],
+  "Multiband Delay": ["Delay", "Delay por bandas, para efectos."],
+  "Fruity Delay Bank": ["Delay", "Ocho delays en serie."],
+  "Fruity Fast Dist": ["Saturación", "Distorsión rápida: calor en bajos y leads.", true],
+  "Fruity Blood Overdrive": ["Saturación", "Overdrive para guitarras y sintes."],
+  "Distructor": ["Saturación", "Distorsión multietapa con cabinas."],
+  "Fruity WaveShaper": ["Saturación", "Forma de onda a mano."],
+  "Hardcore": ["Saturación", "Pedalera de guitarra."],
+  "Fruity Stereo Enhancer": ["Estéreo", "Más ancho o más angosto.", true],
+  "Fruity Stereo Shaper": ["Estéreo", "Mid/side y retraso entre canales."],
+  "Fruity PanOMatic": ["Estéreo", "Paneo y volumen con LFO.", true],
+  "Fruity Balance": ["Estéreo", "Volumen y paneo simples."],
+  "Fruity Center": ["Estéreo", "Quita el DC offset."],
+  "Vintage Chorus": ["Modulación", "Chorus analógico para pads y guitarras."],
+  "Hyper Chorus": ["Modulación", "Chorus denso moderno."],
+  "Fruity Phaser": ["Modulación", "Phaser."],
+  "Vintage Phaser": ["Modulación", "Phaser analógico."],
+  "Fruity Flangus": ["Modulación", "Flanger/chorus."],
+  "Gross Beat": ["Modulación", "Efectos de tiempo y volumen: tartamudeos, half-time, sidechain."],
+  "Fruity Love Philter": ["Filtro", "Filtros con envolventes y secuencia."],
+  "Fruity Filter": ["Filtro", "Filtro simple."],
+  "Fruity Fast LP": ["Filtro", "Pasa-bajos liviano."],
+  "Fruity Free Filter": ["Filtro", "Filtros varios con Q."],
+  "Wave Candy": ["Medición", "Osciloscopio, espectro y vectorscopio."],
+  "Fruity Spectroman": ["Medición", "Analizador de espectro."],
+  "Fruity dB Meter": ["Medición", "Medidor de nivel."],
+  "Patcher": ["Herramienta", "Cadenas de efectos en paralelo."],
+  "Fruity Send": ["Herramienta", "Envíos a otros inserts."],
+  "Edison": ["Herramienta", "Grabar y editar audio."],
+  "Newtone": ["Herramienta", "Afinar y editar melodías grabadas."],
+  "Pitcher": ["Herramienta", "Afinación en tiempo real / armonías."],
+  "Vocodex": ["Herramienta", "Vocoder."],
+  "Frequency Splitter": ["Herramienta", "Divide en bandas para procesar aparte."],
+};
+const ROLES_VST = {
+  "TDR Nova": ["Ecualización", "EQ dinámico (gratis): compresión por banda, limpia resonancias.", true],
+  "ValhallaSupermassive": ["Reverb", "Reverb/delay gigante (gratis): colas y ambientes.", true],
+  "ValhallaFreqEcho": ["Delay", "Delay con cambio de frecuencia (gratis)."],
+  "ValhallaSpaceModulator": ["Modulación", "Flanger/chorus (gratis)."],
+};
+
+async function pluginsMezcla() {
+  const r = await escanear();
+  const lista = [], vistos = new Set();
+  for (const c of r.carpetas) {
+    for (const p of c.plugins) {
+      if (p.tipo === "instrumento" || vistos.has(p.nombre)) continue;   // VST2 y VST3 del mismo: una vez
+      const rol = ROLES_FL[p.nombre] || ROLES_VST[p.nombre];
+      if (!rol) continue;
+      vistos.add(p.nombre);
+      lista.push({ nombre: p.nombre, origen: c.clase, grupo: rol[0], para: rol[1], pro: !!rol[2] });
+    }
+  }
+  const orden = ["Ecualización", "Compresión", "Master", "Reverb", "Delay", "Saturación", "Estéreo", "Modulación", "Filtro", "Medición", "Herramienta"];
+  lista.sort((a, b) => orden.indexOf(a.grupo) - orden.indexOf(b.grupo) || (b.pro - a.pro) || a.nombre.localeCompare(b.nombre));
+  return lista;
+}
+
+// El brief que lee Claude para mezclar en FL: referencia, comparación, notas y
+// plugins elegidos. Queda en <canción>\Mezcla\brief-mezcla.md.
+async function briefMezcla(id) {
+  const carpeta = carpetaDe(id);
+  const { titulo } = leerNombre(path.basename(carpeta));
+  const m = await leerJson(path.join(carpeta, "mezcla.json"), {});
+  const archivos = await fs.readdir(carpeta);
+  const wav = archivos.find(a => / - master\.wav$/i.test(a));
+  const master = wav ? await analizarMezcla(path.join(carpeta, wav)) : null;
+  const cmp = compararMezcla(master, m.referencia);
+  const f = x => x == null ? "—" : x;
+  const bloque = (n, a) => a ? `- Volumen ${f(a.integrado)} LUFS · pico real ${f(a.picoReal)} dBTP · LRA ${f(a.rango)} LU\n- Graves ${f(a.bandas && a.bandas.graves)} dB · medios ${f(a.bandas && a.bandas.medios)} dB · agudos ${f(a.bandas && a.bandas.agudos)} dB (respecto del total)\n- Cresta ${f(a.cresta)} dB · ancho estéreo ${f(a.ancho)} dB` : `- (no hay ${n})`;
+  const texto = `# Brief de mezcla — ${titulo}\n\nGenerado por el Estudio el ${new Date().toLocaleString("es-AR")}.\n\n## Meta\n−14 LUFS integrados, −1 dBTP, WAV 44,1 kHz / 24 bits.\n\n## Referencia\n${m.referencia ? path.basename(m.referencia.archivo) : "(sin referencia)"}\n${bloque("referencia", m.referencia)}\n\n## Master actual\n${wav || "(sin master)"}\n${bloque("master", master)}\n\n## Qué cambiar para parecerse a la referencia\n${cmp.length ? cmp.map(c => `- ${c.ok ? "✔" : "✘"} ${c.texto}`).join("\n") : "- (falta la referencia o el master)"}\n\n## Lo que a Agustín le gusta de esa mezcla\n${m.notas || "(sin notas)"}\n\n## Plugins elegidos (instalados y funcionando en FL)\n${(m.plugins || []).length ? m.plugins.map(p => `- ${p}`).join("\n") : "- (ninguno marcado: usar los de FL de fábrica)"}\n\n## Cómo mezclar (para Claude)\n1. Abrir el .flp de la canción en FL (lo abre Agustín).\n2. Cadena por insert: EQ → compresión → saturación si hace falta → envíos a reverb y delay.\n3. Buses: batería, bajo, melódicos. Master: Maximus → Fruity Limiter (ATT 0 ms, CEIL −3 dB).\n4. Exportar WAV 24 bits y medirlo en Mezcla; repetir hasta la meta.\n`;
+  const dir = path.join(carpeta, "Mezcla");
+  await fs.mkdir(dir, { recursive: true });
+  const destino = path.join(dir, "brief-mezcla.md");
+  await fs.writeFile(destino, texto, "utf8");
+  await escribirJson(path.join(dir, "brief-mezcla.json"), { titulo, referencia: m.referencia || null, master, comparacion: cmp, notas: m.notas || "", plugins: m.plugins || [] });
+  return { ruta: destino, comparacion: cmp, master };
+}
+
 
 /* ---------------- trabajos largos ----------------
    Cada uno deja <canción>\Videoclip\<paso>.log y <paso>.trabajo.json con el pid. */
@@ -199,6 +373,7 @@ async function rutasVideo(id) {
     audio: path.join(v, `${t} - audio.json`), pantallas: path.join(v, "Pantallas"),
     h: path.join(v, `${t} - videoclip estudio 16x9.mp4`), vert: path.join(v, `${t} - videoclip estudio 9x16.mp4`),
     cuadros: path.join(v, `${t} - videoclip estudio 16x9 - cuadros`), blend: path.join(v, `${t} - videoclip estudio 16x9.blend`),
+    pedido: path.join(v, "pedido.md"),
   };
 }
 
@@ -215,9 +390,11 @@ async function estadoVideoclip(id) {
     audio: audio ? { segundos: audio.segundos, golpes: audio.golpes.length } : null,
     pantallas, cuadros: { hechos, total },
     horizontal: (await tamano(r.h)) > 0 ? r.h : null, vertical: (await tamano(r.vert)) > 0 ? r.vert : null,
+    hayBlend: await existe(r.blend),
+    pedido: await fs.readFile(r.pedido, "utf8").catch(() => ""),
     trabajos: {},
   };
-  for (const p of ["pantallas", "render", "vertical"]) estado.trabajos[p] = await trabajo(r.v, p);
+  for (const p of ["pantallas", "preparar", "render", "vertical"]) estado.trabajos[p] = await trabajo(r.v, p);
   // El render escribe su propio registro (render.log): de ahí sale el último cuadro.
   if (estado.trabajos.render) {
     try { estado.trabajos.render.cola = (await fs.readFile(path.join(r.v, "render.log"), "utf8")).slice(-3000); } catch {}
@@ -228,7 +405,20 @@ async function estadoVideoclip(id) {
 async function pasoVideoclip(id, paso, opciones) {
   const r = await rutasVideo(id);
   const o = opciones || {};
-  for (const p of ["pantallas", "render", "vertical"]) {
+  if (paso === "pedido") {
+    // Lo que Agustín quiere ver en el video, en sus palabras. Claude lo lee y arma la escena.
+    await fs.mkdir(r.v, { recursive: true });
+    await fs.writeFile(r.pedido, String(o.texto || "").slice(0, 20000), "utf8");
+    return estadoVideoclip(id);
+  }
+  if (paso === "blender") {
+    // Vista previa: Blender con ventana, sobre la copia de trabajo. Agustín le da play.
+    if (!(await existe(r.blend))) throw new Error("Primero tocá «Preparar».");
+    const hijo = spawn(BLENDER, [r.blend], { detached: true, stdio: "ignore" });
+    hijo.unref();
+    return estadoVideoclip(id);
+  }
+  for (const p of ["pantallas", "preparar", "render", "vertical"]) {
     const t = await trabajo(r.v, p);
     if (t && t.corriendo) throw new Error(`Ya hay un trabajo corriendo (${p}). Esperá a que termine.`);
   }
@@ -245,6 +435,13 @@ async function pasoVideoclip(id, paso, opciones) {
     for (const n of o.rehacer || []) await fs.rm(path.join(r.pantallas, n + ".mp4"), { force: true });
     await lanzar(r.v, "pantallas", NODE, [path.join(VIDEOCLIP, "pantallas.js"), r.master, r.audio, r.pantallas,
       o.titulo || r.nombre.titulo, String(r.nombre.bpm || 120)], Object.assign({ BLENDER }, env));
+  } else if (paso === "preparar") {
+    // Arma la copia de trabajo (.blend con las pantallas y el audio) sin renderizar.
+    for (const n of ["visualizador", "monitor-2", "cartel-grande", "cartel-luminoso"]) {
+      if (!((await tamano(path.join(r.pantallas, n + ".mp4"))) > 0)) throw new Error("Faltan pantallas: armalas primero.");
+    }
+    await lanzar(r.v, "preparar", BLENDER, ["-b", MODELO, "-P", path.join(VIDEOCLIP, "videoclip-estudio.py"), "--", "--solo-preparar",
+      r.master, r.pantallas, r.h]);
   } else if (paso === "render") {
     for (const n of ["visualizador", "monitor-2", "cartel-grande", "cartel-luminoso"]) {
       if (!((await tamano(path.join(r.pantallas, n + ".mp4"))) > 0)) throw new Error("Faltan pantallas: armalas primero.");
@@ -263,7 +460,10 @@ async function pasoVideoclip(id, paso, opciones) {
   return estadoVideoclip(id);
 }
 
-/* ---------------- campaña ---------------- */
+/* ---------------- campaña ----------------
+   Paso a paso (13/10/2026, pedido de Agustín): 1 fecha y redes, 2 tapa, 3 clips,
+   4 grilla de calendario (como su planilla), 5 programar. Todo queda en
+   <canción>\Campaña\campana.json. Nada se publica desde acá. */
 
 async function rutasCampana(id) {
   const r = await rutasVideo(id);
@@ -271,7 +471,6 @@ async function rutasCampana(id) {
   return Object.assign(r, { c, json: path.join(c, "campana.json"), tapa: path.join(c, `${r.nombre.titulo} - tapa 3000.jpg`) });
 }
 
-// Los textos son borradores para que Agustín los corrija. Ninguno se publica solo.
 const ETIQUETAS = {
   EDM: "#edm #house #electronica #musicaelectronica #productor #flstudio",
   Afrobeats: "#afrobeats #afro #plena #musicanueva #productor #flstudio",
@@ -280,42 +479,61 @@ const ETIQUETAS = {
   House: "#house #edm #musicaelectronica #productor #flstudio",
 };
 
-function planBase(t, genero, estreno) {
-  const tags = ETIQUETAS[genero] || "#musicanueva #productor #flstudio";
-  const P = (dias, red, tipo, archivo, texto) => ({ dias, red, tipo, archivo, texto, estado: "borrador" });
-  return [
-    P(-21, "Distribuidora", "tarea", "master.wav + tapa", `Subir "${t}" a la distribuidora con fecha de salida ${estreno}. Con 3 semanas alcanza para que llegue a Spotify y Apple Music y para mandarlo a las listas editoriales.`),
-    P(-14, "Spotify for Artists", "tarea", "", `Cuando aparezca en Spotify for Artists (como "próximo lanzamiento"), mandarlo a las listas editoriales: hay que hacerlo al menos 7 días antes.`),
-    P(-14, "TikTok", "teaser", "clip-1.mp4", `Algo nuevo se está cocinando en el estudio 👀🔊 "${t}" sale el ${estreno}. ${tags}`),
-    P(-10, "YouTube", "short", "clip-1.mp4", `Primer adelanto de "${t}" 🔥 Estreno ${estreno}. #shorts ${tags}`),
-    P(-7, "TikTok", "tapa", "tapa 3000.jpg", `Esta es la tapa de "${t}" 💿 Faltan 7 días. ¿La guardás? ${tags}`),
-    P(-5, "TikTok", "clip", "clip-2.mp4", `Así suena el drop de "${t}" 🎛️ ${estreno} en todas las plataformas. ${tags}`),
-    P(-3, "YouTube", "estreno programado", "videoclip 16x9", `Programar el estreno del videoclip de "${t}" para el ${estreno} a las 18:00, con la tapa de miniatura.`),
-    P(-2, "TikTok", "clip", "clip-3.mp4", `2 días para "${t}" ⏳ ${tags}`),
-    P(-1, "TikTok", "cuenta regresiva", "clip-1.mp4", `Mañana sale "${t}" 🚀 Activá la notificación. ${tags}`),
-    P(0, "Spotify / Apple Music", "salida", "", `Sale "${t}" en Spotify y Apple Music (lo publica la distribuidora). Copiar el link para los posts del día.`),
-    P(0, "YouTube", "estreno", "videoclip 16x9", `"${t}" — videoclip oficial. Hecho en mi estudio, de la primera nota al último cuadro. Escuchalo en Spotify y Apple Music (link en la descripción). ${tags}`),
-    P(0, "TikTok", "salida", "videoclip 9x16", `YA SALIÓ "${t}" 🔊 Link en el perfil. ${tags}`),
-    P(1, "TikTok", "detrás de escena", "captura de FL Studio", `Así armé "${t}" en FL Studio 🎹 ${tags}`),
-    P(3, "YouTube", "short", "clip-2.mp4", `El drop de "${t}" 🔥 Completo en el canal. #shorts ${tags}`),
-    P(7, "TikTok", "gracias", "", `Una semana de "${t}" 🙏 Gracias por escucharlo. (Sumar los números de Métricas.) ${tags}`),
-  ];
-}
-
 function fechaMas(iso, dias) {
   const d = new Date(iso + "T12:00:00");
   d.setDate(d.getDate() + dias);
   return d.toISOString().slice(0, 10);
 }
 
+// Las piezas de la campaña, por red. Cada una es una fila de la grilla; los
+// textos son borradores para que Agustín los corrija.
+function piezasBase(t, genero, estreno, redes, hora) {
+  const tags = ETIQUETAS[genero] || "#musicanueva #productor #flstudio";
+  const f = estreno.split("-").reverse().join("/");
+  const P = (dias, red, formato, pilar, objetivo, archivo, copy, indicaciones) =>
+    ({ dias, red, formato, pilar, objetivo, archivo, copy, indicaciones: indicaciones || "" });
+  const todas = [
+    P(-21, "Distribuidora", "Tarea", "Lanzamiento", "Que llegue a Spotify y Apple Music", "master.wav + tapa",
+      `Subir "${t}" con fecha de salida ${f}. Con 3 semanas llega a tiempo y se puede mandar a las listas editoriales.`, "ISRC lo da la distribuidora. Créditos: Nook."),
+    P(-14, "Spotify for Artists", "Tarea", "Lanzamiento", "Listas editoriales", "",
+      `Cuando aparezca como "próximo lanzamiento", mandarlo a las listas editoriales (mínimo 7 días antes).`),
+    P(-14, "TikTok", "Clip 9:16", "Teaser", "Expectativa", "clip-1.mp4", `Algo nuevo se está cocinando en el estudio 👀🔊 "${t}" sale el ${f}. ${tags}`, "Sin revelar el drop."),
+    P(-10, "YouTube", "Short", "Teaser", "Alcance", "clip-1.mp4", `Primer adelanto de "${t}" 🔥 Estreno ${f}. #shorts ${tags}`),
+    P(-10, "Instagram", "Reel", "Teaser", "Expectativa", "clip-1.mp4", `Se viene "${t}" 👀 ${f}. ${tags}`),
+    P(-7, "TikTok", "Clip 9:16", "Lanzamiento", "Que guarden la tapa", "tapa 3000.jpg", `Esta es la tapa de "${t}" 💿 Faltan 7 días. ${tags}`),
+    P(-7, "Instagram", "Post", "Lanzamiento", "Expectativa", "tapa 3000.jpg", `Tapa de "${t}" 💿 ${f}. ${tags}`),
+    P(-5, "TikTok", "Clip 9:16", "Teaser", "Expectativa", "clip-2.mp4", `Así suena el drop de "${t}" 🎛️ ${f} en todas las plataformas. ${tags}`),
+    P(-3, "YouTube", "Tarea", "Lanzamiento", "Estreno programado", "videoclip 16x9", `Programar el estreno del videoclip de "${t}" para el ${f} a las ${hora}, con la tapa de miniatura.`),
+    P(-2, "TikTok", "Clip 9:16", "Teaser", "Expectativa", "clip-3.mp4", `2 días para "${t}" ⏳ ${tags}`),
+    P(-1, "Instagram", "Story", "Teaser", "Recordatorio", "clip-1.mp4", `Mañana sale "${t}" 🚀`),
+    P(-1, "TikTok", "Clip 9:16", "Teaser", "Recordatorio", "clip-1.mp4", `Mañana sale "${t}" 🚀 Activá la notificación. ${tags}`),
+    P(0, "Spotify / Apple Music", "Tarea", "Lanzamiento", "Salida", "", `Sale "${t}" (lo publica la distribuidora). Copiar el link para los posts del día.`),
+    P(0, "YouTube", "Video", "Lanzamiento", "Estreno", "videoclip 16x9", `"${t}" — videoclip oficial. Hecho en mi estudio, de la primera nota al último cuadro. Escuchalo en Spotify y Apple Music (link en la descripción). ${tags}`),
+    P(0, "TikTok", "Clip 9:16", "Lanzamiento", "Conversión (que lo escuchen)", "videoclip 9x16", `YA SALIÓ "${t}" 🔊 Link en el perfil. ${tags}`),
+    P(0, "Instagram", "Reel", "Lanzamiento", "Conversión", "videoclip 9x16", `YA SALIÓ "${t}" 🔊 Link en la bio. ${tags}`),
+    P(1, "TikTok", "Clip 9:16", "Detrás de escena", "Comunidad", "captura de FL Studio", `Así armé "${t}" en FL Studio 🎹 ${tags}`),
+    P(3, "YouTube", "Short", "Lanzamiento", "Alcance", "clip-2.mp4", `El drop de "${t}" 🔥 Completo en el canal. #shorts ${tags}`),
+    P(3, "Instagram", "Reel", "Detrás de escena", "Comunidad", "captura de FL Studio", `Cómo se hizo "${t}" 🎹 ${tags}`),
+    P(7, "TikTok", "Clip 9:16", "Comunidad", "Agradecer y mostrar números", "", `Una semana de "${t}" 🙏 Gracias por escucharlo. ${tags}`),
+  ];
+  const redesOk = new Set(redes.concat(["Distribuidora", "Spotify for Artists", "Spotify / Apple Music"]));
+  return todas.filter(p => redesOk.has(p.red));
+}
+
 async function estadoCampana(id) {
   const r = await rutasCampana(id);
-  const c = await leerJson(r.json, null);
+  const c = await leerJson(r.json, {});
   const clips = [];
-  for (let i = 1; i <= 3; i++) if ((await tamano(path.join(r.c, `clip-${i}.mp4`))) > 0) clips.push(`clip-${i}.mp4`);
-  return { titulo: r.nombre.titulo, genero: path.basename(path.dirname(r.carpeta)), carpeta: r.c,
-    tapa: (await tamano(r.tapa)) > 0 ? r.tapa : null, clips, plan: c ? c.plan : null, estreno: c ? c.estreno : null,
-    licencias: c && c.licencias ? c.licencias : {}, hayBlend: await existe(r.blend), hayVertical: (await tamano(r.vert)) > 0 };
+  for (let i = 1; i <= 6; i++) if ((await tamano(path.join(r.c, `clip-${i}.mp4`))) > 0) clips.push(`clip-${i}.mp4`);
+  return {
+    titulo: r.nombre.titulo, genero: path.basename(path.dirname(r.carpeta)), carpeta: r.c,
+    estreno: c.estreno || null, hora: c.hora || "18:00", plataformas: c.plataformas || ["YouTube", "TikTok"],
+    tapaPedido: c.tapa || null, tapa: (await tamano(r.tapa)) > 0 ? r.tapa : null,
+    clipsPedido: c.clipsPedido || null, clips, clipsHechos: c.clips || [],
+    grilla: c.grilla || null,
+    hayBlend: await existe(r.blend), hayVideo: (await tamano(r.h)) > 0, hayVertical: (await tamano(r.vert)) > 0,
+    hayAudio: await existe(r.audio),
+  };
 }
 
 async function guardarCampana(id, cambios) {
@@ -326,86 +544,122 @@ async function guardarCampana(id, cambios) {
   return estadoCampana(id);
 }
 
-async function armarPlan(id, estreno) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(estreno || "")) throw new Error("Elegí la fecha de salida.");
+// Paso 1: fecha, hora y redes -> arma la grilla (si ya había una, la guarda como anterior).
+async function armarGrilla(id, o) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(o.estreno || "")) throw new Error("Elegí la fecha de salida.");
+  const redes = (o.plataformas || []).filter(x => ["YouTube", "TikTok", "Instagram"].includes(x));
+  if (!redes.length) throw new Error("Elegí al menos una red.");
+  const hora = /^\d{2}:\d{2}$/.test(o.hora || "") ? o.hora : "18:00";
   const r = await rutasCampana(id);
   const genero = path.basename(path.dirname(r.carpeta));
-  const plan = planBase(r.nombre.titulo, genero, estreno.split("-").reverse().join("/"))
-    .map(p => Object.assign({ fecha: fechaMas(estreno, p.dias) }, p));
-  return guardarCampana(id, { estreno, plan });
+  const piezas = piezasBase(r.nombre.titulo, genero, o.estreno, redes, hora);
+  const primera = Math.min(...piezas.map(p => p.dias));
+  const grilla = piezas.map((p, i) => {
+    const fecha = fechaMas(o.estreno, p.dias);
+    const semana = Math.floor((p.dias - primera) / 7) + 1;
+    return Object.assign({ id: "p" + Date.now().toString(36) + i, semana, fecha, hora: p.formato === "Tarea" ? "" : hora,
+      link: "", aprobacion: "Pendiente", checklist: "Por armar" }, p);
+  });
+  const c = await leerJson(r.json, {});
+  if (c.grilla) c.grillaAnterior = c.grilla;
+  Object.assign(c, { estreno: o.estreno, hora, plataformas: redes, grilla });
+  await escribirJson(r.json, c);
+  return estadoCampana(id);
 }
 
-// Calendario .ics para importarlo en el calendario de Agustín (lo importa él).
+// Calendario .ics para importarlo donde quiera Agustín.
 async function exportarIcs(id) {
   const r = await rutasCampana(id);
   const c = await leerJson(r.json, null);
-  if (!c || !c.plan) throw new Error("Primero armá el plan.");
-  const limpio = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+  if (!c || !c.grilla) throw new Error("Primero armá la grilla.");
+  const limpio = s => String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
   const lineas = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Estudio Nook//Campaña//ES"];
-  c.plan.forEach((p, i) => {
+  c.grilla.forEach((p, i) => {
     const f = p.fecha.replace(/-/g, "");
-    lineas.push("BEGIN:VEVENT", `UID:${f}-${i}@estudio-nook`, `DTSTART;VALUE=DATE:${f}`,
-      `SUMMARY:${limpio(`${p.red}: ${p.tipo} — ${r.nombre.titulo}`)}`, `DESCRIPTION:${limpio(p.texto + (p.archivo ? `\n\nArchivo: ${p.archivo}` : ""))}`, "END:VEVENT");
+    const inicio = p.hora ? `DTSTART:${f}T${p.hora.replace(":", "")}00` : `DTSTART;VALUE=DATE:${f}`;
+    lineas.push("BEGIN:VEVENT", `UID:${f}-${i}@estudio-nook`, inicio,
+      `SUMMARY:${limpio(`${p.red} · ${p.formato} — ${r.nombre.titulo}`)}`,
+      `DESCRIPTION:${limpio(p.copy + (p.archivo ? `\n\nArchivo: ${p.archivo}` : "") + (p.indicaciones ? `\n\n${p.indicaciones}` : ""))}`, "END:VEVENT");
   });
   lineas.push("END:VCALENDAR");
   const destino = path.join(r.c, `${r.nombre.titulo} - campaña.ics`);
+  await fs.mkdir(r.c, { recursive: true });
   await fs.writeFile(destino, lineas.join("\r\n") + "\r\n", "utf8");
   return destino;
 }
 
-// Tapa de 3000 × 3000: Blender saca una foto cuadrada del estudio (con las
-// pantallas de esta canción) y ffmpeg le pone el título abajo.
-async function armarTapa(id, opciones) {
+const FUENTE_FF = "C\\:/Windows/Fonts/bahnschrift.ttf";
+const textoFf = s => String(s || "").replace(/\\/g, "\\\\").replace(/'/g, "’").replace(/:/g, "\\:");
+
+// Paso 2: tapa de 3000 × 3000. Foto del estudio (Blender, cámara y cuadro a
+// elección) + título y subtítulo. El pedido queda guardado para rehacerla.
+async function armarTapa(id, o) {
   const r = await rutasCampana(id);
-  if (!(await existe(r.blend))) throw new Error("Falta el .blend del videoclip: renderizá el videoclip primero.");
-  const o = opciones || {};
+  if (!(await existe(r.blend))) throw new Error("Falta el .blend del videoclip: en Videoclip, tocá «Preparar».");
+  o = Object.assign({ camara: "Detalle", cuadro: 1200, titulo: r.nombre.titulo, subtitulo: "NOOK" }, o || {});
   await fs.mkdir(r.c, { recursive: true });
   const foto = path.join(r.c, "tapa-foto.png");
-  await correr(BLENDER, ["-b", r.blend, "-P", path.join(VIDEOCLIP, "tapa.py"), "--", foto, o.camara || "Detalle", String(o.cuadro || 1200)]);
-  const titulo = String(o.titulo || r.nombre.titulo).replace(/\\/g, "\\\\").replace(/'/g, "’").replace(/:/g, "\\:");
-  const FUENTE = "C\\:/Windows/Fonts/bahnschrift.ttf";
+  await correr(BLENDER, ["-b", r.blend, "-P", path.join(VIDEOCLIP, "tapa.py"), "--", foto, o.camara, String(o.cuadro)]);
+  const tam = Math.max(150, Math.min(330, Math.floor(2700 / Math.max(5, String(o.titulo).length))));
   await correr(FFMPEG, ["-v", "error", "-y", "-i", foto, "-vf",
     "format=rgb24,drawbox=x=0:y=ih*0.70:w=iw:h=ih*0.30:color=black@0.55:t=fill," +
-    `drawtext=fontfile='${FUENTE}':text='${titulo}':expansion=none:fontsize=330:fontcolor=0xff2bd6:x=(w-tw)/2:y=h*0.74,` +
-    `drawtext=fontfile='${FUENTE}':text='NOOK':expansion=none:fontsize=150:fontcolor=white:x=(w-tw)/2:y=h*0.88`,
+    `drawtext=fontfile='${FUENTE_FF}':text='${textoFf(o.titulo)}':expansion=none:fontsize=${tam}:fontcolor=0xff2bd6:x=(w-tw)/2:y=h*0.74,` +
+    `drawtext=fontfile='${FUENTE_FF}':text='${textoFf(o.subtitulo)}':expansion=none:fontsize=150:fontcolor=white:x=(w-tw)/2:y=h*0.88`,
     "-q:v", "2", r.tapa]);
   await fs.rm(foto, { force: true });
-  return estadoCampana(id);
+  return guardarCampana(id, { tapa: o });
 }
 
-// Tres clips de 20 s de las partes con más energía, del vertical (o del horizontal).
-async function armarClips(id) {
+// Dónde empieza cada parte de la canción, según la energía medida (audio.json).
+function partesDe(a) {
+  const fps = a.fps, n = a.cuadros, v = 20 * fps;
+  const suma = (i, largo) => { let s = 0; for (let k = i; k < Math.min(n, i + largo); k++) s += a.energia[k]; return s / Math.max(1, Math.min(n, i + largo) - i); };
+  let mejor = 0, peor = Math.floor(n * 0.3), mMax = -1, mMin = 9;
+  for (let i = 0; i + v <= n; i += fps) {
+    const s = suma(i, v);
+    if (s > mMax) { mMax = s; mejor = i; }
+    if (i > n * 0.3 && i < n * 0.8 && s < mMin) { mMin = s; peor = i; }
+  }
+  return { intro: 0, drop: mejor / fps, "mas-energia": mejor / fps, puente: peor / fps, final: Math.max(0, (n - v) / fps) };
+}
+
+// Paso 3: clips a pedido. Cada pedido: {parte|desde, duracion, texto}.
+async function armarClips(id, pedidos) {
   const r = await rutasCampana(id);
   const fuente = (await tamano(r.vert)) > 0 ? r.vert : (await tamano(r.h)) > 0 ? r.h : null;
-  if (!fuente) throw new Error("Falta el videoclip: renderizalo primero.");
+  if (!fuente) throw new Error("Falta el videoclip: renderizalo en Videoclip.");
   const a = await leerJson(r.audio, null);
   if (!a) throw new Error("Falta el análisis del audio (Videoclip → Analizar).");
-  const LARGO = 20 * a.fps, ventanas = [];
-  for (let i = 0; i + LARGO <= a.cuadros; i += a.fps) {
-    let s = 0;
-    for (let k = i; k < i + LARGO; k++) s += a.energia[k];
-    ventanas.push({ i, s });
-  }
-  ventanas.sort((x, y) => y.s - x.s);
-  const elegidas = [];
-  for (const w of ventanas) {
-    if (elegidas.every(e => Math.abs(e.i - w.i) >= LARGO)) elegidas.push(w);
-    if (elegidas.length === 3) break;
-  }
-  elegidas.sort((x, y) => x.i - y.i);
-  await fs.mkdir(r.c, { recursive: true });
+  const partes = partesDe(a);
+  const lista = (pedidos && pedidos.length ? pedidos : [{ parte: "intro" }, { parte: "drop" }, { parte: "puente" }]).slice(0, 6);
   const retraso = INICIO_MUSICA / FPS_MODELO;   // la música arranca a los 13,8 s del video
+  const vertical = fuente === r.vert;
+  await fs.mkdir(r.c, { recursive: true });
+  for (let i = 1; i <= 6; i++) await fs.rm(path.join(r.c, `clip-${i}.mp4`), { force: true });
   const hechos = [];
-  for (let n = 0; n < elegidas.length; n++) {
-    const desde = retraso + elegidas[n].i / a.fps;
+  for (let n = 0; n < lista.length; n++) {
+    const p = lista[n];
+    const dur = Math.max(5, Math.min(60, Number(p.duracion) || 20));
+    const enCancion = p.desde != null && p.desde !== "" ? Math.max(0, Number(p.desde)) : (partes[p.parte] != null ? partes[p.parte] : partes.drop);
+    const desde = retraso + Math.min(enCancion, a.segundos - dur);
     const salida = path.join(r.c, `clip-${n + 1}.mp4`);
-    await correr(FFMPEG, ["-v", "error", "-y", "-ss", desde.toFixed(2), "-i", fuente, "-t", "20",
-      "-af", "afade=t=in:d=0.3,afade=t=out:st=19:d=1", "-c:v", "libx264", "-crf", "20", "-preset", "medium",
-      "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", salida]);
-    hechos.push({ archivo: path.basename(salida), desde: +(elegidas[n].i / a.fps).toFixed(1) });
+    const filtros = [];
+    if (!vertical) filtros.push("crop=608:1080:(iw-608)/2:0,scale=1080:1920,setsar=1");
+    if (p.texto) {
+      // Bahnschrift no tiene emojis: si el texto trae alguno, se usa Segoe UI Emoji.
+      const conEmoji = /[🌀-🫿☀-➿]/u.test(p.texto);
+      const fuente = conEmoji ? "C\:/Windows/Fonts/seguiemj.ttf" : FUENTE_FF;
+      const tam = Math.max(48, Math.min(96, Math.floor(1700 / Math.max(8, String(p.texto).length))));
+      filtros.push(`drawtext=fontfile='${fuente}':text='${textoFf(p.texto)}':expansion=none:fontsize=${tam}:fontcolor=white:borderw=4:bordercolor=black@0.7:x=(w-tw)/2:y=h*0.12`);
+    }
+    const args = ["-v", "error", "-y", "-ss", desde.toFixed(2), "-i", fuente, "-t", String(dur)];
+    if (filtros.length) args.push("-vf", filtros.join(","));
+    args.push("-af", `afade=t=in:d=0.3,afade=t=out:st=${dur - 1}:d=1`, "-c:v", "libx264", "-crf", "20", "-preset", "medium",
+      "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", salida);
+    await correr(FFMPEG, args);
+    hechos.push({ archivo: path.basename(salida), desde: +enCancion.toFixed(1), duracion: dur, texto: p.texto || "", parte: p.parte || "" });
   }
-  await guardarCampana(id, { clips: hechos });
-  return estadoCampana(id);
+  return guardarCampana(id, { clipsPedido: lista, clips: hechos });
 }
 
 /* ---------------- licencias ----------------
@@ -532,8 +786,9 @@ async function importarCsv(red) {
 }
 
 /* ---------------- registro ---------------- */
-function registrar(datosEstudio) {
+function registrar(datosEstudio, escanearPlugins) {
   datos = datosEstudio;
+  escanear = escanearPlugins;
   ipcMain.handle("lz:canciones", () => listarCanciones());
   ipcMain.handle("lz:mezcla", (_e, id) => estadoMezcla(id));
   ipcMain.handle("lz:medir-master", async (_e, id) => {
@@ -548,22 +803,35 @@ function registrar(datosEstudio) {
     return { ruta: r.filePaths[0], medida: await medir(r.filePaths[0]) };
   });
   ipcMain.handle("lz:usar-master", (_e, id, wav) => usarComoMaster(id, wav));
+  ipcMain.handle("lz:mezcla-referencia", (_e, id) => elegirReferenciaMezcla(id));
+  ipcMain.handle("lz:mezcla-guardar", (_e, id, cambios) => guardarMezcla(id, cambios || {}));
+  ipcMain.handle("lz:mezcla-plugins", () => pluginsMezcla());
+  ipcMain.handle("lz:mezcla-brief", (_e, id) => briefMezcla(id));
+  ipcMain.handle("lz:mezcla-comparar", async (_e, id) => {
+    const carpeta = carpetaDe(id);
+    const m = await leerJson(path.join(carpeta, "mezcla.json"), {});
+    const archivos = await fs.readdir(carpeta);
+    const wav = archivos.find(a => / - master\.wav$/i.test(a));
+    const master = wav ? await analizarMezcla(path.join(carpeta, wav)) : null;
+    return { master, referencia: m.referencia || null, comparacion: compararMezcla(master, m.referencia) };
+  });
 
   ipcMain.handle("lz:videoclip", (_e, id) => estadoVideoclip(id));
   ipcMain.handle("lz:videoclip-paso", (_e, id, paso, o) => pasoVideoclip(id, paso, o));
 
   ipcMain.handle("lz:campana", (_e, id) => estadoCampana(id));
-  ipcMain.handle("lz:campana-plan", (_e, id, estreno) => armarPlan(id, estreno));
+  ipcMain.handle("lz:campana-grilla", (_e, id, o) => armarGrilla(id, o || {}));
   ipcMain.handle("lz:campana-guardar", (_e, id, cambios) => {
-    // Desde la pantalla sólo se cambian el plan (textos y estados) y las licencias confirmadas.
+    // Desde la pantalla sólo se cambian la grilla, el pedido de clips y las licencias.
     const permitido = {};
-    if (Array.isArray(cambios.plan)) permitido.plan = cambios.plan;
+    if (Array.isArray(cambios.grilla)) permitido.grilla = cambios.grilla.slice(0, 200);
+    if (Array.isArray(cambios.clipsPedido)) permitido.clipsPedido = cambios.clipsPedido.slice(0, 6);
     if (cambios.licencias && typeof cambios.licencias === "object") permitido.licencias = cambios.licencias;
     return guardarCampana(id, permitido);
   });
   ipcMain.handle("lz:campana-ics", (_e, id) => exportarIcs(id));
   ipcMain.handle("lz:campana-tapa", (_e, id, o) => armarTapa(id, o));
-  ipcMain.handle("lz:campana-clips", (_e, id) => armarClips(id));
+  ipcMain.handle("lz:campana-clips", (_e, id, pedidos) => armarClips(id, pedidos));
   ipcMain.handle("lz:licencias", (_e, id) => licencias(id));
 
   ipcMain.handle("lz:metricas", () => leerMetricas());

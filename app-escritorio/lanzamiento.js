@@ -58,12 +58,12 @@
     if (!actual) return;
     if (seccion === "mezcla") pintarMezcla().catch(error("#mzAviso"));
     if (seccion === "videoclip") pintarVideoclip().catch(error("#vcAviso"));
-    if (seccion === "campana") pintarCampana().catch(error("#cpAvisoMedios"));
+    if (seccion === "campana") pintarCampana().catch(error("#cpPlanAviso"));
   }
 
   /* ---------------- MEZCLA ---------------- */
 
-  var wavElegido = null;
+  var wavElegido = null, mezclaDatos = null, pluginsMezcla = null, notasT = 0;
 
   function tablaMedida(m) {
     var filas = [
@@ -75,7 +75,7 @@
     return '<table><tr><th></th><th>Medido</th><th>Meta</th></tr>' + filas.map(function (f) {
       return "<tr><td>" + esc(f[0]) + '</td><td class="n" style="text-align:left">' + esc(f[1]) + "</td><td>" + esc(f[2]) + "</td></tr>";
     }).join("") + "</table>" +
-      '<ul style="margin:8px 0 0;padding-left:1.1rem;font-size:.86rem">' + m.consejos.map(function (c) {
+      '<ul style="margin:8px 0 0;padding-left:1.1rem;font-size:.86rem">' + (m.consejos || []).map(function (c) {
         return '<li class="' + (c.ok ? "ok" : "mal") + '">' + esc(c.texto) + "</li>";
       }).join("") + "</ul>";
   }
@@ -86,24 +86,106 @@
     $("#mzMedida").innerHTML = (ruta ? '<small class="ruta">' + esc(ruta) + "</small>" : "") + tablaMedida(m);
   }
 
+  // Ficha de una mezcla medida a fondo (referencia o master).
+  function fichaMezcla(a) {
+    var v = function (x, u) { return x == null ? "—" : x + (u || ""); };
+    var b = a.bandas || {};
+    return '<div class="fila" style="gap:8px">' +
+      '<span class="chip">Volumen <b>' + v(a.integrado, " LUFS") + "</b></span>" +
+      '<span class="chip">Pico real <b>' + v(a.picoReal, " dBTP") + "</b></span>" +
+      '<span class="chip">Rango <b>' + v(a.rango, " LU") + "</b></span>" +
+      '<span class="chip">Graves <b>' + v(b.graves, " dB") + "</b></span>" +
+      '<span class="chip">Medios <b>' + v(b.medios, " dB") + "</b></span>" +
+      '<span class="chip">Agudos <b>' + v(b.agudos, " dB") + "</b></span>" +
+      '<span class="chip">Pegada <b>' + v(a.cresta, " dB") + "</b></span>" +
+      '<span class="chip">Ancho estéreo <b>' + v(a.ancho, " dB") + "</b></span></div>";
+  }
+
+  function pintarComparacion(c) {
+    if (!c || !c.length) return "";
+    return '<h3 style="margin:12px 0 4px;font-size:.92rem">Tu master contra la referencia</h3><ul style="margin:0;padding-left:1.1rem;font-size:.86rem">' +
+      c.map(function (x) { return '<li class="' + (x.ok ? "ok" : "mal") + '">' + esc(x.texto) + "</li>"; }).join("") + "</ul>";
+  }
+
+  function pintarPluginsMezcla() {
+    if (!pluginsMezcla) return;
+    var elegidos = (mezclaDatos && mezclaDatos.plugins) || [];
+    var grupos = {};
+    pluginsMezcla.forEach(function (p) { (grupos[p.grupo] = grupos[p.grupo] || []).push(p); });
+    $("#mzPlugins").className = "";
+    $("#mzPlugins").innerHTML = Object.keys(grupos).map(function (g) {
+      return '<div class="grupoPlug"><b>' + esc(g) + "</b>" + grupos[g].map(function (p) {
+        return '<label class="plug' + (p.pro ? " pro" : "") + '"><input type="checkbox" data-plug="' + esc(p.nombre) + '"' + (elegidos.indexOf(p.nombre) >= 0 ? " checked" : "") + "> " +
+          (p.pro ? "★ " : "") + esc(p.nombre) + ' <span class="aviso" style="margin:0">' + esc(p.para) + (/VST/.test(p.origen) ? " · VST" : "") + "</span></label>";
+      }).join("") + "</div>";
+    }).join("");
+  }
+
   async function pintarMezcla() {
     var e = await L.mezcla(actual);
+    mezclaDatos = e.medidas || {};
     var h = "";
     h += "<dl class='dato'><dt>Master WAV</dt><dd>" + (e.wav ? esc(e.wav) : "<span class='mal'>todavía no hay</span>") + "</dd>";
     h += "<dt>Master MP3</dt><dd>" + (e.mp3 ? esc(e.mp3) : "—") + "</dd>";
-    if (e.medidas && e.medidas.wav) {
-      var w = e.medidas.wav, p = e.medidas.mp3 || {};
-      h += "<dt>Última medición</dt><dd>WAV " + esc(w.integrado) + " LUFS / " + esc(w.picoReal) + " dBTP · MP3 " +
-        esc(p.integrado) + " LUFS / " + esc(p.picoReal) + " dBTP <span class='aviso'>(" + esc(String(e.medidas.fecha).slice(0, 10)) + ")</span></dd>";
+    if (mezclaDatos.wav) {
+      var w = mezclaDatos.wav, p = mezclaDatos.mp3 || {};
+      h += "<dt>Última medición</dt><dd>WAV " + esc(w.integrado) + " LUFS / " + esc(w.picoReal) + " dBTP · MP3 " + esc(p.integrado) + " LUFS / " + esc(p.picoReal) + " dBTP</dd>";
     }
     h += "<dt>Pruebas</dt><dd>" + (e.pruebas.length ? e.pruebas.map(esc).join("<br>") : "—") + "</dd></dl>";
-    $("#mzEstado").innerHTML = h;
-    $("#mzEstado").className = "";
+    $("#mzEstado").innerHTML = h; $("#mzEstado").className = "";
+    var ref = mezclaDatos.referencia;
+    $("#mzRefNombre").textContent = ref ? ref.archivo.split("\\").pop() : "ninguna";
+    $("#mzRefAnalisis").innerHTML = ref ? fichaMezcla(ref) : "";
+    if ($("#mzNotas").dataset.de !== actual) { $("#mzNotas").value = mezclaDatos.notas || ""; $("#mzNotas").dataset.de = actual; }
+    if (!pluginsMezcla) pluginsMezcla = await L.mezclaPlugins();
+    pintarPluginsMezcla();
   }
 
+  $("#mzRef").onclick = function () {
+    conBoton(this, async function () {
+      aviso("#mzAviso", "");
+      $("#mzRefAnalisis").innerHTML = '<div class="aviso">Midiendo la referencia (unos segundos)…</div>';
+      var a = await L.mezclaReferencia(actual);
+      if (!a) { $("#mzRefAnalisis").innerHTML = ""; return; }
+      mezclaDatos.referencia = a;
+      $("#mzRefNombre").textContent = a.archivo.split("\\").pop();
+      $("#mzRefAnalisis").innerHTML = fichaMezcla(a);
+    }).catch(function (e) { $("#mzRefAnalisis").innerHTML = '<div class="aviso mal">' + esc(e.message) + "</div>"; });
+  };
+  $("#mzComparar").onclick = function () {
+    conBoton(this, async function () {
+      $("#mzRefAnalisis").innerHTML = (mezclaDatos.referencia ? fichaMezcla(mezclaDatos.referencia) : "") + '<div class="aviso">Midiendo tu master…</div>';
+      var r = await L.mezclaComparar(actual);
+      var h = r.referencia ? fichaMezcla(r.referencia) : '<div class="aviso mal">Falta la referencia.</div>';
+      if (r.master) h += '<h3 style="margin:12px 0 4px;font-size:.92rem">Tu master</h3>' + fichaMezcla(r.master);
+      else h += '<div class="aviso mal">Falta el master (paso 4).</div>';
+      h += pintarComparacion(r.comparacion);
+      $("#mzRefAnalisis").innerHTML = h;
+    }).catch(function (e) { $("#mzRefAnalisis").innerHTML = '<div class="aviso mal">' + esc(e.message) + "</div>"; });
+  };
+  $("#mzNotas").addEventListener("input", function () {
+    clearTimeout(notasT);
+    var v = this.value;
+    notasT = setTimeout(function () {
+      L.mezclaGuardar(actual, { notas: v }).then(function () { aviso("#mzNotasAviso", "Guardado.", "bien"); }).catch(error("#mzNotasAviso"));
+    }, 700);
+  });
+  function guardarPlugins() {
+    var marcados = Array.prototype.map.call(document.querySelectorAll("#mzPlugins input:checked"), function (i) { return i.dataset.plug; });
+    mezclaDatos.plugins = marcados;
+    L.mezclaGuardar(actual, { plugins: marcados }).catch(error("#mzAviso"));
+  }
+  $("#mzPlugins").addEventListener("change", guardarPlugins);
+  $("#mzPluginsPro").onclick = function () {
+    document.querySelectorAll("#mzPlugins .plug.pro input").forEach(function (i) { i.checked = true; });
+    guardarPlugins();
+  };
+  $("#mzPluginsNada").onclick = function () {
+    document.querySelectorAll("#mzPlugins input").forEach(function (i) { i.checked = false; });
+    guardarPlugins();
+  };
   $("#mzElegir").onclick = function () {
-    var b = this;
-    conBoton(b, async function () {
+    conBoton(this, async function () {
       aviso("#mzAviso", "Midiendo…");
       var r = await L.elegirWav(actual);
       if (!r) { aviso("#mzAviso", ""); return; }
@@ -130,14 +212,25 @@
       var r = await L.usarMaster(actual, wavElegido);
       $("#mzUsar").hidden = true;
       mostrarMedida("Master nuevo (WAV)", r.wav);
-      aviso("#mzAviso", "Listo: master WAV y MP3 320 (" + r.mp3.integrado + " LUFS / " + r.mp3.picoReal + " dBTP). Ya podés pasar a Videoclip.", "bien");
+      aviso("#mzAviso", "Listo: master WAV y MP3 320 (" + r.mp3.integrado + " LUFS / " + r.mp3.picoReal + " dBTP).", "bien");
       await cargarCanciones();
       pintarMezcla();
     }).catch(error("#mzAviso"));
   };
   $("#mzAbrir").onclick = function () { L.abrir(actual, "."); };
+  $("#mzMezclar").onclick = function () {
+    conBoton(this, async function () {
+      aviso("#mzMezclarAviso", "Armando el brief (mide el master, unos segundos)…");
+      var r = await L.mezclaBrief(actual);
+      var c = cancion();
+      aviso("#mzMezclarAviso", "Brief listo en " + r.ruta + ". Ahora abrí el .flp en FL y decile a Claude en el chat: «mezclá " + (c ? c.titulo : "la canción") + "».", "bien");
+      if (r.comparacion && r.comparacion.length) $("#mzRefAnalisis").innerHTML = (mezclaDatos.referencia ? fichaMezcla(mezclaDatos.referencia) : "") + pintarComparacion(r.comparacion);
+    }).catch(error("#mzMezclarAviso"));
+  };
 
   /* ---------------- VIDEOCLIP ---------------- */
+
+  var pedidoT = 0;
 
   function ultimaLinea(cola, re) {
     var m = String(cola || "").match(re);
@@ -146,7 +239,8 @@
 
   async function pintarVideoclip() {
     var e = await L.videoclip(actual);
-    if (!$("#vcTitulo").value || $("#vcTitulo").dataset.de !== actual) { $("#vcTitulo").value = e.titulo; $("#vcTitulo").dataset.de = actual; }
+    if ($("#vcTitulo").dataset.de !== actual) { $("#vcTitulo").value = e.titulo; $("#vcTitulo").dataset.de = actual; }
+    if ($("#vcPedido").dataset.de !== actual) { $("#vcPedido").value = e.pedido || ""; $("#vcPedido").dataset.de = actual; }
     var t = e.trabajos, corriendo = Object.keys(t).some(function (k) { return t[k] && t[k].corriendo; });
     var pant = e.pantallas, nPant = Object.keys(pant).filter(function (k) { return pant[k]; }).length;
     var cu = e.cuadros, pct = cu.total ? Math.min(100, Math.round(100 * cu.hechos / cu.total)) : 0;
@@ -171,15 +265,19 @@
     }
     h += paso(2, "Armar las pantallas", nPant === 4, detPant,
       '<button class="b" data-paso="pantallas"' + (!e.audio || corriendo ? " disabled" : "") + ">Armar</button>" +
-      '<button class="b" data-paso="carteles"' + (!e.audio || corriendo ? " disabled" : "") + ">Rehacer carteles con este título</button>", t.pantallas);
+      '<button class="b" data-paso="carteles"' + (!e.audio || corriendo ? " disabled" : "") + ">Rehacer con este título</button>", t.pantallas);
+    h += paso(3, "Preparar y ver (vista previa)", e.hayBlend,
+      e.hayBlend ? "Copia de trabajo lista. «Abrir en Blender» y barra espaciadora para verla entera, sin renderizar." : "Arma la copia de trabajo con las pantallas y el audio (medio minuto).",
+      '<button class="b" data-paso="preparar"' + (nPant < 4 || corriendo ? " disabled" : "") + ">" + (e.hayBlend ? "Preparar de nuevo" : "Preparar") + "</button>" +
+      '<button class="b pri" data-paso="blender"' + (!e.hayBlend ? " disabled" : "") + ">Abrir en Blender</button>", t.preparar);
     var detRender = cu.total ? cu.hechos + " de " + cu.total + " cuadros (" + pct + " %)" : "Unos 11.600 cuadros a 60 fps: tarda horas.";
     if (t.render && t.render.corriendo) detRender += " · " + esc(ultimaLinea(t.render.cola, /Saved: '[^']*\\(\d+)\.jpg'/g).replace(/.*\\/, "").replace("'", ""));
     if (e.horizontal) detRender = "Listo: " + esc(e.horizontal.split("\\").pop());
-    h += paso(3, "Renderizar el estudio (16:9, YouTube)", !!e.horizontal, detRender,
+    h += paso(4, "Renderizar (16:9, YouTube)", !!e.horizontal, detRender,
       '<button class="b pri" data-paso="render"' + (nPant < 4 || corriendo ? " disabled" : "") + ">" + (cu.hechos && !e.horizontal ? "Seguir renderizando" : e.horizontal ? "Rearmar el MP4" : "Renderizar") + "</button>" +
       (e.horizontal ? '<button class="b" data-abrir="Videoclip/' + esc(e.horizontal.split("\\").pop()) + '">Ver</button>' : ""),
       t.render, cu.total && !e.horizontal ? pct : null);
-    h += paso(4, "Armar el vertical (9:16, TikTok)", !!e.vertical,
+    h += paso(5, "Armar el vertical (9:16, TikTok)", !!e.vertical,
       e.vertical ? "Listo: " + esc(e.vertical.split("\\").pop()) : "Recorta el horizontal siguiendo la acción. Tarda unos minutos.",
       '<button class="b" data-paso="vertical"' + (!e.horizontal || corriendo ? " disabled" : "") + ">Armar</button>" +
       (e.vertical ? '<button class="b" data-abrir="Videoclip/' + esc(e.vertical.split("\\").pop()) + '">Ver</button>' : ""), t.vertical);
@@ -187,6 +285,13 @@
     if (corriendo && seccion === "videoclip") sondeo = setTimeout(pintar, 4000);
   }
 
+  $("#vcPedido").addEventListener("input", function () {
+    clearTimeout(pedidoT);
+    var v = this.value;
+    pedidoT = setTimeout(function () {
+      L.pasoVideoclip(actual, "pedido", { texto: v }).then(function () { aviso("#vcPedidoAviso", "Guardado en Videoclip\\pedido.md.", "bien"); }).catch(error("#vcPedidoAviso"));
+    }, 800);
+  });
   $("#vcPasos").addEventListener("click", function (ev) {
     var b = ev.target.closest("button");
     if (!b) return;
@@ -194,19 +299,17 @@
     var paso = b.dataset.paso, o = { titulo: $("#vcTitulo").value.trim() };
     if (paso === "carteles") { paso = "pantallas"; o.rehacer = ["cartel-grande", "cartel-luminoso", "visualizador"]; }
     conBoton(b, async function () {
-      aviso("#vcAviso", paso === "analizar" ? "Analizando…" : "Arrancando…");
+      aviso("#vcAviso", paso === "analizar" ? "Analizando…" : paso === "blender" ? "Abriendo Blender…" : "Arrancando…");
       await L.pasoVideoclip(actual, paso, o);
-      aviso("#vcAviso", paso === "analizar" ? "Audio analizado." : "Corriendo aparte: podés seguir usando el Estudio.", "bien");
+      aviso("#vcAviso", paso === "analizar" ? "Audio analizado." : paso === "blender" ? "Blender abierto: barra espaciadora para reproducir." : "Corriendo aparte: podés seguir usando el Estudio.", "bien");
       pintarVideoclip();
     }).catch(error("#vcAviso"));
   });
 
   /* ---------------- CAMPAÑA ---------------- */
 
-  var campana = null, guardarPlanT = 0;
+  var campana = null, guardarT = 0, clipsPedido = [];
 
-  // Lo que pide una distribuidora y la comparación (de comparativas públicas,
-  // octubre 2026; los precios cambian: confirmarlos en la página de cada una).
   var DISTRIBUIDORAS = [
     ["CD Baby", "≈ US$10 por single, una sola vez", "Se queda el 9 %", "La música queda subida para siempre. Buena para pocos lanzamientos."],
     ["ONErpm", "Gratis", "Se queda ≈ 15 %", "Fuerte en Latinoamérica (tiene oficina en Argentina) y ayuda con marketing."],
@@ -223,129 +326,220 @@
     "Fecha de salida con 2-3 semanas de margen, para mandarlo a las listas editoriales de Spotify (al menos 7 días antes).",
     "Cuenta a tu nombre: la crea Agustín y escribe él la contraseña.",
   ];
+  var REDES = ["YouTube", "TikTok", "Instagram", "Distribuidora", "Spotify for Artists", "Spotify / Apple Music"];
+  var FORMATOS = ["Video", "Short", "Reel", "Clip 9:16", "Post", "Story", "Tarea"];
+  var PILARES = ["Teaser", "Lanzamiento", "Detrás de escena", "Comunidad", "Performance"];
+  var APROBACION = ["Pendiente", "Aprobado", "Cambiar"];
+  var CHECKLIST = ["Por armar", "Listo", "Programado", "Subido"];
+  var PARTES = [["intro", "Intro"], ["drop", "Drop (lo más fuerte)"], ["puente", "Puente (lo más tranquilo)"], ["final", "Final"], ["desde", "Segundo exacto…"]];
 
   function pintarDistro() {
     $("#cpDistro").innerHTML = '<table><tr><th>Distribuidora</th><th>Precio</th><th>Comisión</th><th>A tener en cuenta</th></tr>' +
       DISTRIBUIDORAS.map(function (d) { return "<tr>" + d.map(function (x) { return "<td>" + esc(x) + "</td>"; }).join("") + "</tr>"; }).join("") +
       "</table><div class='aviso'>Precios de comparativas públicas de octubre de 2026: confirmalos en la página de cada una antes de pagar. " +
       "Para un primer single, CD Baby (pago único, queda para siempre) u ONErpm (gratis, fuerte en la región) son las que menos te atan.</div>" +
-      "<h2 style='margin-top:12px'>Lo que te van a pedir</h2><ul style='margin:0;padding-left:1.1rem;font-size:.86rem'>" +
+      "<h3 style='margin:12px 0 4px;font-size:.92rem'>Lo que te van a pedir</h3><ul style='margin:0;padding-left:1.1rem;font-size:.86rem'>" +
       REQUISITOS.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ul>";
   }
 
-  function pintarMedios() {
-    var h = '<div class="medios">';
-    if (campana.tapa) h += '<div class="m"><img src="' + archivoUrl(campana.tapa) + "?" + Date.now() + '" style="width:180px;height:180px;border-radius:6px;display:block"><div class="fila" style="margin-top:6px"><button class="b" data-abrir="Campaña/' + esc(campana.tapa.split("\\").pop()) + '">Abrir tapa</button></div></div>';
-    else h += '<div class="m">Sin tapa todavía' + (campana.hayBlend ? "" : " (falta renderizar el videoclip)") + "</div>";
-    if (campana.clips.length) campana.clips.forEach(function (c) { h += '<div class="m">🎬 ' + esc(c) + ' <button class="b" data-abrir="Campaña/' + esc(c) + '">Ver</button></div>'; });
-    else h += '<div class="m">Sin clips todavía' + (campana.hayVertical ? "" : " (salen del vertical)") + "</div>";
-    $("#cpMedios").innerHTML = h + "</div>";
+  function pintarTapa() {
+    var t = campana.tapaPedido;
+    if (t && $("#cpTapaTitulo").dataset.de !== actual) {
+      $("#cpCamara").value = t.camara || "Detalle"; $("#cpCuadro").value = t.cuadro || 1200;
+      $("#cpTapaTitulo").value = t.titulo || campana.titulo; $("#cpTapaSub").value = t.subtitulo || "NOOK";
+    }
+    if (!$("#cpTapaTitulo").value) $("#cpTapaTitulo").value = campana.titulo;
+    $("#cpTapaTitulo").dataset.de = actual;
+    $("#cpTapaVista").innerHTML = campana.tapa
+      ? '<div class="medios"><div class="m"><img src="' + archivoUrl(campana.tapa) + "?" + Date.now() + '" style="width:220px;height:220px;border-radius:8px;display:block"><div class="fila" style="margin-top:6px"><button class="b" data-abrir="Campaña/' + esc(campana.tapa.split("\\").pop()) + '">Abrir tapa</button></div></div></div>'
+      : "";
   }
 
-  function pintarPlan() {
-    if (!campana.plan) { $("#cpPlanLista").innerHTML = '<div class="vacio">Elegí la fecha de salida y tocá «Armar el plan».</div>'; return; }
-    if (campana.estreno) $("#cpFecha").value = campana.estreno;
-    var hoy = new Date().toISOString().slice(0, 10);
-    $("#cpPlanLista").innerHTML = campana.plan.map(function (p, i) {
-      var cuando = p.dias === 0 ? "día de salida" : (p.dias < 0 ? p.dias + " días" : "+" + p.dias + " días");
-      return '<div class="post ' + p.estado + '" data-i="' + i + '"><div class="cab"><b>' + esc(p.fecha.split("-").reverse().join("/")) + "</b>" +
-        '<span class="aviso" style="margin:0">' + esc(cuando) + (p.fecha < hoy && p.estado !== "publicado" ? " · ya pasó" : "") + "</span>" +
-        '<span class="chip">' + esc(p.red) + "</span><span>" + esc(p.tipo) + "</span>" +
-        (p.archivo ? '<small class="ruta">' + esc(p.archivo) + "</small>" : "") +
-        '<span style="flex:1"></span><span class="estado ' + p.estado + '">' + esc(p.estado) + "</span>" +
-        '<button class="b" data-estado="aprobado">Aprobado</button><button class="b" data-estado="publicado">Publicado</button>' +
-        '<button class="b" data-estado="borrador">Borrador</button></div>' +
-        "<textarea>" + esc(p.texto) + "</textarea></div>";
+  function pintarClipsPedido() {
+    if (!clipsPedido.length) clipsPedido = (campana.clipsPedido && campana.clipsPedido.length) ? campana.clipsPedido.map(function (c) { return Object.assign({}, c); })
+      : [{ parte: "intro", duracion: 20, texto: "" }, { parte: "drop", duracion: 20, texto: "" }, { parte: "puente", duracion: 20, texto: "" }];
+    $("#cpClipsPedido").innerHTML = clipsPedido.map(function (c, i) {
+      var parte = c.desde != null && c.desde !== "" ? "desde" : (c.parte || "drop");
+      return '<div class="fila clipFila" data-i="' + i + '" style="margin-bottom:6px">' +
+        '<span class="chip">clip-' + (i + 1) + "</span>" +
+        '<select data-k="parte">' + PARTES.map(function (p) { return '<option value="' + p[0] + '"' + (p[0] === parte ? " selected" : "") + ">" + p[1] + "</option>"; }).join("") + "</select>" +
+        '<input type="number" data-k="desde" min="0" step="1" size="5" placeholder="seg" value="' + esc(c.desde != null ? c.desde : "") + '"' + (parte === "desde" ? "" : " hidden") + ">" +
+        '<label class="campo">Dura <input type="number" data-k="duracion" min="5" max="60" value="' + esc(c.duracion || 20) + '" style="width:62px"> s</label>' +
+        '<input type="text" data-k="texto" size="28" placeholder="Texto en pantalla (opcional)" value="' + esc(c.texto || "") + '">' +
+        '<button class="b" data-quitar="' + i + '">✕</button></div>';
     }).join("");
+  }
+  function leerClipsPedido() {
+    clipsPedido = Array.prototype.map.call(document.querySelectorAll("#cpClipsPedido .clipFila"), function (f) {
+      var parte = f.querySelector('[data-k="parte"]').value;
+      return { parte: parte === "desde" ? "" : parte, desde: parte === "desde" ? f.querySelector('[data-k="desde"]').value : "",
+        duracion: +f.querySelector('[data-k="duracion"]').value || 20, texto: f.querySelector('[data-k="texto"]').value.trim() };
+    });
+    return clipsPedido;
+  }
+  function pintarClipsHechos() {
+    var hechos = campana.clipsHechos || [];
+    $("#cpClipsLista").innerHTML = campana.clips.length ? '<div class="medios">' + campana.clips.map(function (c) {
+      var h = hechos.filter(function (x) { return x.archivo === c; })[0];
+      return '<div class="m">🎬 ' + esc(c) + (h ? ' <span class="aviso" style="margin:0">' + esc((h.parte || ("seg " + h.desde)) + " · " + h.duracion + " s") + "</span>" : "") +
+        ' <button class="b" data-abrir="Campaña/' + esc(c) + '">Ver</button></div>';
+    }).join("") + "</div>" : "";
+  }
+
+  function celda(fila, k, tipo, opciones) {
+    var v = fila[k] == null ? "" : fila[k];
+    if (tipo === "select") return "<select data-k='" + k + "'>" + opciones.map(function (o) { return "<option" + (o === v ? " selected" : "") + ">" + esc(o) + "</option>"; }).join("") + "</select>";
+    if (tipo === "area") return "<textarea data-k='" + k + "' rows='2'>" + esc(v) + "</textarea>";
+    return "<input data-k='" + k + "' type='" + tipo + "' value='" + esc(v) + "'>";
+  }
+  function pintarGrilla() {
+    var g = campana.grilla;
+    if (!g) { $("#cpGrilla").innerHTML = "Elegí la fecha y tocá «Armar el calendario»."; $("#cpGrilla").className = "vacio"; return; }
+    $("#cpGrilla").className = "grillaCaja";
+    var hoy = new Date().toISOString().slice(0, 10);
+    var h = '<table class="grilla"><tr><th>Semana</th><th>Fecha</th><th>Hora</th><th>Red</th><th>Formato</th><th>Pilar</th><th>Objetivo</th><th>Indicaciones</th><th>Copy</th><th>Archivo</th><th>Link</th><th>Aprobación</th><th>Checklist</th><th></th></tr>';
+    g.forEach(function (f, i) {
+      var clase = (f.aprobacion === "Aprobado" ? "aprobada " : "") + (f.checklist === "Subido" ? "subida " : "") + (f.fecha < hoy && f.checklist !== "Subido" ? "pasada" : "");
+      h += '<tr data-i="' + i + '" class="' + clase + '"><td class="sem">Semana ' + esc(f.semana) + "</td><td>" + celda(f, "fecha", "date") + "</td><td>" + celda(f, "hora", "time") + "</td><td>" +
+        celda(f, "red", "select", REDES) + "</td><td>" + celda(f, "formato", "select", FORMATOS) + "</td><td>" + celda(f, "pilar", "select", PILARES) + "</td><td>" +
+        celda(f, "objetivo", "area") + "</td><td>" + celda(f, "indicaciones", "area") + "</td><td class=\"copy\">" + celda(f, "copy", "area") + "</td><td>" + celda(f, "archivo", "text") + "</td><td>" +
+        celda(f, "link", "url") + (f.link ? ' <a href="' + esc(f.link) + '" target="_blank">↗</a>' : "") + "</td><td>" + celda(f, "aprobacion", "select", APROBACION) + "</td><td>" +
+        celda(f, "checklist", "select", CHECKLIST) + '</td><td><button class="b" data-borrar="' + i + '">✕</button></td></tr>';
+    });
+    $("#cpGrilla").innerHTML = h + "</table>";
+  }
+  function guardarGrillaPronto() {
+    clearTimeout(guardarT);
+    guardarT = setTimeout(function () {
+      L.guardarCampana(actual, { grilla: campana.grilla }).then(function (c) { campana.grilla = c.grilla; }).catch(error("#cpPlanAviso"));
+    }, 600);
+  }
+  function recalcularSemanas() {
+    var fechas = campana.grilla.map(function (f) { return f.fecha; }).filter(Boolean).sort();
+    if (!fechas.length) return;
+    var d0 = new Date(fechas[0] + "T12:00:00");
+    campana.grilla.forEach(function (f) {
+      if (!f.fecha) return;
+      f.semana = Math.floor((new Date(f.fecha + "T12:00:00") - d0) / 864e5 / 7) + 1;
+    });
+    campana.grilla.sort(function (a, b) { return (a.fecha || "").localeCompare(b.fecha || "") || (a.hora || "").localeCompare(b.hora || ""); });
   }
 
   async function pintarCampana() {
     campana = await L.campana(actual);
-    pintarMedios();
-    pintarPlan();
-    pintarDistro();
-    if (!$("#cpFecha").value) {
-      var d = new Date(); d.setDate(d.getDate() + 28);
-      $("#cpFecha").value = d.toISOString().slice(0, 10);
-    }
+    clipsPedido = [];
+    if (campana.estreno) $("#cpFecha").value = campana.estreno;
+    else if (!$("#cpFecha").value) { var d = new Date(); d.setDate(d.getDate() + 28); $("#cpFecha").value = d.toISOString().slice(0, 10); }
+    $("#cpHora").value = campana.hora || "18:00";
+    $("#cpYouTube").checked = campana.plataformas.indexOf("YouTube") >= 0;
+    $("#cpTikTok").checked = campana.plataformas.indexOf("TikTok") >= 0;
+    $("#cpInstagram").checked = campana.plataformas.indexOf("Instagram") >= 0;
+    pintarTapa(); pintarClipsPedido(); pintarClipsHechos(); pintarGrilla(); pintarDistro();
   }
-
-  function guardarPlanPronto() {
-    clearTimeout(guardarPlanT);
-    guardarPlanT = setTimeout(function () {
-      L.guardarCampana(actual, { plan: campana.plan }).catch(error("#cpAvisoMedios"));
-    }, 600);
-  }
-  $("#cpPlanLista").addEventListener("input", function (ev) {
-    var post = ev.target.closest(".post");
-    if (!post || ev.target.tagName !== "TEXTAREA") return;
-    campana.plan[+post.dataset.i].texto = ev.target.value;
-    guardarPlanPronto();
-  });
-  $("#cpPlanLista").addEventListener("click", function (ev) {
-    var b = ev.target.closest("button[data-estado]"), post = ev.target.closest(".post");
-    if (!b || !post) return;
-    campana.plan[+post.dataset.i].estado = b.dataset.estado;
-    L.guardarCampana(actual, { plan: campana.plan }).then(function (c) { campana = c; pintarPlan(); }).catch(error("#cpAvisoMedios"));
-  });
-  $("#cpMedios").addEventListener("click", function (ev) {
-    var b = ev.target.closest("button[data-abrir]");
-    if (b) L.abrir(actual, b.dataset.abrir);
-  });
 
   $("#cpPlan").onclick = function () {
-    if (campana && campana.plan && !confirm("Ya hay un plan. ¿Armar uno nuevo? Se pierden los textos que corregiste.")) return;
+    if (campana && campana.grilla && !confirm("Ya hay un calendario. ¿Armar uno nuevo? Se guarda el anterior en campana.json, pero se pierde lo que editaste acá.")) return;
     conBoton(this, async function () {
-      campana = await L.armarPlan(actual, $("#cpFecha").value);
-      pintarPlan();
-      aviso("#cpAvisoMedios", "Plan armado: " + campana.plan.length + " pasos. Corregí los textos y aprobalos.", "bien");
-    }).catch(error("#cpAvisoMedios"));
+      var redes = [];
+      if ($("#cpYouTube").checked) redes.push("YouTube");
+      if ($("#cpTikTok").checked) redes.push("TikTok");
+      if ($("#cpInstagram").checked) redes.push("Instagram");
+      campana = await L.armarGrilla(actual, { estreno: $("#cpFecha").value, hora: $("#cpHora").value, plataformas: redes });
+      pintarGrilla();
+      aviso("#cpPlanAviso", "Calendario armado: " + campana.grilla.length + " piezas en " + campana.grilla[campana.grilla.length - 1].semana + " semanas. Corregilo abajo.", "bien");
+      $("#cpGrillaCaja").scrollIntoView({ behavior: "smooth" });
+    }).catch(error("#cpPlanAviso"));
   };
   $("#cpIcs").onclick = function () {
     conBoton(this, async function () {
       var r = await L.exportarIcs(actual);
-      aviso("#cpAvisoMedios", "Calendario guardado: " + r + ". Abrilo para sumarlo a tu calendario.", "bien");
-    }).catch(error("#cpAvisoMedios"));
+      aviso("#cpPlanAviso", "Calendario guardado: " + r + ". Abrilo para sumarlo a tu calendario.", "bien");
+    }).catch(error("#cpPlanAviso"));
   };
   $("#cpTapa").onclick = function () {
     conBoton(this, async function () {
-      aviso("#cpAvisoMedios", "Blender está sacando la foto de 3000 × 3000 (un minuto, más o menos)…");
-      campana = await L.armarTapa(actual, { camara: $("#cpCamara").value, cuadro: +$("#cpCuadro").value || 1200 });
-      pintarMedios();
-      aviso("#cpAvisoMedios", "Tapa lista.", "bien");
-    }).catch(error("#cpAvisoMedios"));
+      aviso("#cpTapaAviso", "Blender está sacando la foto de 3000 × 3000 (un minuto, más o menos)…");
+      campana = await L.armarTapa(actual, { camara: $("#cpCamara").value, cuadro: +$("#cpCuadro").value || 1200,
+        titulo: $("#cpTapaTitulo").value.trim() || campana.titulo, subtitulo: $("#cpTapaSub").value.trim() });
+      pintarTapa();
+      aviso("#cpTapaAviso", "Tapa lista.", "bien");
+    }).catch(error("#cpTapaAviso"));
+  };
+  $("#cpTapaVista").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-abrir]");
+    if (b) L.abrir(actual, b.dataset.abrir);
+  });
+  $("#cpClipsPedido").addEventListener("change", function (ev) {
+    var f = ev.target.closest(".clipFila");
+    if (!f) return;
+    if (ev.target.dataset.k === "parte") f.querySelector('[data-k="desde"]').hidden = ev.target.value !== "desde";
+    L.guardarCampana(actual, { clipsPedido: leerClipsPedido() }).catch(error("#cpClipsAviso"));
+  });
+  $("#cpClipsPedido").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-quitar]");
+    if (!b) return;
+    leerClipsPedido().splice(+b.dataset.quitar, 1);
+    pintarClipsPedido();
+    L.guardarCampana(actual, { clipsPedido: clipsPedido }).catch(error("#cpClipsAviso"));
+  });
+  $("#cpClipMas").onclick = function () {
+    leerClipsPedido();
+    if (clipsPedido.length >= 6) return;
+    clipsPedido.push({ parte: "drop", duracion: 20, texto: "" });
+    pintarClipsPedido();
   };
   $("#cpClips").onclick = function () {
     conBoton(this, async function () {
-      aviso("#cpAvisoMedios", "Cortando los clips…");
-      campana = await L.armarClips(actual);
-      pintarMedios();
-      aviso("#cpAvisoMedios", "Clips listos.", "bien");
-    }).catch(error("#cpAvisoMedios"));
+      aviso("#cpClipsAviso", "Cortando los clips (unos segundos por clip)…");
+      campana = await L.armarClips(actual, leerClipsPedido());
+      pintarClipsHechos();
+      aviso("#cpClipsAviso", campana.clips.length + " clips listos.", "bien");
+    }).catch(error("#cpClipsAviso"));
   };
+  $("#cpClipsLista").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-abrir]");
+    if (b) L.abrir(actual, b.dataset.abrir);
+  });
   $("#cpAbrir").onclick = function () { L.abrir(actual, "Campaña").catch(function () { L.abrir(actual, "."); }); };
+
+  $("#cpGrilla").addEventListener("input", function (ev) {
+    var tr = ev.target.closest("tr[data-i]"), k = ev.target.dataset.k;
+    if (!tr || !k) return;
+    campana.grilla[+tr.dataset.i][k] = ev.target.value;
+    tr.className = (campana.grilla[+tr.dataset.i].aprobacion === "Aprobado" ? "aprobada " : "") + (campana.grilla[+tr.dataset.i].checklist === "Subido" ? "subida" : "");
+    guardarGrillaPronto();
+  });
+  $("#cpGrilla").addEventListener("change", function (ev) {
+    var tr = ev.target.closest("tr[data-i]"), k = ev.target.dataset.k;
+    if (!tr || !k) return;
+    if (k === "fecha") { recalcularSemanas(); pintarGrilla(); }
+    guardarGrillaPronto();
+  });
+  $("#cpGrilla").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button[data-borrar]");
+    if (!b || !confirm("¿Sacar esa pieza del calendario?")) return;
+    campana.grilla.splice(+b.dataset.borrar, 1);
+    recalcularSemanas(); pintarGrilla(); guardarGrillaPronto();
+  });
+  $("#cpAgregar").onclick = function () {
+    if (!campana) return;
+    if (!campana.grilla) campana.grilla = [];
+    var ultima = campana.grilla[campana.grilla.length - 1];
+    campana.grilla.push({ id: "p" + Date.now().toString(36), semana: ultima ? ultima.semana : 1, fecha: ultima ? ultima.fecha : ($("#cpFecha").value || ""), hora: $("#cpHora").value,
+      red: "TikTok", formato: "Clip 9:16", pilar: "Comunidad", objetivo: "", indicaciones: "", copy: "", archivo: "", link: "", aprobacion: "Pendiente", checklist: "Por armar" });
+    recalcularSemanas(); pintarGrilla(); guardarGrillaPronto();
+    $("#cpGrilla").scrollTop = $("#cpGrilla").scrollHeight;
+  };
 
   $("#cpLic").onclick = function () {
     conBoton(this, async function () {
       var r = await L.licencias(actual);
-      var conf = (campana && campana.licencias) || {};
-      var grupos = Object.keys(r.grupos);
-      $("#cpLicLista").innerHTML = '<div class="aviso">Del proyecto ' + esc(r.flp) + ": " + grupos.length + " orígenes de sonido.</div>" +
-        '<table><tr><th>Origen</th><th>Sonidos</th><th>Qué hacer</th><th>Confirmado</th></tr>' + grupos.map(function (g) {
-          var x = r.grupos[g], ok = x.origen === "fl" || conf[g];
-          return "<tr><td><b>" + esc(g) + "</b></td><td>" + esc(x.samples.join(", ")) + '</td><td class="' + (ok ? "ok" : "mal") + '">' + esc(x.aviso) +
-            "</td><td>" + (x.origen === "fl" ? "—" : '<input type="checkbox" data-lic="' + esc(g) + '"' + (conf[g] ? " checked" : "") + ">") + "</td></tr>";
-        }).join("") + "</table>" +
-        '<div class="aviso">Plugins: ' + esc(r.plugins.join(", ")) + ". Los de FL (FLEX, Sampler, Fruity…) se pueden usar libremente.</div>";
-    }).catch(error("#cpAvisoMedios"));
+      $("#cpLicLista").innerHTML = '<table><tr><th>Origen</th><th>Sonidos</th><th>Qué hacer</th></tr>' + Object.keys(r.grupos).map(function (g) {
+        var x = r.grupos[g];
+        return "<tr><td><b>" + esc(g) + "</b></td><td>" + esc(x.samples.join(", ")) + '</td><td class="' + (x.origen === "fl" ? "ok" : "mal") + '">' + esc(x.aviso) + "</td></tr>";
+      }).join("") + "</table>";
+    }).catch(error("#cpPlanAviso"));
   };
-  $("#cpLicLista").addEventListener("change", function (ev) {
-    var c = ev.target.closest("[data-lic]");
-    if (!c) return;
-    var lic = Object.assign({}, campana.licencias || {});
-    if (c.checked) lic[c.dataset.lic] = new Date().toISOString().slice(0, 10); else delete lic[c.dataset.lic];
-    L.guardarCampana(actual, { licencias: lic }).then(function (x) { campana = x; }).catch(error("#cpAvisoMedios"));
-  });
 
   /* ---------------- MÉTRICAS ---------------- */
 

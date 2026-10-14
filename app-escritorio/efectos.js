@@ -24,9 +24,9 @@
     tocar: ["01", "Tocar", "Escuchala, probá otra vuelta y mandala a FL por loopMIDI."],
     plugins: ["01", "Plugins", "Lo que tenés instalado, para elegir con qué suena cada pista."],
     samples: ["01", "Samples", "Tus carpetas de sonidos, contadas por tipo."],
-    mezcla: ["02", "Mezcla", "Exportá el WAV de FL y medilo acá. Cuando llegue a −14 LUFS y −1 dBTP, queda el master."],
-    videoclip: ["03", "Videoclip", "Tu estudio en Blender, con la canción en las pantallas. Cuatro pasos y se hace solo."],
-    campana: ["04", "Campaña", "Tapa, clips y el plan de salida post por post. Vos aprobás; el Estudio no publica nada solo."],
+    mezcla: ["02", "Mezcla", "Una referencia, tus notas, los plugins que andan en FL. Claude mezcla con eso cuando se lo pedís."],
+    videoclip: ["03", "Videoclip", "Contá qué querés ver, miralo en Blender antes de renderizar, y recién ahí se arma."],
+    campana: ["04", "Campaña", "Fecha, tapa, clips y el calendario pieza por pieza. Vos aprobás; nada se publica solo."],
     metricas: ["05", "Métricas", "Cómo le va a cada lanzamiento, semana a semana."],
   };
 

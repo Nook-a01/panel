@@ -49,16 +49,21 @@ contextBridge.exposeInMainWorld("lanzamiento", {
   medirMaster:     (id)          => ipcRenderer.invoke("lz:medir-master", id),
   elegirWav:       (id)          => ipcRenderer.invoke("lz:elegir-wav", id),
   usarMaster:      (id, wav)     => ipcRenderer.invoke("lz:usar-master", id, wav),
+  mezclaReferencia:(id)          => ipcRenderer.invoke("lz:mezcla-referencia", id),
+  mezclaGuardar:   (id, cambios) => ipcRenderer.invoke("lz:mezcla-guardar", id, cambios),
+  mezclaPlugins:   ()            => ipcRenderer.invoke("lz:mezcla-plugins"),
+  mezclaBrief:     (id)          => ipcRenderer.invoke("lz:mezcla-brief", id),
+  mezclaComparar:  (id)          => ipcRenderer.invoke("lz:mezcla-comparar", id),
 
   videoclip:       (id)          => ipcRenderer.invoke("lz:videoclip", id),
   pasoVideoclip:   (id, paso, o) => ipcRenderer.invoke("lz:videoclip-paso", id, paso, o),
 
   campana:         (id)          => ipcRenderer.invoke("lz:campana", id),
-  armarPlan:       (id, fecha)   => ipcRenderer.invoke("lz:campana-plan", id, fecha),
+  armarGrilla:     (id, o)       => ipcRenderer.invoke("lz:campana-grilla", id, o),
   guardarCampana:  (id, cambios) => ipcRenderer.invoke("lz:campana-guardar", id, cambios),
   exportarIcs:     (id)          => ipcRenderer.invoke("lz:campana-ics", id),
   armarTapa:       (id, o)       => ipcRenderer.invoke("lz:campana-tapa", id, o),
-  armarClips:      (id)          => ipcRenderer.invoke("lz:campana-clips", id),
+  armarClips:      (id, pedidos) => ipcRenderer.invoke("lz:campana-clips", id, pedidos),
   licencias:       (id)          => ipcRenderer.invoke("lz:licencias", id),
 
   metricas:        ()            => ipcRenderer.invoke("lz:metricas"),

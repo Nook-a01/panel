@@ -286,12 +286,35 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
        en lanzamiento.js y lo que toca el disco en lanzamiento-motor.js. -->
   <section class="hoja" id="h-mezcla">
     <div class="caja">
-      <h2>Mezcla y master</h2>
+      <h2>1 · Referencia de mezcla</h2>
+      <div class="aviso" style="margin:0 0 10px">Una canción cuya mezcla te gusta, sólo para esto (no es la de Componer). Se mide a fondo acá, en tu compu.</div>
+      <div class="fila">
+        <button class="b pri" id="mzRef">Elegir canción de referencia…</button>
+        <span class="chip">Referencia <b id="mzRefNombre">ninguna</b></span>
+        <button class="b" id="mzComparar">Comparar con mi master</button>
+      </div>
+      <div id="mzRefAnalisis" style="margin-top:12px"></div>
+    </div>
+
+    <div class="caja">
+      <h2>2 · Lo que me gusta de esa mezcla</h2>
+      <textarea id="mzNotas" rows="4" placeholder="Ej.: el bombo pega sin tapar el bajo, las voces bien al frente, reverb corta en el clap, agudos brillantes pero no chillones…"></textarea>
+      <div class="aviso" id="mzNotasAviso">Se guarda solo mientras escribís. Claude lo lee antes de mezclar.</div>
+    </div>
+
+    <div class="caja">
+      <h2>3 · Plugins para mezclar</h2>
+      <div class="aviso" style="margin:0 0 10px">Sólo los que están instalados y andan en FL Studio. Los marcados con ★ son los que usan los profesionales para cada tarea. Tildá los que querés que use Claude.</div>
+      <div class="fila"><button class="b" id="mzPluginsPro">Marcar los recomendados</button><button class="b" id="mzPluginsNada">Desmarcar todo</button></div>
+      <div id="mzPlugins" style="margin-top:10px" class="vacio">Buscando…</div>
+    </div>
+
+    <div class="caja">
+      <h2>4 · Medir el master</h2>
       <ol class="pasos">
-        <li>En FL Studio, el Master termina en un <b>Fruity Limiter</b> con ATT en 0 ms (lo aprendido con la EDM 777: techo CEIL −3 dB y la GAIN para llegar al volumen).</li>
-        <li>FILE → Export → Wave file: <b>WAV bit depth 24Bit int</b>, a 44.100 Hz, en la carpeta de la canción.</li>
-        <li>Acá tocá <b>Medir un WAV de FL…</b>: te dice si llega a −14 LUFS y −1 dBTP, y qué perilla mover si no.</li>
-        <li>Cuando está bien, <b>Usar como master</b>: queda el WAV y se arma el MP3 320. El master anterior no se borra.</li>
+        <li>En FL: FILE → Export → Wave file, <b>24Bit int</b>, 44.100 Hz, en la carpeta de la canción.</li>
+        <li>Acá: <b>Medir un WAV de FL…</b>. Meta: −14 LUFS y −1 dBTP.</li>
+        <li>Cuando llega, <b>Usar como master</b>: queda el WAV y se arma el MP3 320.</li>
       </ol>
       <div class="fila" style="margin-top:12px">
         <button class="b pri" id="mzElegir">Medir un WAV de FL…</button>
@@ -299,25 +322,44 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
         <button class="b" id="mzAbrir">Abrir la carpeta</button>
       </div>
       <div class="aviso" id="mzAviso"></div>
+      <div id="mzMedidaCaja" hidden style="margin-top:12px">
+        <h3 id="mzMedidaTitulo" style="margin:0 0 6px;font-size:.95rem">Medición</h3>
+        <div id="mzMedida"></div>
+        <div class="fila" style="margin-top:10px"><button class="b pri" id="mzUsar" hidden>Usar como master</button></div>
+      </div>
+      <div id="mzEstado" class="vacio" style="margin-top:10px">—</div>
     </div>
-    <div class="caja" id="mzMedidaCaja" hidden>
-      <h2 id="mzMedidaTitulo">Medición</h2>
-      <div id="mzMedida"></div>
-      <div class="fila" style="margin-top:10px"><button class="b pri" id="mzUsar" hidden>Usar como master</button></div>
-    </div>
+
     <div class="caja">
-      <h2>Lo que tiene esta canción</h2>
-      <div id="mzEstado" class="vacio">—</div>
+      <h2>5 · Mezclar</h2>
+      <div class="aviso" style="margin:0 0 12px">
+        Arma el brief con la referencia, la comparación, tus notas y los plugins elegidos. Con eso, Claude
+        toma el control de tu computadora y mezcla la canción en FL Studio cuando se lo pedís en el chat.
+      </div>
+      <div class="fila">
+        <button class="b pri" id="mzMezclar">Mezclar</button>
+        <span class="aviso" id="mzMezclarAviso" style="margin:0"></span>
+      </div>
     </div>
   </section>
 
   <section class="hoja" id="h-videoclip">
     <div class="caja">
-      <h2>Videoclip en tu estudio</h2>
+      <h2>1 · Qué querés que se vea</h2>
+      <div class="aviso" style="margin:0 0 10px">
+        Contalo con tus palabras: qué pasa en el video, qué muestra cada monitor, los carteles, la cámara, el color.
+        Lo charlamos en el chat y Claude arma la escena con esto. Se guarda solo.
+      </div>
+      <textarea id="vcPedido" rows="6" placeholder="Ej.: en el monitor grande el visualizador con la esfera; en el chico la letra; cartel con el título en rosa; la cámara que gire despacio en el drop y se acerque al avatar al final…"></textarea>
+      <div class="aviso" id="vcPedidoAviso"></div>
+    </div>
+
+    <div class="caja">
+      <h2>2 · Armar, ver y renderizar</h2>
       <div class="aviso" style="margin-top:0">
-        Se arma con tu modelo (<small class="ruta">D:\Nook\Videos\Blender\music_studio_at_home - Reversion #4</small>), que nunca se modifica:
-        se trabaja sobre una copia. Los pasos largos siguen aunque cierres el Estudio. Mientras renderiza, no apagues la compu:
-        si se apaga, tocá «Seguir renderizando» y sigue desde el último cuadro.
+        Se usa tu modelo (<small class="ruta">D:\Nook\Videos\Blender\music_studio_at_home - Reversion #4</small>), que nunca se modifica.
+        <b>Vista previa:</b> «Abrir en Blender» abre la copia de trabajo con ventana; le das play (barra espaciadora) y ves toda la animación sin renderizar.
+        Los pasos largos siguen aunque cierres el Estudio; si se corta el render, «Seguir renderizando» retoma desde el último cuadro.
       </div>
       <div class="fila" style="margin-top:10px">
         <label class="campo">Título en los carteles <input type="text" id="vcTitulo" size="22"></label>
@@ -329,40 +371,72 @@ input[type=date],input[type=password]{font:inherit;font-size:.88rem;border-radiu
 
   <section class="hoja" id="h-campana">
     <div class="caja">
-      <h2>Tapa y clips</h2>
+      <h2>1 · Fecha y redes</h2>
+      <div class="fila">
+        <label class="campo">Sale el <input type="date" id="cpFecha"></label>
+        <label class="campo">a las <input type="time" id="cpHora" value="18:00"></label>
+        <label class="campo"><input type="checkbox" id="cpYouTube" checked> YouTube</label>
+        <label class="campo"><input type="checkbox" id="cpTikTok" checked> TikTok</label>
+        <label class="campo"><input type="checkbox" id="cpInstagram"> Instagram</label>
+        <button class="b pri" id="cpPlan">Armar el calendario</button>
+        <button class="b" id="cpIcs">Pasar a mi calendario (.ics)</button>
+      </div>
+      <div class="aviso" id="cpPlanAviso">Instagram queda para cuando haya una buena canción (y Meta devuelva las cuentas). Con 3 semanas de anticipación el single llega a Spotify y Apple Music.</div>
+    </div>
+
+    <div class="caja">
+      <h2>2 · Tapa (3000 × 3000)</h2>
       <div class="fila">
         <label class="campo">Toma
           <select id="cpCamara">
-            <option value="Detalle">Detalle (cartel NOOK y monitores)</option>
-            <option value="Animacion">Escritorio</option>
+            <option value="Detalle">Cartel NOØK y monitores</option>
+            <option value="Animacion">Escritorio con el avatar</option>
             <option value="Cenital">Desde arriba</option>
             <option value="Frente set-up">Frente del set-up</option>
           </select>
         </label>
-        <label class="campo">Cuadro <input type="number" id="cpCuadro" value="1200" min="0" step="60"></label>
-        <button class="b pri" id="cpTapa">Armar la tapa 3000 × 3000</button>
-        <button class="b" id="cpClips">Armar 3 clips de 20 s</button>
-        <button class="b" id="cpAbrir">Abrir la carpeta</button>
+        <label class="campo">Cuadro <input type="number" id="cpCuadro" value="1200" min="0" step="60" title="Qué momento del video: 0 = entrada, 830 = se sienta, 1200+ = tocando"></label>
+        <label class="campo">Título <input type="text" id="cpTapaTitulo" size="14"></label>
+        <label class="campo">Subtítulo <input type="text" id="cpTapaSub" value="NOOK" size="10"></label>
+        <button class="b pri" id="cpTapa">Armar la tapa</button>
       </div>
-      <div class="aviso" id="cpAvisoMedios">La tapa sale de una foto del estudio con las pantallas de esta canción (hace falta el videoclip renderizado). Los clips son las tres partes con más energía.</div>
-      <div id="cpMedios"></div>
+      <div class="aviso" id="cpTapaAviso">Sale de una foto de tu estudio con las pantallas de esta canción. Hace falta haber tocado «Preparar» en Videoclip.</div>
+      <div id="cpTapaVista" style="margin-top:10px"></div>
     </div>
 
     <div class="caja">
-      <h2>Plan de lanzamiento</h2>
-      <div class="fila">
-        <label class="campo">Fecha de salida <input type="date" id="cpFecha"></label>
-        <button class="b pri" id="cpPlan">Armar el plan</button>
-        <button class="b" id="cpIcs">Pasar a mi calendario (.ics)</button>
+      <h2>3 · Clips</h2>
+      <div class="aviso" style="margin:0 0 10px">Decí qué parte de la canción, cuánto dura y qué texto lleva cada clip. Salen verticales (9:16), del videoclip.</div>
+      <div id="cpClipsPedido"></div>
+      <div class="fila" style="margin-top:8px">
+        <button class="b" id="cpClipMas">+ Otro clip</button>
+        <button class="b pri" id="cpClips">Armar los clips</button>
+        <button class="b" id="cpAbrir">Abrir la carpeta</button>
       </div>
-      <div class="aviso">Cada post es un borrador. Corregí el texto y marcá <b>Aprobado</b> cuando esté bien; <b>Publicado</b> lo marcás vos después de subirlo. El Estudio no publica nada solo.</div>
-      <div id="cpPlanLista" style="margin-top:10px"></div>
+      <div class="aviso" id="cpClipsAviso"></div>
+      <div id="cpClipsLista" style="margin-top:10px"></div>
+    </div>
+
+    <div class="caja" id="cpGrillaCaja">
+      <h2>4 · Calendario de la campaña</h2>
+      <div class="aviso" style="margin:0 0 10px">Cada fila es una pieza. Todo se edita acá mismo y se guarda solo. <b>Aprobación</b> la marcás vos; <b>Checklist</b> es en qué está la pieza.</div>
+      <div id="cpGrilla" class="vacio">Elegí la fecha y tocá «Armar el calendario».</div>
+      <div class="fila" style="margin-top:10px"><button class="b" id="cpAgregar">Agregar una pieza</button></div>
+    </div>
+
+    <div class="caja">
+      <h2>5 · Programar</h2>
+      <div class="aviso" style="margin:0">
+        <b>YouTube:</b> el videoclip y los shorts se pueden dejar programados por API (iniciás sesión vos; próximamente desde acá; mientras tanto, YouTube Studio → Programar).
+        <b>TikTok:</b> su API de publicación exige aprobación de meses; se sube a mano en la fecha del calendario.
+        <b>Instagram:</b> bloqueado hasta que Meta devuelva las cuentas.
+        Cada publicación la confirmás vos: el Estudio no publica nada solo.
+      </div>
     </div>
 
     <div class="caja" hidden>
       <h2>Licencias de los sonidos</h2>
       <div class="fila"><button class="b" id="cpLic">Revisar los sonidos del .flp</button></div>
-      <div class="aviso">Antes de publicar, cada pack tiene que permitir usarlo en canciones que se venden o se suben a plataformas. Marcá los que confirmaste.</div>
       <div id="cpLicLista"></div>
     </div>
 
