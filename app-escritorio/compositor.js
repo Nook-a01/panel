@@ -93,16 +93,79 @@
       bajo:  [0, 2, 3.5],
       acorde: "sostenido",
     },
+    // Plena, con las técnicas medidas en el proyecto "LA PLENA (N H Remake)"
+    // que pasó Agustín (05/10/2026). Lo que le da vida no es el azar:
+    //  - diez capas de batería que se entrelazan sobre el tresillo 3-3-2,
+    //  - el 3-3-2 doblado en dos sonidos (side stick + perc),
+    //  - el clap 16 ms adelantado a propósito,
+    //  - un mismo dibujo que se repite (34 de 44 compases) y sólo cambia en las
+    //    transiciones, y cortes de batería enteros para que el tema respire,
+    //  - bajo largo y acordes rasgueados que también siguen el 3-3-2.
+    plena: {
+      nombre: "Plena (estilo LA PLENA)",
+      bpm: 99,
+      swing: 0,
+      vuelta: [0, 5, 3, 4],
+      kick:  [0, 1, 2, 3],
+      clap:  [0.75, 2.75],
+      hat:   [0, 2],
+      perc:  [0, 0.75, 1.5, 2, 2.75, 3.5],
+      bajo:  [0, 1.5],
+      acorde: "plena",
+      capas: [
+        // pista, golpes (en negras), fuerza, energía mínima, corrimiento en ms
+        { pista: "Kick",       golpes: [0, 1, 2, 3],                  vel: 112, desde: 2 },
+        { pista: "Side Stick", golpes: [0, 0.75, 1.5, 2, 2.75, 3.5],  vel: 92,  desde: 2 },
+        { pista: "Perc",       golpes: [0, 0.75, 1.5, 2, 2.75, 3.5],  vel: 80,  desde: 2 },
+        { pista: "Snare",      golpes: [1.5, 3.5],                    vel: 100, desde: 2 },
+        { pista: "Hats",       golpes: [0, 2],                        vel: 70,  desde: 2 },
+        { pista: "Clap",       golpes: [0.75, 2.75],                  vel: 108, desde: 3, ms: -16 },
+        { pista: "Conga",      golpes: [0.5, 2.5],                    vel: 86,  desde: 3 },
+        { pista: "Shaker",     golpes: [0.5, 0.75, 2.5, 2.75],        vel: 72,  desde: 3 },
+        { pista: "Tamb",       golpes: [0, 1.5, 2, 3.5],              vel: 78,  desde: 4 },
+      ],
+    },
+    // EDM / house con las técnicas de "I'm Awake" (Bombs Away, demo de FL),
+    // medidas el 05/10/2026: bombo en negras, clap en 2 y 4, hats en corcheas,
+    // hat abierto en el contratiempo y, sobre todo, transiciones en cada
+    // sección: crash al arrancar, riser antes del drop, impacto en el drop y un
+    // redoble de varios compases que se acelera y sube de fuerza. En el puente
+    // (breakdown) no hay bombo.
+    edm: {
+      nombre: "EDM (estilo I'm Awake)",
+      bpm: 124,
+      swing: 0,
+      vuelta: [0, 5, 3, 4],
+      kick:  [0, 1, 2, 3],
+      clap:  [1, 3],
+      hat:   [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
+      perc:  [],
+      bajo:  [0.5, 1.5, 2.5, 3.5],
+      acorde: "sostenido",
+      transiciones: true,
+    },
+    // Trap al estilo Travis Scott (BUTTERFLY EFFECT 141 BPM, SICKO MODE 155):
+    // caja en el 3 (medio tiempo), hats que hacen redobles, un 808 largo que
+    // sigue al bombo y un bombo que cambia de dibujo cada dos compases.
     trap: {
       nombre: "Trap",
-      bpm: 140,
+      bpm: 141,
       swing: 0,
       vuelta: [0, 5, 4, 4],
       kick:  [0, 1.75, 2.5],
+      kicks: [                               // se elige uno cada dos compases
+        [0, 1.75, 2.5],
+        [0, 0.75, 2.5, 3.25],
+        [0, 2.25, 2.75],
+        [0, 1.5, 2.75, 3.5],
+        [0, 0.5, 2.5],
+      ],
       clap:  [2],
       hat:   [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
+      redobles: true,                        // tresillos y fusas en los hats
       perc:  [],
       bajo:  [0, 1.75, 2.5],
+      bajo808: true,                         // el 808 suena hasta el próximo bombo
       acorde: "sostenido",
     },
     house: {
@@ -242,9 +305,36 @@
     // que dos sonidos en una misma pista serían uno solo.
     var pistas = {
       Kick:      [], Snare: [], Clap: [], Hats: [], "Hat abierto": [], Perc: [],
+      "Side Stick": [], Conga: [], Shaker: [], Tamb: [],
+      Crash: [], Riser: [], Impacto: [], Redoble: [],
       Bajo:      [], Acordes: [], Melodía: [], Contramelodía: [],
     };
     var mapa = [];
+    // Si la referencia trae su propio dibujo de bombo, manda la referencia.
+    var kicksGen = gen.kicks && !(ref && ref.patrones && ref.patrones.kick.length >= 2) ? gen.kicks : null;
+    var kickC = pKick;
+
+    // Banco de ritmos: grooves de batería sacados de loops y MIDI de la
+    // librería (aprender-ritmos.js). Si hay, el bombo, la caja, los hats y la
+    // percusión salen de ahí en vez de los dibujos de GENEROS. Si la canción
+    // sale de una referencia, manda la referencia.
+    var delBanco = (!ref && op.banco && op.banco.generos && op.banco.generos[op.genero || "afrobeats"]) || [];
+    var grooves = delBanco.filter(function (g) { return g.kick.length && (g.caja.length || g.hat.length); });
+    var soloHats = delBanco.filter(function (g) { return g.hat.length >= 4; });
+    var grooveAct = null, hatAct = null;
+    // Los golpes de un compás del groove, con el tiempo relativo al compás.
+    function delCompas(g, rol, c) {
+      if (!g || !g[rol]) return [];
+      var desde = (c % g.compases) * 4;
+      return g[rol].filter(function (x) { return x[0] >= desde - 0.02 && x[0] < desde + 3.98; })
+        .map(function (x) { return [Math.max(0, x[0] - desde), x[1]]; });
+    }
+    // Un golpe real: el tiempo ya trae el swing y el corrimiento del productor,
+    // así que no se le agrega ni swing ni temblor.
+    function golpeReal(lista, x, largo, fuerza, piso, techo) {
+      var v = Math.round(piso + (techo - piso) * fuerza);
+      lista.push({ nota: GOLPE, inicio: Math.round(x * 1000) / 1000, largo: largo, vel: Math.max(1, Math.min(127, v)) });
+    }
     var t = 0;      // tiempo en negras, corrido desde el principio
     var voz = null; // la posición anterior de los acordes, para que se muevan poco
 
@@ -286,9 +376,67 @@
         var vivo = function (x) { return !(respiro && x >= 3); };
         var relleno = ultimo && e >= 2;
 
+        // Con banco: cada 4 compases (y al empezar cada sección) se elige otro groove real.
+        var real = null;
+        if (grooves.length) {
+          if (!grooveAct || c % 4 === 0) {
+            grooveAct = az.deA(grooves);
+            hatAct = grooveAct.hat.length >= 4 ? grooveAct : (soloHats.length ? az.deA(soloHats) : null);
+          }
+          real = { kick: delCompas(grooveAct, "kick", c), caja: delCompas(grooveAct, "caja", c),
+                   hat: delCompas(hatAct, "hat", c), perc: delCompas(grooveAct, "perc", c) };
+        }
+
+        /* --- transiciones (edm): lo que anuncia y hace explotar cada parte --- */
+        if (gen.transiciones) {
+          var fijoT = function (pista, x, largo, vel) {
+            pistas[pista].push({ nota: GOLPE, inicio: Math.round(x * 1000) / 1000, largo: largo, vel: Math.max(1, Math.min(127, Math.round(vel))) });
+          };
+          var drop = sig && sig.energia >= 4 && sig.energia > e;      // la sección que viene es un drop
+          if (c === 0 && e >= 2) fijoT("Crash", base, 2, e >= 4 ? 118 : 96);   // crash al arrancar cada parte
+          if (c === 0 && e >= 4) fijoT("Impacto", base, 2, 120);               // impacto en el golpe del drop
+          // Riser: arranca dos compases antes del drop y termina justo en él.
+          if (drop && c === sec.compases - 2) fijoT("Riser", base, 8, 104);
+          // Redoble que se acelera en los últimos compases antes del drop:
+          // negras, corcheas, semicorcheas y fusas, con la fuerza subiendo de 64 a 127.
+          var largoRed = Math.min(4, sec.compases);
+          var desdeRed = sec.compases - largoRed;
+          if (drop && c >= desdeRed) {
+            var tramo = c - desdeRed, paso = [1, 0.5, 0.25, 0.125][Math.min(3, Math.floor(tramo * 4 / largoRed))];
+            for (var yr = 0; yr < 4 - 1e-6; yr += paso) {
+              var avance = (tramo * 4 + yr) / (largoRed * 4);
+              fijoT("Redoble", base + yr, Math.min(0.2, paso * 0.8), 64 + 63 * avance);
+            }
+          }
+        }
+
+        /* --- batería en capas (plena): el mismo dibujo cada compás, sin temblor --- */
+        if (gen.capas && e >= 2) {
+          // En el compás de transición se van las capas finas en la segunda mitad.
+          var transicion = ultimo && sig && sig.energia !== e;
+          gen.capas.forEach(function (cp) {
+            if (e < cp.desde) return;
+            cp.golpes.forEach(function (x) {
+              if (!vivo(x)) return;
+              if (transicion && cp.desde >= 3 && x >= 2) return;
+              var corr = (cp.ms || 0) * bpm / 60000;
+              pistas[cp.pista].push({ nota: GOLPE, inicio: Math.max(0, Math.round((base + x + corr) * 1000) / 1000),
+                largo: 0.2, vel: Math.max(1, Math.min(127, cp.vel - 3 + az.entre(0, 6))) });
+            });
+          });
+          if (transicion) for (var rp = 0; rp < 4; rp++) pistas.Snare.push({ nota: GOLPE, inicio: base + 3 + rp * 0.25, largo: 0.2, vel: 72 + rp * 12 });
+        }
+
         /* --- bombo --- */
+        if (gen.capas) {
+          kickC = [0, 1.5];
+        } else if (real) {
+          kickC = real.kick.length ? real.kick.map(function (x) { return x[0]; }) : [0];
+          if (e >= 2) real.kick.forEach(function (x) { if (vivo(x[0])) golpeReal(pistas.Kick, base + x[0], 0.25, x[1], 70, 120); });
+        } else {
+        if (kicksGen && c % 2 === 0) kickC = az.deA(kicksGen);
         if (e >= 2) {
-          pKick.forEach(function (x, i) {
+          kickC.forEach(function (x, i) {
             if (!vivo(x)) return;
             // Cada tanto un golpe del dibujo se cae y, más raro, aparece uno de más: así el dibujo respira.
             if (i > 0 && e >= 3 && az.suerte(0.07)) return;
@@ -296,9 +444,20 @@
           });
           if (e >= 3 && c % 4 === 3 && vivo(3.5) && az.suerte(0.45)) pistas.Kick.push(n(GOLPE, base + 3.5, 0.2, 88, "k"));
         }
+        }
 
         /* --- caja: del estribillo para arriba la lleva el clap, que suena más ancho --- */
-        if (e >= 2) {
+        if (gen.capas) {
+          // ya la puso la batería en capas
+        } else if (real) {
+          if (e >= 2) {
+            var cajaR = e >= 4 ? pistas.Clap : pistas.Snare;
+            real.caja.forEach(function (x) {
+              if (relleno && x[0] >= 3) return;   // el relleno se queda con el final
+              golpeReal(cajaR, base + x[0], 0.25, x[1], 60, 118);
+            });
+          }
+        } else if (e >= 2) {
           var caja = e >= 4 ? pistas.Clap : pistas.Snare;
           pCaja.forEach(function (x) {
             if (relleno && x >= 3 && az.suerte(0.5)) return;   // el relleno se queda con el final
@@ -312,8 +471,33 @@
         }
 
         /* --- hi-hat: los tiempos pesan más que los contratiempos --- */
-        if (e >= 1) {
+        if (gen.capas) {
+          // ya los puso la batería en capas
+        } else if (real && real.hat.length) {
+          // Los hats del groove real, con sus redobles y sus fuerzas tal cual.
+          if (e >= 1) real.hat.forEach(function (x) { golpeReal(pistas.Hats, base + x[0], 0.12, x[1], 34, 104); });
+          if (e >= 3 && (c % 4 === 3 || (c % 4 === 1 && az.suerte(0.3)))) pistas["Hat abierto"].push(n(GOLPE, base + az.deA([1.5, 3.5]), 0.4, 80, "h"));
+        } else if (e >= 1) {
+          // Redoble de trap: en uno o dos tiempos del compás, el hat se parte en
+          // tresillos o en fusas que suben de fuerza. Es lo que más saca lo cuadrado.
+          // Cada redoble ocupa medio tiempo: [desde, desde + 0.5).
+          var redobles = [];
+          if (gen.redobles && e >= 2) {
+            var cuantos = e >= 4 ? az.deA([1, 1, 2]) : az.deA([0, 1, 1]);
+            for (var rr = 0; rr < cuantos; rr++) {
+              redobles.push({ desde: az.deA([1, 1.5, 2.5, 3, 3.5]), paso: az.deA([1 / 6, 1 / 6, 0.125]) });
+            }
+          }
+          var enRedoble = function (x) {
+            return redobles.some(function (r) { return x >= r.desde - 1e-6 && x < r.desde + 0.5 - 1e-6; });
+          };
+          redobles.forEach(function (r) {
+            for (var y = r.desde, z = 0; y < r.desde + 0.5 - 1e-6; y += r.paso, z++) {
+              pistas.Hats.push(n(GOLPE, base + y, r.paso * 0.8, 48 + z * 7, "h"));
+            }
+          });
           pHat.forEach(function (x) {
+            if (enRedoble(x)) return;   // ese medio tiempo ya lo llena el redoble
             var acento = x % 1 === 0 ? 82 : (x * 2) % 1 === 0 ? 66 : 50;
             if (e >= 3 && x % 1 !== 0 && az.suerte(0.1)) return;   // un hat que falta también es groove
             if (e >= 4 && az.suerte(0.16)) {
@@ -327,7 +511,11 @@
         }
 
         /* --- percusión --- */
-        if (e >= 3 && pPerc.length) {
+        if (gen.capas) {
+          // ya la puso la batería en capas
+        } else if (real && real.perc.length) {
+          if (e >= 3) real.perc.forEach(function (x) { golpeReal(pistas.Perc, base + x[0], 0.2, x[1], 50, 100); });
+        } else if (e >= 3 && pPerc.length) {
           pPerc.forEach(function (x) {
             if (az.suerte(0.15)) return;
             pistas.Perc.push(n(GOLPE, base + x, 0.2, 68 + az.entre(0, 10), "p"));
@@ -335,7 +523,7 @@
         }
 
         /* --- relleno del último compás: cada vez uno distinto --- */
-        if (relleno) {
+        if (relleno && !gen.capas) {
           var tipo = az.entre(0, 2);
           if (tipo === 0) {                              // redoblante en crescendo
             for (var r = 0; r < 4; r++) pistas.Snare.push(n(GOLPE, base + 3 + r * 0.25, 0.2, 70 + r * 12, "s"));
@@ -348,8 +536,29 @@
           }
         }
 
+        /* --- bajo de trap: un 808 por bombo, largo hasta el próximo golpe --- */
+        if (gen.bajo808 && e >= 2) {
+          kickC.forEach(function (x, i) {
+            if (!vivo(x)) return;
+            var hasta = i + 1 < kickC.length ? kickC[i + 1] : 4;
+            var alto;
+            if (i === kickC.length - 1 && gradoSig !== grado && az.suerte(0.4)) alto = nota(gradoSig, 1);   // anticipa el acorde que viene
+            else if (i > 0 && az.suerte(0.25)) alto = nota(grado, 2);                                       // el salto de octava del 808
+            else alto = nota(grado, 1);
+            pistas.Bajo.push(n(nombreDe(alto), base + x, Math.max(0.25, hasta - x - 0.05), i === 0 ? 110 : 96 + az.entre(0, 8), "b"));
+          });
+        }
+
         /* --- bajo: la tónica, pero con quinta, octava y una nota de paso hacia el próximo acorde --- */
-        if (e >= 2) {
+        /* --- bajo de plena: dos notas largas por compás, sobre el 3-3-2 --- */
+        if (gen.capas && e >= 2) {
+          pistas.Bajo.push(n(nombreDe(nota(grado, 1)), base, 1.4, 106, "b"));
+          if (vivo(1.5)) {
+            var bajo2 = gradoSig !== grado && az.suerte(0.35) ? nota(gradoSig, 1) : nota(grado, 1);
+            pistas.Bajo.push(n(nombreDe(bajo2), base + 1.5, respiro ? 1.4 : 2.4, 96, "b"));
+          }
+        }
+        if (!gen.bajo808 && !gen.capas && e >= 2) {
           pBajo.forEach(function (x, i) {
             if (!vivo(x)) return;
             var esUlt = i === pBajo.length - 1, nombre;
@@ -370,7 +579,17 @@
         if (e >= 1) {
           if (c % 2 === 0) patronAcorde = az.entre(0, RITMOS_PICADO.length - 1);
           var vz = voicing(grado, e >= 4);
-          if (gen.acorde === "sostenido") {
+          if (gen.acorde === "plena") {
+            // Golpes de acorde en 0, 1.5, 2.5 y 3 (el 3-3-2 otra vez), rasgueados de a 4 ms.
+            var pg = e < 3 ? [[0, 3.6]] : [[0, 1.4], [1.5, 0.95], [2.5, 0.45], [3, 0.95]];
+            var vzP = voicing(grado, true);
+            pg.forEach(function (gp, j) {
+              if (!vivo(gp[0])) return;
+              vzP.forEach(function (m, i) {
+                pistas.Acordes.push(n(nombreDe(m), base + gp[0] + i * 0.007 * bpm / 60, gp[1], (j === 0 ? 92 : 80) - i * 3, "a"));
+              });
+            });
+          } else if (gen.acorde === "sostenido") {
             var reata = e >= 4 && c % 2 === 1 && az.suerte(0.5);
             vz.forEach(function (m, i) {
               pistas.Acordes.push(n(nombreDe(m), base + i * 0.02, reata ? 2 : 3.6, 76 - i * 4, "a"));
@@ -441,15 +660,20 @@
       Kick: "un kick o un 808", Snare: "redoblante", Clap: "clap o palmas",
       Hats: "hi-hat cerrado", "Hat abierto": "hi-hat abierto",
       Perc: "shaker, conga o percusión", Bajo: "808 o sub", Acordes: "piano, pad o pluck",
+      "Side Stick": "side stick o rim", Conga: "conga", Shaker: "shaker", Tamb: "pandereta",
+      Crash: "crash", Riser: "riser o crash al revés", Impacto: "impacto", Redoble: "caja para el redoble",
       "Melodía": "lead, flauta o whistle", "Contramelodía": "algo lejano, con delay",
     };
     // Cada pista, su propio canal MIDI. El 10 queda afuera a propósito: ese
     // canal significa "batería General MIDI" y acá los golpes no siguen ese mapa.
     var canales = {
       Kick: 11, Snare: 12, Clap: 13, Hats: 14, "Hat abierto": 15, Perc: 16,
+      "Side Stick": 6, Conga: 7, Shaker: 8, Tamb: 9,
+      // Las transiciones de edm usan los mismos canales: nunca van en la misma canción.
+      Crash: 6, Riser: 7, Impacto: 8, Redoble: 9,
       Bajo: 2, Acordes: 3, "Melodía": 4, "Contramelodía": 5,
     };
-    var percusion = { Kick: 1, Snare: 1, Clap: 1, Hats: 1, "Hat abierto": 1, Perc: 1 };
+    var percusion = { Kick: 1, Snare: 1, Clap: 1, Hats: 1, "Hat abierto": 1, Perc: 1, "Side Stick": 1, Conga: 1, Shaker: 1, Tamb: 1, Crash: 1, Riser: 1, Impacto: 1, Redoble: 1 };
     var seg = Math.round(total * 4 * 60 / bpm);
 
     var charla = [

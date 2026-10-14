@@ -1,0 +1,122 @@
+{
+ "modelo": "Estudio y animacion.blend (music_studio_at_home - Reversion #4)",
+ "fps": 60,
+ "nota": "centro del recorte: 0 = borde izquierdo, 1 = borde derecho; corte = cambio de cámara",
+ "claves": [
+  {
+   "cuadro": 0,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 200,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 240,
+   "centro": 0.27
+  },
+  {
+   "cuadro": 280,
+   "centro": 0.32
+  },
+  {
+   "cuadro": 320,
+   "centro": 0.42
+  },
+  {
+   "cuadro": 360,
+   "centro": 0.5
+  },
+  {
+   "cuadro": 400,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 440,
+   "centro": 0.68
+  },
+  {
+   "cuadro": 480,
+   "centro": 0.66
+  },
+  {
+   "cuadro": 520,
+   "centro": 0.68
+  },
+  {
+   "cuadro": 592,
+   "centro": 0.67
+  },
+  {
+   "cuadro": 593,
+   "centro": 0.45,
+   "corte": true
+  },
+  {
+   "cuadro": 685,
+   "centro": 0.45
+  },
+  {
+   "cuadro": 686,
+   "centro": 0.65,
+   "corte": true
+  },
+  {
+   "cuadro": 838,
+   "centro": 0.65
+  },
+  {
+   "cuadro": 839,
+   "centro": 0.2,
+   "corte": true
+  },
+  {
+   "cuadro": 1300,
+   "centro": 0.2
+  },
+  {
+   "cuadro": 1600,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 2560,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 3520,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 4480,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 5440,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 6400,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 7360,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 8320,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 9280,
+   "centro": 0.62
+  },
+  {
+   "cuadro": 10240,
+   "centro": 0.55
+  },
+  {
+   "cuadro": 11200,
+   "centro": 0.62
+  }
+ ]
+}

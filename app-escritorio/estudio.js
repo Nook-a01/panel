@@ -10,13 +10,26 @@
   var pieza = null, salidas = [], sonando = false;
   var timers = [], apagados = [], t0 = 0, raf = 0;
 
-  /* ---------------- pestañas ---------------- */
-  document.querySelectorAll("nav button").forEach(function (b) {
+  /* ---------------- pestañas ----------------
+     Abajo, las cinco secciones. Componer es UNA sola página larga (10/10/2026,
+     pedido de Agustín): Canción, Referencias, Tocar, Plugins y Samples, una
+     debajo de la otra. Las otras secciones son una sola hoja cada una. */
+  var COMPONER = ["componer", "ref", "armar"];   // Tocar, Plugins y Samples quedaron ocultos (13/10/2026)
+  function mostrarHoja(id) {
+    var ids = id === "componer" ? COMPONER : [id];
+    document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", ids.indexOf(h.id.replace(/^h-/, "")) >= 0); });
+  }
+  document.querySelectorAll("nav.secciones button").forEach(function (b) {
     b.onclick = function () {
-      document.querySelectorAll("nav button").forEach(function (x) { x.classList.toggle("on", x === b); });
-      document.querySelectorAll(".hoja").forEach(function (h) { h.classList.toggle("on", h.id === "h-" + b.dataset.h); });
+      document.querySelectorAll("nav.secciones button").forEach(function (x) { x.classList.toggle("on", x === b); });
+      var componer = b.dataset.s === "componer";
+      // Mezcla, Videoclip, Campaña y Métricas eligen la canción en su propia barra (lanzamiento.js).
+      $("#barraCancion").hidden = componer;
+      mostrarHoja(b.dataset.s);
+      document.dispatchEvent(new CustomEvent("seccion", { detail: b.dataset.s }));
     };
   });
+  mostrarHoja("componer");
 
   function esc(t) {
     return String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;")
@@ -153,6 +166,9 @@
     r.carpetas.forEach(function (c) {
       c.plugins.forEach(function (p) {
         var k = p.nombre.toLowerCase();
+        // Para elegir el instrumento de una pista sirven sólo los instrumentos.
+        // FLEX ya es la opción por defecto de la lista.
+        if (p.tipo === "efecto" || k === "flex") return;
         // El mismo plugin suele estar en VST3 y en VST2: se deja el VST3.
         if (!porNombre[k] || (p.clase === "VST3" && porNombre[k].clase !== "VST3")) porNombre[k] = p;
       });
@@ -394,11 +410,14 @@
     parar();
     try {
       var ref = null, base = $("#gBase").value;
-      if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: Number($("#gBpm").value) || null });
+      if (base && fichas[base]) ref = window.Analizador.aCompositor(fichas[base], { bpm: leerBpm() });
+      // Los ritmos reales van siempre que haya banco (se aprende solo al arrancar).
+      var banco = await window.estudio.bancoRitmos();
       var nueva = window.Compositor.componer({
+        banco: banco,
         genero: $("#gGenero").value,
-        tonalidad: $("#gTon").value.trim() || "Am",
-        bpm: Number($("#gBpm").value) || null,
+        tonalidad: normalizarTonalidad($("#gTon").value) || "Am",
+        bpm: leerBpm(),
         semilla: Number($("#gSemilla").value) || 1,
         titulo: "Canción " + $("#gSemilla").value,
         ref: ref,
@@ -410,9 +429,10 @@
       pintarPieza(); pintarConfig(); pintarMapa();
       var notas = pieza.pistas.reduce(function (a, p) { return a + p.notas.length; }, 0);
       var seg = Math.round(pieza.compases * 4 * 60 / pieza.bpm);
-      $("#gAviso").textContent = "Listo: " + pieza.compases + " compases, " +
+      var donde = await window.estudio.guardarMidiDirecto((pieza.titulo || "cancion") + ".mid", armarMidi());
+      $("#gAviso").textContent = "Lista: " + pieza.compases + " compases, " +
         Math.floor(seg / 60) + ":" + String(seg % 60).padStart(2, "0") + ", " +
-        pieza.pistas.length + " pistas, " + notas + " notas.";
+        pieza.pistas.length + " pistas, " + notas + " notas. MIDI guardado en " + donde + ". Pedile a Claude que la arme en FL.";
       $("#gAviso").className = "aviso bien";
     } catch (e) {
       $("#gAviso").textContent = "No pude armarla: " + e.message;
@@ -420,6 +440,37 @@
     }
     b.disabled = false; b.textContent = "Armar la canción";
   };
+
+  /* ---------------- banco de ritmos ---------------- */
+  // Los grooves salen de loops de batería y MIDI de la librería: dónde cae cada
+  // golpe y con qué fuerza, tal como lo tocó el productor.
+  function avisoBanco(r) {
+    var g = (r && r.generos) || {};
+    var gen = $("#gGenero").value, d = g[gen];
+    if (gen === "plena") { $("#gBancoAviso").textContent = "Plena no usa el banco: lleva sus diez capas de batería, medidas en LA PLENA."; return; }
+    $("#gBancoAviso").textContent = !r ? "Todavía no hay banco: tocá «Aprender ritmos»." :
+      d ? d.completos + " grooves completos de " + (gen === "trap" ? "trap/drill" : gen) + " (" + d.grooves + " en total). Aprendido el " + new Date(r.creado).toLocaleDateString("es-AR") + "."
+        : "El banco no tiene ritmos de este género: sale con los dibujos de siempre.";
+  }
+  async function pintarBanco() {
+    var b = await window.estudio.bancoRitmos();
+    if (!b) { avisoBanco(null); return; }
+    var resumen = { creado: b.creado, generos: {} };
+    Object.keys(b.generos).forEach(function (k) {
+      var l = b.generos[k];
+      resumen.generos[k] = { grooves: l.length, completos: l.filter(function (x) { return x.kick.length && (x.caja.length || x.hat.length); }).length };
+    });
+    avisoBanco(resumen);
+  }
+  $("#gAprender").onclick = async function () {
+    var b = this;
+    b.disabled = true; b.textContent = "Aprendiendo…";
+    $("#gBancoAviso").textContent = "Leyendo loops y MIDI de batería de la librería (tarda unos segundos)…";
+    try { avisoBanco(await window.estudio.aprenderRitmos()); }
+    catch (e) { $("#gBancoAviso").textContent = "No pude aprender: " + e.message; }
+    b.disabled = false; b.textContent = "Aprender ritmos";
+  };
+  $("#gGenero").addEventListener("change", function () { pintarBanco(); });
 
   // El mapa de secciones: dónde empieza cada parte, para no perderse en 120
   // compases cuando lo abrís en FL Studio.
@@ -463,6 +514,42 @@
   var mmss = function (s) { return Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0"); };
 
   // "3:00" son tres minutos; "2,5" son dos minutos y medio; vacío = sin tocar.
+  // "245" -> 2:45, "330" -> 3:30, "3" -> 3:00, "3.5" -> 3:30, "2:45" -> 2:45.
+  function normalizarDuracion(t) {
+    t = String(t || "").trim().replace(",", ".");
+    if (!t) return "";
+    var m = t.match(/^(\d+):(\d{1,2})$/), s = null;
+    if (m) s = Number(m[1]) * 60 + Number(m[2]);
+    else if (/^\d{3,4}$/.test(t)) s = Number(t.slice(0, -2)) * 60 + Number(t.slice(-2));
+    else if (/^\d+(\.\d+)?$/.test(t)) s = Math.round(Number(t) * 60);
+    if (!s) return "";
+    s = Math.max(60, Math.min(600, s));
+    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+  }
+  var NOTAS = { do: "C", re: "D", mi: "E", fa: "F", sol: "G", la: "A", si: "B", c: "C", d: "D", e: "E", f: "F", g: "G", a: "A", b: "B" };
+  var NOMBRES = { C: "Do", D: "Re", E: "Mi", F: "Fa", G: "Sol", A: "La", B: "Si" };
+  // "a" -> "A", "am" -> "Am", "la menor" -> "Am", "fa# m" -> "F#m", "Sib mayor" -> "Bb".
+  function normalizarTonalidad(t) {
+    t = String(t || "").trim().toLowerCase().replace(/\s+/g, " ");
+    var m = t.match(/^(do|re|mi|fa|sol|la|si|[a-g])\s?(#|♯|sostenido|b|♭|bemol)?\s?(m|min|menor|-|mayor|maj|m[ae]j)?$/);
+    if (!m) return null;
+    var alt = !m[2] ? "" : /^(#|♯|sostenido)$/.test(m[2]) ? "#" : "b";
+    var menor = m[3] && /^(m|min|menor|-)$/.test(m[3]);
+    return NOTAS[m[1]] + alt + (menor ? "m" : "");
+  }
+  function nombreTonalidad(ton) {
+    var m = String(ton || "").match(/^([A-G])(#|b)?(m)?$/);
+    if (!m) return "";
+    return NOMBRES[m[1]] + (m[2] === "#" ? " sostenido" : m[2] === "b" ? " bemol" : "") + (m[3] ? " menor" : " mayor");
+  }
+  function leerBpm() { var n = parseInt(String($("#gBpm").value).replace(/\D/g, ""), 10); return n >= 40 && n <= 220 ? n : null; }
+  $("#gDur").addEventListener("change", function () { this.value = normalizarDuracion(this.value); });
+  $("#gTon").addEventListener("change", function () {
+    var n = normalizarTonalidad(this.value);
+    if (n) { this.value = n; $("#gTonNombre").textContent = nombreTonalidad(n); $("#gTonNombre").classList.remove("mal"); }
+    else { $("#gTonNombre").textContent = "no entiendo: probá Am, F#m, La menor"; $("#gTonNombre").classList.add("mal"); }
+  });
+  $("#gBpm").addEventListener("change", function () { var n = leerBpm(); this.value = n ? n + " BPM" : ""; });
   function leerDuracion(t) {
     t = String(t || "").trim();
     if (!t) return null;
@@ -521,8 +608,9 @@
         (a.agregada ? '<button class="b" data-quitar="' + esc(a.ruta) + '">Quitar</button>' : "") + "</div></div>" +
         '<div class="aviso" data-estado>' + (f ? "" : "Todavía sin analizar.") + "</div>" +
         (f ? fichaHtml(f) : "") + "</div>";
-    }).join("") : '<div class="caja vacio">' + (r.existe ? "La carpeta está vacía." : "La carpeta todavía no existe.") +
-      " Copiá ahí tus canciones de referencia y tocá «Actualizar lista».</div>";
+    }).join("") : '<div class="caja vacio">' + (r.existe
+      ? "La carpeta está vacía. Copiá ahí tus canciones de referencia y tocá «Actualizar lista»."
+      : "La carpeta " + esc(r.carpeta) + " no existe. Tocá «Elegir carpeta…» para usar otra.") + "</div>";
     var sel = $("#gBase"), antes = sel.value;
     sel.innerHTML = '<option value="">Un género</option>' + refs.filter(fichaVigente).map(function (a) {
       return '<option value="' + esc(a.ruta) + '">Referencia: ' + esc(a.nombre.replace(/\.[^.]+$/, "")) + "</option>";
@@ -567,6 +655,7 @@
   });
   $("#refAgregar").onclick = async function () { await window.estudio.refAgregar(); pintarReferencias(); };
   $("#refActualizar").onclick = function () { pintarReferencias(); };
+  $("#refElegir").onclick = async function () { await window.estudio.refCarpeta(); pintarReferencias(); };
   $("#gBase").onchange = function () {
     var f = fichas[this.value];
     $("#gBaseAviso").textContent = f
@@ -576,16 +665,20 @@
 
   /* ---------------- samples ---------------- */
   async function pintarSamples() {
-    var carpetas = await window.estudio.carpetas();
+    // La librería de FL va siempre primero y no se puede quitar; las demás son
+    // las que agregaste vos.
+    var r0 = await window.estudio.carpetas();
+    var carpetas = (r0.fl ? [r0.fl] : []).concat(r0.propias);
     if (!carpetas.length) {
-      $("#listaSamples").innerHTML = '<div class="caja vacio">Todavía no agregaste ninguna carpeta.</div>';
+      $("#listaSamples").innerHTML = '<div class="caja vacio">No encontré la librería de FL ni agregaste ninguna carpeta.</div>';
       return;
     }
     $("#listaSamples").innerHTML = carpetas.map(function (ruta) {
+      var esFL = ruta === r0.fl;
       return '<div class="caja" data-ruta="' + esc(ruta) + '">' +
         '<div class="fila" style="justify-content:space-between">' +
-          '<small class="ruta">' + esc(ruta) + "</small>" +
-          '<button class="b" data-olvidar="' + esc(ruta) + '">Quitar</button></div>' +
+          "<div>" + (esFL ? "<b>Librería de FL Studio</b> " : "") + '<small class="ruta">' + esc(ruta) + "</small></div>" +
+          (esFL ? "" : '<button class="b" data-olvidar="' + esc(ruta) + '">Quitar</button>') + "</div>" +
         '<div class="aviso" data-cuenta>Contando…</div></div>';
     }).join("");
 
@@ -620,6 +713,13 @@
   };
   $("#abrirDatos").onclick = function () { window.estudio.abrirCarpeta(); };
 
+  /* ---------------- actualizar la app ---------------- */
+  // Recarga la pantalla con los últimos cambios, sin cerrar la ventana.
+  $("#recargar").onclick = function () { location.reload(); };
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "F5" || (e.ctrlKey && (e.key === "r" || e.key === "R"))) { e.preventDefault(); location.reload(); }
+  });
+
   /* ---------------- arranque ---------------- */
   $("#sonar").onclick = sonar;
   $("#parar").onclick = parar;
@@ -636,5 +736,9 @@
     buscarSalidas();
     pintarSamples();
     try { await pintarReferencias(); } catch (e) { /* sin referencias no pasa nada */ }
+    try {
+      await pintarBanco();
+      if (!(await window.estudio.bancoRitmos())) window.estudio.aprenderRitmos().then(pintarBanco).catch(function () {});
+    } catch (e) { /* sin banco sale con los dibujos de siempre */ }
   })();
 })();
