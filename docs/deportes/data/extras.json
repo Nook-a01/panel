@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-15T01:27:33.524Z",
+ "actualizado": "2026-10-15T07:24:15.821Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -969,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1030,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1176,8 +1175,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1356,12 +1356,12 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "28",
-      "pts": "63",
-      "g": "19",
+      "pj": "29",
+      "pts": "66",
+      "g": "20",
       "e": "6",
       "p": "3",
-      "dg": "+37",
+      "dg": "+41",
       "mio": false,
       "pos": 1
      },
@@ -1369,51 +1369,51 @@
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "28",
-      "pts": "49",
-      "g": "13",
+      "pj": "29",
+      "pts": "52",
+      "g": "14",
       "e": "10",
       "p": "5",
-      "dg": "+18",
+      "dg": "+20",
       "mio": true,
       "pos": 2
-     },
-     {
-      "equipo": "Chicago Fire FC",
-      "abrev": "CHI",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "28",
-      "pts": "48",
-      "g": "14",
-      "e": "6",
-      "p": "8",
-      "dg": "+11",
-      "mio": false,
-      "pos": 3
-     },
-     {
-      "equipo": "Charlotte FC",
-      "abrev": "CLT",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "28",
-      "pts": "46",
-      "g": "13",
-      "e": "7",
-      "p": "8",
-      "dg": "+10",
-      "mio": false,
-      "pos": 4
      },
      {
       "equipo": "New England Revolution",
       "abrev": "NE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "28",
-      "pts": "46",
-      "g": "14",
+      "pj": "29",
+      "pts": "49",
+      "g": "15",
       "e": "4",
       "p": "10",
-      "dg": "+6",
+      "dg": "+7",
+      "mio": false,
+      "pos": 3
+     },
+     {
+      "equipo": "Chicago Fire FC",
+      "abrev": "CHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "pj": "29",
+      "pts": "48",
+      "g": "14",
+      "e": "6",
+      "p": "9",
+      "dg": "+9",
+      "mio": false,
+      "pos": 4
+     },
+     {
+      "equipo": "Charlotte FC",
+      "abrev": "CLT",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+      "pj": "29",
+      "pts": "46",
+      "g": "13",
+      "e": "7",
+      "p": "9",
+      "dg": "+8",
       "mio": false,
       "pos": 5
      },
@@ -1421,12 +1421,12 @@
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "28",
-      "pts": "42",
-      "g": "12",
+      "pj": "29",
+      "pts": "45",
+      "g": "13",
       "e": "6",
       "p": "10",
-      "dg": "+11",
+      "dg": "+13",
       "mio": false,
       "pos": 6
      },
@@ -1434,10 +1434,10 @@
       "equipo": "Orlando City SC",
       "abrev": "ORL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "28",
-      "pts": "37",
+      "pj": "29",
+      "pts": "38",
       "g": "11",
-      "e": "4",
+      "e": "5",
       "p": "13",
       "dg": "-15",
       "mio": false,
@@ -1447,12 +1447,12 @@
       "equipo": "FC Cincinnati",
       "abrev": "CIN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "27",
+      "pj": "28",
       "pts": "36",
       "g": "9",
       "e": "9",
-      "p": "9",
-      "dg": "-7",
+      "p": "10",
+      "dg": "-8",
       "mio": false,
       "pos": 8
      },
@@ -1460,12 +1460,12 @@
       "equipo": "Red Bull New York",
       "abrev": "RBNY",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "28",
+      "pj": "29",
       "pts": "36",
       "g": "10",
       "e": "6",
-      "p": "12",
-      "dg": "-14",
+      "p": "13",
+      "dg": "-15",
       "mio": false,
       "pos": 9
      },
@@ -1473,38 +1473,38 @@
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "28",
+      "pj": "29",
       "pts": "33",
       "g": "8",
       "e": "9",
-      "p": "11",
-      "dg": "+4",
+      "p": "12",
+      "dg": "+2",
       "mio": false,
       "pos": 10
-     },
-     {
-      "equipo": "Toronto FC",
-      "abrev": "TOR",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-      "pj": "28",
-      "pts": "32",
-      "g": "7",
-      "e": "11",
-      "p": "10",
-      "dg": "-11",
-      "mio": false,
-      "pos": 11
      },
      {
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "27",
-      "pts": "30",
-      "g": "6",
+      "pj": "28",
+      "pts": "33",
+      "g": "7",
       "e": "12",
       "p": "9",
-      "dg": "-12",
+      "dg": "-11",
+      "mio": false,
+      "pos": 11
+     },
+     {
+      "equipo": "Toronto FC",
+      "abrev": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "pj": "29",
+      "pts": "33",
+      "g": "7",
+      "e": "12",
+      "p": "10",
+      "dg": "-11",
       "mio": false,
       "pos": 12
      },
@@ -1512,12 +1512,12 @@
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "28",
-      "pts": "29",
-      "g": "8",
+      "pj": "29",
+      "pts": "32",
+      "g": "9",
       "e": "5",
       "p": "15",
-      "dg": "-5",
+      "dg": "-3",
       "mio": false,
       "pos": 13
      },
@@ -1525,12 +1525,12 @@
       "equipo": "Atlanta United FC",
       "abrev": "ATL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "28",
-      "pts": "27",
-      "g": "7",
+      "pj": "29",
+      "pts": "30",
+      "g": "8",
       "e": "6",
       "p": "15",
-      "dg": "-15",
+      "dg": "-12",
       "mio": false,
       "pos": 14
      },
@@ -1538,12 +1538,12 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "28",
+      "pj": "29",
       "pts": "24",
       "g": "6",
       "e": "6",
-      "p": "16",
-      "dg": "-21",
+      "p": "17",
+      "dg": "-24",
       "mio": false,
       "pos": 15
      }
@@ -1571,9 +1571,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1692,9 +1691,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1963,46 +1961,46 @@
    ],
    "noticias": [
     {
-     "titulo": "Garber won't dish on exchange with Messi: 'Between me and Leo'",
-     "resumen": "Don Garber has addressed his September confrontation with Lionel Messi, and the MLS commissioner said he admired the exchange.",
-     "fecha": "2026-10-13T19:19:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1013/r1730200_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50175272/garber-confrontation-messi-leo"
+     "titulo": "LAFC vs. Austin FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from LAFC vs. Austin FC, 10/14/2026",
+     "fecha": "2026-10-15T04:45:49Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1015/7c855da7-6770-4d61-88e4-8b64639f661b/7c855da7-6770-4d61-88e4-8b64639f661b.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50187102/lafc-vs-austin-fc-game-highlights"
     },
     {
-     "titulo": "LAFC vs. Vancouver Whitecaps - Game Highlights",
-     "resumen": "Watch the Game Highlights from LAFC vs. Vancouver Whitecaps, 10/10/2026",
-     "fecha": "2026-10-12T21:17:19Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1011/fc6c079b-b257-48b4-b3f7-648c985bf67d/fc6c079b-b257-48b4-b3f7-648c985bf67d.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50154440/lafc-vs-vancouver-whitecaps-game-highlights"
+     "titulo": "Ferreira, De Sousa Brito help Dallas end Sounders' unbeaten run with 1-0 victory",
+     "resumen": "Kaick Ferreira scored in the second half to give FC Dallas a 1-0 victory over Seattle Sounders on Wednesday night.",
+     "fecha": "2026-10-15T03:44:26Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761867.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761867"
     },
     {
-     "titulo": "St. Louis unbeaten run up to 20 games, tying Red Bulls' MLS record",
-     "resumen": "Carlo Holse's hat trick helped St. Louis City SC beat the LA Galaxy 6-2 on Sunday night to extend their unbeaten streak across all competitions to 20 games.",
-     "fecha": "2026-10-12T18:51:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729772_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50167548/st-louis-unbeaten-20-games-tying-red-bulls-mls-record"
+     "titulo": "St. Louis City unbeaten run reaches record 21 after draw with Whitecaps",
+     "resumen": "St. Louis City set a new record for consecutive games without a loss after a 0-0 draw with the Vancouver on Wednesday earned them a 21st unbeaten game in a row.",
+     "fecha": "2026-10-15T02:58:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1015/r1731017_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50185774/st-louis-unbeaten-run-record-21-whitecaps"
     },
     {
-     "titulo": "MLS Power Rankings: Miami back to winning ways, as Nashville chase history",
-     "resumen": "Inter Miami end their winless drought, while Nashville still lead the way in our latest edition of ESPN's MLS Power Rankings.",
-     "fecha": "2026-10-12T18:23:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729744_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50166537/mls-power-rankings-inter-miami-back-winning-ways-nashville-sc-chase-history"
+     "titulo": "Chicago Fire FC vs. Philadelphia Union - Game Highlights",
+     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Philadelphia Union, 10/14/2026",
+     "fecha": "2026-10-15T02:55:05Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1015/89c82035-0858-4994-b126-13155cb1422f/89c82035-0858-4994-b126-13155cb1422f.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50186565/chicago-fire-fc-vs-philadelphia-union-game-highlights"
     },
     {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-11T12:27:25Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+     "titulo": "Turgeman's brace lifts revolution past Cincinnati to clinch playoff berth",
+     "resumen": "New England Revolution beat FC Cincinnati behind Dor Turgeman's brace to clinch a berth in the 2026 MLS Cup Playoffs.",
+     "fecha": "2026-10-15T02:39:49Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761862.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761862"
     },
     {
-     "titulo": "Denkey's double sparks Cincinnati to win over Atlanta",
-     "resumen": "Kevin Denkey scored two goals after a scoreless first half and FC Cincinnati snapped a six-match winless streak with a 3-1 victory over Atlanta United on Saturday night.",
-     "fecha": "2026-10-11T02:56:10Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761850.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761850"
+     "titulo": "Inter Miami CF vs. New York City FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Inter Miami CF vs. New York City FC, 10/14/2026",
+     "fecha": "2026-10-15T02:16:32Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1015/9eeef557-fe49-4344-861a-682623181f13/9eeef557-fe49-4344-861a-682623181f13.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50186105/inter-miami-cf-vs-new-york-city-fc-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2615,6 +2613,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 still planning Middle East finale amid Kimi Antonelli title uncertainty - sources",
+     "resumen": "Formula 1 still intends to finish the season with two races in Middle East, sources have told ESPN, although no announcement to say as much appears to be forthcoming.",
+     "fecha": "2026-10-15T07:17:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0211/r1613692_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50187404/f1-middle-east-finale-remains-uncertain-kimi-antonelli-title-implications-sources"
+    },
+    {
      "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
      "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
      "fecha": "2026-10-14T08:06:48Z",
@@ -2648,13 +2653,6 @@
      "fecha": "2026-10-12T09:14:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131372/red-bull-downplay-team-beat-label-george-russell-oscar-piastri-formula-1"
-    },
-    {
-     "titulo": "'Chucky' Verstappen is back. Luckily for Antonelli and Mercedes, it's too late",
-     "resumen": "Max Verstappen has won two races in a row, and if there was more of the F1 season left, championship leader Kimi Antonelli would have reason to worry.",
-     "fecha": "2026-10-11T17:56:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729274_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50159153/chucky-max-verstappen-back-luckily-kimi-antonelli-mercedes-too-late-f1-championship"
     }
    ],
    "resultados": null,
@@ -2672,18 +2670,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "The UFC's flyweights are hot again - is Lone'er Kavanagh the next star?",
+     "resumen": "Could a breakout win at UFC 333 propel Britain's Lone'er Kavanagh into the flyweight title picture?",
+     "fecha": "2026-10-15T05:14:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727730_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/ufc/story/_/id/50131180/the-ufc-flyweights-hot-again-loneer-kavanagh-next-star"
+    },
+    {
      "titulo": "Neeraj Goyat, India's top boxer, to fight ex-UFC champ Anthony Pettis",
      "resumen": "Neeraj Goyat, India's top professional boxer, will face former UFC champion Anthony Pettis in the ring on Jan. 23.",
      "fecha": "2026-10-14T14:31:01Z",
      "imagen": "https://a.espncdn.com/photo/2026/1014/r1730627_600x400_3-2.jpg",
      "link": "https://www.espn.com/boxing/story/_/id/50181642/goyat-india-top-boxer-fight-former-ufc-champ-pettis"
-    },
-    {
-     "titulo": "The UFC's flyweights are hot again - is Lone'er Kavanagh the next star?",
-     "resumen": "Could a breakout win at UFC 333 propel Britain's Lone'er Kavanagh into the flyweight title picture?",
-     "fecha": "2026-10-14T06:08:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727730_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/50131180/the-ufc-flyweights-hot-again-loneer-kavanagh-next-star"
     },
     {
      "titulo": "Brendan Allen submits his case for moving up in MMA divisional rankings",

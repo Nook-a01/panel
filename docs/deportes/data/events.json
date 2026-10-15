@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-15T01:27:33.524Z",
+ "actualizado": "2026-10-15T07:24:15.821Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -616,8 +616,8 @@
    "visitante": "New York City FC",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 0"
   },
   {
    "id": "espn-401841627",
