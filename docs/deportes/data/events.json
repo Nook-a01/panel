@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-14T13:42:23.842Z",
+ "actualizado": "2026-10-15T01:27:33.524Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 10,
-   "proximos": 6
+   "proximos": 5
   },
   {
    "id": "pumas",
