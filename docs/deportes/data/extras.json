@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-16T05:50:08.083Z",
+ "actualizado": "2026-10-16T11:20:28.845Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -946,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -971,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1080,9 +1078,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1225,9 +1222,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1256,6 +1252,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
+     "resumen": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
+     "fecha": "2026-10-16T10:46:52Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50195091/messi-keep-playing-long-finds-joy-pitch"
+    },
+    {
+     "titulo": "Lautaro Martínez on World Cup goal against England: 'One of the most important in Argentina history'",
+     "resumen": "Argentina forward Lautaro Martínez says he often watches his winning goal against England in the 2026 World Cup semifinal, labelling it \"one of the most important in the history of the national team.\"",
+     "fecha": "2026-10-16T10:00:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731519_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50194991/lautaro-martinez-world-cup-goal-england-one-most-important-argentina-history"
+    },
+    {
+     "titulo": "Hislop: Mourinho adopting 'victim mentality' following Vinícius Júnior suspension",
+     "resumen": "Hislop: Mourinho adopting 'victim mentality' following Vinícius Júnior suspension",
+     "fecha": "2026-10-16T08:59:30Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50194882/mourinho-adopting-victim-mentality-following-vinicius-junior-suspension"
+    },
+    {
+     "titulo": "USMNT players are beefing online again: A look at the most memorable, pettiest feuds",
+     "resumen": "A new argument between USMNT players has caused a stir, continuing a long tradition of American stars beefing for no reason.",
+     "fecha": "2026-10-16T07:47:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731470_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50193530/usmnt-players-beefing-online-again-list-most-memorable-pettiest-fights"
+    },
+    {
      "titulo": "Gianni Infantino apologizes to FIFA Council, avoids key issues",
      "resumen": "Gianni Infantino gave an apology to his toughest critics but no new details or documents on FIFA issues during FIFA council meetings Thursday.",
      "fecha": "2026-10-15T23:39:04Z",
@@ -1277,27 +1301,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/50182058/fifa-set-change-rules-folarin-balogun-world-cup-red-card-reversal"
     },
     {
-     "titulo": "FIFA to propose sizable association payout bump from $10M to $25M",
-     "resumen": "FIFA will propose a $6.35 billion fund to its members for development between 2027 and 2030, including a boosted amount of $25 million for each association.",
-     "fecha": "2026-10-14T02:48:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0731/r1695859_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50178387/fifa-association-payout-bump-10m-25m"
-    },
-    {
-     "titulo": "FIFA president Gianni Infantino received undisclosed $1.7M World Cup payment",
-     "resumen": "FIFA president Gianni Infantino appears to have breached FIFA regulations after an IRS filing revealed an undisclosed $1.72 million pay package on top of his declared salary for 2024.",
-     "fecha": "2026-10-13T16:04:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1013/r1730003_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50171167/fifa-president-gianni-infantino-received-undisclosed-17m-world-cup-payment"
-    },
-    {
-     "titulo": "Netflix buys 2030 World Cup broadcast rights in co-host Spain",
-     "resumen": "Netflix bought exclusive rights to broadcast the 2030 World Cup in co-host Spain on Tuesday in a deal that lets a free-to-air public broadcaster show games each day including the ",
-     "fecha": "2026-10-13T13:50:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0423/r1648066_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50173561/netflix-buys-2030-world-cup-broadcast-rights-cohost-defending-champion-spain"
-    },
-    {
      "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "resumen": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "fecha": "2026-10-11T13:54:15Z",
@@ -1317,27 +1320,6 @@
      "fecha": "2026-10-08T09:25:54Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50131573/sullivan-look-place-usmnt"
-    },
-    {
-     "titulo": "Where does Messi rank in the top five players of all time?",
-     "resumen": "Where does Messi rank in the top five players of all time?",
-     "fecha": "2026-10-08T08:50:56Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Where_does_Messi_rank_in_the_top_five_players_of_all_time__20261008_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50131464/where-does-messi-rank-top-five-players-all"
-    },
-    {
-     "titulo": "Debutants in line for Super Eagles first team after Russia efforts, says Eric Chelle",
-     "resumen": "Nigeria coach Eric Chelle said the players who earned Tuesday's 3-3 draw against Russia may have forced their way into his senior squad, following their performances in Nizhny Novgorod.",
-     "fecha": "2026-10-08T07:21:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720759_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50131139/debutants-line-super-eagles-first-team-russia-efforts-says-eric-chelle"
-    },
-    {
-     "titulo": "AFCON qualifiers - Renard returns, Ghana unravel, and Nigeria make unwanted history",
-     "resumen": "The opening rounds of the 2027 Africa Cup of Nations qualifying - and the international friendlies that followed - have left many of the continent's established contenders with plenty of areas to improve.",
-     "fecha": "2026-10-08T07:04:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727722_1088x612_16-9.png",
-     "link": "https://www.espn.com/espn/story/_/id/50131006/afcon-qualifiers-renard-returns-ghana-unravel-nigeria-make-unwanted-history"
     }
    ],
    "resultados": null,
@@ -1579,8 +1561,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1603,8 +1586,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1615,8 +1599,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1699,8 +1684,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1969,6 +1955,20 @@
    ],
    "noticias": [
     {
+     "titulo": "USMNT players are beefing online again: A look at the most memorable, pettiest feuds",
+     "resumen": "A new argument between USMNT players has caused a stir, continuing a long tradition of American stars beefing for no reason.",
+     "fecha": "2026-10-16T11:12:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731470_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50193530/usmnt-players-beefing-online-again-list-most-memorable-pettiest-fights"
+    },
+    {
+     "titulo": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
+     "resumen": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
+     "fecha": "2026-10-16T10:46:52Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50195091/messi-keep-playing-long-finds-joy-pitch"
+    },
+    {
      "titulo": "U.S. prodigy Cavan Sullivan sets MLS record, laments 'terrible' performance",
      "resumen": "U.S. teen prodigy Cavan Sullivan made more history on Wednesday, but the Philadelphia Union midfielder insisted he was less than happy with his performance.",
      "fecha": "2026-10-15T17:30:30Z",
@@ -1995,20 +1995,6 @@
      "fecha": "2026-10-15T02:58:34Z",
      "imagen": "https://a.espncdn.com/photo/2026/1015/r1731017_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50185774/st-louis-unbeaten-run-record-21-whitecaps"
-    },
-    {
-     "titulo": "Chicago Fire FC vs. Philadelphia Union - Game Highlights",
-     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Philadelphia Union, 10/14/2026",
-     "fecha": "2026-10-15T02:55:05Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1015/89c82035-0858-4994-b126-13155cb1422f/89c82035-0858-4994-b126-13155cb1422f.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50186565/chicago-fire-fc-vs-philadelphia-union-game-highlights"
-    },
-    {
-     "titulo": "Turgeman's brace lifts revolution past Cincinnati to clinch playoff berth",
-     "resumen": "New England Revolution beat FC Cincinnati behind Dor Turgeman's brace to clinch a berth in the 2026 MLS Cup Playoffs.",
-     "fecha": "2026-10-15T02:39:49Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761862.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761862"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2621,11 +2607,25 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-10-16T07:25:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
      "titulo": "Why is Max Verstappen racing in GT World Challenge? Schedule, how to watch latest non-F1 event",
      "resumen": "Max Verstappen has made no secret of his enjoyment of racing outside Formula 1, and the four-time world champion is set to take on his latest motorsport challenge.",
-     "fecha": "2026-10-15T16:37:13Z",
+     "fecha": "2026-10-16T07:17:13Z",
      "imagen": "https://a.espncdn.com/photo/2026/0517/r1659301_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50165650/max-verstappen-returns-gt-racing-why-f1s-star-competing-gt-world-challenge"
+    },
+    {
+     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-16T06:23:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
     },
     {
      "titulo": "Rafael Câmara to Haas: How F1's next rookie could shake up Ferrari's future",
@@ -2647,20 +2647,6 @@
      "fecha": "2026-10-15T10:05:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/0827/r1707541_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50187865/franco-colapinto-urges-fans-stop-attacking-formula-1-drivers-social-media"
-    },
-    {
-     "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-15T09:13:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "F1 still planning Middle East finale amid Kimi Antonelli title uncertainty - sources",
-     "resumen": "Formula 1 still intends to finish the season with two races in Middle East, sources have told ESPN, although no announcement to say as much appears to be forthcoming.",
-     "fecha": "2026-10-15T07:17:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0211/r1613692_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50187404/f1-middle-east-finale-remains-uncertain-kimi-antonelli-title-implications-sources"
     }
    ],
    "resultados": null,
