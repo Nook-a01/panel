@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-15T21:27:20.503Z",
+ "actualizado": "2026-10-16T00:23:10.942Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1008,8 +1008,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1044,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1257,14 +1259,14 @@
     {
      "titulo": "Gianni Infantino apologizes to FIFA Council, avoids key issues",
      "resumen": "Gianni Infantino gave an apology to his toughest critics but no new details or documents on FIFA issues during FIFA council meetings Thursday.",
-     "fecha": "2026-10-15T16:29:29Z",
+     "fecha": "2026-10-15T23:39:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/0719/r1691371_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50189300/infantino-apologizes-fifa-council-avoids-issues"
     },
     {
      "titulo": "Gianni Infantino 'not fit to be FIFA president' without answers - FA chair",
      "resumen": "Football Association chair Debbie Hewitt says Gianni Infantino is \"not fit to be FIFA president\" if he does not answer questions about his World Cup private investor plan or the Folarin Balogun case.",
-     "fecha": "2026-10-15T15:42:37Z",
+     "fecha": "2026-10-15T22:14:46Z",
      "imagen": "https://a.espncdn.com/photo/2026/1015/r1731163_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50189352/gianni-infantino-fifa-president-council-meeting-debbie-hewitt-fa-chair-fifa"
     },
