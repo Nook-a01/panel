@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-15T07:24:15.821Z",
+ "actualizado": "2026-10-16T05:50:08.083Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 12,
+   "total": 11,
    "proximos": 6
   },
   {
@@ -47,8 +47,8 @@
    "color": "#38d0ff",
    "ruta": "rugby",
    "liga": "289234",
-   "total": 2,
-   "proximos": 2
+   "total": 3,
+   "proximos": 3
   },
   {
    "id": "f1",
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401912524",
-   "miLado": "visitante",
-   "idEspn": "401912524",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "São Paulo vs Boca Juniors",
-   "inicio": "2026-09-16T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Estádio Cícero Pompeu de Toledo",
-   "local": "São Paulo",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "1 - 1"
-  },
   {
    "id": "espn-401901377",
    "miLado": "local",
@@ -1308,6 +1286,28 @@
    "visitante": "Spain",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/spa.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-603526",
+   "miLado": "local",
+   "idEspn": "603526",
+   "liga": "164205",
+   "ruta": "rugby",
+   "feedId": "pumas",
+   "feedLabel": "Los Pumas",
+   "sport": "rugby",
+   "emoji": "🏉",
+   "titulo": "Argentina vs Fiji",
+   "inicio": "2027-10-16T02:45Z",
+   "horaConfirmada": true,
+   "competicion": "Rugby World Cup",
+   "sede": "Adelaide Oval",
+   "local": "Argentina",
+   "visitante": "Fiji",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/10.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/rugby/teams/500/14.png",
    "finalizado": false,
    "marcador": null
   }

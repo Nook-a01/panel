@@ -1,13 +1,8 @@
 {
- "actualizado": "2026-10-16T00:23:10.942Z",
+ "actualizado": "2026-10-16T05:50:08.083Z",
  "feeds": {
   "boca": {
    "compitiendo": [
-    {
-     "nombre": "CONMEBOL Sudamericana",
-     "liga": "conmebol.sudamericana",
-     "ruta": "soccer"
-    },
     {
      "nombre": "Argentine Liga Profesional de Fútbol",
      "liga": "arg.1",
@@ -16,6 +11,11 @@
     {
      "nombre": "Copa Argentina",
      "liga": "arg.copa",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "CONMEBOL Sudamericana",
+     "liga": "conmebol.sudamericana",
      "ruta": "soccer"
     }
    ],
@@ -1008,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1045,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1082,8 +1080,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
