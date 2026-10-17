@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17T18:29:02.155Z",
+ "actualizado": "2026-10-17T21:26:43.560Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -946,8 +945,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1031,8 +1030,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1043,8 +1043,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1395,10 +1396,10 @@
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "29",
-      "pts": "46",
+      "pj": "30",
+      "pts": "47",
       "g": "13",
-      "e": "7",
+      "e": "8",
       "p": "9",
       "dg": "+8",
       "mio": false,
@@ -1408,10 +1409,10 @@
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "29",
-      "pts": "45",
+      "pj": "30",
+      "pts": "46",
       "g": "13",
-      "e": "6",
+      "e": "7",
       "p": "10",
       "dg": "+13",
       "mio": false,
@@ -1558,8 +1559,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1582,8 +1584,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1594,9 +1597,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1607,8 +1609,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1691,8 +1694,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -2601,6 +2605,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen clinches top-10 finish at first GT World Challenge",
+     "resumen": "Max Verstappen fought back from 24th to ninth at the GT World Challenge after his hopes of a podium finish were derailed by a drive-through penalty.",
+     "fecha": "2026-10-17T21:08:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1017/r1732144_3_594x334_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50203944/max-verstappen-clinches-top-10-finish-first-gt-world-challenge"
+    },
+    {
      "titulo": "When can Kimi Antonelli win the F1 title? Earliest date, points needed and remaining races",
      "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
      "fecha": "2026-10-17T11:46:15Z",
@@ -2634,13 +2645,6 @@
      "fecha": "2026-10-15T14:00:22Z",
      "imagen": "https://a.espncdn.com/photo/2026/1010/r1728699_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131330/rafael-camara-haas-completes-driver-line-2027-formula-1"
-    },
-    {
-     "titulo": "Franco Colapinto urges fans to stop 'attacking' Formula 1 drivers on social media",
-     "resumen": "Franco Colapinto has urged his supporters to stop attacking other Formula 1 drivers and personnel on social media.",
-     "fecha": "2026-10-15T10:05:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0827/r1707541_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50187865/franco-colapinto-urges-fans-stop-attacking-formula-1-drivers-social-media"
     }
    ],
    "resultados": null,
@@ -2701,6 +2705,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC Fight Night: Buckley vs. Malott",
+     "fecha": "2026-10-17T21:00Z",
+     "marcador": null,
+     "sede": "Rogers Place"
+    },
     {
      "titulo": "UFC Fight Night: Allen vs. Duncan",
      "fecha": "2026-10-10T21:00Z",
