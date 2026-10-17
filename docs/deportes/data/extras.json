@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17T15:31:54.049Z",
+ "actualizado": "2026-10-17T18:29:02.155Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -970,8 +970,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1593,8 +1594,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
