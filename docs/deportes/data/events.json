@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-16T05:50:08.083Z",
+ "actualizado": "2026-10-17T01:18:15.968Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 11,
-   "proximos": 6
+   "proximos": 5
   },
   {
    "id": "argentina",
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 10,
+   "total": 9,
    "proximos": 5
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401901377",
-   "miLado": "local",
-   "idEspn": "401901377",
-   "liga": "campeones.cup",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs Cruz Azul",
-   "inicio": "2026-09-17T00:00Z",
-   "horaConfirmada": true,
-   "competicion": "Campeones Cup",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "Cruz Azul",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/218.png",
-   "finalizado": true,
-   "marcador": "2 - 0"
-  },
   {
    "id": "espn-600060963",
    "miLado": null,
