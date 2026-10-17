@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17T06:55:08.491Z",
+ "actualizado": "2026-10-17T11:36:05.930Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1255,6 +1254,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Infantino apologized, but reelection as FIFA president remains far from certain",
+     "resumen": "Gianni Infantino tried to make amends at Thursday's FIFA Council meeting for his ill-fated attempt to sell the World Cup. Will it be enough to save his reelection bid?",
+     "fecha": "2026-10-17T09:41:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731790_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50197782/gianni-infantino-fifa-president-election-far-certain"
+    },
+    {
      "titulo": "USMNT players are beefing online again: A look at the most memorable, pettiest feuds",
      "resumen": "A new argument between USMNT players has caused a stir, continuing a long tradition of American stars beefing for no reason.",
      "fecha": "2026-10-16T11:12:35Z",
@@ -1295,13 +1301,6 @@
      "fecha": "2026-10-15T22:14:46Z",
      "imagen": "https://a.espncdn.com/photo/2026/1015/r1731163_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50189352/gianni-infantino-fifa-president-council-meeting-debbie-hewitt-fa-chair-fifa"
-    },
-    {
-     "titulo": "FIFA set to change rules that led to Folarin Balogun World Cup red card reversal - sources",
-     "resumen": "FIFA is set to amend its rules to prevent a repeat of the controversial reversal of the World Cup suspension issued to Folarin Balogun, sources have told ESPN.",
-     "fecha": "2026-10-15T13:41:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0923/r1720984_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50182058/fifa-set-change-rules-folarin-balogun-world-cup-red-card-reversal"
     },
     {
      "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
@@ -1597,8 +1596,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1609,8 +1609,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1694,8 +1695,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1730,8 +1732,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1742,8 +1745,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
