@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17T01:18:15.968Z",
+ "actualizado": "2026-10-17T06:55:08.491Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -594,8 +594,8 @@
    "visitante": "Talleres (Córdoba)",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 1"
   },
   {
    "id": "espn-600060773",
