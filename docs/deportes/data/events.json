@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T00:01:27.310Z",
+ "actualizado": "2026-10-18T04:29:41.946Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,8 +71,8 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 11,
-   "proximos": 6
+   "total": 12,
+   "proximos": 7
   }
  ],
  "eventos": [
@@ -616,7 +616,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
@@ -638,8 +638,8 @@
    "visitante": "Inter Miami CF",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 3"
   },
   {
    "id": "espn-401913957",
@@ -1216,6 +1216,28 @@
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "T-Mobile Arena",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-600062191",
+   "miLado": null,
+   "idEspn": "600062191",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC 336",
+   "inicio": "2027-01-30T22:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Scotiabank Arena",
    "local": null,
    "visitante": null,
    "logoLocal": null,

@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T00:01:27.310Z",
+ "actualizado": "2026-10-18T04:29:41.946Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -63,6 +63,19 @@
       "pos": 3
      },
      {
+      "equipo": "Vélez Sarsfield",
+      "abrev": "VEL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+      "pj": "13",
+      "pts": "24",
+      "g": "6",
+      "e": "6",
+      "p": "1",
+      "dg": "+5",
+      "mio": false,
+      "pos": 4
+     },
+     {
       "equipo": "Lanús",
       "abrev": "LAN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
@@ -73,31 +86,18 @@
       "p": "4",
       "dg": "+7",
       "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Vélez Sarsfield",
-      "abrev": "VEL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-      "pj": "12",
-      "pts": "21",
-      "g": "5",
-      "e": "6",
-      "p": "1",
-      "dg": "+4",
-      "mio": false,
       "pos": 5
      },
      {
       "equipo": "Gimnasia (Mendoza)",
       "abrev": "GMZ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-      "pj": "12",
+      "pj": "13",
       "pts": "20",
       "g": "6",
       "e": "2",
-      "p": "4",
-      "dg": "+3",
+      "p": "5",
+      "dg": "+2",
       "mio": false,
       "pos": 6
      },
@@ -946,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1090,8 +1094,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1114,9 +1119,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1175,8 +1179,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1223,8 +1228,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1235,8 +1241,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1355,12 +1362,12 @@
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "29",
-      "pts": "52",
-      "g": "14",
+      "pj": "30",
+      "pts": "55",
+      "g": "15",
       "e": "10",
       "p": "5",
-      "dg": "+20",
+      "dg": "+22",
       "mio": true,
       "pos": 2
      },
@@ -1368,12 +1375,12 @@
       "equipo": "New England Revolution",
       "abrev": "NE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "29",
-      "pts": "49",
-      "g": "15",
+      "pj": "30",
+      "pts": "52",
+      "g": "16",
       "e": "4",
       "p": "10",
-      "dg": "+7",
+      "dg": "+8",
       "mio": false,
       "pos": 3
      },
@@ -1381,12 +1388,12 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "29",
+      "pj": "30",
       "pts": "48",
       "g": "14",
       "e": "6",
-      "p": "9",
-      "dg": "+9",
+      "p": "10",
+      "dg": "+8",
       "mio": false,
       "pos": 4
      },
@@ -1420,12 +1427,12 @@
       "equipo": "Orlando City SC",
       "abrev": "ORL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "29",
-      "pts": "38",
-      "g": "11",
+      "pj": "30",
+      "pts": "41",
+      "g": "12",
       "e": "5",
       "p": "13",
-      "dg": "-15",
+      "dg": "-12",
       "mio": false,
       "pos": 7
      },
@@ -1443,54 +1450,54 @@
       "pos": 8
      },
      {
+      "equipo": "Toronto FC",
+      "abrev": "TOR",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "pj": "30",
+      "pts": "36",
+      "g": "8",
+      "e": "12",
+      "p": "10",
+      "dg": "-9",
+      "mio": false,
+      "pos": 9
+     },
+     {
       "equipo": "Red Bull New York",
       "abrev": "RBNY",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "29",
+      "pj": "30",
       "pts": "36",
       "g": "10",
       "e": "6",
-      "p": "13",
-      "dg": "-15",
+      "p": "14",
+      "dg": "-17",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "29",
-      "pts": "33",
+      "pj": "30",
+      "pts": "34",
       "g": "8",
-      "e": "9",
+      "e": "10",
       "p": "12",
       "dg": "+2",
       "mio": false,
-      "pos": 10
+      "pos": 11
      },
      {
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "28",
-      "pts": "33",
-      "g": "7",
-      "e": "12",
-      "p": "9",
-      "dg": "-11",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "Toronto FC",
-      "abrev": "TOR",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
       "pj": "29",
       "pts": "33",
       "g": "7",
       "e": "12",
       "p": "10",
-      "dg": "-11",
+      "dg": "-14",
       "mio": false,
       "pos": 12
      },
@@ -1511,12 +1518,12 @@
       "equipo": "Atlanta United FC",
       "abrev": "ATL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "29",
+      "pj": "30",
       "pts": "30",
       "g": "8",
       "e": "6",
-      "p": "15",
-      "dg": "-12",
+      "p": "16",
+      "dg": "-14",
       "mio": false,
       "pos": 14
      },
@@ -1582,8 +1589,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1680,9 +1688,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1741,8 +1748,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1885,9 +1893,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "387661",
@@ -1952,11 +1959,32 @@
    ],
    "noticias": [
     {
-     "titulo": "U.S. prodigy Cavan Sullivan sets MLS record, laments 'terrible' performance",
-     "resumen": "U.S. teen prodigy Cavan Sullivan made more history on Wednesday, but the Philadelphia Union midfielder insisted he was less than happy with his performance.",
-     "fecha": "2026-10-16T17:44:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1015/r1731231_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50189867/usa-cavan-sullivan-mls-record-goal-contributions"
+     "titulo": "Lionel Messi scores twice, takes season tally to 25 in Miami win at Atlanta",
+     "resumen": "Lionel Messi scored two scintillating second-half solo goals to take his MLS-leading tally to 25 as Inter Miami brushed aside hosts Atlanta United 3-1 on Saturday.",
+     "fecha": "2026-10-18T02:49:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732270_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50206341/lionel-messi-goals-inter-miami-atlanta-united-mls"
+    },
+    {
+     "titulo": "Griezmann has 2 goals, 1 assist for Orlando City in 4-1 win over DC United",
+     "resumen": "Antoine Griezmann had two goals and an assist, Martín Ojeda added a goal and an assist, and Orlando City beat D.C. United 3-1 on Saturday night.",
+     "fecha": "2026-10-18T02:44:39Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761881.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761881"
+    },
+    {
+     "titulo": "Atlanta United FC vs. Inter Miami CF - Game Highlights",
+     "resumen": "Watch the Game Highlights from Atlanta United FC vs. Inter Miami CF, 10/17/2026",
+     "fecha": "2026-10-18T02:26:14Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/62ac5667829a4fdfbef9187e3f112d4d1346/62ac5667829a4fdfbef9187e3f112d4d1346.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50206693/atlanta-united-fc-vs-inter-miami-cf-game-highlights"
+    },
+    {
+     "titulo": "Messi magic! Inter Miami star scores twice in four-minute span",
+     "resumen": "Messi magic! Inter Miami star scores twice in four-minute span",
+     "fecha": "2026-10-18T02:06:01Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/3efb4af4-16da-44a2-80f3-ae03f7cf4e92/3efb4af4-16da-44a2-80f3-ae03f7cf4e92.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50206824/messi-magic-inter-miami-star-scores-twice-four-minute-span"
     },
     {
      "titulo": "Miami coach unbothered by Messi getting award in Spain 2 days before MLS game",
@@ -1971,27 +1999,6 @@
      "fecha": "2026-10-16T11:58:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/1006/r1726990_1296x729_16-9.jpg",
      "link": "https://www.espn.com/nfl/story/_/id/50195310/harry-kane-talent-nfl-jacksonville-jaguars-kicker-cam-little"
-    },
-    {
-     "titulo": "USMNT players are beefing online again: A look at the most memorable, pettiest feuds",
-     "resumen": "A new argument between USMNT players has caused a stir, continuing a long tradition of American stars beefing for no reason.",
-     "fecha": "2026-10-16T11:12:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731470_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50193530/usmnt-players-beefing-online-again-list-most-memorable-pettiest-fights"
-    },
-    {
-     "titulo": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
-     "resumen": "Gomez: Messi will keep playing as long as he finds joy on the pitch",
-     "fecha": "2026-10-16T10:46:52Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50195091/messi-keep-playing-long-finds-joy-pitch"
-    },
-    {
-     "titulo": "LAFC vs. Austin FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from LAFC vs. Austin FC, 10/14/2026",
-     "fecha": "2026-10-15T04:45:49Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1015/7c855da7-6770-4d61-88e4-8b64639f661b/7c855da7-6770-4d61-88e4-8b64639f661b.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50187102/lafc-vs-austin-fc-game-highlights"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2661,6 +2668,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield in UFC main event",
+     "resumen": "Jasmine Jasudavicius stated her case as a contender in the featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision Saturday.",
+     "fecha": "2026-10-18T04:00:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
+     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-main-event"
+    },
+    {
+     "titulo": "Malott KO's Buckley with a vicious knee to the face",
+     "resumen": "Mike Malott lands a devastating knee to Joaquin Buckley's head to end their main card fight at UFC Edmonton in stunning fashion.",
+     "fecha": "2026-10-18T03:19:33Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50207483/malott-ko-buckley-vicious-knee-face"
+    },
+    {
+     "titulo": "Cristian Perez sleeps Kyle Nelson with a brutal KO",
+     "resumen": "Cristian Perez leaves Kyle Nelson dazed and grappling the referee after a devastating KO in Round 1 at UFC Edmonton.",
+     "fecha": "2026-10-18T02:39:45Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/dm_261017_UFC_Highlight_Cristian_Perez_sleeps_Kyle_Nelson_with_a_brutal_KO_20261018_PH_ONLY/dm_261017_UFC_Highlight_Cristian_Perez_sleeps_Kyle_Nelson_with_a_brutal_KO_20261018_PH_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50207115/cristian-perez-sleeps-kyle-nelson-brutal-ko"
+    },
+    {
      "titulo": "Farid Basharat fails to land new UFC contract despite perfect record",
      "resumen": "Bantamweight Farid Basharat said the UFC \"just isn't what it used to be\" after failing to re-sign with the promotion despite his undefeated record.",
      "fecha": "2026-10-15T18:42:55Z",
@@ -2680,27 +2708,6 @@
      "fecha": "2026-10-15T15:06:26Z",
      "imagen": "https://a.espncdn.com/photo/2023/0717/r1199030_1296x729_16-9.jpg",
      "link": "https://www.espn.com/ufc/story/_/id/50181160/michael-venom-page-ufc-dana-white-didnt-care-relationship-nonexistent"
-    },
-    {
-     "titulo": "The UFC's flyweights are hot again - is Lone'er Kavanagh the next star?",
-     "resumen": "Could a breakout win at UFC 333 propel Britain's Lone'er Kavanagh into the flyweight title picture?",
-     "fecha": "2026-10-15T05:14:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727730_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/50131180/the-ufc-flyweights-hot-again-loneer-kavanagh-next-star"
-    },
-    {
-     "titulo": "Neeraj Goyat, India's top boxer, to fight ex-UFC champ Anthony Pettis",
-     "resumen": "Neeraj Goyat, India's top professional boxer, will face former UFC champion Anthony Pettis in the ring on Jan. 23.",
-     "fecha": "2026-10-14T14:31:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1014/r1730627_600x400_3-2.jpg",
-     "link": "https://www.espn.com/boxing/story/_/id/50181642/goyat-india-top-boxer-fight-former-ufc-champ-pettis"
-    },
-    {
-     "titulo": "Brendan Allen submits his case for moving up in MMA divisional rankings",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-10-13T12:54:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729828_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     }
    ],
    "resultados": [
@@ -3034,6 +3041,15 @@
      "gano": 2
     },
     {
+     "id": "4835135",
+     "nombre": "Jasmine Jasudavicius",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+     "categoria": "W Flyweight",
+     "record": "16-4-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
      "id": "4300149",
      "nombre": "Roman Kopylov",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
@@ -3085,15 +3101,6 @@
      "categoria": "Heavyweight",
      "record": "15-2-0",
      "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4848674",
-     "nombre": "Christian Leroy Duncan",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
-     "categoria": "Middleweight",
-     "record": "15-3-0",
-     "peleas": 3,
      "gano": 2
     }
    ]
