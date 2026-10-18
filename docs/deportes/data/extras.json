@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T04:29:41.946Z",
+ "actualizado": "2026-10-18T09:35:46.413Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -971,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1045,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1094,9 +1092,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1179,9 +1176,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1228,9 +1224,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1241,9 +1236,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1349,10 +1343,10 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "29",
-      "pts": "66",
+      "pj": "30",
+      "pts": "67",
       "g": "20",
-      "e": "6",
+      "e": "7",
       "p": "3",
       "dg": "+41",
       "mio": false,
@@ -1531,10 +1525,10 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "29",
-      "pts": "24",
+      "pj": "30",
+      "pts": "25",
       "g": "6",
-      "e": "6",
+      "e": "7",
       "p": "17",
       "dg": "-24",
       "mio": false,
@@ -1564,9 +1558,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1615,9 +1608,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1656,18 +1648,6 @@
      "lesionado": false
     },
     {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
      "id": "364401",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "nombre": "Tyler Hall",
@@ -1700,8 +1680,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1748,9 +1729,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1765,14 +1745,26 @@
      "lesionado": false
     },
     {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
+     "foto": null,
+     "lesionado": false
+    },
+    {
      "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
      "nombre": "David Ayala",
      "dorsal": "22",
      "posicion": "Midfielder",
      "posCorta": "M",
-     "edad": 26,
-     "pais": "Mexico",
+     "edad": 24,
+     "pais": "Argentina",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
      "lesionado": false
     },
@@ -1959,6 +1951,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Orlando City SC vs. DC United - Game Highlights",
+     "resumen": "Watch the Game Highlights from Orlando City SC vs. DC United, 10/17/2026",
+     "fecha": "2026-10-18T05:29:53Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/9713ea68-5ef0-4d12-9ada-7f5c2f329237/9713ea68-5ef0-4d12-9ada-7f5c2f329237.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50206540/orlando-city-sc-vs-dc-united-game-highlights"
+    },
+    {
+     "titulo": "New York City FC vs. LAFC - Game Highlights",
+     "resumen": "Watch the Game Highlights from New York City FC vs. LAFC, 10/17/2026",
+     "fecha": "2026-10-18T05:23:25Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/0643f6b0-3d87-43e7-ad11-3a1e43793213/0643f6b0-3d87-43e7-ad11-3a1e43793213.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50206559/new-york-city-fc-vs-lafc-game-highlights"
+    },
+    {
      "titulo": "Lionel Messi scores twice, takes season tally to 25 in Miami win at Atlanta",
      "resumen": "Lionel Messi scored two scintillating second-half solo goals to take his MLS-leading tally to 25 as Inter Miami brushed aside hosts Atlanta United 3-1 on Saturday.",
      "fecha": "2026-10-18T02:49:49Z",
@@ -1985,20 +1991,6 @@
      "fecha": "2026-10-18T02:06:01Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/3efb4af4-16da-44a2-80f3-ae03f7cf4e92/3efb4af4-16da-44a2-80f3-ae03f7cf4e92.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50206824/messi-magic-inter-miami-star-scores-twice-four-minute-span"
-    },
-    {
-     "titulo": "Miami coach unbothered by Messi getting award in Spain 2 days before MLS game",
-     "resumen": "Inter Miami coach Cristian \"Kily\" González confirmed Lionel Messi will travel to Spain next week to receive a prestigious award before rejoining the club for an MLS game two days later.",
-     "fecha": "2026-10-16T17:36:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731708_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50197177/lionel-messi-inter-miami-2026-princess-asturias-award-sports"
-    },
-    {
-     "titulo": "Harry Kane has talent for NFL - Jags kicker Cam Little",
-     "resumen": "Cam Little is confident Harry Kane has the skill to become an NFL kicker.",
-     "fecha": "2026-10-16T11:58:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1006/r1726990_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/nfl/story/_/id/50195310/harry-kane-talent-nfl-jacksonville-jaguars-kicker-cam-little"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2668,11 +2660,11 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield in UFC main event",
-     "resumen": "Jasmine Jasudavicius stated her case as a contender in the featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision Saturday.",
-     "fecha": "2026-10-18T04:00:39Z",
+     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
+     "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision Saturday.",
+     "fecha": "2026-10-18T04:46:23Z",
      "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
-     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-main-event"
+     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-fight-night"
     },
     {
      "titulo": "Malott KO's Buckley with a vicious knee to the face",
