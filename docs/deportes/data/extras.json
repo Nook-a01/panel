@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-17T21:26:43.560Z",
+ "actualizado": "2026-10-18T00:01:27.310Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -63,6 +63,19 @@
       "pos": 3
      },
      {
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "13",
+      "pts": "23",
+      "g": "7",
+      "e": "2",
+      "p": "4",
+      "dg": "+7",
+      "mio": false,
+      "pos": 4
+     },
+     {
       "equipo": "Vélez Sarsfield",
       "abrev": "VEL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
@@ -72,19 +85,6 @@
       "e": "6",
       "p": "1",
       "dg": "+4",
-      "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Lanús",
-      "abrev": "LAN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "12",
-      "pts": "20",
-      "g": "6",
-      "e": "2",
-      "p": "4",
-      "dg": "+6",
       "mio": false,
       "pos": 5
      },
@@ -183,12 +183,12 @@
       "equipo": "Platense",
       "abrev": "PLA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-      "pj": "12",
+      "pj": "13",
       "pts": "11",
       "g": "2",
       "e": "5",
-      "p": "5",
-      "dg": "-6",
+      "p": "6",
+      "dg": "-7",
       "mio": false,
       "pos": 13
      },
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -945,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1030,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1043,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1116,8 +1114,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1224,9 +1223,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1584,9 +1582,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1597,8 +1594,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1682,8 +1680,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1694,9 +1693,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1887,8 +1885,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "387661",
@@ -2605,6 +2604,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Christian Horner plays down Ferrari links, 'no idea' on Formula 1 return",
+     "resumen": "Christian Horner again played down links to Ferrari as the former Red Bull boss claimed he would be \"at peace\" if a return to Formula One never happens.",
+     "fecha": "2026-10-17T23:20:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1017/r1732198_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50205129/christian-horner-ferrari-formula-1-return-red-bull"
+    },
+    {
      "titulo": "Max Verstappen clinches top-10 finish at first GT World Challenge",
      "resumen": "Max Verstappen fought back from 24th to ninth at the GT World Challenge after his hopes of a podium finish were derailed by a drive-through penalty.",
      "fecha": "2026-10-17T21:08:41Z",
@@ -2638,13 +2644,6 @@
      "fecha": "2026-10-15T14:01:32Z",
      "imagen": "https://a.espncdn.com/photo/2026/1012/r1729635_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50148089/rafael-camara-haas-how-f1-next-rookie-shake-ferrari-future"
-    },
-    {
-     "titulo": "Ferrari protege Rafael Câmara completes Haas driver line-up for F1 2027",
-     "resumen": "Brazilian sensation Rafael Câmara will replace Esteban Ocon at Haas in 2027, the team confirmed on Thursday.",
-     "fecha": "2026-10-15T14:00:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728699_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131330/rafael-camara-haas-completes-driver-line-2027-formula-1"
     }
    ],
    "resultados": null,
