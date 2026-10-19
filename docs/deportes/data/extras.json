@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-19T13:15:34.148Z",
+ "actualizado": "2026-10-19T19:20:50.247Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1043,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1558,8 +1561,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1607,9 +1611,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1668,8 +1671,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1951,11 +1955,11 @@
    ],
    "noticias": [
     {
-     "titulo": "Orlando City SC vs. DC United - Game Highlights",
-     "resumen": "Watch the Game Highlights from Orlando City SC vs. DC United, 10/17/2026",
-     "fecha": "2026-10-18T05:29:53Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/9713ea68-5ef0-4d12-9ada-7f5c2f329237/9713ea68-5ef0-4d12-9ada-7f5c2f329237.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50206540/orlando-city-sc-vs-dc-united-game-highlights"
+     "titulo": "MLS Power Rankings: Messi's Inter Miami moving up, Nashville still No.1",
+     "resumen": "Nashville are very much still the team to beat, but Inter Miami, St. Louis City SC and Philly are hot on their heels in our latest edition of ESPN's MLS Power Rankings.",
+     "fecha": "2026-10-19T18:30:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733003_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50219511/mls-power-rankings-inter-miami-lionel-messi-nashville-analysis-meg-swanick"
     },
     {
      "titulo": "New York City FC vs. LAFC - Game Highlights",
@@ -2660,6 +2664,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Petr Yan vs. Merab Dvalishvili joins rare list of trilogy bouts at UFC 333",
+     "resumen": "ESPN categorizes all 19 of the UFC's trilogies ahead of Petr Yan vs. Merab Dvalishvili 3 at UFC 333 on Saturday.",
+     "fecha": "2026-10-19T13:45:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/261019_mma_trilogy-fights_16x9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50206478/ufc-333-petr-yan-merab-dvalishvili-join-trilogy-list"
+    },
+    {
      "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
      "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision.",
      "fecha": "2026-10-18T18:06:46Z",
@@ -2693,13 +2704,6 @@
      "fecha": "2026-10-15T16:56:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/0203/r1609874_2_576x324_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50189696/ufc-champ-volkanovski-proposes-send-superbout-vs-gaethje"
-    },
-    {
-     "titulo": "Michael 'Venom' Page: UFC's Dana White 'never really a fan of me'",
-     "resumen": "Michael \"Venom\" Page has said that his relationship with UFC president Dana White was \"nonexistent.\"",
-     "fecha": "2026-10-15T15:06:26Z",
-     "imagen": "https://a.espncdn.com/photo/2023/0717/r1199030_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/50181160/michael-venom-page-ufc-dana-white-didnt-care-relationship-nonexistent"
     }
    ],
    "resultados": [
