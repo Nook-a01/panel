@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T04:29:41.946Z",
+ "actualizado": "2026-10-19T06:13:47.823Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,8 +23,8 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
-   "proximos": 0
+   "total": 5,
+   "proximos": 2
   },
   {
    "id": "intermiami",
@@ -1010,6 +1010,28 @@
    "marcador": null
   },
   {
+   "id": "espn-401930876",
+   "miLado": "local",
+   "idEspn": "401930876",
+   "liga": "fifa.friendly",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Argentina vs Uruguay",
+   "inicio": "2026-11-13T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "International Friendly",
+   "sede": "",
+   "local": "Argentina",
+   "visitante": "Uruguay",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-401926286",
    "miLado": "visitante",
    "idEspn": "401926286",
@@ -1050,6 +1072,28 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401930895",
+   "miLado": "local",
+   "idEspn": "401930895",
+   "liga": "fifa.friendly",
+   "ruta": "soccer",
+   "feedId": "argentina",
+   "feedLabel": "Selección Argentina",
+   "sport": "futbol",
+   "emoji": "🇦🇷",
+   "titulo": "Argentina vs Costa Rica",
+   "inicio": "2026-11-17T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "International Friendly",
+   "sede": "",
+   "local": "Argentina",
+   "visitante": "Costa Rica",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png",
    "finalizado": false,
    "marcador": null
   },
