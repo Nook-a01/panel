@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-19T13:15:34.148Z",
+ "actualizado": "2026-10-19T23:38:50.370Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 12,
+   "total": 11,
    "proximos": 7
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600060963",
-   "miLado": null,
-   "idEspn": "600060963",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC 331: Van vs. Pantoja 2",
-   "inicio": "2026-09-19T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "crypto.com Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-401841577",
    "miLado": "visitante",
