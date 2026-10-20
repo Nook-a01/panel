@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T04:47:21.874Z",
+ "actualizado": "2026-10-20T10:02:20.281Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -946,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -971,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1008,9 +1006,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1033,8 +1030,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1177,9 +1175,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1226,8 +1223,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1255,6 +1253,27 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
+     "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
+     "fecha": "2026-10-20T09:08:36Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50226152/were-messi-de-paul-wrong-taunt-atlanta-united-alonso"
+    },
+    {
+     "titulo": "Gomez: Mourinho has created narrative that 'the world is against' Real Madrid",
+     "resumen": "Gomez: Mourinho has created narrative that 'the world is against' Real Madrid",
+     "fecha": "2026-10-20T09:04:09Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50226129/mourinho-created-narrative-world-real-madrid"
+    },
+    {
+     "titulo": "Gianni Infantino courts Asian Football Confederation in reelection campaign bid",
+     "resumen": "Gianni Infantino's campaign for reelection as FIFA president is set to move this week to Japan and a meeting scheduled for Wednesday with the Asian Football Confederation.",
+     "fecha": "2026-10-20T07:44:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733302_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50225613/gianni-infantino-asian-football-federations-reelection-campaign-fifa-president"
+    },
     {
      "titulo": "Infantino apologized, but reelection as FIFA president remains far from certain",
      "resumen": "Gianni Infantino tried to make amends at Thursday's FIFA Council meeting for his ill-fated attempt to sell the World Cup. Will it be enough to save his reelection bid?",
@@ -1291,39 +1310,11 @@
      "link": "https://www.espn.com/video/clip/_/id/50194882/mourinho-adopting-victim-mentality-following-vinicius-junior-suspension"
     },
     {
-     "titulo": "Gianni Infantino apologizes to FIFA Council, avoids key issues",
-     "resumen": "Gianni Infantino gave an apology to his toughest critics but no new details or documents on FIFA issues during FIFA council meetings Thursday.",
-     "fecha": "2026-10-15T23:39:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0719/r1691371_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50189300/infantino-apologizes-fifa-council-avoids-issues"
-    },
-    {
-     "titulo": "Gianni Infantino 'not fit to be FIFA president' without answers - FA chair",
-     "resumen": "Football Association chair Debbie Hewitt says Gianni Infantino is \"not fit to be FIFA president\" if he does not answer questions about his World Cup private investor plan or the Folarin Balogun case.",
-     "fecha": "2026-10-15T22:14:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1015/r1731163_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50189352/gianni-infantino-fifa-president-council-meeting-debbie-hewitt-fa-chair-fifa"
-    },
-    {
      "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "resumen": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
      "fecha": "2026-10-11T13:54:15Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50156783/bentancur-red-card-encouraged-tottenham-play-more-character"
-    },
-    {
-     "titulo": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
-     "resumen": "CAS General Secretary promises AFCON final verdict 'as soon as possible'",
-     "fecha": "2026-10-08T10:02:23Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Presser_CAS_General_Secretary_promises_AFCON_final_verdict_as_soon_as_possible__202610/dm_261008_COM_SOC_Presser_CAS_General_Secretary_promises_AFCON_final_verdict_as_soon_as_possible__202610.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50131761/cas-general-secretary-promises-afcon-final-verdict-soon-possible"
-    },
-    {
-     "titulo": "Hislop: Sullivan didn't look out of place for the USMNT",
-     "resumen": "Hislop: Sullivan didn't look out of place for the USMNT",
-     "fecha": "2026-10-08T09:25:54Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1008/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL/dm_261008_COM_SOC_Analysis_Hislop_Sullivan_didnt_look_out_of_place_for_the_USMNT__20261008_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50131573/sullivan-look-place-usmnt"
     }
    ],
    "resultados": null,
@@ -1560,9 +1551,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1585,9 +1575,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1672,9 +1661,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1955,18 +1943,25 @@
    ],
    "noticias": [
     {
+     "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
+     "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
+     "fecha": "2026-10-20T09:08:36Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50226152/were-messi-de-paul-wrong-taunt-atlanta-united-alonso"
+    },
+    {
+     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
+     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
+     "fecha": "2026-10-20T07:36:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
+    },
+    {
      "titulo": "MLS Power Rankings: Messi's Inter Miami moving up, Nashville still No.1",
      "resumen": "Nashville are very much still the team to beat, but Inter Miami, St. Louis City SC and Philly are hot on their heels in our latest edition of ESPN's MLS Power Rankings.",
      "fecha": "2026-10-19T19:37:23Z",
      "imagen": "https://a.espncdn.com/photo/2026/1019/r1733003_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50219511/mls-power-rankings-inter-miami-lionel-messi-nashville-analysis-meg-swanick"
-    },
-    {
-     "titulo": "New York City FC vs. LAFC - Game Highlights",
-     "resumen": "Watch the Game Highlights from New York City FC vs. LAFC, 10/17/2026",
-     "fecha": "2026-10-18T05:23:25Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/0643f6b0-3d87-43e7-ad11-3a1e43793213/0643f6b0-3d87-43e7-ad11-3a1e43793213.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50206559/new-york-city-fc-vs-lafc-game-highlights"
     },
     {
      "titulo": "Lionel Messi scores twice, takes season tally to 25 in Miami win at Atlanta",
@@ -1981,13 +1976,6 @@
      "fecha": "2026-10-18T02:44:39Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761881.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761881"
-    },
-    {
-     "titulo": "Atlanta United FC vs. Inter Miami CF - Game Highlights",
-     "resumen": "Watch the Game Highlights from Atlanta United FC vs. Inter Miami CF, 10/17/2026",
-     "fecha": "2026-10-18T02:26:14Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/62ac5667829a4fdfbef9187e3f112d4d1346/62ac5667829a4fdfbef9187e3f112d4d1346.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50206693/atlanta-united-fc-vs-inter-miami-cf-game-highlights"
     },
     {
      "titulo": "Messi magic! Inter Miami star scores twice in four-minute span",
@@ -2607,18 +2595,32 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-19T07:52:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+     "titulo": "Kimi Antonelli is on the brink of F1 history -- but first, there's a car to wash and pranks to pull",
+     "resumen": "On the brink of becoming F1's youngest world champion, Kimi Antonelli reveals how car washes, pub trips and pranks help him cope with fame and pressure.",
+     "fecha": "2026-10-20T09:11:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733295_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50225252/kimi-antonelli-interview-f1-title-car-wash-pranks-pull"
     },
     {
      "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-19T05:50:51Z",
+     "fecha": "2026-10-20T07:06:54Z",
      "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-20T06:59:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Christian Horner: Lewis Hamilton wanted Red Bull move before joining Mercedes",
+     "resumen": "Christian Horner has revealed a secret meeting with Lewis Hamilton in 2012 about the Brit becoming Sebastian Vettel's teammate at Red Bull, a move ultimately scuppered by the \"staggering sums\" involved financially.",
+     "fecha": "2026-10-20T06:01:54Z",
+     "imagen": "https://a.espncdn.com/photo/2015/0927/gettyimages-490232370_r12043_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50196380/christian-horner-lewis-hamilton-red-bull-mercedes-mclaren"
     },
     {
      "titulo": "Christian Horner: Red Bull blocked moves for Charles Leclerc and Fernando Alonso",
@@ -2633,20 +2635,6 @@
      "fecha": "2026-10-17T23:20:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/1017/r1732198_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50205129/christian-horner-ferrari-formula-1-return-red-bull"
-    },
-    {
-     "titulo": "Max Verstappen clinches top-10 finish at first GT World Challenge",
-     "resumen": "Max Verstappen fought back from 24th to ninth at the GT World Challenge after his hopes of a podium finish were derailed by a drive-through penalty.",
-     "fecha": "2026-10-17T21:08:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1017/r1732144_3_594x334_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50203944/max-verstappen-clinches-top-10-finish-first-gt-world-challenge"
-    },
-    {
-     "titulo": "Why is Max Verstappen racing in GT World Challenge? Schedule, how to watch latest non-F1 event",
-     "resumen": "Max Verstappen has made no secret of his enjoyment of racing outside Formula 1, and the four-time world champion is set to take on his latest motorsport challenge.",
-     "fecha": "2026-10-17T11:45:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0517/r1659301_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50165650/max-verstappen-returns-gt-racing-why-f1s-star-competing-gt-world-challenge"
     }
    ],
    "resultados": null,
