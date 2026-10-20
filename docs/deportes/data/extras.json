@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T10:02:20.281Z",
+ "actualizado": "2026-10-20T15:03:24.527Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -616,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -946,8 +947,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1006,8 +1008,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1030,9 +1033,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1043,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1163,8 +1166,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1223,9 +1227,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1254,6 +1257,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Gianni Infantino courts Asian Football Confederation in reelection campaign bid",
+     "resumen": "Gianni Infantino's campaign for reelection as FIFA president is set to move this week to Japan and a meeting scheduled for Wednesday with the Asian Football Confederation.",
+     "fecha": "2026-10-20T10:51:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733302_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50225613/gianni-infantino-asian-football-federations-reelection-campaign-fifa-president"
+    },
+    {
      "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
      "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
      "fecha": "2026-10-20T09:08:36Z",
@@ -1266,13 +1276,6 @@
      "fecha": "2026-10-20T09:04:09Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50226129/mourinho-created-narrative-world-real-madrid"
-    },
-    {
-     "titulo": "Gianni Infantino courts Asian Football Confederation in reelection campaign bid",
-     "resumen": "Gianni Infantino's campaign for reelection as FIFA president is set to move this week to Japan and a meeting scheduled for Wednesday with the Asian Football Confederation.",
-     "fecha": "2026-10-20T07:44:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733302_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50225613/gianni-infantino-asian-football-federations-reelection-campaign-fifa-president"
     },
     {
      "titulo": "Infantino apologized, but reelection as FIFA president remains far from certain",
@@ -1551,8 +1554,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1575,8 +1579,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1805,8 +1810,9 @@
      "posCorta": "M",
      "edad": 24,
      "pais": "Paraguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Matias_Galarza_France_v_Paraguay_4_July_2026-193_%28cropped%29.jpg/330px-Matias_Galarza_France_v_Paraguay_4_July_2026-193_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "406938",
@@ -1943,18 +1949,18 @@
    ],
    "noticias": [
     {
+     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
+     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
+     "fecha": "2026-10-20T10:21:15Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
+    },
+    {
      "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
      "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
      "fecha": "2026-10-20T09:08:36Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50226152/were-messi-de-paul-wrong-taunt-atlanta-united-alonso"
-    },
-    {
-     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
-     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
-     "fecha": "2026-10-20T07:36:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
     },
     {
      "titulo": "MLS Power Rankings: Messi's Inter Miami moving up, Nashville still No.1",
@@ -2207,9 +2213,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2595,6 +2602,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Christian Horner opposed Liam Lawson's short-lived Red Bull move: 'Shouldn't have been promoted'",
+     "resumen": "Christian Horner has opened up on his reservations about Liam Lawson's short-lived Red Bull tenure in 2025, claiming the New Zealander \"really shouldn't have been promoted in the first place.\"",
+     "fecha": "2026-10-20T12:41:14Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0320/r1466773_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50217049/christian-horner-liam-lawson-red-bull-move-promoted"
+    },
+    {
      "titulo": "Kimi Antonelli is on the brink of F1 history -- but first, there's a car to wash and pranks to pull",
      "resumen": "On the brink of becoming F1's youngest world champion, Kimi Antonelli reveals how car washes, pub trips and pranks help him cope with fame and pressure.",
      "fecha": "2026-10-20T09:11:19Z",
@@ -2628,13 +2642,6 @@
      "fecha": "2026-10-19T05:49:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/1018/r1732552_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131377/christian-horner-red-bull-blocked-moves-charles-leclerc-fernando-alonso-2024"
-    },
-    {
-     "titulo": "Christian Horner plays down Ferrari links, 'no idea' on Formula 1 return",
-     "resumen": "Christian Horner again played down links to Ferrari as the former Red Bull boss claimed he would be \"at peace\" if a return to Formula One never happens.",
-     "fecha": "2026-10-17T23:20:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1017/r1732198_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50205129/christian-horner-ferrari-formula-1-return-red-bull"
     }
    ],
    "resultados": null,
@@ -2651,6 +2658,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Knockout performance lands Mike Malott in MMA divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-10-20T11:51:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733018_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
     {
      "titulo": "Petr Yan vs. Merab Dvalishvili joins rare list of trilogy bouts at UFC 333",
      "resumen": "ESPN categorizes all 19 of the UFC's trilogies ahead of Petr Yan vs. Merab Dvalishvili 3 at UFC 333 on Saturday.",
@@ -2685,13 +2699,6 @@
      "fecha": "2026-10-15T18:42:55Z",
      "imagen": "https://a.espncdn.com/photo/2026/1015/r1731273_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50190700/ufc-declines-re-sign-undefeated-bantamweight-farid-basharat"
-    },
-    {
-     "titulo": "UFC champ Alexander Volkanovski proposes 'send-off' superbout vs. Justin Gaethje",
-     "resumen": "UFC featherweight champion Alexander Volkanovski is calling for a \"send-off\" superfight against lightweight champion Justin Gaethje.",
-     "fecha": "2026-10-15T16:56:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0203/r1609874_2_576x324_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50189696/ufc-champ-volkanovski-proposes-send-superbout-vs-gaethje"
     }
    ],
    "resultados": [

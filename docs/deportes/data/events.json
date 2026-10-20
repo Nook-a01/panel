@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-19T23:38:50.370Z",
+ "actualizado": "2026-10-20T15:03:24.527Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -1020,8 +1020,8 @@
    "sport": "futbol",
    "emoji": "⚽",
    "titulo": "Banfield vs Boca Juniors",
-   "inicio": "2026-11-14T20:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-11-14T22:00Z",
+   "horaConfirmada": true,
    "competicion": "Copa Argentina",
    "sede": "Malvinas Argentinas (Mendoza)",
    "local": "Banfield",
