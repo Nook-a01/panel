@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T15:03:24.527Z",
+ "actualizado": "2026-10-20T19:14:27.381Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 11,
+   "total": 10,
    "proximos": 5
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841577",
-   "miLado": "visitante",
-   "idEspn": "401841577",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "San Lorenzo vs Boca Juniors",
-   "inicio": "2026-09-20T17:45Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Estadio Pedro Bidegain",
-   "local": "San Lorenzo",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "0 - 2"
-  },
   {
    "id": "espn-761829",
    "miLado": "local",
