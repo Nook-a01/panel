@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T19:14:27.381Z",
+ "actualizado": "2026-10-21T01:33:44.301Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 10,
-   "proximos": 5
+   "proximos": 4
   },
   {
    "id": "argentina",
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 9,
+   "total": 8,
    "proximos": 4
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761829",
-   "miLado": "local",
-   "idEspn": "761829",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs San Diego FC",
-   "inicio": "2026-09-20T23:00Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "San Diego FC",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
-   "finalizado": true,
-   "marcador": "2 - 2"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
