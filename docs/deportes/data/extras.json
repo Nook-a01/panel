@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T13:45:54.763Z",
+ "actualizado": "2026-10-21T18:36:49.035Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -364,8 +363,9 @@
      "posCorta": "D",
      "edad": 20,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/FacundoHerrerra.jpg/330px-FacundoHerrerra.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "403948",
@@ -616,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -628,9 +629,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -713,8 +713,9 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421348",
@@ -1071,9 +1072,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1120,8 +1120,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1180,9 +1181,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1242,8 +1242,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1259,6 +1260,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Premier League best place to develop Japanese talent - Japan FA chief",
+     "resumen": "The best place to develop Japanese talent is in the English Premier League, the president of the Japan Football Association has said.",
+     "fecha": "2026-10-21T14:33:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0515/r1658476_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50237763/premier-league-best-place-develop-japanese-talent"
+    },
     {
      "titulo": "Gianni Infantino courts Asian Football Confederation in reelection campaign bid",
      "resumen": "Gianni Infantino's campaign for reelection as FIFA president is set to move this week to Japan and a meeting scheduled for Wednesday with the Asian Football Confederation.",
@@ -2599,6 +2607,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lando Norris vows to make 'better decisions' after Oscar Piastri clash",
+     "resumen": "Lando Norris has vowed to make \"better decisions\" going forward after further talks with McLaren over his collision with teammate Oscar Piastri in Singapore.",
+     "fecha": "2026-10-21T17:24:57Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728732_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50239688/lando-norris-vows-make-better-decisions-oscar-piastri-clash"
+    },
+    {
      "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
      "fecha": "2026-10-21T07:07:05Z",
@@ -2632,13 +2647,6 @@
      "fecha": "2026-10-20T12:41:14Z",
      "imagen": "https://a.espncdn.com/photo/2025/0320/r1466773_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50217049/christian-horner-liam-lawson-red-bull-move-promoted"
-    },
-    {
-     "titulo": "Kimi Antonelli is on the brink of F1 history -- but first, there's a car to wash and pranks to pull",
-     "resumen": "On the brink of becoming F1's youngest world champion, Kimi Antonelli reveals how car washes, pub trips and pranks help him cope with fame and pressure.",
-     "fecha": "2026-10-20T09:11:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733295_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50225252/kimi-antonelli-interview-f1-title-car-wash-pranks-pull"
     }
    ],
    "resultados": null,
@@ -2656,25 +2664,25 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
+     "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
+     "fecha": "2026-10-21T15:11:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733207_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50223020/alexander-volkanovski-ufc-333"
+    },
+    {
+     "titulo": "Blanchfield out, Suarez and Jandiroba move up in pound-for-pound rankings",
+     "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
+     "fecha": "2026-10-21T13:59:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
+    {
      "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
      "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision.",
      "fecha": "2026-10-21T13:11:05Z",
      "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
      "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-fight-night"
-    },
-    {
-     "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
-     "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
-     "fecha": "2026-10-21T13:10:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733207_1296x518_5-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50223020/alexander-volkanovski-ufc-333"
-    },
-    {
-     "titulo": "Blanchfield out, Suarez and Jandiroda move up in pound-for-pound rankings",
-     "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
-     "fecha": "2026-10-21T13:07:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     },
     {
      "titulo": "Knockout performance lands Mike Malott in MMA divisional rankings",
