@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T07:36:50.910Z",
+ "actualizado": "2026-10-21T13:45:54.763Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,8 +11,8 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 10,
-   "proximos": 4
+   "total": 11,
+   "proximos": 5
   },
   {
    "id": "argentina",
@@ -1071,6 +1071,28 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401913961",
+   "miLado": "visitante",
+   "idEspn": "401913961",
+   "liga": "conmebol.sudamericana",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "TBD Home vs Boca Juniors",
+   "inicio": "2026-11-21T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "CONMEBOL Sudamericana",
+   "sede": "Metropolitano Roberto Meléndez",
+   "local": "TBD Home",
+   "visitante": "Boca Juniors",
+   "logoLocal": null,
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "finalizado": false,
    "marcador": null
   },

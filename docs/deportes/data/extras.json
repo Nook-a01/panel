@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T07:36:50.910Z",
+ "actualizado": "2026-10-21T13:45:54.763Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -628,8 +628,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -971,8 +972,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1069,8 +1071,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1177,8 +1180,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -2652,6 +2656,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
+     "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision.",
+     "fecha": "2026-10-21T13:11:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
+     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-fight-night"
+    },
+    {
+     "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
+     "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
+     "fecha": "2026-10-21T13:10:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733207_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50223020/alexander-volkanovski-ufc-333"
+    },
+    {
+     "titulo": "Blanchfield out, Suarez and Jandiroda move up in pound-for-pound rankings",
+     "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
+     "fecha": "2026-10-21T13:07:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
+    },
+    {
      "titulo": "Knockout performance lands Mike Malott in MMA divisional rankings",
      "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
      "fecha": "2026-10-20T11:51:55Z",
@@ -2666,32 +2691,11 @@
      "link": "https://www.espn.com/mma/story/_/id/50206478/ufc-333-petr-yan-merab-dvalishvili-join-trilogy-list"
     },
     {
-     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
-     "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision.",
-     "fecha": "2026-10-18T18:06:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
-     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-fight-night"
-    },
-    {
      "titulo": "Malott KO's Buckley with a vicious knee to the face",
      "resumen": "Mike Malott lands a devastating knee to Joaquin Buckley's head to end their main card fight at UFC Edmonton in stunning fashion.",
      "fecha": "2026-10-18T03:19:33Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50207483/malott-ko-buckley-vicious-knee-face"
-    },
-    {
-     "titulo": "Cristian Perez sleeps Kyle Nelson with a brutal KO",
-     "resumen": "Cristian Perez leaves Kyle Nelson dazed and grappling the referee after a devastating KO in Round 1 at UFC Edmonton.",
-     "fecha": "2026-10-18T02:39:45Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/dm_261017_UFC_Highlight_Cristian_Perez_sleeps_Kyle_Nelson_with_a_brutal_KO_20261018_PH_ONLY/dm_261017_UFC_Highlight_Cristian_Perez_sleeps_Kyle_Nelson_with_a_brutal_KO_20261018_PH_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50207115/cristian-perez-sleeps-kyle-nelson-brutal-ko"
-    },
-    {
-     "titulo": "Farid Basharat fails to land new UFC contract despite perfect record",
-     "resumen": "Bantamweight Farid Basharat said the UFC \"just isn't what it used to be\" after failing to re-sign with the promotion despite his undefeated record.",
-     "fecha": "2026-10-15T18:42:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1015/r1731273_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50190700/ufc-declines-re-sign-undefeated-bantamweight-farid-basharat"
     }
    ],
    "resultados": [
