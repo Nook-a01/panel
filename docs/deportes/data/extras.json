@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T01:29:26.772Z",
+ "actualizado": "2026-10-22T07:32:42.623Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -365,8 +364,9 @@
      "posCorta": "D",
      "edad": 20,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/FacundoHerrerra.jpg/330px-FacundoHerrerra.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "403948",
@@ -425,9 +425,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -618,9 +617,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -1062,8 +1060,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1074,8 +1073,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1086,9 +1086,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1099,8 +1098,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1184,9 +1184,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1680,8 +1679,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1692,8 +1692,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1740,8 +1741,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1962,6 +1964,20 @@
    ],
    "noticias": [
     {
+     "titulo": "St. Louis City beats Columbus in Open Cup final for club's first trophy",
+     "resumen": "St. Louis City won the first trophy in the club's history on Wednesday after defeating Columbus Crew on penalties to lift the U.S. Open Cup.",
+     "fecha": "2026-10-22T04:46:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734362_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50242822/st-louis-city-beats-columbus-open-cup-final"
+    },
+    {
+     "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
+     "resumen": "St. Louis goalkeeper Roman Bürki was taken to the hospital after taking a knock to the head during the U.S. Open Cup final against the Columbus Crew.",
+     "fecha": "2026-10-22T04:44:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734322_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50243891/st-louis-gk-burki-stretchered-collision-open-cup-final"
+    },
+    {
      "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
      "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
      "fecha": "2026-10-20T10:21:15Z",
@@ -1983,25 +1999,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50219511/mls-power-rankings-inter-miami-lionel-messi-nashville-analysis-meg-swanick"
     },
     {
-     "titulo": "Lionel Messi scores twice, takes season tally to 25 in Miami win at Atlanta",
-     "resumen": "Lionel Messi scored two scintillating second-half solo goals to take his MLS-leading tally to 25 as Inter Miami brushed aside hosts Atlanta United 3-1 on Saturday.",
-     "fecha": "2026-10-18T02:49:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732270_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50206341/lionel-messi-goals-inter-miami-atlanta-united-mls"
-    },
-    {
      "titulo": "Griezmann has 2 goals, 1 assist for Orlando City in 4-1 win over DC United",
      "resumen": "Antoine Griezmann had two goals and an assist, Martín Ojeda added a goal and an assist, and Orlando City beat D.C. United 3-1 on Saturday night.",
      "fecha": "2026-10-18T02:44:39Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761881.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761881"
-    },
-    {
-     "titulo": "Messi magic! Inter Miami star scores twice in four-minute span",
-     "resumen": "Messi magic! Inter Miami star scores twice in four-minute span",
-     "fecha": "2026-10-18T02:06:01Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1018/3efb4af4-16da-44a2-80f3-ae03f7cf4e92/3efb4af4-16da-44a2-80f3-ae03f7cf4e92.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50206824/messi-magic-inter-miami-star-scores-twice-four-minute-span"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2030,20 +2032,6 @@
      "fecha": "2026-05-21T11:39:18Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0521/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL/dm_260521_COM_SOC_Analysis_Should_Casemiro_join_Inter_Miami_or_LA_Galaxy__20260521_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/48834114/should-casemiro-join-inter-miami-la-galaxy"
-    },
-    {
-     "titulo": "Why has Javier Mascherano left Inter Miami?",
-     "resumen": "Lizzy Becherano reacts to Javier Mascherano's departure from Inter Miami.",
-     "fecha": "2026-04-14T18:06:05Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0414/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL/dm_260414_COM_SOC_Analysis_Why_has_Javier_Mascherano_left_Inter_Miami__20260414_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip?id=48485505"
-    },
-    {
-     "titulo": "Magic of the Cup: 14-year-old rewrites U.S. Open Cup history",
-     "resumen": "The U.S. Open Cup is a 113-year-old competition, and 14-year-old Braiden Kalonji wrote his name in history by becoming its youngest-ever goal scorer.",
-     "fecha": "2026-03-19T14:53:11Z",
-     "imagen": "https://a.espncdn.com/photo/2022/0917/r1063199_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/48248748/magic-cup-14-year-old-braiden-kalonji-rewrites-us-open-cup-history"
     }
    ],
    "resultados": null,
@@ -2242,10 +2230,9 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 9,
@@ -2307,10 +2294,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2616,25 +2602,25 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Lando Norris vows to make 'better decisions' after Oscar Piastri clash",
-     "resumen": "Lando Norris has vowed to make \"better decisions\" going forward after further talks with McLaren over his collision with teammate Oscar Piastri in Singapore.",
-     "fecha": "2026-10-21T17:24:57Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728732_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50239688/lando-norris-vows-make-better-decisions-oscar-piastri-clash"
-    },
-    {
      "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-21T07:07:05Z",
+     "fecha": "2026-10-22T06:52:54Z",
      "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
      "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-21T07:06:23Z",
+     "fecha": "2026-10-22T06:37:30Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Lando Norris vows to make 'better decisions' after Oscar Piastri clash",
+     "resumen": "Lando Norris has vowed to make \"better decisions\" going forward after further talks with McLaren over his collision with teammate Oscar Piastri in Singapore.",
+     "fecha": "2026-10-21T17:24:57Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1010/r1728732_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50239688/lando-norris-vows-make-better-decisions-oscar-piastri-clash"
     },
     {
      "titulo": "Christian Horner reveals George Russell, Red Bull talks amid Mercedes' Max Verstappen pursuit",
@@ -2673,6 +2659,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Khamzat Chimaev pushes for Sean Strickland rematch",
+     "resumen": "Khamzat Chimaev believes he should still be the UFC's middleweight champion and wants Sean Strickland to accept a rematch if he is serious about making money.",
+     "fecha": "2026-10-22T05:19:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0511/r1656524_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50245442/khamzat-chimaev-sean-strickland-rematch"
+    },
+    {
      "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
      "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
      "fecha": "2026-10-22T00:20:14Z",
@@ -2692,13 +2685,6 @@
      "fecha": "2026-10-21T13:59:22Z",
      "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
-    },
-    {
-     "titulo": "Jasmine Jasudavicius outpoints Erin Blanchfield at UFC Fight Night",
-     "resumen": "Jasmine Jasudavicius stated her case as a contender in the UFC women's featherweight division, dominating Erin Blanchfield on the canvas to win by unanimous decision.",
-     "fecha": "2026-10-21T13:11:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1018/r1732297_600x400_3-2.jpg",
-     "link": "https://www.espn.com/college-football/story/_/id/50207665/jasmine-jasudavicius-outpoints-erin-blanchfield-ufc-fight-night"
     },
     {
      "titulo": "Knockout performance lands Mike Malott in MMA divisional rankings",
