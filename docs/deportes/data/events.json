@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T13:45:54.763Z",
+ "actualizado": "2026-10-22T13:46:06.289Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -1084,14 +1084,14 @@
    "feedLabel": "Boca Juniors",
    "sport": "futbol",
    "emoji": "⚽",
-   "titulo": "TBD Home vs Boca Juniors",
+   "titulo": "Atlético-MG vs Boca Juniors",
    "inicio": "2026-11-21T20:00Z",
    "horaConfirmada": false,
    "competicion": "CONMEBOL Sudamericana",
    "sede": "Metropolitano Roberto Meléndez",
-   "local": "TBD Home",
+   "local": "Atlético-MG",
    "visitante": "Boca Juniors",
-   "logoLocal": null,
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "finalizado": false,
    "marcador": null
