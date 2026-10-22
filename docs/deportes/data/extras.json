@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T13:46:06.289Z",
+ "actualizado": "2026-10-22T18:31:05.149Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -714,9 +713,8 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "421348",
@@ -1011,9 +1009,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1074,8 +1071,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1098,9 +1096,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1111,8 +1108,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "207343",
@@ -1123,9 +1121,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1160,9 +1157,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1186,9 +1182,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1235,9 +1230,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1260,8 +1254,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1595,9 +1590,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1743,9 +1737,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1966,18 +1959,18 @@
    ],
    "noticias": [
     {
+     "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
+     "resumen": "St. Louis goalkeeper Roman Bürki was taken to the hospital after taking a knock to the head during the U.S. Open Cup final against the Columbus Crew.",
+     "fecha": "2026-10-22T15:13:33Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734322_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50243891/st-louis-gk-burki-stretchered-collision-open-cup-final"
+    },
+    {
      "titulo": "St. Louis City beats Columbus in Open Cup final for club's first trophy",
      "resumen": "St. Louis City won the first trophy in the club's history on Wednesday after defeating Columbus Crew on penalties to lift the U.S. Open Cup.",
      "fecha": "2026-10-22T04:46:20Z",
      "imagen": "https://a.espncdn.com/photo/2026/1022/r1734362_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50242822/st-louis-city-beats-columbus-open-cup-final"
-    },
-    {
-     "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
-     "resumen": "St. Louis goalkeeper Roman Bürki was taken to the hospital after taking a knock to the head during the U.S. Open Cup final against the Columbus Crew.",
-     "fecha": "2026-10-22T04:44:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734322_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50243891/st-louis-gk-burki-stretchered-collision-open-cup-final"
     },
     {
      "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
@@ -2216,9 +2209,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2280,10 +2274,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2605,6 +2598,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "British teenager Freddie Slater to make F1 practice debut for Audi in Mexico and Brazil",
+     "resumen": "British star Freddie Slater is set to make his Formula 1 practice debut for Audi at the Mexico Grand Prix next weekend.",
+     "fecha": "2026-10-22T18:17:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734586_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131368/british-teenager-freddie-slater-make-formula-1-practice-debut-audi-mexico-grand-prix-brazil"
+    },
+    {
      "titulo": "Christian Horner to Mercedes? Ex-Red Bull boss reveals pre-Toto Wolff approach",
      "resumen": "Christian Horner has revealed he rejected an offer to become Mercedes' Formula 1 team principal in 2012, before the team appointed his future rival Toto Wolff.",
      "fecha": "2026-10-22T07:59:11Z",
@@ -2638,13 +2638,6 @@
      "fecha": "2026-10-21T06:24:49Z",
      "imagen": "https://a.espncdn.com/photo/2026/1019/r1732839_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50217288/christian-horner-george-russell-red-bull-talks-mercedes-max-verstappen"
-    },
-    {
-     "titulo": "FIA president Mohammed Ben Sulayem adamant F1 season will finish in Middle East despite ongoing conflict",
-     "resumen": "Formula 1's season can and will finish in the Middle East as things stand, FIA president Mohammed Ben Sulayem has adamantly declared.",
-     "fecha": "2026-10-20T21:13:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733612_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50231574/fia-f1-mohammed-ben-sulayem-middle-east-qatar-gp"
     }
    ],
    "resultados": null,
@@ -2664,7 +2657,7 @@
     {
      "titulo": "UFC 333 preview and picks for featherweight, men's bantamweight titles",
      "resumen": "Check out the matchups and expert predictions for both championship fights at UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-22T12:53:12Z",
+     "fecha": "2026-10-22T15:23:59Z",
      "imagen": "https://a.espncdn.com/photo/2026/1021/r1733959_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50238314/ufc-333-preview-picks"
     },
