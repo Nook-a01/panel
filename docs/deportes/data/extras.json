@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T22:19:17.745Z",
+ "actualizado": "2026-10-22T01:29:26.772Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,8 +425,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -713,9 +715,8 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "421348",
@@ -1010,8 +1011,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1084,8 +1086,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1156,8 +1159,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1180,8 +1184,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1436,6 +1441,19 @@
       "pos": 7
      },
      {
+      "equipo": "FC Cincinnati",
+      "abrev": "CIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "pj": "30",
+      "pts": "39",
+      "g": "10",
+      "e": "9",
+      "p": "11",
+      "dg": "-9",
+      "mio": false,
+      "pos": 8
+     },
+     {
       "equipo": "Toronto FC",
       "abrev": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
@@ -1445,19 +1463,6 @@
       "e": "12",
       "p": "10",
       "dg": "-9",
-      "mio": false,
-      "pos": 8
-     },
-     {
-      "equipo": "FC Cincinnati",
-      "abrev": "CIN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "29",
-      "pts": "36",
-      "g": "9",
-      "e": "9",
-      "p": "11",
-      "dg": "-10",
       "mio": false,
       "pos": 9
      },
@@ -1504,12 +1509,12 @@
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "29",
+      "pj": "30",
       "pts": "33",
       "g": "7",
       "e": "12",
-      "p": "10",
-      "dg": "-14",
+      "p": "11",
+      "dg": "-15",
       "mio": false,
       "pos": 13
      },
@@ -1675,9 +1680,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -2238,9 +2242,10 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 9,
@@ -2302,9 +2307,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2669,9 +2675,16 @@
     {
      "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
      "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
-     "fecha": "2026-10-21T20:41:51Z",
+     "fecha": "2026-10-22T00:20:14Z",
      "imagen": "https://a.espncdn.com/photo/2026/1020/r1733207_1296x518_5-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50223020/alexander-volkanovski-ufc-333"
+    },
+    {
+     "titulo": "Volkanovski I sacrificed a lot of myself to be where I am",
+     "resumen": "Ahead of UFC333, UFC Featherweight champion Alex Volkanovski reflects on the sacrifice and dedication it takes to be a champion in the UFC.",
+     "fecha": "2026-10-22T00:17:48Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1021/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50242989/volkanovski-sacrificed-lot-be-where-am"
     },
     {
      "titulo": "Blanchfield out, Suarez and Jandiroba move up in pound-for-pound rankings",
@@ -2700,13 +2713,6 @@
      "fecha": "2026-10-19T13:45:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1016/261019_mma_trilogy-fights_16x9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50206478/ufc-333-petr-yan-merab-dvalishvili-join-trilogy-list"
-    },
-    {
-     "titulo": "Malott KO's Buckley with a vicious knee to the face",
-     "resumen": "Mike Malott lands a devastating knee to Joaquin Buckley's head to end their main card fight at UFC Edmonton in stunning fashion.",
-     "fecha": "2026-10-18T03:19:33Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1017/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY/dm_261017_UFC_Highlight_Malott_KOs_Buckley_with_a_vicious_knee_to_the_face_20261018_PH_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50207483/malott-ko-buckley-vicious-knee-face"
     }
    ],
    "resultados": [
