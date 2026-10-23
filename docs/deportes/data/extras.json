@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T22:18:44.124Z",
+ "actualizado": "2026-10-23T01:29:24.593Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -425,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -558,8 +556,9 @@
      "posCorta": "M",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/3988ff0650e069cf83cee609ee2f240b_%281%29.jpg/330px-3988ff0650e069cf83cee609ee2f240b_%281%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "104506",
@@ -1010,8 +1009,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1084,9 +1084,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1097,8 +1096,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1109,9 +1109,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1170,9 +1169,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1256,8 +1254,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1734,8 +1733,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2271,10 +2271,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2288,10 +2287,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2597,6 +2595,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen warns 'out of control' bumps at U.S. Grand Prix pose risks for drivers' spines",
+     "resumen": "Max Verstappen has said Formula 1 drivers risk long-term damage from venues with \"out of control\" bumps like Austin's Circuit of the Americas (COTA), citing a concerning recent X-ray he's seen of his own back.",
+     "fecha": "2026-10-22T23:50:33Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734781_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250024/max-verstappen-warns-control-bumps-circuit-americas-united-states-gp-pose-risks-drivers-spines"
+    },
+    {
+     "titulo": "Lewis Hamilton hails title leader Kimi Antonelli: 'He doesn't need any advice'",
+     "resumen": "Ferrari's Lewis Hamilton has said runaway leader Kimi Antonelli \"doesn't need any advice\" on how to seal his first drivers' title in F1.",
+     "fecha": "2026-10-22T22:57:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734767_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250022/lewis-hamilton-hails-title-leader-kimi-antonelli-doesnt-need-advice-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "Carlos Sainz on F1 season concluding in Middle East: 'Very difficult to be convinced right now'",
      "resumen": "Carlos Sainz has said it is \"premature\" for Formula 1 bosses to be confident about ending the season in the Middle East.",
      "fecha": "2026-10-22T22:09:21Z",
@@ -2623,20 +2635,6 @@
      "fecha": "2026-10-22T18:51:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/1022/r1734586_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131368/british-teenager-freddie-slater-make-formula-1-practice-debut-audi-mexico-grand-prix-brazil"
-    },
-    {
-     "titulo": "Christian Horner to Mercedes? Ex-Red Bull boss reveals pre-Toto Wolff approach",
-     "resumen": "Christian Horner has revealed he rejected an offer to become Mercedes' Formula 1 team principal in 2012, before the team appointed his future rival Toto Wolff.",
-     "fecha": "2026-10-22T07:59:11Z",
-     "imagen": "https://a.espncdn.com/photo/2018/0914/r430838_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50217546/christian-horner-toto-wolff-mercedes-red-bull"
-    },
-    {
-     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-22T06:52:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     }
    ],
    "resultados": null,
