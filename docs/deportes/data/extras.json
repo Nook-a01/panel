@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T07:29:34.696Z",
+ "actualizado": "2026-10-23T13:24:23.150Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -424,8 +423,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -616,9 +616,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -1083,8 +1082,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1095,9 +1095,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1168,9 +1167,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1242,9 +1240,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1255,12 +1252,18 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
+    {
+     "titulo": "Lionel Messi: Argentina's 2026 World Cup final heartbreak \"part of my football journey\"",
+     "resumen": "Lionel Messi has accepted that Argentina's 2026 World Cup extra-time defeat to Spain was a part of his football journey.",
+     "fecha": "2026-10-23T10:17:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1734936_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50256249/lionel-messi-argentina-2026-world-cup-final-spain"
+    },
     {
      "titulo": "Asian football chief backs Gianni Infantino for another term as FIFA president",
      "resumen": "The Asian Football Confederation endorsed Gianni Infantino on Friday for a fourth term as FIFA president.",
@@ -1302,13 +1305,6 @@
      "fecha": "2026-10-20T09:04:09Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid/dm_261020_Gomez_Mourinho_has_created_narrative_that_the_world_is_against_Real_Madrid.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50226129/mourinho-created-narrative-world-real-madrid"
-    },
-    {
-     "titulo": "Infantino apologized, but reelection as FIFA president remains far from certain",
-     "resumen": "Gianni Infantino tried to make amends at Thursday's FIFA Council meeting for his ill-fated attempt to sell the World Cup. Will it be enough to save his reelection bid?",
-     "fecha": "2026-10-17T09:41:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731790_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50197782/gianni-infantino-fifa-president-election-far-certain"
     },
     {
      "titulo": "USMNT players are beefing online again: A look at the most memorable, pettiest feuds",
@@ -1597,9 +1593,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1610,9 +1605,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1743,9 +1737,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1773,13 +1766,13 @@
     },
     {
      "id": "290715",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
      "nombre": "David Ayala",
      "dorsal": "22",
      "posicion": "Midfielder",
      "posCorta": "M",
-     "edad": 24,
-     "pais": "Argentina",
+     "edad": 26,
+     "pais": "Mexico",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/290715.png",
      "lesionado": false
     },
@@ -1968,7 +1961,7 @@
     {
      "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
      "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
-     "fecha": "2026-10-23T07:22:09Z",
+     "fecha": "2026-10-23T08:57:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
     },
@@ -2604,6 +2597,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Hamilton's hilarious advice for championship leader Antonelli",
+     "resumen": "Hamilton's hilarious advice for championship leader Antonelli",
+     "fecha": "2026-10-23T10:39:19Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1023/dm_261023_Hamiltons_hilarious_advice_for_championship_leader_Antonelli/dm_261023_Hamiltons_hilarious_advice_for_championship_leader_Antonelli.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50256537/hamilton-hilarious-advice-championship-leader-antonelli"
+    },
+    {
+     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-23T09:09:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-23T09:08:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-10-23T08:43:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
      "titulo": "Carlos Sainz on F1 season concluding in Middle East: 'Very difficult to be convinced right now'",
      "resumen": "Carlos Sainz said \"it's very difficult to be convinced\" Formula 1 should finish the season in the Middle East as is currently planned.",
      "fecha": "2026-10-23T06:41:30Z",
@@ -2616,34 +2637,6 @@
      "fecha": "2026-10-22T23:50:33Z",
      "imagen": "https://a.espncdn.com/photo/2026/1022/r1734781_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250024/max-verstappen-warns-control-bumps-circuit-americas-united-states-gp-pose-risks-drivers-spines"
-    },
-    {
-     "titulo": "Lewis Hamilton hails title leader Kimi Antonelli: 'He doesn't need any advice'",
-     "resumen": "Ferrari's Lewis Hamilton has said runaway leader Kimi Antonelli \"doesn't need any advice\" on how to seal his first drivers' title in F1.",
-     "fecha": "2026-10-22T22:57:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734767_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250022/lewis-hamilton-hails-title-leader-kimi-antonelli-doesnt-need-advice-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Lewis Hamilton 'forced' to keep driving into mid-40s to achieve 'dream' of racing in Africa",
-     "resumen": "Lewis Hamilton joked that he may have to keep racing until he's at least 45 years old now Formula 1 has confirmed a African Grand Prix in Rwanda will happen in the 2030s.",
-     "fecha": "2026-10-22T21:44:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734725_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250018/lewis-hamilton-forced-keep-driving-mid-40s-achieve-dream-racing-africa"
-    },
-    {
-     "titulo": "Oliver Bearman 'ready to fight for podiums' with eye on joining top-four team",
-     "resumen": "Oliver Bearman has said he believes he is ready to fight for Formula 1 podiums as the British driver made clear his ambition to drive for a top-four team.",
-     "fecha": "2026-10-22T19:55:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734646_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250014/oliver-bearman-ready-fight-podiums-eye-joining-top-four-team"
-    },
-    {
-     "titulo": "British teenager Freddie Slater to make F1 practice debut for Audi in Mexico and Brazil",
-     "resumen": "British star Freddie Slater is set to make his Formula 1 practice debut for Audi at the Mexico Grand Prix next weekend.",
-     "fecha": "2026-10-22T18:51:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734586_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131368/british-teenager-freddie-slater-make-formula-1-practice-debut-audi-mexico-grand-prix-brazil"
     }
    ],
    "resultados": null,
@@ -2660,6 +2653,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "After two opposite fights, what should be expected from Yan vs. Dvalishvili 3",
+     "resumen": "Merab Dvalishvili has tweaked his fight plan, while Yan has gone all-in on his. Which strategy will win out?",
+     "fecha": "2026-10-23T13:19:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1734959_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50257331/petr-yan-merab-dvalishvili-trilogy"
+    },
     {
      "titulo": "UFC 333 preview and picks for featherweight, men's bantamweight titles",
      "resumen": "Check out the matchups and expert predictions for both championship fights at UFC 333 in Abu Dhabi.",
@@ -2694,13 +2694,6 @@
      "fecha": "2026-10-21T13:59:22Z",
      "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
-    },
-    {
-     "titulo": "Knockout performance lands Mike Malott in MMA divisional rankings",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-10-20T11:51:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733018_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     }
    ],
    "resultados": [
