@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T18:19:08.642Z",
+ "actualizado": "2026-10-23T22:08:16.085Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -618,9 +617,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -631,9 +629,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -950,9 +947,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1012,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1037,9 +1032,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1050,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1063,9 +1056,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1076,9 +1068,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1187,8 +1178,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1248,9 +1240,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1266,6 +1257,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-23T19:18:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "Asian football chief backs Gianni Infantino for another term as FIFA president",
      "resumen": "The Asian Football Confederation endorsed Gianni Infantino on Friday for a fourth term as FIFA president.",
@@ -1293,13 +1291,6 @@
      "fecha": "2026-10-21T14:33:46Z",
      "imagen": "https://a.espncdn.com/photo/2026/0515/r1658476_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50237763/premier-league-best-place-develop-japanese-talent"
-    },
-    {
-     "titulo": "Gianni Infantino courts Asian Football Confederation in reelection campaign bid",
-     "resumen": "Gianni Infantino's campaign for reelection as FIFA president is set to move this week to Japan and a meeting scheduled for Wednesday with the Asian Football Confederation.",
-     "fecha": "2026-10-20T10:51:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733302_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50225613/gianni-infantino-asian-football-federations-reelection-campaign-fifa-president"
     },
     {
      "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
@@ -1969,6 +1960,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-23T19:18:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "Transfer rumors, news: Barcelona to end up signing Sullivan?",
+     "resumen": "Cavan Sullivan has a pre-contract agreement with Manchester City, but could Barcelona swoop up and sign the young American prospect? Transfer Talk has the latest.",
+     "fecha": "2026-10-23T18:39:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735106_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50255747/transfer-rumors-news-comos-paz-destroyed-man-united-now-want-sign-him"
+    },
+    {
      "titulo": "Miami coach praises Messi's 'commitment' to play after award in Spain",
      "resumen": "Inter Miami head coach Cristian \"Kily\" Gonzalez confirmed Lionel Messi will rejoin the team for the match against the New York Red Bulls on Saturday after receiving the Princess of Asturias award for sport in Oviedo, Spain.",
      "fecha": "2026-10-23T17:33:05Z",
@@ -1995,20 +2000,6 @@
      "fecha": "2026-10-22T04:46:20Z",
      "imagen": "https://a.espncdn.com/photo/2026/1022/r1734362_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50242822/st-louis-city-beats-columbus-open-cup-final"
-    },
-    {
-     "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
-     "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
-     "fecha": "2026-10-20T09:08:36Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50226152/were-messi-de-paul-wrong-taunt-atlanta-united-alonso"
-    },
-    {
-     "titulo": "MLS Power Rankings: Messi's Inter Miami moving up, Nashville still No.1",
-     "resumen": "Nashville are very much still the team to beat, but Inter Miami, St. Louis City SC and Philly are hot on their heels in our latest edition of ESPN's MLS Power Rankings.",
-     "fecha": "2026-10-19T19:37:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733003_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50219511/mls-power-rankings-inter-miami-lionel-messi-nashville-analysis-meg-swanick"
     },
     {
      "titulo": "U.S. MLS teams to make full return to Open Cup in 2027",
@@ -2607,6 +2598,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Ferrari's Charles Leclerc sets pace in second practice from Kimi Antonelli at United States Grand Prix",
+     "resumen": "Charles Leclerc topped the timesheets again during the second practice session at the United Grand Prix on Friday, as Ferrari continued to show promising signs with its new upgrades.",
+     "fecha": "2026-10-23T22:07:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735196_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250038/ferrari-charles-leclerc-sets-pace-second-practice-kimi-antonelli-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
+     "titulo": "Charles Leclerc quickest in first practice at United States Grand Prix",
+     "resumen": "Charles Leclerc set the pace in the first practice session at the United States Grand Prix.",
+     "fecha": "2026-10-23T21:07:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735092_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250033/charles-leclerc-quickest-first-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
+     "titulo": "FIA president hints at long-awaited F1 V8 engine return: 'Watch this space'",
+     "resumen": "FIA president Mohammed Ben Sulayem has teased imminent news about Formula 1's long-awaited return to V8 engines in the next decade, saying \"watch this space.\"",
+     "fecha": "2026-10-23T18:22:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735073_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250031/fia-president-hints-long-awaited-f1-v8-engine-return-watch-space"
+    },
+    {
      "titulo": "Hamilton's hilarious advice for championship leader Antonelli",
      "resumen": "Hamilton's hilarious advice for championship leader Antonelli",
      "fecha": "2026-10-23T10:39:19Z",
@@ -2626,27 +2638,6 @@
      "fecha": "2026-10-23T09:08:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
-     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
-     "fecha": "2026-10-23T08:43:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
-    },
-    {
-     "titulo": "Carlos Sainz on F1 season concluding in Middle East: 'Very difficult to be convinced right now'",
-     "resumen": "Carlos Sainz said \"it's very difficult to be convinced\" Formula 1 should finish the season in the Middle East as is currently planned.",
-     "fecha": "2026-10-23T06:41:30Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734736_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250021/carlos-sainz-f1-season-concluding-middle-east-very-difficult-convinced-right-now"
-    },
-    {
-     "titulo": "Max Verstappen warns 'out of control' bumps at U.S. Grand Prix pose risks for drivers' spines",
-     "resumen": "Max Verstappen has said Formula 1 drivers risk long-term damage from venues with \"out of control\" bumps like Austin's Circuit of the Americas (COTA), citing a concerning recent X-ray he's seen of his own back.",
-     "fecha": "2026-10-22T23:50:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1022/r1734781_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250024/max-verstappen-warns-control-bumps-circuit-americas-united-states-gp-pose-risks-drivers-spines"
     }
    ],
    "resultados": null,
