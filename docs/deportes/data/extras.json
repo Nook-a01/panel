@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T20:46:40.489Z",
+ "actualizado": "2026-10-24T23:11:27.675Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -37,6 +37,19 @@
       "pos": 1
      },
      {
+      "equipo": "Defensa y Justicia",
+      "abrev": "DYJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+      "pj": "14",
+      "pts": "27",
+      "g": "8",
+      "e": "3",
+      "p": "3",
+      "dg": "+7",
+      "mio": false,
+      "pos": 2
+     },
+     {
       "equipo": "Boca Juniors",
       "abrev": "CABJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
@@ -47,7 +60,7 @@
       "p": "1",
       "dg": "+7",
       "mio": true,
-      "pos": 2
+      "pos": 3
      },
      {
       "equipo": "Lanús",
@@ -59,19 +72,6 @@
       "e": "3",
       "p": "4",
       "dg": "+7",
-      "mio": false,
-      "pos": 3
-     },
-     {
-      "equipo": "Defensa y Justicia",
-      "abrev": "DYJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-      "pj": "13",
-      "pts": "24",
-      "g": "7",
-      "e": "3",
-      "p": "3",
-      "dg": "+6",
       "mio": false,
       "pos": 4
      },
@@ -209,12 +209,12 @@
       "equipo": "Talleres (Córdoba)",
       "abrev": "TALL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-      "pj": "13",
+      "pj": "14",
       "pts": "9",
       "g": "2",
       "e": "3",
-      "p": "8",
-      "dg": "-8",
+      "p": "9",
+      "dg": "-9",
       "mio": false,
       "pos": 15
      }
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -945,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1030,9 +1032,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1043,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1103,9 +1105,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1164,9 +1165,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1453,17 +1453,30 @@
       "pos": 8
      },
      {
+      "equipo": "Columbus Crew",
+      "abrev": "CLB",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+      "pj": "31",
+      "pts": "38",
+      "g": "11",
+      "e": "5",
+      "p": "15",
+      "dg": "+1",
+      "mio": false,
+      "pos": 9
+     },
+     {
       "equipo": "Toronto FC",
       "abrev": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "36",
       "g": "8",
       "e": "12",
-      "p": "10",
-      "dg": "-9",
+      "p": "11",
+      "dg": "-11",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Red Bull New York",
@@ -1475,19 +1488,6 @@
       "e": "6",
       "p": "14",
       "dg": "-17",
-      "mio": false,
-      "pos": 10
-     },
-     {
-      "equipo": "Columbus Crew",
-      "abrev": "CLB",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "30",
-      "pts": "35",
-      "g": "10",
-      "e": "5",
-      "p": "15",
-      "dg": "-1",
       "mio": false,
       "pos": 11
      },
@@ -1567,9 +1567,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1592,9 +1591,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1605,9 +1603,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1618,9 +1615,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1679,9 +1675,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1692,9 +1687,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1963,9 +1957,16 @@
    ],
    "noticias": [
     {
+     "titulo": "Amundsen scores twice as Crew beat Toronto for 5th win in last 6 games",
+     "resumen": "Malte Amundsen scored two goals. his first career multi-goal game in MLS, Gonzalo Tapia and Brooks Lennon each added a goal, and the Columbus Crew beat Toronto FC 4-1 on Saturday.",
+     "fecha": "2026-10-24T22:18:07Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761890.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761890"
+    },
+    {
      "titulo": "Nashville SC wins 1st MLS Supporters' Shield title, eyes points record",
      "resumen": "Nashville SC clinched the 2026 MLS Supporters' Shield title after a 2-0 victory at CF Montréal on Saturday, winning the trophy for the first time in club history.",
-     "fecha": "2026-10-24T20:14:58Z",
+     "fecha": "2026-10-24T21:05:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735553_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50260337/nashville-sc-1st-mls-supporters-shield-title"
     },
@@ -2300,10 +2301,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2609,6 +2609,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Kimi Antonelli ecstatic with first pole since July at United States GP: 'It's good to be back'",
+     "resumen": "Kimi Antonelli declared \"it's good to be back\" as he inched ever closer to his first Formula 1 world championship with an overdue pole position at the United States Grand Prix.",
+     "fecha": "2026-10-24T22:57:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735657_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250073/kimi-antonelli-ecstatic-first-pole-july-good-back-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
+     "titulo": "Kimi Antonelli takes pole in bid to seal world title at United States Grand Prix",
+     "resumen": "Kimi Antonelli has put himself in prime position to seal the world title at the United States Grand after taking pole position.",
+     "fecha": "2026-10-24T22:50:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735672_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250072/kimi-antonelli-takes-pole-bid-seal-world-title-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "Lewis Hamilton edges Max Verstappen to go quickest in final practice at United States Grand Prix",
      "resumen": "Kimi Antonelli faces a Ferrari-shaped threat to his hopes of clinching the Formula 1 world championship in Texas as Lewis Hamilton topped final practice at the United States Grand Prix.",
      "fecha": "2026-10-24T18:46:58Z",
@@ -2635,20 +2649,6 @@
      "fecha": "2026-10-24T00:42:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250043/united-states-grand-prix-circuit-americas-boss-driver-concerns-turn-1-not-acceptable-my-mind-united-states-grand-prix-austin-formula-1"
-    },
-    {
-     "titulo": "Ferrari's Charles Leclerc sets pace in second practice from Kimi Antonelli at United States Grand Prix",
-     "resumen": "Charles Leclerc topped the timesheets during the second practice session at the United Grand Prix on Friday, as Ferrari continued to show promising signs with its new upgrades.",
-     "fecha": "2026-10-23T22:29:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735196_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250038/ferrari-charles-leclerc-sets-pace-second-practice-kimi-antonelli-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Charles Leclerc quickest in first practice at United States Grand Prix",
-     "resumen": "Charles Leclerc set the pace in the first practice session at the United States Grand Prix.",
-     "fecha": "2026-10-23T21:07:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735092_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250033/charles-leclerc-quickest-first-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
     }
    ],
    "resultados": null,
@@ -2666,10 +2666,31 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "UFC 333 live results, analysis for Volkanovski vs. Evloev, Yan vs. Dvalishvili",
-     "resumen": "ESPN MMA contributors break down all the action from UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-24T20:17:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735408_1296x729_16-9.jpg",
+     "titulo": "Alexander Volkanovski, Petr Yan solidify their greatness at UFC 333",
+     "resumen": "Facing tough tests, the champions at UFC 333 proved their all-time mettle in their respective divisions.",
+     "fecha": "2026-10-24T23:07:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
+    },
+    {
+     "titulo": "Alexander Volkanovski stops Movsar Evloev in 2nd round to retain title",
+     "resumen": "Alexander Volkanovski defended his featherweight title for the second time this year Saturday, knocking out undefeated challenger Movsar Evloev at 4:54 of the second round at UFC 333 in Abu Dhabi.",
+     "fecha": "2026-10-24T23:00:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50270358/volkanovski-keeps-title-2nd-round-ko-evloev"
+    },
+    {
+     "titulo": "Petr Yan completes trilogy with gritty win over Merab Dvalishvili to defend title",
+     "resumen": "Petr Yan beat Merab Dvalishvili via unanimous decision in the co-main event of UFC 333, completing their trilogy with two straight victories.",
+     "fecha": "2026-10-24T22:38:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735597_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/ufc/story/_/id/50269828/petr-yan-completes-trilogy-gritty-win-merab-dvalishvili-defend-title"
+    },
+    {
+     "titulo": "UFC 333 results: Volkanovski and Yan win to retain titles",
+     "resumen": "Alexander Volkanovski and Petr Yan held on to their titles with big wins at the top of the UFC 333 fight card.",
+     "fecha": "2026-10-24T21:40:47Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735621_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
     },
     {
@@ -2685,27 +2706,6 @@
      "fecha": "2026-10-23T13:47:33Z",
      "imagen": "https://a.espncdn.com/photo/2026/1023/r1734959_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50257331/petr-yan-merab-dvalishvili-trilogy"
-    },
-    {
-     "titulo": "UFC 333 preview and picks for featherweight, men's bantamweight titles",
-     "resumen": "Check out the matchups and expert predictions for both championship fights at UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-22T15:23:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1021/r1733959_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50238314/ufc-333-preview-picks"
-    },
-    {
-     "titulo": "Khamzat Chimaev pushes for Sean Strickland rematch",
-     "resumen": "Khamzat Chimaev believes he should still be the UFC's middleweight champion and wants Sean Strickland to accept a rematch if he is serious about making money.",
-     "fecha": "2026-10-22T05:19:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0511/r1656524_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50245442/khamzat-chimaev-sean-strickland-rematch"
-    },
-    {
-     "titulo": "Volkanovski I sacrificed a lot of myself to be where I am",
-     "resumen": "Ahead of UFC333, UFC Featherweight champion Alex Volkanovski reflects on the sacrifice and dedication it takes to be a champion in the UFC.",
-     "fecha": "2026-10-22T00:17:48Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1021/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50242989/volkanovski-sacrificed-lot-be-where-am"
     }
    ],
    "resultados": [
@@ -2855,6 +2855,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
      "categoria": "Middleweight",
      "record": "30-7-1",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3949584",
+     "nombre": "Alexander Volkanovski",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+     "categoria": "Featherweight",
+     "record": "29-4-0",
      "peleas": 2,
      "gano": 2
     },
@@ -3089,15 +3098,6 @@
      "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
      "categoria": "Bantamweight",
      "record": "16-0-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4835135",
-     "nombre": "Jasmine Jasudavicius",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-     "categoria": "W Flyweight",
-     "record": "16-4-0",
      "peleas": 2,
      "gano": 2
     }
