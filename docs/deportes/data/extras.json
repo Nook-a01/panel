@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T10:56:44.649Z",
+ "actualizado": "2026-10-24T14:30:44.378Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -424,9 +422,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1045,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1082,9 +1078,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1569,8 +1564,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1593,8 +1589,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1605,8 +1602,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1617,8 +1615,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1677,8 +1676,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1689,8 +1689,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -2597,18 +2598,25 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-24T12:15:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-24T12:13:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
      "titulo": "COTA boss addresses driver concerns ahead of United States GP: 'Turn 1 not acceptable in my mind'",
      "resumen": "Austin's Circuit of the Americas is \"in really good shape\" everywhere except one spot at Turn 1, according to the venue owner, following a suggestion from Max Verstappen that the circuit's bumpy surface might cause him spine damage.",
      "fecha": "2026-10-24T00:42:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250043/united-states-grand-prix-circuit-americas-boss-driver-concerns-turn-1-not-acceptable-my-mind-united-states-grand-prix-austin-formula-1"
-    },
-    {
-     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-23T22:35:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "Ferrari's Charles Leclerc sets pace in second practice from Kimi Antonelli at United States Grand Prix",
@@ -2630,13 +2638,6 @@
      "fecha": "2026-10-23T18:22:14Z",
      "imagen": "https://a.espncdn.com/photo/2026/1023/r1735073_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250031/fia-president-hints-long-awaited-f1-v8-engine-return-watch-space"
-    },
-    {
-     "titulo": "Hamilton's hilarious advice for championship leader Antonelli",
-     "resumen": "Hamilton's hilarious advice for championship leader Antonelli",
-     "fecha": "2026-10-23T10:39:19Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1023/dm_261023_Hamiltons_hilarious_advice_for_championship_leader_Antonelli/dm_261023_Hamiltons_hilarious_advice_for_championship_leader_Antonelli.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50256537/hamilton-hilarious-advice-championship-leader-antonelli"
     }
    ],
    "resultados": null,
@@ -2653,6 +2654,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "UFC 333 live results, analysis for Volkanovski vs. Evloev, Yan vs. Dvalishvili",
+     "resumen": "ESPN MMA contributors break down all the action from UFC 333 in Abu Dhabi.",
+     "fecha": "2026-10-24T14:11:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735408_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
+    },
     {
      "titulo": "After two opposite fights, what should be expected from Yan vs. Dvalishvili 3",
      "resumen": "Merab Dvalishvili has tweaked his fight plan, while Yan has gone all-in on his. Which strategy will win out?",
@@ -2675,13 +2683,6 @@
      "link": "https://www.espn.com/mma/story/_/id/50245442/khamzat-chimaev-sean-strickland-rematch"
     },
     {
-     "titulo": "Retirement doesn't scare Alexander Volkanovski, but neither does fighting at 40",
-     "resumen": "Even at 38 years old, UFC featherweight champion Alexander Volkanovski says he will deliver one of the finest performances of his career at UFC 333.",
-     "fecha": "2026-10-22T00:20:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1020/r1733207_1296x518_5-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50223020/alexander-volkanovski-ufc-333"
-    },
-    {
      "titulo": "Volkanovski I sacrificed a lot of myself to be where I am",
      "resumen": "Ahead of UFC333, UFC Featherweight champion Alex Volkanovski reflects on the sacrifice and dedication it takes to be a champion in the UFC.",
      "fecha": "2026-10-22T00:17:48Z",
@@ -2697,6 +2698,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC 333: Volkanovski vs. Evloev",
+     "fecha": "2026-10-24T14:00Z",
+     "marcador": null,
+     "sede": "Etihad Arena"
+    },
     {
      "titulo": "UFC Fight Night: Buckley vs. Malott",
      "fecha": "2026-10-17T21:00Z",
