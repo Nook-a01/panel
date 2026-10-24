@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T18:07:23.397Z",
+ "actualizado": "2026-10-24T20:46:40.489Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -50,6 +50,19 @@
       "pos": 2
      },
      {
+      "equipo": "Lanús",
+      "abrev": "LAN",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "pj": "14",
+      "pts": "24",
+      "g": "7",
+      "e": "3",
+      "p": "4",
+      "dg": "+7",
+      "mio": false,
+      "pos": 3
+     },
+     {
       "equipo": "Defensa y Justicia",
       "abrev": "DYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
@@ -60,7 +73,7 @@
       "p": "3",
       "dg": "+6",
       "mio": false,
-      "pos": 3
+      "pos": 4
      },
      {
       "equipo": "Vélez Sarsfield",
@@ -72,19 +85,6 @@
       "e": "6",
       "p": "1",
       "dg": "+5",
-      "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Lanús",
-      "abrev": "LAN",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "13",
-      "pts": "23",
-      "g": "7",
-      "e": "2",
-      "p": "4",
-      "dg": "+7",
       "mio": false,
       "pos": 5
      },
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -710,9 +711,8 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "421348",
@@ -945,9 +945,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1044,9 +1043,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1105,8 +1103,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "207343",
@@ -1165,8 +1164,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1352,12 +1352,12 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "30",
-      "pts": "67",
-      "g": "20",
+      "pj": "31",
+      "pts": "70",
+      "g": "21",
       "e": "7",
       "p": "3",
-      "dg": "+41",
+      "dg": "+43",
       "mio": false,
       "pos": 1
      },
@@ -1534,12 +1534,12 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "25",
       "g": "6",
       "e": "7",
-      "p": "17",
-      "dg": "-24",
+      "p": "18",
+      "dg": "-26",
       "mio": false,
       "pos": 15
      }
@@ -1592,8 +1592,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1678,8 +1679,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1690,8 +1692,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1959,6 +1962,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Nashville SC wins 1st MLS Supporters' Shield title, eyes points record",
+     "resumen": "Nashville SC clinched the 2026 MLS Supporters' Shield title after a 2-0 victory at CF Montréal on Saturday, winning the trophy for the first time in club history.",
+     "fecha": "2026-10-24T20:14:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735553_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50260337/nashville-sc-1st-mls-supporters-shield-title"
+    },
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
@@ -2290,9 +2300,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2598,6 +2609,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton edges Max Verstappen to go quickest in final practice at United States Grand Prix",
+     "resumen": "Kimi Antonelli faces a Ferrari-shaped threat to his hopes of clinching the Formula 1 world championship in Texas as Lewis Hamilton topped final practice at the United States Grand Prix.",
+     "fecha": "2026-10-24T18:46:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735091_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250062/lewis-hamilton-edges-max-verstappen-go-quickest-final-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
      "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
      "fecha": "2026-10-24T12:15:30Z",
@@ -2631,13 +2649,6 @@
      "fecha": "2026-10-23T21:07:48Z",
      "imagen": "https://a.espncdn.com/photo/2026/1023/r1735092_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250033/charles-leclerc-quickest-first-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "FIA president hints at long-awaited F1 V8 engine return: 'Watch this space'",
-     "resumen": "FIA president Mohammed Ben Sulayem has teased imminent news about Formula 1's long-awaited return to V8 engines in the next decade, saying \"watch this space.\"",
-     "fecha": "2026-10-23T18:22:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735073_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250031/fia-president-hints-long-awaited-f1-v8-engine-return-watch-space"
     }
    ],
    "resultados": null,
@@ -2657,9 +2668,16 @@
     {
      "titulo": "UFC 333 live results, analysis for Volkanovski vs. Evloev, Yan vs. Dvalishvili",
      "resumen": "ESPN MMA contributors break down all the action from UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-24T17:56:18Z",
+     "fecha": "2026-10-24T20:17:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735408_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
+    },
+    {
+     "titulo": "Lone'er Kavanagh shoots into flyweight title talk with devastating finish at UFC 333",
+     "resumen": "England's Lone'er Kavanagh catapulted himself into flyweight title contention on Saturday with a devastating Round 1 finish of Ramazonbek Temirov in Abu Dhabi.",
+     "fecha": "2026-10-24T20:16:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735580_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/ufc/story/_/id/50267857/loneer-kavanagh-shoots-flyweight-title-talk-devastating-finish-ufc-333"
     },
     {
      "titulo": "After two opposite fights, what should be expected from Yan vs. Dvalishvili 3",
@@ -2688,13 +2706,6 @@
      "fecha": "2026-10-22T00:17:48Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1021/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022/dm_261021_MMA_Interview_Volkanovski_I_sacrificed_a_lot_of_myself_to_be_where_I_am_20261022.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50242989/volkanovski-sacrificed-lot-be-where-am"
-    },
-    {
-     "titulo": "Blanchfield out, Suarez and Jandiroba move up in pound-for-pound rankings",
-     "resumen": "After winning UFC women's flyweight title, Silva rises in ESPN's P4P top 10.",
-     "fecha": "2026-10-21T13:59:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1006/r1726812_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     }
    ],
    "resultados": [
@@ -2803,6 +2814,15 @@
      "gano": 3
     },
     {
+     "id": "5291025",
+     "nombre": "Abdul-Rakhman Yakhyaev",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+     "categoria": "Light Heavyweight",
+     "record": "11-0-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
      "id": "4049391",
      "nombre": "Josh Hokit",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -2812,11 +2832,29 @@
      "gano": 3
     },
     {
+     "id": "2993650",
+     "nombre": "Alexander Volkov",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+     "categoria": "Heavyweight",
+     "record": "41-11-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
      "id": "3093653",
      "nombre": "Sean Strickland",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "categoria": "Middleweight",
      "record": "31-7-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3077822",
+     "nombre": "Abus Magomedov",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+     "categoria": "Middleweight",
+     "record": "30-7-1",
      "peleas": 2,
      "gano": 2
     },
@@ -2844,6 +2882,24 @@
      "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
      "categoria": "Middleweight",
      "record": "26-3-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3960340",
+     "nombre": "Abubakar Vagaev",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+     "categoria": "Middleweight",
+     "record": "26-4-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
+     "id": "3931156",
+     "nombre": "Grant Dawson",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Lightweight",
+     "record": "25-3-1",
      "peleas": 2,
      "gano": 2
     },
@@ -3019,6 +3075,15 @@
      "gano": 2
     },
     {
+     "id": "4233039",
+     "nombre": "Dominick Reyes",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Light Heavyweight",
+     "record": "17-5-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
      "id": "5016786",
      "nombre": "Farid Basharat",
      "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
@@ -3033,60 +3098,6 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
      "categoria": "W Flyweight",
      "record": "16-4-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4300149",
-     "nombre": "Roman Kopylov",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
-     "categoria": "Middleweight",
-     "record": "16-5-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5204223",
-     "nombre": "Kaan Ofli",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Featherweight",
-     "record": "15-4-1",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4694832",
-     "nombre": "Cam Rowston",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-     "categoria": "Middleweight",
-     "record": "15-3-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4503229",
-     "nombre": "David Martinez",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-     "categoria": "Bantamweight",
-     "record": "15-1-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5085291",
-     "nombre": "Manoel Sousa",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Lightweight",
-     "record": "15-1-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5060483",
-     "nombre": "Vitor Petrino",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Heavyweight",
-     "record": "15-2-0",
      "peleas": 2,
      "gano": 2
     }
