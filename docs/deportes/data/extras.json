@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T14:30:44.378Z",
+ "actualizado": "2026-10-24T18:07:23.397Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -710,8 +710,9 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421348",
@@ -1030,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1253,6 +1256,13 @@
    ],
    "noticias": [
     {
+     "titulo": "How can teams stop Erling Haaland?",
+     "resumen": "How can teams stop Erling Haaland?",
+     "fecha": "2026-10-24T14:27:22Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_How_can_teams_stop_Erling_Haaland/dm_261024_How_can_teams_stop_Erling_Haaland.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50265810/how-teams-stop-erling-haaland"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-10-23T19:18:18Z",
@@ -1321,13 +1331,6 @@
      "fecha": "2026-10-16T08:59:30Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50194882/mourinho-adopting-victim-mentality-following-vinicius-junior-suspension"
-    },
-    {
-     "titulo": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
-     "resumen": "De Zerbi: Bentancur red card encouraged Tottenham to play with more character",
-     "fecha": "2026-10-11T13:54:15Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1011/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character/dm_261011_De_Zerbi_Bentancur_red_card_encouraged_Tottenham_to_play_with_more_character.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50156783/bentancur-red-card-encouraged-tottenham-play-more-character"
     }
    ],
    "resultados": null,
@@ -1589,9 +1592,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1676,9 +1678,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1689,9 +1690,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2657,7 +2657,7 @@
     {
      "titulo": "UFC 333 live results, analysis for Volkanovski vs. Evloev, Yan vs. Dvalishvili",
      "resumen": "ESPN MMA contributors break down all the action from UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-24T14:11:17Z",
+     "fecha": "2026-10-24T17:56:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735408_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
     },
