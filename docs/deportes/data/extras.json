@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T01:08:47.054Z",
+ "actualizado": "2026-10-25T06:05:47.904Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -615,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -945,9 +947,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -970,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1007,9 +1007,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1093,9 +1092,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1166,8 +1164,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1178,8 +1177,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1257,6 +1257,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Alex Freeman adding to banner 2026 with goal",
+     "resumen": "See why Alex Freeman is adding to his stellar year with another sensational goal.",
+     "fecha": "2026-10-25T01:54:18Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_USMNT_FREEMAN/dm_261024_USMNT_FREEMAN.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50272689/alex-freeman-adding-banner-2026-goal"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-10-24T23:40:45Z",
@@ -1325,13 +1332,6 @@
      "fecha": "2026-10-16T10:46:52Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch/dm_261016_Gomez_Messi_will_keep_playing_as_long_as_he_finds_joy_on_the_pitch.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50195091/messi-keep-playing-long-finds-joy-pitch"
-    },
-    {
-     "titulo": "Hislop: Mourinho adopting 'victim mentality' following Vinícius Júnior suspension",
-     "resumen": "Hislop: Mourinho adopting 'victim mentality' following Vinícius Júnior suspension",
-     "fecha": "2026-10-16T08:59:30Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1016/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension/dm_261016_Hislop_Mourinho_adopting_victim_mentality_following_Vinicius_Junior_suspension.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50194882/mourinho-adopting-victim-mentality-following-vinicius-junior-suspension"
     }
    ],
    "resultados": null,
@@ -1379,12 +1379,12 @@
       "equipo": "New England Revolution",
       "abrev": "NE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "30",
-      "pts": "52",
-      "g": "16",
+      "pj": "31",
+      "pts": "55",
+      "g": "17",
       "e": "4",
       "p": "10",
-      "dg": "+8",
+      "dg": "+9",
       "mio": false,
       "pos": 3
      },
@@ -1392,12 +1392,12 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "30",
-      "pts": "48",
-      "g": "14",
+      "pj": "31",
+      "pts": "51",
+      "g": "15",
       "e": "6",
       "p": "10",
-      "dg": "+8",
+      "dg": "+9",
       "mio": false,
       "pos": 4
      },
@@ -1405,12 +1405,12 @@
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "47",
       "g": "13",
       "e": "8",
-      "p": "9",
-      "dg": "+8",
+      "p": "10",
+      "dg": "+7",
       "mio": false,
       "pos": 5
      },
@@ -1418,38 +1418,38 @@
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "46",
       "g": "13",
       "e": "7",
-      "p": "10",
-      "dg": "+13",
+      "p": "11",
+      "dg": "+12",
       "mio": false,
       "pos": 6
-     },
-     {
-      "equipo": "Orlando City SC",
-      "abrev": "ORL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "30",
-      "pts": "41",
-      "g": "12",
-      "e": "5",
-      "p": "13",
-      "dg": "-12",
-      "mio": false,
-      "pos": 7
      },
      {
       "equipo": "FC Cincinnati",
       "abrev": "CIN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "30",
-      "pts": "39",
-      "g": "10",
+      "pj": "31",
+      "pts": "42",
+      "g": "11",
       "e": "9",
       "p": "11",
-      "dg": "-9",
+      "dg": "-7",
+      "mio": false,
+      "pos": 7
+     },
+     {
+      "equipo": "Orlando City SC",
+      "abrev": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "pj": "31",
+      "pts": "42",
+      "g": "12",
+      "e": "6",
+      "p": "13",
+      "dg": "-12",
       "mio": false,
       "pos": 8
      },
@@ -1496,10 +1496,10 @@
       "equipo": "New York City FC",
       "abrev": "NYC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "30",
-      "pts": "34",
+      "pj": "31",
+      "pts": "35",
       "g": "8",
-      "e": "10",
+      "e": "11",
       "p": "12",
       "dg": "+2",
       "mio": false,
@@ -1509,12 +1509,12 @@
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "33",
       "g": "7",
       "e": "12",
-      "p": "11",
-      "dg": "-15",
+      "p": "12",
+      "dg": "-17",
       "mio": false,
       "pos": 13
      },
@@ -1522,12 +1522,12 @@
       "equipo": "Atlanta United FC",
       "abrev": "ATL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "30",
       "g": "8",
       "e": "6",
-      "p": "16",
-      "dg": "-14",
+      "p": "17",
+      "dg": "-15",
       "mio": false,
       "pos": 14
      },
@@ -1617,9 +1617,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1727,9 +1726,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1740,9 +1738,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1963,6 +1960,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Atlanta United FC vs. Chicago Fire FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Atlanta United FC vs. Chicago Fire FC, 10/24/2026",
+     "fecha": "2026-10-25T03:12:20Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1025/4d32b577-2da1-4540-9251-67f3463653f0/4d32b577-2da1-4540-9251-67f3463653f0.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50272841/atlanta-united-fc-vs-chicago-fire-fc-game-highlights"
+    },
+    {
+     "titulo": "Orlando City SC vs. New York City FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Orlando City SC vs. New York City FC, 10/24/2026",
+     "fecha": "2026-10-25T02:38:18Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1025/99fa13a8-4bf0-485d-9f15-b7d5c6cf2b43/99fa13a8-4bf0-485d-9f15-b7d5c6cf2b43.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50272937/orlando-city-sc-vs-new-york-city-fc-game-highlights"
+    },
+    {
+     "titulo": "Philadelphia Union vs. New England Revolution - Game Highlights",
+     "resumen": "Watch the Game Highlights from Philadelphia Union vs. New England Revolution, 10/24/2026",
+     "fecha": "2026-10-25T02:23:59Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1025/5fbc486e-1838-4516-b842-918d4d14dbcf/5fbc486e-1838-4516-b842-918d4d14dbcf.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50272944/philadelphia-union-vs-new-england-revolution-game-highlights"
+    },
+    {
+     "titulo": "Evander stunner helps Cincinnati beat D.C. United",
+     "resumen": "Evander had a goal and an assist, Tom Barlow also scored and Cincinnati beat D.C. United 2-0 on Saturday night.",
+     "fecha": "2026-10-25T02:01:58Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761895.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761895"
+    },
+    {
      "titulo": "Lionel Messi comes off bench as Casemiro own goal sees Red Bulls beat Miami",
      "resumen": "Lionel Messi came off the bench early in the second half but couldn't prevent Inter Miami's three-game win streak coming to an end with a 2-0 loss at Red Bull New York on Saturday.",
      "fecha": "2026-10-25T00:31:37Z",
@@ -1975,34 +2000,6 @@
      "fecha": "2026-10-25T00:15:14Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761891.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761891"
-    },
-    {
-     "titulo": "New York Red Bulls vs. Inter Miami CF - Game Highlights",
-     "resumen": "Watch the Game Highlights from New York Red Bulls vs. Inter Miami CF, 10/24/2026",
-     "fecha": "2026-10-24T23:52:16Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1024/a0d7db68-61f1-407a-813b-6d87f0cc9b45/a0d7db68-61f1-407a-813b-6d87f0cc9b45.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50271403/new-york-red-bulls-vs-inter-miami-cf-game-highlights"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-24T23:40:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Amundsen scores twice as Crew beat Toronto for 5th win in last 6 games",
-     "resumen": "Malte Amundsen scored two goals. his first career multi-goal game in MLS, Gonzalo Tapia and Brooks Lennon each added a goal, and the Columbus Crew beat Toronto FC 4-1 on Saturday.",
-     "fecha": "2026-10-24T22:18:07Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761890.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761890"
-    },
-    {
-     "titulo": "Nashville SC wins 1st MLS Supporters' Shield title, eyes points record",
-     "resumen": "Nashville SC clinched the 2026 MLS Supporters' Shield title after a 2-0 victory at CF Montréal on Saturday, winning the trophy for the first time in club history.",
-     "fecha": "2026-10-24T21:05:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735553_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50260337/nashville-sc-1st-mls-supporters-shield-title"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2615,6 +2612,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Charles Leclerc seeking answers after Ferrari hopes fall short in United States GP qualifying",
+     "resumen": "Charles Leclerc has said Ferrari needs to find answers to why it appears to struggle so much compared to its rivals to extract the most out of Q3 after another deflating qualifying performance at the United States Grand Prix.",
+     "fecha": "2026-10-25T01:22:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1735716_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250076/charles-leclerc-seeking-answers-ferrari-hopes-fall-short-united-states-gp-qualifying-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "Lewis Hamilton praises United States Grand Prix: 'Unbelievable, one of the best overall circuits'",
      "resumen": "Lewis Hamilton praised Austin's \"unbelievable\" Circuit of the Americas as the blueprint other Formula 1 venues should follow, brushing off criticisms over a new corporate building atop the venue's famous Turn 1 hill.",
      "fecha": "2026-10-25T00:46:06Z",
@@ -2634,13 +2638,6 @@
      "fecha": "2026-10-25T00:08:23Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735699_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250074/max-verstappen-taking-painkillers-deal-impossible-bumps-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-24T23:56:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "Kimi Antonelli takes pole in bid to seal world title at United States Grand Prix",
