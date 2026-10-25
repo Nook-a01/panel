@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T11:23:47.223Z",
+ "actualizado": "2026-10-25T16:14:47.416Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -972,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1046,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1083,9 +1080,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1108,9 +1104,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1157,9 +1152,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1170,9 +1164,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1183,9 +1176,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1232,9 +1224,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1574,8 +1565,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1598,8 +1590,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1610,8 +1603,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1682,8 +1676,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -2616,6 +2611,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen hits back at COTA boss: 'Wouldn't be able to walk' if he drove my car",
+     "resumen": "Max Verstappen hit back at the Circuit of the Americas downplaying his concerns over the bumpy U.S. Grand Prix track, saying on Saturday that the event boss \"wouldn't be able to walk anymore\" if he did five laps in his Red Bull this weekend.",
+     "fecha": "2026-10-25T16:03:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50277461/max-verstappen-hits-back-cota-boss-able-walk-drove-my-car"
+    },
+    {
+     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-25T12:04:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "Charles Leclerc seeking answers after Ferrari hopes fall short in United States GP qualifying",
      "resumen": "Charles Leclerc has said Ferrari needs to find answers to why it appears to struggle so much compared to its rivals to extract the most out of Q3 after another deflating qualifying performance at the United States Grand Prix.",
      "fecha": "2026-10-25T01:22:32Z",
@@ -2642,20 +2651,6 @@
      "fecha": "2026-10-25T00:08:23Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735699_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250074/max-verstappen-taking-painkillers-deal-impossible-bumps-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Kimi Antonelli takes pole in bid to seal world title at United States Grand Prix",
-     "resumen": "Kimi Antonelli has put himself in prime position to seal the world title at the United States Grand after taking pole position.",
-     "fecha": "2026-10-24T22:50:53Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735672_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250072/kimi-antonelli-takes-pole-bid-seal-world-title-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Lewis Hamilton edges Max Verstappen to go quickest in final practice at United States Grand Prix",
-     "resumen": "Kimi Antonelli faces a Ferrari-shaped threat to his hopes of clinching the Formula 1 world championship in Texas as Lewis Hamilton topped final practice at the United States Grand Prix.",
-     "fecha": "2026-10-24T18:46:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735091_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250062/lewis-hamilton-edges-max-verstappen-go-quickest-final-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
     }
    ],
    "resultados": null,
@@ -2672,6 +2667,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Alexander Volkanovski stops Movsar Evloev in second round to retain title",
+     "resumen": "Alexander Volkanovski defended his featherweight title for the second time this year Saturday, knocking out undefeated challenger Movsar Evloev at 4:54 of the second round at UFC 333 in Abu Dhabi.",
+     "fecha": "2026-10-25T11:44:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50270358/volkanovski-keeps-title-2nd-round-ko-evloev"
+    },
     {
      "titulo": "Alex Volkanovski defends his title at UFC 333",
      "resumen": "Australia's Alex Volkanovski KO's Movsar Evloev in Round 2 at UFC 333 to retain his featherweight title in dominant fashion.",
@@ -2692,13 +2694,6 @@
      "fecha": "2026-10-24T23:28:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
-    },
-    {
-     "titulo": "Alexander Volkanovski stops Movsar Evloev in 2nd round to retain title",
-     "resumen": "Alexander Volkanovski defended his featherweight title for the second time this year Saturday, knocking out undefeated challenger Movsar Evloev at 4:54 of the second round at UFC 333 in Abu Dhabi.",
-     "fecha": "2026-10-24T23:00:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50270358/volkanovski-keeps-title-2nd-round-ko-evloev"
     },
     {
      "titulo": "Petr Yan completes trilogy with gritty win over Merab Dvalishvili to defend title",
