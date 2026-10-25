@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T23:11:27.675Z",
+ "actualizado": "2026-10-25T01:08:47.054Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -92,10 +92,10 @@
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-      "pj": "13",
-      "pts": "20",
+      "pj": "14",
+      "pts": "21",
       "g": "5",
-      "e": "5",
+      "e": "6",
       "p": "3",
       "dg": "+3",
       "mio": false,
@@ -131,10 +131,10 @@
       "equipo": "San Lorenzo",
       "abrev": "SLO",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "13",
-      "pts": "17",
+      "pj": "14",
+      "pts": "18",
       "g": "5",
-      "e": "2",
+      "e": "3",
       "p": "6",
       "dg": "-5",
       "mio": false,
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1008,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1093,8 +1093,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1256,18 +1257,18 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-24T23:40:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
      "titulo": "How can teams stop Erling Haaland?",
      "resumen": "How can teams stop Erling Haaland?",
      "fecha": "2026-10-24T14:27:22Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_How_can_teams_stop_Erling_Haaland/dm_261024_How_can_teams_stop_Erling_Haaland.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50265810/how-teams-stop-erling-haaland"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-23T19:18:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "Asian football chief backs Gianni Infantino for another term as FIFA president",
@@ -1365,12 +1366,12 @@
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "30",
+      "pj": "31",
       "pts": "55",
       "g": "15",
       "e": "10",
-      "p": "5",
-      "dg": "+22",
+      "p": "6",
+      "dg": "+20",
       "mio": true,
       "pos": 2
      },
@@ -1453,6 +1454,19 @@
       "pos": 8
      },
      {
+      "equipo": "Red Bull New York",
+      "abrev": "RBNY",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "pj": "31",
+      "pts": "39",
+      "g": "11",
+      "e": "6",
+      "p": "14",
+      "dg": "-15",
+      "mio": false,
+      "pos": 9
+     },
+     {
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
@@ -1463,7 +1477,7 @@
       "p": "15",
       "dg": "+1",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Toronto FC",
@@ -1475,19 +1489,6 @@
       "e": "12",
       "p": "11",
       "dg": "-11",
-      "mio": false,
-      "pos": 10
-     },
-     {
-      "equipo": "Red Bull New York",
-      "abrev": "RBNY",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "30",
-      "pts": "36",
-      "g": "10",
-      "e": "6",
-      "p": "14",
-      "dg": "-17",
       "mio": false,
       "pos": 11
      },
@@ -1567,8 +1568,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1615,8 +1617,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1675,8 +1678,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1723,8 +1727,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1735,8 +1740,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1957,6 +1963,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Lionel Messi comes off bench as Casemiro own goal sees Red Bulls beat Miami",
+     "resumen": "Lionel Messi came off the bench early in the second half but couldn't prevent Inter Miami's three-game win streak coming to an end with a 2-0 loss at Red Bull New York on Saturday.",
+     "fecha": "2026-10-25T00:31:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50271291/lionel-messi-red-bull-new-york-vs-inter-miami-casemiro"
+    },
+    {
+     "titulo": "Forsberg caps Red Bulls win over Inter Miami",
+     "resumen": "Emil Forsberg scored an insurance goal early in second-half stoppage time and the New York Red Bulls beat Inter Miami 2-0 on Saturday to stay above the playoff line.",
+     "fecha": "2026-10-25T00:15:14Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761891.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761891"
+    },
+    {
+     "titulo": "New York Red Bulls vs. Inter Miami CF - Game Highlights",
+     "resumen": "Watch the Game Highlights from New York Red Bulls vs. Inter Miami CF, 10/24/2026",
+     "fecha": "2026-10-24T23:52:16Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1024/a0d7db68-61f1-407a-813b-6d87f0cc9b45/a0d7db68-61f1-407a-813b-6d87f0cc9b45.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50271403/new-york-red-bulls-vs-inter-miami-cf-game-highlights"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-24T23:40:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
      "titulo": "Amundsen scores twice as Crew beat Toronto for 5th win in last 6 games",
      "resumen": "Malte Amundsen scored two goals. his first career multi-goal game in MLS, Gonzalo Tapia and Brooks Lennon each added a goal, and the Columbus Crew beat Toronto FC 4-1 on Saturday.",
      "fecha": "2026-10-24T22:18:07Z",
@@ -1969,34 +2003,6 @@
      "fecha": "2026-10-24T21:05:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735553_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50260337/nashville-sc-1st-mls-supporters-shield-title"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-23T19:18:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Transfer rumors, news: Barcelona to end up signing Sullivan?",
-     "resumen": "Cavan Sullivan has a pre-contract agreement with Manchester City, but could Barcelona swoop up and sign the young American prospect? Transfer Talk has the latest.",
-     "fecha": "2026-10-23T18:39:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735106_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50255747/transfer-rumors-news-comos-paz-destroyed-man-united-now-want-sign-him"
-    },
-    {
-     "titulo": "Miami coach praises Messi's 'commitment' to play after award in Spain",
-     "resumen": "Inter Miami head coach Cristian \"Kily\" Gonzalez confirmed Lionel Messi will rejoin the team for the match against the New York Red Bulls on Saturday after receiving the Princess of Asturias award for sport in Oviedo, Spain.",
-     "fecha": "2026-10-23T17:33:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735071_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50259002/lionel-messi-inter-miami-red-bulls-princess-asturias-award"
-    },
-    {
-     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
-     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
-     "fecha": "2026-10-23T08:57:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2609,11 +2615,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Lewis Hamilton praises United States Grand Prix: 'Unbelievable, one of the best overall circuits'",
+     "resumen": "Lewis Hamilton praised Austin's \"unbelievable\" Circuit of the Americas as the blueprint other Formula 1 venues should follow, brushing off criticisms over a new corporate building atop the venue's famous Turn 1 hill.",
+     "fecha": "2026-10-25T00:46:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1735715_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250075/lewis-hamilton-praises-united-states-grand-prix-unbelievable-one-best-overall-circuits-americas-austin-formula-1"
+    },
+    {
      "titulo": "Kimi Antonelli ecstatic with first pole since July at United States GP: 'It's good to be back'",
      "resumen": "Kimi Antonelli declared \"it's good to be back\" as he inched ever closer to his first Formula 1 world championship with an overdue pole position at the United States Grand Prix.",
-     "fecha": "2026-10-24T22:57:28Z",
+     "fecha": "2026-10-25T00:10:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735657_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250073/kimi-antonelli-ecstatic-first-pole-july-good-back-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen taking painkillers to deal with 'impossible' bumps at United States Grand Prix circuit",
+     "resumen": "Max Verstappen has said he is on painkillers and has to lift himself out of the seat at certain points just to complete laps at the United States Grand Prix, although feelings on the bumpiness at the Circuit of the Americas was mixed after qualifying.",
+     "fecha": "2026-10-25T00:08:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735699_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250074/max-verstappen-taking-painkillers-deal-impossible-bumps-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
+     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
+     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
+     "fecha": "2026-10-24T23:56:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "Kimi Antonelli takes pole in bid to seal world title at United States Grand Prix",
@@ -2628,27 +2655,6 @@
      "fecha": "2026-10-24T18:46:58Z",
      "imagen": "https://a.espncdn.com/photo/2026/1023/r1735091_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250062/lewis-hamilton-edges-max-verstappen-go-quickest-final-practice-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-24T12:15:30Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-24T12:13:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "COTA boss addresses driver concerns ahead of United States GP: 'Turn 1 not acceptable in my mind'",
-     "resumen": "Austin's Circuit of the Americas is \"in really good shape\" everywhere except one spot at Turn 1, according to the venue owner, following a suggestion from Max Verstappen that the circuit's bumpy surface might cause him spine damage.",
-     "fecha": "2026-10-24T00:42:11Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250043/united-states-grand-prix-circuit-americas-boss-driver-concerns-turn-1-not-acceptable-my-mind-united-states-grand-prix-austin-formula-1"
     }
    ],
    "resultados": null,
@@ -2666,9 +2672,23 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Alex Volkanovski defends his title at UFC 333",
+     "resumen": "Australia's Alex Volkanovski KO's Movsar Evloev in Round 2 at UFC 333 to retain his featherweight title in dominant fashion.",
+     "fecha": "2026-10-25T00:12:11Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50271635/alex-volkanovski-defends-title-ufc-333"
+    },
+    {
+     "titulo": "Alex Volkanovski defends his title at UFC 333",
+     "resumen": "Australia's Alex Volkanovski KO's Movsar Evloev in Round 2 at UFC 333 to retain his featherweight title in dominant fashion.",
+     "fecha": "2026-10-25T00:05:32Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_AUS_ONLY/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50271575/alex-volkanovski-defends-title-ufc-333"
+    },
+    {
      "titulo": "Alexander Volkanovski, Petr Yan solidify their greatness at UFC 333",
      "resumen": "Facing tough tests, the champions at UFC 333 proved their all-time mettle in their respective divisions.",
-     "fecha": "2026-10-24T23:07:00Z",
+     "fecha": "2026-10-24T23:28:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
     },
@@ -2692,20 +2712,6 @@
      "fecha": "2026-10-24T21:40:47Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735621_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
-    },
-    {
-     "titulo": "Lone'er Kavanagh shoots into flyweight title talk with devastating finish at UFC 333",
-     "resumen": "England's Lone'er Kavanagh catapulted himself into flyweight title contention on Saturday with a devastating Round 1 finish of Ramazonbek Temirov in Abu Dhabi.",
-     "fecha": "2026-10-24T20:16:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735580_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/50267857/loneer-kavanagh-shoots-flyweight-title-talk-devastating-finish-ufc-333"
-    },
-    {
-     "titulo": "After two opposite fights, what should be expected from Yan vs. Dvalishvili 3",
-     "resumen": "Merab Dvalishvili has tweaked his fight plan, while Yan has gone all-in on his. Which strategy will win out?",
-     "fecha": "2026-10-23T13:47:33Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1734959_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50257331/petr-yan-merab-dvalishvili-trilogy"
     }
    ],
    "resultados": [
