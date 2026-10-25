@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T16:14:47.416Z",
+ "actualizado": "2026-10-25T19:03:55.869Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -971,8 +970,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1007,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1044,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1176,8 +1178,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1224,8 +1227,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1565,9 +1569,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1590,9 +1593,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1616,8 +1618,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1676,9 +1679,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1689,8 +1691,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -2112,7 +2115,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 17 carreras",
+    "titulo": "Temporada 2026 · tras 18 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2611,6 +2614,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "United States Grand Prix LIVE! F1 race updates in Austin, commentary and results",
+     "resumen": "Kimi Antonelli starts the United States Grand Prix on pole position from Max Verstappen.",
+     "fecha": "2026-10-25T19:02:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736008_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50259831/united-states-grand-prix-austin-2026-live-updates-results-analysis-commentary"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-25T18:51:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Alpine condemn Jeremy Clarkson's nationality comments on Franco Colapinto",
+     "resumen": "Jeremy Clarkson has been criticised for suggesting Alpine driver Franco Colapinto deserved a grid penalty because he is Argentinian.",
+     "fecha": "2026-10-25T18:32:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736001_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250085/alpine-condemn-jeremy-clarksons-nationality-comments-franco-colapinto-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "Max Verstappen hits back at COTA boss: 'Wouldn't be able to walk' if he drove my car",
      "resumen": "Max Verstappen hit back at the Circuit of the Americas downplaying his concerns over the bumpy U.S. Grand Prix track, saying on Saturday that the event boss \"wouldn't be able to walk anymore\" if he did five laps in his Red Bull this weekend.",
      "fecha": "2026-10-25T16:03:17Z",
@@ -2630,27 +2654,6 @@
      "fecha": "2026-10-25T01:22:32Z",
      "imagen": "https://a.espncdn.com/photo/2026/1025/r1735716_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250076/charles-leclerc-seeking-answers-ferrari-hopes-fall-short-united-states-gp-qualifying-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Lewis Hamilton praises United States Grand Prix: 'Unbelievable, one of the best overall circuits'",
-     "resumen": "Lewis Hamilton praised Austin's \"unbelievable\" Circuit of the Americas as the blueprint other Formula 1 venues should follow, brushing off criticisms over a new corporate building atop the venue's famous Turn 1 hill.",
-     "fecha": "2026-10-25T00:46:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1735715_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250075/lewis-hamilton-praises-united-states-grand-prix-unbelievable-one-best-overall-circuits-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Kimi Antonelli ecstatic with first pole since July at United States GP: 'It's good to be back'",
-     "resumen": "Kimi Antonelli declared \"it's good to be back\" as he inched ever closer to his first Formula 1 world championship with an overdue pole position at the United States Grand Prix.",
-     "fecha": "2026-10-25T00:10:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735657_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250073/kimi-antonelli-ecstatic-first-pole-july-good-back-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Max Verstappen taking painkillers to deal with 'impossible' bumps at United States Grand Prix circuit",
-     "resumen": "Max Verstappen has said he is on painkillers and has to lift himself out of the seat at certain points just to complete laps at the United States Grand Prix, although feelings on the bumpiness at the Circuit of the Americas was mixed after qualifying.",
-     "fecha": "2026-10-25T00:08:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735699_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250074/max-verstappen-taking-painkillers-deal-impossible-bumps-united-states-grand-prix-circuit-americas-austin-formula-1"
     }
    ],
    "resultados": null,
