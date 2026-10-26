@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T21:45:43.581Z",
+ "actualizado": "2026-10-26T00:21:30.522Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -37,6 +37,19 @@
       "pos": 1
      },
      {
+      "equipo": "Boca Juniors",
+      "abrev": "CABJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "pj": "14",
+      "pts": "27",
+      "g": "7",
+      "e": "6",
+      "p": "1",
+      "dg": "+8",
+      "mio": true,
+      "pos": 2
+     },
+     {
       "equipo": "Defensa y Justicia",
       "abrev": "DYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
@@ -47,19 +60,6 @@
       "p": "3",
       "dg": "+7",
       "mio": false,
-      "pos": 2
-     },
-     {
-      "equipo": "Boca Juniors",
-      "abrev": "CABJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "pj": "13",
-      "pts": "24",
-      "g": "6",
-      "e": "6",
-      "p": "1",
-      "dg": "+7",
-      "mio": true,
       "pos": 3
      },
      {
@@ -118,12 +118,12 @@
       "equipo": "Independiente",
       "abrev": "IND",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-      "pj": "13",
+      "pj": "14",
       "pts": "19",
       "g": "5",
       "e": "4",
-      "p": "4",
-      "dg": "-1",
+      "p": "5",
+      "dg": "-2",
       "mio": false,
       "pos": 8
      },
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1009,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1060,8 +1058,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1085,9 +1084,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1110,9 +1108,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1183,9 +1180,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1245,9 +1241,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1258,8 +1253,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1575,8 +1571,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1611,8 +1608,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1731,8 +1729,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1899,8 +1898,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "387661",
@@ -2126,24 +2126,23 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "340",
-      "g": "8",
+      "pts": "365",
+      "g": "9",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg/330px-Kimi_Antonelli_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A7923%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
       "equipo": "George Russell",
       "abrev": "RUS",
       "detalle": "Mercedes",
-      "pts": "238",
+      "pts": "242",
       "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2159,7 +2158,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "229",
+      "pts": "241",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2175,7 +2174,7 @@
       "equipo": "Max Verstappen",
       "abrev": "VER",
       "detalle": "Red Bull",
-      "pts": "221",
+      "pts": "236",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "nacionalidad": "Dutch",
@@ -2191,7 +2190,7 @@
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "215",
+      "pts": "233",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2207,7 +2206,7 @@
       "equipo": "Lando Norris",
       "abrev": "NOR",
       "detalle": "McLaren",
-      "pts": "201",
+      "pts": "211",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2223,7 +2222,7 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "138",
+      "pts": "144",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
@@ -2239,7 +2238,7 @@
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "97",
+      "pts": "105",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2255,7 +2254,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "75",
+      "pts": "77",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2271,7 +2270,7 @@
       "equipo": "Pierre Gasly",
       "abrev": "GAS",
       "detalle": "Alpine F1 Team",
-      "pts": "41",
+      "pts": "42",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2496,8 +2495,8 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "578",
-      "g": "11",
+      "pts": "607",
+      "g": "12",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "logo": null,
@@ -2507,7 +2506,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "444",
+      "pts": "474",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2516,20 +2515,9 @@
      },
      {
       "pos": 3,
-      "equipo": "McLaren",
-      "detalle": "British",
-      "pts": "339",
-      "g": "2",
-      "color": "#FF8700",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 4,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "332",
+      "pts": "355",
       "g": "2",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2537,10 +2525,21 @@
       "mio": false
      },
      {
+      "pos": 4,
+      "equipo": "McLaren",
+      "detalle": "British",
+      "pts": "355",
+      "g": "2",
+      "color": "#FF8700",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "100",
+      "pts": "102",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2551,7 +2550,7 @@
       "pos": 6,
       "equipo": "Alpine F1 Team",
       "detalle": "French",
-      "pts": "68",
+      "pts": "69",
       "g": "0",
       "color": "#FFF500",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
@@ -2618,18 +2617,25 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "United States Grand Prix LIVE! F1 race updates in Austin, commentary and results",
-     "resumen": "Kimi Antonelli starts the United States Grand Prix on pole position from Max Verstappen.",
-     "fecha": "2026-10-25T21:39:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736071_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50259831/united-states-grand-prix-austin-2026-live-updates-results-analysis-commentary"
+     "titulo": "Toto Wolff hails Kimi Antonelli on U.S GP win: 'The race of a champion who isn't a champion yet'",
+     "resumen": "Toto Wolff has labelled Kimi Antonelli's race win at the United States Grand Prix \"the race of a champion who isn't a champion yet.\"",
+     "fecha": "2026-10-26T00:03:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736247_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250091/toto-wolff-hails-kimi-antonelli-win-race-champion-champion-yet-united-states-grand-prix-circuit-americas-austin-formula-1"
     },
     {
      "titulo": "Kimi Antonelli wins United States GP but made to wait for first F1 title",
      "resumen": "Kimi Antonelli produced another masterful drive to win the United States Grand Prix -- but will have to wait to clinch his first Formula 1 world title.",
-     "fecha": "2026-10-25T21:39:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736108_1296x729_16-9.jpg",
+     "fecha": "2026-10-25T23:21:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736161_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250088/kimi-antonelli-united-states-grand-prix-formula-1-title"
+    },
+    {
+     "titulo": "United States Grand Prix results: Kimi Antonelli on brink of world title after win in Austin - as it happened",
+     "resumen": "Kimi Antonelli won the United States Grand Prix from Charles Leclerc, but will have to wait to clinch his first F1 title.",
+     "fecha": "2026-10-25T22:08:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736157_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50259831/united-states-grand-prix-austin-2026-live-updates-results-analysis-commentary"
     },
     {
      "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
@@ -2651,13 +2657,6 @@
      "fecha": "2026-10-25T16:03:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50277461/max-verstappen-hits-back-cota-boss-able-walk-drove-my-car"
-    },
-    {
-     "titulo": "United States Grand Prix 2026: Race start time in Austin, how to watch, full schedule, predictions",
-     "resumen": "Formula 1's original night race is back as drivers prepare for the ultimate challenge around the Marina Bay Circuit in Singapore.",
-     "fecha": "2026-10-25T12:04:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50138986/united-states-grand-prix-2026-circuit-americas-race-f1-start-s-how-watch-schedule-usa-tv-channel-live-stream-predictions"
     }
    ],
    "resultados": null,

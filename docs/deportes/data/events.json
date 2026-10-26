@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T21:45:43.581Z",
+ "actualizado": "2026-10-26T00:21:30.522Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -681,8 +681,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 1"
   },
   {
    "id": "espn-761908",
