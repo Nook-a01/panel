@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T12:58:55.030Z",
+ "actualizado": "2026-10-26T23:09:44.193Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 11,
+   "total": 10,
    "proximos": 6
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600061266",
-   "miLado": null,
-   "idEspn": "600061266",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-   "inicio": "2026-09-26T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Meta APEX",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-401912726",
    "miLado": "visitante",
