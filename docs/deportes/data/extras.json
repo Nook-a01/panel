@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T12:58:55.030Z",
+ "actualizado": "2026-10-26T19:17:02.871Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -555,9 +556,8 @@
      "posCorta": "M",
      "edad": 19,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/3988ff0650e069cf83cee609ee2f240b_%281%29.jpg/330px-3988ff0650e069cf83cee609ee2f240b_%281%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "104506",
@@ -629,9 +629,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1034,9 +1033,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1047,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1072,9 +1069,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1229,9 +1225,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1254,8 +1249,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1571,9 +1567,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1608,9 +1603,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1621,9 +1615,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1694,9 +1687,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1731,9 +1723,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1966,6 +1957,20 @@
    ],
    "noticias": [
     {
+     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
+     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
+     "fecha": "2026-10-26T13:29:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
+    },
+    {
+     "titulo": "MLS Power Rankings: Revs jump eight places as playoffs loom",
+     "resumen": "We're getting down to the pointy end of the season, and the New England Revolution have jumped right up ESPN's MLS Power Rankings.",
+     "fecha": "2026-10-26T13:00:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736378_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50285261/mls-power-rankings-revs-jump-eight-places-playoffs-loom"
+    },
+    {
      "titulo": "Bafana boss Pitso Mosimane's latest South Africa squad shows favouritism fears were unfounded",
      "resumen": "Mosimane has made several changes from his first preliminary squad, which he announced almost immediately after taking charge at the beginning of September.",
      "fecha": "2026-10-26T08:36:59Z",
@@ -1980,13 +1985,6 @@
      "link": "http://www.espn.com/soccer/report/_/gameId/761904"
     },
     {
-     "titulo": "Atlanta United FC vs. Chicago Fire FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Atlanta United FC vs. Chicago Fire FC, 10/24/2026",
-     "fecha": "2026-10-25T03:12:20Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1025/4d32b577-2da1-4540-9251-67f3463653f0/4d32b577-2da1-4540-9251-67f3463653f0.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50272841/atlanta-united-fc-vs-chicago-fire-fc-game-highlights"
-    },
-    {
      "titulo": "Orlando City SC vs. New York City FC - Game Highlights",
      "resumen": "Watch the Game Highlights from Orlando City SC vs. New York City FC, 10/24/2026",
      "fecha": "2026-10-25T02:38:18Z",
@@ -1999,13 +1997,6 @@
      "fecha": "2026-10-25T02:23:59Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1025/5fbc486e-1838-4516-b842-918d4d14dbcf/5fbc486e-1838-4516-b842-918d4d14dbcf.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50272944/philadelphia-union-vs-new-england-revolution-game-highlights"
-    },
-    {
-     "titulo": "Evander stunner helps Cincinnati beat D.C. United",
-     "resumen": "Evander had a goal and an assist, Tom Barlow also scored and Cincinnati beat D.C. United 2-0 on Saturday night.",
-     "fecha": "2026-10-25T02:01:58Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761895.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761895"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2619,46 +2610,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
+     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
+     "fecha": "2026-10-26T18:27:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
+    },
+    {
+     "titulo": "Formula 1 start times: When does each 2026 race begin?",
+     "resumen": "The first half of the Formula 1 2026 season has been full of ups and downs for teams and drivers across the grid.",
+     "fecha": "2026-10-26T18:16:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
+    },
+    {
+     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
+     "fecha": "2026-10-26T16:27:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-26T16:06:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Fernando Alonso lashes out at 'quality of drivers' at bottom of F1 grid",
+     "resumen": "Fernando Alonso has hit out at Alex Albon after a collision on the opening lap of the United States Grand Prix, saying the quality of drivers in the bottom third of the grid \"is very low.\"",
+     "fecha": "2026-10-26T14:35:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736464_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250123/fernando-alonso-lashes-quality-drivers-bottom-f1-grid-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "George Russell: Finishing second in F1 title race 'doesn't mean anything'",
      "resumen": "George Russell says finishing second in the championship would not mean anything as boss Toto Wolff hit back at suggestions that the British driver may never get another shot at the title.",
      "fecha": "2026-10-26T12:52:44Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736382_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50285563/george-russell-finishing-second-f1-title-race-mean-anything"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at Mexico GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-26T12:48:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "F1 readies Antonelli's title champagne in Austin: 'The race of a champion who isn't champion yet'",
-     "resumen": "Kimi Antonelli isn't F1 world champion just yet, but after winning in Austin on Sunday, it's only a matter of time for Mercedes' winderkind.",
-     "fecha": "2026-10-26T01:14:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736290_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50280403/f1-readies-kimi-antonellis-title-champagne-austin-race-champion-isnt-champion-yet"
-    },
-    {
-     "titulo": "Max Verstappen jokes Red Bull should ditch 'disaster' team radio after U.S. GP",
-     "resumen": "Max Verstappen has joked that Red Bull might be better off communicating in sign language after issues on the team radio continued in Austin.",
-     "fecha": "2026-10-26T00:53:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736269_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250093/max-verstappen-jokes-red-bull-ditch-disaster-team-radio-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Toto Wolff hails Kimi Antonelli on U.S GP win: 'The race of a champion who isn't a champion yet'",
-     "resumen": "Toto Wolff has labelled Kimi Antonelli's race win at the United States Grand Prix \"the race of a champion who isn't a champion yet.\"",
-     "fecha": "2026-10-26T00:03:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736247_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250091/toto-wolff-hails-kimi-antonelli-win-race-champion-champion-yet-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "United States Grand Prix results: Kimi Antonelli on brink of world title after win in Austin - as it happened",
-     "resumen": "Kimi Antonelli won the United States Grand Prix from Charles Leclerc, but will have to wait to clinch his first F1 title.",
-     "fecha": "2026-10-25T22:08:25Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736157_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50259831/united-states-grand-prix-austin-2026-live-updates-results-analysis-commentary"
     }
    ],
    "resultados": null,
