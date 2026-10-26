@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T00:21:30.522Z",
+ "actualizado": "2026-10-26T12:58:55.030Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 18,
+   "total": 17,
    "proximos": 10
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 15",
-   "sede": "Baku City Circuit, Azerbaijan",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-15",
-   "anio": 2026,
-   "ronda": "15",
-   "sesion": "Carrera",
-   "titulo": "GP Azerbaijan",
-   "inicio": "2026-09-26T11:00:00.000Z"
-  },
   {
    "id": "espn-600061266",
    "miLado": null,

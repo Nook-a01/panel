@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T06:10:25.971Z",
+ "actualizado": "2026-10-26T12:58:55.030Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -292,9 +291,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -425,9 +423,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -558,8 +555,9 @@
      "posCorta": "M",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/3988ff0650e069cf83cee609ee2f240b_%281%29.jpg/330px-3988ff0650e069cf83cee609ee2f240b_%281%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "104506",
@@ -631,8 +629,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -950,9 +949,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1074,8 +1072,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1086,9 +1085,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1623,8 +1621,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1695,8 +1694,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1731,8 +1731,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1965,6 +1966,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Bafana boss Pitso Mosimane's latest South Africa squad shows favouritism fears were unfounded",
+     "resumen": "Mosimane has made several changes from his first preliminary squad, which he announced almost immediately after taking charge at the beginning of September.",
+     "fecha": "2026-10-26T08:36:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736386_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50285674/bafana-boss-pitso-mosimane-latest-south-africa-squad-shows-favouritism-fears-were-unfounded"
+    },
+    {
      "titulo": "LAFC clinches playoffs with derby draw, Galaxy cling to last spot",
      "resumen": "Leo Walta scored the tying goal in the 62nd minute as LAFC clinched a playoff spot by rallying from two goals down in the second half for a 2-2 draw with the LA Galaxy on Sunday night.",
      "fecha": "2026-10-26T03:43:24Z",
@@ -1998,13 +2006,6 @@
      "fecha": "2026-10-25T02:01:58Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761895.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761895"
-    },
-    {
-     "titulo": "Forsberg caps Red Bulls win over Inter Miami",
-     "resumen": "Emil Forsberg scored an insurance goal early in second-half stoppage time and the New York Red Bulls beat Inter Miami 2-0 on Saturday to stay above the playoff line.",
-     "fecha": "2026-10-25T00:15:14Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761891.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761891"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2133,9 +2134,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2617,6 +2619,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "George Russell: Finishing second in F1 title race 'doesn't mean anything'",
+     "resumen": "George Russell says finishing second in the championship would not mean anything as boss Toto Wolff hit back at suggestions that the British driver may never get another shot at the title.",
+     "fecha": "2026-10-26T12:52:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736382_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50285563/george-russell-finishing-second-f1-title-race-mean-anything"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at Mexico GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-26T12:48:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
      "titulo": "F1 readies Antonelli's title champagne in Austin: 'The race of a champion who isn't champion yet'",
      "resumen": "Kimi Antonelli isn't F1 world champion just yet, but after winning in Austin on Sunday, it's only a matter of time for Mercedes' winderkind.",
      "fecha": "2026-10-26T01:14:28Z",
@@ -2638,25 +2654,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50250091/toto-wolff-hails-kimi-antonelli-win-race-champion-champion-yet-united-states-grand-prix-circuit-americas-austin-formula-1"
     },
     {
-     "titulo": "Kimi Antonelli wins United States GP but made to wait for first F1 title",
-     "resumen": "Kimi Antonelli produced another masterful drive to win the United States Grand Prix -- but will have to wait to clinch his first Formula 1 world title.",
-     "fecha": "2026-10-25T23:21:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736161_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250088/kimi-antonelli-united-states-grand-prix-formula-1-title"
-    },
-    {
      "titulo": "United States Grand Prix results: Kimi Antonelli on brink of world title after win in Austin - as it happened",
      "resumen": "Kimi Antonelli won the United States Grand Prix from Charles Leclerc, but will have to wait to clinch his first F1 title.",
      "fecha": "2026-10-25T22:08:25Z",
      "imagen": "https://a.espncdn.com/photo/2026/1025/r1736157_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50259831/united-states-grand-prix-austin-2026-live-updates-results-analysis-commentary"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at United States GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-25T19:17:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
     }
    ],
    "resultados": null,
@@ -2673,6 +2675,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Alexander Volkanovski could face a new challenge after UFC 333",
+     "resumen": "Alexander Volkanovski and Petr Yan defended titles at UFC 333, but which champion could fight in a new division?",
+     "fecha": "2026-10-26T12:37:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736052_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50279491/ufc-333-next-alexander-volkanovski-petr-yan-more"
+    },
     {
      "titulo": "Alexander Volkanovski stops Movsar Evloev in second round to retain title",
      "resumen": "Alexander Volkanovski defended his featherweight title for the second time this year Saturday, knocking out undefeated challenger Movsar Evloev at 4:54 of the second round at UFC 333 in Abu Dhabi.",
@@ -2700,13 +2709,6 @@
      "fecha": "2026-10-24T23:28:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
-    },
-    {
-     "titulo": "Petr Yan completes trilogy with gritty win over Merab Dvalishvili to defend title",
-     "resumen": "Petr Yan beat Merab Dvalishvili via unanimous decision in the co-main event of UFC 333, completing their trilogy with two straight victories.",
-     "fecha": "2026-10-24T22:38:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735597_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/ufc/story/_/id/50269828/petr-yan-completes-trilogy-gritty-win-merab-dvalishvili-defend-title"
     },
     {
      "titulo": "UFC 333 results: Volkanovski and Yan win to retain titles",
