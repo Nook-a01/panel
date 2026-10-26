@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T00:21:30.522Z",
+ "actualizado": "2026-10-26T06:10:25.971Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -37,6 +37,19 @@
       "pos": 1
      },
      {
+      "equipo": "Vélez Sarsfield",
+      "abrev": "VEL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+      "pj": "14",
+      "pts": "27",
+      "g": "7",
+      "e": "6",
+      "p": "1",
+      "dg": "+10",
+      "mio": false,
+      "pos": 2
+     },
+     {
       "equipo": "Boca Juniors",
       "abrev": "CABJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
@@ -47,7 +60,7 @@
       "p": "1",
       "dg": "+8",
       "mio": true,
-      "pos": 2
+      "pos": 3
      },
      {
       "equipo": "Defensa y Justicia",
@@ -60,7 +73,7 @@
       "p": "3",
       "dg": "+7",
       "mio": false,
-      "pos": 3
+      "pos": 4
      },
      {
       "equipo": "Lanús",
@@ -72,19 +85,6 @@
       "e": "3",
       "p": "4",
       "dg": "+7",
-      "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Vélez Sarsfield",
-      "abrev": "VEL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-      "pj": "13",
-      "pts": "24",
-      "g": "6",
-      "e": "6",
-      "p": "1",
-      "dg": "+5",
       "mio": false,
       "pos": 5
      },
@@ -196,12 +196,12 @@
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "13",
+      "pj": "14",
       "pts": "10",
       "g": "2",
       "e": "4",
-      "p": "7",
-      "dg": "-7",
+      "p": "8",
+      "dg": "-12",
       "mio": false,
       "pos": 14
      },
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,8 +425,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -616,8 +618,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -712,8 +715,9 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/HUch3-hWEAAFa0h.jpg/330px-HUch3-hWEAAFa0h.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421348",
@@ -1058,9 +1062,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1071,9 +1074,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1084,8 +1086,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1253,9 +1256,8 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
@@ -1729,9 +1731,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1898,9 +1899,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "387661",
@@ -1965,6 +1965,13 @@
    ],
    "noticias": [
     {
+     "titulo": "LAFC clinches playoffs with derby draw, Galaxy cling to last spot",
+     "resumen": "Leo Walta scored the tying goal in the 62nd minute as LAFC clinched a playoff spot by rallying from two goals down in the second half for a 2-2 draw with the LA Galaxy on Sunday night.",
+     "fecha": "2026-10-26T03:43:24Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761904.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761904"
+    },
+    {
      "titulo": "Atlanta United FC vs. Chicago Fire FC - Game Highlights",
      "resumen": "Watch the Game Highlights from Atlanta United FC vs. Chicago Fire FC, 10/24/2026",
      "fecha": "2026-10-25T03:12:20Z",
@@ -1991,13 +1998,6 @@
      "fecha": "2026-10-25T02:01:58Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761895.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761895"
-    },
-    {
-     "titulo": "Lionel Messi comes off bench as Casemiro own goal sees Red Bulls beat Miami",
-     "resumen": "Lionel Messi came off the bench early in the second half but couldn't prevent Inter Miami's three-game win streak coming to an end with a 2-0 loss at Red Bull New York on Saturday.",
-     "fecha": "2026-10-25T00:31:37Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50271291/lionel-messi-red-bull-new-york-vs-inter-miami-casemiro"
     },
     {
      "titulo": "Forsberg caps Red Bulls win over Inter Miami",
@@ -2617,6 +2617,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 readies Antonelli's title champagne in Austin: 'The race of a champion who isn't champion yet'",
+     "resumen": "Kimi Antonelli isn't F1 world champion just yet, but after winning in Austin on Sunday, it's only a matter of time for Mercedes' winderkind.",
+     "fecha": "2026-10-26T01:14:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736290_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50280403/f1-readies-kimi-antonellis-title-champagne-austin-race-champion-isnt-champion-yet"
+    },
+    {
+     "titulo": "Max Verstappen jokes Red Bull should ditch 'disaster' team radio after U.S. GP",
+     "resumen": "Max Verstappen has joked that Red Bull might be better off communicating in sign language after issues on the team radio continued in Austin.",
+     "fecha": "2026-10-26T00:53:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736269_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250093/max-verstappen-jokes-red-bull-ditch-disaster-team-radio-united-states-grand-prix-circuit-americas-austin-formula-1"
+    },
+    {
      "titulo": "Toto Wolff hails Kimi Antonelli on U.S GP win: 'The race of a champion who isn't a champion yet'",
      "resumen": "Toto Wolff has labelled Kimi Antonelli's race win at the United States Grand Prix \"the race of a champion who isn't a champion yet.\"",
      "fecha": "2026-10-26T00:03:31Z",
@@ -2643,20 +2657,6 @@
      "fecha": "2026-10-25T19:17:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/1008/r1727846_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "Alpine condemn Jeremy Clarkson's nationality comments on Franco Colapinto",
-     "resumen": "Jeremy Clarkson has been criticised for suggesting Alpine driver Franco Colapinto deserved a grid penalty because he is Argentinian.",
-     "fecha": "2026-10-25T18:32:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736001_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250085/alpine-condemn-jeremy-clarksons-nationality-comments-franco-colapinto-united-states-grand-prix-circuit-americas-austin-formula-1"
-    },
-    {
-     "titulo": "Max Verstappen hits back at COTA boss: 'Wouldn't be able to walk' if he drove my car",
-     "resumen": "Max Verstappen hit back at the Circuit of the Americas downplaying his concerns over the bumpy U.S. Grand Prix track, saying on Saturday that the event boss \"wouldn't be able to walk anymore\" if he did five laps in his Red Bull this weekend.",
-     "fecha": "2026-10-25T16:03:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735263_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50277461/max-verstappen-hits-back-cota-boss-able-walk-drove-my-car"
     }
    ],
    "resultados": null,
