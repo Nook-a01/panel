@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T20:05:11.703Z",
+ "actualizado": "2026-10-27T23:45:52.341Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 8,
+   "total": 7,
    "proximos": 3
   },
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 10,
-   "proximos": 6
+   "total": 12,
+   "proximos": 8
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761844",
-   "miLado": "visitante",
-   "idEspn": "761844",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Columbus Crew vs Inter Miami CF",
-   "inicio": "2026-09-27T23:00Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "ScottsMiracle-Gro Field",
-   "local": "Columbus Crew",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "2 - 1"
-  },
   {
    "id": "espn-401921545",
    "miLado": "local",
@@ -1138,6 +1116,28 @@
    "marcador": null
   },
   {
+   "id": "espn-600062421",
+   "miLado": null,
+   "idEspn": "600062421",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Dallas",
+   "inicio": "2027-01-16T22:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "American Airlines Center",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-600062191",
    "miLado": null,
    "idEspn": "600062191",
@@ -1152,6 +1152,28 @@
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "Scotiabank Arena",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-600062420",
+   "miLado": null,
+   "idEspn": "600062420",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Salkilld vs. Saint Denis",
+   "inicio": "2027-02-06T19:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Afterpay Arena",
    "local": null,
    "visitante": null,
    "logoLocal": null,
