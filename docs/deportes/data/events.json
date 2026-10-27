@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-26T23:09:44.193Z",
+ "actualizado": "2026-10-27T20:05:11.703Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 11,
+   "total": 10,
    "proximos": 4
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401912726",
-   "miLado": "visitante",
-   "idEspn": "401912726",
-   "liga": "arg.copa",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Racing Club vs Boca Juniors",
-   "inicio": "2026-09-27T20:00Z",
-   "horaConfirmada": true,
-   "competicion": "Copa Argentina",
-   "sede": "Gigante de Arroyito",
-   "local": "Racing Club",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "2 - 3"
-  },
   {
    "id": "espn-761844",
    "miLado": "visitante",
