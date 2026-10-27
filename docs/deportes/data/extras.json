@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T07:49:52.503Z",
+ "actualizado": "2026-10-27T14:29:14.134Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1259,9 +1258,16 @@
     {
      "titulo": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
      "resumen": "After a remarkable year for Bayern Munich and England, Harry Kane becoming the world's best player is the ultimate reward for years of perseverance.",
-     "fecha": "2026-10-27T01:48:19Z",
+     "fecha": "2026-10-27T14:04:40Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736765_3_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50265615/harry-kanes-long-road-ballon-dor-glory-ends-crowning-moment"
+    },
+    {
+     "titulo": "Kane: Ballon d'Or win beyond wildest dreams",
+     "resumen": "Kane: Ballon d'Or win beyond wildest dreams",
+     "fecha": "2026-10-27T08:32:23Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1027/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50295274/ballon-dor-win-wildest-dreams"
     },
     {
      "titulo": "Harry Kane is crowned the 2026 Men's Ballon d'Or winner",
@@ -1325,13 +1331,6 @@
      "fecha": "2026-10-22T10:29:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/0805/r1697947_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50247013/afc-president-unclear-support-infantino-fifa-reelection"
-    },
-    {
-     "titulo": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
-     "resumen": "Were Messi and De Paul wrong to 'taunt' Atlanta United's Alonso?",
-     "fecha": "2026-10-20T09:08:36Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1020/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso/dm_261020_Were_Messi_and_De_Paul_wrong_to_taunt_Atlanta_Uniteds_Alonso.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50226152/were-messi-de-paul-wrong-taunt-atlanta-united-alonso"
     }
    ],
    "resultados": null,
@@ -1568,8 +1567,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1592,8 +1592,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1676,8 +1677,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -2610,6 +2612,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-27T09:58:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
+     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
+     "fecha": "2026-10-27T09:58:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "F1 2026 results: Winners, podium, final positions from every race",
      "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
      "fecha": "2026-10-26T18:27:38Z",
@@ -2622,20 +2638,6 @@
      "fecha": "2026-10-26T18:16:53Z",
      "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
-    },
-    {
-     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
-     "fecha": "2026-10-26T16:27:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-26T16:06:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
     },
     {
      "titulo": "Fernando Alonso lashes out at 'quality of drivers' at bottom of F1 grid",
@@ -2666,6 +2668,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Nowhere to rise for Volkanovski and Yan, but Reyes and Volkov move up",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-10-27T12:51:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736638_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
     {
      "titulo": "Alexander Volkanovski could face a new challenge after UFC 333",
      "resumen": "Alexander Volkanovski and Petr Yan defended titles at UFC 333, but which champion could fight in a new division?",
@@ -2700,13 +2709,6 @@
      "fecha": "2026-10-24T23:28:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
-    },
-    {
-     "titulo": "UFC 333 results: Volkanovski and Yan win to retain titles",
-     "resumen": "Alexander Volkanovski and Petr Yan held on to their titles with big wins at the top of the UFC 333 fight card.",
-     "fecha": "2026-10-24T21:40:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735621_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50220522/ufc-333-results-volkanovski-evloev"
     }
    ],
    "resultados": [
