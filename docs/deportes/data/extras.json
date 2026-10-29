@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T02:26:31.834Z",
+ "actualizado": "2026-10-29T09:55:35.180Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -1044,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1116,9 +1118,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1225,8 +1226,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1249,12 +1251,18 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-29T02:27:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "Two-time WC coach Okada leaves Japan post over AFC support of Infantino",
      "resumen": "Two-time World Cup coach Takeshi Okada resigned as Japanese federation VP in protest over AFC support of FIFA during Gianni Infantino's re-election campaign.",
@@ -1319,13 +1327,6 @@
      "link": "https://www.espn.com/video/clip/_/id/50290177/lionel-messi-watches-messi-cup"
     },
     {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-24T23:40:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
      "titulo": "Lionel Messi: Argentina's 2026 World Cup final heartbreak \"part of my football journey\"",
      "resumen": "Lionel Messi has accepted that Argentina's 2026 World Cup extra-time defeat to Spain was a part of his football journey.",
      "fecha": "2026-10-23T10:17:35Z",
@@ -1352,10 +1353,10 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "31",
-      "pts": "70",
+      "pj": "32",
+      "pts": "71",
       "g": "21",
-      "e": "7",
+      "e": "8",
       "p": "3",
       "dg": "+43",
       "mio": false,
@@ -1391,10 +1392,10 @@
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "31",
-      "pts": "51",
+      "pj": "32",
+      "pts": "52",
       "g": "15",
-      "e": "6",
+      "e": "7",
       "p": "10",
       "dg": "+9",
       "mio": false,
@@ -1417,10 +1418,10 @@
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "31",
-      "pts": "46",
+      "pj": "32",
+      "pts": "47",
       "g": "13",
-      "e": "7",
+      "e": "8",
       "p": "11",
       "dg": "+12",
       "mio": false,
@@ -1443,14 +1444,27 @@
       "equipo": "Orlando City SC",
       "abrev": "ORL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "31",
-      "pts": "42",
+      "pj": "32",
+      "pts": "43",
       "g": "12",
-      "e": "6",
+      "e": "7",
       "p": "13",
       "dg": "-12",
       "mio": false,
       "pos": 8
+     },
+     {
+      "equipo": "Columbus Crew",
+      "abrev": "CLB",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+      "pj": "32",
+      "pts": "41",
+      "g": "12",
+      "e": "5",
+      "p": "15",
+      "dg": "+3",
+      "mio": false,
+      "pos": 9
      },
      {
       "equipo": "Toronto FC",
@@ -1463,7 +1477,7 @@
       "p": "11",
       "dg": "-10",
       "mio": false,
-      "pos": 9
+      "pos": 10
      },
      {
       "equipo": "Red Bull New York",
@@ -1476,7 +1490,7 @@
       "p": "15",
       "dg": "-16",
       "mio": false,
-      "pos": 10
+      "pos": 11
      },
      {
       "equipo": "New York City FC",
@@ -1488,19 +1502,6 @@
       "e": "11",
       "p": "12",
       "dg": "+3",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "Columbus Crew",
-      "abrev": "CLB",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "31",
-      "pts": "38",
-      "g": "11",
-      "e": "5",
-      "p": "15",
-      "dg": "+1",
       "mio": false,
       "pos": 12
      },
@@ -1591,9 +1592,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1604,9 +1604,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1677,9 +1676,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1726,9 +1724,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1961,6 +1958,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Chicago Fire FC vs. Orlando City SC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Orlando City SC, 10/28/2026",
+     "fecha": "2026-10-29T02:53:59Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1029/10378b67-07b0-4ec9-afbb-3d7a568fd2a4/10378b67-07b0-4ec9-afbb-3d7a568fd2a4.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50313668/chicago-fire-fc-vs-orlando-city-sc-game-highlights"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-10-29T02:27:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
      "titulo": "Inter Miami CF vs. FC Cincinnati - Game Highlights",
      "resumen": "Watch the Game Highlights from Inter Miami CF vs. FC Cincinnati, 10/28/2026",
      "fecha": "2026-10-29T01:55:39Z",
@@ -1987,20 +1998,6 @@
      "fecha": "2026-10-26T20:12:38Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1026/dm_261026_COM_SOC_Analysis_Lionel_Messi_watches_on_at_the_Messi_Cup_2022F10F26_GLOBAL/dm_261026_COM_SOC_Analysis_Lionel_Messi_watches_on_at_the_Messi_Cup_2022F10F26_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50290177/lionel-messi-watches-messi-cup"
-    },
-    {
-     "titulo": "A global experiment: Can ESPN predict the Ballon d'Or awards?",
-     "resumen": "The Ballon d'Or awards are typically tough to predict, but can ESPN and our global resources do just that?",
-     "fecha": "2026-10-26T13:29:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1009/261020_soc_ballon-dor_mixed_16x9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50166049/a-global-experiment-espn-predict-ballon-dor"
-    },
-    {
-     "titulo": "MLS Power Rankings: Revs jump eight places as playoffs loom",
-     "resumen": "We're getting down to the pointy end of the season, and the New England Revolution have jumped right up ESPN's MLS Power Rankings.",
-     "fecha": "2026-10-26T13:00:25Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736378_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50285261/mls-power-rankings-revs-jump-eight-places-playoffs-loom"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2613,6 +2610,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Sergio Pérez's F1 second act: Red Bull regrets, redemption and a fresh start at Cadillac",
+     "resumen": "Sergio Pérez reflects on his Red Bull exit, finding happiness beyond F1 and rediscovering his love of racing as he prepares for his 300th grand prix.",
+     "fecha": "2026-10-29T09:19:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1028/r1737696_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50310746/sergio-perez-f1-second-act-red-bull-regrets-cadillac-contract"
+    },
+    {
+     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
+     "fecha": "2026-10-29T07:31:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- with or without Qatar, Abu Dhabi races",
+     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
+     "fecha": "2026-10-29T07:31:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
+    },
+    {
      "titulo": "Sergio Pérez signs new deal with Cadillac until 2029",
      "resumen": "Sergio Pérez has signed a new deal with Cadillac which will see him stay with the American team until 2029.",
      "fecha": "2026-10-28T16:43:40Z",
@@ -2627,32 +2645,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50305942/reid-wiseman-interview-f1-nasa"
     },
     {
-     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
-     "fecha": "2026-10-28T08:08:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- with or without Qatar, Abu Dhabi races",
-     "resumen": "Kimi Antonelli took another big step towards his first world title after outscoring his two closest championship rivals, George Russell and Lewis Hamilton, at the Singapore Grand Prix.",
-     "fecha": "2026-10-28T08:07:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
      "titulo": "A benchmark for modern F1 circuits, eyesores and aching backs: The contradictions of Austin's COTA",
      "resumen": "The United States Grand Prix is well-loved by fans and drivers, but there were mixed reviews coming out of the weekend.",
      "fecha": "2026-10-27T14:37:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736570_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50288770/austin-cota-contradictions-f1-circuit"
-    },
-    {
-     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
-     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
-     "fecha": "2026-10-26T18:27:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
     }
    ],
    "resultados": null,
