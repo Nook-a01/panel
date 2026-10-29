@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T16:55:13.272Z",
+ "actualizado": "2026-10-29T21:48:53.216Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -291,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -617,9 +616,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -630,9 +628,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1047,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1084,9 +1080,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1097,9 +1092,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1122,9 +1116,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1735,9 +1728,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1970,6 +1962,13 @@
    ],
    "noticias": [
     {
+     "titulo": "\\Messi eligible for crunch Miami game with Revs despite yellow card haul",
+     "resumen": "Lionel Messi is eligible for Inter Miami's game against the New England Revolution on Sunday despite receiving his fifth yellow card of the season on Wednesday.",
+     "fecha": "2026-10-29T19:07:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735701_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50320683/messi-eligible-miami-game-revs-yellow-card"
+    },
+    {
      "titulo": "Cavan Sullivan turned 17 last month, but he's already playing like an MLS MVP",
      "resumen": "Since MLS resumed after the World Cup, Cavan Sullivan has been the league's best player not named Lionel Messi. Does he deserve some MVP recognition?",
      "fecha": "2026-10-29T13:58:44Z",
@@ -2003,13 +2002,6 @@
      "fecha": "2026-10-29T00:23:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/1028/r1737748_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50311129/mls-sprint-season-kick-feb-19-miami"
-    },
-    {
-     "titulo": "Bafana boss Pitso Mosimane's latest South Africa squad shows favouritism fears were unfounded",
-     "resumen": "Mosimane has made several changes from his first preliminary squad, which he announced almost immediately after taking charge at the beginning of September.",
-     "fecha": "2026-10-27T07:10:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736386_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50285674/bafana-boss-pitso-mosimane-latest-south-africa-squad-shows-favouritism-fears-were-unfounded"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2622,11 +2614,25 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Austin's COTA might have been bumpy, but it's the blueprint of a modern F1 venue",
-     "resumen": "The United States Grand Prix is well-loved by fans and drivers, but there were mixed reviews coming out of the weekend.",
-     "fecha": "2026-10-29T16:18:58Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736570_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50288770/austin-cota-contradictions-f1-circuit"
+     "titulo": "George Russell on disappointing season: 'This year will not define my career'",
+     "resumen": "George Russell has vowed that this season will not define his career as he prepares to watch teammate Kimi Antonelli celebrate his world championship win.",
+     "fecha": "2026-10-29T21:11:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1029/r1738272_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320265/george-russell-disappointing-season-year-not-define-my-career-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-10-29T19:37:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
+     "titulo": "Mexico City Grand Prix: Kimi Antonelli to miss media day with viral illness",
+     "resumen": "Kimi Antonelli has a viral infection and will miss media day ahead of the Mexico City Grand Prix which is likely to finish with him as F1's youngest ever champion.",
+     "fecha": "2026-10-29T17:34:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1029/r1738168_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250130/kimi-antonelli-miss-media-day-viral-illness-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
     {
      "titulo": "Sergio Pérez's F1 second act: Red Bull regrets, redemption and a fresh start at Cadillac",
@@ -2648,20 +2654,6 @@
      "fecha": "2026-10-29T07:31:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "Sergio Pérez signs new deal with Cadillac until 2029",
-     "resumen": "Sergio Pérez has signed a new deal with Cadillac which will see him stay with the American team until 2029.",
-     "fecha": "2026-10-28T16:43:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1028/r1737566_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50309155/sergio-perez-new-contract-cadillac-2029"
-    },
-    {
-     "titulo": "'They smoke us': Why a moon astronaut thinks F1 is ahead of NASA",
-     "resumen": "Artemis II commander Reid Wiseman explains to ESPN why F1's engineering is ahead of NASA's, his admiration for Mercedes and what he learned on the moon.",
-     "fecha": "2026-10-28T13:06:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1028/r1737411_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50305942/reid-wiseman-interview-f1-nasa"
     }
    ],
    "resultados": null,
