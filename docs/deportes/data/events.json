@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T23:45:52.341Z",
+ "actualizado": "2026-10-29T02:26:31.834Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 7,
-   "proximos": 3
+   "proximos": 2
   },
   {
    "id": "pumas",
@@ -616,8 +616,8 @@
    "visitante": "FC Cincinnati",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 2"
   },
   {
    "feedId": "f1",
