@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T02:26:31.834Z",
+ "actualizado": "2026-10-30T08:37:29.482Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -849,7 +849,7 @@
    "inicio": "2026-11-13T20:00Z",
    "horaConfirmada": false,
    "competicion": "International Friendly",
-   "sede": "",
+   "sede": "Alberto José Armando (La Bombonera)",
    "local": "Argentina",
    "visitante": "Uruguay",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
@@ -915,7 +915,7 @@
    "inicio": "2026-11-17T20:00Z",
    "horaConfirmada": false,
    "competicion": "International Friendly",
-   "sede": "",
+   "sede": "Mario Alberto Kempes",
    "local": "Argentina",
    "visitante": "Costa Rica",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
