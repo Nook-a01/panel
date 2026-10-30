@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T15:55:09.181Z",
+ "actualizado": "2026-10-30T20:46:54.818Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1059,8 +1058,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1109,9 +1109,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1135,9 +1134,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1173,8 +1171,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1185,8 +1184,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1576,8 +1576,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1600,8 +1601,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1612,8 +1614,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1624,8 +1627,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1637,18 +1641,6 @@
      "edad": 18,
      "pais": "Ecuador",
      "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "314952",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "nombre": "Micael",
-     "dorsal": "16",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 26,
-     "pais": "Brazil",
-     "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/314952.png",
      "lesionado": false
     },
     {
@@ -1684,8 +1676,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1696,8 +1689,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1732,9 +1726,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1820,19 +1813,6 @@
      "pais": "USA",
      "foto": null,
      "lesionado": false
-    },
-    {
-     "id": "297328",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
-     "nombre": "Matías Galarza",
-     "dorsal": "80",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 24,
-     "pais": "Paraguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Matias_Galarza_France_v_Paraguay_4_July_2026-193_%28cropped%29.jpg/330px-Matias_Galarza_France_v_Paraguay_4_July_2026-193_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
     },
     {
      "id": "406938",
@@ -2314,9 +2294,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2622,6 +2603,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Mexico City Grand Prix: Charles Leclerc sets pace in first practice for Ferrari",
+     "resumen": "Charles Leclerc led the running in the first practice session at the Mexico City Grand Prix on Friday.",
+     "fecha": "2026-10-30T20:00:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738648_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320293/charles-leclerc-sets-pace-first-practice-ferrari-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Lando Norris sends message to F1 drivers unhappy with cars: 'Do a better job'",
+     "resumen": "Lando Norris has said drivers need to adapt to their cars amid Mercedes claims that its machine does not suit George Russell.",
+     "fecha": "2026-10-30T18:54:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738628_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320292/lando-norris-sends-message-f1-drivers-unhappy-cars-do-better-job-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
      "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- or why he may already be champion",
      "resumen": "Kimi Antonelli could be crowned F1 world champion at the Mexico City Grand Prix. Here's what he needs to do to seal his first title.",
      "fecha": "2026-10-30T12:30:42Z",
@@ -2648,20 +2643,6 @@
      "fecha": "2026-10-30T00:11:37Z",
      "imagen": "https://a.espncdn.com/photo/2026/1029/r1738366_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50320287/lewis-hamilton-racing-mid40s-never-had-anyone-70-years-im-built-differently-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "Daniel Ricciardo teases dream team reunion with Max Verstappen at one-off Le Mans 24 Hours",
-     "resumen": "Daniel Ricciardo would consider a return to racing for a one-off event like the Le Mans 24 Hours, and cheekily teased a dream reunion with ex-Red Bull teammates Max Verstappen and Sebastian Vettel.",
-     "fecha": "2026-10-29T23:38:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1029/r1738355_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320284/daniel-ricciardo-teases-dream-team-reunion-max-verstappen-one-le-mans-24-hours"
-    },
-    {
-     "titulo": "Fernando Alonso backs claims on 'lack of talent' on F1 grid",
-     "resumen": "Fernando Alonso fully stands by his claims about the lack of talent at the back of the Formula 1 grid and has questioned why teams put up with drivers crashing so much in the cost cap era.",
-     "fecha": "2026-10-29T22:50:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1029/r1738334_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320266/fernando-alonso-backs-claims-lack-talent-f1-grid-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     }
    ],
    "resultados": null,
@@ -2678,6 +2659,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "UFC's Islam Makhachev: Next fight will be 'one of the last' of career",
+     "resumen": "Islam Makhachev, the No. 1 fighter in ESPN's pound-for-pound MMA rankings and the UFC's reigning welterweight champion, says his next fight will be \"one of the last\" of his career.",
+     "fecha": "2026-10-30T20:43:32Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1116/r1576326_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50330401/islam-makhachev-my-next-fight-one-last-my-career"
+    },
     {
      "titulo": "It's still the age of Volkanovski in MMA pound-for-pound rankings",
      "resumen": "At age 38, UFC featherweight champion makes big jump in ESPN's P4P top 10.",
@@ -2712,13 +2700,6 @@
      "fecha": "2026-10-25T00:12:11Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50271635/alex-volkanovski-defends-title-ufc-333"
-    },
-    {
-     "titulo": "Alex Volkanovski defends his title at UFC 333",
-     "resumen": "Australia's Alex Volkanovski KO's Movsar Evloev in Round 2 at UFC 333 to retain his featherweight title in dominant fashion.",
-     "fecha": "2026-10-25T00:05:32Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_AUS_ONLY/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_AUS_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50271575/alex-volkanovski-defends-title-ufc-333"
     }
    ],
    "resultados": [
