@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T18:32:53.829Z",
+ "actualizado": "2026-10-31T22:28:18.743Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -180,17 +180,30 @@
       "pos": 12
      },
      {
+      "equipo": "Talleres (Córdoba)",
+      "abrev": "TALL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
+      "pj": "15",
+      "pts": "12",
+      "g": "3",
+      "e": "3",
+      "p": "9",
+      "dg": "-6",
+      "mio": false,
+      "pos": 13
+     },
+     {
       "equipo": "Deportivo Riestra",
       "abrev": "RIE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-      "pj": "14",
+      "pj": "15",
       "pts": "12",
       "g": "2",
       "e": "6",
-      "p": "6",
-      "dg": "-4",
+      "p": "7",
+      "dg": "-7",
       "mio": false,
-      "pos": 13
+      "pos": 14
      },
      {
       "equipo": "Central Córdoba (Santiago del Estero)",
@@ -202,19 +215,6 @@
       "e": "4",
       "p": "8",
       "dg": "-12",
-      "mio": false,
-      "pos": 14
-     },
-     {
-      "equipo": "Talleres (Córdoba)",
-      "abrev": "TALL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-      "pj": "14",
-      "pts": "9",
-      "g": "2",
-      "e": "3",
-      "p": "9",
-      "dg": "-9",
       "mio": false,
       "pos": 15
      }
@@ -946,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -971,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1032,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1045,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1178,9 +1174,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1389,6 +1384,19 @@
       "pos": 3
      },
      {
+      "equipo": "Charlotte FC",
+      "abrev": "CLT",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+      "pj": "33",
+      "pts": "53",
+      "g": "15",
+      "e": "8",
+      "p": "10",
+      "dg": "+15",
+      "mio": false,
+      "pos": 4
+     },
+     {
       "equipo": "Chicago Fire FC",
       "abrev": "CHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
@@ -1399,31 +1407,18 @@
       "p": "10",
       "dg": "+9",
       "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Charlotte FC",
-      "abrev": "CLT",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
-      "pj": "32",
-      "pts": "50",
-      "g": "14",
-      "e": "8",
-      "p": "10",
-      "dg": "+11",
-      "mio": false,
       "pos": 5
      },
      {
       "equipo": "Philadelphia Union",
       "abrev": "PHI",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
-      "pj": "32",
+      "pj": "33",
       "pts": "47",
       "g": "13",
       "e": "8",
-      "p": "11",
-      "dg": "+12",
+      "p": "12",
+      "dg": "+11",
       "mio": false,
       "pos": 6
      },
@@ -1431,40 +1426,53 @@
       "equipo": "FC Cincinnati",
       "abrev": "CIN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
-      "pj": "32",
-      "pts": "43",
-      "g": "11",
+      "pj": "33",
+      "pts": "46",
+      "g": "12",
       "e": "10",
       "p": "11",
-      "dg": "-7",
+      "dg": "-6",
       "mio": false,
       "pos": 7
-     },
-     {
-      "equipo": "Orlando City SC",
-      "abrev": "ORL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
-      "pj": "32",
-      "pts": "43",
-      "g": "12",
-      "e": "7",
-      "p": "13",
-      "dg": "-12",
-      "mio": false,
-      "pos": 8
      },
      {
       "equipo": "Columbus Crew",
       "abrev": "CLB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-      "pj": "32",
-      "pts": "41",
-      "g": "12",
+      "pj": "33",
+      "pts": "44",
+      "g": "13",
       "e": "5",
       "p": "15",
-      "dg": "+3",
+      "dg": "+6",
+      "mio": false,
+      "pos": 8
+     },
+     {
+      "equipo": "Orlando City SC",
+      "abrev": "ORL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "pj": "33",
+      "pts": "43",
+      "g": "12",
+      "e": "7",
+      "p": "14",
+      "dg": "-16",
       "mio": false,
       "pos": 9
+     },
+     {
+      "equipo": "New York City FC",
+      "abrev": "NYC",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "pj": "33",
+      "pts": "39",
+      "g": "9",
+      "e": "12",
+      "p": "12",
+      "dg": "+3",
+      "mio": false,
+      "pos": 10
      },
      {
       "equipo": "Toronto FC",
@@ -1477,7 +1485,7 @@
       "p": "11",
       "dg": "-10",
       "mio": false,
-      "pos": 10
+      "pos": 11
      },
      {
       "equipo": "Red Bull New York",
@@ -1490,31 +1498,18 @@
       "p": "15",
       "dg": "-16",
       "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "New York City FC",
-      "abrev": "NYC",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-      "pj": "32",
-      "pts": "38",
-      "g": "9",
-      "e": "11",
-      "p": "12",
-      "dg": "+3",
-      "mio": false,
       "pos": 12
      },
      {
       "equipo": "D.C. United",
       "abrev": "DC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-      "pj": "32",
+      "pj": "33",
       "pts": "33",
       "g": "7",
       "e": "12",
-      "p": "13",
-      "dg": "-18",
+      "p": "14",
+      "dg": "-21",
       "mio": false,
       "pos": 13
      },
@@ -1535,10 +1530,10 @@
       "equipo": "CF Montréal",
       "abrev": "MTL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
-      "pj": "32",
-      "pts": "25",
+      "pj": "33",
+      "pts": "26",
       "g": "6",
-      "e": "7",
+      "e": "8",
       "p": "19",
       "dg": "-30",
       "mio": false,
@@ -1681,9 +1676,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1718,9 +1712,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -2285,10 +2278,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2594,6 +2586,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Mexico City Grand Prix: Lewis Hamilton takes first Ferrari pole, Kimi Antonelli in fifth",
+     "resumen": "Lewis Hamilton has taken his first Ferrari pole position for this Sunday's Mexico City Grand Prix, his first in over three years.",
+     "fecha": "2026-10-31T22:19:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738642_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320305/lewis-hamilton-takes-first-ferrari-pole-kimi-antonelli-fifth-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "'Close to perfection,' 'A very big heart' - what F1 rivals think of boy-king Kimi Antonelli",
+     "resumen": "Kimi Antonelli's rivals have heaped praise on the 20-year-old Formula 1 champion in waiting ahead of the Mexico City Grand Prix.",
+     "fecha": "2026-10-31T19:46:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0819/r1703751_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50323510/kimi-antonelli-world-title-mexico-city-grand-prix-formula-1-mercedes"
+    },
+    {
+     "titulo": "Mexico City Grand Prix: Lando Norris edges out Kimi Antonelli in final practice by one millisecond",
+     "resumen": "Lando Norris edged out title leader Kimi Antonelli in the final moments of the final practice session at the Mexico City Grand Prix.",
+     "fecha": "2026-10-31T19:00:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739035_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320304/lando-norris-edges-kimi-antonelli-final-practice-one-millisecond-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
      "titulo": "Esteban Ocon out for Mexico City Grand Prix without Haas explanation",
      "resumen": "Esteban Ocon has been suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
      "fecha": "2026-10-31T17:59:21Z",
@@ -2608,32 +2621,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50334071/isack-hadjar-see-stewards-alleged-paddock-misconduct-mexico-city-grand-prix"
     },
     {
-     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
-     "fecha": "2026-10-31T07:52:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
      "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- or why he may already be champion",
      "resumen": "Kimi Antonelli could be crowned F1 world champion at the Mexico City Grand Prix. Here's what he needs to do to seal his first title.",
      "fecha": "2026-10-31T07:52:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
-    },
-    {
-     "titulo": "Max Verstappen and Liam Lawson given one-place grid penalty at Mexico City Grand Prix",
-     "resumen": "Max Verstappen and Liam Lawson have been given a one-place grid penalty for an incident which saw them collide during Friday practice in Mexico.",
-     "fecha": "2026-10-31T07:38:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738864_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50333915/max-verstappen-liam-lawson-given-one-place-grid-penalty-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "Colton Herta's F1 move delayed by bizarre superlicence error at Mexico City GP",
-     "resumen": "American driver Colton Herta's wait for the superlicence he needs to race for Cadillac in Formula 1 next season will continue another week after a bizarre misunderstanding involving the team, the governing FIA and IndyCar's official website.",
-     "fecha": "2026-10-31T01:14:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738786_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320298/colton-hertas-f1-move-delayed-bizarre-superlicence-error-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     }
    ],
    "resultados": null,
@@ -2694,6 +2686,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC Fight Night: Moicano vs. Nolan",
+     "fecha": "2026-10-31T21:00Z",
+     "marcador": null,
+     "sede": "Meta APEX"
+    },
     {
      "titulo": "UFC 333: Volkanovski vs. Evloev",
      "fecha": "2026-10-24T14:00Z",

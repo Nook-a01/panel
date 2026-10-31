@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T00:46:25.741Z",
+ "actualizado": "2026-10-31T22:28:18.743Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -60,7 +60,7 @@
    "ruta": null,
    "liga": null,
    "total": 17,
-   "proximos": 10
+   "proximos": 9
   },
   {
    "id": "ufc",
@@ -72,7 +72,7 @@
    "ruta": "mma",
    "liga": "ufc",
    "total": 12,
-   "proximos": 8
+   "proximos": 7
   }
  ],
  "eventos": [
@@ -608,7 +608,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null,
    "horaConfirmada": true,
    "id": "f1-2026-19-q",
