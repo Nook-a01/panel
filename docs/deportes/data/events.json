@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T20:46:54.818Z",
+ "actualizado": "2026-10-31T00:46:25.741Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 5,
+   "total": 4,
    "proximos": 2
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401921545",
-   "miLado": "local",
-   "idEspn": "401921545",
-   "liga": "fifa.friendly",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Argentina vs Bolivia",
-   "inicio": "2026-10-01T00:00Z",
-   "horaConfirmada": true,
-   "competicion": "International Friendly",
-   "sede": "Mario Alberto Kempes",
-   "local": "Argentina",
-   "visitante": "Bolivia",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png",
-   "finalizado": true,
-   "marcador": "4 - 0"
-  },
   {
    "id": "espn-401841594",
    "miLado": "local",
@@ -780,7 +758,7 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC Fight Night: Bonfim vs. Brady",
+   "titulo": "UFC Fight Night: Cortes Acosta vs. Walker",
    "inicio": "2026-11-07T22:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",

@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T20:46:54.818Z",
+ "actualizado": "2026-10-31T00:46:25.741Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,8 +242,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -971,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1008,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1058,9 +1058,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "164826",
@@ -1071,8 +1070,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1121,9 +1121,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1158,9 +1157,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1171,9 +1169,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1184,9 +1181,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1258,9 +1254,8 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
@@ -1676,9 +1671,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -2294,10 +2288,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2603,9 +2596,23 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Colton Herta's F1 move delayed by bizarre superlicence error at Mexico City GP",
+     "resumen": "American driver Colton Herta's wait for the superlicence he needs to race for Cadillac in Formula 1 next season will continue another week after a bizarre misunderstanding involving the team, the governing FIA and IndyCar's official website.",
+     "fecha": "2026-10-31T00:36:33Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738786_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320298/colton-hertas-f1-move-delayed-bizarre-superlicence-error-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Charles Leclerc dominates second practice from Lando Norris at Mexico City Grand Prix",
+     "resumen": "Ferrari's Charles Leclerc was the quickest man on Friday after topping both practice sessions at the Mexico City Grand Prix.",
+     "fecha": "2026-10-30T23:24:53Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738742_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320294/charles-leclerc-dominates-second-practice-lando-norris-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
      "titulo": "Mexico City Grand Prix: Charles Leclerc sets pace in first practice for Ferrari",
      "resumen": "Charles Leclerc led the running in the first practice session at the Mexico City Grand Prix on Friday.",
-     "fecha": "2026-10-30T20:00:49Z",
+     "fecha": "2026-10-30T22:51:22Z",
      "imagen": "https://a.espncdn.com/photo/2026/1030/r1738648_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50320293/charles-leclerc-sets-pace-first-practice-ferrari-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
@@ -2629,20 +2636,6 @@
      "fecha": "2026-10-30T08:20:25Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1030/dm_261030_F1_World_Champions_praise_Antonelli_ahead_of_crucial_Mexico_Grand_Prix_weekend/dm_261030_F1_World_Champions_praise_Antonelli_ahead_of_crucial_Mexico_Grand_Prix_weekend.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50326252/f1-world-champions-praise-antonelli-ahead-crucial-mexico-grand-prix-weekend"
-    },
-    {
-     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
-     "fecha": "2026-10-30T07:06:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Lewis Hamilton on racing into mid-40's: 'Never had anyone like me in 70 years, I'm built differently'",
-     "resumen": "Lewis Hamilton defiantly said Formula 1 has \"never had anyone like me in seventy years\" when asked if he can really keep racing into the 2030s.",
-     "fecha": "2026-10-30T00:11:37Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1029/r1738366_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320287/lewis-hamilton-racing-mid40s-never-had-anyone-70-years-im-built-differently-mexico-city-grand-prix"
     }
    ],
    "resultados": null,
@@ -2662,7 +2655,7 @@
     {
      "titulo": "UFC's Islam Makhachev: Next fight will be 'one of the last' of career",
      "resumen": "Islam Makhachev, the No. 1 fighter in ESPN's pound-for-pound MMA rankings and the UFC's reigning welterweight champion, says his next fight will be \"one of the last\" of his career.",
-     "fecha": "2026-10-30T20:43:32Z",
+     "fecha": "2026-10-30T21:23:41Z",
      "imagen": "https://a.espncdn.com/photo/2025/1116/r1576326_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50330401/islam-makhachev-my-next-fight-one-last-my-career"
     },
