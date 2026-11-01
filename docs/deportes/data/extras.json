@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T16:02:07.320Z",
+ "actualizado": "2026-11-01T20:29:28.727Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -37,6 +37,19 @@
       "pos": 1
      },
      {
+      "equipo": "Boca Juniors",
+      "abrev": "CABJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "pj": "15",
+      "pts": "30",
+      "g": "8",
+      "e": "6",
+      "p": "1",
+      "dg": "+9",
+      "mio": true,
+      "pos": 2
+     },
+     {
       "equipo": "Vélez Sarsfield",
       "abrev": "VEL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
@@ -47,19 +60,6 @@
       "p": "1",
       "dg": "+10",
       "mio": false,
-      "pos": 2
-     },
-     {
-      "equipo": "Boca Juniors",
-      "abrev": "CABJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "pj": "14",
-      "pts": "27",
-      "g": "7",
-      "e": "6",
-      "p": "1",
-      "dg": "+8",
-      "mio": true,
       "pos": 3
      },
      {
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -614,8 +616,9 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -626,8 +629,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1126,8 +1130,9 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277208",
@@ -1589,9 +1594,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1602,9 +1606,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1615,9 +1618,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1664,9 +1666,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1677,9 +1678,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2104,9 +2104,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2604,18 +2605,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Mexico City Grand Prix LIVE! F1 race updates, commentary and results",
+     "resumen": "Kimi Antonelli could be crowned world champion at the Mexico City Grand Prix, and you can follow live updates on ESPN.",
+     "fecha": "2026-11-01T20:22:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739660_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50321045/mexico-city-grand-prix-2026-live-updates-results-analysis-commentary-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Kimi Antonelli's solution to feeling 'tense' while on brink of title: 'Bombard myself with melatonin'",
+     "resumen": "A tense, unwell and tired Kimi Antonelli has said he will \"bombard myself with melatonin\" to ensure himself a full night's sleep before the Mexico City Grand Prix, where he can become Formula 1's youngest world champion on Sunday.",
+     "fecha": "2026-11-01T18:24:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739242_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320315/kimi-antonellis-solution-feeling-tense-brink-title-bombard-melatonin-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Esteban Ocon denies reports of physical altercation after Mexico City GP axing without Haas explanation",
+     "resumen": "Esteban Ocon was suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
+     "fecha": "2026-11-01T17:41:29Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738946_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50336259/esteban-ocon-explanation-haas-mexico-city-grand-prix"
+    },
+    {
      "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
      "fecha": "2026-11-01T09:08:41Z",
      "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Isack Hadjar given formal warning after fan incident at Mexico City Grand Prix",
-     "resumen": "Isack Hadjar was handed a formal warning from the stewards at the Mexico City Grand Prix after a video circulated which appeared to show him pushing a fan in the paddock.",
-     "fecha": "2026-11-01T01:25:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738867_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50334071/isack-hadjar-given-formal-warning-fan-incident-mexico-city-grand-prix"
     },
     {
      "titulo": "Fernando Alonso's blunt response to Mexico City Grand Prix qualifying: 'Frustration beyond imagination'",
@@ -2625,25 +2640,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50320316/fernando-alonso-blunt-response-mexico-city-grand-prix-qualifying-frustration-imagination-formula-1-autodromo-hermanos-rodriguez"
     },
     {
-     "titulo": "Kimi Antonelli's solution to feeling 'tense' while on brink of title: 'Bombard myself with melatonin'",
-     "resumen": "A tense, unwell and tired Kimi Antonelli has said he will \"bombard myself with melatonin\" to ensure himself a full night's sleep before the Mexico City Grand Prix, where he can become Formula 1's youngest world champion on Sunday.",
-     "fecha": "2026-11-01T00:35:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739242_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320315/kimi-antonellis-solution-feeling-tense-brink-title-bombard-melatonin-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
      "titulo": "Lewis Hamilton 'special' first Ferrari pole at Mexico City GP a reminder of Michael Schumacher's success",
      "resumen": "Lewis Hamilton has said claiming a first pole for Ferrari evoked memories of watching Michael Schumacher dominating for the Scuderia.",
      "fecha": "2026-11-01T00:06:51Z",
      "imagen": "https://a.espncdn.com/photo/2026/1031/r1739222_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50320306/lewis-hamilton-special-first-ferrari-pole-mexico-city-gp-reminder-michael-schumacher-success-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Esteban Ocon out for Mexico City Grand Prix without Haas explanation",
-     "resumen": "Esteban Ocon was suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
-     "fecha": "2026-10-31T23:44:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738946_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50336259/esteban-ocon-explanation-haas-mexico-city-grand-prix"
     }
    ],
    "resultados": null,
