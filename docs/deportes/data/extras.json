@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T22:28:18.743Z",
+ "actualizado": "2026-11-01T02:12:38.180Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -40,10 +40,10 @@
       "equipo": "Vélez Sarsfield",
       "abrev": "VEL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-      "pj": "14",
-      "pts": "27",
+      "pj": "15",
+      "pts": "28",
       "g": "7",
-      "e": "6",
+      "e": "7",
       "p": "1",
       "dg": "+10",
       "mio": false,
@@ -131,10 +131,10 @@
       "equipo": "San Lorenzo",
       "abrev": "SLO",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "14",
-      "pts": "18",
+      "pj": "15",
+      "pts": "19",
       "g": "5",
-      "e": "3",
+      "e": "4",
       "p": "6",
       "dg": "-5",
       "mio": false,
@@ -946,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1114,8 +1118,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1222,8 +1227,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1246,8 +1252,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1563,9 +1570,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1588,9 +1594,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1601,9 +1606,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1614,9 +1618,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -2087,7 +2090,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 18 carreras",
+    "titulo": "Temporada 2026 · tras 19 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2457,6 +2460,22 @@
       "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
       "logo": null,
       "mio": false
+     },
+     {
+      "pos": 24,
+      "equipo": "Ryo Hirakawa",
+      "abrev": "",
+      "detalle": "Haas F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": null,
+      "nacionalidad": "",
+      "color": "#5A5A5A",
+      "numero": null,
+      "driverId": "ryo_hirakawa",
+      "foto": null,
+      "logo": null,
+      "mio": false
      }
     ],
     "escuderias": [
@@ -2586,46 +2605,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Isack Hadjar given formal warning after fan incident at Mexico City Grand Prix",
+     "resumen": "Isack Hadjar was handed a formal warning from the stewards at the Mexico City Grand Prix after a video circulated which appeared to show him pushing a fan in the paddock.",
+     "fecha": "2026-11-01T01:25:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738867_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50334071/isack-hadjar-given-formal-warning-fan-incident-mexico-city-grand-prix"
+    },
+    {
+     "titulo": "Fernando Alonso's blunt response to Mexico City Grand Prix qualifying: 'Frustration beyond imagination'",
+     "resumen": "Fernando Alonso gave a terse eight-word interview after suffering \"frustration beyond imagination\" when engine trouble appeared to cost Aston Martin a major opportunity in qualifying at the Mexico City Grand Prix.",
+     "fecha": "2026-11-01T00:59:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739265_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320316/fernando-alonso-blunt-response-mexico-city-grand-prix-qualifying-frustration-imagination-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Kimi Antonelli's solution to feeling 'tense' while on brink of title: 'Bombard myself with melatonin'",
+     "resumen": "A tense, unwell and tired Kimi Antonelli has said he will \"bombard myself with melatonin\" to ensure himself a full night's sleep before the Mexico City Grand Prix, where he can become Formula 1's youngest world champion on Sunday.",
+     "fecha": "2026-11-01T00:35:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739242_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320315/kimi-antonellis-solution-feeling-tense-brink-title-bombard-melatonin-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Lewis Hamilton 'special' first Ferrari pole at Mexico City GP a reminder of Michael Schumacher's success",
+     "resumen": "Lewis Hamilton has said claiming a first pole for Ferrari evoked memories of watching Michael Schumacher dominating for the Scuderia.",
+     "fecha": "2026-11-01T00:06:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739222_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320306/lewis-hamilton-special-first-ferrari-pole-mexico-city-gp-reminder-michael-schumacher-success-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
      "titulo": "Mexico City Grand Prix: Lewis Hamilton takes first Ferrari pole, Kimi Antonelli in fifth",
      "resumen": "Lewis Hamilton has taken his first Ferrari pole position for this Sunday's Mexico City Grand Prix, his first in over three years.",
-     "fecha": "2026-10-31T22:19:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738642_1296x729_16-9.jpg",
+     "fecha": "2026-10-31T23:58:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739176_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50320305/lewis-hamilton-takes-first-ferrari-pole-kimi-antonelli-fifth-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
     {
-     "titulo": "'Close to perfection,' 'A very big heart' - what F1 rivals think of boy-king Kimi Antonelli",
-     "resumen": "Kimi Antonelli's rivals have heaped praise on the 20-year-old Formula 1 champion in waiting ahead of the Mexico City Grand Prix.",
-     "fecha": "2026-10-31T19:46:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0819/r1703751_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50323510/kimi-antonelli-world-title-mexico-city-grand-prix-formula-1-mercedes"
-    },
-    {
-     "titulo": "Mexico City Grand Prix: Lando Norris edges out Kimi Antonelli in final practice by one millisecond",
-     "resumen": "Lando Norris edged out title leader Kimi Antonelli in the final moments of the final practice session at the Mexico City Grand Prix.",
-     "fecha": "2026-10-31T19:00:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739035_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320304/lando-norris-edges-kimi-antonelli-final-practice-one-millisecond-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
      "titulo": "Esteban Ocon out for Mexico City Grand Prix without Haas explanation",
-     "resumen": "Esteban Ocon has been suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
-     "fecha": "2026-10-31T17:59:21Z",
+     "resumen": "Esteban Ocon was suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
+     "fecha": "2026-10-31T23:44:48Z",
      "imagen": "https://a.espncdn.com/photo/2026/1031/r1738946_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50336259/esteban-ocon-explanation-haas-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "Isack Hadjar to see stewards after alleged paddock misconduct at Mexico City Grand Prix",
-     "resumen": "Isack Hadjar has been summoned to see the stewards at the Mexico City Grand Prix after a video circulated which appeared to show him pushing a fan in the paddock.",
-     "fecha": "2026-10-31T08:55:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738867_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50334071/isack-hadjar-see-stewards-alleged-paddock-misconduct-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "How Kimi Antonelli can win F1 title at Mexico City GP -- or why he may already be champion",
-     "resumen": "Kimi Antonelli could be crowned F1 world champion at the Mexico City Grand Prix. Here's what he needs to do to seal his first title.",
-     "fecha": "2026-10-31T07:52:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736428_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50131911/kimi-antonelli-formula-1-title-race-permutations-standings-explained"
     }
    ],
    "resultados": null,
@@ -2678,11 +2697,11 @@
      "link": "https://www.espn.com/mma/story/_/id/50279491/ufc-333-next-alexander-volkanovski-petr-yan-more"
     },
     {
-     "titulo": "Alex Volkanovski defends his title at UFC 333",
-     "resumen": "Australia's Alex Volkanovski KO's Movsar Evloev in Round 2 at UFC 333 to retain his featherweight title in dominant fashion.",
-     "fecha": "2026-10-25T00:12:11Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY/dm_261024_UFC_Highlight_Alex_Volkanovski_defends_his_title_at_UFC_333_20261025_PH_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50271635/alex-volkanovski-defends-title-ufc-333"
+     "titulo": "Alexander Volkanovski, Petr Yan solidify their greatness at UFC 333",
+     "resumen": "Facing tough tests, the champions at UFC 333 proved their all-time mettle in their respective divisions.",
+     "fecha": "2026-10-24T23:28:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
     }
    ],
    "resultados": [
@@ -2751,6 +2770,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
      "categoria": "Lightweight",
      "record": "13-1-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "4629138",
+     "nombre": "Jean-Paul Lebosnoyani",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Welterweight",
+     "record": "12-2-0",
      "peleas": 3,
      "gano": 3
     },
@@ -2980,6 +3008,15 @@
      "gano": 2
     },
     {
+     "id": "4686725",
+     "nombre": "Cody Durden",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Flyweight",
+     "record": "19-11-1",
+     "peleas": 4,
+     "gano": 2
+    },
+    {
      "id": "5099679",
      "nombre": "Marcio Barbosa",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
@@ -3058,24 +3095,6 @@
      "categoria": "Lightweight",
      "record": "17-3-0",
      "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "4233039",
-     "nombre": "Dominick Reyes",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Light Heavyweight",
-     "record": "17-5-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5016786",
-     "nombre": "Farid Basharat",
-     "bandera": "https://www.espn.com/i/teamlogos/countries/500/blank.png",
-     "categoria": "Bantamweight",
-     "record": "16-0-0",
-     "peleas": 2,
      "gano": 2
     }
    ]

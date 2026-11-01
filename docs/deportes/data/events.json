@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T22:28:18.743Z",
+ "actualizado": "2026-11-01T02:12:38.180Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -955,8 +955,8 @@
    "sport": "futbol",
    "emoji": "⚽",
    "titulo": "Atlético-MG vs Boca Juniors",
-   "inicio": "2026-11-21T20:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-11-21T22:30Z",
+   "horaConfirmada": true,
    "competicion": "CONMEBOL Sudamericana",
    "sede": "Metropolitano Roberto Meléndez",
    "local": "Atlético-MG",
