@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T02:12:38.180Z",
+ "actualizado": "2026-11-01T09:14:32.284Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -27,10 +27,10 @@
       "equipo": "Instituto (Córdoba)",
       "abrev": "IACC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-      "pj": "14",
-      "pts": "32",
+      "pj": "15",
+      "pts": "33",
       "g": "10",
-      "e": "2",
+      "e": "3",
       "p": "2",
       "dg": "+11",
       "mio": false,
@@ -157,10 +157,10 @@
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-      "pj": "14",
-      "pts": "14",
+      "pj": "15",
+      "pts": "15",
       "g": "4",
-      "e": "2",
+      "e": "3",
       "p": "8",
       "dg": "-1",
       "mio": false,
@@ -1008,8 +1008,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1391,6 +1392,19 @@
       "pos": 3
      },
      {
+      "equipo": "Chicago Fire FC",
+      "abrev": "CHI",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "pj": "33",
+      "pts": "55",
+      "g": "16",
+      "e": "7",
+      "p": "10",
+      "dg": "+11",
+      "mio": false,
+      "pos": 4
+     },
+     {
       "equipo": "Charlotte FC",
       "abrev": "CLT",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
@@ -1400,19 +1414,6 @@
       "e": "8",
       "p": "10",
       "dg": "+15",
-      "mio": false,
-      "pos": 4
-     },
-     {
-      "equipo": "Chicago Fire FC",
-      "abrev": "CHI",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
-      "pj": "32",
-      "pts": "52",
-      "g": "15",
-      "e": "7",
-      "p": "10",
-      "dg": "+9",
       "mio": false,
       "pos": 5
      },
@@ -1666,9 +1667,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1937,6 +1937,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Colorado Rapids vs. Chicago Fire FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Colorado Rapids vs. Chicago Fire FC, 10/31/2026",
+     "fecha": "2026-11-01T03:55:29Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1101/5da17d7b-d19d-4521-8c8c-c29d0bb740c4/5da17d7b-d19d-4521-8c8c-c29d0bb740c4.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50344216/colorado-rapids-vs-chicago-fire-fc-game-highlights"
+    },
+    {
      "titulo": "Spooky scheduling: How MLS ensures fans, players don't have horror Halloween",
      "resumen": "Everyone has Halloween plans, so to make sure players and fans could celebrate, MLS gave clubs the option of playing outside of trick-or-treat primetime.",
      "fecha": "2026-10-31T12:34:39Z",
@@ -1970,13 +1977,6 @@
      "fecha": "2026-10-29T02:27:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Inter Miami CF vs. FC Cincinnati - Game Highlights",
-     "resumen": "Watch the Game Highlights from Inter Miami CF vs. FC Cincinnati, 10/28/2026",
-     "fecha": "2026-10-29T01:55:39Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1029/20ef8d9d-c322-4b8e-8f0a-75ccf9e4c1dc/20ef8d9d-c322-4b8e-8f0a-75ccf9e4c1dc.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50313062/inter-miami-cf-vs-fc-cincinnati-game-highlights"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2605,6 +2605,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
+     "fecha": "2026-11-01T09:08:41Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "Isack Hadjar given formal warning after fan incident at Mexico City Grand Prix",
      "resumen": "Isack Hadjar was handed a formal warning from the stewards at the Mexico City Grand Prix after a video circulated which appeared to show him pushing a fan in the paddock.",
      "fecha": "2026-11-01T01:25:42Z",
@@ -2633,13 +2640,6 @@
      "link": "https://www.espn.com/f1/story/_/id/50320306/lewis-hamilton-special-first-ferrari-pole-mexico-city-gp-reminder-michael-schumacher-success-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
     {
-     "titulo": "Mexico City Grand Prix: Lewis Hamilton takes first Ferrari pole, Kimi Antonelli in fifth",
-     "resumen": "Lewis Hamilton has taken his first Ferrari pole position for this Sunday's Mexico City Grand Prix, his first in over three years.",
-     "fecha": "2026-10-31T23:58:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739176_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320305/lewis-hamilton-takes-first-ferrari-pole-kimi-antonelli-fifth-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
      "titulo": "Esteban Ocon out for Mexico City Grand Prix without Haas explanation",
      "resumen": "Esteban Ocon was suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
      "fecha": "2026-10-31T23:44:48Z",
@@ -2662,6 +2662,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Luana Santos defeats Yana Santos by unanimous decision at UFC Fight Night",
+     "resumen": "Luana Santos earned her fourth straight victory, a unanimous decision over fifth-ranked Yana Santos on Saturday.",
+     "fecha": "2026-11-01T04:16:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739316_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/ufc/story/_/id/50343853/luana-santos-wins-4th-straight-match-defeats-yana-santos"
+    },
+    {
+     "titulo": "Nolan knocks out Moicano in Round 3",
+     "resumen": "Australian Tom Nolan extends his winning streak to six fights after knocking out Renato Moicano in the third round at UFC Vegas 123.",
+     "fecha": "2026-11-01T03:42:31Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1031/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_AUS_ONLY/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50344147/nolan-knocks-moicano-round-3"
+    },
+    {
+     "titulo": "Nolan knocks out Moicano in Round 3",
+     "resumen": "Australian Tom Nolan extends his winning streak to six fights after knocking out Renato Moicano in the third round at UFC Vegas 123.",
+     "fecha": "2026-11-01T03:40:00Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1031/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50344111/nolan-knocks-moicano-round-3"
+    },
+    {
      "titulo": "UFC's Islam Makhachev: Next fight will be 'one of the last' of career",
      "resumen": "Islam Makhachev, the No. 1 fighter in ESPN's pound-for-pound MMA rankings and the UFC's reigning welterweight champion, says his next fight will be \"one of the last\" of his career.",
      "fecha": "2026-10-30T21:23:41Z",
@@ -2681,27 +2702,6 @@
      "fecha": "2026-10-28T00:39:40Z",
      "imagen": "https://a.espncdn.com/photo/2026/0809/r1699397_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50302428/australia-quillan-salkilld-headline-ufc-fight-night-sydney-benoit-saint-denis-february"
-    },
-    {
-     "titulo": "Nowhere to rise for Volkanovski and Yan, but Reyes and Volkov move up",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-10-27T12:51:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736638_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "Alexander Volkanovski could face a new challenge after UFC 333",
-     "resumen": "Alexander Volkanovski and Petr Yan defended titles at UFC 333, but which champion could fight in a new division?",
-     "fecha": "2026-10-26T12:37:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1025/r1736052_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50279491/ufc-333-next-alexander-volkanovski-petr-yan-more"
-    },
-    {
-     "titulo": "Alexander Volkanovski, Petr Yan solidify their greatness at UFC 333",
-     "resumen": "Facing tough tests, the champions at UFC 333 proved their all-time mettle in their respective divisions.",
-     "fecha": "2026-10-24T23:28:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735626_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50269333/volkanovski-yan-ufc-333-takeaways"
     }
    ],
    "resultados": [
@@ -2761,6 +2761,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ukr.png",
      "categoria": "Welterweight",
      "record": "16-2-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5149961",
+     "nombre": "Jacobe Smith",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "categoria": "Welterweight",
+     "record": "14-0-0",
      "peleas": 3,
      "gano": 3
     },
@@ -3085,15 +3094,6 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "W Strawweight",
      "record": "17-7-0",
-     "peleas": 3,
-     "gano": 2
-    },
-    {
-     "id": "5074131",
-     "nombre": "Esteban Ribovics",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "categoria": "Lightweight",
-     "record": "17-3-0",
      "peleas": 3,
      "gano": 2
     }
