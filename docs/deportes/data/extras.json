@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T07:39:55.737Z",
+ "actualizado": "2026-11-02T18:19:37.011Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1257,6 +1257,20 @@
    ],
    "noticias": [
     {
+     "titulo": "UEFA awaits FIFA answers to Gianni Infantino queries as deadline looms - report",
+     "resumen": "UEFA is still waiting to receive answers to a series of questions it posed to FIFA related to Gianni Infantino's presidency, with only hours to go until the deadline for a response passes.",
+     "fecha": "2026-11-02T16:30:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713266_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50358121/uefa-await-fifa-answers-gianni-infantino-queries-deadline-looms"
+    },
+    {
+     "titulo": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
+     "resumen": "After a remarkable year for Bayern Munich and England, Harry Kane becoming the world's best player is the ultimate reward for years of perseverance.",
+     "fecha": "2026-11-02T15:32:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736765_3_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50265615/harry-kanes-long-road-ballon-dor-glory-ends-crowning-moment"
+    },
+    {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
      "fecha": "2026-11-02T03:23:03Z",
@@ -1292,13 +1306,6 @@
      "link": "https://www.espn.com/soccer/story/_/id/50297310/vozinha-ballon-dor-world-cup-cape-verde-goalkeeper-dreamer"
     },
     {
-     "titulo": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
-     "resumen": "After a remarkable year for Bayern Munich and England, Harry Kane becoming the world's best player is the ultimate reward for years of perseverance.",
-     "fecha": "2026-10-27T14:04:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736765_3_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50265615/harry-kanes-long-road-ballon-dor-glory-ends-crowning-moment"
-    },
-    {
      "titulo": "Kane: Ballon d'Or win beyond wildest dreams",
      "resumen": "Kane: Ballon d'Or win beyond wildest dreams",
      "fecha": "2026-10-27T08:32:23Z",
@@ -1325,13 +1332,6 @@
      "fecha": "2026-10-24T14:27:22Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_How_can_teams_stop_Erling_Haaland/dm_261024_How_can_teams_stop_Erling_Haaland.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50265810/how-teams-stop-erling-haaland"
-    },
-    {
-     "titulo": "Lionel Messi: Argentina's 2026 World Cup final heartbreak \"part of my football journey\"",
-     "resumen": "Lionel Messi has accepted that Argentina's 2026 World Cup extra-time defeat to Spain was a part of his football journey.",
-     "fecha": "2026-10-23T10:17:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1023/r1734936_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50256249/lionel-messi-argentina-2026-world-cup-final-spain"
     }
    ],
    "resultados": null,
@@ -2198,9 +2198,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2214,9 +2215,10 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 9,
@@ -2602,46 +2604,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "The families that built Kimi Antonelli, F1 world champion",
-     "resumen": "Hoisted on the shoulders of two champions is a fitting image for Antonelli, the boy king of F1.",
-     "fecha": "2026-11-02T06:54:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739861_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50353525/formula-1-2026-mexico-city-grand-prix"
+     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
+     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
+     "fecha": "2026-11-02T17:27:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
     },
     {
-     "titulo": "Kimi Antonelli's historic F1 title: Every record broken and milestone reached",
-     "resumen": "Kimi Antonelli has been crowned the Formula 1 drivers' champion -- and here are all the records he's broken in the process.",
-     "fecha": "2026-11-02T02:05:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739806_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50259995/every-f1-record-kimi-antonelli-broken-title"
+     "titulo": "F1 reassures teams Middle East races will go ahead as planned",
+     "resumen": "Formula 1 has assured its 11 teams its business as usual for the two Middle East races set to finish the season. The message came after Yamaha withdrew its entry from this weekend's MotoGP race in Qatar at the Losail circuit also hosting F1 on Nov. 29.",
+     "fecha": "2026-11-02T17:14:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739913_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320340/f1-reassures-teams-middle-east-races-go-ahead-planned-formula-1"
     },
     {
-     "titulo": "Kimi Antonelli on winning historic F1 title: 'A day I will remember forever'",
-     "resumen": "Kimi Antonelli cherished a \"day I will remember forever\" as he claimed his place in history as Formula 1's youngest world champion.",
-     "fecha": "2026-11-02T01:04:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739877_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320325/kimi-antonelli-winning-historic-f1-title-day-remember-forever-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+     "titulo": "Formula 1 start times: When does each 2026 race begin?",
+     "resumen": "The first half of the Formula 1 2026 season has been full of ups and downs for teams and drivers across the grid.",
+     "fecha": "2026-11-02T16:12:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
     },
     {
-     "titulo": "In pictures: The moments that defined Kimi Antonelli's F1 title-winning season",
-     "resumen": "Kimi Antonelli has been crowned Formula 1 world champion and is the youngest driver in history to do so.",
-     "fecha": "2026-11-02T00:45:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739830_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50195873/in-pictures-kimi-antonelli-2026-formula-1-title"
+     "titulo": "'Integrity, loyalty, respect' - Kimi Antonelli 'represents modern F1 drivers,' says Mercedes boss",
+     "resumen": "Toto Wolff still sees Kimi Antonelli as the \"same kid\" who joined Mercedes aged 12 and says the new world champion is a role model for all Formula 1 drivers.",
+     "fecha": "2026-11-02T14:36:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739915_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320339/integrity-loyalty-respect-kimi-antonelli-represents-modern-f1-drivers-says-mercedes-boss-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
     {
-     "titulo": "Mexico City Grand Prix results: Max Verstappen wins as Kimi Antonelli crowned F1 champion - as it happened",
-     "resumen": "Max Verstappen wins the Mexico City Grand Prix as Kimi Antonelli wraps up Formula 1 title.",
-     "fecha": "2026-11-02T00:41:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739781_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321045/mexico-city-grand-prix-2026-live-updates-results-analysis-commentary-autodromo-hermanos-rodriguez"
+     "titulo": "Lewis Hamilton demands 'serious talks' at Ferrari, questions Charles Leclerc's 'mentality'",
+     "resumen": "Lewis Hamilton demanded \"serious talks\" with Ferrari as the furious British driver questioned the mentality of teammate Charles Leclerc.",
+     "fecha": "2026-11-02T13:24:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740009_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320338/lewis-hamilton-demands-serious-talks-ferrari-questions-charles-leclercs-mentality-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     },
     {
-     "titulo": "All-time F1 drivers' and constructors' championship winners",
-     "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
-     "fecha": "2026-11-01T23:26:48Z",
-     "imagen": "https://a.espncdn.com/photo/2022/1009/r1073006_608x342_16-9.jpg",
-     "link": "https://www.espn.com/auto/story/_/id/42230928/all-f1-drivers-constructors-championship-winners"
+     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
+     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
+     "fecha": "2026-11-02T10:30:27Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
     }
    ],
    "resultados": null,
