@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T00:42:51.736Z",
+ "actualizado": "2026-11-02T07:39:55.737Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -702,8 +702,8 @@
    "visitante": "Inter Miami CF",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 2"
   },
   {
    "feedId": "f1",

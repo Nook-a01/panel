@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T00:42:51.736Z",
+ "actualizado": "2026-11-02T07:39:55.737Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -79,10 +79,10 @@
       "equipo": "Lanús",
       "abrev": "LAN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "14",
-      "pts": "24",
+      "pj": "15",
+      "pts": "25",
       "g": "7",
-      "e": "3",
+      "e": "4",
       "p": "4",
       "dg": "+7",
       "mio": false,
@@ -105,10 +105,10 @@
       "equipo": "Gimnasia (Mendoza)",
       "abrev": "GMZ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-      "pj": "14",
-      "pts": "20",
+      "pj": "15",
+      "pts": "21",
       "g": "6",
-      "e": "2",
+      "e": "3",
       "p": "6",
       "dg": "+1",
       "mio": false,
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -617,9 +616,8 @@
      "posCorta": "F",
      "edad": 36,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -1084,9 +1082,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1097,9 +1094,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1182,9 +1178,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1256,16 +1251,15 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-29T02:27:29Z",
+     "fecha": "2026-11-02T03:23:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
@@ -1369,29 +1363,29 @@
       "pos": 1
      },
      {
-      "equipo": "New England Revolution",
-      "abrev": "NE",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
-      "pj": "32",
-      "pts": "58",
-      "g": "18",
-      "e": "4",
-      "p": "10",
-      "dg": "+10",
-      "mio": false,
-      "pos": 2
-     },
-     {
       "equipo": "Inter Miami CF",
       "abrev": "MIA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-      "pj": "32",
-      "pts": "56",
-      "g": "15",
+      "pj": "33",
+      "pts": "59",
+      "g": "16",
       "e": "11",
       "p": "6",
-      "dg": "+20",
+      "dg": "+21",
       "mio": true,
+      "pos": 2
+     },
+     {
+      "equipo": "New England Revolution",
+      "abrev": "NE",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "pj": "33",
+      "pts": "58",
+      "g": "18",
+      "e": "4",
+      "p": "11",
+      "dg": "+9",
+      "mio": false,
       "pos": 3
      },
      {
@@ -1730,9 +1724,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1941,6 +1934,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi brings Miami back to stun Revs, clinch Champions Cup spot",
+     "resumen": "Inter Miami CF beat the New England Revolution 2-1 on Sunday in Foxborough, Massachusetts, with Lionel Messi once again providing the magic touch, this time to ensure his team's spot in the 2027 Concacaf Champions Cup.",
+     "fecha": "2026-11-02T04:54:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739921_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50354699/messi-brings-miami-back-stun-revs-clinch-champions-cup"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-11-02T03:23:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "Messi rallies Miami to win over Revs to go second in East",
+     "resumen": "Lionel Messi had a second-half assist before scoring the winner as Inter Miami CF came from behind to beat the New England Revolution 2-1 on Sunday night.",
+     "fecha": "2026-11-02T03:12:25Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761932.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761932"
+    },
+    {
      "titulo": "Nashville ties Miami's single-season points record, ends Red Bulls playoff push",
      "resumen": "Nashville got two own goals and a stoppage-time winner by Sam Surridge to erase a two-goal lead and beat the New York Red Bulls 3-2 on a rainy Sunday at Geodis Park.",
      "fecha": "2026-11-02T00:23:43Z",
@@ -1960,27 +1974,6 @@
      "fecha": "2026-10-31T12:34:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/1030/r1738627_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50328963/spooky-scheduling-how-mls-ensures-fans-players-dont-horror-halloween"
-    },
-    {
-     "titulo": "Messi eligible for crunch Miami game with Revs despite yellow card haul",
-     "resumen": "Lionel Messi is eligible for Inter Miami's game against the New England Revolution on Sunday despite receiving his fifth yellow card of the season on Wednesday.",
-     "fecha": "2026-10-30T02:03:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1024/r1735701_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50320683/messi-eligible-miami-game-revs-yellow-card"
-    },
-    {
-     "titulo": "Cavan Sullivan turned 17 last month, but he's already playing like an MLS MVP",
-     "resumen": "Since MLS resumed after the World Cup, Cavan Sullivan has been the league's best player not named Lionel Messi. Does he deserve some MVP recognition?",
-     "fecha": "2026-10-29T13:58:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1027/r1737149_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50298923/cavan-sullivan-turned-17-last-month-hes-already-playing-mls-mvp"
-    },
-    {
-     "titulo": "Chicago Fire FC vs. Orlando City SC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Orlando City SC, 10/28/2026",
-     "fecha": "2026-10-29T02:53:59Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1029/10378b67-07b0-4ec9-afbb-3d7a568fd2a4/10378b67-07b0-4ec9-afbb-3d7a568fd2a4.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50313668/chicago-fire-fc-vs-orlando-city-sc-game-highlights"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2102,7 +2095,7 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "365",
+      "pts": "380",
       "g": "9",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
@@ -2115,17 +2108,17 @@
      },
      {
       "pos": 2,
-      "equipo": "George Russell",
-      "abrev": "RUS",
-      "detalle": "Mercedes",
-      "pts": "242",
+      "equipo": "Max Verstappen",
+      "abrev": "VER",
+      "detalle": "Red Bull",
+      "pts": "261",
       "g": "3",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#00D2BE",
-      "numero": "63",
-      "driverId": "russell",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5503.png",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+      "nacionalidad": "Dutch",
+      "color": "#00327D",
+      "numero": "3",
+      "driverId": "max_verstappen",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
       "logo": null,
       "mio": false
      },
@@ -2134,7 +2127,7 @@
       "equipo": "Lewis Hamilton",
       "abrev": "HAM",
       "detalle": "Ferrari",
-      "pts": "241",
+      "pts": "259",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2147,17 +2140,17 @@
      },
      {
       "pos": 4,
-      "equipo": "Max Verstappen",
-      "abrev": "VER",
-      "detalle": "Red Bull",
-      "pts": "236",
-      "g": "2",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
-      "nacionalidad": "Dutch",
-      "color": "#00327D",
-      "numero": "3",
-      "driverId": "max_verstappen",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
+      "equipo": "George Russell",
+      "abrev": "RUS",
+      "detalle": "Mercedes",
+      "pts": "250",
+      "g": "3",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#00D2BE",
+      "numero": "63",
+      "driverId": "russell",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5503.png",
       "logo": null,
       "mio": false
      },
@@ -2166,7 +2159,7 @@
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "233",
+      "pts": "245",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2182,7 +2175,7 @@
       "equipo": "Lando Norris",
       "abrev": "NOR",
       "detalle": "McLaren",
-      "pts": "211",
+      "pts": "221",
       "g": "2",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2198,7 +2191,7 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "144",
+      "pts": "150",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
@@ -2230,7 +2223,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "77",
+      "pts": "79",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2246,7 +2239,7 @@
       "equipo": "Pierre Gasly",
       "abrev": "GAS",
       "detalle": "Alpine F1 Team",
-      "pts": "42",
+      "pts": "43",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2278,7 +2271,7 @@
       "equipo": "Franco Colapinto",
       "abrev": "COL",
       "detalle": "Alpine F1 Team",
-      "pts": "27",
+      "pts": "31",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
       "nacionalidad": "Argentine",
@@ -2451,22 +2444,6 @@
      },
      {
       "pos": 23,
-      "equipo": "Sergio Pérez",
-      "abrev": "PER",
-      "detalle": "Cadillac F1 Team",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-      "nacionalidad": "Mexican",
-      "color": "#A2AAAD",
-      "numero": "11",
-      "driverId": "perez",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 24,
       "equipo": "Ryo Hirakawa",
       "abrev": "HIR",
       "detalle": "Haas F1 Team",
@@ -2480,6 +2457,22 @@
       "foto": null,
       "logo": null,
       "mio": false
+     },
+     {
+      "pos": 24,
+      "equipo": "Sergio Pérez",
+      "abrev": "PER",
+      "detalle": "Cadillac F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+      "nacionalidad": "Mexican",
+      "color": "#A2AAAD",
+      "numero": "11",
+      "driverId": "perez",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
+      "logo": null,
+      "mio": false
      }
     ],
     "escuderias": [
@@ -2487,7 +2480,7 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "607",
+      "pts": "630",
       "g": "12",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2498,7 +2491,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "474",
+      "pts": "504",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2509,8 +2502,8 @@
       "pos": 3,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "355",
-      "g": "2",
+      "pts": "380",
+      "g": "3",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
       "logo": null,
@@ -2520,7 +2513,7 @@
       "pos": 4,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "355",
+      "pts": "371",
       "g": "2",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2531,7 +2524,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "102",
+      "pts": "104",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2542,7 +2535,7 @@
       "pos": 6,
       "equipo": "Alpine F1 Team",
       "detalle": "French",
-      "pts": "69",
+      "pts": "74",
       "g": "0",
       "color": "#FFF500",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
@@ -2609,32 +2602,39 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Max Verstappen wins Mexico City GP for Red Bull; Kimi Antonelli seals historic title",
-     "resumen": "Max Verstappen stormed to victory at the Mexico City Grand Prix, and Kimi Antonelli was crowned Formula 1 world champion.",
-     "fecha": "2026-11-02T00:38:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739825_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320323/max-verstappen-wins-mexico-city-gp-red-bull-kimi-antonelli-seals-historic-title-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Kimi Antonelli makes F1 history as youngest world champion with maiden title",
-     "resumen": "Kimi Antonelli became the youngest world champion in Formula 1 history, clinching his first title at 20 years old after finishing third at the Mexico City Grand Prix.",
-     "fecha": "2026-11-02T00:36:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739776_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250037/kimi-antonelli-youngest-f1-world-champion-2026-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "In pictures: The moments that defined Kimi Antonelli's F1 title-winning season",
-     "resumen": "Kimi Antonelli has been crowned Formula 1 world champion and is the youngest driver in history to do so.",
-     "fecha": "2026-11-02T00:24:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739830_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50195873/in-pictures-kimi-antonelli-2026-formula-1-title"
+     "titulo": "The families that built Kimi Antonelli, F1 world champion",
+     "resumen": "Hoisted on the shoulders of two champions is a fitting image for Antonelli, the boy king of F1.",
+     "fecha": "2026-11-02T06:54:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739861_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50353525/formula-1-2026-mexico-city-grand-prix"
     },
     {
      "titulo": "Kimi Antonelli's historic F1 title: Every record broken and milestone reached",
      "resumen": "Kimi Antonelli has been crowned the Formula 1 drivers' champion -- and here are all the records he's broken in the process.",
-     "fecha": "2026-11-02T00:14:31Z",
+     "fecha": "2026-11-02T02:05:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/1101/r1739806_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50259995/every-f1-record-kimi-antonelli-broken-title"
+    },
+    {
+     "titulo": "Kimi Antonelli on winning historic F1 title: 'A day I will remember forever'",
+     "resumen": "Kimi Antonelli cherished a \"day I will remember forever\" as he claimed his place in history as Formula 1's youngest world champion.",
+     "fecha": "2026-11-02T01:04:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739877_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320325/kimi-antonelli-winning-historic-f1-title-day-remember-forever-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "In pictures: The moments that defined Kimi Antonelli's F1 title-winning season",
+     "resumen": "Kimi Antonelli has been crowned Formula 1 world champion and is the youngest driver in history to do so.",
+     "fecha": "2026-11-02T00:45:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739830_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50195873/in-pictures-kimi-antonelli-2026-formula-1-title"
+    },
+    {
+     "titulo": "Mexico City Grand Prix results: Max Verstappen wins as Kimi Antonelli crowned F1 champion - as it happened",
+     "resumen": "Max Verstappen wins the Mexico City Grand Prix as Kimi Antonelli wraps up Formula 1 title.",
+     "fecha": "2026-11-02T00:41:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739781_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50321045/mexico-city-grand-prix-2026-live-updates-results-analysis-commentary-autodromo-hermanos-rodriguez"
     },
     {
      "titulo": "All-time F1 drivers' and constructors' championship winners",
@@ -2642,13 +2642,6 @@
      "fecha": "2026-11-01T23:26:48Z",
      "imagen": "https://a.espncdn.com/photo/2022/1009/r1073006_608x342_16-9.jpg",
      "link": "https://www.espn.com/auto/story/_/id/42230928/all-f1-drivers-constructors-championship-winners"
-    },
-    {
-     "titulo": "Mexico City Grand Prix results: Max Verstappen wins as Kimi Antonelli crowned F1 champion - as it happened",
-     "resumen": "Max Verstappen wins the Mexico City Grand Prix as Kimi Antonelli wraps up Formula 1 title.",
-     "fecha": "2026-11-01T22:56:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739781_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321045/mexico-city-grand-prix-2026-live-updates-results-analysis-commentary-autodromo-hermanos-rodriguez"
     }
    ],
    "resultados": null,
