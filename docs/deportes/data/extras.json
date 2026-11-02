@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T20:29:28.727Z",
+ "actualizado": "2026-11-02T00:42:51.736Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -92,10 +92,10 @@
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-      "pj": "14",
-      "pts": "21",
+      "pj": "15",
+      "pts": "22",
       "g": "5",
-      "e": "6",
+      "e": "7",
       "p": "3",
       "dg": "+3",
       "mio": false,
@@ -144,10 +144,10 @@
       "equipo": "Unión (Santa Fe)",
       "abrev": "USF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-      "pj": "14",
-      "pts": "17",
+      "pj": "15",
+      "pts": "18",
       "g": "5",
-      "e": "2",
+      "e": "3",
       "p": "7",
       "dg": "-2",
       "mio": false,
@@ -424,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -629,9 +630,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1034,8 +1034,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1046,8 +1047,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1082,8 +1084,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1094,8 +1097,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1130,9 +1134,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1179,8 +1182,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1252,8 +1256,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1354,12 +1359,12 @@
       "equipo": "Nashville SC",
       "abrev": "NSH",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
-      "pj": "32",
-      "pts": "71",
-      "g": "21",
+      "pj": "33",
+      "pts": "74",
+      "g": "22",
       "e": "8",
       "p": "3",
-      "dg": "+43",
+      "dg": "+44",
       "mio": false,
       "pos": 1
      },
@@ -1484,12 +1489,12 @@
       "equipo": "Toronto FC",
       "abrev": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
-      "pj": "32",
+      "pj": "33",
       "pts": "39",
       "g": "9",
       "e": "12",
-      "p": "11",
-      "dg": "-10",
+      "p": "12",
+      "dg": "-12",
       "mio": false,
       "pos": 11
      },
@@ -1497,14 +1502,27 @@
       "equipo": "Red Bull New York",
       "abrev": "RBNY",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-      "pj": "32",
+      "pj": "33",
       "pts": "39",
       "g": "11",
       "e": "6",
-      "p": "15",
-      "dg": "-16",
+      "p": "16",
+      "dg": "-17",
       "mio": false,
       "pos": 12
+     },
+     {
+      "equipo": "Atlanta United FC",
+      "abrev": "ATL",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+      "pj": "33",
+      "pts": "33",
+      "g": "9",
+      "e": "6",
+      "p": "18",
+      "dg": "-14",
+      "mio": false,
+      "pos": 13
      },
      {
       "equipo": "D.C. United",
@@ -1516,19 +1534,6 @@
       "e": "12",
       "p": "14",
       "dg": "-21",
-      "mio": false,
-      "pos": 13
-     },
-     {
-      "equipo": "Atlanta United FC",
-      "abrev": "ATL",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-      "pj": "32",
-      "pts": "30",
-      "g": "8",
-      "e": "6",
-      "p": "18",
-      "dg": "-16",
       "mio": false,
       "pos": 14
      },
@@ -1569,9 +1574,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1726,8 +1730,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1936,6 +1941,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Nashville ties Miami's single-season points record, ends Red Bulls playoff push",
+     "resumen": "Nashville got two own goals and a stoppage-time winner by Sam Surridge to erase a two-goal lead and beat the New York Red Bulls 3-2 on a rainy Sunday at Geodis Park.",
+     "fecha": "2026-11-02T00:23:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739837_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50353289/nashville-ties-miami-single-season-points-record"
+    },
+    {
      "titulo": "Colorado Rapids vs. Chicago Fire FC - Game Highlights",
      "resumen": "Watch the Game Highlights from Colorado Rapids vs. Chicago Fire FC, 10/31/2026",
      "fecha": "2026-11-01T03:55:29Z",
@@ -1969,13 +1981,6 @@
      "fecha": "2026-10-29T02:53:59Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1029/10378b67-07b0-4ec9-afbb-3d7a568fd2a4/10378b67-07b0-4ec9-afbb-3d7a568fd2a4.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50313668/chicago-fire-fc-vs-orlando-city-sc-game-highlights"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-10-29T02:27:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2104,10 +2109,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2605,46 +2609,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Mexico City Grand Prix LIVE! F1 race updates, commentary and results",
-     "resumen": "Kimi Antonelli could be crowned world champion at the Mexico City Grand Prix, and you can follow live updates on ESPN.",
-     "fecha": "2026-11-01T20:22:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739660_1296x729_16-9.jpg",
+     "titulo": "Max Verstappen wins Mexico City GP for Red Bull; Kimi Antonelli seals historic title",
+     "resumen": "Max Verstappen stormed to victory at the Mexico City Grand Prix, and Kimi Antonelli was crowned Formula 1 world champion.",
+     "fecha": "2026-11-02T00:38:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739825_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50320323/max-verstappen-wins-mexico-city-gp-red-bull-kimi-antonelli-seals-historic-title-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
+    },
+    {
+     "titulo": "Kimi Antonelli makes F1 history as youngest world champion with maiden title",
+     "resumen": "Kimi Antonelli became the youngest world champion in Formula 1 history, clinching his first title at 20 years old after finishing third at the Mexico City Grand Prix.",
+     "fecha": "2026-11-02T00:36:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739776_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50250037/kimi-antonelli-youngest-f1-world-champion-2026-mexico-city-grand-prix"
+    },
+    {
+     "titulo": "In pictures: The moments that defined Kimi Antonelli's F1 title-winning season",
+     "resumen": "Kimi Antonelli has been crowned Formula 1 world champion and is the youngest driver in history to do so.",
+     "fecha": "2026-11-02T00:24:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739830_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50195873/in-pictures-kimi-antonelli-2026-formula-1-title"
+    },
+    {
+     "titulo": "Kimi Antonelli's historic F1 title: Every record broken and milestone reached",
+     "resumen": "Kimi Antonelli has been crowned the Formula 1 drivers' champion -- and here are all the records he's broken in the process.",
+     "fecha": "2026-11-02T00:14:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739806_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50259995/every-f1-record-kimi-antonelli-broken-title"
+    },
+    {
+     "titulo": "All-time F1 drivers' and constructors' championship winners",
+     "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
+     "fecha": "2026-11-01T23:26:48Z",
+     "imagen": "https://a.espncdn.com/photo/2022/1009/r1073006_608x342_16-9.jpg",
+     "link": "https://www.espn.com/auto/story/_/id/42230928/all-f1-drivers-constructors-championship-winners"
+    },
+    {
+     "titulo": "Mexico City Grand Prix results: Max Verstappen wins as Kimi Antonelli crowned F1 champion - as it happened",
+     "resumen": "Max Verstappen wins the Mexico City Grand Prix as Kimi Antonelli wraps up Formula 1 title.",
+     "fecha": "2026-11-01T22:56:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739781_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50321045/mexico-city-grand-prix-2026-live-updates-results-analysis-commentary-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Kimi Antonelli's solution to feeling 'tense' while on brink of title: 'Bombard myself with melatonin'",
-     "resumen": "A tense, unwell and tired Kimi Antonelli has said he will \"bombard myself with melatonin\" to ensure himself a full night's sleep before the Mexico City Grand Prix, where he can become Formula 1's youngest world champion on Sunday.",
-     "fecha": "2026-11-01T18:24:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739242_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320315/kimi-antonellis-solution-feeling-tense-brink-title-bombard-melatonin-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Esteban Ocon denies reports of physical altercation after Mexico City GP axing without Haas explanation",
-     "resumen": "Esteban Ocon was suddenly replaced, without explanation, by Haas with Ryo Hirakawa for the Mexico City Grand Prix.",
-     "fecha": "2026-11-01T17:41:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1738946_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50336259/esteban-ocon-explanation-haas-mexico-city-grand-prix"
-    },
-    {
-     "titulo": "Mexico City Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Mexico on a weekend where Kimi Antonelli could win the drivers' championship for the first time.",
-     "fecha": "2026-11-01T09:08:41Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736510_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50250142/mexico-city-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Fernando Alonso's blunt response to Mexico City Grand Prix qualifying: 'Frustration beyond imagination'",
-     "resumen": "Fernando Alonso gave a terse eight-word interview after suffering \"frustration beyond imagination\" when engine trouble appeared to cost Aston Martin a major opportunity in qualifying at the Mexico City Grand Prix.",
-     "fecha": "2026-11-01T00:59:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739265_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320316/fernando-alonso-blunt-response-mexico-city-grand-prix-qualifying-frustration-imagination-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Lewis Hamilton 'special' first Ferrari pole at Mexico City GP a reminder of Michael Schumacher's success",
-     "resumen": "Lewis Hamilton has said claiming a first pole for Ferrari evoked memories of watching Michael Schumacher dominating for the Scuderia.",
-     "fecha": "2026-11-01T00:06:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1031/r1739222_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320306/lewis-hamilton-special-first-ferrari-pole-mexico-city-gp-reminder-michael-schumacher-success-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
     }
    ],
    "resultados": null,
