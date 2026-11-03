@@ -11,7 +11,7 @@
 // @connect      wispy-poetry-97f9.hamcqc.workers.dev
 // @connect      plata.hamcqc.workers.dev
 // @inject-into  content
-// @version      1.4.5
+// @version      1.4.6
 // @downloadURL  https://nook-a01.github.io/panel/instagram/panel.user.js
 // @updateURL    https://nook-a01.github.io/panel/instagram/panel.user.js
 // ==/UserScript==
@@ -1012,38 +1012,60 @@ async function IGPanelPro(){
   accountBanner.style.cssText='font-size:.95rem;color:#9a9ab0;margin-bottom:14px';
   accountBanner.textContent='Verificando cuenta…';
   async function checkAccount(){
-    try{
-      var r=await fetch('https://www.instagram.com/api/v1/users/'+uid+'/info/',{headers:headers,credentials:'include'});
-      capClaim(r);
-      if(r.status===401 || r.status===403){
-        pintarBanner('⚠️ Tu sesión de Instagram venció o se cerró. Volvé a iniciar sesión en instagram.com y reabrí el panel.');
-        return;
-      }
-      var j=await r.json();
-      var u=j&&j.user;
-      if(u){
-        state.counts={followers:u.follower_count, following:u.following_count, username:u.username, ts:Date.now()};
-        lsSet(LS.counts,state.counts);
-        // Recién ACÁ sabemos quién es. El aviso de 'abrió el panel' sale antes,
-        // cuando todavía no lo sabemos, y para mucha gente ese es el único que
-        // manda en su vida: abren el panel y no tocan nada más. Por eso el
-        // tablero se llenó de fichas 'sin nombre' con ocho aperturas y ningún
-        // otro dato. Este segundo aviso lleva el usuario y sale una sola vez.
-        try{ ping('registro', true); }catch(e){}
-        // registro histórico: 1 punto por día para la curva de evolución
-        var hist=lsGet(LS.hist,[]);
-        if(!hist.length || (Date.now()-hist[hist.length-1].ts)>12*3600*1000){
-          hist.push({ts:Date.now(), f:u.follower_count, g:u.following_count});
-          if(hist.length>400) hist=hist.slice(-400);
-          lsSet(LS.hist,hist);
+    // IG limita fuerte el endpoint /users/{id}/info/ (429). Antes, un 429 acá dejaba
+    // el panel con "No se pudo verificar la cuenta" y sin totales, aunque la sesión
+    // esté perfecta y el escaneo funcione. Ahora: reintentamos el 429 con pausa, y si
+    // igual no sale, usamos los últimos totales guardados y seguimos sin alarmar.
+    var esperas=[0,4000,10000,25000];
+    for(var intento=0; intento<esperas.length; intento++){
+      if(esperas[intento]) await sleep(esperas[intento]);
+      try{
+        var r=await fetch('https://www.instagram.com/api/v1/users/'+uid+'/info/',{headers:headers,credentials:'include'});
+        capClaim(r);
+        if(r.status===401 || r.status===403){
+          pintarBanner('⚠️ Tu sesión de Instagram venció o se cerró. Volvé a iniciar sesión en instagram.com y reabrí el panel.');
+          return;
         }
-        accountBanner.innerHTML='✅ Sesión detectada: <b style="color:#2ee6a8">@'+u.username+'</b> · '+u.follower_count+' seguidores · '+u.following_count+' seguidos';
-        var live=document.getElementById('igpp-banner'); if(live){ live.innerHTML=accountBanner.innerHTML; }
-      } else {
-        // Respondió, pero sin los datos esperados: probablemente Instagram cambió algo.
-        pintarBanner('⚠️ Instagram cambió algo por dentro y esta herramienta puede necesitar una actualización. Avisale a quien te pasó el panel. (No es un problema de tu cuenta.)');
-      }
-    }catch(e){ pintarBanner('No se pudo verificar la cuenta (seguimos con la sesión activa).'); }
+        if(r.status===429){
+          pintarBanner('⏳ Instagram está limitando los pedidos. Reintento los totales en un momento… (el escaneo igual funciona)');
+          continue;
+        }
+        var j=await r.json();
+        var u=j&&j.user;
+        if(u){
+          state.counts={followers:u.follower_count, following:u.following_count, username:u.username, ts:Date.now()};
+          lsSet(LS.counts,state.counts);
+          // Recién ACÁ sabemos quién es. El aviso de 'abrió el panel' sale antes,
+          // cuando todavía no lo sabemos, y para mucha gente ese es el único que
+          // manda en su vida: abren el panel y no tocan nada más. Por eso el
+          // tablero se llenó de fichas 'sin nombre' con ocho aperturas y ningún
+          // otro dato. Este segundo aviso lleva el usuario y sale una sola vez.
+          try{ ping('registro', true); }catch(e){}
+          // registro histórico: 1 punto por día para la curva de evolución
+          var hist=lsGet(LS.hist,[]);
+          if(!hist.length || (Date.now()-hist[hist.length-1].ts)>12*3600*1000){
+            hist.push({ts:Date.now(), f:u.follower_count, g:u.following_count});
+            if(hist.length>400) hist=hist.slice(-400);
+            lsSet(LS.hist,hist);
+          }
+          accountBanner.innerHTML='✅ Sesión detectada: <b style="color:#2ee6a8">@'+u.username+'</b> · '+u.follower_count+' seguidores · '+u.following_count+' seguidos';
+          var live=document.getElementById('igpp-banner'); if(live){ live.innerHTML=accountBanner.innerHTML; }
+          return;
+        }
+        // Respondió 200 pero sin los datos esperados: reintentar no suele ayudar, salimos del loop.
+        break;
+      }catch(e){ /* red o JSON: reintentamos según el loop */ }
+    }
+    // No se pudieron traer los totales ahora. Usamos los últimos guardados (si hay) y
+    // seguimos: el escaneo de seguidores/seguidos no depende de esto.
+    var prev=lsGet(LS.counts,null);
+    if(prev && (prev.username||prev.followers!=null)){
+      state.counts=prev;
+      accountBanner.innerHTML='✅ Sesión activa · <b style="color:#2ee6a8">@'+(prev.username||'vos')+'</b> · '+(prev.followers!=null?prev.followers:'?')+' seguidores · '+(prev.following!=null?prev.following:'?')+' seguidos <span style="color:#8f8fa3">(totales de la última vez — Instagram limita el dato ahora)</span>';
+    } else {
+      pintarBanner('✅ Sesión activa. Instagram está limitando los totales ahora mismo — no afecta buscar quién te dejó de seguir ni quién no te sigue de vuelta.');
+    }
+    var live=document.getElementById('igpp-banner'); if(live){ live.innerHTML=accountBanner.innerHTML; }
   }
   function pintarBanner(txt){
     accountBanner.textContent=txt;
@@ -1105,7 +1127,11 @@ async function IGPanelPro(){
   async function runScan(fresh){
     if(state.scanning) return;
     state.scanning=true; scanAbort=false; state.scanErr='';
-    if(fresh||!cache||cache.complete) cache=newCache('gql');
+    // REST primero: el GraphQL edge_follow quedó muerto (IG devuelve lista vacía) y,
+    // peor, si la primera llamada gql da 429 en vez de vacío, el código viejo reintentaba
+    // el endpoint muerto 5 veces y se rendía sin probar nunca el REST que SÍ funciona.
+    // Arrancamos directo por el método REST (dos listas: seguidos + seguidores).
+    if(fresh||!cache||cache.complete){ cache=newCache('api'); cache.apiPhase='following'; cache.apiFollowers=[]; }
     var backoffs=[8000,15000,30000,60000,120000], failStreak=0, pageN=0;
 
     while(!scanAbort){

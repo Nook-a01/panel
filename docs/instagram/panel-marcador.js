@@ -676,12 +676,19 @@ var accountBanner=document.createElement('div');
 accountBanner.style.cssText='font-size:.95rem;color:#9a9ab0;margin-bottom:14px';
 accountBanner.textContent='Verificando cuenta…';
 async function checkAccount(){
+var esperas=[0,4000,10000,25000];
+for(var intento=0; intento<esperas.length; intento++){
+if(esperas[intento]) await sleep(esperas[intento]);
 try{
 var r=await fetch('https://www.instagram.com/api/v1/users/'+uid+'/info/',{headers:headers,credentials:'include'});
 capClaim(r);
 if(r.status===401 || r.status===403){
 pintarBanner('⚠️ Tu sesión de Instagram venció o se cerró. Volvé a iniciar sesión en instagram.com y reabrí el panel.');
 return;
+}
+if(r.status===429){
+pintarBanner('⏳ Instagram está limitando los pedidos. Reintento los totales en un momento… (el escaneo igual funciona)');
+continue;
 }
 var j=await r.json();
 var u=j&&j.user;
@@ -697,10 +704,19 @@ lsSet(LS.hist,hist);
 }
 accountBanner.innerHTML='✅ Sesión detectada: <b style="color:#2ee6a8">@'+u.username+'</b> · '+u.follower_count+' seguidores · '+u.following_count+' seguidos';
 var live=document.getElementById('igpp-banner'); if(live){ live.innerHTML=accountBanner.innerHTML; }
-} else {
-pintarBanner('⚠️ Instagram cambió algo por dentro y esta herramienta puede necesitar una actualización. Avisale a quien te pasó el panel. (No es un problema de tu cuenta.)');
+return;
 }
-}catch(e){ pintarBanner('No se pudo verificar la cuenta (seguimos con la sesión activa).'); }
+break;
+}catch(e){ /* red o JSON: reintentamos según el loop */ }
+}
+var prev=lsGet(LS.counts,null);
+if(prev && (prev.username||prev.followers!=null)){
+state.counts=prev;
+accountBanner.innerHTML='✅ Sesión activa · <b style="color:#2ee6a8">@'+(prev.username||'vos')+'</b> · '+(prev.followers!=null?prev.followers:'?')+' seguidores · '+(prev.following!=null?prev.following:'?')+' seguidos <span style="color:#8f8fa3">(totales de la última vez — Instagram limita el dato ahora)</span>';
+} else {
+pintarBanner('✅ Sesión activa. Instagram está limitando los totales ahora mismo — no afecta buscar quién te dejó de seguir ni quién no te sigue de vuelta.');
+}
+var live=document.getElementById('igpp-banner'); if(live){ live.innerHTML=accountBanner.innerHTML; }
 }
 function pintarBanner(txt){
 accountBanner.textContent=txt;
@@ -747,7 +763,7 @@ var scanAbort=false;
 async function runScan(fresh){
 if(state.scanning) return;
 state.scanning=true; scanAbort=false; state.scanErr='';
-if(fresh||!cache||cache.complete) cache=newCache('gql');
+if(fresh||!cache||cache.complete){ cache=newCache('api'); cache.apiPhase='following'; cache.apiFollowers=[]; }
 var backoffs=[8000,15000,30000,60000,120000], failStreak=0, pageN=0;
 while(!scanAbort){
 var got=null;
