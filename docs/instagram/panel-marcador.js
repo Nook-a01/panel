@@ -1756,6 +1756,7 @@ tips.innerHTML='<b>💡 Ideas para crecer</b><ul style="margin:12px 0 0;padding-
 growthTips().map(function(t){return '<li style="margin:6px 0">'+t+'</li>';}).join('')+'</ul>';
 body.appendChild(tips);
 }
+switchTab('analysis');
 checkAccount().then(function(){
 if(exigirRegistro()) switchTab('analysis');
 });
