@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T01:34:22.158Z",
+ "actualizado": "2026-11-03T09:30:16.292Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 17,
+   "total": 16,
    "proximos": 8
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 16",
-   "sede": "Sepang International Circuit, Malaysia",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-16-q",
-   "anio": 2026,
-   "ronda": "16",
-   "sesion": "Clasificación",
-   "titulo": "GP Bahrain Grand Prix in Malaysia · Clasificación",
-   "inicio": "2026-10-03T08:00:00.000Z"
-  },
   {
    "id": "espn-600061182",
    "miLado": null,
@@ -705,6 +684,28 @@
    "inicio": "2026-11-07T18:00:00.000Z"
   },
   {
+   "id": "espn-401841669",
+   "miLado": "local",
+   "idEspn": "401841669",
+   "liga": "arg.1",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Boca Juniors vs Defensa y Justicia",
+   "inicio": "2026-11-07T20:30Z",
+   "horaConfirmada": true,
+   "competicion": "Argentine Liga Profesional de Fútbol",
+   "sede": "Alberto José Armando (La Bombonera)",
+   "local": "Boca Juniors",
+   "visitante": "Defensa y Justicia",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-761938",
    "miLado": "local",
    "idEspn": "761938",
@@ -768,28 +769,6 @@
    "sesion": "Carrera",
    "titulo": "GP Brazilian",
    "inicio": "2026-11-08T17:00:00.000Z"
-  },
-  {
-   "id": "espn-401841669",
-   "miLado": "local",
-   "idEspn": "401841669",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Defensa y Justicia",
-   "inicio": "2026-11-08T20:00Z",
-   "horaConfirmada": false,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Alberto José Armando (La Bombonera)",
-   "local": "Boca Juniors",
-   "visitante": "Defensa y Justicia",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-   "finalizado": false,
-   "marcador": null
   },
   {
    "id": "espn-401930876",
