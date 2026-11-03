@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T17:50:06.312Z",
+ "actualizado": "2026-11-03T23:20:25.478Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -970,8 +969,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1152,9 +1152,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1256,9 +1255,9 @@
    ],
    "noticias": [
     {
-     "titulo": "Reports: FIFA to open World Cup private equity plan files following UEFA demands",
-     "resumen": "FIFA has agreed to grant access to confidential documents detailing its aborted plan to sell a stake in the World Cup to private investors, according to multiple reports.",
-     "fecha": "2026-11-03T00:45:24Z",
+     "titulo": "Source: FIFA to open World Cup private equity plan files following UEFA demands",
+     "resumen": "FIFA will open access to confidential documents detailing president Gianni Infantino's controversial proposal to bring private investors into the World Cup, a source confirmed to ESPN.",
+     "fecha": "2026-11-03T19:24:35Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713266_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50358121/fifa-open-world-cup-private-equity-files-uefa-demands"
     },
@@ -1592,8 +1591,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1604,8 +1604,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1664,8 +1665,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1934,6 +1936,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Robert Lewandowski's jersey outselling Lionel Messi's since Chicago arrival",
+     "resumen": "Robert Lewandowski's Chicago Fire jersey has been the most popular in MLS since his arrival to the league in June, outselling even Lionel Messi's Miami kit.",
+     "fecha": "2026-11-03T19:16:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1103/r1740618_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50370651/mls-jersey-sales-lionel-messi-robert-lewandowski-chicago"
+    },
+    {
      "titulo": "MLS Power Rankings: Miami finds its feet with Decision Day coming up",
      "resumen": "Which teams are in the best position heading into Decision Day? All this and more in the latest edition of ESPN's MLS Power Rankings.",
      "fecha": "2026-11-02T18:51:05Z",
@@ -1967,13 +1976,6 @@
      "fecha": "2026-11-02T00:23:43Z",
      "imagen": "https://a.espncdn.com/photo/2026/1101/r1739837_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50353289/nashville-ties-miami-single-season-points-record"
-    },
-    {
-     "titulo": "Colorado Rapids vs. Chicago Fire FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Colorado Rapids vs. Chicago Fire FC, 10/31/2026",
-     "fecha": "2026-11-01T03:55:29Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1101/5da17d7b-d19d-4521-8c8c-c29d0bb740c4/5da17d7b-d19d-4521-8c8c-c29d0bb740c4.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50344216/colorado-rapids-vs-chicago-fire-fc-game-highlights"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2102,9 +2104,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2278,9 +2281,10 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 13,
@@ -2725,12 +2729,6 @@
      "fecha": "2026-10-10T21:00Z",
      "marcador": null,
      "sede": "Meta APEX"
-    },
-    {
-     "titulo": "UFC 332: Silva vs. Wang",
-     "fecha": "2026-10-03T20:00Z",
-     "marcador": null,
-     "sede": "Delta Center"
     }
    ],
    "peleadores": [
