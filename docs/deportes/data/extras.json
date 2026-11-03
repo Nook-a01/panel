@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T18:19:37.011Z",
+ "actualizado": "2026-11-03T01:34:22.158Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -66,10 +66,10 @@
       "equipo": "Defensa y Justicia",
       "abrev": "DYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-      "pj": "14",
-      "pts": "27",
+      "pj": "15",
+      "pts": "28",
       "g": "8",
-      "e": "3",
+      "e": "4",
       "p": "3",
       "dg": "+7",
       "mio": false,
@@ -118,10 +118,10 @@
       "equipo": "Independiente",
       "abrev": "IND",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-      "pj": "14",
-      "pts": "19",
+      "pj": "15",
+      "pts": "20",
       "g": "5",
-      "e": "4",
+      "e": "5",
       "p": "5",
       "dg": "-2",
       "mio": false,
@@ -154,6 +154,19 @@
       "pos": 10
      },
      {
+      "equipo": "Platense",
+      "abrev": "PLA",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+      "pj": "15",
+      "pts": "17",
+      "g": "4",
+      "e": "5",
+      "p": "6",
+      "dg": "-4",
+      "mio": false,
+      "pos": 11
+     },
+     {
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
@@ -163,19 +176,6 @@
       "e": "3",
       "p": "8",
       "dg": "-1",
-      "mio": false,
-      "pos": 11
-     },
-     {
-      "equipo": "Platense",
-      "abrev": "PLA",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-      "pj": "14",
-      "pts": "14",
-      "g": "3",
-      "e": "5",
-      "p": "6",
-      "dg": "-6",
       "mio": false,
       "pos": 12
      },
@@ -209,12 +209,12 @@
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "14",
+      "pj": "15",
       "pts": "10",
       "g": "2",
       "e": "4",
-      "p": "8",
-      "dg": "-12",
+      "p": "9",
+      "dg": "-14",
       "mio": false,
       "pos": 15
      }
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -424,8 +423,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -971,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1045,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1082,8 +1080,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1106,8 +1105,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "207343",
@@ -1178,8 +1178,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1257,11 +1258,11 @@
    ],
    "noticias": [
     {
-     "titulo": "UEFA awaits FIFA answers to Gianni Infantino queries as deadline looms - report",
-     "resumen": "UEFA is still waiting to receive answers to a series of questions it posed to FIFA related to Gianni Infantino's presidency, with only hours to go until the deadline for a response passes.",
-     "fecha": "2026-11-02T16:30:37Z",
+     "titulo": "Reports: FIFA to open World Cup private equity plan files following UEFA demands",
+     "resumen": "FIFA has agreed to grant access to confidential documents detailing its aborted plan to sell a stake in the World Cup to private investors, according to multiple reports.",
+     "fecha": "2026-11-03T00:45:24Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50358121/uefa-await-fifa-answers-gianni-infantino-queries-deadline-looms"
+     "link": "https://www.espn.com/soccer/story/_/id/50358121/fifa-open-world-cup-private-equity-files-uefa-demands"
     },
     {
      "titulo": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
@@ -1568,8 +1569,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1604,8 +1606,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1616,8 +1619,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1664,8 +1668,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1934,6 +1939,13 @@
    ],
    "noticias": [
     {
+     "titulo": "MLS Power Rankings: Miami finds its feet with Decision Day coming up",
+     "resumen": "Which teams are in the best position heading into Decision Day? All this and more in the latest edition of ESPN's MLS Power Rankings.",
+     "fecha": "2026-11-02T18:51:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740114_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50359073/mls-power-rankings-inter-miami-find-their-feet-decision-day-coming-up"
+    },
+    {
      "titulo": "Messi brings Miami back to stun Revs, clinch Champions Cup spot",
      "resumen": "Inter Miami CF beat the New England Revolution 2-1 on Sunday in Foxborough, Massachusetts, with Lionel Messi once again providing the magic touch, this time to ensure his team's spot in the 2027 Concacaf Champions Cup.",
      "fecha": "2026-11-02T04:54:48Z",
@@ -1967,13 +1979,6 @@
      "fecha": "2026-11-01T03:55:29Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1101/5da17d7b-d19d-4521-8c8c-c29d0bb740c4/5da17d7b-d19d-4521-8c8c-c29d0bb740c4.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50344216/colorado-rapids-vs-chicago-fire-fc-game-highlights"
-    },
-    {
-     "titulo": "Spooky scheduling: How MLS ensures fans, players don't have horror Halloween",
-     "resumen": "Everyone has Halloween plans, so to make sure players and fans could celebrate, MLS gave clubs the option of playing outside of trick-or-treat primetime.",
-     "fecha": "2026-10-31T12:34:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1030/r1738627_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50328963/spooky-scheduling-how-mls-ensures-fans-players-dont-horror-halloween"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2191,41 +2196,39 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "150",
+      "pts": "144",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "105",
+      "pts": "107",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 9,
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "79",
+      "pts": "83",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2241,7 +2244,7 @@
       "equipo": "Pierre Gasly",
       "abrev": "GAS",
       "detalle": "Alpine F1 Team",
-      "pts": "43",
+      "pts": "42",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2273,7 +2276,7 @@
       "equipo": "Franco Colapinto",
       "abrev": "COL",
       "detalle": "Alpine F1 Team",
-      "pts": "31",
+      "pts": "27",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
       "nacionalidad": "Argentine",
@@ -2302,6 +2305,22 @@
      },
      {
       "pos": 14,
+      "equipo": "Gabriel Bortoleto",
+      "abrev": "BOR",
+      "detalle": "Audi",
+      "pts": "14",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "nacionalidad": "Brazilian",
+      "color": "#FF2D00",
+      "numero": "5",
+      "driverId": "bortoleto",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 15,
       "equipo": "Nico Hülkenberg",
       "abrev": "HUL",
       "detalle": "Audi",
@@ -2313,22 +2332,6 @@
       "numero": "27",
       "driverId": "hulkenberg",
       "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 15,
-      "equipo": "Gabriel Bortoleto",
-      "abrev": "BOR",
-      "detalle": "Audi",
-      "pts": "10",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-      "nacionalidad": "Brazilian",
-      "color": "#FF2D00",
-      "numero": "5",
-      "driverId": "bortoleto",
-      "foto": null,
       "logo": null,
       "mio": false
      },
@@ -2414,6 +2417,22 @@
      },
      {
       "pos": 21,
+      "equipo": "Ryo Hirakawa",
+      "abrev": "HIR",
+      "detalle": "Haas F1 Team",
+      "pts": "1",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+      "nacionalidad": "Japanese",
+      "color": "#5A5A5A",
+      "numero": "50",
+      "driverId": "ryo_hirakawa",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 22,
       "equipo": "Lance Stroll",
       "abrev": "STR",
       "detalle": "Aston Martin",
@@ -2429,7 +2448,7 @@
       "mio": false
      },
      {
-      "pos": 22,
+      "pos": 23,
       "equipo": "Valtteri Bottas",
       "abrev": "BOT",
       "detalle": "Cadillac F1 Team",
@@ -2441,22 +2460,6 @@
       "numero": "77",
       "driverId": "bottas",
       "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4520.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 23,
-      "equipo": "Ryo Hirakawa",
-      "abrev": "HIR",
-      "detalle": "Haas F1 Team",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-      "nacionalidad": "Japanese",
-      "color": "#5A5A5A",
-      "numero": "50",
-      "driverId": "ryo_hirakawa",
-      "foto": null,
       "logo": null,
       "mio": false
      },
@@ -2504,7 +2507,7 @@
       "pos": 3,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "380",
+      "pts": "382",
       "g": "3",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2515,7 +2518,7 @@
       "pos": 4,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "371",
+      "pts": "365",
       "g": "2",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
@@ -2526,7 +2529,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "104",
+      "pts": "108",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2537,7 +2540,7 @@
       "pos": 6,
       "equipo": "Alpine F1 Team",
       "detalle": "French",
-      "pts": "74",
+      "pts": "69",
       "g": "0",
       "color": "#FFF500",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
@@ -2548,7 +2551,7 @@
       "pos": 7,
       "equipo": "Haas F1 Team",
       "detalle": "American",
-      "pts": "30",
+      "pts": "31",
       "g": "0",
       "color": "#5A5A5A",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -2559,7 +2562,7 @@
       "pos": 8,
       "equipo": "Audi",
       "detalle": "German",
-      "pts": "23",
+      "pts": "27",
       "g": "0",
       "color": "#FF2D00",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2604,6 +2607,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "George Russell admits his F1 season had 'more bad days than good' following Kimi Antonelli championship triumph",
+     "resumen": "George Russell has admitted his 2026 Formula 1 season has been the first of his career with \"more bad days than good\" in a candid first statement following Mercedes teammate Kimi Antonelli's world championship triumph.",
+     "fecha": "2026-11-02T21:30:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739982_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50361047/george-russell-f1-kimi-antonelli-mercedes"
+    },
+    {
+     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
+     "fecha": "2026-11-02T18:56:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "F1 2026 results: Winners, podium, final positions from every race",
      "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
      "fecha": "2026-11-02T17:27:43Z",
@@ -2630,20 +2647,6 @@
      "fecha": "2026-11-02T14:36:30Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739915_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50320339/integrity-loyalty-respect-kimi-antonelli-represents-modern-f1-drivers-says-mercedes-boss-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Lewis Hamilton demands 'serious talks' at Ferrari, questions Charles Leclerc's 'mentality'",
-     "resumen": "Lewis Hamilton demanded \"serious talks\" with Ferrari as the furious British driver questioned the mentality of teammate Charles Leclerc.",
-     "fecha": "2026-11-02T13:24:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740009_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320338/lewis-hamilton-demands-serious-talks-ferrari-questions-charles-leclercs-mentality-mexico-city-grand-prix-formula-1-autodromo-hermanos-rodriguez"
-    },
-    {
-     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
-     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
-     "fecha": "2026-11-02T10:30:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
     }
    ],
    "resultados": null,
