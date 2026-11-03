@@ -2222,10 +2222,11 @@ async function IGPanelPro(){
   }
 
   // ---------------- init ----------------
-  // Primero se lee la cuenta: así el aviso puede mostrar el usuario real que se
-  // enviaría, y no se manda nada hasta saber qué respondió la persona.
-  // La pestaña se pinta recién cuando se sabe quién es, porque de eso depende si
-  // hay que mostrar la puerta de entrada o el panel directamente.
+  // Pintamos la pestaña activa YA, sin esperar a checkAccount. checkAccount puede
+  // tardar (Instagram limita /users/info con 429 y reintentamos con pausa): si el
+  // primer render dependiera de eso, el panel quedaba con el cuerpo vacío hasta ~40s.
+  // checkAccount corre en segundo plano y actualiza el banner cuando responde.
+  switchTab('analysis');
   checkAccount().then(function(){
     if(exigirRegistro()) switchTab('analysis');
   });
