@@ -50,6 +50,16 @@ writeFileSync("docs/instagram/marcador.txt", entero);
 // 2) el panel como script
 writeFileSync("docs/instagram/panel-marcador.js", "/* Panel de Instagram — lo carga el favorito corto. Generado por scripts/marcador.mjs: no editar a mano. */\n" + code + "\n");
 
+// 3b) código para la app Atajos de iPhone. La acción "Ejecutar JavaScript en la
+// página web" EXIGE llamar completion() al terminar, o aborta con "JavaScript no
+// válido". Y el loader corto no sirve ahí: Atajos corre en un mundo aislado donde
+// la CSP de Instagram bloquea el <script> externo. Así que va el panel ENTERO,
+// inline, y al final completion(). Se pega tal cual en la acción.
+const ios = "/* Panel de Instagram para la app Atajos de iPhone. Pegá TODO esto en la " +
+  "accion 'Ejecutar JavaScript en la pagina web'. Generado por scripts/marcador.mjs. */\n" +
+  code + "\ntry{completion()}catch(e){}\n";
+writeFileSync("docs/instagram/panel-ios.js", ios);
+
 // 3) el favorito corto (Android). Sin espacios ni caracteres raros, así se
 // puede pegar tal cual. ?t= evita que el navegador use una copia vieja.
 const corto = "javascript:(function(){" +
