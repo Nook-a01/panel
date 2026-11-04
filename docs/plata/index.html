@@ -2061,12 +2061,14 @@ function pintarEsteMes(c){
   if(!cm.pendIng.length && !cm.pendFij.length){ el.hidden = true; return; }
   el.hidden = false;
   const ym = cm.ym;
+  // Ticket entero, todo a la vista: cada ingreso y cada fijo con su línea, para
+  // poder verificar la cuenta de un vistazo (sin esconder nada detrás de "ver").
   let h = '<h3>Lo que te queda para '+esc(MESES[+ym.slice(5,7)-1])+'</h3>'
-    + '<button type="button" class="l det" data-det="mi"><span>Te entra (saldo + lo que falta) <i class="q">ver</i></span><b>'+money(cm.entra)+'</b></button>'
-    + (detMes==='mi' ? detEntraMes(cm) : '')
-    + '<button type="button" class="l det" data-det="mf"><span>Fijos que faltan pagar <i class="q">ver</i></span><b>−'+money(cm.fijos)+'</b></button>'
-    + (detMes==='mf' ? detalleDeMes(cm.pendFij, '−') : '')
-    + '<div class="l"><span>Te queda para el mes</span><b class="'+(cm.queda>=0?'ok':'mal')+'">'+money(cm.queda)+'</b></div>';
+    + '<div class="l"><span>Te entra</span><b>'+money(cm.entra)+'</b></div>'
+    + detEntraMes(cm)
+    + '<div class="l"><span>Fijos que faltan pagar</span><b>−'+money(cm.fijos)+'</b></div>'
+    + detalleDeMes(cm.pendFij, '−')
+    + '<div class="l fin"><span>Te queda para el mes</span><b class="'+(cm.queda>=0?'ok':'mal')+'">'+money(cm.queda)+'</b></div>';
   if(cm.queda > 0) h += '<div class="l"><span>Eso es por día ('+cm.diasRest+(cm.diasRest===1?' día':' días')+')</span><b>'+money(cm.porDia)+'</b></div>';
   el.innerHTML = h;
 }
@@ -3892,6 +3894,10 @@ function confirmarFacturas(){
     usar.forEach(r=>{
       let mov = null;
       if(r.recId){
+        // Dejar el estimado del fijo en el monto real: así, si algo regenera la
+        // instancia (reprogramarRec / generar usan rec.monto), no vuelve al viejo.
+        const rec = S.recs.find(x=> x.id===r.recId);
+        if(rec) rec.monto = r.monto;
         const pref = r.recId+'@'+r.ym;
         mov = S.movs.find(m=> typeof m.src==='string' && m.tipo==='gasto'
                            && (m.src===pref || m.src.indexOf(pref)===0));
