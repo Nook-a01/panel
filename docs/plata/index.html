@@ -532,6 +532,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
       <div class="pordia" id="hoyPorDia" hidden></div>
       <div class="plan-linea" id="hoyPlan" hidden></div>
       <div class="resumen" id="hoyResumen"></div>
+      <div class="mesque" id="hoyEsteMes" hidden></div>
       <div class="mesque" id="hoyMesQue" hidden></div>
       <!-- La línea del mes: dónde estás parado entre que cobraste y volvés a
            cobrar. Los hitos salen de tus propios movimientos. -->
@@ -1604,19 +1605,18 @@ function renderHoy(){
     $('#hoyLibreV').hidden = true;
     $('#hoyLibreS').textContent = 'Cuando la compu lea tu saldo, acá aparece solo cuánto podés gastar hasta que cobres.';
   } else {
+    const cm = calcMes(c);
     $('#hoyLibreV').hidden = false;
-    $('#hoyLibre').classList.toggle('neg', c.libre < 0);
+    $('#hoyLibre').classList.toggle('neg', cm.queda < 0);
+    $('#hoyLibreK').textContent = (cm.queda >= 0 ? 'Te queda para ' : 'Te falta para ') + MESES[+c.hoyYM.slice(5,7)-1];
+    contar($('#hoyLibreV'), Math.abs(cm.queda));
+    const partes = [];
+    if(cm.queda > 0) partes.push('≈ '+money(cm.porDia)+' por día · quedan '+cm.diasRest+(cm.diasRest===1?' día':' días'));
+    // El número de la ventana corta ("hasta que cobres") queda como línea chica.
     const hastaK = c.motivoVentana === 'cobro' ? 'hasta que cobres'
                  : c.motivoVentana === 'ingreso' ? 'hasta que te entre plata'
                  : 'hasta fin de mes';
-    $('#hoyLibreK').textContent = (c.libre >= 0 ? 'Podés gastar ' : 'Te falta plata ') + hastaK;
-    contar($('#hoyLibreV'), Math.abs(c.libre));
-    const partes = [];
-    if(c.libre > 0) partes.push('≈ '+money(c.libre / c.diasHasta)+' por día');
-    const porQue = c.motivoVentana === 'cobro' ? 'cobrás el '+fmtDay(c.finVentana)
-                 : c.motivoVentana === 'ingreso' ? 'te entra plata el '+fmtDay(c.finVentana)
-                 : 'hasta el '+fmtDay(c.finVentana);
-    partes.push('faltan '+c.diasHasta+(c.diasHasta===1?' día':' días')+', '+porQue);
+    if(c.libre >= 0) partes.push('podés gastar '+money(c.libre)+' '+hastaK+' ('+fmtDay(c.finVentana)+')');
     const viejo = leido && horas > 26
       ? '<div class="aviso-viejo">Ojo: tu saldo es de '+esc(mpHaceCuanto(leido))+'. Se actualiza solo cuando la compu lee Mercado Pago.</div>'
       : '';
@@ -1976,6 +1976,9 @@ function renderSimple(c, proximos, sinSaldo){
   pintarVidrio(c);
   pintarLinea(c);
 
+  // ¿cuánto me queda para este mes? (alimenta el número grande)
+  pintarEsteMes(c);
+
   // ¿cómo llego a fin del mes que viene?
   pintarMesQue(c);
 
@@ -2020,6 +2023,51 @@ function detalleTarjeta(tj){
     + (tj.vencimiento ? '<div class="dl"><span>Vence</span><b>'+esc(tj.vencimiento)+'</b></div>' : '')
     + '<div class="dl tip">Lo lee tu banco: es el total del resumen en curso, no sólo lo que pasó por Mercado Pago. Tu mamá te pasa esto de menos, así que se descuenta de lo que te entra. Se actualiza cada vez que abrís tu tarjeta en la página del banco'
       + (tj.leidoEn ? ' (última lectura '+esc(mpHaceCuanto(tj.leidoEn))+')' : '') + '.</div></div>';
+}
+
+// Lo que te queda para el mes EN CURSO: saldo de hoy + lo que falta entrar
+// (sin la ayuda-tarjeta de mamá, que se netea con su consumo) − los fijos que
+// faltan pagar este mes (sin la tarjeta, que la paga ella). Alimenta el número
+// grande de Hoy.
+function calcMes(c){
+  const ym = c.hoyYM;
+  const ms = movsMes(ym);
+  // La ayuda de mamá se netea con su tarjeta; la de la abuela es para el mes
+  // siguiente. Ninguna cuenta como plata libre de este mes.
+  const apartada = m => m.catId === 'c-mama' || m.catId === 'c-abuela';
+  const pendIng = ms.filter(m=> m.tipo==='ingreso' && !confirmado(m) && !esNoGasto(m.catId) && !apartada(m));
+  const pendFij = ms.filter(m=> m.tipo==='gasto' && !confirmado(m) && !esTarjeta(m) && (m.srcTipo==='fijo' || m.srcTipo==='cuota'));
+  const suma = l => l.reduce((a,m)=> a + (Number(m.monto)||0), 0);
+  const entra = (Number(c.saldo)||0) + suma(pendIng);
+  const fijos = suma(pendFij);
+  const queda = entra - fijos;
+  const diasRest = Math.max(1, daysInMonth(ym) - parseISO(c.hoy).getDate() + 1);
+  return { ym, entra, fijos, queda, porDia: queda/diasRest, diasRest, pendIng, pendFij, saldo: Number(c.saldo)||0 };
+}
+
+function detEntraMes(cm){
+  return '<div class="dt"><div class="dl"><span>Saldo de hoy en Mercado Pago</span><b>+'+money(cm.saldo)+'</b></div>'
+    + cm.pendIng.slice().sort((a,b)=> a.fecha.localeCompare(b.fecha)).map(m=>
+        '<div class="dl"><span>'+fmtDay(m.fecha)+' · '+esc(m.desc || catName(m.catId))+'</span><b>+'+money(m.monto)+'</b></div>'
+      ).join('')
+    + '<div class="dl tip">No se cuenta la ayuda con la tarjeta de mamá (se netea con su consumo) ni la plata de la abuela (es para el mes que viene).</div></div>';
+}
+
+function pintarEsteMes(c){
+  const el = $('#hoyEsteMes');
+  if(!el) return;
+  const cm = calcMes(c);
+  if(!cm.pendIng.length && !cm.pendFij.length){ el.hidden = true; return; }
+  el.hidden = false;
+  const ym = cm.ym;
+  let h = '<h3>Lo que te queda para '+esc(MESES[+ym.slice(5,7)-1])+'</h3>'
+    + '<button type="button" class="l det" data-det="mi"><span>Te entra (saldo + lo que falta) <i class="q">ver</i></span><b>'+money(cm.entra)+'</b></button>'
+    + (detMes==='mi' ? detEntraMes(cm) : '')
+    + '<button type="button" class="l det" data-det="mf"><span>Fijos que faltan pagar <i class="q">ver</i></span><b>−'+money(cm.fijos)+'</b></button>'
+    + (detMes==='mf' ? detalleDeMes(cm.pendFij, '−') : '')
+    + '<div class="l"><span>Te queda para el mes</span><b class="'+(cm.queda>=0?'ok':'mal')+'">'+money(cm.queda)+'</b></div>';
+  if(cm.queda > 0) h += '<div class="l"><span>Eso es por día ('+cm.diasRest+(cm.diasRest===1?' día':' días')+')</span><b>'+money(cm.porDia)+'</b></div>';
+  el.innerHTML = h;
 }
 
 function pintarMesQue(c){
