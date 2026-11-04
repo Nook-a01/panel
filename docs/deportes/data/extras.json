@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T14:36:06.584Z",
+ "actualizado": "2026-11-04T21:19:05.963Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1043,9 +1043,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1152,8 +1151,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1254,13 +1254,6 @@
     }
    ],
    "noticias": [
-    {
-     "titulo": "FIFA boss Gianni Infantino could face questions over ties to Donald Trump",
-     "resumen": "FIFA president Gianni Infantino could be compelled to answer questions over his ties to United States President Donald Trump or face criminal consequences after Democrats seized control of Congress in the midterm elections.",
-     "fecha": "2026-11-04T10:46:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0811/r1700197_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50377439/fifa-boss-gianni-infantino-face-questions-ties-donald-trump"
-    },
     {
      "titulo": "Source: FIFA to open World Cup private equity plan files following UEFA demands",
      "resumen": "FIFA will open access to confidential documents detailing president Gianni Infantino's controversial proposal to bring private investors into the World Cup, a source confirmed to ESPN.",
@@ -2607,6 +2600,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Charles Leclerc to miss Brazilian Grand Prix media duty due to birth of baby",
+     "resumen": "Ferrari's Charles Leclerc will miss media duties ahead of the Brazilian Grand Prix following the birth of his first child.",
+     "fecha": "2026-11-04T14:52:51Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731507_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50378860/charles-leclerc-brazilian-grand-prix-media-due-baby-birth"
+    },
+    {
      "titulo": "Lewis Hamilton: Watching successor Kimi Antonelli win title 'highlight of my year'",
      "resumen": "Lewis Hamilton has said watching his Mercedes successor Kimi Antonelli win his first world championship was the \"highlight\" of his Formula 1 season.",
      "fecha": "2026-11-03T11:50:34Z",
@@ -2640,13 +2640,6 @@
      "fecha": "2026-11-02T21:30:28Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739982_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50361047/george-russell-f1-kimi-antonelli-mercedes"
-    },
-    {
-     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
-     "fecha": "2026-11-02T18:56:30Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
     }
    ],
    "resultados": null,
