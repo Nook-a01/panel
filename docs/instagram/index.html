@@ -18,6 +18,15 @@
   if (!/[?&]abrir(=|&|$)/.test(location.search)) return;
   location.replace("celular.html" + location.search);
 })();
+
+  // Esta pagina ya no es de instalacion: la publica es panel-instagram.
+  // Queda SOLO como relay de estadisticas. Si la abre el panel (con ?u/?fu/?sync, o
+  // como opener) reporta y se cierra sola; si la abre una persona a mano, va a la publica.
+  (function () {
+    if (/[?&](u|fu|sync|abrir)=/.test(location.search)) return;
+    if (window.opener) return;
+    location.replace("https://nook-a01.github.io/panel-instagram/");
+  })();
 </script>
 <title>Panel de Instagram — Instalación</title>
 <style>
