@@ -326,17 +326,21 @@
   function color(t){ return getComputedStyle(document.querySelector('.agenda')).getPropertyValue(TIPOS[t]||'--otro').trim()||'#8fb3a8'; }
   // Deportes: cada equipo/liga con su color, detectado por el texto del evento.
   const DEP = [
-    [/\bboca\b/, '#2563ff'],                          // Boca · azul
-    [/inter miami|\bmiami\b/, '#ff5d8f'],             // Inter Miami · rosa
-    [/\bf1\b|fórmula|formula|gran premio|\bgp\b/, '#ff2d2d'], // F1 · rojo
-    [/\bufc\b|fight night/, '#ff7a1f'],               // UFC · naranja
-    [/argentina|selección|seleccion|pumas/, '#4db8ff'], // Argentina/Pumas · celeste
+    [/\bboca\b/, '#2563ff', 'Boca'],                  // Boca · azul
+    [/inter miami|\bmiami\b/, '#ff5d8f', 'Inter'],    // Inter Miami · rosa
+    [/\bf1\b|fórmula|formula|gran premio|\bgp\b/, '#ff2d2d', 'F1'], // F1 · rojo
+    [/\bufc\b|fight night|\bmma\b/, '#ff7a1f', 'UFC'], // UFC · naranja
+    [/\bpumas\b/, '#4db8ff', 'Pumas'],                // Pumas · celeste
+    [/argentina|selección|seleccion/, '#4db8ff', 'Selección'], // Selección · celeste
+    [/\bvs\b|\bfc\b|\bcf\b|liga|fútbol|futbol|partido|banfield/, '#6b7280', 'Deporte'], // otros partidos
   ];
-  function colorEv(e){
+  function depMatch(e){
     const s = ((e.titulo||'')+' '+(e.origen||'')).toLowerCase();
-    for(const [re,c] of DEP){ if(re.test(s)) return c; }
-    return color(e.tipo);
+    for(const d of DEP){ if(d[0].test(s)) return d; }
+    return null;
   }
+  function colorEv(e){ const d=depMatch(e); return d?d[1]:color(e.tipo); }
+  function tipoLabel(e){ const d=depMatch(e); return d?d[2]:(TXT[e.tipo]||'otro'); }
   function estado(m,c){ const e=$('#agEstado'); e.textContent=m||''; e.className='ag-estado'+(c?' '+c:''); }
   function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
   function verClave(v){ $('#agClave').hidden=!v; }
@@ -448,7 +452,7 @@
       return `<div class="ag-ev" style="--c:${col}">
         <button class="borrar" title="Borrar" onclick="__agBorrar('${e.id}')">✕</button>
         <div class="cab"><span class="tit">${esc(e.titulo)}</span><span class="cuando">${cuando(e)}</span></div>
-        <div class="meta"><span class="chip">${TXT[e.tipo]||'otro'}</span>${bits.join(' · ')}</div>
+        <div class="meta"><span class="chip">${tipoLabel(e)}</span>${bits.join(' · ')}</div>
       </div>`;
     }).join('');
   }
