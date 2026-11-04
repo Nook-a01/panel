@@ -1,0 +1,54 @@
+name: Agenda del día
+
+# Manda a la mañana, todos los días, lo que tenés que hacer hoy según la
+# agenda del panel (turnos, pagos, entregas, trámites, legales, facultad…).
+# Lee la agenda privada del Worker con la clave y arma una sola notificación.
+
+on:
+  schedule:
+    # 12:00 UTC = 09:00 en Argentina — el aviso de las 9 de la mañana.
+    # 12:20 UTC = 09:20 como respaldo, por si GitHub saltea la primera.
+    # El propio aviso no se repite: el script deja constancia del día enviado.
+    - cron: "0 12 * * *"
+    - cron: "20 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agenda-diaria
+  cancel-in-progress: false
+
+jobs:
+  agenda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --omit=dev
+
+      - name: Mandar la agenda de hoy
+        env:
+          VAPID_PUBLIC:      ${{ secrets.VAPID_PUBLIC }}
+          VAPID_PRIVATE:     ${{ secrets.VAPID_PRIVATE }}
+          PUSH_SUBSCRIPTION: ${{ secrets.PUSH_SUBSCRIPTION }}
+          CLAVE_APP:         ${{ secrets.CLAVE_APP }}
+        run: node scripts/send-push.mjs --agenda
+
+      # Deja constancia de que el aviso de hoy ya salió, para que la segunda
+      # corrida del día no lo repita.
+      - name: Recordar que ya se mandó
+        run: |
+          git config user.name  "Agenda diaria"
+          git config user.email "actions@github.com"
+          git add estado/enviados.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Agenda del día enviada"
+          git pull --rebase --autostash || true
+          git push
