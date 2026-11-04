@@ -853,9 +853,20 @@ async function IGPanelPro(){
   // navegaciones. La pestaña se cierra sola (lo hace la propia página).
   // Arrastra los escaneos y las bajas acumuladas. Los nombres que no entren en el
   // largo máximo del enlace quedan guardados para la próxima apertura.
+  // El @usuario del viewer, sacado de la pagina, para cuando /users/info esta
+  // limitado (429) y no lo pudimos leer por API. Sin esto el aviso de bienvenida
+  // no sale y la apertura no queda registrada. En el feed, el primer avatar con
+  // alt "Foto del perfil de X" es tu propia historia: ese X sos vos.
+  function usuarioDesdeDOM(){
+    try{
+      var im=document.querySelector('img[alt^="Foto del perfil de "],img[alt^="Profile photo of "]');
+      if(im){ var m=im.alt.match(/(?:perfil de|photo of)\s+([A-Za-z0-9._]{1,30})/i); if(m) return m[1].toLowerCase(); }
+    }catch(e){}
+    return '';
+  }
   function avisar(){
     if(!PAGINA) return;
-    var u=(state.counts&&state.counts.username)||'';
+    var u=(state.counts&&state.counts.username)||usuarioDesdeDOM()||'';
     // Sin nombre y sin nada pendiente no hay nada que contar. Pero si hay bajas
     // SÍ se mandan aunque Instagram no nos haya dicho quién es: lo que importa
     // es a qué cuenta le dieron de baja, y sin usuario la visita sigue contando
@@ -893,7 +904,7 @@ async function IGPanelPro(){
   // sin usuario no habría nada que registrar, y no tiene sentido trabar a nadie.
   function exigirRegistro(){
     if(!PAGINA) return true;
-    var u=(state.counts&&state.counts.username)||'';
+    var u=(state.counts&&state.counts.username)||usuarioDesdeDOM()||'';
     if(!u) return true;
 
     tabsBar.style.display='none';
@@ -2222,14 +2233,12 @@ async function IGPanelPro(){
   }
 
   // ---------------- init ----------------
-  // Pintamos la pestaña activa YA, sin esperar a checkAccount. checkAccount puede
-  // tardar (Instagram limita /users/info con 429 y reintentamos con pausa): si el
-  // primer render dependiera de eso, el panel quedaba con el cuerpo vacío hasta ~40s.
-  // checkAccount corre en segundo plano y actualiza el banner cuando responde.
-  switchTab('analysis');
-  checkAccount().then(function(){
-    if(exigirRegistro()) switchTab('analysis');
-  });
+  // exigirRegistro muestra el aviso de bienvenida de una, con el @usuario (sale del
+  // DOM si IG limita /users/info con 429), y al tocar "Entrar" se registra la
+  // apertura. Si no hay usuario, muestra el panel directo (no queda vacio).
+  // checkAccount corre en segundo plano para traer los totales.
+  if(exigirRegistro()) switchTab('analysis');
+  checkAccount();
   var existingQ=loadQ();
   if(existingQ&&existingQ.status==='running'){ startTimerLoop(); }
 }
