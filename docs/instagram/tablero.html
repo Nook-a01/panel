@@ -923,8 +923,7 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
 
   /* ── el orden de la tabla ─────────────────────────────────────
      Se toca el encabezado y la tabla se reordena por esa columna; si
-     se toca de nuevo, se da vuelta. Arranca por las veces que entró
-     cada uno, de mayor a menor, que es como estaba antes.
+     se toca de nuevo, se da vuelta. Arranca por la última vez que entró cada uno, de más reciente a más viejo: los que acaban de entrar quedan arriba.
 
      El "1" y el "2" adelante de los textos no son adorno: hacen que
      los que no dieron nombre queden siempre al final, en los dos
@@ -932,7 +931,7 @@ html.ya-esta .pico-hoy{opacity:1;animation:none}
   let GENTE = [];
   // Se recuerda en este navegador. Arranca apagado: la tabla se lee mejor.
   let VER_ANON = (function(){ try { return localStorage.getItem("igtablero_anon") === "1"; } catch (e) { return false; } })();
-  let ORDEN = { col: "veces", dir: -1 };
+  let ORDEN = { col: "ultima", dir: -1 };
   const CLAVES = {
     persona: p => (p.usuario ? "1" + p.usuario.toLowerCase() : "2" + String(p.id || "")),
     donde:   p => (p.plataformas && p.plataformas.length
