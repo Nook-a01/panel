@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T06:15:19.992Z",
+ "actualizado": "2026-11-04T14:36:06.584Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 16,
+   "total": 15,
    "proximos": 8
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 16",
-   "sede": "Sepang International Circuit, Malaysia",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-16",
-   "anio": 2026,
-   "ronda": "16",
-   "sesion": "Carrera",
-   "titulo": "GP Bahrain Grand Prix in Malaysia",
-   "inicio": "2026-10-04T07:00:00.000Z"
-  },
   {
    "id": "espn-401921408",
    "miLado": "local",
