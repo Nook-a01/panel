@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@600;800&family=Press+Start+2P&family=VT323&display=swap">
 <link rel="stylesheet" href="hub.css?v=29">
 <style id="agenda-css">
+/* Las apps llenan la primera pantalla como antes; la agenda queda abajo,
+   se llega bajando. */
+.tiras{min-height:calc(100vh - 5.2rem);min-height:calc(100svh - 5.2rem)}
 /* ── AGENDA · HUD futurista, embebida en el panel ───────────────── */
 .agenda{
   position:relative; z-index:2;
@@ -102,16 +105,31 @@
 .ag-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .ag-dows{margin:0 0 5px}
 .ag-dows .d{text-align:center;color:var(--ag-tenue);font-size:10px;font-family:var(--mono);letter-spacing:.1em;padding:2px 0}
-.ag-dia{aspect-ratio:1;border:1px solid transparent;border-radius:10px;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:4px;font-size:14px;font-family:var(--mono);position:relative;transition:all .18s ease}
+.ag-dia{min-height:44px;border:1px solid transparent;border-radius:9px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:3px;font-size:13px;font-family:var(--mono);position:relative;transition:all .18s ease;overflow:hidden}
 .ag-dia.mes{background:linear-gradient(180deg,rgba(93,232,255,.04),rgba(5,10,18,.5));border-color:rgba(93,232,255,.1);cursor:pointer;color:var(--ag-txt)}
 .ag-dia.mes:hover{border-color:var(--ac);box-shadow:0 0 12px rgba(93,232,255,.25) inset}
 .ag-dia.tiene{border-color:rgba(93,232,255,.28)}
 .ag-dia.hoy{color:var(--ac);border-color:var(--ac);box-shadow:0 0 14px rgba(93,232,255,.4),0 0 0 1px var(--ac) inset;animation:agPulse 2.4s ease-in-out infinite}
 @keyframes agPulse{50%{box-shadow:0 0 22px rgba(93,232,255,.7),0 0 0 1px var(--ac) inset}}
 .ag-dia.sel{background:linear-gradient(180deg,rgba(93,232,255,.22),rgba(93,232,255,.06));border-color:var(--ac);color:#fff}
+.ag-dia .nd{font-weight:600}
 .ag-dia .pts{display:flex;gap:3px;height:6px}
 .ag-dia .pt{width:6px;height:6px;border-radius:50%;box-shadow:0 0 6px currentColor}
+.ag-dia .cevs{display:none}
+/* Con lugar en pantalla: adentro del cuadrado va lo que hacés ese día. */
+@media(min-width:680px){
+  .ag-dia{min-height:76px;justify-content:flex-start;align-items:stretch;padding:5px 6px;gap:4px}
+  .ag-dia .nd{text-align:left;opacity:.72;font-size:12px}
+  .ag-dia.hoy .nd,.ag-dia.sel .nd{opacity:1}
+  .ag-dia .pts{display:none}
+  .ag-dia .cevs{display:flex;flex-direction:column;gap:3px;width:100%;overflow:hidden}
+  .ag-cev{display:flex;align-items:center;gap:4px;background:color-mix(in srgb,var(--c) 16%,transparent);border-left:2px solid var(--c);
+    border-radius:4px;padding:1px 5px;font-size:10px;line-height:1.35;color:var(--ag-txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ag-cev i{width:5px;height:5px;border-radius:50%;background:var(--c);flex:none;box-shadow:0 0 5px var(--c)}
+  .ag-cev b{font-weight:700;color:var(--c);margin-right:2px}
+  .ag-mas{font-size:9.5px;color:var(--ag-tenue);padding:0 5px}
+}
 
 /* panel de la lista */
 .ag-panel{min-width:0}
@@ -371,8 +389,14 @@
       const f=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
       const evs=mapa.get(f)||[];
       const pts=evs.slice(0,4).map(e=>`<span class="pt" style="color:${color(e.tipo)};background:${color(e.tipo)}"></span>`).join('');
+      const cevs=evs.slice(0,2).map(e=>{
+        const col=color(e.tipo);
+        const t=e.titulo.length>15?e.titulo.slice(0,14)+'…':e.titulo;
+        const h=e.hora?`<b>${e.hora}</b>`:'';
+        return `<span class="ag-cev" style="--c:${col}"><i></i>${h}${esc(t)}</span>`;
+      }).join('')+(evs.length>2?`<span class="ag-mas">+${evs.length-2} más</span>`:'');
       const cls=['ag-dia','mes']; if(evs.length)cls.push('tiene'); if(f===hoyISO)cls.push('hoy'); if(f===sel)cls.push('sel');
-      c+=`<div class="${cls.join(' ')}" data-f="${f}"><span>${d}</span><span class="pts">${pts}</span></div>`;
+      c+=`<div class="${cls.join(' ')}" data-f="${f}"><span class="nd">${d}</span><div class="cevs">${cevs}</div><span class="pts">${pts}</span></div>`;
     }
     $('#agDias').innerHTML=c;
     $('#agDias').querySelectorAll('.ag-dia.mes').forEach(x=>x.onclick=()=>{ sel=x.dataset.f; render(); });

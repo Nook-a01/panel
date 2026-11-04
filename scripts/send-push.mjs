@@ -76,6 +76,76 @@ async function enviar(payload) {
   return alguno;
 }
 
+/* ---------- agenda del día: lo que TENÉS que hacer hoy ----------
+   Lee la agenda privada del Worker (turnos, pagos, entregas, trámites,
+   legales, facultad…) y a la mañana manda lo del día. Si hoy no hay
+   nada, muestra lo próximo para que el aviso siga sirviendo.
+     node scripts/send-push.mjs --agenda */
+if (process.argv.includes("--agenda")) {
+  const WORKER = "https://plata.hamcqc.workers.dev";
+  const CLAVE  = process.env.CLAVE_APP || "";
+  if (!CLAVE) { console.error("✗ Falta CLAVE_APP para leer la agenda."); process.exit(1); }
+
+  const EMOJI = { turno:"🩺", pago:"💸", entrega:"📦", facultad:"🎓", tramite:"📄", legal:"⚖️", otro:"📌" };
+
+  // "Hoy" en tu zona, no en la del servidor de GitHub. La fecha del evento
+  // ya viene como "YYYY-MM-DD" local, así que se compara tal cual.
+  const hoy = new Intl.DateTimeFormat("en-CA", {
+    timeZone: CONFIG.timezone, year:"numeric", month:"2-digit", day:"2-digit",
+  }).format(new Date());
+
+  let agenda;
+  try {
+    const r = await fetch(WORKER + "/agenda", { headers: { authorization: "Bearer " + CLAVE } });
+    if (!r.ok) { console.error("✗ La agenda respondió " + r.status); process.exit(1); }
+    agenda = await r.json();
+  } catch (e) { console.error("✗ No se pudo leer la agenda: " + e.message); process.exit(1); }
+
+  const todos = (agenda.eventos || []).slice()
+    .sort((a, b) => (a.fecha + (a.hora || "")).localeCompare(b.fecha + (b.hora || "")));
+  const delDia = todos.filter(e => e.fecha === hoy);
+
+  const linea = e => {
+    const em = EMOJI[e.tipo] || "📌";
+    const h  = e.hora ? e.hora + "  " : "";
+    const n  = e.titulo.length > 38 ? e.titulo.slice(0, 37) + "…" : e.titulo;
+    return h + em + " " + n;
+  };
+
+  let titulo, lineas, dedupe;
+  if (delDia.length) {
+    titulo = "☀️ Hoy: " + delDia.length + " cosa" + (delDia.length === 1 ? "" : "s") + " para hacer";
+    lineas = delDia.slice(0, 8).map(linea);
+    if (delDia.length > 8) lineas.push("…y " + (delDia.length - 8) + " más");
+    dedupe = "agenda#" + hoy;
+  } else {
+    const prox = todos.filter(e => e.fecha > hoy).slice(0, 4);
+    if (!prox.length) { console.log("· Agenda sin nada de hoy en adelante: no mando aviso."); process.exit(0); }
+    titulo = "📅 Hoy nada — lo que viene";
+    lineas = prox.map(e => { const [, M, D] = e.fecha.split("-"); return D + "/" + M + "  " + linea(e).trim(); });
+    dedupe = "agenda-prox#" + hoy;
+  }
+
+  // Las dos corridas del día no repiten el aviso.
+  let yaEnviados = {};
+  if (existsSync(ESTADO)) { try { yaEnviados = JSON.parse(readFileSync(ESTADO, "utf8")); } catch {} }
+  if (yaEnviados[dedupe] && !DRY) {
+    console.log("· El aviso de agenda de hoy ya salió (" + yaEnviados[dedupe] + ").");
+    process.exit(0);
+  }
+
+  const ok = await enviar({ title: titulo, body: lineas.join(String.fromCharCode(10)), tag: "agenda-diaria", url: "./#agenda" });
+  console.log(titulo + String.fromCharCode(10) + lineas.join(String.fromCharCode(10)));
+  if (ok && !DRY) {
+    yaEnviados[dedupe] = new Date().toISOString();
+    mkdirSync(new URL("../estado/", import.meta.url), { recursive: true });
+    writeFileSync(ESTADO, JSON.stringify(yaEnviados, null, 1));
+  }
+  console.log(ok ? String.fromCharCode(10) + "✓ Agenda del día enviada"
+                 : String.fromCharCode(10) + "✗ No se pudo enviar");
+  process.exit(ok ? 0 : 1);
+}
+
 /* ---------- resumen del día ----------
    Es el aviso más confiable de los tres: no depende de que GitHub corra
    la tarea a una hora exacta. Si sale a las 8 o a las 10, sirve igual. */
