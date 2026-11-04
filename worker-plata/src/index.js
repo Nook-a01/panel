@@ -352,6 +352,46 @@ export default {
         return json({ error: "Usá GET o POST." }, 405);
       }
 
+      // ---- agenda: turnos, pagos, entregas y demás fechas ----
+      //
+      // Vive acá y no en docs/ a propósito: son datos personales (turnos
+      // médicos, pagos) y el repo es público. Cualquier chat puede sumar una
+      // fecha con un POST y la clave; la página del celular las muestra.
+      if (url.pathname === "/agenda") {
+        const leer = async () => JSON.parse((await env.PLATA.get("agenda")) || '{"eventos":[]}');
+        if (request.method === "GET") {
+          return new Response(JSON.stringify(await leer()), { headers: cabeceras });
+        }
+        if (request.method === "POST") {
+          const body = await request.json().catch(() => null);
+          const entrantes = body && Array.isArray(body.eventos) ? body.eventos
+                           : body && body.evento ? [body.evento] : null;
+          if (!entrantes) return json({ error: "Mandá {evento:{...}} o {eventos:[...]}." }, 400);
+          const prev = await leer();
+          const porId = new Map((prev.eventos || []).map(e => [e.id, e]));
+          let sumados = 0;
+          for (const e of entrantes) {
+            if (!e || !e.titulo || !e.fecha) continue; // fecha = "YYYY-MM-DD"
+            const id = e.id || (Date.now().toString(36) + Math.random().toString(36).slice(2, 7));
+            porId.set(id, { ...e, id, creado: e.creado || new Date().toISOString() });
+            sumados++;
+          }
+          const eventos = [...porId.values()].sort((a, b) =>
+            (a.fecha + (a.hora || "")).localeCompare(b.fecha + (b.hora || "")));
+          await env.PLATA.put("agenda", JSON.stringify({ eventos, actualizado: new Date().toISOString() }));
+          return json({ ok: true, sumados, eventos: eventos.length });
+        }
+        if (request.method === "DELETE") {
+          const body = await request.json().catch(() => null);
+          if (!body || !body.id) return json({ error: "Falta el id del evento." }, 400);
+          const prev = await leer();
+          const eventos = (prev.eventos || []).filter(e => e.id !== body.id);
+          await env.PLATA.put("agenda", JSON.stringify({ eventos, actualizado: new Date().toISOString() }));
+          return json({ ok: true, eventos: eventos.length });
+        }
+        return json({ error: "Usá GET, POST o DELETE." }, 405);
+      }
+
       // ---- marcador en vivo: qué resultado se avisó por última vez ----
       //
       // Vive acá y no en el repositorio a propósito: la tarea corre cada 5
