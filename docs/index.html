@@ -16,6 +16,137 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@600;800&family=Press+Start+2P&family=VT323&display=swap">
 <link rel="stylesheet" href="hub.css?v=29">
+<style id="agenda-css">
+/* ── AGENDA · HUD futurista, embebida en el panel ───────────────── */
+.agenda{
+  position:relative; z-index:2;
+  padding:.4rem .75rem 1.4rem;
+  --ac:#5de8ff;           /* cian holográfico, el acento madre */
+  --ac2:#4df0b4;
+  --ag-bg:#05080e;
+  --ag-glass:rgba(12,20,32,.72);
+  --ag-linea:rgba(93,232,255,.16);
+  --ag-tenue:#7f97ab;
+  --ag-txt:#eaf6ff;
+  --turno:#5de8ff; --pago:#ffd23f; --entrega:#ff5d8f;
+  --facultad:#b08cff; --tramite:#4df0b4; --legal:#ff8a3d; --otro:#8fb3a8;
+  font-family:var(--display);
+  color:var(--ag-txt);
+}
+.ag-frame{
+  position:relative;
+  border:1px solid var(--ag-linea);
+  border-radius:16px;
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(93,232,255,.10), transparent 60%),
+    linear-gradient(180deg, rgba(10,16,26,.9), rgba(5,8,14,.96)),
+    repeating-linear-gradient(0deg, rgba(93,232,255,.045) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(93,232,255,.045) 0 1px, transparent 1px 26px),
+    var(--ag-bg);
+  box-shadow:0 0 0 1px rgba(0,0,0,.4), 0 24px 60px -30px rgba(93,232,255,.35), inset 0 0 60px rgba(93,232,255,.04);
+  padding:clamp(1rem,3.2vw,1.6rem);
+  overflow:hidden;
+  isolation:isolate;
+}
+/* las esquinas de HUD */
+.ag-corner{position:absolute;width:16px;height:16px;border:2px solid var(--ac);opacity:.65;pointer-events:none;filter:drop-shadow(0 0 4px rgba(93,232,255,.5))}
+.ag-corner.tl{top:8px;left:8px;border-right:0;border-bottom:0;border-radius:6px 0 0 0}
+.ag-corner.tr{top:8px;right:8px;border-left:0;border-bottom:0;border-radius:0 6px 0 0}
+.ag-corner.bl{bottom:8px;left:8px;border-right:0;border-top:0;border-radius:0 0 0 6px}
+.ag-corner.br{bottom:8px;right:8px;border-left:0;border-top:0;border-radius:0 0 6px 0}
+/* el barrido que cruza el marco, lento */
+.ag-scan{position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;z-index:0;
+  background:linear-gradient(90deg,transparent,rgba(93,232,255,.55),transparent);
+  box-shadow:0 0 12px rgba(93,232,255,.6);
+  animation:agScan 6.5s var(--apple,cubic-bezier(.4,0,.6,1)) infinite}
+@keyframes agScan{0%{transform:translateY(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateY(560px);opacity:0}}
+
+.ag-head{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.ag-kicker{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ac);text-shadow:0 0 10px rgba(93,232,255,.45)}
+.ag-kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--ac);box-shadow:0 0 8px var(--ac);animation:agBlink 1.4s steps(1) infinite}
+@keyframes agBlink{50%{opacity:.25}}
+.agenda h2{margin:.35rem 0 .15rem;font-size:clamp(1.7rem,6vw,2.5rem);font-weight:900;letter-spacing:-.04em;line-height:1;
+  text-shadow:0 0 26px rgba(93,232,255,.28)}
+.ag-sub{margin:0;color:var(--ag-tenue);font-size:.82rem;max-width:52ch}
+
+.ag-nav{display:flex;gap:6px}
+.ag-nav button{background:rgba(93,232,255,.06);border:1px solid var(--ag-linea);color:var(--ag-txt);border-radius:10px;
+  min-width:40px;height:40px;font-size:18px;font-family:var(--mono);cursor:pointer;transition:all .2s ease}
+.ag-nav button.hoy{font-size:.66rem;letter-spacing:.12em;padding:0 14px;color:var(--ac)}
+.ag-nav button:hover{border-color:var(--ac);box-shadow:0 0 14px rgba(93,232,255,.3);background:rgba(93,232,255,.12)}
+
+/* clave */
+.ag-clave{position:relative;z-index:1;margin:1.1rem 0 0;background:var(--ag-glass);border:1px solid var(--ag-linea);border-radius:14px;padding:16px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ag-clave p{margin:0 0 11px;color:var(--ag-tenue);font-size:.85rem;line-height:1.5}
+.ag-fila{display:flex;gap:8px}
+.agenda input,.agenda select,.agenda textarea{background:rgba(5,10,18,.8);border:1px solid var(--ag-linea);color:var(--ag-txt);
+  border-radius:11px;padding:11px 12px;font:inherit;font-size:15px;width:100%;transition:border-color .2s,box-shadow .2s}
+.agenda input:focus,.agenda select:focus,.agenda textarea:focus{outline:0;border-color:var(--ac);box-shadow:0 0 0 3px rgba(93,232,255,.14)}
+.agenda input::placeholder,.agenda textarea::placeholder{color:#4a5b6b}
+.ag-btn{background:linear-gradient(180deg,var(--ac),#2fb9d8);color:#02121a;border:0;border-radius:11px;padding:11px 18px;
+  font-family:var(--mono);font-weight:700;font-size:.78rem;letter-spacing:.1em;cursor:pointer;white-space:nowrap;
+  box-shadow:0 0 18px rgba(93,232,255,.35);transition:transform .12s,box-shadow .2s}
+.ag-btn:hover{box-shadow:0 0 26px rgba(93,232,255,.6)}
+.ag-btn:active{transform:scale(.97)}
+
+/* cuerpo: calendario + panel */
+.ag-body{position:relative;z-index:1;margin:1.1rem 0 0;display:grid;gap:14px}
+@media(min-width:860px){.ag-body{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start}}
+
+.ag-cal{background:var(--ag-glass);border:1px solid var(--ag-linea);border-radius:16px;padding:14px;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ag-mes{font-family:var(--mono);font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ac);margin:0 2px 12px;text-shadow:0 0 12px rgba(93,232,255,.35)}
+.ag-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.ag-dows{margin:0 0 5px}
+.ag-dows .d{text-align:center;color:var(--ag-tenue);font-size:10px;font-family:var(--mono);letter-spacing:.1em;padding:2px 0}
+.ag-dia{aspect-ratio:1;border:1px solid transparent;border-radius:10px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:4px;font-size:14px;font-family:var(--mono);position:relative;transition:all .18s ease}
+.ag-dia.mes{background:linear-gradient(180deg,rgba(93,232,255,.04),rgba(5,10,18,.5));border-color:rgba(93,232,255,.1);cursor:pointer;color:var(--ag-txt)}
+.ag-dia.mes:hover{border-color:var(--ac);box-shadow:0 0 12px rgba(93,232,255,.25) inset}
+.ag-dia.tiene{border-color:rgba(93,232,255,.28)}
+.ag-dia.hoy{color:var(--ac);border-color:var(--ac);box-shadow:0 0 14px rgba(93,232,255,.4),0 0 0 1px var(--ac) inset;animation:agPulse 2.4s ease-in-out infinite}
+@keyframes agPulse{50%{box-shadow:0 0 22px rgba(93,232,255,.7),0 0 0 1px var(--ac) inset}}
+.ag-dia.sel{background:linear-gradient(180deg,rgba(93,232,255,.22),rgba(93,232,255,.06));border-color:var(--ac);color:#fff}
+.ag-dia .pts{display:flex;gap:3px;height:6px}
+.ag-dia .pt{width:6px;height:6px;border-radius:50%;box-shadow:0 0 6px currentColor}
+
+/* panel de la lista */
+.ag-panel{min-width:0}
+.ag-list-head{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;
+  border-bottom:1px solid var(--ag-linea);padding-bottom:8px}
+.ag-list-head h3{margin:0;font-family:var(--mono);font-size:.82rem;font-weight:600;letter-spacing:.14em;color:var(--ag-txt)}
+.ag-cont{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--ag-tenue)}
+.ag-ev{background:var(--ag-glass);border:1px solid var(--ag-linea);border-left:3px solid var(--otro);border-radius:12px;
+  padding:12px 38px 12px 13px;margin:0 0 9px;position:relative;transition:transform .15s,box-shadow .2s}
+.ag-ev:hover{transform:translateX(2px);box-shadow:-6px 0 20px -10px currentColor}
+.ag-ev .cab{display:flex;align-items:baseline;gap:10px;justify-content:space-between}
+.ag-ev .tit{font-weight:800;font-size:15.5px;letter-spacing:-.01em}
+.ag-ev .cuando{font-family:var(--mono);font-size:12.5px;color:var(--ac);white-space:nowrap;text-shadow:0 0 10px rgba(93,232,255,.4)}
+.ag-ev .meta{color:var(--ag-tenue);font-size:13px;margin:5px 0 0;line-height:1.5}
+.ag-ev .meta b{color:var(--ag-txt);font-weight:600}
+.ag-ev .chip{display:inline-block;font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;
+  padding:2px 8px;border-radius:999px;border:1px solid currentColor;margin:0 7px 0 0;vertical-align:1px}
+.ag-ev .de{font-family:var(--mono);font-size:11px;color:var(--ag-tenue)}
+.ag-ev .borrar{position:absolute;top:9px;right:9px;background:transparent;border:0;color:#4a5b6b;font-size:15px;cursor:pointer;line-height:1}
+.ag-ev .borrar:hover{color:var(--entrega)}
+.ag-vacio{color:var(--ag-tenue);text-align:center;padding:28px 10px;font-size:14px;font-family:var(--mono);letter-spacing:.04em}
+
+/* agregar */
+.ag-add{margin:12px 0 0;background:var(--ag-glass);border:1px solid var(--ag-linea);border-radius:14px;padding:0 14px}
+.ag-add>summary{list-style:none;cursor:pointer;padding:13px 0;font-weight:700;color:var(--ac);font-size:.9rem}
+.ag-add>summary::-webkit-details-marker{display:none}
+.ag-form{display:grid;gap:9px;padding:0 0 15px}
+.ag-form .dos{display:grid;grid-template-columns:1fr 120px;gap:9px}
+.ag-form label{font-size:11px;color:var(--ag-tenue);font-family:var(--mono);letter-spacing:.06em;display:block;margin:0 0 3px}
+
+.ag-estado{position:relative;z-index:1;font-family:var(--mono);font-size:12.5px;color:var(--ag-tenue);min-height:16px;margin:12px 2px 0;letter-spacing:.03em}
+.ag-estado.ok{color:var(--ac2)} .ag-estado.err{color:#ff7a90}
+
+@media(prefers-reduced-motion:reduce){.ag-scan,.ag-dia.hoy,.ag-kicker .dot{animation:none}.ag-scan{display:none}}
+</style>
 </head>
 <body>
 
@@ -81,24 +212,214 @@
     <span class="flecha" aria-hidden="true">→</span>
   </a>
 
-  <a class="tira" href="agenda/" data-lado="agenda" style="--t-txt:#4df0b4; --img:none; --img-pos:center; --img-op:.35; --img-op2:.55; --t:#4df0b4; --t2:#ffd23f; --fondo:#07100e; --texto:#eafff7; --tenue:#8fb3a8">
-    <span class="arte" aria-hidden="true"></span>
-    <span class="filete" aria-hidden="true"></span>
-    <span class="num">05</span>
-    <div class="cuerpo">
-      <h2>Agenda</h2>
-      <p class="que">Turnos, pagos y entregas: todas las fechas pactadas en los chats, en un calendario.</p>
-      <p class="vivo">Privada, <span class="mini">pide tu clave</span></p>
-    </div>
-    <span class="flecha" aria-hidden="true">→</span>
-  </a>
-
 </main>
+
+<!-- ─────────────────────────────────────────────────────────────
+     AGENDA · no es una app más: vive acá abajo, dentro del panel.
+     Los datos son privados (turnos, pagos, legales) y el repo es
+     público, así que la info vive en el Worker detrás de la clave.
+     La estética: HUD futurista, misma familia que el resto.
+     ───────────────────────────────────────────────────────────── -->
+<section class="agenda" id="agenda" aria-labelledby="ag-h">
+  <div class="ag-frame">
+    <span class="ag-corner tl" aria-hidden="true"></span>
+    <span class="ag-corner tr" aria-hidden="true"></span>
+    <span class="ag-corner bl" aria-hidden="true"></span>
+    <span class="ag-corner br" aria-hidden="true"></span>
+    <span class="ag-scan" aria-hidden="true"></span>
+
+    <div class="ag-head">
+      <div class="ag-title">
+        <span class="ag-kicker"><i class="dot"></i>SYS.AGENDA<span id="agKick"></span></span>
+        <h2 id="ag-h">Agenda</h2>
+        <p class="ag-sub">Turnos, pagos, entregas y fechas pactadas en los chats. Privada.</p>
+      </div>
+      <div class="ag-nav" id="agNav" hidden>
+        <button id="agPrev" aria-label="Mes anterior">‹</button>
+        <button id="agHoy" class="hoy">HOY</button>
+        <button id="agNext" aria-label="Mes siguiente">›</button>
+      </div>
+    </div>
+
+    <!-- puerta de la clave -->
+    <div class="ag-clave" id="agClave" hidden>
+      <p>Esta agenda es privada: vive en tu Worker, detrás de tu clave. Es la misma del panel de Plata.</p>
+      <div class="ag-fila">
+        <input id="agClaveIn" type="password" placeholder="clave del panel" autocomplete="off" inputmode="text">
+        <button class="ag-btn" id="agClaveOk">ENTRAR</button>
+      </div>
+    </div>
+
+    <!-- calendario -->
+    <div class="ag-body" id="agBody" hidden>
+      <div class="ag-cal">
+        <div class="ag-mes" id="agMes">—</div>
+        <div class="ag-grid ag-dows" id="agDows"></div>
+        <div class="ag-grid ag-dias" id="agDias"></div>
+      </div>
+
+      <div class="ag-panel">
+        <div class="ag-list-head">
+          <h3 id="agListTit">PRÓXIMO</h3>
+          <span class="ag-cont" id="agCont"></span>
+        </div>
+        <div id="agList"></div>
+
+        <details class="ag-add">
+          <summary>+ Agregar un evento a mano</summary>
+          <div class="ag-form">
+            <div><label>Título</label><input id="agfTit" placeholder="Ej: Turno otorrino"></div>
+            <div class="dos">
+              <div><label>Fecha</label><input id="agfFecha" type="date"></div>
+              <div><label>Hora</label><input id="agfHora" type="time"></div>
+            </div>
+            <div class="dos">
+              <div><label>Tipo</label><select id="agfTipo">
+                <option value="turno">Turno médico</option>
+                <option value="pago">Pago</option>
+                <option value="entrega">Entrega</option>
+                <option value="facultad">Facultad</option>
+                <option value="tramite">Trámite</option>
+                <option value="legal">Legal</option>
+                <option value="otro">Otro</option>
+              </select></div>
+              <div><label>Origen</label><input id="agfOrigen" placeholder="chat"></div>
+            </div>
+            <div><label>Lugar</label><input id="agfLugar" placeholder="opcional"></div>
+            <div><label>Notas</label><textarea id="agfNotas" rows="2" placeholder="opcional"></textarea></div>
+            <button class="ag-btn" id="agfGuardar">GUARDAR EVENTO</button>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <p class="ag-estado" id="agEstado"></p>
+  </div>
+</section>
 
 <footer class="pie">
   <span>Todo se guarda en tu teléfono y en tu cuenta de GitHub.</span>
 </footer>
 
 <script src="hub.js?v=29" type="module"></script>
+
+<script id="agenda-js">
+(function(){
+  const WORKER = 'https://plata.hamcqc.workers.dev';
+  const LS_CLAVE = 'plata-mp-clave';
+  const TIPOS = {turno:'--turno',pago:'--pago',entrega:'--entrega',facultad:'--facultad',tramite:'--tramite',legal:'--legal',otro:'--otro'};
+  const TXT = {turno:'turno',pago:'pago',entrega:'entrega',facultad:'facultad',tramite:'trámite',legal:'legal',otro:'otro'};
+  const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const DOW = ['L','M','X','J','V','S','D'];
+  const $ = s => document.querySelector(s);
+
+  let clave=''; try{ clave = localStorage.getItem(LS_CLAVE)||''; }catch(e){}
+  let eventos=[];
+  let cursor=new Date(); cursor.setDate(1);
+  let sel=iso(new Date());
+
+  function iso(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+  function color(t){ return getComputedStyle(document.querySelector('.agenda')).getPropertyValue(TIPOS[t]||'--otro').trim()||'#8fb3a8'; }
+  function estado(m,c){ const e=$('#agEstado'); e.textContent=m||''; e.className='ag-estado'+(c?' '+c:''); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function verClave(v){ $('#agClave').hidden=!v; }
+
+  $('#agClaveOk').onclick=()=>{ const v=$('#agClaveIn').value.trim(); if(!v)return;
+    clave=v; try{localStorage.setItem(LS_CLAVE,v);}catch(e){} verClave(false); cargar(); };
+  $('#agClaveIn').addEventListener('keydown',e=>{ if(e.key==='Enter')$('#agClaveOk').click(); });
+
+  async function cargar(){
+    if(!clave){ verClave(true); estado('Agenda privada: poné tu clave.'); return; }
+    estado('Cargando…');
+    try{
+      const r=await fetch(WORKER+'/agenda',{headers:{authorization:'Bearer '+clave},cache:'no-store'});
+      if(r.status===401){ clave=''; try{localStorage.removeItem(LS_CLAVE);}catch(e){} verClave(true); estado('Clave incorrecta.','err'); return; }
+      const data=await r.json();
+      eventos=(data.eventos||[]).slice();
+      verClave(false); $('#agBody').hidden=false; $('#agNav').hidden=false;
+      estado(''); render();
+    }catch(e){ estado('No se pudo conectar: '+e.message,'err'); }
+  }
+  async function guardar(ev){
+    if(!clave){ verClave(true); return false; }
+    const r=await fetch(WORKER+'/agenda',{method:'POST',
+      headers:{'content-type':'application/json',authorization:'Bearer '+clave},
+      body:JSON.stringify({evento:ev})});
+    return r.ok;
+  }
+  window.__agBorrar=async function(id){
+    if(!confirm('¿Borrar este evento?'))return;
+    const r=await fetch(WORKER+'/agenda',{method:'DELETE',
+      headers:{'content-type':'application/json',authorization:'Bearer '+clave},
+      body:JSON.stringify({id})});
+    if(r.ok)cargar();
+  };
+
+  function porDia(){ const m=new Map(); for(const e of eventos){ if(!m.has(e.fecha))m.set(e.fecha,[]); m.get(e.fecha).push(e);} return m; }
+
+  function render(){
+    $('#agDows').innerHTML=DOW.map(d=>`<div class="d">${d}</div>`).join('');
+    const y=cursor.getFullYear(), m=cursor.getMonth();
+    $('#agMes').textContent=MESES[m]+' '+y;
+    $('#agKick').textContent=eventos.length?' · '+eventos.length+' EVENTOS':'';
+    const prim=new Date(y,m,1); const inicio=(prim.getDay()+6)%7;
+    const dias=new Date(y,m+1,0).getDate();
+    const mapa=porDia(); const hoyISO=iso(new Date());
+    let c='';
+    for(let i=0;i<inicio;i++) c+=`<div class="ag-dia"></div>`;
+    for(let d=1;d<=dias;d++){
+      const f=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const evs=mapa.get(f)||[];
+      const pts=evs.slice(0,4).map(e=>`<span class="pt" style="color:${color(e.tipo)};background:${color(e.tipo)}"></span>`).join('');
+      const cls=['ag-dia','mes']; if(evs.length)cls.push('tiene'); if(f===hoyISO)cls.push('hoy'); if(f===sel)cls.push('sel');
+      c+=`<div class="${cls.join(' ')}" data-f="${f}"><span>${d}</span><span class="pts">${pts}</span></div>`;
+    }
+    $('#agDias').innerHTML=c;
+    $('#agDias').querySelectorAll('.ag-dia.mes').forEach(x=>x.onclick=()=>{ sel=x.dataset.f; render(); });
+    lista();
+  }
+  function cuando(e){ const [Y,M,D]=e.fecha.split('-'); let s=`${D}/${M}`; if(e.hora)s+=' · '+e.hora; return s; }
+  function lista(){
+    const hoyISO=iso(new Date());
+    const selEv=eventos.filter(e=>e.fecha===sel);
+    let arr,tit;
+    if(selEv.length){ arr=selEv.slice(); tit='DÍA '+sel.split('-').reverse().slice(0,2).join('/'); }
+    else{ arr=eventos.filter(e=>e.fecha>=hoyISO).slice(0,30); tit='PRÓXIMO'; }
+    arr.sort((a,b)=>(a.fecha+(a.hora||'')).localeCompare(b.fecha+(b.hora||'')));
+    $('#agListTit').textContent=tit;
+    $('#agCont').textContent=eventos.length?eventos.length+' en total':'';
+    if(!arr.length){ $('#agList').innerHTML=`<div class="ag-vacio">Nada por acá todavía.</div>`; return; }
+    $('#agList').innerHTML=arr.map(e=>{
+      const col=color(e.tipo); const bits=[];
+      if(e.lugar)bits.push(`<b>Lugar:</b> ${esc(e.lugar)}`);
+      if(e.notas)bits.push(esc(e.notas));
+      if(e.origen)bits.push(`<span class="de">de: ${esc(e.origen)}</span>`);
+      return `<div class="ag-ev" style="border-left-color:${col};color:${col}">
+        <button class="borrar" title="Borrar" onclick="__agBorrar('${e.id}')">✕</button>
+        <div class="cab"><span class="tit" style="color:var(--ag-txt)">${esc(e.titulo)}</span><span class="cuando">${cuando(e)}</span></div>
+        <div class="meta" style="color:var(--ag-tenue)"><span class="chip" style="color:${col}">${TXT[e.tipo]||'otro'}</span>${bits.join(' · ')}</div>
+      </div>`;
+    }).join('');
+  }
+
+  $('#agPrev').onclick=()=>{ cursor.setMonth(cursor.getMonth()-1); render(); };
+  $('#agNext').onclick=()=>{ cursor.setMonth(cursor.getMonth()+1); render(); };
+  $('#agHoy').onclick=()=>{ cursor=new Date(); cursor.setDate(1); sel=iso(new Date()); render(); };
+
+  $('#agfGuardar').onclick=async()=>{
+    const ev={ titulo:$('#agfTit').value.trim(), fecha:$('#agfFecha').value,
+      hora:$('#agfHora').value||null, tipo:$('#agfTipo').value,
+      lugar:$('#agfLugar').value.trim(), notas:$('#agfNotas').value.trim(),
+      origen:$('#agfOrigen').value.trim()||'a mano' };
+    if(!ev.titulo||!ev.fecha){ estado('Faltan título y fecha.','err'); return; }
+    estado('Guardando…');
+    const ok=await guardar(ev);
+    if(ok){ ['agfTit','agfHora','agfLugar','agfNotas'].forEach(i=>$('#'+i).value=''); estado('Guardado ✓','ok'); cargar(); }
+    else estado('No se pudo guardar.','err');
+  };
+
+  cargar();
+})();
+</script>
 </body>
 </html>
