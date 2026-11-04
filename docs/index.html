@@ -324,6 +324,19 @@
 
   function iso(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
   function color(t){ return getComputedStyle(document.querySelector('.agenda')).getPropertyValue(TIPOS[t]||'--otro').trim()||'#8fb3a8'; }
+  // Deportes: cada equipo/liga con su color, detectado por el texto del evento.
+  const DEP = [
+    [/\bboca\b/, '#2563ff'],                          // Boca · azul
+    [/inter miami|\bmiami\b/, '#ff5d8f'],             // Inter Miami · rosa
+    [/\bf1\b|fórmula|formula|gran premio|\bgp\b/, '#ff2d2d'], // F1 · rojo
+    [/\bufc\b|fight night/, '#ff7a1f'],               // UFC · naranja
+    [/argentina|selección|seleccion|pumas/, '#4db8ff'], // Argentina/Pumas · celeste
+  ];
+  function colorEv(e){
+    const s = ((e.titulo||'')+' '+(e.origen||'')).toLowerCase();
+    for(const [re,c] of DEP){ if(re.test(s)) return c; }
+    return color(e.tipo);
+  }
   function estado(m,c){ const e=$('#agEstado'); e.textContent=m||''; e.className='ag-estado'+(c?' '+c:''); }
   function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
   function verClave(v){ $('#agClave').hidden=!v; }
@@ -341,8 +354,36 @@
       const data=await r.json();
       eventos=(data.eventos||[]).slice();
       verClave(false); $('#agBody').hidden=false; $('#agNav').hidden=false;
-      estado(''); render();
+      estado(''); render(); importarHash();
     }catch(e){ estado('No se pudo conectar: '+e.message,'err'); }
+  }
+
+  // Importar por link: un chat te pasa  …/panel/#ag=<payload>  y con un toque
+  // se agrega acá, sin consola. El payload es base64url(JSON) o JSON en la URL.
+  function importarHash(){
+    const m=(location.hash||'').match(/[#&]ag=([^&]+)/);
+    if(!m) return;
+    let data=null;
+    try{ data=JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g,'+').replace(/_/g,'/'))))); }
+    catch(e){ try{ data=JSON.parse(decodeURIComponent(m[1])); }catch(_){ data=null; } }
+    history.replaceState(null,'',location.pathname+location.search);  // no re-importar
+    if(!data) { estado('Link de agenda inválido.','err'); return; }
+    const evs=Array.isArray(data)?data:(data.eventos||[data]);
+    const ok=evs.filter(e=>e&&e.titulo&&e.fecha);
+    if(!ok.length) return;
+    const resumen=ok.map(e=>'• '+(e.hora?e.hora+' ':'')+e.titulo+' ('+e.fecha+')').join('\n');
+    if(!confirm('¿Agregar al calendario?\n\n'+resumen)) return;
+    (async()=>{
+      estado('Agregando…');
+      try{
+        const r=await fetch(WORKER+'/agenda',{method:'POST',
+          headers:{'content-type':'application/json',authorization:'Bearer '+clave},
+          body:JSON.stringify({eventos:ok})});
+        if(r.ok){ estado('Agregado ✓ ('+ok.length+')','ok'); cargar(); }
+        else if(r.status===401){ clave=''; try{localStorage.removeItem(LS_CLAVE);}catch(e){} verClave(true); estado('Clave incorrecta.','err'); }
+        else estado('No se pudo agregar.','err');
+      }catch(e){ estado('No se pudo conectar: '+e.message,'err'); }
+    })();
   }
   async function guardar(ev){
     if(!clave){ verClave(true); return false; }
@@ -374,9 +415,9 @@
     for(let d=1;d<=dias;d++){
       const f=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
       const evs=mapa.get(f)||[];
-      const pts=evs.slice(0,4).map(e=>`<span class="pt" style="color:${color(e.tipo)};background:${color(e.tipo)}"></span>`).join('');
+      const pts=evs.slice(0,4).map(e=>{const c=colorEv(e);return `<span class="pt" style="color:${c};background:${c}"></span>`;}).join('');
       const cevs=evs.slice(0,2).map(e=>{
-        const col=color(e.tipo);
+        const col=colorEv(e);
         const t=e.titulo.length>15?e.titulo.slice(0,14)+'…':e.titulo;
         const h=e.hora?`<b>${e.hora}</b>`:'';
         return `<span class="ag-cev" style="--c:${col}"><i></i>${h}${esc(t)}</span>`;
@@ -400,7 +441,7 @@
     $('#agCont').textContent=eventos.length?eventos.length+' en total':'';
     if(!arr.length){ $('#agList').innerHTML=`<div class="ag-vacio">Nada por acá todavía.</div>`; return; }
     $('#agList').innerHTML=arr.map(e=>{
-      const col=color(e.tipo); const bits=[];
+      const col=colorEv(e); const bits=[];
       if(e.lugar)bits.push(`<b>Lugar:</b> ${esc(e.lugar)}`);
       if(e.notas)bits.push(esc(e.notas));
       if(e.origen)bits.push(`<span class="de">de: ${esc(e.origen)}</span>`);
