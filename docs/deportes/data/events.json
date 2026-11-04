@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T23:20:25.478Z",
+ "actualizado": "2026-11-04T06:15:19.992Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 4,
+   "total": 3,
    "proximos": 2
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401921544",
-   "miLado": "local",
-   "idEspn": "401921544",
-   "liga": "fifa.friendly",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Argentina vs Burkina Faso",
-   "inicio": "2026-10-04T00:00Z",
-   "horaConfirmada": true,
-   "competicion": "International Friendly",
-   "sede": "Estadio Más Monumental",
-   "local": "Argentina",
-   "visitante": "Burkina Faso",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/bka.png",
-   "finalizado": true,
-   "marcador": "7 - 0"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
