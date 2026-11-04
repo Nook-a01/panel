@@ -819,6 +819,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
   <div class="stack">
     <div class="notice info">Pegá el resumen de tu banco o tarjeta (o un CSV) y lo convierto en movimientos. Reconozco fecha, detalle y monto solo, y aprendo a qué categoría va cada comercio para la próxima vez.</div>
     <div class="notice ok"><b>¿Un ticket de papel?</b> Sacale una foto, mantené el dedo apretado sobre la foto hasta que se pueda seleccionar el texto, copialo y pegalo acá. Saco el comercio, la fecha y el total. La foto no sale de tu teléfono: la lee él, no la app.</div>
+    <div class="notice ok"><b>¿Las facturas de Mercado Pago?</b> En MP, pestaña Servicios (la lista de "por pagar en los próximos 30 días"), sacale una captura, copiá el texto con el dedo apretado y pegalo acá. En vez de sumar movimientos, actualizo el monto y el vencimiento reales de tus fijos de servicios del mes.</div>
     <div class="card">
       <div class="hd"><h3>Pegar movimientos</h3></div>
       <div class="bd stack">
@@ -3661,7 +3662,84 @@ function leerTicket(txt){
 
    La diferencia de fondo es la densidad: en un resumen casi todas las líneas
    son movimientos; en un ticket son dos o tres sobre quince. */
+/* ---------- facturas de servicios de Mercado Pago ----------
+   Pegás la pantalla "Servicios" de MP (la lista de "por pagar en los próximos
+   30 días": Edesur, Aysa, AGIP/ABL, Personal, Metrogas…) y en vez de sumar
+   movimientos nuevos, actualiza el monto y el vencimiento reales de tus fijos
+   de servicios de este mes. El texto sale de la foto por el lector del propio
+   teléfono (mantener apretado sobre la captura y copiar), así nunca sale del
+   aparato. */
+function esFacturasMP(txt){
+  const n = (String(txt).match(/vence\s+(hoy|el\b|ma[ñn]ana|\d)/gi) || []).length;
+  return /pr[oó]ximos\s+\d+\s+d[ií]as/i.test(txt) || n >= 2;
+}
+
+function fechaDeVence(s, ym){
+  if(/\bhoy\b/i.test(s)) return todayISO();
+  const t = norm(s);
+  const md = t.match(/(\d{1,2})\s*(?:\/|-|de\s+)\s*([a-z]{3,}|\d{1,2})/);
+  if(md){
+    const d = +md[1];
+    let mo = /^\d+$/.test(md[2]) ? +md[2]
+           : MESES.findIndex(x => x.slice(0,3) === md[2].slice(0,3)) + 1;
+    if(mo >= 1 && mo <= 12 && d >= 1 && d <= 31)
+      return ym.slice(0,4) + '-' + String(mo).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+  }
+  return null;
+}
+
+// Empareja el nombre que muestra MP (p. ej. "AGIP ABL GCBA") con un fijo de
+// gasto por las palabras que comparten ("abl"/"agip"). Devuelve el rec o null.
+function recDeServicio(nombre){
+  const toks = norm(nombre).split(/\s+/).filter(w => w.length >= 3);
+  let best = null, bestScore = 0;
+  for(const r of S.recs){
+    if(r.tipo !== 'gasto' || r.activo === false) continue;
+    const rt = norm(r.nombre).split(/\s+/).filter(w => w.length >= 3);
+    let sc = 0;
+    for(const w of toks) if(rt.some(x => x.includes(w) || w.includes(x))) sc++;
+    if(sc > bestScore){ bestScore = sc; best = r; }
+  }
+  return bestScore > 0 ? best : null;
+}
+
+function leerFacturas(txt){
+  let lineas = String(txt).split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  // Acotar a la lista: desde "por pagar en los próximos N días" hasta el footer
+  // (la barra de abajo de la app), así no se cuela la promo ni los botones.
+  const hdr = lineas.findIndex(l => /por pagar en los pr[oó]ximos/i.test(l));
+  if(hdr >= 0){
+    const resto = lineas.slice(hdr + 1);
+    const foot = resto.findIndex(l => /^(ya pagaste|cuenta|tarjetas|qr|m[aá]s)$/i.test(l));
+    lineas = foot >= 0 ? resto.slice(0, foot) : resto;
+  }
+  const esVence = l => /^vence\b/i.test(l);
+  // Encabezados y botones de la pantalla de Servicios que no son facturas.
+  const RUIDO = /^(servicios|ten[eé]s|por pagar|pr[oó]ximos|pagar servicio|recargar|cargar transporte|ver m[aá]s|novedad|organiz|empez|olvidate|ya pagaste|cuenta|tarjetas|m[aá]s)/i;
+  const nombres = [], vences = [], montos = [];
+  for(const l of lineas){
+    if(esVence(l)){ vences.push(l); continue; }
+    const mm = montosDe(l);
+    const soloPlata = mm.length && !/[a-záéíóúñ]{3}/i.test(l.replace(/[\d.,$ ]/g,''));
+    if(soloPlata){ montos.push(Math.max(...mm)); continue; }
+    if(RUIDO.test(l)) continue;
+    if(/[a-záéíóúñ]{3}/i.test(l) && l.length <= 40) nombres.push(l.replace(/\s{2,}/g,' '));
+  }
+  const n = Math.min(nombres.length, montos.length);
+  if(n < 2) return [];
+  const ym = ymNow();
+  const rows = [];
+  for(let i = 0; i < n; i++){
+    const rec = recDeServicio(nombres[i]);
+    rows.push({ id:uid(), esFactura:true, tipo:'gasto', desc:nombres[i], monto:montos[i],
+                fecha: fechaDeVence(vences[i] || '', ym), ym,
+                recId: rec ? rec.id : null, recNombre: rec ? rec.nombre : null, usar:true });
+  }
+  return rows;
+}
+
 function leerImportado(txt){
+  if(esFacturasMP(txt)){ const f = leerFacturas(txt); if(f.length) return f; }
   const lineas = String(txt).split(/\r?\n/).filter(l=>l.trim().length>3).length;
   const filas = leerTexto(txt);
   // La proporción, no la cantidad: pegar dos movimientos sueltos sigue siendo
@@ -3744,6 +3822,7 @@ function renderImport(){
   const card = $('#impPrevCard');
   if(!impRows.length){ card.hidden = true; return; }
   card.hidden = false;
+  if(impRows[0] && impRows[0].esFactura) return renderImportFacturas();
   const usados = impRows.filter(r=>r.usar).length;
   const dups = impRows.filter(r=>r.dup).length;
   const MAX = 150, recorte = impRows.length > MAX;
@@ -3769,6 +3848,7 @@ function renderImport(){
 }
 
 function confirmarImport(){
+  if(impRows[0] && impRows[0].esFactura) return confirmarFacturas();
   const usar = impRows.filter(r=>r.usar);
   if(!usar.length){ toast('No hay nada marcado'); return; }
   cambiar(()=>{
@@ -3781,6 +3861,55 @@ function confirmarImport(){
   impRows = []; renderImport();
   toast(usar.length+(usar.length===1?' movimiento sumado':' movimientos sumados'));
   irA('movs');
+}
+
+function renderImportFacturas(){
+  const usados = impRows.filter(r=>r.usar).length;
+  const mes = MESES[+impRows[0].ym.slice(5,7)-1];
+  $('#impCount').textContent = impRows.length+' facturas · '+usados+' marcadas · actualizan tus fijos de '+mes;
+  $('#impTable tbody').innerHTML = impRows.map(r=>
+    '<tr>'
+    +'<td><input type="checkbox" data-imp="'+r.id+'"'+(r.usar?' checked':'')+' style="width:16px;height:16px"></td>'
+    +'<td class="money" style="color:var(--ink-3)">'+(r.fecha?fmtDay(r.fecha):'—')+'</td>'
+    +'<td><div style="font-weight:500">'+esc(r.desc)+'</div>'
+      +(r.recNombre
+          ? '<small style="color:var(--ink-3)">→ '+esc(r.recNombre)+'</small>'
+          : '<span class="pill p-pend" style="margin-top:3px">fijo nuevo</span>')+'</td>'
+    +'<td></td>'
+    +'<td class="r money out">−'+money(r.monto)+'</td></tr>'
+  ).join('');
+  etiquetarTablas();
+}
+
+// Las facturas no suman movimientos: corrigen el monto y el vencimiento del
+// fijo de ese servicio en el mes en curso. Si no hay un fijo que le pegue, lo
+// agrega como gasto de servicios de ese mes.
+function confirmarFacturas(){
+  const usar = impRows.filter(r=>r.usar);
+  if(!usar.length){ toast('No hay nada marcado'); return; }
+  let act = 0, nuevos = 0;
+  cambiar(()=>{
+    usar.forEach(r=>{
+      let mov = null;
+      if(r.recId){
+        const pref = r.recId+'@'+r.ym;
+        mov = S.movs.find(m=> typeof m.src==='string' && m.tipo==='gasto'
+                           && (m.src===pref || m.src.indexOf(pref)===0));
+      }
+      if(mov){ mov.monto = r.monto; if(r.fecha) mov.fecha = r.fecha; act++; }
+      else {
+        S.movs.push({ id:uid(), fecha: r.fecha || dayOfMonth(r.ym, 10), tipo:'gasto',
+          monto:r.monto, catId:'c-servicios', desc:r.desc, estado:'pend', medio:'saldo',
+          srcTipo: r.recId ? 'fijo' : 'import',
+          ...(r.recId ? { src: r.recId+'@'+r.ym } : {}) });
+        if(r.recId && S.gen) S.gen[r.recId+'@'+r.ym] = 1;
+        nuevos++;
+      }
+    });
+  });
+  impRows = []; renderImport();
+  toast(act+(act===1?' fijo actualizado':' fijos actualizados')+(nuevos?' · '+nuevos+' nuevo'+(nuevos>1?'s':''):''));
+  irA('hoy');
 }
 
 function aprenderRegla(desc, catId){
