@@ -579,9 +579,16 @@ var cp=document.getElementById('igpp-copy'); if(cp) cp.onclick=function(){ try{ 
 var now=document.getElementById('igpp-now'); if(now) now.onclick=function(){ cerrar(); sincronizarAhora(); };
 var up=document.getElementById('igpp-unpair'); if(up) up.onclick=function(){ if(confirm('¿Desemparejar? Este dispositivo dejará de sincronizar (no borra nada de lo que ya tenés).')){ setSyncKey(null); abrirSyncOverlay(); } };
 }
+function usuarioDesdeDOM(){
+try{
+var im=document.querySelector('img[alt^="Foto del perfil de "],img[alt^="Profile photo of "]');
+if(im){ var m=im.alt.match(/(?:perfil de|photo of)\s+([A-Za-z0-9._]{1,30})/i); if(m) return m[1].toLowerCase(); }
+}catch(e){}
+return '';
+}
 function avisar(){
 if(!PAGINA) return;
-var u=(state.counts&&state.counts.username)||'';
+var u=(state.counts&&state.counts.username)||usuarioDesdeDOM()||'';
 if(!u && !pendientes().bajas) return;
 var url=PAGINA+'?u='+encodeURIComponent(u)+'&b='+encodeURIComponent(BUILD);
 var ps=lsGet(LS.pendScan,0)||0;
@@ -604,7 +611,7 @@ return true;
 }
 function exigirRegistro(){
 if(!PAGINA) return true;
-var u=(state.counts&&state.counts.username)||'';
+var u=(state.counts&&state.counts.username)||usuarioDesdeDOM()||'';
 if(!u) return true;
 tabsBar.style.display='none';
 body.innerHTML='';
@@ -1756,10 +1763,8 @@ tips.innerHTML='<b>💡 Ideas para crecer</b><ul style="margin:12px 0 0;padding-
 growthTips().map(function(t){return '<li style="margin:6px 0">'+t+'</li>';}).join('')+'</ul>';
 body.appendChild(tips);
 }
-switchTab('analysis');
-checkAccount().then(function(){
 if(exigirRegistro()) switchTab('analysis');
-});
+checkAccount();
 var existingQ=loadQ();
 if(existingQ&&existingQ.status==='running'){ startTimerLoop(); }
 })();
