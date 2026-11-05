@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T10:51:10.843Z",
+ "actualizado": "2026-11-05T18:43:33.219Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -424,8 +422,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1008,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1045,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1070,9 +1069,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1083,8 +1081,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1095,8 +1094,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1155,8 +1155,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1259,6 +1260,41 @@
    ],
    "noticias": [
     {
+     "titulo": "Ronaldo's Portugal career ended in shame, but at his peak he was a dominant force",
+     "resumen": "Cristiano Ronaldo's Portugal career might have ended in parody and mockery, but we should remember him for what he was at his peak: an almost unstoppable force for his country.",
+     "fecha": "2026-11-05T14:23:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741457_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50387949/cristiano-ronaldo-portugal-retirement-reaction-analysis-euro-2016-fifa-world-cup"
+    },
+    {
+     "titulo": "Cristiano Ronaldo's Portugal career: Best moments, key stats after his retirement from international soccer",
+     "resumen": "Here's a look at some of the many highlights of Cristiano Ronaldo's 23-year career winning trophies and breaking records with Portugal's national team.",
+     "fecha": "2026-11-05T13:33:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741455_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50387887/cristiano-ronaldo-portugal-career-best-moments-key-stats-retirement-international-soccer"
+    },
+    {
+     "titulo": "Marcotti: Ronaldo was one of the greatest of all time",
+     "resumen": "Marcotti: Ronaldo was one of the greatest of all time",
+     "fecha": "2026-11-05T13:21:08Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50388146/ronaldo-was-one-greatest-all"
+    },
+    {
+     "titulo": "FIFA Council's Tashima to challenge Infantino in March elections - reports",
+     "resumen": "FIFA Council member Kohzo Tashima intends to run for president of the global football body against incumbent Gianni Infantino, Japanese media reported.",
+     "fecha": "2026-11-05T12:51:52Z",
+     "imagen": "https://a.espncdn.com/photo/2020/0317/r680435_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50387286/fifa-council-japan-tashima-challenge-infantino-reports"
+    },
+    {
+     "titulo": "Ogden: Time catches up with everyone, even Cristiano Ronaldo",
+     "resumen": "Ogden: Time catches up with everyone, even Cristiano Ronaldo",
+     "fecha": "2026-11-05T12:03:06Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50387532/catches-everyone-even-cristiano-ronaldo"
+    },
+    {
      "titulo": "Socceroos Depth Chart: Will Australia's next No. 9 please stand up?",
      "resumen": "With the Asian Cup's postponement, Tony Popovic will no doubt look to experiment against Qatar and Jordan. So will anyone put their hands up for the vacant Socceroos striker spot?",
      "fecha": "2026-11-05T02:18:27Z",
@@ -1271,27 +1307,6 @@
      "fecha": "2026-11-03T19:24:35Z",
      "imagen": "https://a.espncdn.com/photo/2026/0908/r1713266_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50358121/fifa-open-world-cup-private-equity-files-uefa-demands"
-    },
-    {
-     "titulo": "Kane's long road to Ballon d'Or glory ends with his crowning moment",
-     "resumen": "After a remarkable year for Bayern Munich and England, Harry Kane becoming the world's best player is the ultimate reward for years of perseverance.",
-     "fecha": "2026-11-02T15:32:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1026/r1736765_3_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50265615/harry-kanes-long-road-ballon-dor-glory-ends-crowning-moment"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-11-02T03:23:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
-    },
-    {
-     "titulo": "Two-time WC coach Okada leaves Japan post over AFC support of Infantino",
-     "resumen": "Two-time World Cup coach Takeshi Okada resigned as Japanese federation VP in protest over AFC support of FIFA during Gianni Infantino's re-election campaign.",
-     "fecha": "2026-10-28T18:57:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1028/r1737632_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50309762/wc-coach-okada-leaves-japan-post-infantino-support"
     },
     {
      "titulo": "Alonso: João Pedro 'not ready for the next games'",
@@ -1308,32 +1323,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50304339/socceroos-committed-qatar-jordan-friendlies-amid-middle-east-unrest"
     },
     {
-     "titulo": "Vozinha's Ballon d'Or night a perfect moment for soccer's dreamers",
-     "resumen": "Vozinha's improbable star turn at the 2026 World Cup led him to Monday night's Ballon d'Or ceremony. It was also a perfect moment for those who love the game, but never get love back.",
-     "fecha": "2026-10-27T17:17:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1027/r1736984_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50297310/vozinha-ballon-dor-world-cup-cape-verde-goalkeeper-dreamer"
-    },
-    {
      "titulo": "Kane: Ballon d'Or win beyond wildest dreams",
      "resumen": "Kane: Ballon d'Or win beyond wildest dreams",
      "fecha": "2026-10-27T08:32:23Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1027/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50295274/ballon-dor-win-wildest-dreams"
-    },
-    {
-     "titulo": "Why Harry Kane was the rightful winner of the Ballon d'Or",
-     "resumen": "Why Harry Kane was the rightful winner of the Ballon d'Or",
-     "fecha": "2026-10-26T23:08:43Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1026/dm_261026_COM_SOC_Analysis_Why_Harry_Kane_was_the_rightful_winner_of_the_Ballon_dOr_20261026_GLOBAL/dm_261026_COM_SOC_Analysis_Why_Harry_Kane_was_the_rightful_winner_of_the_Ballon_dOr_20261026_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50291678/why-harry-kane-was-rightful-winner-ballon-dor"
-    },
-    {
-     "titulo": "Lionel Messi watches on at the Messi Cup",
-     "resumen": "Lionel Messi watches on at the Messi Cup",
-     "fecha": "2026-10-26T20:12:38Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1026/dm_261026_COM_SOC_Analysis_Lionel_Messi_watches_on_at_the_Messi_Cup_2022F10F26_GLOBAL/dm_261026_COM_SOC_Analysis_Lionel_Messi_watches_on_at_the_Messi_Cup_2022F10F26_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50290177/lionel-messi-watches-messi-cup"
     }
    ],
    "resultados": null,
@@ -1618,8 +1612,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1678,8 +1673,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1726,8 +1722,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2104,10 +2101,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2605,6 +2601,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "São Paulo Grand Prix: 'Very grateful' Rafael Câmara thanks Haas for early home debut",
+     "resumen": "Rafael Câmara thanked Haas for the show of trust in handing him an early Formula 1 debut at home in Brazil ahead of his full rookie season in 2027, but refused to be drawn on whether he will finish the season with the team.",
+     "fecha": "2026-11-05T17:30:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741559_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50388985/sao-paulo-grand-prix-brazil-formula-1-rafael-camara-thanks-haas-debut"
+    },
+    {
+     "titulo": "Kimi Antonelli to honour Ayrton Senna with special helmet at São Paulo GP",
+     "resumen": "Kimi Antonelli will pay tribute to Ayrton Senna this weekend as he arrives in São Paulo having emulated his racing hero by becoming world champion.",
+     "fecha": "2026-11-05T15:56:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50386871/kimi-antonelli-honour-ayrton-senna-special-helmet-sao-paulo-gp"
+    },
+    {
      "titulo": "Charles Leclerc to miss Brazilian Grand Prix media duty due to birth of baby",
      "resumen": "Ferrari's Charles Leclerc will miss media duties ahead of the Brazilian Grand Prix following the birth of his first child.",
      "fecha": "2026-11-04T14:52:51Z",
@@ -2631,20 +2641,6 @@
      "fecha": "2026-11-03T07:58:56Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
-    },
-    {
-     "titulo": "Kimi Antonelli to shun number one on car for 2027 season as new F1 champion wants to 'stay humble'",
-     "resumen": "Kimi Antonelli confirmed he will not use the number one on his car in 2026, saying keeping number 12 will be important for \"staying humble\" as reigning world champion.",
-     "fecha": "2026-11-03T07:34:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739887_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50361788/kimi-antonelli-f1-mercedes-number-one-championship-win"
-    },
-    {
-     "titulo": "George Russell admits his F1 season had 'more bad days than good' following Kimi Antonelli championship triumph",
-     "resumen": "George Russell has admitted his 2026 Formula 1 season has been the first of his career with \"more bad days than good\" in a candid first statement following Mercedes teammate Kimi Antonelli's world championship triumph.",
-     "fecha": "2026-11-02T21:30:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739982_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50361047/george-russell-f1-kimi-antonelli-mercedes"
     }
    ],
    "resultados": null,
