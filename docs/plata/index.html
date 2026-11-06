@@ -2039,19 +2039,39 @@ function calcMes(c){
   const pendIng = ms.filter(m=> m.tipo==='ingreso' && !confirmado(m) && !esNoGasto(m.catId) && !apartada(m));
   const pendFij = ms.filter(m=> m.tipo==='gasto' && !confirmado(m) && !esTarjeta(m) && (m.srcTipo==='fijo' || m.srcTipo==='cuota'));
   const suma = l => l.reduce((a,m)=> a + (Number(m.monto)||0), 0);
-  const entra = (Number(c.saldo)||0) + suma(pendIng);
-  const fijos = suma(pendFij);
+  const saldo = Number(c.saldo)||0;
+  // Plata reservada en Mercado Pago: no es para el día a día. Está apartada para
+  // el psicólogo, así que se saca del disponible y, a la vez, se descuenta del
+  // psicólogo que cubre. El número final queda igual, pero se ve que no se toca.
+  const reservado = Math.max(0, Number(S.cfg.reservado)||0);
+  const esPsico = m => typeof m.src==='string' && m.src.indexOf('r-psico')===0;
+  const psicoPend = suma(pendFij.filter(esPsico));
+  const cubierto = Math.min(reservado, psicoPend);
+  const disponible = saldo - reservado;
+  const entra = disponible + suma(pendIng);
+  const fijos = suma(pendFij) - cubierto;
   const queda = entra - fijos;
   const diasRest = Math.max(1, daysInMonth(ym) - parseISO(c.hoy).getDate() + 1);
-  return { ym, entra, fijos, queda, porDia: queda/diasRest, diasRest, pendIng, pendFij, saldo: Number(c.saldo)||0 };
+  return { ym, entra, fijos, queda, porDia: queda/diasRest, diasRest, pendIng, pendFij, saldo, disponible, reservado, cubierto };
 }
 
 function detEntraMes(cm){
-  return '<div class="dt"><div class="dl"><span>Saldo de hoy en Mercado Pago</span><b>+'+money(cm.saldo)+'</b></div>'
+  return '<div class="dt"><div class="dl"><span>Disponible en Mercado Pago</span><b>+'+money(cm.disponible)+'</b></div>'
     + cm.pendIng.slice().sort((a,b)=> a.fecha.localeCompare(b.fecha)).map(m=>
         '<div class="dl"><span>'+fmtDay(m.fecha)+' · '+esc(m.desc || catName(m.catId))+'</span><b>+'+money(m.monto)+'</b></div>'
       ).join('')
-    + '<div class="dl tip">No se cuenta la ayuda con la tarjeta de mamá (se netea con su consumo) ni la plata de la abuela (es para el mes que viene).</div></div>';
+    + (cm.reservado>0 ? '<div class="dl"><span>Reservado para el psicólogo — no se toca</span><b style="color:var(--ink-3)">('+money(cm.reservado)+')</b></div>' : '')
+    + '<div class="dl tip">La reserva no entra acá: queda apartada para el psicólogo. Tampoco se cuenta la ayuda con la tarjeta de mamá (se netea con su consumo) ni la plata de la abuela (es para el mes que viene).</div></div>';
+}
+
+function detalleFijosMes(cm){
+  const filas = cm.pendFij.slice().sort((a,b)=> a.fecha.localeCompare(b.fecha)).map(m=>
+      '<div class="dl"><span>'+fmtDay(m.fecha)+' · '+esc(m.desc || catName(m.catId))+'</span><b>−'+money(m.monto)+'</b></div>'
+    ).join('');
+  const credito = cm.cubierto>0
+    ? '<div class="dl"><span>Cubierto con la reserva (psicólogo)</span><b class="ok">+'+money(cm.cubierto)+'</b></div>'
+    : '';
+  return '<div class="dt">'+filas+credito+'<div class="dl tip">Sale de lo que tenés cargado en Fijos. La parte del psicólogo que ya tenés reservada no se vuelve a restar.</div></div>';
 }
 
 function pintarEsteMes(c){
@@ -2067,7 +2087,7 @@ function pintarEsteMes(c){
     + '<div class="l"><span>Te entra</span><b>'+money(cm.entra)+'</b></div>'
     + detEntraMes(cm)
     + '<div class="l"><span>Fijos que faltan pagar</span><b>−'+money(cm.fijos)+'</b></div>'
-    + detalleDeMes(cm.pendFij, '−')
+    + detalleFijosMes(cm)
     + '<div class="l fin"><span>Te queda para el mes</span><b class="'+(cm.queda>=0?'ok':'mal')+'">'+money(cm.queda)+'</b></div>';
   if(cm.queda > 0) h += '<div class="l"><span>Eso es por día ('+cm.diasRest+(cm.diasRest===1?' día':' días')+')</span><b>'+money(cm.porDia)+'</b></div>';
   el.innerHTML = h;
