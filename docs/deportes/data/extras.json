@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T15:00:20.252Z",
+ "actualizado": "2026-11-06T20:52:39.658Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,8 +425,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -628,8 +630,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1008,8 +1011,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1082,8 +1086,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1094,8 +1099,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1166,9 +1172,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1179,8 +1184,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1240,9 +1246,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1258,6 +1263,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "FIFA's chief legal officer steps down in second high-profile exit",
+     "resumen": "Emilio García Silvero, who has served as FIFA's chief legal and compliance officer for the past eight years, is stepping down from his position.",
+     "fecha": "2026-11-06T16:50:55Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0413/r1642668_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50399850/fifa-chief-legal-compliance-officer-steps-down"
+    },
     {
      "titulo": "Ronaldo's Portugal career ended in shame, but at his peak he was a dominant force",
      "resumen": "Though his national team career finished in parody and mockery, we should remember Cristiano Ronaldo for what he was at his peak: an almost unstoppable player for his country.",
@@ -1299,13 +1311,6 @@
      "fecha": "2026-11-05T02:18:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/1105/r1741350_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50383766/socceroos-depth-chart-australias-next-no-9-please-stand-up"
-    },
-    {
-     "titulo": "Source: FIFA to open World Cup private equity plan files following UEFA demands",
-     "resumen": "FIFA will open access to confidential documents detailing president Gianni Infantino's controversial proposal to bring private investors into the World Cup, a source confirmed to ESPN.",
-     "fecha": "2026-11-03T19:24:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0908/r1713266_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50358121/fifa-open-world-cup-private-equity-files-uefa-demands"
     },
     {
      "titulo": "Alonso: João Pedro 'not ready for the next games'",
@@ -1719,8 +1724,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -2597,46 +2603,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
-     "fecha": "2026-11-06T07:53:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+     "titulo": "Ferrari confirms talks to diffuse Lewis Hamilton and Charles Leclerc tension",
+     "resumen": "Ferrari team principal Fred Vasseur has said he delivered a clear message to Lewis Hamilton and Charles Leclerc on Thursday evening in Brazil as he attempted to clear the air between the two teammates.",
+     "fecha": "2026-11-06T20:28:00Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742082_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389024/lewis-hamilton-charles-leclerc-sao-paulo-gp-brazil-f1"
     },
     {
-     "titulo": "Valtteri Bottas 'surprised' by whispers of Cadillac exit",
-     "resumen": "Valtteri Bottas said he's surprised by the speculation he could lose his Cadillac seat in 2027 because it goes against his team's feedback.",
-     "fecha": "2026-11-06T07:41:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1741915_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50397567/valtteri-bottas-surprised-cadillac-exit-rumour-colton-herta"
+     "titulo": "Kimi Antonelli fastest in second practice at São Paulo GP as new world champion",
+     "resumen": "New world champion Kimi Antonelli continued his strong form by topping the timesheets in the second practice session at the São Paulo Grand Prix.",
+     "fecha": "2026-11-06T20:26:57Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742018_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389022/kimi-antonelli-sao-paulo-grand-prix-brazil-formula-1"
     },
     {
-     "titulo": "Antonelli: Preparation for 2027 F1 season starts now",
-     "resumen": "Antonelli: Preparation for 2027 F1 season starts now",
-     "fecha": "2026-11-05T23:19:45Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_COM_F1_Interview_Antonelli_Preparation_for_2027_F1_season_starts_now_20261105_GLOBAL/dm_261105_COM_F1_Interview_Antonelli_Preparation_for_2027_F1_season_starts_now_20261105_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50393346/preparation-2027-f1-season-starts-now"
+     "titulo": "George Russell hit with five-place grid penalty for São Paulo Grand Prix",
+     "resumen": "George Russell will face a five-place grid penalty at the São Paulo Grand Prix after his Mercedes team fitted another new engine to his car ahead of this weekend's race at Interlagos.",
+     "fecha": "2026-11-06T17:52:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742053_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389019/george-russell-hit-five-place-grid-penalty-sao-paulo-grand-prix-brazil-formula-1"
     },
     {
-     "titulo": "George Russell breaks silence on swift Mexico City GP exit: 'Needed to get out of there'",
-     "resumen": "George Russell has said he simply \"needed to get out of there\" after leaving Mexico early as another frustrating race piled the disappointment on top of watching teammate Kimi Antonelli clinch the world championship.",
-     "fecha": "2026-11-05T21:47:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741693_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389010/george-russell-breaks-silence-swift-mexico-city-grand-prix-exit-needed-get-there-sao-paulo-grand-prix-brazil-formula-1"
+     "titulo": "Haas boss confirms axing Esteban Ocon after Mexico was 'best interest of team'",
+     "resumen": "Haas boss Ayao Komatsu has said removing Esteban Ocon was a decision he had to make for the best of the team.",
+     "fecha": "2026-11-06T17:30:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742047_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389018/haas-boss-confirms-axing-esteban-ocon-mexico-was-best-interest-team-grand-prix-brazil-formula-1"
     },
     {
-     "titulo": "Kimi Antonelli still coming to terms with 'surreal' world title: 'Is this even real?'",
-     "resumen": "Kimi Antonelli had a special gift from Mercedes on arrival at Interlagos on Thursday: T-shirts with his name on, accompanied with the title which will be uttered alongside it for the rest of time: Formula 1 world drivers' champion.",
-     "fecha": "2026-11-05T21:19:57Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741712_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389008/kimi-antonelli-coming-terms-surreal-world-title-even-real-sao-paulo-grand-prix-brazil-formula-1"
+     "titulo": "São Paulo Grand Prix: Lando Norris fastest in first practice in heavily-upgraded McLaren",
+     "resumen": "Lando Norris set the pace in the first practice session at the São Paulo Grand Prix.",
+     "fecha": "2026-11-06T16:59:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742021_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389017/lando-norris-fastest-first-practice-heavily-upgraded-mclaren-sao-paulo-grand-prix-brazil-formula-1"
     },
     {
-     "titulo": "Lewis Hamilton 'not going to be silenced' over frustrations with Ferrari teammate Charles Leclerc",
-     "resumen": "The fallout from Ferrari's disastrous opening lap at the Mexico City Grand Prix rumbled on ahead of this weekend's São Paulo Grand Prix, after Lewis Hamilton said he is \"not going to be silenced\" over the frustration he felt with teammate Charles Leclerc.",
-     "fecha": "2026-11-05T20:37:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741677_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50388987/lewis-hamilton-not-going-silenced-frustrations-ferrari-teammate-charles-leclerc-sao-paulo-grand-prix-brazil-formula-1"
+     "titulo": "Kimi Antonelli pays tribute to Ayrton Senna with special São Paulo helmet after 'emotional' family visit",
+     "resumen": "New Formula 1 world champion Kimi Antonelli will race with a helmet bearing the the colours of Brazil and Ayrton Senna this weekend after a \"truly emotional\" visit to his gravesite earlier this week.",
+     "fecha": "2026-11-06T15:59:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742016_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389016/kimi-antonelli-pays-tribute-ayrton-senna-special-sao-paulo-helmet-emotional-family-visit-grand-prix-brazil-formula-1"
     }
    ],
    "resultados": null,
