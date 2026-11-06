@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T18:43:33.219Z",
+ "actualizado": "2026-11-06T00:13:34.976Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -422,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -615,8 +616,9 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -945,9 +947,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1007,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1032,9 +1032,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1081,9 +1080,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1094,9 +1092,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1168,9 +1165,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1564,8 +1560,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1612,9 +1609,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1673,9 +1669,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1722,9 +1717,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2601,46 +2595,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Antonelli: Preparation for 2027 F1 season starts now",
+     "resumen": "Antonelli: Preparation for 2027 F1 season starts now",
+     "fecha": "2026-11-05T23:19:45Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_COM_F1_Interview_Antonelli_Preparation_for_2027_F1_season_starts_now_20261105_GLOBAL/dm_261105_COM_F1_Interview_Antonelli_Preparation_for_2027_F1_season_starts_now_20261105_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50393346/preparation-2027-f1-season-starts-now"
+    },
+    {
+     "titulo": "George Russell breaks silence on swift Mexico City GP exit: 'Needed to get out of there'",
+     "resumen": "George Russell has said he simply \"needed to get out of there\" after leaving Mexico early as another frustrating race piled the disappointment on top of watching teammate Kimi Antonelli clinch the world championship.",
+     "fecha": "2026-11-05T21:47:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741693_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389010/george-russell-breaks-silence-swift-mexico-city-grand-prix-exit-needed-get-there-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
+     "fecha": "2026-11-05T21:30:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "Kimi Antonelli still coming to terms with 'surreal' world title: 'Is this even real?'",
+     "resumen": "Kimi Antonelli had a special gift from Mercedes on arrival at Interlagos on Thursday: T-shirts with his name on, accompanied with the title which will be uttered alongside it for the rest of time: Formula 1 world drivers' champion.",
+     "fecha": "2026-11-05T21:19:57Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741712_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389008/kimi-antonelli-coming-terms-surreal-world-title-even-real-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Lewis Hamilton 'not going to be silenced' over frustrations with Ferrari teammate Charles Leclerc",
+     "resumen": "The fallout from Ferrari's disastrous opening lap at the Mexico City Grand Prix rumbled on ahead of this weekend's São Paulo Grand Prix, after Lewis Hamilton said he is \"not going to be silenced\" over the frustration he felt with teammate Charles Leclerc.",
+     "fecha": "2026-11-05T20:37:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50388987/lewis-hamilton-not-going-silenced-frustrations-ferrari-teammate-charles-leclerc-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
      "titulo": "São Paulo Grand Prix: 'Very grateful' Rafael Câmara thanks Haas for early home debut",
      "resumen": "Rafael Câmara thanked Haas for the show of trust in handing him an early Formula 1 debut at home in Brazil ahead of his full rookie season in 2027, but refused to be drawn on whether he will finish the season with the team.",
      "fecha": "2026-11-05T17:30:18Z",
      "imagen": "https://a.espncdn.com/photo/2026/1105/r1741559_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50388985/sao-paulo-grand-prix-brazil-formula-1-rafael-camara-thanks-haas-debut"
-    },
-    {
-     "titulo": "Kimi Antonelli to honour Ayrton Senna with special helmet at São Paulo GP",
-     "resumen": "Kimi Antonelli will pay tribute to Ayrton Senna this weekend as he arrives in São Paulo having emulated his racing hero by becoming world champion.",
-     "fecha": "2026-11-05T15:56:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50386871/kimi-antonelli-honour-ayrton-senna-special-helmet-sao-paulo-gp"
-    },
-    {
-     "titulo": "Charles Leclerc to miss Brazilian Grand Prix media duty due to birth of baby",
-     "resumen": "Ferrari's Charles Leclerc will miss media duties ahead of the Brazilian Grand Prix following the birth of his first child.",
-     "fecha": "2026-11-04T14:52:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1016/r1731507_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50378860/charles-leclerc-brazilian-grand-prix-media-due-baby-birth"
-    },
-    {
-     "titulo": "Lewis Hamilton: Watching successor Kimi Antonelli win title 'highlight of my year'",
-     "resumen": "Lewis Hamilton has said watching his Mercedes successor Kimi Antonelli win his first world championship was the \"highlight\" of his Formula 1 season.",
-     "fecha": "2026-11-03T11:50:34Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1103/r1740441_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50367782/lewis-hamilton-kimi-antonelli-title-mercedes"
-    },
-    {
-     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
-     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
-     "fecha": "2026-11-03T07:59:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
-    },
-    {
-     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
-     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
-     "fecha": "2026-11-03T07:58:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
     }
    ],
    "resultados": null,
