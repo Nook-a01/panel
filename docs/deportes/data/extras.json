@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T00:13:34.976Z",
+ "actualizado": "2026-11-06T06:45:24.780Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -616,9 +614,8 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -947,8 +944,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1008,8 +1006,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1032,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1044,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1068,8 +1069,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1152,9 +1154,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1238,8 +1239,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1257,8 +1259,8 @@
    "noticias": [
     {
      "titulo": "Ronaldo's Portugal career ended in shame, but at his peak he was a dominant force",
-     "resumen": "Cristiano Ronaldo's Portugal career might have ended in parody and mockery, but we should remember him for what he was at his peak: an almost unstoppable force for his country.",
-     "fecha": "2026-11-05T14:23:14Z",
+     "resumen": "Though his national team career finished in parody and mockery, we should remember Cristiano Ronaldo for what he was at his peak: an almost unstoppable player for his country.",
+     "fecha": "2026-11-06T01:13:29Z",
      "imagen": "https://a.espncdn.com/photo/2026/1105/r1741457_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50387949/cristiano-ronaldo-portugal-retirement-reaction-analysis-euro-2016-fifa-world-cup"
     },
@@ -1560,9 +1562,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1927,6 +1928,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Houston Dynamo's Lyle Foster earns Bafana Bafana recall for Kenya AFCON qualifying double-header",
+     "resumen": "Houston Dynamo striker Lyle Foster, on loan from Burnley, earned a recall to the Bafana Bafana squad ahead of November's 2027 Africa Cup of Nations (AFCON) qualifying double-header against tournament co-hosts Kenya.",
+     "fecha": "2026-11-06T06:21:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0627/r1680394_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50387480/houston-dynamo-lyle-foster-earns-bafana-bafana-recall-kenya-afcon-qualifying-double-header"
+    },
+    {
      "titulo": "Robert Lewandowski's jersey outselling Lionel Messi's since Chicago arrival",
      "resumen": "Robert Lewandowski's Chicago Fire jersey has been the most popular in MLS since his arrival to the league in June, outselling even Lionel Messi's Miami kit.",
      "fecha": "2026-11-03T19:16:43Z",
@@ -1960,13 +1968,6 @@
      "fecha": "2026-11-02T03:12:25Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761932.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761932"
-    },
-    {
-     "titulo": "Nashville ties Miami's single-season points record, ends Red Bulls playoff push",
-     "resumen": "Nashville got two own goals and a stoppage-time winner by Sam Surridge to erase a two-goal lead and beat the New York Red Bulls 3-2 on a rainy Sunday at Geodis Park.",
-     "fecha": "2026-11-02T00:23:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739837_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50353289/nashville-ties-miami-single-season-points-record"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2652,6 +2653,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "The Philippine legend who keeps Jonny Parsons going",
+     "resumen": "Philippine hero Lapu-Lapu defeated Ferdinand Magellan at the Battle of Mactan in 1521, and the story carries a personal meaning for Jonny Parsons that he takes with him every time he steps into the Octagon.",
+     "fecha": "2026-11-06T01:46:25Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1741824_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/ufc/story/_/id/50394210/ufc-fight-night-cortes-acosta-vs-walker-philippine-legend-keeps-jonny-parsons-going"
+    },
+    {
+     "titulo": "Jonny Parsons: 'Definitely look up to Manny Pacquiao'",
+     "resumen": "Filipino-American fighter Jonny Parsons returns to the Octagon for the first time since July 2023, and he says he has \"a lot of guys on his résumé.\"",
+     "fecha": "2026-11-06T01:17:22Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/Int_261105_MMA_Interview_Jonny_Parsons_Definitely_look_up_to_Manny_Pacquiao_2026116/Int_261105_MMA_Interview_Jonny_Parsons_Definitely_look_up_to_Manny_Pacquiao_2026116.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50394446/definitely-look-manny-pacquiao"
+    },
+    {
      "titulo": "Luana Santos comes to grips with rise in women's bantamweight rankings",
      "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
      "fecha": "2026-11-03T15:10:50Z",
@@ -2678,20 +2693,6 @@
      "fecha": "2026-11-01T03:40:00Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1031/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50344111/nolan-knocks-moicano-round-3"
-    },
-    {
-     "titulo": "UFC's Islam Makhachev: Next fight will be 'one of the last' of career",
-     "resumen": "Islam Makhachev, the No. 1 fighter in ESPN's pound-for-pound MMA rankings and the UFC's reigning welterweight champion, says his next fight will be \"one of the last\" of his career.",
-     "fecha": "2026-10-30T21:23:41Z",
-     "imagen": "https://a.espncdn.com/photo/2025/1116/r1576326_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50330401/islam-makhachev-my-next-fight-one-last-my-career"
-    },
-    {
-     "titulo": "It's still the age of Volkanovski in MMA pound-for-pound rankings",
-     "resumen": "At age 38, UFC featherweight champion makes big jump in ESPN's P4P top 10.",
-     "fecha": "2026-10-28T14:37:11Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1027/r1737130_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-pound-rankings"
     }
    ],
    "resultados": [
