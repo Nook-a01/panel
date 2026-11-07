@@ -1279,6 +1279,10 @@ function calc(){
     saldo += (m.tipo==='ingreso' ? 1 : -1) * (Number(m.monto)||0);
   });
 
+  // La plata reservada en Mercado Pago no es gastable: se saca del saldo así
+  // ningún número del panel (libre, por día, proyección) la cuenta como propia.
+  saldo -= Math.max(0, Number(S.cfg.reservado)||0);
+
   const refCobro = proximoCobro(hoy);
   const ap = apartados();
   // Hasta cuándo tiene que durarte la plata que tenés HOY: hasta que entre
@@ -2047,7 +2051,8 @@ function calcMes(c){
   const esPsico = m => typeof m.src==='string' && m.src.indexOf('r-psico')===0;
   const psicoPend = suma(pendFij.filter(esPsico));
   const cubierto = Math.min(reservado, psicoPend);
-  const disponible = saldo - reservado;
+  // c.saldo ya viene sin la reserva (se resta en calc()); no restarla de nuevo.
+  const disponible = saldo;
   const entra = disponible + suma(pendIng);
   const fijos = suma(pendFij) - cubierto;
   const queda = entra - fijos;
