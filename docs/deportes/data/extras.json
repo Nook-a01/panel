@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T20:52:39.658Z",
+ "actualizado": "2026-11-07T00:55:00.021Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -53,12 +53,12 @@
       "equipo": "Vélez Sarsfield",
       "abrev": "VEL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-      "pj": "15",
+      "pj": "16",
       "pts": "28",
       "g": "7",
       "e": "7",
-      "p": "1",
-      "dg": "+10",
+      "p": "2",
+      "dg": "+8",
       "mio": false,
       "pos": 3
      },
@@ -89,6 +89,19 @@
       "pos": 5
      },
      {
+      "equipo": "Independiente",
+      "abrev": "IND",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+      "pj": "16",
+      "pts": "23",
+      "g": "6",
+      "e": "5",
+      "p": "5",
+      "dg": "-1",
+      "mio": false,
+      "pos": 6
+     },
+     {
       "equipo": "Newell's Old Boys",
       "abrev": "NOB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
@@ -99,7 +112,7 @@
       "p": "3",
       "dg": "+3",
       "mio": false,
-      "pos": 6
+      "pos": 7
      },
      {
       "equipo": "Gimnasia (Mendoza)",
@@ -112,57 +125,44 @@
       "p": "6",
       "dg": "+1",
       "mio": false,
-      "pos": 7
-     },
-     {
-      "equipo": "Independiente",
-      "abrev": "IND",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-      "pj": "15",
-      "pts": "20",
-      "g": "5",
-      "e": "5",
-      "p": "5",
-      "dg": "-2",
-      "mio": false,
       "pos": 8
-     },
-     {
-      "equipo": "San Lorenzo",
-      "abrev": "SLO",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-      "pj": "15",
-      "pts": "19",
-      "g": "5",
-      "e": "4",
-      "p": "6",
-      "dg": "-5",
-      "mio": false,
-      "pos": 9
      },
      {
       "equipo": "Unión (Santa Fe)",
       "abrev": "USF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-      "pj": "15",
-      "pts": "18",
-      "g": "5",
+      "pj": "16",
+      "pts": "21",
+      "g": "6",
       "e": "3",
       "p": "7",
-      "dg": "-2",
+      "dg": "0",
       "mio": false,
-      "pos": 10
+      "pos": 9
      },
      {
       "equipo": "Platense",
       "abrev": "PLA",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-      "pj": "15",
-      "pts": "17",
-      "g": "4",
+      "pj": "16",
+      "pts": "20",
+      "g": "5",
       "e": "5",
       "p": "6",
-      "dg": "-4",
+      "dg": "-2",
+      "mio": false,
+      "pos": 10
+     },
+     {
+      "equipo": "San Lorenzo",
+      "abrev": "SLO",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+      "pj": "16",
+      "pts": "19",
+      "g": "5",
+      "e": "4",
+      "p": "7",
+      "dg": "-7",
       "mio": false,
       "pos": 11
      },
@@ -196,12 +196,12 @@
       "equipo": "Deportivo Riestra",
       "abrev": "RIE",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-      "pj": "15",
+      "pj": "16",
       "pts": "12",
       "g": "2",
       "e": "6",
-      "p": "7",
-      "dg": "-7",
+      "p": "8",
+      "dg": "-8",
       "mio": false,
       "pos": 14
      },
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -425,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -630,9 +628,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -1011,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1086,9 +1082,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1099,9 +1094,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1160,8 +1154,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1184,9 +1179,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1264,6 +1258,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Caribbean Football Union endorses Infantino ahead of FIFA presidential election",
+     "resumen": "The Caribbean Football Union has endorsed Gianni Infantino following regional consultations, boosting his bid ahead of the FIFA presidential March election.",
+     "fecha": "2026-11-06T23:11:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742190_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50402359/infantino-secures-caribbean-support-fifa-reelection-bid"
+    },
+    {
      "titulo": "FIFA's chief legal officer steps down in second high-profile exit",
      "resumen": "Emilio García Silvero, who has served as FIFA's chief legal and compliance officer for the past eight years, is stepping down from his position.",
      "fecha": "2026-11-06T16:50:55Z",
@@ -1290,13 +1291,6 @@
      "fecha": "2026-11-05T13:21:08Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50388146/ronaldo-was-one-greatest-all"
-    },
-    {
-     "titulo": "FIFA Council's Tashima to challenge Infantino in March elections - reports",
-     "resumen": "FIFA Council member Kohzo Tashima intends to run for president of the global football body against incumbent Gianni Infantino, Japanese media reported.",
-     "fecha": "2026-11-05T12:51:52Z",
-     "imagen": "https://a.espncdn.com/photo/2020/0317/r680435_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50387286/fifa-council-japan-tashima-challenge-infantino-reports"
     },
     {
      "titulo": "Ogden: Time catches up with everyone, even Cristiano Ronaldo",
@@ -1724,9 +1718,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2603,6 +2596,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 to make a decision on season finale in Imola next week - sources",
+     "resumen": "Formula 1 has a cut-off date next week to let Italian circuit Imola know whether it is needed to replace two Middle East races as the 2026 season finale.",
+     "fecha": "2026-11-06T23:32:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739877_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389027/imola-qatar-abu-dhabi-grand-prix-formula-1"
+    },
+    {
      "titulo": "Ferrari confirms talks to diffuse Lewis Hamilton and Charles Leclerc tension",
      "resumen": "Ferrari team principal Fred Vasseur has said he delivered a clear message to Lewis Hamilton and Charles Leclerc on Thursday evening in Brazil as he attempted to clear the air between the two teammates.",
      "fecha": "2026-11-06T20:28:00Z",
@@ -2636,13 +2636,6 @@
      "fecha": "2026-11-06T16:59:50Z",
      "imagen": "https://a.espncdn.com/photo/2026/1106/r1742021_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389017/lando-norris-fastest-first-practice-heavily-upgraded-mclaren-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Kimi Antonelli pays tribute to Ayrton Senna with special São Paulo helmet after 'emotional' family visit",
-     "resumen": "New Formula 1 world champion Kimi Antonelli will race with a helmet bearing the the colours of Brazil and Ayrton Senna this weekend after a \"truly emotional\" visit to his gravesite earlier this week.",
-     "fecha": "2026-11-06T15:59:30Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742016_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389016/kimi-antonelli-pays-tribute-ayrton-senna-special-sao-paulo-helmet-emotional-family-visit-grand-prix-brazil-formula-1"
     }
    ],
    "resultados": null,

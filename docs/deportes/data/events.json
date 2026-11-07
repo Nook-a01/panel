@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05T10:51:10.843Z",
+ "actualizado": "2026-11-07T00:55:00.021Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -23,7 +23,7 @@
    "color": "#6cbdf2",
    "ruta": "soccer",
    "liga": "fifa.world",
-   "total": 3,
+   "total": 2,
    "proximos": 2
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401921408",
-   "miLado": "local",
-   "idEspn": "401921408",
-   "liga": "fifa.friendly",
-   "ruta": "soccer",
-   "feedId": "argentina",
-   "feedLabel": "Selección Argentina",
-   "sport": "futbol",
-   "emoji": "🇦🇷",
-   "titulo": "Argentina vs Benin",
-   "inicio": "2026-10-06T23:00Z",
-   "horaConfirmada": true,
-   "competicion": "International Friendly",
-   "sede": "Estadio Más Monumental",
-   "local": "Argentina",
-   "visitante": "Benin",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/ben.png",
-   "finalizado": true,
-   "marcador": "3 - 0"
-  },
   {
    "id": "espn-401841607",
    "miLado": "visitante",
