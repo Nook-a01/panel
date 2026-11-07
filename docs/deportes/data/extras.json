@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T13:59:14.590Z",
+ "actualizado": "2026-11-07T18:46:11.392Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1044,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1636,6 +1635,18 @@
      "lesionado": false
     },
     {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
+     "lesionado": false
+    },
+    {
      "id": "364401",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "nombre": "Tyler Hall",
@@ -1728,18 +1739,6 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
      "foto": null,
      "lesionado": false
     },
@@ -2594,6 +2593,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen, Lewis Hamilton, Charles Leclerc to take grid penalties in Brazil",
+     "resumen": "Max Verstappen and both Ferrari drivers will incur grid penalties at the São Paulo Grand Prix after new power unit components were fitted to their cars ahead of Saturday's qualifying session at Interlagos.",
+     "fecha": "2026-11-07T17:27:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742387_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389038/max-verstappen-lewis-hamilton-charles-leclerc-penalties-sao-paulo"
+    },
+    {
+     "titulo": "F1 will race in São Paulo until at least 2035 with new deal",
+     "resumen": "The São Paulo Grand Prix will remain on the Formula 1 race calendar until at least 2035, it was confirmed Saturday ahead of this year's edition.",
+     "fecha": "2026-11-07T16:48:31Z",
+     "imagen": "https://a.espncdn.com/photo/2024/1103/r1410106_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389052/sao-paulo-grand-prix-brazil-formula-1-calendar"
+    },
+    {
+     "titulo": "Max Verstappen tops final practice; starts São Paulo GP from back of grid",
+     "resumen": "Max Verstappen edged out Kimi Antonelli to go quickest in the final practice session of the São Paulo Grand Prix.",
+     "fecha": "2026-11-07T16:00:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742011_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389037/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Charles Leclerc says 'everything is settled' after Lewis Hamilton, Ferrari crisis talks",
+     "resumen": "New father Charles Leclerc arrived late to this weekend's Sao Paulo Grand Prix and went straight to crisis talks with Ferrari teammate Lewis Hamilton and team boss Fred Vasseur, declaring afterwards that he believes \"everything is settled\".",
+     "fecha": "2026-11-07T14:17:02Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742082_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50407666/charles-leclerc-ferrari-lewis-hamilton-fred-vasseur"
+    },
+    {
      "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
      "fecha": "2026-11-07T09:25:06Z",
@@ -2606,34 +2633,6 @@
      "fecha": "2026-11-07T09:23:47Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
-    },
-    {
-     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
-     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
-     "fecha": "2026-11-07T09:23:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
-    },
-    {
-     "titulo": "F1 to make a decision on season finale in Imola next week - sources",
-     "resumen": "Formula 1 has a cut-off date next week to let Italian circuit Imola know whether it is needed to replace two Middle East races as the 2026 season finale.",
-     "fecha": "2026-11-06T23:32:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739877_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389027/imola-qatar-abu-dhabi-grand-prix-formula-1"
-    },
-    {
-     "titulo": "Ferrari confirms talks to diffuse Lewis Hamilton and Charles Leclerc tension",
-     "resumen": "Ferrari team principal Fred Vasseur has said he delivered a clear message to Lewis Hamilton and Charles Leclerc on Thursday evening in Brazil as he attempted to clear the air between the two teammates.",
-     "fecha": "2026-11-06T20:28:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742082_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389024/lewis-hamilton-charles-leclerc-sao-paulo-gp-brazil-f1"
-    },
-    {
-     "titulo": "Kimi Antonelli fastest in second practice at São Paulo GP as new world champion",
-     "resumen": "New world champion Kimi Antonelli continued his strong form by topping the timesheets in the second practice session at the São Paulo Grand Prix.",
-     "fecha": "2026-11-06T20:26:57Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742018_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389022/kimi-antonelli-sao-paulo-grand-prix-brazil-formula-1"
     }
    ],
    "resultados": null,
