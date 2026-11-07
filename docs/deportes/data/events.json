@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T18:46:11.392Z",
+ "actualizado": "2026-11-07T22:43:45.578Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 9,
-   "proximos": 3
+   "proximos": 2
   },
   {
    "id": "argentina",
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 21,
-   "proximos": 15
+   "proximos": 14
   },
   {
    "id": "pumas",
@@ -72,7 +72,7 @@
    "ruta": "mma",
    "liga": "ufc",
    "total": 11,
-   "proximos": 7
+   "proximos": 6
   }
  ],
  "eventos": [
@@ -615,8 +615,8 @@
    "visitante": "Defensa y Justicia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 0"
   },
   {
    "id": "espn-761938",

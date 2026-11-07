@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T18:46:11.392Z",
+ "actualizado": "2026-11-07T22:43:45.578Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -40,12 +40,12 @@
       "equipo": "Boca Juniors",
       "abrev": "CABJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "pj": "15",
-      "pts": "30",
-      "g": "8",
+      "pj": "16",
+      "pts": "33",
+      "g": "9",
       "e": "6",
       "p": "1",
-      "dg": "+9",
+      "dg": "+10",
       "mio": true,
       "pos": 2
      },
@@ -66,12 +66,12 @@
       "equipo": "Defensa y Justicia",
       "abrev": "DYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-      "pj": "15",
+      "pj": "16",
       "pts": "28",
       "g": "8",
       "e": "4",
-      "p": "3",
-      "dg": "+7",
+      "p": "4",
+      "dg": "+6",
       "mio": false,
       "pos": 4
      },
@@ -118,10 +118,10 @@
       "equipo": "Gimnasia (Mendoza)",
       "abrev": "GMZ",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-      "pj": "15",
-      "pts": "21",
+      "pj": "16",
+      "pts": "22",
       "g": "6",
-      "e": "3",
+      "e": "4",
       "p": "6",
       "dg": "+1",
       "mio": false,
@@ -170,10 +170,10 @@
       "equipo": "Estudiantes de La Plata",
       "abrev": "EST",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-      "pj": "15",
-      "pts": "15",
+      "pj": "16",
+      "pts": "16",
       "g": "4",
-      "e": "3",
+      "e": "4",
       "p": "8",
       "dg": "-1",
       "mio": false,
@@ -183,10 +183,10 @@
       "equipo": "Talleres (Córdoba)",
       "abrev": "TALL",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-      "pj": "15",
-      "pts": "12",
+      "pj": "16",
+      "pts": "13",
       "g": "3",
-      "e": "3",
+      "e": "4",
       "p": "9",
       "dg": "-6",
       "mio": false,
@@ -971,9 +971,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1032,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1044,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -2593,6 +2594,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Charles Leclerc and Lewis Hamilton Ferrari tensions a 'closed chapter'",
+     "resumen": "Holding his newborn daughter in his arms helped Charles Leclerc forget all about his fallout with Lewis Hamilton at the Mexico City Grand Prix, something the Ferrari teammates agree is a \"closed chapter.\"",
+     "fecha": "2026-11-07T22:26:30Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742641_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389063/lewis-hamilton-charles-leclerc-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "George Russell fumes at 'wrong decision' from Mercedes after missing out on pole",
+     "resumen": "George Russell was left fuming following qualifying at the São Paulo Grand Prix after missing out on pole position when his Mercedes team told him to back out of his fastest lap in Q3.",
+     "fecha": "2026-11-07T22:08:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742593_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389062/george-russell-pole-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Lando Norris storms to wet pole in São Paulo in heavily disrupted session",
+     "resumen": "Lando Norris put his upgraded McLaren on pole position for the third year in a row for the São Paulo Grand Prix.",
+     "fecha": "2026-11-07T21:44:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742585_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389061/lando-norris-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
      "titulo": "Max Verstappen, Lewis Hamilton, Charles Leclerc to take grid penalties in Brazil",
      "resumen": "Max Verstappen and both Ferrari drivers will incur grid penalties at the São Paulo Grand Prix after new power unit components were fitted to their cars ahead of Saturday's qualifying session at Interlagos.",
      "fecha": "2026-11-07T17:27:06Z",
@@ -2612,27 +2634,6 @@
      "fecha": "2026-11-07T16:00:40Z",
      "imagen": "https://a.espncdn.com/photo/2026/1106/r1742011_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389037/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Charles Leclerc says 'everything is settled' after Lewis Hamilton, Ferrari crisis talks",
-     "resumen": "New father Charles Leclerc arrived late to this weekend's Sao Paulo Grand Prix and went straight to crisis talks with Ferrari teammate Lewis Hamilton and team boss Fred Vasseur, declaring afterwards that he believes \"everything is settled\".",
-     "fecha": "2026-11-07T14:17:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742082_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50407666/charles-leclerc-ferrari-lewis-hamilton-fred-vasseur"
-    },
-    {
-     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
-     "fecha": "2026-11-07T09:25:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
-     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
-     "fecha": "2026-11-07T09:23:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
     }
    ],
    "resultados": null,
@@ -2649,6 +2650,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Trump offered press secretary role to Dana White; UFC boss declined, report says",
+     "resumen": "President Donald Trump said he offered the job of White House press secretary to UFC boss Dana White, who has since reportedly declined the offer.",
+     "fecha": "2026-11-07T22:34:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50412085/report-dana-white-declines-trump-offer-press-secretary"
+    },
     {
      "titulo": "The Philippine legend who keeps Jonny Parsons going",
      "resumen": "Philippine hero Lapu-Lapu defeated Ferdinand Magellan at the Battle of Mactan in 1521, and the story carries a personal meaning for Jonny Parsons that he takes with him every time he steps into the Octagon.",
@@ -2671,13 +2679,6 @@
      "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     },
     {
-     "titulo": "Luana Santos defeats Yana Santos by unanimous decision at UFC Fight Night",
-     "resumen": "Luana Santos earned her fourth straight victory, a unanimous decision over fifth-ranked Yana Santos on Saturday.",
-     "fecha": "2026-11-01T04:16:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1101/r1739316_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/ufc/story/_/id/50343853/luana-santos-wins-4th-straight-match-defeats-yana-santos"
-    },
-    {
      "titulo": "Nolan knocks out Moicano in Round 3",
      "resumen": "Australian Tom Nolan extends his winning streak to six fights after knocking out Renato Moicano in the third round at UFC Vegas 123.",
      "fecha": "2026-11-01T03:42:31Z",
@@ -2693,6 +2694,12 @@
     }
    ],
    "resultados": [
+    {
+     "titulo": "UFC Fight Night: Cortes Acosta vs. Walker",
+     "fecha": "2026-11-07T22:00Z",
+     "marcador": null,
+     "sede": "Meta APEX"
+    },
     {
      "titulo": "UFC Fight Night: Moicano vs. Nolan",
      "fecha": "2026-10-31T21:00Z",
