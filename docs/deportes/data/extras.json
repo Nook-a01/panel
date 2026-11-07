@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T00:55:00.021Z",
+ "actualizado": "2026-11-07T07:07:29.435Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -1154,9 +1154,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg/330px-Nico_Paz_Argentina_v_Egypt_7_July_2026-031.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
