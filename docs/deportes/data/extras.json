@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T02:27:29.312Z",
+ "actualizado": "2026-11-08T10:17:50.171Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -27,10 +27,10 @@
       "equipo": "Instituto (Córdoba)",
       "abrev": "IACC",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-      "pj": "15",
-      "pts": "33",
+      "pj": "16",
+      "pts": "34",
       "g": "10",
-      "e": "3",
+      "e": "4",
       "p": "2",
       "dg": "+11",
       "mio": false,
@@ -89,6 +89,19 @@
       "pos": 5
      },
      {
+      "equipo": "Newell's Old Boys",
+      "abrev": "NOB",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+      "pj": "16",
+      "pts": "23",
+      "g": "5",
+      "e": "8",
+      "p": "3",
+      "dg": "+3",
+      "mio": false,
+      "pos": 6
+     },
+     {
       "equipo": "Independiente",
       "abrev": "IND",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
@@ -98,19 +111,6 @@
       "e": "5",
       "p": "5",
       "dg": "-1",
-      "mio": false,
-      "pos": 6
-     },
-     {
-      "equipo": "Newell's Old Boys",
-      "abrev": "NOB",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-      "pj": "15",
-      "pts": "22",
-      "g": "5",
-      "e": "7",
-      "p": "3",
-      "dg": "+3",
       "mio": false,
       "pos": 7
      },
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -629,8 +628,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1105,8 +1105,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "207343",
@@ -1129,9 +1130,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1178,9 +1178,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1227,8 +1226,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1256,6 +1256,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Socceroos name seven uncapped players to face Qatar, Jordan",
+     "resumen": "Football Australia will continue to assess security ahead of the Socceroos' planned friendly against Jordan, with an under-strength squad named amid player concerns over safety.",
+     "fecha": "2026-11-08T03:42:54Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742810_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50414784/socceroos-name-seven-uncapped-players-face-qatar-jordan"
+    },
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
@@ -1325,13 +1332,6 @@
      "fecha": "2026-10-28T04:42:19Z",
      "imagen": "https://a.espncdn.com/photo/2026/1028/r1737375_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50304339/socceroos-committed-qatar-jordan-friendlies-amid-middle-east-unrest"
-    },
-    {
-     "titulo": "Kane: Ballon d'Or win beyond wildest dreams",
-     "resumen": "Kane: Ballon d'Or win beyond wildest dreams",
-     "fecha": "2026-10-27T08:32:23Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1027/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL/dm_261027_COM_SOC_Presser_Kane_Ballon_dOr_win_beyond_wildest_dreams_20261027_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50295274/ballon-dor-win-wildest-dreams"
     }
    ],
    "resultados": null,
@@ -1554,7 +1554,7 @@
      "dorsal": "13",
      "posicion": "Goalkeeper",
      "posCorta": "G",
-     "edad": 29,
+     "edad": 30,
      "pais": "USA",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/256444.png",
      "lesionado": false
@@ -1593,9 +1593,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1680,9 +1679,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1693,9 +1691,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1742,9 +1739,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1943,9 +1939,30 @@
     {
      "titulo": "Lionel Messi makes history as 1st back-to-back MLS Golden Boot winner",
      "resumen": "Lionel Messi has become the first player to win back-to-back MLS Golden Boot awards after the Inter Miami forward finished the regular season with 26 goals.",
-     "fecha": "2026-11-08T02:15:48Z",
+     "fecha": "2026-11-08T02:55:46Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1742766_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50411686/lionel-messi-mls-golden-boot-2026-winner-inter-miami"
+    },
+    {
+     "titulo": "LA Galaxy miss playoffs again as Real Salt Lake gets final berth",
+     "resumen": "Sergi Solans and Zach Booth scored early and Real Salt Lake clinched a playoff spot while eliminating the LA Galaxy with a 2-1 Decision Day victory over the Galaxy on Saturday.",
+     "fecha": "2026-11-08T02:54:28Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761946.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761946"
+    },
+    {
+     "titulo": "Kaick, Dallas win 3-1, eliminate Rapids from playoff contention",
+     "resumen": "- Kaick Ferreira, known simply as \"Kaick\", scored the go-ahead goal in the 88th and FC Dallas beat Colorado 3-1 on Saturday night to eliminati the Rapids from playoff contention.",
+     "fecha": "2026-11-08T02:35:48Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761943.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761943"
+    },
+    {
+     "titulo": "Lassiter scores in 3rd minute, Timbers beat Austin 2-0, clinch playoff spot",
+     "resumen": "- Ariel Lassiter opened the scoring in the third minute, Kristoffer Velde added a goal and the Portland Timbers beat Austin FC 2-0 on Saturday night to clinch a spot in the MLS Cup playoffs.",
+     "fecha": "2026-11-08T02:35:02Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761942.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/761942"
     },
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
@@ -1955,32 +1972,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
-     "titulo": "Charlotte FC rallies from 3-goal deficit to draw Inter Miami 3-3 in regular-season finale",
-     "resumen": "- Lionel Messi was held scoreless as Inter Miami blew a three-goal halftime lead and drew 3-3 with Charlotte FC on Saturday in its Major League Soccer regular-season finale.",
-     "fecha": "2026-11-08T00:39:30Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761938.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761938"
-    },
-    {
      "titulo": "Cavan, Quinn Sullivan both score as Philadelphia Union soar into playoffs",
      "resumen": "Cavan and Quinn Sullivan became just the third pair of brothers to score for the same club in an MLS match.",
      "fecha": "2026-11-08T00:33:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1742729_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50413971/cavan-quinn-sullivan-philadelphia-union-mls-usa"
-    },
-    {
-     "titulo": "Sam Surridge's goals help Nashville break MLS single-season points record",
-     "resumen": "Sam Surridge's goals help Nashville break MLS single-season points record ",
-     "fecha": "2026-11-08T00:21:04Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/ss_20261107_191622289_3731183/ss_20261107_191622289_3731183.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50414222/sam-surridge-goals-help-nashville-break-mls-single-season-points-record"
-    },
-    {
-     "titulo": "Brotherly love! Quinn and Cavan Sullivan combine for a Philadelphia goal",
-     "resumen": "Brotherly love! Quinn and Cavan Sullivan combine for a Philadelphia goal",
-     "fecha": "2026-11-08T00:02:46Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/ss_20261107_185835679_3731109/ss_20261107_185835679_3731109.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50414018/brotherly-love-quinn-cavan-sullivan-combine-philadelphia-goal"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2625,6 +2621,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
+     "fecha": "2026-11-08T08:08:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
+     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
+     "fecha": "2026-11-08T08:07:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
+    },
+    {
+     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
+     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
+     "fecha": "2026-11-08T08:07:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
+    },
+    {
      "titulo": "Fernando Alonso was dreaming of top-five finish in rainy São Paulo qualifying",
      "resumen": "Fernando Alonso said he was briefly dreaming of giving Aston Martin a top-five qualifying finish in Brazil as the rain was at its heaviest on Saturday.",
      "fecha": "2026-11-07T23:04:16Z",
@@ -2644,27 +2661,6 @@
      "fecha": "2026-11-07T22:08:19Z",
      "imagen": "https://a.espncdn.com/photo/2026/1107/r1742593_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389062/george-russell-pole-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Lando Norris storms to wet pole in São Paulo in heavily disrupted session",
-     "resumen": "Lando Norris put his upgraded McLaren on pole position for the third year in a row for the São Paulo Grand Prix.",
-     "fecha": "2026-11-07T21:44:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742585_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389061/lando-norris-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Max Verstappen, Lewis Hamilton, Charles Leclerc to take grid penalties in Brazil",
-     "resumen": "Max Verstappen and both Ferrari drivers will incur grid penalties at the São Paulo Grand Prix after new power unit components were fitted to their cars ahead of Saturday's qualifying session at Interlagos.",
-     "fecha": "2026-11-07T17:27:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742387_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389038/max-verstappen-lewis-hamilton-charles-leclerc-penalties-sao-paulo"
-    },
-    {
-     "titulo": "F1 will race in São Paulo until at least 2035 with new deal",
-     "resumen": "The São Paulo Grand Prix will remain on the Formula 1 race calendar until at least 2035, it was confirmed Saturday ahead of this year's edition.",
-     "fecha": "2026-11-07T16:48:31Z",
-     "imagen": "https://a.espncdn.com/photo/2024/1103/r1410106_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389052/sao-paulo-grand-prix-brazil-formula-1-calendar"
     }
    ],
    "resultados": null,
@@ -2682,9 +2678,30 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Tatiana Suarez back in title picture with decision win at UFC Fight Night",
+     "resumen": "Tatiana Suarez put herself back in position for a title shot after roughing up Virna Jandiroba in a unanimous decision win Saturday at UFC Fight Night.",
+     "fecha": "2026-11-08T05:03:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742826_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50416964/tatiana-suarez-back-title-picture-ufc-fight-night-win"
+    },
+    {
+     "titulo": "Walker stuns Cortes-Acosta for second straight win",
+     "resumen": "Johnny Walker continues rise in heavy weight ranks with KO win over Waldo Cortes-Acosta.",
+     "fecha": "2026-11-08T04:56:12Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/dm_261107_MMA_Highlight_Walker_stuns_Cortes_Acosta_for_second_straight_win_20261108_AUS_ONLY/dm_261107_MMA_Highlight_Walker_stuns_Cortes_Acosta_for_second_straight_win_20261108_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50417061/walker-stuns-cortes-acosta-second-straight-win"
+    },
+    {
+     "titulo": "Walker wins by KO in the third round",
+     "resumen": "Johnny Walker wins by KO in the 3rd round after knocking out Waldo Cortes-Acosta.",
+     "fecha": "2026-11-08T04:34:39Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/dm_261107_MMA_Highlight_Walker_wins_by_KO_in_the_third_round_20261108_PH_ONLY/dm_261107_MMA_Highlight_Walker_wins_by_KO_in_the_third_round_20261108_PH_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50416860/walker-wins-ko-third-round"
+    },
+    {
      "titulo": "A timeline of how Donald Trump, Dana White forged friendship through the fights",
      "resumen": "Donald Trump and Dana White's friendship is on display cageside, on political stages and at the White House.",
-     "fecha": "2026-11-08T02:20:56Z",
+     "fecha": "2026-11-08T02:28:12Z",
      "imagen": "https://a.espncdn.com/photo/2026/0605/mma_dana-white-house_16x9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/48995260/donald-trump-dana-white-forged-friendship-combat-sports"
     },
@@ -2696,32 +2713,11 @@
      "link": "https://www.espn.com/espn/story/_/id/50412085/trump-offers-press-secretary-role-ufc-boss-dana-white"
     },
     {
-     "titulo": "The Philippine legend who keeps Jonny Parsons going",
-     "resumen": "Philippine hero Lapu-Lapu defeated Ferdinand Magellan at the Battle of Mactan in 1521, and the story carries a personal meaning for Jonny Parsons that he takes with him every time he steps into the Octagon.",
-     "fecha": "2026-11-06T01:46:25Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1741824_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/ufc/story/_/id/50394210/ufc-fight-night-cortes-acosta-vs-walker-philippine-legend-keeps-jonny-parsons-going"
-    },
-    {
      "titulo": "Jonny Parsons: 'Definitely look up to Manny Pacquiao'",
      "resumen": "Filipino-American fighter Jonny Parsons returns to the Octagon for the first time since July 2023, and he says he has \"a lot of guys on his résumé.\"",
      "fecha": "2026-11-06T01:17:22Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/Int_261105_MMA_Interview_Jonny_Parsons_Definitely_look_up_to_Manny_Pacquiao_2026116/Int_261105_MMA_Interview_Jonny_Parsons_Definitely_look_up_to_Manny_Pacquiao_2026116.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50394446/definitely-look-manny-pacquiao"
-    },
-    {
-     "titulo": "Luana Santos comes to grips with rise in women's bantamweight rankings",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-11-03T15:10:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740196_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "Nolan knocks out Moicano in Round 3",
-     "resumen": "Australian Tom Nolan extends his winning streak to six fights after knocking out Renato Moicano in the third round at UFC Vegas 123.",
-     "fecha": "2026-11-01T03:40:00Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1031/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY/dm_261031_MMA_Highlight_Nolan_knocks_out_Moicano_in_Round_3_20261101_PH_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50344111/nolan-knocks-moicano-round-3"
     }
    ],
    "resultados": [
@@ -2965,6 +2961,15 @@
      "gano": 2
     },
     {
+     "id": "3146944",
+     "nombre": "Johnny Walker",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+     "categoria": "Heavyweight",
+     "record": "24-10-0",
+     "peleas": 3,
+     "gano": 2
+    },
+    {
      "id": "4336757",
      "nombre": "Kai Asakura",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
@@ -3106,15 +3111,6 @@
      "categoria": "Flyweight",
      "record": "18-2-0",
      "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "4566308",
-     "nombre": "Ketlen Souza",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "W Strawweight",
-     "record": "17-7-0",
-     "peleas": 3,
      "gano": 2
     }
    ]

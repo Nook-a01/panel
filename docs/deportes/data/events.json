@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T02:27:29.312Z",
+ "actualizado": "2026-11-08T10:17:50.171Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,8 +71,8 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 11,
-   "proximos": 6
+   "total": 12,
+   "proximos": 7
   }
  ],
  "eventos": [
@@ -659,7 +659,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
@@ -919,6 +919,28 @@
    "sesion": "Clasificación",
    "titulo": "GP Abu Dhabi · Clasificación",
    "inicio": "2026-12-05T14:00:00.000Z"
+  },
+  {
+   "id": "espn-600062700",
+   "miLado": null,
+   "idEspn": "600062700",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Adesanya vs Magomedov",
+   "inicio": "2026-12-05T15:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "ANB Arena",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
   },
   {
    "feedId": "f1",
