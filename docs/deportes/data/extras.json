@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T16:42:08.255Z",
+ "actualizado": "2026-11-08T21:08:59.920Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -424,8 +425,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -628,8 +630,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -946,8 +949,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +974,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1035,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1048,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1066,8 +1073,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1078,8 +1086,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1162,8 +1171,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1222,8 +1232,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1688,9 +1699,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2096,7 +2106,7 @@
       "equipo": "Andrea Kimi Antonelli",
       "abrev": "ANT",
       "detalle": "Mercedes",
-      "pts": "380",
+      "pts": "390",
       "g": "9",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
       "nacionalidad": "Italian",
@@ -2112,7 +2122,7 @@
       "equipo": "Max Verstappen",
       "abrev": "VER",
       "detalle": "Red Bull",
-      "pts": "261",
+      "pts": "279",
       "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
       "nacionalidad": "Dutch",
@@ -2125,26 +2135,10 @@
      },
      {
       "pos": 3,
-      "equipo": "Lewis Hamilton",
-      "abrev": "HAM",
-      "detalle": "Ferrari",
-      "pts": "259",
-      "g": "1",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#DC0000",
-      "numero": "44",
-      "driverId": "hamilton",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/868.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 4,
       "equipo": "George Russell",
       "abrev": "RUS",
       "detalle": "Mercedes",
-      "pts": "250",
+      "pts": "262",
       "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
@@ -2156,11 +2150,27 @@
       "mio": false
      },
      {
+      "pos": 4,
+      "equipo": "Lewis Hamilton",
+      "abrev": "HAM",
+      "detalle": "Ferrari",
+      "pts": "261",
+      "g": "1",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#DC0000",
+      "numero": "44",
+      "driverId": "hamilton",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/868.png",
+      "logo": null,
+      "mio": false
+     },
+     {
       "pos": 5,
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "245",
+      "pts": "251",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2176,8 +2186,8 @@
       "equipo": "Lando Norris",
       "abrev": "NOR",
       "detalle": "McLaren",
-      "pts": "221",
-      "g": "2",
+      "pts": "246",
+      "g": "3",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "nacionalidad": "British",
       "color": "#FF8700",
@@ -2192,7 +2202,7 @@
       "equipo": "Oscar Piastri",
       "abrev": "PIA",
       "detalle": "McLaren",
-      "pts": "144",
+      "pts": "152",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
       "nacionalidad": "Australian",
@@ -2208,7 +2218,7 @@
       "equipo": "Isack Hadjar",
       "abrev": "HAD",
       "detalle": "Red Bull",
-      "pts": "107",
+      "pts": "122",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
       "nacionalidad": "French",
@@ -2224,7 +2234,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "83",
+      "pts": "87",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2320,7 +2330,7 @@
       "equipo": "Nico Hülkenberg",
       "abrev": "HUL",
       "detalle": "Audi",
-      "pts": "13",
+      "pts": "14",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
       "nacionalidad": "German",
@@ -2497,7 +2507,7 @@
       "pos": 1,
       "equipo": "Mercedes",
       "detalle": "German",
-      "pts": "630",
+      "pts": "652",
       "g": "12",
       "color": "#00D2BE",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2508,7 +2518,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "504",
+      "pts": "512",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2519,7 +2529,7 @@
       "pos": 3,
       "equipo": "Red Bull",
       "detalle": "Austrian",
-      "pts": "382",
+      "pts": "415",
       "g": "3",
       "color": "#00327D",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -2530,8 +2540,8 @@
       "pos": 4,
       "equipo": "McLaren",
       "detalle": "British",
-      "pts": "365",
-      "g": "2",
+      "pts": "398",
+      "g": "3",
       "color": "#FF8700",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
       "logo": null,
@@ -2541,7 +2551,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "108",
+      "pts": "112",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2574,7 +2584,7 @@
       "pos": 8,
       "equipo": "Audi",
       "detalle": "German",
-      "pts": "27",
+      "pts": "28",
       "g": "0",
       "color": "#FF2D00",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -2619,10 +2629,24 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "São Paulo Grand Prix LIVE! F1 Brazil race updates, commentary and results",
-     "resumen": "Lando Norris is aiming for back-to-back victories at the São Paulo Grand Prix, and you can follow live updates on ESPN.",
-     "fecha": "2026-11-08T16:39:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742984_1296x729_16-9.jpg",
+     "titulo": "Lando Norris holds off Max Verstappen to win São Paulo Grand Prix",
+     "resumen": "Lando Norris won the São Paulo Grand Prix after new world champion Kimi Antonelli spun out of the lead in slippery conditions at Interlagos.",
+     "fecha": "2026-11-08T20:06:15Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743116_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389075/lando-norris-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Mercedes completes the double with constructors' title at São Paulo Grand Prix",
+     "resumen": "Mercedes clinched the 2026 Formula 1 constructors' championship at the São Paulo Grand Prix, completing a clean sweep of both titles this year.",
+     "fecha": "2026-11-08T19:51:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743123_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389085/mercedes-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "São Paulo Grand Prix results: Lando Norris takes third win this season in upgraded McLaren - as it happened",
+     "resumen": "Lando Norris has won the São Paulo Grand Prix, and you can follow live updates on ESPN.",
+     "fecha": "2026-11-08T19:44:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743114_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389160/sao-paulo-grand-prix-2026-live-updates-results-analysis-commentary"
     },
     {
@@ -2645,20 +2669,6 @@
      "fecha": "2026-11-08T08:07:05Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
-    },
-    {
-     "titulo": "Fernando Alonso was dreaming of top-five finish in rainy São Paulo qualifying",
-     "resumen": "Fernando Alonso said he was briefly dreaming of giving Aston Martin a top-five qualifying finish in Brazil as the rain was at its heaviest on Saturday.",
-     "fecha": "2026-11-07T23:04:16Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742652_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389066/fernando-alonso-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Charles Leclerc and Lewis Hamilton Ferrari tensions a 'closed chapter'",
-     "resumen": "Holding his newborn daughter in his arms helped Charles Leclerc forget all about his fallout with Lewis Hamilton at the Mexico City Grand Prix, something the Ferrari teammates agree is a \"closed chapter.\"",
-     "fecha": "2026-11-07T23:00:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742641_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389063/lewis-hamilton-charles-leclerc-sao-paulo-grand-prix-brazil-formula-1"
     }
    ],
    "resultados": null,
