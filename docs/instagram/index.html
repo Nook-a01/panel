@@ -190,12 +190,29 @@ async function IGPanelPro(){
   var uid=gc('ds_user_id'), csrf=gc('csrftoken');
   if(!uid){ alert('No encuentro tu sesión. Iniciá sesión en Instagram y reintentá.'); return; }
   var APPID='936619743392459';
-  var headers={'x-ig-app-id':APPID}; if(csrf) headers['x-csrftoken']=csrf;
+  // Instagram ahora valida la sesión web con X-Web-Session-ID y el claim de
+  // la pestaña. Se construyen con las mismas piezas que usa la web oficial.
+  function randomSessionPart(){ return Math.floor(Math.random()*2176782336).toString(36).padStart(6,'0'); }
+  function webSessionId(){
+    var sid='',tab='';
+    try{
+      var p=(localStorage.getItem('Session')||'').split(':');
+      if(/^[0-9a-z]{6}$/.test(p[0]||'') && Number(p[1])>Date.now()) sid=p[0];
+    }catch(e){}
+    try{
+      tab=sessionStorage.getItem('TabId')||'';
+      if(!/^[0-9a-z]{6}$/.test(tab)){ tab=randomSessionPart(); sessionStorage.setItem('TabId',tab); }
+    }catch(e){}
+    return (sid||'')+':'+(tab||'')+':'+randomSessionPart();
+  }
+  var wwwClaim=null;
+  try{ wwwClaim=sessionStorage.getItem('www-claim-v2'); }catch(e){}
+  var headers={'x-ig-app-id':APPID,'x-asbd-id':'359341','x-web-session-id':webSessionId(),'x-ig-www-claim':wwwClaim||'0'};
+  if(csrf) headers['x-csrftoken']=csrf;
   // Instagram exige en las ESCRITURAS (dejar de seguir) un token 'www-claim' que
   // manda en un encabezado de respuesta de las LECTURAS. Lo capturamos de cualquier
   // respuesta y lo reenviamos al dejar de seguir; sin esto, la baja suele fallar.
-  var wwwClaim=null;
-  function capClaim(r){ try{ var c=r&&r.headers&&r.headers.get('x-ig-set-www-claim'); if(c) wwwClaim=c; }catch(e){} }
+  function capClaim(r){ try{ var c=r&&r.headers&&r.headers.get('x-ig-set-www-claim'); if(c){ wwwClaim=c; headers['x-ig-www-claim']=c; sessionStorage.setItem('www-claim-v2',c); } }catch(e){} }
   var QUERY_HASH='3dec7e2c57367ef3da3d987d89f9dbc8'; // edge_follow: lista de seguidos CON el dato follows_viewer
 
   var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms);});};
@@ -1513,18 +1530,13 @@ async function IGPanelPro(){
 
   async function unfollowOne(item){
     try{
-      // IMPORTANTE: se usa el endpoint WEB de Instagram, no el de la app móvil.
-      //   web/friendships/{id}/unfollow/  → responde {status:'ok'}  ✅
-      //   friendships/destroy/{id}/       → devuelve el HTML de la app (muerto para web) ❌
-      // Diagnosticado en vivo contra la sesión real. Las escrituras piden csrf, app-id,
-      // marcarse como AJAX y el asbd-id; el cuerpo va vacío.
+      // Endpoint de amistad de la web; requiere los encabezados de sesión web
+      // actuales, que se preparan arriba para que el servidor reconozca la pestaña.
       var hdrs=Object.assign({
         'content-type':'application/x-www-form-urlencoded',
-        'x-requested-with':'XMLHttpRequest',
-        'x-asbd-id':'129477'
+        'x-requested-with':'XMLHttpRequest'
       },headers);
-      if(wwwClaim) hdrs['x-ig-www-claim']=wwwClaim;
-      var r=await fetchT('https://www.instagram.com/api/v1/web/friendships/'+item.id+'/unfollow/',{
+      var r=await fetchT('https://www.instagram.com/api/v1/friendships/destroy/'+item.id+'/',{
         method:'POST', headers:hdrs, credentials:'include', body:''
       });
       var txt=''; try{ txt=await r.text(); }catch(e){}
@@ -1536,7 +1548,7 @@ async function IGPanelPro(){
       // los pendientes deben conservarse para poder reanudar cuando la sesión
       // vuelva a responder correctamente.
       if(r.status===404 && /<html|<!doctype/i.test(txt) && /not-logged-in|login/i.test(txt)){
-        return {ok:false, blocked:true, note:'Instagram devolvió una página de sesión (HTTP 404). La selección quedó guardada; recargá Instagram e iniciá sesión de nuevo antes de reanudar'};
+        return {ok:false, blocked:true, note:'Instagram rechazó la solicitud de baja (HTTP 404). La selección sigue guardada; no se avanzó la cola'};
       }
       if(r.status===429 || (j&&j.spam) || (j&&(j.status==='fail'||j.feedback_required))){ return {ok:false, blocked:true, note:'Instagram limitó/bloqueó la acción — pará un rato'}; }
       // Motivo real, para poder diagnosticar en vez de "fallo desconocido".

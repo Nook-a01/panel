@@ -19,9 +19,24 @@ var gc=function(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)')
 var uid=gc('ds_user_id'), csrf=gc('csrftoken');
 if(!uid){ alert('No encuentro tu sesión. Iniciá sesión en Instagram y reintentá.'); return; }
 var APPID='936619743392459';
-var headers={'x-ig-app-id':APPID}; if(csrf) headers['x-csrftoken']=csrf;
+function randomSessionPart(){ return Math.floor(Math.random()*2176782336).toString(36).padStart(6,'0'); }
+function webSessionId(){
+var sid='',tab='';
+try{
+var p=(localStorage.getItem('Session')||'').split(':');
+if(/^[0-9a-z]{6}$/.test(p[0]||'') && Number(p[1])>Date.now()) sid=p[0];
+}catch(e){}
+try{
+tab=sessionStorage.getItem('TabId')||'';
+if(!/^[0-9a-z]{6}$/.test(tab)){ tab=randomSessionPart(); sessionStorage.setItem('TabId',tab); }
+}catch(e){}
+return (sid||'')+':'+(tab||'')+':'+randomSessionPart();
+}
 var wwwClaim=null;
-function capClaim(r){ try{ var c=r&&r.headers&&r.headers.get('x-ig-set-www-claim'); if(c) wwwClaim=c; }catch(e){} }
+try{ wwwClaim=sessionStorage.getItem('www-claim-v2'); }catch(e){}
+var headers={'x-ig-app-id':APPID,'x-asbd-id':'359341','x-web-session-id':webSessionId(),'x-ig-www-claim':wwwClaim||'0'};
+if(csrf) headers['x-csrftoken']=csrf;
+function capClaim(r){ try{ var c=r&&r.headers&&r.headers.get('x-ig-set-www-claim'); if(c){ wwwClaim=c; headers['x-ig-www-claim']=c; sessionStorage.setItem('www-claim-v2',c); } }catch(e){} }
 var QUERY_HASH='3dec7e2c57367ef3da3d987d89f9dbc8'; // edge_follow: lista de seguidos CON el dato follows_viewer
 var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms);});};
 function fetchT(url,opts,ms){
@@ -1114,11 +1129,9 @@ async function unfollowOne(item){
 try{
 var hdrs=Object.assign({
 'content-type':'application/x-www-form-urlencoded',
-'x-requested-with':'XMLHttpRequest',
-'x-asbd-id':'129477'
+'x-requested-with':'XMLHttpRequest'
 },headers);
-if(wwwClaim) hdrs['x-ig-www-claim']=wwwClaim;
-var r=await fetchT('https://www.instagram.com/api/v1/web/friendships/'+item.id+'/unfollow/',{
+var r=await fetchT('https://www.instagram.com/api/v1/friendships/destroy/'+item.id+'/',{
 method:'POST', headers:hdrs, credentials:'include', body:''
 });
 var txt=''; try{ txt=await r.text(); }catch(e){}
@@ -1126,7 +1139,7 @@ var j=null; try{ j=JSON.parse(txt); }catch(e){}
 if(r.ok && j && j.status==='ok'){ return {ok:true}; }
 if(r.status===401 || r.status===403){ return {ok:false, blocked:true, note:'Tu sesión venció — iniciá sesión de nuevo en instagram.com'}; }
 if(r.status===404 && /<html|<!doctype/i.test(txt) && /not-logged-in|login/i.test(txt)){
-return {ok:false, blocked:true, note:'Instagram devolvió una página de sesión (HTTP 404). La selección quedó guardada; recargá Instagram e iniciá sesión de nuevo antes de reanudar'};
+return {ok:false, blocked:true, note:'Instagram rechazó la solicitud de baja (HTTP 404). La selección sigue guardada; no se avanzó la cola'};
 }
 if(r.status===429 || (j&&j.spam) || (j&&(j.status==='fail'||j.feedback_required))){ return {ok:false, blocked:true, note:'Instagram limitó/bloqueó la acción — pará un rato'}; }
 var detalle = (j&&(j.message||j.status)) ? String(j.message||j.status) : (txt?txt.slice(0,80):'sin respuesta');
