@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T00:52:10.664Z",
+ "actualizado": "2026-11-09T07:56:49.027Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -946,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1222,8 +1226,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1246,11 +1251,19 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
+    {
+     "titulo": "Tony Popovic waves off links to Crystal Palace gig",
+     "resumen": "Australia coach Tony Popovic has waved off links to the Crystal Palace job as \"speculation\", and while providing no assurances he'll remain beyond his expiring contract, confirmed that talks with Football Australia have commenced around an extension.",
+     "fecha": "2026-11-09T07:15:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743457_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50430228/tony-popovic-waves-links-crystal-palace-gig"
+    },
     {
      "titulo": "Messi tracker: Goals, assists, key moments in 2026",
      "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
@@ -1320,13 +1333,6 @@
      "fecha": "2026-10-28T08:45:20Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1028/dm_261028_Alonso_Joao_Pedro_not_ready_for_the_next_games/dm_261028_Alonso_Joao_Pedro_not_ready_for_the_next_games.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50305840/joao-pedro-not-ready-next-games"
-    },
-    {
-     "titulo": "Socceroos committed to Qatar, Jordan friendlies amid Middle East unrest",
-     "resumen": "The Socceroos are set to forge ahead with plans to play friendlies in the Middle East next month in the face of the increasingly volatile and unpredictable conflict in the region.",
-     "fecha": "2026-10-28T04:42:19Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1028/r1737375_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50304339/socceroos-committed-qatar-jordan-friendlies-amid-middle-east-unrest"
     }
    ],
    "resultados": null,
@@ -1563,8 +1569,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -2613,18 +2620,18 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Wet weather mastery of Norris, Verstappen make Brazil F1's must-see race",
-     "resumen": "Max Verstappen is known for excelling in the rain, but in winning Sunday's wet Brazilian Grand Prix, Lando Norris proved he deserves accolades too.",
-     "fecha": "2026-11-09T00:21:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743343_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50427335/wet-weather-mastery-lando-norris-max-verstappen-make-sao-paulo-brazil-f1-see-race"
+     "titulo": "All-time F1 drivers' and constructors' championship winners",
+     "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
+     "fecha": "2026-11-09T03:00:07Z",
+     "imagen": "https://a.espncdn.com/photo/2022/1009/r1073006_608x342_16-9.jpg",
+     "link": "https://www.espn.com/auto/story/_/id/42230928/all-f1-drivers-constructors-championship-winners"
     },
     {
-     "titulo": "Mercedes completes the double with constructors' title at São Paulo Grand Prix",
-     "resumen": "Mercedes clinched the 2026 Formula 1 constructors' championship at the São Paulo Grand Prix, completing a clean sweep of both titles this year.",
-     "fecha": "2026-11-08T23:05:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743123_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389085/mercedes-sao-paulo-grand-prix-brazil-formula-1"
+     "titulo": "Wet weather mastery by Norris, Verstappen makes Brazil F1's must-see race",
+     "resumen": "Max Verstappen is known for excelling in the rain, but in winning Sunday's wet Brazilian Grand Prix, Lando Norris proved he deserves accolades, too.",
+     "fecha": "2026-11-09T01:59:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743343_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50427335/wet-weather-mastery-lando-norris-max-verstappen-make-sao-paulo-brazil-f1-see-race"
     },
     {
      "titulo": "Max Verstappen's Red Bull a 'disaster to drive' despite front-row finish",
@@ -2670,6 +2677,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Trump says White House press secretary offer to UFC's White was a joke",
+     "resumen": "President Donald Trump said he \"was only kidding\" when he announced he had offered the White House press secretary job to UFC CEO Dana White.",
+     "fecha": "2026-11-09T02:05:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/ufc/story/_/id/50427992/trump-says-press-secretary-offer-ufc-white-was-joke"
+    },
+    {
      "titulo": "Conor McGregor insists it has to be Max Holloway for final UFC fight",
      "resumen": "Conor McGregor has again insisted he only wants Max Holloway for his final UFC fight.",
      "fecha": "2026-11-08T15:27:14Z",
@@ -2703,13 +2717,6 @@
      "fecha": "2026-11-08T02:28:12Z",
      "imagen": "https://a.espncdn.com/photo/2026/0605/mma_dana-white-house_16x9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/48995260/donald-trump-dana-white-forged-friendship-combat-sports"
-    },
-    {
-     "titulo": "Trump offers press secretary role to Dana White; UFC boss to meet with president",
-     "resumen": "Donald Trump said he offered the job of White House press secretary to UFC boss Dana White, who said he plans to meet with the president Monday.",
-     "fecha": "2026-11-08T00:54:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
-     "link": "https://www.espn.com/espn/story/_/id/50412085/trump-offers-press-secretary-role-ufc-boss-dana-white"
     }
    ],
    "resultados": [

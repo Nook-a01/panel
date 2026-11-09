@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T21:08:59.920Z",
+ "actualizado": "2026-11-09T07:56:49.027Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,8 +11,8 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 9,
-   "proximos": 2
+   "total": 10,
+   "proximos": 3
   },
   {
    "id": "argentina",
@@ -35,8 +35,8 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 21,
-   "proximos": 14
+   "total": 24,
+   "proximos": 17
   },
   {
    "id": "pumas",
@@ -837,6 +837,28 @@
    "marcador": null
   },
   {
+   "id": "espn-401933739",
+   "miLado": "local",
+   "idEspn": "401933739",
+   "liga": "usa.1",
+   "ruta": "soccer",
+   "feedId": "intermiami",
+   "feedLabel": "Inter Miami",
+   "sport": "futbol",
+   "emoji": "🩷",
+   "titulo": "Inter Miami CF vs Columbus Crew",
+   "inicio": "2026-11-21T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "MLS",
+   "sede": "Nu Stadium",
+   "local": "Inter Miami CF",
+   "visitante": "Columbus Crew",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
    "sport": "f1",
@@ -856,6 +878,50 @@
    "sesion": "Carrera",
    "titulo": "GP Las Vegas",
    "inicio": "2026-11-22T04:00:00.000Z"
+  },
+  {
+   "id": "espn-401933757",
+   "miLado": "local",
+   "idEspn": "401933757",
+   "liga": "arg.1",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Boca Juniors vs Independiente Rivadavia",
+   "inicio": "2026-11-22T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "Argentine Liga Profesional de Fútbol",
+   "sede": "",
+   "local": "Boca Juniors",
+   "visitante": "Independiente Rivadavia",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-401933727",
+   "miLado": "visitante",
+   "idEspn": "401933727",
+   "liga": "usa.1",
+   "ruta": "soccer",
+   "feedId": "intermiami",
+   "feedLabel": "Inter Miami",
+   "sport": "futbol",
+   "emoji": "🩷",
+   "titulo": "Columbus Crew vs Inter Miami CF",
+   "inicio": "2026-11-28T01:00Z",
+   "horaConfirmada": true,
+   "competicion": "MLS",
+   "sede": "ScottsMiracle-Gro Field",
+   "local": "Columbus Crew",
+   "visitante": "Inter Miami CF",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+   "finalizado": false,
+   "marcador": null
   },
   {
    "feedId": "f1",
@@ -898,6 +964,28 @@
    "sesion": "Carrera",
    "titulo": "GP Qatar",
    "inicio": "2026-11-29T16:00:00.000Z"
+  },
+  {
+   "id": "espn-401933720",
+   "miLado": "local",
+   "idEspn": "401933720",
+   "liga": "usa.1",
+   "ruta": "soccer",
+   "feedId": "intermiami",
+   "feedLabel": "Inter Miami",
+   "sport": "futbol",
+   "emoji": "🩷",
+   "titulo": "Inter Miami CF vs Columbus Crew",
+   "inicio": "2026-12-02T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "MLS",
+   "sede": "Nu Stadium",
+   "local": "Inter Miami CF",
+   "visitante": "Columbus Crew",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+   "finalizado": false,
+   "marcador": null
   },
   {
    "feedId": "f1",
