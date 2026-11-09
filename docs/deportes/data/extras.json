@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T07:56:49.027Z",
+ "actualizado": "2026-11-09T18:46:02.267Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -946,9 +944,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1008,8 +1005,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1032,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1045,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1251,9 +1247,8 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     }
    ],
    "noticias": [
@@ -1594,8 +1589,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1606,8 +1602,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1690,8 +1687,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1936,18 +1934,25 @@
    ],
    "noticias": [
     {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-11-08T10:48:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+     "titulo": "'The World Cup never really ended': U.S.-based betting sees rise in wagering on MLS, European soccer",
+     "resumen": "Before the World Cup, many wondered if Americans would stick around afterward. Betting data says yes, they did.",
+     "fecha": "2026-11-09T17:31:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742577_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/betting/story/_/id/50411508/united-states-soccer-betting-2026-world-cup-premier-mls"
     },
     {
-     "titulo": "Lionel Messi makes history as 1st back-to-back MLS Golden Boot winner",
-     "resumen": "Lionel Messi has become the first player to win back-to-back MLS Golden Boot awards after the Inter Miami forward finished the regular season with 26 goals.",
-     "fecha": "2026-11-08T02:55:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742766_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50411686/lionel-messi-mls-golden-boot-2026-winner-inter-miami"
+     "titulo": "Pierre brothers keep family rivalry alive for USMNT-Haiti Nations League QFs",
+     "resumen": "USMNT's Neil Pierre could potentially see minutes against Haiti in this month's Concacaf Nations League quarterfinals.",
+     "fecha": "2026-11-09T17:14:39Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743576_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50433219/pierre-brothers-face-usmnt-haiti-nations-league-qfs"
+    },
+    {
+     "titulo": "Every eliminated MLS team: What worked and what didn't in 2026, what needs improving in 2027?",
+     "resumen": "After every team in MLS is eliminated from postseason contention, ESPN details the best and worst of their seasons, and their priorities for 2027.",
+     "fecha": "2026-11-09T14:07:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742062_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50388883/every-eliminated-mls-team-worked-didnt-2026-needs-improving-2027"
     },
     {
      "titulo": "LA Galaxy miss playoffs again as Real Salt Lake gets final berth",
@@ -1969,13 +1974,6 @@
      "fecha": "2026-11-08T02:35:02Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761942.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/761942"
-    },
-    {
-     "titulo": "Cavan, Quinn Sullivan both score as Philadelphia Union soar into playoffs",
-     "resumen": "Cavan and Quinn Sullivan became just the third pair of brothers to score for the same club in an MLS match.",
-     "fecha": "2026-11-08T00:33:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742729_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50413971/cavan-quinn-sullivan-philadelphia-union-mls-usa"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2620,6 +2618,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Toto Wolff: Mercedes face fierce 2027 battle after winning constructors' title",
+     "resumen": "Mercedes team principal Toto Wolff has played down the suggestion his team is about to embark on another period of dominance in Formula 1, and believes the battle for the 2027 title has already started.",
+     "fecha": "2026-11-09T10:45:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743473_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50431168/toto-wolff-mercedes-f1-2027"
+    },
+    {
+     "titulo": "Oscar Piastri splits from Mark Webber's management after eventful seven years",
+     "resumen": "McLaren driver Oscar Piastri has split with the management team headed by ex-Formula 1 driver Mark Webber.",
+     "fecha": "2026-11-09T10:22:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743471_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50431169/oscar-piastri-mark-webber-f1-mclaren"
+    },
+    {
      "titulo": "All-time F1 drivers' and constructors' championship winners",
      "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
      "fecha": "2026-11-09T03:00:07Z",
@@ -2641,25 +2653,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50389072/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
     },
     {
-     "titulo": "Lando Norris praises McLaren for win, celebrates mastering São Paulo conditions",
-     "resumen": "Lando Norris hailed one of his best wins after conquering the weather in São Paulo a week after losing his status as world champion.",
-     "fecha": "2026-11-08T21:49:15Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743208_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389084/lando-norris-mclaren-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
      "titulo": "Lando Norris calls Brazil win one of his best",
      "resumen": "Lando Norris calls Brazil win one of his best",
      "fecha": "2026-11-08T21:48:00Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1108/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50425251/lando-norris-calls-brazil-win-one-best"
-    },
-    {
-     "titulo": "São Paulo Grand Prix results: Lando Norris takes third win this season in upgraded McLaren - as it happened",
-     "resumen": "Lando Norris has won the São Paulo Grand Prix, and you can follow live updates on ESPN.",
-     "fecha": "2026-11-08T19:44:11Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743114_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389160/sao-paulo-grand-prix-2026-live-updates-results-analysis-commentary"
     }
    ],
    "resultados": null,
@@ -2712,11 +2710,11 @@
      "link": "https://www.espn.com/video/clip/_/id/50416860/walker-wins-ko-third-round"
     },
     {
-     "titulo": "A timeline of how Donald Trump, Dana White forged friendship through the fights",
-     "resumen": "Donald Trump and Dana White's friendship is on display cageside, on political stages and at the White House.",
-     "fecha": "2026-11-08T02:28:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0605/mma_dana-white-house_16x9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/48995260/donald-trump-dana-white-forged-friendship-combat-sports"
+     "titulo": "Trump offers press secretary role to Dana White; UFC boss to meet with president",
+     "resumen": "Donald Trump said he offered the job of White House press secretary to UFC boss Dana White, who said he plans to meet with the president Monday.",
+     "fecha": "2026-11-08T00:54:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50412085/trump-offers-press-secretary-role-ufc-boss-dana-white"
     }
    ],
    "resultados": [
