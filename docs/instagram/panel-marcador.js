@@ -1074,7 +1074,19 @@ renderQueueUI(queueArea);
 }
 var BATCH_SIZE=5, BATCH_GAP_MS=5*60*1000;
 var timerHandle=null, qBusy=false;
-function loadQ(){ return lsGet(LS.q,null); }
+function loadQ(){
+var q=lsGet(LS.q,null);
+if(q && q.status==='paused' && Array.isArray(q.queue) && Array.isArray(q.log) && Number.isInteger(q.index)){
+var retroceder=0;
+while(retroceder<q.index && retroceder<q.log.length){
+var item=q.queue[q.index-1-retroceder], registro=q.log[retroceder];
+if(!item || !registro || registro.ok || item.username!==registro.u || !/HTTP 404/i.test(registro.note||'') || !/not-logged-in/i.test(registro.note||'')) break;
+retroceder++;
+}
+if(retroceder){ q.index-=retroceder; lsSet(LS.q,q); }
+}
+return q;
+}
 function saveQ(q){ lsSet(LS.q,q); }
 function openConfirm(){
 var ids=Array.from(state.selected);
@@ -1113,6 +1125,9 @@ var txt=''; try{ txt=await r.text(); }catch(e){}
 var j=null; try{ j=JSON.parse(txt); }catch(e){}
 if(r.ok && j && j.status==='ok'){ return {ok:true}; }
 if(r.status===401 || r.status===403){ return {ok:false, blocked:true, note:'Tu sesión venció — iniciá sesión de nuevo en instagram.com'}; }
+if(r.status===404 && /<html|<!doctype/i.test(txt) && /not-logged-in|login/i.test(txt)){
+return {ok:false, blocked:true, note:'Instagram devolvió una página de sesión (HTTP 404). La selección quedó guardada; recargá Instagram e iniciá sesión de nuevo antes de reanudar'};
+}
 if(r.status===429 || (j&&j.spam) || (j&&(j.status==='fail'||j.feedback_required))){ return {ok:false, blocked:true, note:'Instagram limitó/bloqueó la acción — pará un rato'}; }
 var detalle = (j&&(j.message||j.status)) ? String(j.message||j.status) : (txt?txt.slice(0,80):'sin respuesta');
 return {ok:false, blocked:false, note:'Instagram respondió HTTP '+r.status+' ('+detalle+')'};
