@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-08T21:08:59.920Z",
+ "actualizado": "2026-11-09T00:52:10.664Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -292,9 +292,8 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "290542",
@@ -425,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -630,9 +628,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -949,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -974,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1035,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1048,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1073,9 +1066,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1086,9 +1078,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1171,9 +1162,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1232,9 +1222,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1574,9 +1563,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1599,9 +1587,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1612,9 +1599,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1625,9 +1611,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1686,9 +1671,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -2170,7 +2154,7 @@
       "equipo": "Charles Leclerc",
       "abrev": "LEC",
       "detalle": "Ferrari",
-      "pts": "251",
+      "pts": "249",
       "g": "1",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
       "nacionalidad": "Monegasque",
@@ -2234,7 +2218,7 @@
       "equipo": "Liam Lawson",
       "abrev": "LAW",
       "detalle": "RB F1 Team",
-      "pts": "87",
+      "pts": "89",
       "g": "0",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
       "nacionalidad": "New Zealander",
@@ -2518,7 +2502,7 @@
       "pos": 2,
       "equipo": "Ferrari",
       "detalle": "Italian",
-      "pts": "512",
+      "pts": "510",
       "g": "2",
       "color": "#DC0000",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2551,7 +2535,7 @@
       "pos": 5,
       "equipo": "RB F1 Team",
       "detalle": "Italian",
-      "pts": "112",
+      "pts": "114",
       "g": "0",
       "color": "#6692FF",
       "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
@@ -2629,18 +2613,39 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Lando Norris holds off Max Verstappen to win São Paulo Grand Prix",
-     "resumen": "Lando Norris won the São Paulo Grand Prix after new world champion Kimi Antonelli spun out of the lead in slippery conditions at Interlagos.",
-     "fecha": "2026-11-08T20:06:15Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743116_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389075/lando-norris-sao-paulo-grand-prix-brazil-formula-1"
+     "titulo": "Wet weather mastery of Norris, Verstappen make Brazil F1's must-see race",
+     "resumen": "Max Verstappen is known for excelling in the rain, but in winning Sunday's wet Brazilian Grand Prix, Lando Norris proved he deserves accolades too.",
+     "fecha": "2026-11-09T00:21:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743343_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50427335/wet-weather-mastery-lando-norris-max-verstappen-make-sao-paulo-brazil-f1-see-race"
     },
     {
      "titulo": "Mercedes completes the double with constructors' title at São Paulo Grand Prix",
      "resumen": "Mercedes clinched the 2026 Formula 1 constructors' championship at the São Paulo Grand Prix, completing a clean sweep of both titles this year.",
-     "fecha": "2026-11-08T19:51:09Z",
+     "fecha": "2026-11-08T23:05:26Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1743123_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389085/mercedes-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Max Verstappen's Red Bull a 'disaster to drive' despite front-row finish",
+     "resumen": "Despite racing from 21st on the grid to second at the checkered flag, Max Verstappen said he is convinced more was possible at the São Paulo Grand Prix had his Red Bull not been \"a disaster to drive.\"",
+     "fecha": "2026-11-08T22:22:26Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743172_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389072/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Lando Norris praises McLaren for win, celebrates mastering São Paulo conditions",
+     "resumen": "Lando Norris hailed one of his best wins after conquering the weather in São Paulo a week after losing his status as world champion.",
+     "fecha": "2026-11-08T21:49:15Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743208_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389084/lando-norris-mclaren-sao-paulo-grand-prix-brazil-formula-1"
+    },
+    {
+     "titulo": "Lando Norris calls Brazil win one of his best",
+     "resumen": "Lando Norris calls Brazil win one of his best",
+     "fecha": "2026-11-08T21:48:00Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1108/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50425251/lando-norris-calls-brazil-win-one-best"
     },
     {
      "titulo": "São Paulo Grand Prix results: Lando Norris takes third win this season in upgraded McLaren - as it happened",
@@ -2648,27 +2653,6 @@
      "fecha": "2026-11-08T19:44:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1743114_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389160/sao-paulo-grand-prix-2026-live-updates-results-analysis-commentary"
-    },
-    {
-     "titulo": "São Paulo Grand Prix 2026: Race in Brazil start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Brazil for the São Paulo Grand Prix, a week after Kimi Antonelli was crowned world champion.",
-     "fecha": "2026-11-08T08:08:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1740129_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50321090/sao-paulo-grand-prix-2026-brazil-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Kimi Antonelli is F1 champion. But why didn't he get his trophy in Mexico City?",
-     "resumen": "Kimi Antonelli is F1 world champion, but he won't get his trophy until December. Why does the sport still deny its champions their crowning moment?",
-     "fecha": "2026-11-08T08:07:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739986_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50354613/kimi-antonelli-f1-champion-why-trophy-2026"
-    },
-    {
-     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
-     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
-     "fecha": "2026-11-08T08:07:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
     }
    ],
    "resultados": null,
