@@ -1066,6 +1066,18 @@ t.onclick=function(){ state.tab=kv[0]; state.page=0; state.selected.clear(); ren
 wlTabs.appendChild(t);
 });
 body.appendChild(wlTabs);
+if(state.tab==='wl' && state.whitelist.size){
+var vaciarWL=document.createElement('button'); vaciarWL.type='button';
+vaciarWL.className='igpp-btn'; vaciarWL.style.cssText+=';margin-bottom:10px';
+vaciarWL.textContent='Vaciar lista blanca ('+state.whitelist.size+')';
+vaciarWL.onclick=function(){
+if(!confirm('Sacar las '+state.whitelist.size+' cuentas de la lista blanca? Dejan de estar protegidas y vuelven a aparecer en Normal. No se deja de seguir a nadie.')) return;
+state.whitelist.clear(); saveWL(state.whitelist);
+state.selected.clear(); state.page=0; state.tab='nonwl';
+renderAnalysisTab();
+};
+body.appendChild(vaciarWL);
+}
 var filt=document.createElement('div'); filt.style.cssText='display:flex;gap:9px;flex-wrap:wrap;margin-bottom:10px';
 [['nonFollowers','No te siguen'],['followers','Te siguen'],['verified','Verificados'],['private','Privados']].forEach(function(fd){
 var lab=document.createElement('label'); lab.className='igpp-flab';
