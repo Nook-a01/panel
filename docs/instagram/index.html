@@ -1551,6 +1551,13 @@ async function IGPanelPro(){
         return {ok:false, blocked:true, note:'Instagram rechazó la solicitud de baja (HTTP 404). La selección sigue guardada; no se avanzó la cola'};
       }
       if(r.status===429 || (j&&j.spam) || (j&&(j.status==='fail'||j.feedback_required))){ return {ok:false, blocked:true, note:'Instagram limitó/bloqueó la acción — pará un rato'}; }
+      // Instagram devolvió una PÁGINA (HTML) en vez de confirmar en JSON (típico con
+      // 200): es su freno blando a las bajas, que aparece al dar de baja muchas
+      // seguidas. No se procesó la baja; se pausa la cola y se avisa — insistir solo
+      // gatilla más bloqueo. Lo escaneado/hecho hasta acá queda guardado.
+      if(/^\s*<!doctype|^\s*<html/i.test(txt) || (r.ok && !j)){
+        return {ok:false, blocked:true, note:'Instagram está frenando las bajas: te devuelve una página en vez de confirmar. Pasa cuando das de baja muchas seguidas. Esperá unas horas o un par de días y reintentá — lo hecho hasta acá quedó guardado.'};
+      }
       // Motivo real, para poder diagnosticar en vez de "fallo desconocido".
       var detalle = (j&&(j.message||j.status)) ? String(j.message||j.status) : (txt?txt.slice(0,80):'sin respuesta');
       return {ok:false, blocked:false, note:'Instagram respondió HTTP '+r.status+' ('+detalle+')'};
