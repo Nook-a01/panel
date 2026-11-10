@@ -2515,15 +2515,18 @@ function renderDeuda(){
 
   let saldo = Number(p.deuda)||0;
   let ym = p.desde || ymNow();
-  const filas = []; let saldaEn = null, guard = 0;
+  const filas = []; let saldaEn = null, guard = 0, ceros = 0;
   while(saldo > 0 && guard++ < 60){
-    const libre = Math.max(0, sueldo + mensual - costo - ig - extraDe(ym));
+    const crudo = sueldo + mensual - costo - ig - extraDe(ym);
+    const libre = Math.max(0, crudo);
     const desc = Math.min(libre, saldo);
     saldo = Math.round((saldo - desc) * 100) / 100;
-    filas.push({ ym, pasa: mensual - desc, desc, saldo });
+    filas.push({ ym, pasa: mensual - desc, desc, saldo, corto: crudo < 0 ? crudo : 0 });
     if(saldo <= 0) saldaEn = ym;
     ym = ymAdd(ym, 1);
-    if(libre <= 0) break;                       // no alcanza: no seguir al infinito
+    // Un mes sin margen no corta el plan (puede ser sólo el de la cuota), pero
+    // tres seguidos quieren decir que con este presupuesto no se salda nunca.
+    if(desc <= 0){ if(++ceros >= 3) break; } else ceros = 0;
   }
 
   $('#deudaSaldo').textContent = money(Number(p.deuda)||0);
@@ -2549,7 +2552,8 @@ function renderDeuda(){
     +'<p class="frase tenue-t" style="margin:8px 0 0">Eso es lo que te queda cada mes una vez saldada la deuda: para ahorrar, subir Instagram o empezar la lista de cosas de casa.</p>';
 
   $('#deudaTabla tbody').innerHTML = filas.map(f=>
-      '<tr><td>'+esc(ymLabel(f.ym))+'</td>'
+      '<tr'+(f.corto?' style="opacity:.85"':'')+'><td>'+esc(ymLabel(f.ym))
+      +(f.corto ? '<br><span class="pill p-pend">te faltan '+money(-f.corto)+'</span>' : '')+'</td>'
       +'<td class="r money in">'+money(f.pasa)+'</td>'
       +'<td class="r money out">−'+money(f.desc)+'</td>'
       +'<td class="r money">'+money(Math.max(0, f.saldo))+'</td></tr>'
