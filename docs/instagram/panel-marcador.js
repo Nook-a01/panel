@@ -718,7 +718,29 @@ function toast(msg){
 var t=document.createElement('div'); t.className='igpp-toast'; t.textContent=msg;
 document.body.appendChild(t); setTimeout(function(){t.remove();},2200);
 }
-var cache=lsGet(LS.cache,null); // {users:[], cursor:'', complete:bool, ts:number, total:number, mode:'gql'|'api'}
+function claveUsuario(u){ return String((u&&u.id)||'') || String((u&&u.username)||'').toLowerCase(); }
+function sumarUsuarios(lista, nuevos){
+var vistos={}, i;
+for(i=0;i<lista.length;i++) vistos[claveUsuario(lista[i])]=1;
+for(i=0;i<nuevos.length;i++){
+var k=claveUsuario(nuevos[i]);
+if(k && !vistos[k]){ vistos[k]=1; lista.push(nuevos[i]); }
+}
+return lista;
+}
+function sinRepetidos(lista){
+var vistos={}, out=[];
+for(var i=0;i<lista.length;i++){ var k=claveUsuario(lista[i]); if(k && !vistos[k]){ vistos[k]=1; out.push(lista[i]); } }
+return out;
+}
+function textosSinRepetir(lista){
+var vistos={}, out=[];
+for(var i=0;i<lista.length;i++){ var v=lista[i]; if(v && !vistos[v]){ vistos[v]=1; out.push(v); } }
+return out;
+}
+var cache=lsGet(LS.cache,null);
+if(cache&&cache.users&&cache.users.length) cache.users=sinRepetidos(cache.users);
+if(cache&&cache.apiFollowers&&cache.apiFollowers.length) cache.apiFollowers=textosSinRepetir(cache.apiFollowers); // {users:[], cursor:'', complete:bool, ts:number, total:number, mode:'gql'|'api'}
 var state={
 scanning:false, scanStatus:'', scanPct:0, scanErr:'',
 filters:{nonFollowers:true, followers:false, verified:true, private:true},
@@ -873,17 +895,17 @@ continue;
 }
 failStreak=0;
 if(cache.mode==='gql'){
-cache.users=cache.users.concat(got.users);
+cache.users=sumarUsuarios(cache.users, got.users);
 if(got.total) cache.total=got.total;
 cache.cursor=got.next;
 if(!got.next){ cache.complete=true; }
 } else {
 if(cache.apiPhase==='following'){
-cache.users=cache.users.concat(got.users);
+cache.users=sumarUsuarios(cache.users, got.users);
 cache.cursor=got.next;
 if(!got.next){ cache.apiPhase='followers'; cache.cursor=''; }
 } else {
-cache.apiFollowers=(cache.apiFollowers||[]).concat(got.users.map(function(u){return u.username.toLowerCase();}));
+cache.apiFollowers=textosSinRepetir((cache.apiFollowers||[]).concat(got.users.map(function(u){return u.username.toLowerCase();})));
 cache.cursor=got.next;
 if(!got.next){
 var fset={}; cache.apiFollowers.forEach(function(un){fset[un]=true;});
