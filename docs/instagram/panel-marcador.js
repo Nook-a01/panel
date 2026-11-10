@@ -37,6 +37,53 @@ try{ wwwClaim=sessionStorage.getItem('www-claim-v2'); }catch(e){}
 var headers={'x-ig-app-id':APPID,'x-asbd-id':'359341','x-web-session-id':webSessionId(),'x-ig-www-claim':wwwClaim||'0'};
 if(csrf) headers['x-csrftoken']=csrf;
 function capClaim(r){ try{ var c=r&&r.headers&&r.headers.get('x-ig-set-www-claim'); if(c){ wwwClaim=c; headers['x-ig-www-claim']=c; sessionStorage.setItem('www-claim-v2',c); } }catch(e){} }
+var DOC_UNFOLLOW='27789106940691111';
+function tokenDePagina(marca){
+try{
+var ss=document.scripts;
+for(var i=0;i<ss.length;i++){
+var t=ss[i].textContent; if(!t) continue;
+var a=t.indexOf(marca); if(a<0) continue;
+var b=t.indexOf('token',a); if(b<0) continue;
+var c=t.indexOf(':',b); if(c<0) continue;
+var q1=t.indexOf('"',c); if(q1<0) continue;
+var q2=t.indexOf('"',q1+1);
+if(q2>q1) return t.slice(q1+1,q2);
+}
+}catch(e){}
+return '';
+}
+function textoDePagina(clave){
+try{
+var ss=document.scripts;
+for(var i=0;i<ss.length;i++){
+var t=ss[i].textContent; if(!t) continue;
+var a=t.indexOf(clave); if(a<0) continue;
+var c=t.indexOf(':',a); if(c<0) continue;
+var q1=t.indexOf('"',c); if(q1<0) continue;
+var q2=t.indexOf('"',q1+1);
+if(q2>q1) return t.slice(q1+1,q2);
+}
+}catch(e){}
+return '';
+}
+var _rh=null;
+function rolloutHash(){
+if(_rh!==null) return _rh;
+_rh='';
+try{
+var ss=document.scripts;
+for(var i=0;i<ss.length;i++){
+var t=ss[i].textContent; if(!t) continue;
+var a=t.indexOf('rollout_hash'); if(a<0) continue;
+var c=t.indexOf(':',a); if(c<0) continue;
+var q1=t.indexOf('"',c); if(q1<0) continue;
+var q2=t.indexOf('"',q1+1);
+if(q2>q1){ _rh=t.slice(q1+1,q2); break; }
+}
+}catch(e){}
+return _rh;
+}
 var QUERY_HASH='3dec7e2c57367ef3da3d987d89f9dbc8'; // edge_follow: lista de seguidos CON el dato follows_viewer
 var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms);});};
 function fetchT(url,opts,ms){
@@ -1127,16 +1174,41 @@ function stopTimerLoop(){ if(timerHandle){ clearInterval(timerHandle); timerHand
 function refreshQueueUI(){ if(state.activeTab==='analysis'){ var c=document.getElementById('igpp-queue-area'); if(c) renderQueueUI(c); } }
 async function unfollowOne(item){
 try{
-var hdrs=Object.assign({
+var dtsg=tokenDePagina('DTSGInitialData')||tokenDePagina('dtsg');
+var lsd=tokenDePagina('LSD');
+var csrfTok=csrf||textoDePagina('csrf_token');
+var yo=uid||textoDePagina('USER_ID');
+if(!dtsg){
+return {ok:false, blocked:true, note:'No encontré el token de sesión de la página. Recargá instagram.com y volvé a abrir el panel'};
+}
+var jz=0; for(var ji=0;ji<dtsg.length;ji++) jz+=dtsg.charCodeAt(ji);
+var vars=JSON.stringify({target_user_id:String(item.id), container_module:'profile', nav_chain:''});
+var cuerpo='av='+encodeURIComponent(yo)+'&__d=www&__user=0&__a=1&__comet_req=7'+
+'&fb_dtsg='+encodeURIComponent(dtsg)+'&jazoest=2'+jz+
+'&lsd='+encodeURIComponent(lsd)+
+'&fb_api_caller_class=RelayModern'+
+'&fb_api_req_friendly_name=usePolarisUnfollowMutation'+
+'&variables='+encodeURIComponent(vars)+
+'&server_timestamps=true&doc_id='+DOC_UNFOLLOW;
+var r=await fetchT('https://www.instagram.com/api/graphql',{
+method:'POST', credentials:'include',
+headers:{
 'content-type':'application/x-www-form-urlencoded',
-'x-requested-with':'XMLHttpRequest'
-},headers);
-var r=await fetchT('https://www.instagram.com/api/v1/friendships/destroy/'+item.id+'/',{
-method:'POST', headers:hdrs, credentials:'include', body:''
+'x-csrftoken':csrfTok,
+'x-fb-lsd':lsd,
+'x-fb-friendly-name':'usePolarisUnfollowMutation',
+'x-ig-app-id':APPID
+},
+body:cuerpo
 });
 var txt=''; try{ txt=await r.text(); }catch(e){}
 var j=null; try{ j=JSON.parse(txt); }catch(e){}
-if(r.ok && j && j.status==='ok'){ return {ok:true}; }
+var hecho=j&&j.data&&j.data.xdt_destroy_friendship;
+if(r.ok && hecho && !(j.errors&&j.errors.length)){ return {ok:true}; }
+if(j&&j.errors&&j.errors.length){
+var emsg=String((j.errors[0]&&j.errors[0].message)||'rechazo sin detalle').slice(0,90);
+return {ok:false, blocked:false, note:'Instagram rechazó la baja: '+emsg};
+}
 if(r.status===401 || r.status===403){ return {ok:false, blocked:true, note:'Tu sesión venció — iniciá sesión de nuevo en instagram.com'}; }
 if(r.status===404 && /<html|<!doctype/i.test(txt) && /not-logged-in|login/i.test(txt)){
 return {ok:false, blocked:true, note:'Instagram rechazó la solicitud de baja (HTTP 404). La selección sigue guardada; no se avanzó la cola'};
