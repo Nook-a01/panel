@@ -1314,8 +1314,15 @@ async function IGPanelPro(){
       // Limpiar la lista blanca: sacar a quienes ya no seguís (no aparecen en el
       // escaneo completo de tus seguidos). Guarda anti-escaneo-corto: solo si la
       // cantidad leída es creíble, para no vaciarla por una lista incompleta.
+      // El guard de antes decia "si no hay total, poda igual". En el modo REST
+      // cache.total NUNCA se setea, asi que podaba siempre: un escaneo cortado por
+      // el limite de Instagram (630 de 850) borraba de la lista blanca a cuentas que
+      // SI seguis, y la lista se achicaba sola en cada reescaneo. Ahora se exige una
+      // referencia real de cuantos seguis; si no hay con que comparar, no se toca.
       var quitadosWL=0;
-      if(state.whitelist.size && (!cache.total || cache.users.length>=Math.floor(cache.total*0.9))){
+      var refSeguidos=(cache.total||0)||((state.counts&&state.counts.following)||0);
+      var podaConfiable=refSeguidos>0 && cache.users.length>=Math.floor(refSeguidos*0.9);
+      if(state.whitelist.size && podaConfiable){
         var siguiendo={}; cache.users.forEach(function(u){ siguiendo[u.username]=1; });
         Array.from(state.whitelist).forEach(function(un){ if(!siguiendo[un]){ state.whitelist.delete(un); quitadosWL++; } });
         if(quitadosWL){ saveWL(state.whitelist); if(state.activeTab==='analysis') renderAnalysisTab(); }

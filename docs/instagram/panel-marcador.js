@@ -937,7 +937,9 @@ if(cache.complete){
 sumarEscaneo();
 subirAlCelular(true);
 var quitadosWL=0;
-if(state.whitelist.size && (!cache.total || cache.users.length>=Math.floor(cache.total*0.9))){
+var refSeguidos=(cache.total||0)||((state.counts&&state.counts.following)||0);
+var podaConfiable=refSeguidos>0 && cache.users.length>=Math.floor(refSeguidos*0.9);
+if(state.whitelist.size && podaConfiable){
 var siguiendo={}; cache.users.forEach(function(u){ siguiendo[u.username]=1; });
 Array.from(state.whitelist).forEach(function(un){ if(!siguiendo[un]){ state.whitelist.delete(un); quitadosWL++; } });
 if(quitadosWL){ saveWL(state.whitelist); if(state.activeTab==='analysis') renderAnalysisTab(); }
