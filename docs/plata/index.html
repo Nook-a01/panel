@@ -498,6 +498,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
   <nav class="subtabs" id="subtabs" hidden>
     <button data-v="presu">Presupuesto</button>
     <button data-v="plan">Plan</button>
+    <button data-v="deuda">Plan mamá</button>
     <button data-v="consultas">Consultas</button>
     <button data-v="ajuste">Ajustar</button>
     <button data-v="historial">Historial</button>
@@ -810,6 +811,36 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
     <div class="card" id="cmListaCard" hidden>
       <div class="hd"><h3>Tus metas</h3></div>
       <div class="bd" id="cmLista"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLAN MAMÁ (la deuda) ===================== -->
+<section class="view" id="v-deuda">
+  <div class="stack">
+    <div class="notice info"><b>Regla del plan:</b> la tarjeta de mamá queda en $0. Si la volvés a usar, el plan se rompe y la deuda vuelve a crecer.</div>
+    <div class="hero">
+      <div class="eyebrow">Le debés a tu mamá</div>
+      <div class="big num" id="deudaSaldo">$0</div>
+      <div class="note" id="deudaCuando"></div>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="card">
+          <div class="hd"><h3>Mes a mes</h3><span class="hint" id="deudaHint"></span></div>
+          <div class="bd"><div class="tablewrap"><table id="deudaTabla"><thead><tr><th>Mes</th><th class="r">Te pasa</th><th class="r">Descuenta</th><th class="r">Queda</th></tr></thead><tbody></tbody></table></div></div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="hd"><h3>Tu mes</h3></div>
+          <div class="bd" id="deudaMes"></div>
+        </div>
+        <div class="card">
+          <div class="hd"><h3>Cuando termines</h3></div>
+          <div class="bd" id="deudaDespues"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2459,6 +2490,73 @@ function fijoPorCat(ym){
              .forEach(m=>{ o[m.catId] = (o[m.catId]||0) + (+m.monto||0); });
   return o;
 }
+/* ---------- Plan mamá: cómo se salda la deuda de la tarjeta ----------
+   Mamá pasa una mensualidad fija y le descuenta lo que se gastó con su
+   tarjeta. Como el TP de la facu se comió el margen, el saldo se devuelve
+   descontando de a poco, dejando siempre lo suficiente para vivir. El
+   calendario se recalcula solo: si cambia el costo de vida o el saldo, cambia
+   la cantidad de meses. */
+function renderDeuda(){
+  const p = S.plan || null;
+  const vacio = !p || !(Number(p.deuda) > 0);
+  if(vacio){
+    $('#deudaSaldo').textContent = money(0);
+    $('#deudaCuando').textContent = 'Todavía no hay un plan cargado.';
+    $('#deudaMes').innerHTML = '<div class="vacio">Sin plan.</div>';
+    $('#deudaDespues').innerHTML = '';
+    $('#deudaTabla tbody').innerHTML = '';
+    return;
+  }
+  const sueldo = Number(p.sueldo)||0, mensual = Number(p.mensualidad)||0;
+  const costo = Number(p.costoVida)||0, ig = Number(p.ig)||0;
+  const cuotaHasta = (p.cuotaMP && p.cuotaMP.hasta) || null;
+  const cuotaMonto = Number(p.cuotaMP && p.cuotaMP.monto)||0;
+  const extraDe = ym => (cuotaHasta && ym <= cuotaHasta) ? cuotaMonto : 0;
+
+  let saldo = Number(p.deuda)||0;
+  let ym = p.desde || ymNow();
+  const filas = []; let saldaEn = null, guard = 0;
+  while(saldo > 0 && guard++ < 60){
+    const libre = Math.max(0, sueldo + mensual - costo - ig - extraDe(ym));
+    const desc = Math.min(libre, saldo);
+    saldo = Math.round((saldo - desc) * 100) / 100;
+    filas.push({ ym, pasa: mensual - desc, desc, saldo });
+    if(saldo <= 0) saldaEn = ym;
+    ym = ymAdd(ym, 1);
+    if(libre <= 0) break;                       // no alcanza: no seguir al infinito
+  }
+
+  $('#deudaSaldo').textContent = money(Number(p.deuda)||0);
+  $('#deudaCuando').innerHTML = saldaEn
+    ? 'Saldás en <b>'+esc(ymLabel(saldaEn))+'</b> · '+filas.length+(filas.length===1?' mes':' meses')
+    : 'Con este presupuesto no llega a saldarse: hay que bajar el costo de vida o estirarlo.';
+  $('#deudaHint').textContent = p.nivel ? 'viviendo «'+p.nivel+'»' : '';
+
+  const ym0 = p.desde || ymNow(), extra0 = extraDe(ym0);
+  const libre0 = sueldo + mensual - costo - ig - extra0;
+  $('#deudaMes').innerHTML =
+     '<div class="kv"><span>Sueldo</span><b>'+money(sueldo)+'</b></div>'
+    +'<div class="kv"><span>Mensualidad de mamá</span><b>'+money(mensual)+'</b></div>'
+    +'<div class="kv"><span>Costo de vida'+(p.nivel?' ('+esc(p.nivel)+')':'')+'</span><b>−'+money(costo)+'</b></div>'
+    +(ig ? '<div class="kv"><span>Instagram (campañas)</span><b>−'+money(ig)+'</b></div>' : '')
+    +(extra0 ? '<div class="kv"><span>Cuota Mercado Pago (última: '+esc(ymLabel(cuotaHasta))+')</span><b>−'+money(extra0)+'</b></div>' : '')
+    +'<div class="kv"><span style="font-weight:600;color:var(--ink)">Te queda para devolverle</span><b style="color:'+(libre0>=0?'var(--accent)':'var(--crit)')+'">'+money(libre0)+'</b></div>';
+
+  const libreFinal = sueldo + mensual - costo - ig;
+  $('#deudaDespues').innerHTML =
+     '<div class="kv"><span>Mensualidad completa</span><b>'+money(mensual)+'</b></div>'
+    +'<div class="kv"><span>Libre por mes</span><b>'+money(libreFinal)+'</b></div>'
+    +'<p class="frase tenue-t" style="margin:8px 0 0">Eso es lo que te queda cada mes una vez saldada la deuda: para ahorrar, subir Instagram o empezar la lista de cosas de casa.</p>';
+
+  $('#deudaTabla tbody').innerHTML = filas.map(f=>
+      '<tr><td>'+esc(ymLabel(f.ym))+'</td>'
+      +'<td class="r money in">'+money(f.pasa)+'</td>'
+      +'<td class="r money out">−'+money(f.desc)+'</td>'
+      +'<td class="r money">'+money(Math.max(0, f.saldo))+'</td></tr>'
+    ).join('');
+  etiquetarTablas();
+}
+
 function renderPlan(){
   const ym = ymAdd(ymNow(), 1);
   const FIJO = fijoPorCat(ym);
@@ -3535,6 +3633,7 @@ function render(){
   else if(vista==='presu') renderPresu();
   else if(vista==='fijos') renderFijos();
   else if(vista==='plan') renderPlan();
+  else if(vista==='deuda') renderDeuda();
   else if(vista==='ajuste') renderAjuste();
   else if(vista==='historial') renderHistorial();
   else if(vista==='consultas') renderConsultas();
