@@ -1142,6 +1142,9 @@ if(r.status===404 && /<html|<!doctype/i.test(txt) && /not-logged-in|login/i.test
 return {ok:false, blocked:true, note:'Instagram rechazó la solicitud de baja (HTTP 404). La selección sigue guardada; no se avanzó la cola'};
 }
 if(r.status===429 || (j&&j.spam) || (j&&(j.status==='fail'||j.feedback_required))){ return {ok:false, blocked:true, note:'Instagram limitó/bloqueó la acción — pará un rato'}; }
+if(/^\s*<!doctype|^\s*<html/i.test(txt) || (r.ok && !j)){
+return {ok:false, blocked:true, note:'Instagram está frenando las bajas: te devuelve una página en vez de confirmar. Pasa cuando das de baja muchas seguidas. Esperá unas horas o un par de días y reintentá — lo hecho hasta acá quedó guardado.'};
+}
 var detalle = (j&&(j.message||j.status)) ? String(j.message||j.status) : (txt?txt.slice(0,80):'sin respuesta');
 return {ok:false, blocked:false, note:'Instagram respondió HTTP '+r.status+' ('+detalle+')'};
 }catch(e){ return {ok:false, blocked:true, note:'Error de red — revisá tu conexión'}; }
