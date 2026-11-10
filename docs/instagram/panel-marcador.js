@@ -100,11 +100,29 @@ function timeAgo(ms){ var s=Math.floor((Date.now()-ms)/1000); if(s<60) return 'r
 var LS={ cache:'igpp_cache_'+uid, wl:'igpp_wl_'+uid, q:'igpp_q_'+uid, sv:'igpp_sv_'+uid, counts:'igpp_counts_'+uid, hist:'igpp_hist_'+uid, week:'igpp_week_'+uid, svlog:'igpp_svlog_'+uid,
 pendScan:'igpp_pscan_'+uid, pendUnf:'igpp_punf_'+uid,
 flwrs:'igpp_flwrs_'+uid,   // última foto de tu lista de seguidores {users:[], ts}
-lost:'igpp_lost_'+uid };   // historial de quién te dejó de seguir [{u, ts}]
+lost:'igpp_lost_'+uid,     // historial de quién te dejó de seguir [{u, ts}]
+unwl:'igpp_unwl_'+uid,     // cuentas que SACASTE a mano de la lista blanca
+autowl:'igpp_autowl_'+uid };
 function lsGet(k,fb){ try{ var v=JSON.parse(localStorage.getItem(k)); return v===null||v===undefined?fb:v; }catch(e){ return fb; } }
 function lsSet(k,v){ try{ if(v===null) localStorage.removeItem(k); else localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
 function loadWL(){ return new Set(lsGet(LS.wl,[])); }
 function saveWL(s){ lsSet(LS.wl,Array.from(s)); }
+function loadUnWL(){ return new Set(lsGet(LS.unwl,[])); }
+function saveUnWL(s){ lsSet(LS.unwl,Array.from(s)); }
+function autoWLon(){ return !!lsGet(LS.autowl,false); }
+function protegerNuevos(){
+if(!autoWLon()||!cache||!cache.users) return 0;
+var n=0;
+cache.users.forEach(function(u){
+var un=u&&u.username;
+if(!un) return;
+if(state.whitelist.has(un)) return;
+if(state.desprotegidos.has(un)) return;
+state.whitelist.add(un); n++;
+});
+if(n) saveWL(state.whitelist);
+return n;
+}
 var PANEL_WORKER = 'https://plata.hamcqc.workers.dev';
 var LS_CLAVE = 'igpp_clave_panel';
 function claveCelular(){ try{ return localStorage.getItem(LS_CLAVE) || ''; }catch(e){ return ''; } }
@@ -744,7 +762,7 @@ if(cache&&cache.apiFollowers&&cache.apiFollowers.length) cache.apiFollowers=text
 var state={
 scanning:false, scanStatus:'', scanPct:0, scanErr:'',
 filters:{nonFollowers:true, followers:false, verified:true, private:true},
-tab:'nonwl', search:'', page:0, pageSize:30, selected:new Set(), whitelist:loadWL(),
+tab:'nonwl', search:'', page:0, pageSize:30, selected:new Set(), whitelist:loadWL(), desprotegidos:loadUnWL(),
 activeTab:'analysis', dmsResults:null, dmsSelected:new Set(),
 counts:lsGet(LS.counts,null)
 };
@@ -944,7 +962,11 @@ var siguiendo={}; cache.users.forEach(function(u){ siguiendo[u.username]=1; });
 Array.from(state.whitelist).forEach(function(un){ if(!siguiendo[un]){ state.whitelist.delete(un); quitadosWL++; } });
 if(quitadosWL){ saveWL(state.whitelist); if(state.activeTab==='analysis') renderAnalysisTab(); }
 }
-toast('✅ Escaneo completo: '+cache.users.length+' cuentas'+(quitadosWL?(' · '+quitadosWL+' salieron de la lista blanca (ya no los seguís)'):''));
+var protegidos=protegerNuevos();
+if(protegidos&&state.activeTab==='analysis') renderAnalysisTab();
+toast('✅ Escaneo completo: '+cache.users.length+' cuentas'
++(quitadosWL?(' · '+quitadosWL+' salieron de la lista blanca (ya no los seguís)'):'')
++(protegidos?(' · '+protegidos+' nuevas quedaron protegidas'):''));
 }
 }
 function pctNow(){
@@ -1068,13 +1090,28 @@ t.onclick=function(){ state.tab=kv[0]; state.page=0; state.selected.clear(); ren
 wlTabs.appendChild(t);
 });
 body.appendChild(wlTabs);
+var autoLab=document.createElement('label'); autoLab.className='igpp-flab';
+autoLab.style.cssText+=';margin-bottom:10px';
+var autoCb=document.createElement('input'); autoCb.type='checkbox'; autoCb.className='igpp-cb';
+autoCb.style.width='18px'; autoCb.style.height='18px'; autoCb.checked=autoWLon();
+autoCb.onchange=function(){
+lsSet(LS.autowl,autoCb.checked);
+var n=autoCb.checked?protegerNuevos():0;
+state.page=0; state.selected.clear();
+renderAnalysisTab();
+toast(autoCb.checked?('⭐ Cuentas nuevas protegidas solas'+(n?(' · '+n+' ahora'):'')):'Las cuentas nuevas vuelven a aparecer sin proteger');
+};
+autoLab.appendChild(autoCb);
+autoLab.appendChild(document.createTextNode('⭐ Proteger sola a toda cuenta nueva (solo aparece si le sacás la estrella)'));
+body.appendChild(autoLab);
 if(state.tab==='wl' && state.whitelist.size){
 var vaciarWL=document.createElement('button'); vaciarWL.type='button';
 vaciarWL.className='igpp-btn'; vaciarWL.style.cssText+=';margin-bottom:10px';
 vaciarWL.textContent='Vaciar lista blanca ('+state.whitelist.size+')';
 vaciarWL.onclick=function(){
 if(!confirm('Sacar las '+state.whitelist.size+' cuentas de la lista blanca? Dejan de estar protegidas y vuelven a aparecer en Normal. No se deja de seguir a nadie.')) return;
-state.whitelist.clear(); saveWL(state.whitelist);
+state.whitelist.forEach(function(un){ state.desprotegidos.add(un); });
+state.whitelist.clear(); saveWL(state.whitelist); saveUnWL(state.desprotegidos);
 state.selected.clear(); state.page=0; state.tab='nonwl';
 renderAnalysisTab();
 };
@@ -1148,8 +1185,12 @@ wlBtn.setAttribute('aria-label',(enLista?'Quitar a @':'Proteger a @')+u.username
 wlBtn.setAttribute('aria-pressed',enLista?'true':'false');
 wlBtn.onclick=function(){
 var prevScroll=listEl.scrollTop;
-if(state.whitelist.has(u.username)) state.whitelist.delete(u.username); else state.whitelist.add(u.username);
-saveWL(state.whitelist);
+if(state.whitelist.has(u.username)){
+state.whitelist.delete(u.username); state.desprotegidos.add(u.username);
+} else {
+state.whitelist.add(u.username); state.desprotegidos.delete(u.username);
+}
+saveWL(state.whitelist); saveUnWL(state.desprotegidos);
 renderAnalysisTab();
 var nl=document.getElementById('igpp-list'); if(nl) nl.scrollTop=prevScroll;
 };
