@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tarjeta — categorizar</title>
+<meta name="theme-color" content="#140D0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --fuego:#FF7A2F; --fuego-2:#E8391C;
+  --bg:#140D0A; --surface:#1E1512; --surface-2:#241913; --surface-3:#2E201A;
+  --ink:#FFF2E9; --ink-2:#D8B9A6; --ink-3:#C4A08D;
+  --line:#33241D; --line-2:#48332A;
+  --accent:#FF7A2F; --accent-ink:#FFB184; --accent-soft:#3A1C0E; --on-accent:#2A0E06;
+  --warn:#F0A04B; --warn-soft:#3A2712;
+  --crit:#FF6B6B; --crit-soft:#3C1920;
+  --green-soft:#10302A; --green-ink:#6FE3B8;
+  --violet-soft:#2B1E2E; --violet-ink:#F0B9D8;
+  --radius:16px;
+  --f-display:'Archivo',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:var(--f-body); color:var(--ink);
+  background:var(--bg); padding:16px; padding-bottom:120px;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(155deg,var(--fuego) 0%,var(--fuego-2) 52%,#8E1A0C 100%);
+  opacity:.9;
+}
+.wrap{max-width:860px; margin:0 auto}
+header{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px 18px; margin-bottom:14px;
+}
+h1{font-family:var(--f-display); font-size:22px; margin:0 0 4px; letter-spacing:-.02em}
+.sub{color:var(--ink-3); font-size:13px; margin:0}
+.aviso{
+  background:var(--warn-soft); border:1px solid var(--warn); color:#FFE0BC;
+  border-radius:12px; padding:10px 12px; font-size:13px; margin:12px 0 0; line-height:1.45;
+}
+.aviso b{color:#fff}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:14px; margin-bottom:14px;
+}
+.ciclo-h{
+  display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+  flex-wrap:wrap; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--line);
+}
+.ciclo-t{font-family:var(--f-display); font-size:16px; font-weight:700}
+.ciclo-n{font-family:var(--f-mono); font-size:13px; color:var(--ink-3)}
+.tot{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; margin-bottom:12px}
+.tot div{background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:9px 11px}
+.tot span{display:block; font-size:11px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.06em}
+.tot strong{display:block; font-family:var(--f-mono); font-size:16px; margin-top:3px}
+.tot .yo strong{color:var(--accent-ink)}
+.tot .mama strong{color:var(--green-ink)}
+.tot .facu strong{color:var(--violet-ink)}
+
+.fila{
+  border:1px solid var(--line); border-radius:12px; padding:10px 11px; margin-bottom:8px;
+  background:var(--surface-2);
+}
+.fila.sin{border-color:var(--crit); background:var(--crit-soft)}
+.fila-top{display:flex; gap:10px; align-items:baseline; justify-content:space-between}
+.f-fecha{font-family:var(--f-mono); font-size:12px; color:var(--ink-3); flex:0 0 auto}
+.f-desc{flex:1 1 auto; font-size:14px; font-weight:500; word-break:break-word}
+.f-monto{font-family:var(--f-mono); font-size:15px; font-weight:600; flex:0 0 auto}
+.fila-bot{display:flex; gap:8px; align-items:center; margin-top:9px; flex-wrap:wrap}
+select{
+  font-family:var(--f-body); font-size:13px; color:var(--ink); background:var(--surface-3);
+  border:1px solid var(--line-2); border-radius:9px; padding:7px 9px; flex:1 1 170px; min-width:0;
+}
+.quien{display:flex; gap:0; border:1px solid var(--line-2); border-radius:9px; overflow:hidden; flex:0 0 auto}
+.quien button{
+  font-family:var(--f-body); font-size:12px; font-weight:600; color:var(--ink-3);
+  background:transparent; border:0; padding:7px 11px; cursor:pointer; white-space:nowrap;
+}
+.quien button+button{border-left:1px solid var(--line-2)}
+.quien button[aria-pressed="true"]{color:var(--on-accent); background:var(--accent)}
+.quien button[data-q="mama"][aria-pressed="true"]{background:var(--green-ink)}
+.quien button[data-q="facu"][aria-pressed="true"]{background:var(--violet-ink)}
+
+.mano{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:4px}
+.mano input{
+  font-family:var(--f-body); font-size:13px; color:var(--ink); background:var(--surface-3);
+  border:1px solid var(--line-2); border-radius:9px; padding:7px 9px; min-width:0;
+}
+.mano .i-f{flex:0 0 130px} .mano .i-d{flex:1 1 180px} .mano .i-m{flex:0 0 120px}
+.btn{
+  font-family:var(--f-display); font-weight:700; font-size:14px; cursor:pointer;
+  border:1px solid var(--line-2); border-radius:11px; padding:9px 14px;
+  background:var(--surface-3); color:var(--ink);
+}
+.btn.p{background:var(--accent); color:var(--on-accent); border-color:var(--accent)}
+.btn:disabled{opacity:.5; cursor:default}
+.barra{
+  position:fixed; left:0; right:0; bottom:0; z-index:9;
+  background:var(--surface); border-top:1px solid var(--line-2);
+  padding:12px 16px; display:flex; gap:12px; align-items:center; justify-content:space-between;
+  flex-wrap:wrap;
+}
+.barra .est{font-size:13px; color:var(--ink-3)}
+.barra .est b{color:var(--ink)}
+.ok{color:var(--green-ink)} .mal{color:var(--crit)}
+.vacio{color:var(--ink-3); font-size:14px; padding:8px 0}
+.usd{background:var(--violet-soft); border:1px solid var(--line-2); border-radius:12px; padding:10px 12px; font-size:13px; color:#F6DCEB; margin-top:4px}
+.usd b{font-family:var(--f-mono)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Gastos de la tarjeta</h1>
+  <p class="sub">Cada consumo con la Mastercard. Elegí la categoría y quién lo paga.</p>
+  <div class="aviso">
+    <b>Antes de tocar nada:</b> cerrá la app de Plata en todas las pestañas y en el
+    celular. Si queda abierta, pisa lo que guardes acá.
+  </div>
+</header>
+
+<div id="contenido"><div class="card"><div class="vacio">Cargando…</div></div></div>
+
+</div>
+
+<div class="barra">
+  <div class="est" id="est">Cargando…</div>
+  <div style="display:flex; gap:8px">
+    <button class="btn" id="recargar">Recargar</button>
+    <button class="btn p" id="guardar" disabled>Guardar</button>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var API = 'https://plata.hamcqc.workers.dev';
+var CIERRE = 26;          // la tarjeta cierra el 26 de cada mes
+var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio',
+             'agosto','septiembre','octubre','noviembre','diciembre'];
+
+var S = null;             // el estado completo que vino del Worker
+var base = null;          // updatedAt con el que vino: el candado del guardado
+var sucio = false;
+
+// ── la clave ──────────────────────────────────────────────────────────────
+// Vive en el navegador, puesta por la app. Acá no se escribe nunca a mano
+// salvo que falte.
+function clave(){
+  var k = null;
+  try { k = localStorage.getItem('plata-mp-clave'); } catch(e){}
+  if(!k){
+    k = window.prompt('Clave del panel');
+    if(k){ try { localStorage.setItem('plata-mp-clave', k); } catch(e){} }
+  }
+  return k;
+}
+function cab(){ return { 'content-type':'application/json', authorization:'Bearer ' + clave() }; }
+
+function $(id){ return document.getElementById(id); }
+function est(txt, cls){
+  var e = $('est');
+  e.innerHTML = txt;
+  e.className = 'est' + (cls ? ' ' + cls : '');
+}
+function plata(n){
+  n = Number(n) || 0;
+  return '$' + n.toLocaleString('es-AR', {minimumFractionDigits:0, maximumFractionDigits:0});
+}
+function fechaCorta(iso){
+  var p = String(iso || '').slice(0,10).split('-');
+  if(p.length !== 3) return String(iso || '');
+  return p[2] + '/' + p[1];
+}
+
+// ── el ciclo del resumen ──────────────────────────────────────────────────
+// Un consumo del 27 de octubre entra en el resumen que cierra el 26 de
+// noviembre. Por eso el ciclo no es el mes del gasto.
+function cicloDe(iso){
+  var p = String(iso || '').slice(0,10).split('-');
+  if(p.length !== 3) return '9999-99';
+  var a = Number(p[0]), m = Number(p[1]), d = Number(p[2]);
+  if(d > CIERRE){ m += 1; if(m > 12){ m = 1; a += 1; } }
+  return a + '-' + String(m).padStart(2,'0');
+}
+function cicloNombre(ym){
+  var p = ym.split('-');
+  return 'Cierra el ' + CIERRE + ' de ' + MESES[Number(p[1]) - 1] + ' ' + p[0];
+}
+
+// ── quién lo paga ─────────────────────────────────────────────────────────
+// yo   = se lo descuenta de la mensualidad (lo termina pagando él)
+// mama = ella lo cubre y no lo descuenta: farmacia, remedios y médicos
+// facu = el TP de la facultad, que va aparte del gasto del mes
+var QUIEN = [
+  {id:'yo',   t:'Yo'},
+  {id:'mama', t:'Mamá'},
+  {id:'facu', t:'TP facu'}
+];
+
+function tags(){
+  if(!S.tarjetaTags) S.tarjetaTags = {};
+  return S.tarjetaTags;
+}
+function quienDe(m){
+  var t = tags()[m.id];
+  if(t && t.quien) return t.quien;
+  if(m.quien) return m.quien;
+  return 'yo';
+}
+function setQuien(m, q){
+  m.quien = q;
+  var t = tags();
+  t[m.id] = t[m.id] || {};
+  t[m.id].quien = q;
+  marcar();
+}
+function setCat(m, catId){
+  m.catId = catId;
+  var t = tags();
+  t[m.id] = t[m.id] || {};
+  t[m.id].catId = catId;
+  marcar();
+}
+function marcar(){
+  sucio = true;
+  $('guardar').disabled = false;
+  est('Hay cambios sin guardar.', 'mal');
+}
+
+function catsGasto(){
+  return (S.cats || []).filter(function(c){ return c.tipo === 'gasto' && !c.noGasto; });
+}
+function nombreCat(c){ return c.n || c.nombre || c.id; }
+
+function deTarjeta(){
+  return (S.movs || []).filter(function(m){
+    return m.medio === 'credito' && m.tipo !== 'ingreso';
+  });
+}
+
+// ── pintar ────────────────────────────────────────────────────────────────
+function pintar(){
+  var lista = deTarjeta().slice().sort(function(a,b){
+    return String(b.fecha).localeCompare(String(a.fecha));
+  });
+
+  var porCiclo = {};
+  var orden = [];
+  lista.forEach(function(m){
+    var ym = cicloDe(m.fecha);
+    if(!porCiclo[ym]){ porCiclo[ym] = []; orden.push(ym); }
+    porCiclo[ym].push(m);
+  });
+  orden.sort().reverse();
+
+  var cont = $('contenido');
+  cont.innerHTML = '';
+  refrescos = [];
+
+  if(!lista.length){
+    cont.appendChild(tarjetaVacia());
+    cont.appendChild(filaMano());
+    return;
+  }
+
+  var tj = S.tarjeta || {};
+  if(tj.dolares){
+    var u = document.createElement('div');
+    u.className = 'card';
+    u.innerHTML = '<div class="usd">En el resumen en curso también hay <b>USD ' +
+      tj.dolares + '</b> en dólares. Eso lo pagás vos: no entra en lo que cubre tu mamá.</div>';
+    cont.appendChild(u);
+  }
+
+  orden.forEach(function(ym){
+    cont.appendChild(tarjetaCiclo(ym, porCiclo[ym]));
+  });
+  cont.appendChild(filaMano());
+}
+
+function tarjetaVacia(){
+  var d = document.createElement('div');
+  d.className = 'card';
+  d.innerHTML = '<div class="vacio">No hay ningún gasto marcado como tarjeta todavía. ' +
+    'Cargá uno a mano abajo.</div>';
+  return d;
+}
+
+// Cada ciclo deja acá su manera de recalcularse, así tocar un botón no
+// redibuja la pantalla entera (se perdería el foco y el scroll).
+var refrescos = [];
+
+function tarjetaCiclo(ym, movs){
+  var card = document.createElement('div');
+  card.className = 'card';
+
+  var h = document.createElement('div');
+  h.className = 'ciclo-h';
+  card.appendChild(h);
+
+  var t = document.createElement('div');
+  t.className = 'tot';
+  card.appendChild(t);
+
+  function totales(){
+    var total = 0, tYo = 0, tMama = 0, tFacu = 0;
+    movs.forEach(function(m){
+      var v = Number(m.monto) || 0;
+      total += v;
+      var q = quienDe(m);
+      if(q === 'mama') tMama += v;
+      else if(q === 'facu') tFacu += v;
+      else tYo += v;
+    });
+    h.innerHTML = '<div class="ciclo-t">' + cicloNombre(ym) + '</div>' +
+                  '<div class="ciclo-n">' + movs.length + ' consumos · ' + plata(total) + '</div>';
+    t.innerHTML =
+      '<div class="yo"><span>Te lo descuenta</span><strong>' + plata(tYo) + '</strong></div>' +
+      '<div class="mama"><span>Lo cubre mamá</span><strong>' + plata(tMama) + '</strong></div>' +
+      '<div class="facu"><span>TP de la facu</span><strong>' + plata(tFacu) + '</strong></div>';
+  }
+  totales();
+  refrescos.push(totales);
+
+  movs.forEach(function(m){ card.appendChild(filaMov(m)); });
+  return card;
+}
+
+function filaMov(m){
+  var f = document.createElement('div');
+  f.className = 'fila' + (m.catId ? '' : ' sin');
+
+  var top = document.createElement('div');
+  top.className = 'fila-top';
+  var fe = document.createElement('span'); fe.className = 'f-fecha'; fe.textContent = fechaCorta(m.fecha);
+  var de = document.createElement('span'); de.className = 'f-desc';  de.textContent = m.desc || '(sin descripción)';
+  var mo = document.createElement('span'); mo.className = 'f-monto'; mo.textContent = plata(m.monto);
+  top.appendChild(fe); top.appendChild(de); top.appendChild(mo);
+  f.appendChild(top);
+
+  var bot = document.createElement('div');
+  bot.className = 'fila-bot';
+
+  var sel = document.createElement('select');
+  var vacio = document.createElement('option');
+  vacio.value = ''; vacio.textContent = 'Sin categoría';
+  sel.appendChild(vacio);
+  catsGasto().forEach(function(c){
+    var o = document.createElement('option');
+    o.value = c.id; o.textContent = nombreCat(c);
+    if(m.catId === c.id) o.selected = true;
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', function(){
+    setCat(m, sel.value || null);
+    f.className = 'fila' + (sel.value ? '' : ' sin');
+  });
+  bot.appendChild(sel);
+
+  var q = document.createElement('div');
+  q.className = 'quien';
+  QUIEN.forEach(function(op){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.dataset.q = op.id;
+    b.textContent = op.t;
+    b.setAttribute('aria-pressed', quienDe(m) === op.id ? 'true' : 'false');
+    b.addEventListener('click', function(){
+      setQuien(m, op.id);
+      Array.prototype.forEach.call(q.children, function(x){
+        x.setAttribute('aria-pressed', x.dataset.q === op.id ? 'true' : 'false');
+      });
+      pintarTotales();
+    });
+    q.appendChild(b);
+  });
+  bot.appendChild(q);
+
+  f.appendChild(bot);
+  return f;
+}
+
+function pintarTotales(){
+  refrescos.forEach(function(f){ f(); });
+}
+
+// ── cargar un gasto a mano ────────────────────────────────────────────────
+// Las compras con la tarjeta que no pasan por Mercado Pago (Carrefour online,
+// por ejemplo) no las ve nadie hasta que se lee el banco. Se cargan acá.
+function filaMano(){
+  var card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = '<div class="ciclo-h"><div class="ciclo-t">Agregar un gasto a mano</div>' +
+    '<div class="ciclo-n">compras con la tarjeta que no pasaron por Mercado Pago</div></div>';
+
+  var row = document.createElement('div');
+  row.className = 'mano';
+
+  var hoy = new Date();
+  var iso = hoy.getFullYear() + '-' + String(hoy.getMonth()+1).padStart(2,'0') +
+            '-' + String(hoy.getDate()).padStart(2,'0');
+
+  var fi = document.createElement('input'); fi.type = 'date'; fi.className = 'i-f'; fi.value = iso;
+  var di = document.createElement('input'); di.type = 'text'; di.className = 'i-d'; di.placeholder = 'Qué fue';
+  var mi = document.createElement('input'); mi.type = 'number'; mi.className = 'i-m'; mi.placeholder = 'Monto'; mi.step = '0.01';
+
+  var sel = document.createElement('select');
+  catsGasto().forEach(function(c){
+    var o = document.createElement('option'); o.value = c.id; o.textContent = nombreCat(c);
+    sel.appendChild(o);
+  });
+
+  var b = document.createElement('button');
+  b.className = 'btn'; b.type = 'button'; b.textContent = 'Agregar';
+  b.addEventListener('click', function(){
+    var monto = Number(mi.value);
+    if(!monto || monto <= 0){ alert('Falta el monto.'); return; }
+    if(!di.value.trim()){ alert('Falta decir qué fue.'); return; }
+    S.movs = S.movs || [];
+    S.movs.push({
+      id: 'tj-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,7),
+      fecha: fi.value, tipo: 'gasto', monto: monto, catId: sel.value,
+      desc: di.value.trim(), medio: 'credito', src: 'mano-tarjeta'
+    });
+    di.value = ''; mi.value = '';
+    marcar();
+    pintar();
+  });
+
+  row.appendChild(fi); row.appendChild(di); row.appendChild(mi);
+  row.appendChild(sel); row.appendChild(b);
+  card.appendChild(row);
+  return card;
+}
+
+// ── leer y guardar ────────────────────────────────────────────────────────
+function cargar(){
+  est('Leyendo…');
+  $('guardar').disabled = true;
+  fetch(API + '/app', { headers: cab(), cache: 'no-store' })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(!d || !d.movs) throw new Error('El Worker no devolvió el panel.');
+      S = d;
+      base = d.updatedAt || null;
+      sucio = false;
+      pintar();
+      var n = deTarjeta().length;
+      var sinCat = deTarjeta().filter(function(m){ return !m.catId; }).length;
+      est(n + ' consumos' + (sinCat ? ' · <b>' + sinCat + ' sin categoría</b>' : ' · todos categorizados'),
+          sinCat ? null : 'ok');
+    })
+    .catch(function(e){
+      est('No se pudo leer: ' + e.message, 'mal');
+    });
+}
+
+function guardar(){
+  if(!S) return;
+  $('guardar').disabled = true;
+  est('Guardando…');
+  var cuerpo = JSON.parse(JSON.stringify(S));
+  cuerpo.updatedAt = new Date().toISOString();
+  cuerpo.baseUpdatedAt = base;
+  fetch(API + '/app', { method:'POST', headers: cab(), body: JSON.stringify(cuerpo) })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d && d.conservado){
+        est('No se guardó: otra pestaña lo cambió. Cerrá la app y apretá Recargar.', 'mal');
+        $('guardar').disabled = false;
+        return;
+      }
+      if(!d || !d.ok) throw new Error((d && d.error) || 'respuesta rara');
+      base = d.guardadoEn || cuerpo.updatedAt;
+      S.updatedAt = base;
+      sucio = false;
+      est('Guardado.', 'ok');
+    })
+    .catch(function(e){
+      est('No se pudo guardar: ' + e.message, 'mal');
+      $('guardar').disabled = false;
+    });
+}
+
+$('recargar').addEventListener('click', function(){
+  if(sucio && !confirm('Hay cambios sin guardar. ¿Recargar igual?')) return;
+  cargar();
+});
+$('guardar').addEventListener('click', guardar);
+window.addEventListener('beforeunload', function(e){
+  if(sucio){ e.preventDefault(); e.returnValue = ''; }
+});
+
+cargar();
+})();
+</script>
+</body>
+</html>

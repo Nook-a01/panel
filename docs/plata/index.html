@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "21";
+  var ESTA = "29";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -499,6 +499,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
     <button data-v="presu">Presupuesto</button>
     <button data-v="plan">Plan</button>
     <button data-v="deuda">Plan mamá</button>
+    <button data-ir="tarjeta.html">Tarjeta</button>
     <button data-v="consultas">Consultas</button>
     <button data-v="ajuste">Ajustar</button>
     <button data-v="historial">Historial</button>
@@ -4096,6 +4097,12 @@ function guardarDlg(){
 /* ============================ eventos ============================ */
 $('#tabs').addEventListener('click', e=>{ const b=e.target.closest('button[data-v]'); if(b) irA(b.dataset.v); });
 $('#subtabs').addEventListener('click', e=>{ const b=e.target.closest('button[data-v]'); if(b) irA(b.dataset.v); });
+// La página de la tarjeta vive aparte: escribe el estado en el Worker ella
+// misma, así que hay que salir de la app (que guarda sola al cargar).
+$('#subtabs').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-ir]'); if(!b) return;
+  location.href = b.dataset.ir;
+});
 $('#mPrev').onclick = ()=>{ selYM = ymAdd(selYM,-1); render(); };
 $('#mNext').onclick = ()=>{ selYM = ymAdd(selYM, 1); render(); };
 $('#mLabel').onclick = ()=>{ selYM = ymNow(); render(); };
