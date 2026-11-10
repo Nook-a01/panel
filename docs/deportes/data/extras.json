@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T09:46:13.190Z",
+ "actualizado": "2026-11-10T17:48:17.332Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -292,8 +291,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -946,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1054,8 +1058,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1066,8 +1071,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1090,8 +1096,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1222,8 +1229,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1246,8 +1254,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1593,9 +1602,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1678,8 +1686,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1726,8 +1735,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1924,6 +1934,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Ex-San Diego FC forward Cédric Bakambu files fair housing lawsuit",
+     "resumen": "Former San Diego FC forward Cédric Bakambu has filed a housing discrimination lawsuit in federal court.",
+     "fecha": "2026-11-10T17:37:03Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0401/r1637033_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50432573/ex-san-diego-cedric-bakambu-files-fair-housing-lawsuit"
+    },
+    {
      "titulo": "CF Montréal owner Joey Saputo announces club is up for sale",
      "resumen": "CF Montréal owner Joey Saputo announced Monday that he has initiated the sale of the MLS club his family founded in 1992.",
      "fecha": "2026-11-09T22:51:10Z",
@@ -1957,13 +1974,6 @@
      "fecha": "2026-11-09T14:07:44Z",
      "imagen": "https://a.espncdn.com/photo/2026/1106/r1742062_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50388883/every-eliminated-mls-team-worked-didnt-2026-needs-improving-2027"
-    },
-    {
-     "titulo": "LA Galaxy miss playoffs again as Real Salt Lake gets final berth",
-     "resumen": "Sergi Solans and Zach Booth scored early and Real Salt Lake clinched a playoff spot while eliminating the LA Galaxy with a 2-1 Decision Day victory over the Galaxy on Saturday.",
-     "fecha": "2026-11-08T02:54:28Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/761946.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/761946"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2252,9 +2262,10 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 12,
@@ -2467,14 +2478,14 @@
      {
       "pos": 25,
       "equipo": "Rafael Camara",
-      "abrev": "",
+      "abrev": "CAM",
       "detalle": "Haas F1 Team",
       "pts": "0",
       "g": "0",
-      "bandera": null,
-      "nacionalidad": "",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "nacionalidad": "Brazilian",
       "color": "#5A5A5A",
-      "numero": null,
+      "numero": "51",
       "driverId": "rafael_camara",
       "foto": null,
       "logo": null,
@@ -2608,6 +2619,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Qatar, Abu Dhabi races set to go ahead as F1 rules out Imola backup plan for finale",
+     "resumen": "Formula 1 has told Imola it will not be required to hold a season-ending race, meaning the plan to finish 2026 in Qatar and Abh Dhabi is now set in stone.",
+     "fecha": "2026-11-10T15:01:30Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1207/r1586144_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50442406/qatar-abu-dhabi-imola-f1-2026"
+    },
+    {
      "titulo": "All-time F1 drivers' and constructors' championship winners",
      "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
      "fecha": "2026-11-10T01:38:18Z",
@@ -2641,13 +2659,6 @@
      "fecha": "2026-11-08T22:22:26Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1743172_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389072/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
-    },
-    {
-     "titulo": "Lando Norris calls Brazil win one of his best",
-     "resumen": "Lando Norris calls Brazil win one of his best",
-     "fecha": "2026-11-08T21:48:00Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1108/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best/dm_261108_Lando_Norris_calls_Brazil_win_one_of_his_best.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50425251/lando-norris-calls-brazil-win-one-best"
     }
    ],
    "resultados": null,
@@ -2664,6 +2675,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Tatiana Suarez secures top-3 spot, positions herself for strawweight title shot",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-11-10T13:03:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743692_2_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
+    },
     {
      "titulo": "A timeline of how Donald Trump, Dana White forged friendship through the fights",
      "resumen": "Donald Trump and Dana White's friendship is on display cageside, on political stages and at the White House.",
@@ -2691,13 +2709,6 @@
      "fecha": "2026-11-08T15:27:14Z",
      "imagen": "https://a.espncdn.com/photo/2026/0721/r1691956_1296x729_16-9.jpg",
      "link": "https://www.espn.com/ufc/story/_/id/50419541/conor-mcgregor-max-holloway-ufc"
-    },
-    {
-     "titulo": "Tatiana Suarez back in title picture with decision win at UFC Fight Night",
-     "resumen": "Tatiana Suarez put herself back in position for a title shot after roughing up Virna Jandiroba in a unanimous decision win Saturday at UFC Fight Night.",
-     "fecha": "2026-11-08T05:03:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742826_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50416964/tatiana-suarez-back-title-picture-ufc-fight-night-win"
     },
     {
      "titulo": "Walker stuns Cortes-Acosta for second straight win",
