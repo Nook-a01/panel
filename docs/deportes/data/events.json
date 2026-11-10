@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T17:48:17.332Z",
+ "actualizado": "2026-11-10T23:17:05.678Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 12,
+   "total": 11,
    "proximos": 7
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600061541",
-   "miLado": null,
-   "idEspn": "600061541",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Allen vs. Duncan",
-   "inicio": "2026-10-10T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Meta APEX",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-761847",
    "miLado": "local",
