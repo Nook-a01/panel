@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T23:17:05.678Z",
+ "actualizado": "2026-11-11T02:50:12.253Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 24,
+   "total": 23,
    "proximos": 17
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761847",
-   "miLado": "local",
-   "idEspn": "761847",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs D.C. United",
-   "inicio": "2026-10-10T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "D.C. United",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
-   "finalizado": true,
-   "marcador": "4 - 0"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
