@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "33";
+  var ESTA = "34";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -500,6 +500,7 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
     <button data-v="plan">Plan</button>
     <button data-v="deuda">Plan mamá</button>
     <button data-ir="tarjeta.html">Tarjeta</button>
+    <button data-ir="cubre.html">Cubre mamá</button>
     <button data-v="consultas">Consultas</button>
     <button data-v="ajuste">Ajustar</button>
     <button data-v="historial">Historial</button>

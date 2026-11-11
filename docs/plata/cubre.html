@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Qué cubre mamá</title>
+<meta name="theme-color" content="#140D0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --fuego:#FF7A2F; --fuego-2:#E8391C;
+  --bg:#140D0A; --surface:#1E1512; --surface-2:#241913; --surface-3:#2E201A;
+  --ink:#FFF2E9; --ink-2:#D8B9A6; --ink-3:#C4A08D;
+  --line:#33241D; --line-2:#48332A;
+  --accent:#FF7A2F; --accent-ink:#FFB184; --on-accent:#2A0E06;
+  --warn:#F0A04B; --warn-soft:#3A2712;
+  --crit:#FF6B6B;
+  --green:#2BB98A; --green-soft:#10302A; --green-ink:#6FE3B8;
+  --violet-soft:#2B1E2E; --violet-ink:#F0B9D8;
+  --radius:16px;
+  --f-display:'Archivo',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:var(--f-body); color:var(--ink);
+  background:var(--bg); padding:16px; padding-bottom:140px;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(155deg,var(--fuego) 0%,var(--fuego-2) 52%,#8E1A0C 100%);
+  opacity:.9;
+}
+.wrap{max-width:820px; margin:0 auto}
+header{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px 18px; margin-bottom:14px;
+}
+h1{font-family:var(--f-display); font-size:22px; margin:0 0 4px; letter-spacing:-.02em}
+.sub{color:var(--ink-3); font-size:13px; margin:0; line-height:1.5}
+.aviso{
+  background:var(--warn-soft); border:1px solid var(--warn); color:#FFE0BC;
+  border-radius:12px; padding:10px 12px; font-size:13px; margin:12px 0 0; line-height:1.45;
+}
+.aviso b{color:#fff}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:14px; margin-bottom:14px;
+}
+.card.fuera{opacity:.55}
+.ciclo-h{
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  flex-wrap:wrap; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--line);
+}
+.ciclo-t{font-family:var(--f-display); font-size:16px; font-weight:700}
+.ciclo-n{font-family:var(--f-mono); font-size:12px; color:var(--ink-3); margin-top:2px}
+.endeuda{
+  display:flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-3);
+  background:var(--surface-2); border:1px solid var(--line-2); border-radius:999px;
+  padding:5px 11px 5px 8px; cursor:pointer; user-select:none;
+}
+.endeuda input{accent-color:var(--accent); width:15px; height:15px; margin:0}
+
+.tot{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; margin-bottom:12px}
+.tot div{background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:9px 11px}
+.tot span{display:block; font-size:11px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.06em}
+.tot strong{display:block; font-family:var(--f-mono); font-size:16px; margin-top:3px}
+.tot .mama strong{color:var(--green-ink)}
+.tot .vos strong{color:var(--accent-ink)}
+
+.fila{
+  display:flex; align-items:center; gap:11px; width:100%; text-align:left;
+  border:1px solid var(--line); border-radius:12px; padding:11px; margin-bottom:7px;
+  background:var(--surface-2); color:var(--ink); font:inherit; cursor:pointer;
+}
+.fila:hover{border-color:var(--line-2)}
+.fila.si{background:var(--green-soft); border-color:var(--green)}
+.tick{
+  flex:0 0 auto; width:22px; height:22px; border-radius:7px;
+  border:1.5px solid var(--line-2); background:var(--surface-3);
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700; color:transparent;
+}
+.fila.si .tick{background:var(--green); border-color:var(--green); color:#06231A}
+.f-txt{flex:1 1 auto; min-width:0}
+.f-desc{font-size:14px; font-weight:500; word-break:break-word}
+.f-fecha{font-family:var(--f-mono); font-size:11px; color:var(--ink-3); margin-top:2px}
+.f-monto{font-family:var(--f-mono); font-size:15px; font-weight:600; flex:0 0 auto}
+.fila.si .f-monto{color:var(--green-ink)}
+.pill{
+  display:inline-block; font-size:10px; font-weight:600; letter-spacing:.04em;
+  text-transform:uppercase; border-radius:999px; padding:2px 7px; margin-left:6px;
+  background:var(--violet-soft); color:var(--violet-ink);
+}
+.btn{
+  font-family:var(--f-display); font-weight:700; font-size:14px; cursor:pointer;
+  border:1px solid var(--line-2); border-radius:11px; padding:9px 14px;
+  background:var(--surface-3); color:var(--ink);
+}
+.btn.p{background:var(--accent); color:var(--on-accent); border-color:var(--accent)}
+.btn:disabled{opacity:.5; cursor:default}
+.mini{
+  font-family:var(--f-body); font-size:12px; font-weight:600; color:var(--ink-3);
+  background:transparent; border:1px solid var(--line-2); border-radius:9px;
+  padding:5px 10px; cursor:pointer;
+}
+.acciones{display:flex; gap:7px; margin-bottom:10px; flex-wrap:wrap}
+.barra{
+  position:fixed; left:0; right:0; bottom:0; z-index:9;
+  background:var(--surface); border-top:1px solid var(--line-2);
+  padding:11px 16px; display:flex; gap:12px; align-items:center; justify-content:space-between;
+  flex-wrap:wrap;
+}
+.barra .num{font-family:var(--f-display); font-size:20px; font-weight:800; line-height:1.1}
+.barra .num small{display:block; font-family:var(--f-body); font-size:11px; font-weight:500;
+  color:var(--ink-3); text-transform:uppercase; letter-spacing:.06em}
+.barra .cuando{font-size:12px; color:var(--accent-ink); margin-top:2px}
+.est{font-size:12px; color:var(--ink-3); width:100%}
+.est b{color:var(--ink)}
+.ok{color:var(--green-ink)} .mal{color:var(--crit)}
+.vacio{color:var(--ink-3); font-size:14px; padding:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Qué cubre mamá</h1>
+  <p class="sub">Tocá cada gasto que paga ella y no te descuenta. De lo que quede
+     sin marcar sale la deuda.</p>
+  <div class="aviso">
+    <b>Antes de tocar nada:</b> cerrá la app de Plata en todas las pestañas y en el
+    celular. Si queda abierta, pisa lo que guardes acá.
+  </div>
+</header>
+
+<div id="contenido"><div class="card"><div class="vacio">Cargando…</div></div></div>
+
+</div>
+
+<div class="barra">
+  <div class="num" id="deudaN">—<small>Le debés a tu mamá</small>
+    <div class="cuando" id="cuando"></div>
+  </div>
+  <div style="display:flex; gap:8px">
+    <button class="btn" id="recargar">Recargar</button>
+    <button class="btn p" id="guardar" disabled>Guardar</button>
+  </div>
+  <div class="est" id="est">Cargando…</div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var API = 'https://plata.hamcqc.workers.dev';
+var CIERRE = 26;
+var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio',
+             'agosto','septiembre','octubre','noviembre','diciembre'];
+
+var S = null;      // el panel entero, tal como vino del Worker
+var base = null;   // el updatedAt con el que vino: el candado del guardado
+var sucio = false;
+var enDeuda = {};  // ciclo -> si entra en la cuenta de la deuda
+
+// ── la clave ──────────────────────────────────────────────────────────────
+// La pone la app en el navegador. Acá no se escribe a mano salvo que falte.
+function clave(){
+  var k = null;
+  try { k = localStorage.getItem('plata-mp-clave'); } catch(e){}
+  if(!k){
+    k = window.prompt('Clave del panel');
+    if(k){ try { localStorage.setItem('plata-mp-clave', k); } catch(e){} }
+  }
+  return k;
+}
+function cab(){ return { 'content-type':'application/json', authorization:'Bearer ' + clave() }; }
+
+function $(id){ return document.getElementById(id); }
+function est(txt, cls){ var e = $('est'); e.innerHTML = txt; e.className = 'est' + (cls ? ' ' + cls : ''); }
+function plata(n){
+  return '$' + (Number(n)||0).toLocaleString('es-AR', {minimumFractionDigits:0, maximumFractionDigits:0});
+}
+function redondo(n){ return Math.round((Number(n)||0) * 100) / 100; }
+function fechaCorta(iso){
+  var p = String(iso || '').slice(0,10).split('-');
+  return p.length === 3 ? p[2] + '/' + p[1] : String(iso || '');
+}
+function marcar(){ sucio = true; $('guardar').disabled = false; est('Hay cambios sin guardar.'); }
+
+// ── el ciclo del resumen ──────────────────────────────────────────────────
+// El dia de cierre no siempre cae el 26: el resumen de octubre de 2026 cerro
+// el 29. Los consumos leidos de un resumen del banco traen su ciclo escrito y
+// ese manda; la cuenta por fecha es el respaldo para lo que importa Mercado Pago.
+function cicloDe(m){
+  if(m && m.ciclo) return m.ciclo;
+  var p = String((m && m.fecha) || '').slice(0,10).split('-');
+  if(p.length !== 3) return '9999-99';
+  var a = Number(p[0]), mm = Number(p[1]), d = Number(p[2]);
+  if(d > CIERRE){ mm += 1; if(mm > 12){ mm = 1; a += 1; } }
+  return a + '-' + String(mm).padStart(2,'0');
+}
+function cicloNombre(ym){
+  var p = ym.split('-');
+  return 'Resumen de ' + MESES[Number(p[1]) - 1] + ' ' + p[0];
+}
+function ymMas(ym, n){
+  var a = Number(ym.slice(0,4)), m = Number(ym.slice(5)) + n;
+  a += Math.floor((m - 1) / 12); m = ((m - 1) % 12) + 1;
+  return a + '-' + String(m).padStart(2,'0');
+}
+function ymTexto(ym){
+  var p = ym.split('-');
+  return MESES[Number(p[1]) - 1] + ' ' + p[0];
+}
+
+function deTarjeta(){
+  return (S.movs || []).filter(function(m){
+    return m.medio === 'credito' && m.tipo !== 'ingreso';
+  });
+}
+
+// ── quién lo paga ─────────────────────────────────────────────────────────
+// Se escribe en el movimiento y también en un mapa aparte con el id, así la
+// marca sobrevive si el resumen se vuelve a importar.
+function tags(){ if(!S.tarjetaTags) S.tarjetaTags = {}; return S.tarjetaTags; }
+function quienDe(m){
+  var t = tags()[m.id];
+  if(t && t.quien) return t.quien;
+  return m.quien || 'yo';
+}
+function cubreMama(m){ return quienDe(m) === 'mama'; }
+// Al marcar se recuerda lo que era antes, así desmarcar un consumo del TP de
+// la facu lo devuelve al TP y no lo deja como un gasto común.
+function setMama(m, si){
+  var t = tags(); t[m.id] = t[m.id] || {};
+  var q;
+  if(si){
+    if(quienDe(m) !== 'mama') t[m.id].antes = quienDe(m);
+    q = 'mama';
+  } else {
+    q = t[m.id].antes || 'yo';
+  }
+  m.quien = q; t[m.id].quien = q;
+  marcar();
+}
+
+// ── la deuda, a partir de lo marcado ──────────────────────────────────────
+// Un resumen entra en la deuda hasta que se termina de pagar. Lo que no entra
+// queda a la vista igual, para poder mirarlo.
+function cuentaCiclo(ym, lista){
+  var total = 0, cubre = 0, facu = 0;
+  lista.forEach(function(m){
+    total += Number(m.monto) || 0;
+    if(cubreMama(m)) cubre += Number(m.monto) || 0;
+    else if(quienDe(m) === 'facu') facu += Number(m.monto) || 0;
+  });
+  return { ym: ym, total: redondo(total), cubre: redondo(cubre), facu: redondo(facu),
+           vos: redondo(total - cubre) };
+}
+function deudaTotal(cuentas){
+  var d = 0;
+  cuentas.forEach(function(c){ if(enDeuda[c.ym]) d += c.vos; });
+  return redondo(d);
+}
+
+// Cuándo se salda, con la misma cuenta que hace la app en «Plan mamá».
+function cuandoSalda(deuda){
+  var p = (S && S.plan) || {};
+  var sueldo = Number(p.sueldo)||0, mensual = Number(p.mensualidad)||0;
+  var costo = Number(p.costoVida)||0, ig = Number(p.ig)||0, otros = Number(p.otros)||0;
+  var hasta = (p.cuotaMP && p.cuotaMP.hasta) || null;
+  var cuota = Number(p.cuotaMP && p.cuotaMP.monto)||0;
+  var ajustes = p.ajustes || {};
+  if(!sueldo || !mensual || !costo) return '';
+  var saldo = deuda, ym = p.desde || '', g = 0, ultimo = '';
+  if(!ym) return '';
+  while(saldo > 0 && g++ < 60){
+    var pac = ajustes[ym];
+    var hay = pac !== undefined && pac !== null && pac !== '';
+    var pasa = hay ? (Number(pac)||0) : mensual;
+    var extra = (hasta && ym <= hasta) ? cuota : 0;
+    var crudo = sueldo + otros + pasa - costo - ig - extra;
+    var desc = hay ? Math.min(Math.max(0, mensual - pasa), saldo)
+                   : Math.min(Math.max(0, crudo), saldo);
+    if(desc <= 0 && g > 3) return 'Con este presupuesto no se salda';
+    saldo = redondo(saldo - desc);
+    ultimo = ym;
+    ym = ymMas(ym, 1);
+  }
+  return ultimo ? 'Saldás en ' + ymTexto(ultimo) + ' · ' + g + (g === 1 ? ' mes' : ' meses') : '';
+}
+
+// ── dibujar ───────────────────────────────────────────────────────────────
+// Cada ciclo deja acá su manera de recalcularse: tocar una fila no redibuja la
+// pantalla entera, que perdería el scroll.
+var refrescos = [];
+function pintarTotales(){
+  var cuentas = refrescos.map(function(f){ return f(); });
+  var d = deudaTotal(cuentas);
+  $('deudaN').innerHTML = plata(d) + '<small>Le debés a tu mamá</small>' +
+    '<div class="cuando">' + cuandoSalda(d) + '</div>';
+}
+
+function pintar(){
+  var cont = $('contenido');
+  cont.innerHTML = '';
+  refrescos = [];
+
+  var lista = deTarjeta();
+  if(!lista.length){
+    cont.innerHTML = '<div class="card"><div class="vacio">No hay consumos con la tarjeta.</div></div>';
+    return;
+  }
+
+  var porCiclo = {}, orden = [];
+  lista.forEach(function(m){
+    var ym = cicloDe(m);
+    if(!porCiclo[ym]){ porCiclo[ym] = []; orden.push(ym); }
+    porCiclo[ym].push(m);
+  });
+  orden.sort().reverse();
+
+  orden.forEach(function(ym){
+    cont.appendChild(tarjetaCiclo(ym, porCiclo[ym]));
+  });
+  pintarTotales();
+}
+
+function tarjetaCiclo(ym, movs){
+  movs.sort(function(a,b){ return String(a.fecha) < String(b.fecha) ? -1 : 1; });
+
+  var card = document.createElement('div');
+  card.className = 'card';
+
+  var h = document.createElement('div');
+  h.className = 'ciclo-h';
+  var izq = document.createElement('div');
+  izq.innerHTML = '<div class="ciclo-t">' + cicloNombre(ym) + '</div>' +
+                  '<div class="ciclo-n" data-n></div>';
+  h.appendChild(izq);
+
+  var lbl = document.createElement('label');
+  lbl.className = 'endeuda';
+  var chk = document.createElement('input');
+  chk.type = 'checkbox';
+  chk.checked = !!enDeuda[ym];
+  chk.addEventListener('change', function(){
+    enDeuda[ym] = chk.checked;
+    card.className = 'card' + (chk.checked ? '' : ' fuera');
+    marcar();
+    pintarTotales();
+  });
+  lbl.appendChild(chk);
+  lbl.appendChild(document.createTextNode('entra en la deuda'));
+  h.appendChild(lbl);
+  card.appendChild(h);
+  if(!enDeuda[ym]) card.className = 'card fuera';
+
+  var tot = document.createElement('div');
+  tot.className = 'tot';
+  tot.innerHTML =
+     '<div><span>Total del resumen</span><strong data-t></strong></div>'
+    +'<div class="mama"><span>Lo cubre mamá</span><strong data-c></strong></div>'
+    +'<div class="vos"><span>Te toca a vos</span><strong data-v></strong></div>';
+  card.appendChild(tot);
+
+  var acc = document.createElement('div');
+  acc.className = 'acciones';
+  var bNada = document.createElement('button');
+  bNada.className = 'mini'; bNada.type = 'button'; bNada.textContent = 'Desmarcar todo';
+  acc.appendChild(bNada);
+  card.appendChild(acc);
+
+  var filas = [];
+  movs.forEach(function(m){
+    var f = document.createElement('button');
+    f.type = 'button';
+    f.className = 'fila' + (cubreMama(m) ? ' si' : '');
+    f.innerHTML =
+       '<span class="tick">✓</span>'
+      +'<span class="f-txt"><span class="f-desc"></span>'
+      +'<span class="f-fecha">' + fechaCorta(m.fecha) + '</span></span>'
+      +'<span class="f-monto">' + plata(m.monto) + '</span>';
+    f.querySelector('.f-desc').textContent = m.desc || '(sin nombre)';
+    if(quienDe(m) === 'facu'){
+      var p = document.createElement('span');
+      p.className = 'pill'; p.textContent = 'TP facu';
+      f.querySelector('.f-desc').appendChild(p);
+    }
+    f.addEventListener('click', function(){
+      var si = !cubreMama(m);
+      setMama(m, si);
+      f.className = 'fila' + (si ? ' si' : '');
+      refrescar();
+      pintarTotales();
+    });
+    filas.push(f);
+    card.appendChild(f);
+  });
+
+  bNada.addEventListener('click', function(){
+    movs.forEach(function(m, i){
+      if(cubreMama(m)){ setMama(m, false); filas[i].className = 'fila'; }
+    });
+    refrescar();
+    pintarTotales();
+  });
+
+  function refrescar(){
+    var c = cuentaCiclo(ym, movs);
+    tot.querySelector('[data-t]').textContent = plata(c.total);
+    tot.querySelector('[data-c]').textContent = plata(c.cubre);
+    tot.querySelector('[data-v]').textContent = plata(c.vos);
+    izq.querySelector('[data-n]').textContent =
+      movs.length + ' consumos' + (c.facu ? ' · ' + plata(c.facu) + ' del TP de la facu' : '');
+    return c;
+  }
+  refrescos.push(refrescar);
+  refrescar();
+  return card;
+}
+
+// ── leer y guardar ────────────────────────────────────────────────────────
+function cargar(){
+  est('Leyendo…');
+  $('guardar').disabled = true;
+  fetch(API + '/app', { headers: cab(), cache: 'no-store' })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(!d || !d.movs) throw new Error('El Worker no devolvió el panel.');
+      S = d;
+      base = d.updatedAt || null;
+      sucio = false;
+      enDeuda = {};
+      // Qué resúmenes forman la deuda. Si el plan no lo dice, son los que ya
+      // estaban en «De dónde sale», y si tampoco, los dos más nuevos.
+      var p = S.plan || {};
+      if(Array.isArray(p.ciclos) && p.ciclos.length){
+        p.ciclos.forEach(function(ym){ enDeuda[ym] = true; });
+      } else {
+        var det = Array.isArray(p.detalle) ? p.detalle : [];
+        det.forEach(function(e){ if(e && e.ym) enDeuda[e.ym] = true; });
+        if(!Object.keys(enDeuda).length){
+          var ys = {};
+          deTarjeta().forEach(function(m){ ys[cicloDe(m)] = 1; });
+          Object.keys(ys).sort().reverse().slice(0,2).forEach(function(ym){ enDeuda[ym] = true; });
+        }
+      }
+      pintar();
+      var marcados = deTarjeta().filter(cubreMama).length;
+      est(deTarjeta().length + ' consumos · <b>' + marcados + '</b> marcados como de mamá');
+    })
+    .catch(function(e){ est('No se pudo leer: ' + e.message, 'mal'); });
+}
+
+function guardar(){
+  if(!S) return;
+  $('guardar').disabled = true;
+  est('Guardando…');
+
+  // Rehacer el plan con lo marcado: el detalle de «De dónde sale» y el número
+  // de la deuda salen de acá, no se escriben a mano en ningún otro lado.
+  var porCiclo = {};
+  deTarjeta().forEach(function(m){
+    var ym = cicloDe(m);
+    (porCiclo[ym] = porCiclo[ym] || []).push(m);
+  });
+  var viejos = {};
+  ((S.plan && S.plan.detalle) || []).forEach(function(e){ if(e && e.ym) viejos[e.ym] = e; });
+
+  var ciclos = Object.keys(enDeuda).filter(function(ym){ return enDeuda[ym]; }).sort();
+  var detalle = ciclos.map(function(ym){
+    var c = cuentaCiclo(ym, porCiclo[ym] || []);
+    var v = viejos[ym] || {};
+    var cubiertos = (porCiclo[ym] || []).filter(cubreMama);
+    return {
+      ym: ym,
+      t: 'Deuda de ' + MESES[Number(ym.slice(5)) - 1],
+      total: c.total,
+      cubre: c.cubre,
+      cubreQue: cubiertos.length + (cubiertos.length === 1 ? ' consumo' : ' consumos'),
+      nota: v.nota || ''
+    };
+  });
+  var deuda = redondo(detalle.reduce(function(a, e){ return a + (e.total - e.cubre); }, 0));
+  if(!detalle.length){
+    est('Marcá al menos un resumen como «entra en la deuda».', 'mal');
+    $('guardar').disabled = false;
+    return;
+  }
+
+  S.plan = Object.assign({}, S.plan, { detalle: detalle, deuda: deuda, ciclos: ciclos });
+
+  var cuerpo = JSON.parse(JSON.stringify(S));
+  cuerpo.updatedAt = new Date().toISOString();
+  cuerpo.baseUpdatedAt = base;
+  fetch(API + '/app', { method:'POST', headers: cab(), body: JSON.stringify(cuerpo) })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d && d.conservado){
+        est('No se guardó: otra pestaña lo cambió. Cerrá la app y apretá Recargar.', 'mal');
+        $('guardar').disabled = false;
+        return;
+      }
+      if(!d || !d.ok) throw new Error((d && d.error) || 'respuesta rara');
+      base = d.guardadoEn || cuerpo.updatedAt;
+      S.updatedAt = base;
+      sucio = false;
+      est('Guardado. La deuda quedó en <b>' + plata(deuda) + '</b>.', 'ok');
+    })
+    .catch(function(e){
+      est('No se pudo guardar: ' + e.message, 'mal');
+      $('guardar').disabled = false;
+    });
+}
+
+$('recargar').addEventListener('click', function(){
+  if(sucio && !confirm('Hay cambios sin guardar. ¿Recargar igual?')) return;
+  cargar();
+});
+$('guardar').addEventListener('click', guardar);
+window.addEventListener('beforeunload', function(e){
+  if(sucio){ e.preventDefault(); e.returnValue = ''; }
+});
+
+cargar();
+})();
+</script>
+</body>
+</html>
