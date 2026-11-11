@@ -506,7 +506,11 @@ function guardar(){
       t: 'Deuda de ' + MESES[Number(ym.slice(5)) - 1],
       total: c.total,
       cubre: c.cubre,
-      cubreQue: cubiertos.length + (cubiertos.length === 1 ? ' consumo' : ' consumos'),
+      // Cuando son pocos, decir cuáles: en el panel se lee mejor «Hospital
+      // Italiano» que «1 consumo».
+      cubreQue: cubiertos.length && cubiertos.length <= 3
+        ? cubiertos.map(function(m){ return m.desc || 'sin nombre'; }).join(', ')
+        : cubiertos.length + ' consumos',
       nota: v.nota || ''
     };
   });
