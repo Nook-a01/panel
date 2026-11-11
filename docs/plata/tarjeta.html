@@ -56,6 +56,7 @@ h1{font-family:var(--f-display); font-size:22px; margin:0 0 4px; letter-spacing:
   flex-wrap:wrap; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--line);
 }
 .ciclo-t{font-family:var(--f-display); font-size:16px; font-weight:700}
+.ciclo-v{display:block; font-family:var(--f-mono); font-size:11px; font-weight:400; color:var(--accent-ink); margin-top:3px; letter-spacing:.02em}
 .ciclo-n{font-family:var(--f-mono); font-size:13px; color:var(--ink-3)}
 .tot{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; margin-bottom:12px}
 .tot div{background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:9px 11px}
@@ -195,7 +196,18 @@ function cicloDe(iso){
 }
 function cicloNombre(ym){
   var p = ym.split('-');
-  return 'Cierra el ' + CIERRE + ' de ' + MESES[Number(p[1]) - 1] + ' ' + p[0];
+  return 'Resumen de ' + MESES[Number(p[1]) - 1] + ' ' + p[0];
+}
+// Del resumen en curso el banco da la fecha exacta de cierre y de vencimiento.
+// De los anteriores no se guarda ninguna, así que no se inventa.
+function vence(ym){
+  var tj = (S && S.tarjeta) || {};
+  if(!tj.cierre) return '';
+  var c = String(tj.cierre).split('/');          // dd/mm/aaaa
+  if(c.length !== 3) return '';
+  if(c[2] + '-' + c[1] !== ym) return '';
+  return '<span class="ciclo-v">cierra ' + tj.cierre +
+         (tj.vencimiento ? ' · vence ' + tj.vencimiento : '') + '</span>';
 }
 
 // ── quién lo paga ─────────────────────────────────────────────────────────
@@ -278,8 +290,8 @@ function pintar(){
   if(tj.dolares){
     var u = document.createElement('div');
     u.className = 'card';
-    u.innerHTML = '<div class="usd">En el resumen en curso también hay <b>USD ' +
-      tj.dolares + '</b> en dólares. Eso lo pagás vos: no entra en lo que cubre tu mamá.</div>';
+    u.innerHTML = '<div class="usd">El resumen en curso tiene <b>USD ' + tj.dolares +
+      '</b> en dólares. Ya están en la lista, pasados a pesos a $1.550. Los pagás vos.</div>';
     cont.appendChild(u);
   }
 
@@ -323,7 +335,7 @@ function tarjetaCiclo(ym, movs){
       else if(q === 'facu') tFacu += v;
       else tYo += v;
     });
-    h.innerHTML = '<div class="ciclo-t">' + cicloNombre(ym) + '</div>' +
+    h.innerHTML = '<div class="ciclo-t">' + cicloNombre(ym) + vence(ym) + '</div>' +
                   '<div class="ciclo-n">' + movs.length + ' consumos · ' + plata(total) + '</div>';
     t.innerHTML =
       '<div class="yo"><span>Te lo descuenta</span><strong>' + plata(tYo) + '</strong></div>' +
