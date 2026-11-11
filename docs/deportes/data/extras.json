@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T02:50:12.253Z",
+ "actualizado": "2026-11-11T10:53:44.876Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -971,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1255,6 +1256,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Brazil revenge mission hands Japan opportunity to finish Hajime Moriyasu legacy on a high",
+     "resumen": "Despite it being a friendly match, Japan will have much to play for against Brazil on Saturday -- for more than one reason.",
+     "fecha": "2026-11-11T07:31:16Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1111/r1744366_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50451094/brazil-revenge-mission-japan-hajime-moriyasu-legacy"
+    },
     {
      "titulo": "Keller: USMNT roster will understand if Pochettino joins Man United",
      "resumen": "Keller: USMNT roster will understand if Pochettino joins Man United",
