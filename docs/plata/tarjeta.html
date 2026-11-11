@@ -187,7 +187,14 @@ function fechaCorta(iso){
 // ── el ciclo del resumen ──────────────────────────────────────────────────
 // Un consumo del 27 de octubre entra en el resumen que cierra el 26 de
 // noviembre. Por eso el ciclo no es el mes del gasto.
-function cicloDe(iso){
+//
+// El dia de cierre no siempre es el 26: el resumen de octubre de 2026 cerro
+// el 29. Por eso, cuando el movimiento viene de un resumen leido del banco,
+// trae su ciclo escrito y ese manda. La cuenta por fecha es solo el respaldo
+// para los movimientos que importa Mercado Pago.
+function cicloDe(mov){
+  if(mov && mov.ciclo) return mov.ciclo;
+  var iso = (mov && mov.fecha !== undefined) ? mov.fecha : mov;
   var p = String(iso || '').slice(0,10).split('-');
   if(p.length !== 3) return '9999-99';
   var a = Number(p[0]), m = Number(p[1]), d = Number(p[2]);
@@ -270,7 +277,7 @@ function pintar(){
   var porCiclo = {};
   var orden = [];
   lista.forEach(function(m){
-    var ym = cicloDe(m.fecha);
+    var ym = cicloDe(m);
     if(!porCiclo[ym]){ porCiclo[ym] = []; orden.push(ym); }
     porCiclo[ym].push(m);
   });
