@@ -190,7 +190,26 @@ function fechaCorta(iso){
   var p = String(iso || '').slice(0,10).split('-');
   return p.length === 3 ? p[2] + '/' + p[1] : String(iso || '');
 }
-function marcar(){ sucio = true; $('guardar').disabled = false; est('Hay cambios sin guardar.'); }
+function marcar(){
+  sucio = true;
+  var g = $('guardar');
+  g.disabled = false;
+  g.textContent = 'Guardar';
+  est('Hay cambios sin guardar.');
+}
+// Si el guardado falla, la línea de abajo es fácil de no ver y uno se queda
+// creyendo que quedó. Mejor que frene y lo diga.
+function fallo(msg){
+  est(msg.split('\n')[0], 'mal');
+  $('guardar').disabled = false;
+  window.alert(msg);
+}
+function listo(){
+  var g = $('guardar');
+  g.textContent = 'Guardado ✓';
+  g.disabled = true;
+  setTimeout(function(){ if(!sucio) g.textContent = 'Guardar'; }, 4000);
+}
 
 // ── el ciclo del resumen ──────────────────────────────────────────────────
 // El dia de cierre no siempre cae el 26: el resumen de octubre de 2026 cerro
@@ -460,6 +479,10 @@ function cargar(){
 
 function guardar(){
   if(!S) return;
+  if(!clave()){
+    fallo('Falta la clave del panel.\n\nAbrí la app de Plata una vez en este navegador y volvé.');
+    return;
+  }
   $('guardar').disabled = true;
   est('Guardando…');
 
@@ -503,8 +526,8 @@ function guardar(){
     .then(function(r){ return r.json(); })
     .then(function(d){
       if(d && d.conservado){
-        est('No se guardó: otra pestaña lo cambió. Cerrá la app y apretá Recargar.', 'mal');
-        $('guardar').disabled = false;
+        fallo('No se guardó: el panel cambió en otro lado mientras marcabas.\n\n' +
+              'Cerrá la app de Plata, apretá Recargar acá y marcá de nuevo.');
         return;
       }
       if(!d || !d.ok) throw new Error((d && d.error) || 'respuesta rara');
@@ -512,10 +535,10 @@ function guardar(){
       S.updatedAt = base;
       sucio = false;
       est('Guardado. La deuda quedó en <b>' + plata(deuda) + '</b>.', 'ok');
+      listo();
     })
     .catch(function(e){
-      est('No se pudo guardar: ' + e.message, 'mal');
-      $('guardar').disabled = false;
+      fallo('No se pudo guardar.\n\n' + e.message);
     });
 }
 
