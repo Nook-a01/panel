@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T02:50:12.253Z",
+ "actualizado": "2026-11-11T18:41:12.015Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 13,
+   "total": 12,
    "proximos": 6
   },
   {
@@ -76,27 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 17",
-   "sede": "Marina Bay Street Circuit, Singapore",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-17",
-   "anio": 2026,
-   "ronda": "17",
-   "sesion": "Carrera",
-   "titulo": "GP Singapore",
-   "inicio": "2026-10-11T12:00:00.000Z"
-  },
   {
    "id": "espn-401913958",
    "miLado": "local",

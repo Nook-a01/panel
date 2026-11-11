@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T10:53:44.876Z",
+ "actualizado": "2026-11-11T18:41:12.015Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -628,8 +628,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1032,9 +1033,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1070,8 +1070,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1094,8 +1095,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1616,8 +1618,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1736,8 +1739,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1934,6 +1938,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Will MLS teams' regular-season momentum last the two weeks before the playoffs start?",
+     "resumen": "The MLS regular season ended on Saturday, but it will be nearly two weeks before the playoffs begin. It's a long time for a hot team to cool off.",
+     "fecha": "2026-11-11T14:07:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1110/r1744192_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50442984/will-mls-teams-regular-season-momentum-last-two-weeks-playoffs-start"
+    },
+    {
      "titulo": "Ex-San Diego FC forward Cédric Bakambu files fair housing lawsuit",
      "resumen": "Former San Diego FC forward Cédric Bakambu has filed a housing discrimination lawsuit in federal court.",
      "fecha": "2026-11-10T17:37:03Z",
@@ -1967,13 +1978,6 @@
      "fecha": "2026-11-09T17:14:39Z",
      "imagen": "https://a.espncdn.com/photo/2026/1109/r1743576_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50433219/pierre-brothers-face-usmnt-haiti-nations-league-qfs"
-    },
-    {
-     "titulo": "Every eliminated MLS team: What worked and what didn't in 2026, what needs improving in 2027?",
-     "resumen": "After every team in MLS is eliminated from postseason contention, ESPN details the best and worst of their seasons, and their priorities for 2027.",
-     "fecha": "2026-11-09T14:07:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742062_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50388883/every-eliminated-mls-team-worked-didnt-2026-needs-improving-2027"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2675,6 +2679,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
+     "resumen": "Kayla Harrison thought she had found a teammate, but Amanda Nunes saw a future rival. What really happened?",
+     "fecha": "2026-11-11T16:54:40Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/mma_nunes-harrison-att_fc_16x9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50428840/amanda-nunes-kayla-harrison-ufc-rivals"
+    },
+    {
+     "titulo": "Winning top-10 matchup elevates UFC strawweight Tatiana Suarez in P4P rankings",
+     "resumen": "Tatiana Suarez secures strawweight win with ground control, earning a boost in ESPN's P4P top 10.",
+     "fecha": "2026-11-11T16:12:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1110/r1744166_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-rankings-tatiana-suarez-rises"
+    },
+    {
      "titulo": "Tatiana Suarez secures top-3 spot, positions herself for strawweight title shot",
      "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
      "fecha": "2026-11-10T13:03:06Z",
@@ -2701,20 +2719,6 @@
      "fecha": "2026-11-09T02:05:21Z",
      "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/ufc/story/_/id/50427992/trump-says-press-secretary-offer-ufc-white-was-joke"
-    },
-    {
-     "titulo": "Conor McGregor insists it has to be Max Holloway for final UFC fight",
-     "resumen": "Conor McGregor has again insisted he only wants Max Holloway for his final UFC fight.",
-     "fecha": "2026-11-08T15:27:14Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0721/r1691956_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/ufc/story/_/id/50419541/conor-mcgregor-max-holloway-ufc"
-    },
-    {
-     "titulo": "Walker stuns Cortes-Acosta for second straight win",
-     "resumen": "Johnny Walker continues rise in heavy weight ranks with KO win over Waldo Cortes-Acosta.",
-     "fecha": "2026-11-08T04:56:12Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/dm_261107_MMA_Highlight_Walker_stuns_Cortes_Acosta_for_second_straight_win_20261108_AUS_ONLY/dm_261107_MMA_Highlight_Walker_stuns_Cortes_Acosta_for_second_straight_win_20261108_AUS_ONLY.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50417061/walker-stuns-cortes-acosta-second-straight-win"
     }
    ],
    "resultados": [
