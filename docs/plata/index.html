@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "30";
+  var ESTA = "31";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -833,6 +833,10 @@ nav.tabs .tab-mas{margin-left:auto; padding:8px 13px; font-size:16px; line-heigh
         </div>
       </div>
       <div class="stack">
+        <div class="card" id="deudaDeCard" hidden>
+          <div class="hd"><h3>De dónde sale</h3><span class="hint">los resúmenes de la tarjeta</span></div>
+          <div class="bd" id="deudaDe"></div>
+        </div>
         <div class="card">
           <div class="hd"><h3>Tu mes</h3></div>
           <div class="bd" id="deudaMes"></div>
@@ -2535,6 +2539,21 @@ function renderDeuda(){
     ? 'Saldás en <b>'+esc(ymLabel(saldaEn))+'</b> · '+filas.length+(filas.length===1?' mes':' meses')
     : 'Con este presupuesto no llega a saldarse: hay que bajar el costo de vida o estirarlo.';
   $('#deudaHint').textContent = p.nivel ? 'viviendo «'+p.nivel+'»' : '';
+
+  // De dónde sale el número: cada resumen de la tarjeta, lo que cubre ella y
+  // lo que queda a cargo de él. Se guarda en el plan al recalcular la deuda,
+  // así el número nunca es un número suelto.
+  const det = Array.isArray(p.detalle) ? p.detalle : [];
+  $('#deudaDeCard').hidden = !det.length;
+  if(det.length){
+    $('#deudaDe').innerHTML = det.map(d=>
+         '<div class="kv"><span>'+esc(d.t||'')+'</span><b>'+money(Number(d.total)||0)+'</b></div>'
+        +(Number(d.cubre) ? '<div class="kv tenue-t"><span>· lo cubre tu mamá'+(d.cubreQue?' ('+esc(d.cubreQue)+')':'')+'</span><b>−'+money(d.cubre)+'</b></div>' : '')
+        +'<div class="kv"><span style="font-weight:600;color:var(--ink)">· te toca a vos</span><b style="color:var(--accent)">'+money((Number(d.total)||0)-(Number(d.cubre)||0))+'</b></div>'
+        +(d.nota ? '<p class="frase tenue-t" style="margin:2px 0 10px">'+esc(d.nota)+'</p>' : '<div style="height:10px"></div>')
+      ).join('')
+      + '<div class="kv"><span style="font-weight:700;color:var(--ink)">Total</span><b style="font-weight:700">'+money(Number(p.deuda)||0)+'</b></div>';
+  }
 
   const ym0 = p.desde || ymNow(), extra0 = extraDe(ym0);
   const libre0 = sueldo + mensual - costo - ig - extra0;
