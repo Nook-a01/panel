@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "32";
+  var ESTA = "33";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -2517,14 +2517,25 @@ function renderDeuda(){
   const cuotaHasta = (p.cuotaMP && p.cuotaMP.hasta) || null;
   const cuotaMonto = Number(p.cuotaMP && p.cuotaMP.monto)||0;
   const extraDe = ym => (cuotaHasta && ym <= cuotaHasta) ? cuotaMonto : 0;
+  // Lo que entra todos los meses que no es ni el sueldo ni la mensualidad:
+  // hoy, la plata de la abuela. Sin esto el plan se iba cuatro meses más lejos.
+  const otros = Number(p.otros)||0;
+  // Meses pactados a mano: cuando se acuerda de antemano cuánto te pasa un
+  // mes puntual. Lo que no te pasa ese mes es lo que descuenta, sin mirar
+  // cuánto te sobraba.
+  const ajustes = p.ajustes || {};
 
   let saldo = Number(p.deuda)||0;
   let ym = p.desde || ymNow();
   const filas = []; let saldaEn = null, guard = 0, ceros = 0;
   while(saldo > 0 && guard++ < 60){
-    const crudo = sueldo + mensual - costo - ig - extraDe(ym);
-    const libre = Math.max(0, crudo);
-    const desc = Math.min(libre, saldo);
+    const pactado = ajustes[ym];
+    const hayPacto = pactado !== undefined && pactado !== null && pactado !== '';
+    const pasa0 = hayPacto ? (Number(pactado)||0) : mensual;
+    const crudo = sueldo + otros + pasa0 - costo - ig - extraDe(ym);
+    const desc = hayPacto
+      ? Math.min(Math.max(0, mensual - pasa0), saldo)
+      : Math.min(Math.max(0, crudo), saldo);
     saldo = Math.round((saldo - desc) * 100) / 100;
     filas.push({ ym, pasa: mensual - desc, desc, saldo, corto: crudo < 0 ? crudo : 0 });
     if(saldo <= 0) saldaEn = ym;
@@ -2556,16 +2567,19 @@ function renderDeuda(){
   }
 
   const ym0 = p.desde || ymNow(), extra0 = extraDe(ym0);
-  const libre0 = sueldo + mensual - costo - ig - extra0;
+  const pacto0 = ajustes[ym0];
+  const pasa0 = (pacto0 !== undefined && pacto0 !== null && pacto0 !== '') ? (Number(pacto0)||0) : mensual;
+  const libre0 = sueldo + otros + pasa0 - costo - ig - extra0;
   $('#deudaMes').innerHTML =
      '<div class="kv"><span>Sueldo</span><b>'+money(sueldo)+'</b></div>'
-    +'<div class="kv"><span>Mensualidad de mamá</span><b>'+money(mensual)+'</b></div>'
+    +'<div class="kv"><span>Mensualidad de mamá'+(pasa0!==mensual?' (pactado para '+esc(ymLabel(ym0))+')':'')+'</span><b>'+money(pasa0)+'</b></div>'
+    +(otros ? '<div class="kv"><span>'+esc(p.otrosQue || 'Otros ingresos')+'</span><b>'+money(otros)+'</b></div>' : '')
     +'<div class="kv"><span>Costo de vida'+(p.nivel?' ('+esc(p.nivel)+')':'')+'</span><b>−'+money(costo)+'</b></div>'
     +(ig ? '<div class="kv"><span>Instagram (campañas)</span><b>−'+money(ig)+'</b></div>' : '')
     +(extra0 ? '<div class="kv"><span>Cuota Mercado Pago (última: '+esc(ymLabel(cuotaHasta))+')</span><b>−'+money(extra0)+'</b></div>' : '')
-    +'<div class="kv"><span style="font-weight:600;color:var(--ink)">Te queda para devolverle</span><b style="color:'+(libre0>=0?'var(--accent)':'var(--crit)')+'">'+money(libre0)+'</b></div>';
+    +'<div class="kv"><span style="font-weight:600;color:var(--ink)">'+(pasa0!==mensual?'Te queda para vivir':'Te queda para devolverle')+'</span><b style="color:'+(libre0>=0?'var(--accent)':'var(--crit)')+'">'+money(libre0)+'</b></div>';
 
-  const libreFinal = sueldo + mensual - costo - ig;
+  const libreFinal = sueldo + otros + mensual - costo - ig;
   $('#deudaDespues').innerHTML =
      '<div class="kv"><span>Mensualidad completa</span><b>'+money(mensual)+'</b></div>'
     +'<div class="kv"><span>Libre por mes</span><b>'+money(libreFinal)+'</b></div>'
