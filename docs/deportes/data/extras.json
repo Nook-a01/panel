@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T18:41:12.015Z",
+ "actualizado": "2026-11-12T01:31:38.220Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -628,9 +628,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "141790",
@@ -947,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1033,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1070,9 +1069,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1095,9 +1093,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1259,6 +1256,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Football Australia boss flies to Amman for crisis talks over Jordan friendly",
+     "resumen": "Football Australia has told ESPN it remains confident the Socceroos will play two games during the November international window, after chief executive Martin Kugeler flew to Amman on Wednesday for crisis talks with the Jordan FA.",
+     "fecha": "2026-11-11T23:49:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1111/r1744607_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50456105/football-australia-boss-flies-amman-crisis-talks-jordan-friendly"
+    },
+    {
      "titulo": "Brazil revenge mission hands Japan opportunity to finish Hajime Moriyasu legacy on a high",
      "resumen": "Despite it being a friendly match, Japan will have much to play for against Brazil on Saturday -- for more than one reason.",
      "fecha": "2026-11-11T07:31:16Z",
@@ -1327,13 +1331,6 @@
      "fecha": "2026-11-05T12:03:06Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50387532/catches-everyone-even-cristiano-ronaldo"
-    },
-    {
-     "titulo": "Socceroos Depth Chart: Will Australia's next No. 9 please stand up?",
-     "resumen": "With the Asian Cup's postponement, Tony Popovic will no doubt look to experiment against Qatar and Jordan. So will anyone put their hands up for the vacant Socceroos striker spot?",
-     "fecha": "2026-11-05T02:18:27Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741350_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50383766/socceroos-depth-chart-australias-next-no-9-please-stand-up"
     }
    ],
    "resultados": null,
@@ -1570,8 +1567,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1618,9 +1616,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1679,8 +1676,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1739,9 +1737,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -2679,6 +2676,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "MMA stars Merab Dvalishvili, Usman Nurmagomedov brawl at hotel in Abu Dhabi",
+     "resumen": "MMA stars Merab Dvalishvili and Usman Nurmagomedov got into a public brawl at a hotel in Abu Dhabi on Wednesday.",
+     "fecha": "2026-11-11T23:45:29Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1203/r1584464_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50455764/mma-stars-merab-dvalishvili-usman-nurmagomedov-brawl-hotel"
+    },
+    {
+     "titulo": "UFC's Josh Hokit says he'll 'never' regret vulgar Michelle Obama remarks",
+     "resumen": "UFC fighter Josh Hokit, who will challenger for the heavyweight title on Saturday, says he'll \"never\" regret his vulgar comments about former First Lady Michelle Obama,",
+     "fecha": "2026-11-11T19:39:04Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0413/r1643046_576x324_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50454234/ufc-hokit-never-regret-vulgar-michelle-obama-remarks"
+    },
+    {
      "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
      "resumen": "Kayla Harrison thought she had found a teammate, but Amanda Nunes saw a future rival. What really happened?",
      "fecha": "2026-11-11T16:54:40Z",
@@ -2705,20 +2716,6 @@
      "fecha": "2026-11-10T01:28:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/0605/mma_dana-white-house_16x9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/48995260/donald-trump-dana-white-forged-friendship-combat-sports"
-    },
-    {
-     "titulo": "UFC's Dana White joins Trump at White House briefing",
-     "resumen": "Dana White appeared at a White House press briefing to end questions about whether he would become President Donald Trump's new press secretary.",
-     "fecha": "2026-11-10T00:13:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743780_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50436780/ufc-dana-white-president-donald-trump-press-briefing"
-    },
-    {
-     "titulo": "Trump says White House press secretary offer to UFC's White was a joke",
-     "resumen": "President Donald Trump said he \"was only kidding\" when he announced he had offered the White House press secretary job to UFC CEO Dana White.",
-     "fecha": "2026-11-09T02:05:21Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0615/r1673487_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/ufc/story/_/id/50427992/trump-says-press-secretary-offer-ufc-white-was-joke"
     }
    ],
    "resultados": [

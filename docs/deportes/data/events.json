@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T18:41:12.015Z",
+ "actualizado": "2026-11-12T01:31:38.220Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -761,8 +761,8 @@
    "sport": "futbol",
    "emoji": "⚽",
    "titulo": "Boca Juniors vs Independiente Rivadavia",
-   "inicio": "2026-11-22T20:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-11-26T00:00Z",
+   "horaConfirmada": true,
    "competicion": "Argentine Liga Profesional de Fútbol",
    "sede": "Alberto José Armando (La Bombonera)",
    "local": "Boca Juniors",
