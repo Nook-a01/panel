@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T09:48:20.250Z",
+ "actualizado": "2026-11-12T18:18:06.581Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -946,8 +944,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +969,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1030,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1043,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1222,8 +1224,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1251,6 +1254,20 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "How will Argentina replace Lionel Messi ahead of 2030 World Cup?",
+     "resumen": "Argentina need several players to shoulder the responsibilities that, for two decades, were concentrated in the greatest player in their history.",
+     "fecha": "2026-11-12T10:14:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1110/soc_argentina-after-messi_16x9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50453174/argentina-replacements-lionel-messi"
+    },
+    {
+     "titulo": "Socceroos camp in 'good spirits' as call to play in Jordan looms",
+     "resumen": "Socceroos coach Tony Popovic has declared players are comfortable as administrators work behind the scenes to proceed with a friendly against Jordan.",
+     "fecha": "2026-11-12T10:11:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744726_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50460432/socceroos-camp-good-spirits-call-play-jordan-looms"
+    },
     {
      "titulo": "Football Australia boss flies to Amman for crisis talks over Jordan friendly",
      "resumen": "Football Australia has told ESPN it remains confident the Socceroos will play two games during the November international window, after chief executive Martin Kugeler flew to Amman on Wednesday for crisis talks with the Jordan FA.",
@@ -1308,25 +1325,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50399850/fifa-chief-legal-compliance-officer-steps-down"
     },
     {
-     "titulo": "Ronaldo's Portugal career ended in shame, but at his peak he was a dominant force",
-     "resumen": "Though his national team career finished in parody and mockery, we should remember Cristiano Ronaldo for what he was at his peak: an almost unstoppable player for his country.",
-     "fecha": "2026-11-06T01:13:29Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1105/r1741457_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50387949/cristiano-ronaldo-portugal-retirement-reaction-analysis-euro-2016-fifa-world-cup"
-    },
-    {
      "titulo": "Marcotti: Ronaldo was one of the greatest of all time",
      "resumen": "Marcotti: Ronaldo was one of the greatest of all time",
      "fecha": "2026-11-05T13:21:08Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50388146/ronaldo-was-one-greatest-all"
-    },
-    {
-     "titulo": "Ogden: Time catches up with everyone, even Cristiano Ronaldo",
-     "resumen": "Ogden: Time catches up with everyone, even Cristiano Ronaldo",
-     "fecha": "2026-11-05T12:03:06Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo/dm_261105_Ogden_Time_catches_up_with_everyone_even_Cristiano_Ronaldo.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50387532/catches-everyone-even-cristiano-ronaldo"
     }
    ],
    "resultados": null,
@@ -1563,8 +1566,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -2618,18 +2622,32 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Liam Lawson and Arvid Lindblad to continue at Racing Bulls for 2027",
+     "resumen": "Liam Lawson will stay in Formula 1 alongside teammate Arvid Lindblad at Racing Bulls in 2027, ending weeks of speculation about the New Zealander's future.",
+     "fecha": "2026-11-12T15:40:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744731_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389094/liam-lawson-arvid-lindblad-racing-bulls-formula-1"
+    },
+    {
+     "titulo": "Lewis Hamilton visits Gaza border, urges Israel to 'let the aid trucks in'",
+     "resumen": "Lewis Hamilton urged Israel to let aid trucks into Gaza after visiting the Rafah border this week, adding in a passionate post \"the past three years of Israel's genocide is appalling.\"",
+     "fecha": "2026-11-12T13:09:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744716_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389071/lewis-hamilton-gaza-israel"
+    },
+    {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-11-12T12:04:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
      "titulo": "Qatar, Abu Dhabi races set to go ahead as F1 rules out Imola backup plan for finale",
      "resumen": "Formula 1 has told Imola it will not be required to hold a season-ending race, meaning the plan to finish 2026 in Qatar and Abh Dhabi is now set in stone.",
      "fecha": "2026-11-10T15:01:30Z",
      "imagen": "https://a.espncdn.com/photo/2025/1207/r1586144_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50442406/qatar-abu-dhabi-imola-f1-2026"
-    },
-    {
-     "titulo": "All-time F1 drivers' and constructors' championship winners",
-     "resumen": "The drivers' championship and constructors' championship are top prizes each Formula 1 season. Check out all-time winners now.",
-     "fecha": "2026-11-10T01:38:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1110/r1743820_110x62_16-9.jpg",
-     "link": "https://www.espn.com/auto/story/_/id/42230928/all-f1-drivers-constructors-championship-winners"
     },
     {
      "titulo": "Toto Wolff: Mercedes face fierce 2027 battle after winning constructors' title",
@@ -2644,20 +2662,6 @@
      "fecha": "2026-11-09T10:22:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1109/r1743471_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50431169/oscar-piastri-mark-webber-f1-mclaren"
-    },
-    {
-     "titulo": "Wet weather mastery by Norris, Verstappen makes Brazil F1's must-see race",
-     "resumen": "Max Verstappen is known for excelling in the rain, but in winning Sunday's wet Brazilian Grand Prix, Lando Norris proved he deserves accolades, too.",
-     "fecha": "2026-11-09T01:59:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743343_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50427335/wet-weather-mastery-lando-norris-max-verstappen-make-sao-paulo-brazil-f1-see-race"
-    },
-    {
-     "titulo": "Max Verstappen's Red Bull a 'disaster to drive' despite front-row finish",
-     "resumen": "Despite racing from 21st on the grid to second at the checkered flag, Max Verstappen said he is convinced more was possible at the São Paulo Grand Prix had his Red Bull not been \"a disaster to drive.\"",
-     "fecha": "2026-11-08T22:22:26Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1743172_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389072/max-verstappen-sao-paulo-grand-prix-brazil-formula-1"
     }
    ],
    "resultados": null,
@@ -2677,9 +2681,23 @@
     {
      "titulo": "MMA stars Merab Dvalishvili, Usman Nurmagomedov brawl at hotel in Abu Dhabi",
      "resumen": "MMA stars Merab Dvalishvili and Usman Nurmagomedov got into a public brawl at a hotel in Abu Dhabi on Wednesday.",
-     "fecha": "2026-11-12T01:32:54Z",
+     "fecha": "2026-11-12T18:01:20Z",
      "imagen": "https://a.espncdn.com/photo/2025/1203/r1584464_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50455764/mma-stars-merab-dvalishvili-usman-nurmagomedov-brawl-hotel"
+    },
+    {
+     "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
+     "resumen": "Kayla Harrison thought she had found a teammate, but Amanda Nunes saw a future rival. What really happened?",
+     "fecha": "2026-11-12T15:41:47Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1109/mma_nunes-harrison-att_fc_16x9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50428840/amanda-nunes-kayla-harrison-ufc-rivals"
+    },
+    {
+     "titulo": "Overeem-Manuwa boxing match to serve as co-main event on Paul-Doumbé card",
+     "resumen": "A six-round boxing match between former UFC stars Alistair Overeem and Jimi Manuwa will serve as the co-main event on the Dec. 24 card headlined by Jake Paul vs. Cedric Doumbé.",
+     "fecha": "2026-11-12T15:13:33Z",
+     "imagen": "https://a.espncdn.com/photo/2020/0902/r739582_600x400_3-2.jpg",
+     "link": "https://www.espn.com/boxing/story/_/id/50461800/paul-doumbe-card-adds-overeem-manuwa-boxing-match-co-main"
     },
     {
      "titulo": "UFC's Josh Hokit says he'll 'never' regret vulgar Michelle Obama remarks",
@@ -2687,13 +2705,6 @@
      "fecha": "2026-11-11T19:39:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/0413/r1643046_576x324_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50454234/ufc-hokit-never-regret-vulgar-michelle-obama-remarks"
-    },
-    {
-     "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
-     "resumen": "Kayla Harrison thought she had found a teammate, but Amanda Nunes saw a future rival. What really happened?",
-     "fecha": "2026-11-11T16:54:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/mma_nunes-harrison-att_fc_16x9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50428840/amanda-nunes-kayla-harrison-ufc-rivals"
     },
     {
      "titulo": "Winning top-10 matchup elevates UFC strawweight Tatiana Suarez in P4P rankings",
@@ -2708,13 +2719,6 @@
      "fecha": "2026-11-10T13:03:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1109/r1743692_2_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
-    },
-    {
-     "titulo": "A timeline of how Donald Trump, Dana White forged friendship through the fights",
-     "resumen": "Donald Trump and Dana White's friendship is on display cageside, on political stages and at the White House.",
-     "fecha": "2026-11-10T01:28:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0605/mma_dana-white-house_16x9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/48995260/donald-trump-dana-white-forged-friendship-combat-sports"
     }
    ],
    "resultados": [
