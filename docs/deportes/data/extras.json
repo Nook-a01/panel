@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T07:54:37.296Z",
+ "actualizado": "2026-11-13T16:19:13.786Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -242,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -1165,9 +1164,8 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285450",
@@ -1239,8 +1237,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1256,6 +1255,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Live updates: USMNT's Pochettino in tears as he agrees to join Man United",
+     "resumen": "USMNT head coach Mauricio Pochettino is leaving to join Manchester United. Follow the story live with ESPN.",
+     "fecha": "2026-11-13T16:15:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1113/r1745277_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50470402/live-updates-mauricio-pochettino-usmnt-man-united"
+    },
     {
      "titulo": "FIFA loses New York court ruling against UEFA in World Cup investor case",
      "resumen": "A judge in Manhattan denied requests by FIFA subsidiaries to block UEFA's attempts to get evidence about Gianni Infantino's failed World Cup investor plan.",
@@ -1318,13 +1324,6 @@
      "fecha": "2026-11-10T04:48:54Z",
      "imagen": "https://a.espncdn.com/photo/2019/0106/r485226_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50439497/football-australia-looking-resolution-socceroos-jordan-game-doubt"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-11-08T10:48:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "Socceroos name seven uncapped players to face Qatar, Jordan",
@@ -1616,9 +1615,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1677,9 +1675,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1690,9 +1687,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1857,7 +1853,7 @@
      "dorsal": "19",
      "posicion": "Forward",
      "posCorta": "F",
-     "edad": 27,
+     "edad": 28,
      "pais": "Mexico",
      "foto": null,
      "lesionado": false
@@ -2621,6 +2617,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
+     "fecha": "2026-11-13T13:42:19Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "Liam Lawson and Arvid Lindblad to continue at Racing Bulls for 2027",
      "resumen": "Liam Lawson will stay in Formula 1 alongside teammate Arvid Lindblad at Racing Bulls in 2027, ending weeks of speculation about the New Zealander's future.",
      "fecha": "2026-11-12T15:40:18Z",
@@ -2649,13 +2652,6 @@
      "link": "https://www.espn.com/f1/story/_/id/50442406/qatar-abu-dhabi-imola-f1-2026"
     },
     {
-     "titulo": "Toto Wolff: Mercedes face fierce 2027 battle after winning constructors' title",
-     "resumen": "Mercedes team principal Toto Wolff has played down the suggestion his team is about to embark on another period of dominance in Formula 1, and believes the battle for the 2027 title has already started.",
-     "fecha": "2026-11-09T10:45:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743473_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50431168/toto-wolff-mercedes-f1-2027"
-    },
-    {
      "titulo": "Oscar Piastri splits from Mark Webber's management after eventful seven years",
      "resumen": "McLaren driver Oscar Piastri has split with the management team headed by ex-Formula 1 driver Mark Webber.",
      "fecha": "2026-11-09T10:22:31Z",
@@ -2678,6 +2674,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Six from Team Nurmagomedov, eight in all get prison time over Dvalishvili brawl",
+     "resumen": "Six members of Usman Nurmagomedov's team and two people who filmed the hotel fight also involving Merab Dvalishvili have been handed six-month prison sentences in Abu Dhabi.",
+     "fecha": "2026-11-13T15:50:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0730/r1695561_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50471378/8-people-get-prison-nurmagomedov-dvalishvili-brawl"
+    },
+    {
+     "titulo": "UFC 334 preview, picks for Ciryl Gane-Josh Hokit and Kayla Harrison-Amanda Nunes",
+     "resumen": "A look at the matchups and experts' picks for both title fights at UFC 334 in New York City.",
+     "fecha": "2026-11-13T12:28:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744909_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50463294/ufc-334-gane-hokit-harrison-nunes-picks"
+    },
+    {
      "titulo": "Overeem-Manuwa boxing match added to Dec. 24 Paul-Doumbé card",
      "resumen": "A six-round boxing match between former UFC stars Alistair Overeem and Jimi Manuwa has been added to the Dec. 24 card headlined by Jake Paul vs. Cedric Doumbé.",
      "fecha": "2026-11-13T07:06:14Z",
@@ -2699,25 +2709,11 @@
      "link": "https://www.espn.com/mma/story/_/id/50465162/ufc-featherweight-mcmillen-ok-club-scare-says-coach"
     },
     {
-     "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
-     "resumen": "Kayla Harrison thought she had found a teammate, but Amanda Nunes saw a future rival. What really happened?",
-     "fecha": "2026-11-12T15:41:47Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/mma_nunes-harrison-att_fc_16x9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50428840/amanda-nunes-kayla-harrison-ufc-rivals"
-    },
-    {
      "titulo": "UFC's Josh Hokit says he'll 'never' regret vulgar Michelle Obama remarks",
      "resumen": "UFC fighter Josh Hokit, who will challenger for the heavyweight title on Saturday, says he'll \"never\" regret his vulgar comments about former First Lady Michelle Obama,",
      "fecha": "2026-11-11T19:39:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/0413/r1643046_576x324_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50454234/ufc-hokit-never-regret-vulgar-michelle-obama-remarks"
-    },
-    {
-     "titulo": "Winning top-10 matchup elevates UFC strawweight Tatiana Suarez in P4P rankings",
-     "resumen": "Tatiana Suarez secures strawweight win with ground control, earning a boost in ESPN's P4P top 10.",
-     "fecha": "2026-11-11T16:12:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1110/r1744166_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-rankings-tatiana-suarez-rises"
     }
    ],
    "resultados": [
