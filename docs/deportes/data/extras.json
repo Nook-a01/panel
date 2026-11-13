@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T18:18:06.581Z",
+ "actualizado": "2026-11-13T00:19:24.956Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -944,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1043,9 +1044,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1255,6 +1255,27 @@
    ],
    "noticias": [
     {
+     "titulo": "FIFA loses New York court ruling against UEFA in World Cup investor case",
+     "resumen": "A judge in Manhattan denied requests by FIFA subsidiaries to block UEFA's attempts to get evidence about Gianni Infantino's failed World Cup investor plan.",
+     "fecha": "2026-11-12T23:26:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0413/r1642668_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50463328/fifa-uefa-case-disclosure-new-york-court-thrive-jp-morgan"
+    },
+    {
+     "titulo": "Argentina coach Lionel Scaloni signs new long-term deal through 2030 World Cup",
+     "resumen": "Lionel Scaloni has signed a new contract to remain as Argentina coach heading into the 2030 World Cup.",
+     "fecha": "2026-11-12T22:36:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744634_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50451803/argentina-coach-lionel-scaloni-new-contract-2030-world-cup"
+    },
+    {
+     "titulo": "Australia friendly with Jordan relocated due to player security concerns",
+     "resumen": "Australia's friendly with Jordan has been moved from Amman to Doha, after Socceroos players voiced their reservations about travelling to the Jordanian capital.",
+     "fecha": "2026-11-12T19:51:24Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744936_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50463459/australia-friendly-jordan-relocated-player-security-concerns"
+    },
+    {
      "titulo": "How will Argentina replace Lionel Messi ahead of 2030 World Cup?",
      "resumen": "Argentina need several players to shoulder the responsibilities that, for two decades, were concentrated in the greatest player in their history.",
      "fecha": "2026-11-12T10:14:06Z",
@@ -1309,27 +1330,6 @@
      "fecha": "2026-11-08T03:42:54Z",
      "imagen": "https://a.espncdn.com/photo/2026/1108/r1742810_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50414784/socceroos-name-seven-uncapped-players-face-qatar-jordan"
-    },
-    {
-     "titulo": "Caribbean Football Union endorses Infantino ahead of FIFA presidential election",
-     "resumen": "The Caribbean Football Union has endorsed Gianni Infantino following regional consultations, boosting his bid ahead of the FIFA presidential March election.",
-     "fecha": "2026-11-06T23:11:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1106/r1742190_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50402359/infantino-secures-caribbean-support-fifa-reelection-bid"
-    },
-    {
-     "titulo": "FIFA's chief legal officer steps down in second high-profile exit",
-     "resumen": "Emilio García Silvero, who has served as FIFA's chief legal and compliance officer for the past eight years, is stepping down from his position.",
-     "fecha": "2026-11-06T16:50:55Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0413/r1642668_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50399850/fifa-chief-legal-compliance-officer-steps-down"
-    },
-    {
-     "titulo": "Marcotti: Ronaldo was one of the greatest of all time",
-     "resumen": "Marcotti: Ronaldo was one of the greatest of all time",
-     "fecha": "2026-11-05T13:21:08Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1105/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time/dm_261105_Marcotti_Ronaldo_was_one_of_the_greatest_of_all_time.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50388146/ronaldo-was-one-greatest-all"
     }
    ],
    "resultados": null,
@@ -1566,9 +1566,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1591,9 +1590,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1604,9 +1602,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1617,9 +1614,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1678,9 +1674,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1691,9 +1686,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1938,6 +1932,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi up for record 3rd MLS MVP award; Sullivan, 17, gets historic nomination",
+     "resumen": "Lionel Messi has been named a finalist for the 2026 MLS MVP award, as he seeks to become the first player to win the prize on three consecutive occasions.",
+     "fecha": "2026-11-12T19:47:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744942_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50463634/mls-mvp-award-2026-lionel-messi-cavan-sullivan-griezmann"
+    },
+    {
      "titulo": "Will MLS teams' regular-season momentum last the two weeks before the playoffs start?",
      "resumen": "The MLS regular season ended on Saturday, but it will be nearly two weeks before the playoffs begin. It's a long time for a hot team to cool off.",
      "fecha": "2026-11-11T14:07:35Z",
@@ -1964,13 +1965,6 @@
      "fecha": "2026-11-09T22:16:36Z",
      "imagen": "https://a.espncdn.com/photo/2026/1109/r1743734_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50435699/sporting-kc-fires-raphael-wicky"
-    },
-    {
-     "titulo": "'The World Cup never really ended': U.S.-based betting sees rise in wagering on MLS, European soccer",
-     "resumen": "Before the World Cup, many wondered if Americans would stick around afterward. Betting data says yes, they did.",
-     "fecha": "2026-11-09T17:31:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1107/r1742577_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/espn/betting/story/_/id/50411508/united-states-soccer-betting-2026-world-cup-premier-mls"
     },
     {
      "titulo": "Pierre brothers keep family rivalry alive for USMNT-Haiti Nations League QFs",
@@ -2679,6 +2673,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Rising UFC featherweight Tommy McMillen 'OK' after nightclub scare, says coach",
+     "resumen": "Rising UFC featherweight Tommy McMillen is \"completely OK,\" his coach says, after the fighter was hospitalized Sunday after being found unresponsive in an Arizona nightclub.",
+     "fecha": "2026-11-12T22:53:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719429_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50465162/ufc-featherweight-mcmillen-ok-club-scare-says-coach"
+    },
+    {
+     "titulo": "Overeem-Manuwa boxing match added to Dec. 24 Paul-Doumbé card",
+     "resumen": "A six-round boxing match between former UFC stars Alistair Overeem and Jimi Manuwa has been added to the Dec. 24 card headlined by Jake Paul vs. Cedric Doumbé.",
+     "fecha": "2026-11-12T19:23:44Z",
+     "imagen": "https://a.espncdn.com/photo/2020/0902/r739582_600x400_3-2.jpg",
+     "link": "https://www.espn.com/boxing/story/_/id/50461800/paul-doumbe-card-adds-overeem-manuwa-boxing-match-co-main"
+    },
+    {
      "titulo": "MMA stars Merab Dvalishvili, Usman Nurmagomedov brawl at hotel in Abu Dhabi",
      "resumen": "MMA stars Merab Dvalishvili and Usman Nurmagomedov got into a public brawl at a hotel in Abu Dhabi on Wednesday.",
      "fecha": "2026-11-12T18:01:20Z",
@@ -2693,13 +2701,6 @@
      "link": "https://www.espn.com/mma/story/_/id/50428840/amanda-nunes-kayla-harrison-ufc-rivals"
     },
     {
-     "titulo": "Overeem-Manuwa boxing match to serve as co-main event on Paul-Doumbé card",
-     "resumen": "A six-round boxing match between former UFC stars Alistair Overeem and Jimi Manuwa will serve as the co-main event on the Dec. 24 card headlined by Jake Paul vs. Cedric Doumbé.",
-     "fecha": "2026-11-12T15:13:33Z",
-     "imagen": "https://a.espncdn.com/photo/2020/0902/r739582_600x400_3-2.jpg",
-     "link": "https://www.espn.com/boxing/story/_/id/50461800/paul-doumbe-card-adds-overeem-manuwa-boxing-match-co-main"
-    },
-    {
      "titulo": "UFC's Josh Hokit says he'll 'never' regret vulgar Michelle Obama remarks",
      "resumen": "UFC fighter Josh Hokit, who will challenger for the heavyweight title on Saturday, says he'll \"never\" regret his vulgar comments about former First Lady Michelle Obama,",
      "fecha": "2026-11-11T19:39:04Z",
@@ -2712,13 +2713,6 @@
      "fecha": "2026-11-11T16:12:07Z",
      "imagen": "https://a.espncdn.com/photo/2026/1110/r1744166_608x342_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-rankings-tatiana-suarez-rises"
-    },
-    {
-     "titulo": "Tatiana Suarez secures top-3 spot, positions herself for strawweight title shot",
-     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
-     "fecha": "2026-11-10T13:03:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743692_2_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class"
     }
    ],
    "resultados": [
