@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T00:19:24.956Z",
+ "actualizado": "2026-11-13T07:54:37.296Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -946,8 +945,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1044,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1164,8 +1165,9 @@
      "posCorta": "M",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg/330px-Alexis_Mac_Allister_Argentina_v_Spain_19_July_2026-162_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285450",
@@ -1614,8 +1616,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1674,8 +1677,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1686,8 +1690,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1932,6 +1937,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Rapinoe, Altidore, Ertz into National Soccer Hall of Fame; Beckham gets nod",
+     "resumen": "Former United States national team standouts Megan Rapinoe, Jozy Altidore and Julie Ertz were among those elected to the National Soccer Hall of Fame on Thursday.",
+     "fecha": "2026-11-13T03:20:08Z",
+     "imagen": "https://a.espncdn.com/photo/2023/0925/r1229485_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50465897/rapinoe-altidore-ertz-national-soccer-hall-fame"
+    },
+    {
      "titulo": "Messi up for record 3rd MLS MVP award; Sullivan, 17, gets historic nomination",
      "resumen": "Lionel Messi has been named a finalist for the 2026 MLS MVP award, as he seeks to become the first player to win the prize on three consecutive occasions.",
      "fecha": "2026-11-12T19:47:56Z",
@@ -1965,13 +1977,6 @@
      "fecha": "2026-11-09T22:16:36Z",
      "imagen": "https://a.espncdn.com/photo/2026/1109/r1743734_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50435699/sporting-kc-fires-raphael-wicky"
-    },
-    {
-     "titulo": "Pierre brothers keep family rivalry alive for USMNT-Haiti Nations League QFs",
-     "resumen": "USMNT's Neil Pierre could potentially see minutes against Haiti in this month's Concacaf Nations League quarterfinals.",
-     "fecha": "2026-11-09T17:14:39Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743576_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50433219/pierre-brothers-face-usmnt-haiti-nations-league-qfs"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2673,25 +2678,25 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Rising UFC featherweight Tommy McMillen 'OK' after nightclub scare, says coach",
-     "resumen": "Rising UFC featherweight Tommy McMillen is \"completely OK,\" his coach says, after the fighter was hospitalized Sunday after being found unresponsive in an Arizona nightclub.",
-     "fecha": "2026-11-12T22:53:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719429_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50465162/ufc-featherweight-mcmillen-ok-club-scare-says-coach"
-    },
-    {
      "titulo": "Overeem-Manuwa boxing match added to Dec. 24 Paul-Doumbé card",
      "resumen": "A six-round boxing match between former UFC stars Alistair Overeem and Jimi Manuwa has been added to the Dec. 24 card headlined by Jake Paul vs. Cedric Doumbé.",
-     "fecha": "2026-11-12T19:23:44Z",
+     "fecha": "2026-11-13T07:06:14Z",
      "imagen": "https://a.espncdn.com/photo/2020/0902/r739582_600x400_3-2.jpg",
      "link": "https://www.espn.com/boxing/story/_/id/50461800/paul-doumbe-card-adds-overeem-manuwa-boxing-match-co-main"
     },
     {
      "titulo": "MMA stars Merab Dvalishvili, Usman Nurmagomedov brawl at hotel in Abu Dhabi",
      "resumen": "MMA stars Merab Dvalishvili and Usman Nurmagomedov got into a public brawl at a hotel in Abu Dhabi on Wednesday.",
-     "fecha": "2026-11-12T18:01:20Z",
+     "fecha": "2026-11-13T01:44:06Z",
      "imagen": "https://a.espncdn.com/photo/2025/1203/r1584464_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50455764/mma-stars-merab-dvalishvili-usman-nurmagomedov-brawl-hotel"
+    },
+    {
+     "titulo": "Rising UFC featherweight Tommy McMillen 'OK' after nightclub scare, says coach",
+     "resumen": "Rising UFC featherweight Tommy McMillen is \"completely OK,\" his coach says, after the fighter was hospitalized Sunday after being found unresponsive in an Arizona nightclub.",
+     "fecha": "2026-11-12T22:53:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0920/r1719429_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50465162/ufc-featherweight-mcmillen-ok-club-scare-says-coach"
     },
     {
      "titulo": "Inside the tension, suspicion and history behind Amanda Nunes vs. Kayla Harrison",
