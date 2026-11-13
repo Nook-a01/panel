@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T16:19:13.786Z",
+ "actualizado": "2026-11-13T22:36:02.986Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -422,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -944,9 +947,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1006,8 +1008,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1030,9 +1033,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1043,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1056,8 +1057,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg/330px-Facundo_Medina_Argentina_v_Spain_19_July_2026-212_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "164826",
@@ -1080,8 +1082,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1092,8 +1095,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "320760",
@@ -1176,8 +1180,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1237,9 +1242,8 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "219713",
@@ -1256,9 +1260,23 @@
    ],
    "noticias": [
     {
-     "titulo": "Live updates: USMNT's Pochettino in tears as he agrees to join Man United",
-     "resumen": "USMNT head coach Mauricio Pochettino is leaving to join Manchester United. Follow the story live with ESPN.",
-     "fecha": "2026-11-13T16:15:45Z",
+     "titulo": "Socceroos hammer Asian champions in statement win",
+     "resumen": "The Socceroos have enjoyed an emphatic victory in the stronghold of the Asian champions, defeating Qatar 3-0 in Doha.",
+     "fecha": "2026-11-13T21:32:19Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1113/r1745410_1296x518_5-2.jpg",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401919978"
+    },
+    {
+     "titulo": "Socceroos prove they can be the big dogs in Qatar clash",
+     "resumen": "Australia pressed well, they pressed aggressively, and they pressed successfully against Qatar, taking enough of their chances to put the game to bed early.",
+     "fecha": "2026-11-13T20:53:10Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1113/r1745412_1296x518_5-2.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50459199/australia-qatar-friendly-socceroos-prove-the-big-dogs"
+    },
+    {
+     "titulo": "Recap: USMNT's Pochettino in tears as he agrees to join Man United",
+     "resumen": "USMNT head coach Mauricio Pochettino is leaving to join Manchester United. Read all the news, analysis and reaction from ESPN.",
+     "fecha": "2026-11-13T17:16:59Z",
      "imagen": "https://a.espncdn.com/photo/2026/1113/r1745277_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50470402/live-updates-mauricio-pochettino-usmnt-man-united"
     },
@@ -1317,20 +1335,6 @@
      "fecha": "2026-11-10T08:44:27Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1110/dm_261110_COM_SOC_Analysis_Keller_USMNT_roster_will_understand_if_Pochettino_joins_Man_United_20261110_GL/dm_261110_COM_SOC_Analysis_Keller_USMNT_roster_will_understand_if_Pochettino_joins_Man_United_20261110_GL.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50440647/usmnt-roster-understand-pochettino-joins-man-united"
-    },
-    {
-     "titulo": "Football Australia looking for 'resolution' with Socceroos' Jordan game in doubt",
-     "resumen": "Football Australia is hopeful of finding a \"resolution\" to the Socceroos' scheduled friendly in Jordan that has prompted fears players could withdraw from national team selection over security concerns.",
-     "fecha": "2026-11-10T04:48:54Z",
-     "imagen": "https://a.espncdn.com/photo/2019/0106/r485226_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50439497/football-australia-looking-resolution-socceroos-jordan-game-doubt"
-    },
-    {
-     "titulo": "Socceroos name seven uncapped players to face Qatar, Jordan",
-     "resumen": "Football Australia will continue to assess security ahead of the Socceroos' planned friendly against Jordan, with an under-strength squad named amid player concerns over safety.",
-     "fecha": "2026-11-08T03:42:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742810_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50414784/socceroos-name-seven-uncapped-players-face-qatar-jordan"
     }
    ],
    "resultados": null,
@@ -1567,8 +1571,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1591,8 +1596,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1603,8 +1609,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1615,8 +1622,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1675,8 +1683,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1687,8 +1696,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1735,8 +1745,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315594",
@@ -1933,6 +1944,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi to play in Argentina Jan. 19 for Inter Miami-River friendly",
+     "resumen": "Lionel Messi will return to play at Estadio Monumental on Jan. 19 when Inter Miami travel to Buenos Aires to play River Plate.",
+     "fecha": "2026-11-13T22:21:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742766_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50472990/messi-play-argentina-jan-19-inter-miami-river-friendly"
+    },
+    {
+     "titulo": "South Africa need to start Mbokazi in next AFCON qualifier against Kenya",
+     "resumen": "After three wins in the first three games, Pitso Mosimane suffered a setback in a 2-2 draw against Kenya, which laid bare the importance of MLS trio Lyle Foster, Puso Dithejane and Mbekezeli Mbokazi.",
+     "fecha": "2026-11-13T18:44:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1113/r1745344_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/espn/story/_/id/50472383/south-africa-kenya-mbekezeli-mbokazi-afcon-qualifiers"
+    },
+    {
      "titulo": "Rapinoe, Altidore, Ertz into National Soccer Hall of Fame; Beckham gets nod",
      "resumen": "Former United States national team standouts Megan Rapinoe, Jozy Altidore and Julie Ertz were among those elected to the National Soccer Hall of Fame on Thursday.",
      "fecha": "2026-11-13T03:20:08Z",
@@ -1959,20 +1984,6 @@
      "fecha": "2026-11-10T17:37:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/0401/r1637033_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50432573/ex-san-diego-cedric-bakambu-files-fair-housing-lawsuit"
-    },
-    {
-     "titulo": "CF Montréal owner Joey Saputo announces club is up for sale",
-     "resumen": "CF Montréal owner Joey Saputo announced Monday that he has initiated the sale of the MLS club his family founded in 1992.",
-     "fecha": "2026-11-09T22:51:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743735_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50436119/cf-montreal-owner-joey-saputo-announces-club-sale"
-    },
-    {
-     "titulo": "Sporting KC fires Raphael Wicky after last-place finish in West",
-     "resumen": "Sporting Kansas City fired coach Raphael Wicky after one season on Monday, which means the MLS club will have its fourth coach since March 2025 when it begins the league's sprint season in February.",
-     "fecha": "2026-11-09T22:16:36Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743734_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50435699/sporting-kc-fires-raphael-wicky"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2676,7 +2687,7 @@
     {
      "titulo": "Six from Team Nurmagomedov, eight in all get prison time over Dvalishvili brawl",
      "resumen": "Six members of Usman Nurmagomedov's team and two people who filmed the hotel fight also involving Merab Dvalishvili have been handed six-month prison sentences in Abu Dhabi.",
-     "fecha": "2026-11-13T15:50:42Z",
+     "fecha": "2026-11-13T20:14:52Z",
      "imagen": "https://a.espncdn.com/photo/2026/0730/r1695561_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50471378/8-people-get-prison-nurmagomedov-dvalishvili-brawl"
     },
