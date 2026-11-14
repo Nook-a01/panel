@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T10:22:14.173Z",
+ "actualizado": "2026-11-14T17:04:39.162Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -423,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -1045,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1081,9 +1082,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1239,8 +1239,9 @@
      "posCorta": "F",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg/330px-Jose_Manuel_Lopez_Argentina_v_Spain_19_July_2026-272.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "219713",
@@ -1256,6 +1257,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Stars set Singapore alight as Japan exact revenge on Brazil with dramatic late win",
+     "resumen": "Japan have exacted revenge over Brazil for their World Cup elimination with a dramatic 3-2 win in Singapore on Saturday.",
+     "fecha": "2026-11-14T15:24:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1114/r1745640_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50479233/japan-revenge-brazil-dramatic-late-win"
+    },
     {
      "titulo": "Argentina beaten 2-1 by Uruguay in first match after Messi's retirement",
      "resumen": "Argentina suffered a 2-1 defeat against Uruguay on Friday in Buenos Aires in their first game since Lionel Messi's retirement from his national team..",
@@ -1332,13 +1340,6 @@
      "fecha": "2026-11-11T07:31:16Z",
      "imagen": "https://a.espncdn.com/photo/2026/1111/r1744366_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50451094/brazil-revenge-mission-japan-hajime-moriyasu-legacy"
-    },
-    {
-     "titulo": "Keller: USMNT roster will understand if Pochettino joins Man United",
-     "resumen": "Keller: USMNT roster will understand if Pochettino joins Man United",
-     "fecha": "2026-11-10T08:44:27Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1110/dm_261110_COM_SOC_Analysis_Keller_USMNT_roster_will_understand_if_Pochettino_joins_Man_United_20261110_GL/dm_261110_COM_SOC_Analysis_Keller_USMNT_roster_will_understand_if_Pochettino_joins_Man_United_20261110_GL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50440647/usmnt-roster-understand-pochettino-joins-man-united"
     }
    ],
    "resultados": null,
@@ -2275,10 +2276,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2632,6 +2632,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
+     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
+     "fecha": "2026-11-14T13:27:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
+    },
+    {
      "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
      "fecha": "2026-11-13T13:42:19Z",
@@ -2665,13 +2672,6 @@
      "fecha": "2026-11-10T15:01:30Z",
      "imagen": "https://a.espncdn.com/photo/2025/1207/r1586144_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50442406/qatar-abu-dhabi-imola-f1-2026"
-    },
-    {
-     "titulo": "Oscar Piastri splits from Mark Webber's management after eventful seven years",
-     "resumen": "McLaren driver Oscar Piastri has split with the management team headed by ex-Formula 1 driver Mark Webber.",
-     "fecha": "2026-11-09T10:22:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1109/r1743471_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50431169/oscar-piastri-mark-webber-f1-mclaren"
     }
    ],
    "resultados": null,
