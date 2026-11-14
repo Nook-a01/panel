@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T01:31:38.220Z",
+ "actualizado": "2026-11-14T03:11:45.907Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 9,
+   "total": 8,
    "proximos": 3
   },
   {
@@ -24,7 +24,7 @@
    "ruta": "soccer",
    "liga": "fifa.world",
    "total": 2,
-   "proximos": 2
+   "proximos": 1
   },
   {
    "id": "intermiami",
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401913958",
-   "miLado": "local",
-   "idEspn": "401913958",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Vasco da Gama",
-   "inicio": "2026-10-14T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Alberto José Armando (La Bombonera)",
-   "local": "Boca Juniors",
-   "visitante": "Vasco da Gama",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
-   "finalizado": true,
-   "marcador": "0 - 1"
-  },
   {
    "id": "espn-761861",
    "miLado": "local",
@@ -573,8 +551,8 @@
    "visitante": "Uruguay",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "1 - 2"
   },
   {
    "id": "espn-401926286",
