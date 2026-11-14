@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T03:11:45.907Z",
+ "actualizado": "2026-11-14T10:22:14.173Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -243,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -424,8 +423,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1045,9 +1045,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1082,8 +1081,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1256,6 +1256,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Argentina beaten 2-1 by Uruguay in first match after Messi's retirement",
+     "resumen": "Argentina suffered a 2-1 defeat against Uruguay on Friday in Buenos Aires in their first game since Lionel Messi's retirement from his national team..",
+     "fecha": "2026-11-14T03:35:07Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1114/r1745560_1296x729_16-9.jpg",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401930876"
+    },
     {
      "titulo": "Socceroos hammer Asian champions in statement win",
      "resumen": "The Socceroos have enjoyed an emphatic victory in the stronghold of the Asian champions, defeating Qatar 3-0 in Doha.",
@@ -1648,18 +1655,6 @@
      "lesionado": false
     },
     {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Defender",
-     "posCorta": "D",
-     "edad": 25,
-     "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
-    },
-    {
      "id": "364401",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
      "nombre": "Tyler Hall",
@@ -1754,6 +1749,18 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
+     "foto": null,
+     "lesionado": false
+    },
+    {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Midfielder",
+     "posCorta": "M",
+     "edad": 19,
+     "pais": "USA",
      "foto": null,
      "lesionado": false
     },
@@ -1942,7 +1949,7 @@
     {
      "titulo": "Sources: San Jose Earthquakes sold for $625 million to Heath Freeman",
      "resumen": "Alden Global Capital co-founder Heath Freeman is purchasing the San Jose Earthquakes from John Fisher, following MLS owners' approval of the sale Thursday.",
-     "fecha": "2026-11-14T00:49:47Z",
+     "fecha": "2026-11-14T05:59:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/1113/r1745440_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50474340/san-jose-earthquakes-sold-625-million-heath-freeman"
     },
@@ -2268,9 +2275,10 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 12,
