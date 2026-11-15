@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T01:53:01.440Z",
+ "actualizado": "2026-11-15T09:21:33.941Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -573,7 +573,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
@@ -932,8 +932,8 @@
    "feedLabel": "UFC",
    "sport": "ufc",
    "emoji": "🥊",
-   "titulo": "UFC Fight Night: Dallas",
-   "inicio": "2027-01-16T22:00Z",
+   "titulo": "UFC Fight Night: Rodriguez vs. Garcia",
+   "inicio": "2027-01-16T23:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "American Airlines Center",
@@ -955,7 +955,7 @@
    "sport": "ufc",
    "emoji": "🥊",
    "titulo": "UFC 336: Van vs. Kape",
-   "inicio": "2027-01-30T22:00Z",
+   "inicio": "2027-01-30T23:00Z",
    "horaConfirmada": true,
    "competicion": "Ultimate Fighting Championship",
    "sede": "Scotiabank Arena",
