@@ -18,7 +18,7 @@
    la app vieja. Si cambió, se recarga sola una vez. Subí el número acá Y en
    plata/version.txt cuando cambie esta página. */
 (function () {
-  var ESTA = "37";
+  var ESTA = "38";
   try { window.__plataVersion = ESTA; } catch (e) {}
   function revisar() {
     fetch("version.txt", { cache: "no-store" })
@@ -2526,7 +2526,12 @@ function renderDeuda(){
   // cuánto te sobraba.
   const ajustes = p.ajustes || {};
 
-  let saldo = Number(p.deuda)||0;
+  // `deuda` es el total que salio de los resumenes y no se toca: es el numero
+  // que se le mostro a la madre. Lo que ya se descontó va aparte, en `pagado`,
+  // para que el papel y la pantalla sigan diciendo lo mismo.
+  const pagado = Number(p.pagado)||0;
+  const debe = Math.max(0, Math.round(((Number(p.deuda)||0) - pagado) * 100) / 100);
+  let saldo = debe;
   let ym = p.desde || ymNow();
   const filas = []; let saldaEn = null, guard = 0, ceros = 0;
   while(saldo > 0 && guard++ < 60){
@@ -2546,7 +2551,7 @@ function renderDeuda(){
     if(desc <= 0){ if(++ceros >= 3) break; } else ceros = 0;
   }
 
-  $('#deudaSaldo').textContent = money(Number(p.deuda)||0);
+  $('#deudaSaldo').textContent = money(debe);
   $('#deudaCuando').innerHTML = saldaEn
     ? 'Saldás en <b>'+esc(ymLabel(saldaEn))+'</b> · '+filas.length+(filas.length===1?' mes':' meses')
     : 'Con este presupuesto no llega a saldarse: hay que bajar el costo de vida o estirarlo.';
@@ -2564,7 +2569,8 @@ function renderDeuda(){
         +'<div class="kv"><span style="font-weight:600;color:var(--ink)">· te toca a vos</span><b style="color:var(--accent)">'+money((Number(d.total)||0)-(Number(d.cubre)||0))+'</b></div>'
         +(d.nota ? '<p class="frase tenue-t" style="margin:2px 0 10px">'+esc(d.nota)+'</p>' : '<div style="height:10px"></div>')
       ).join('')
-      + '<div class="kv"><span style="font-weight:700;color:var(--ink)">Total</span><b style="font-weight:700">'+money(Number(p.deuda)||0)+'</b></div>';
+      + (pagado ? '<div class="kv"><span>Ya descontado</span><b style="color:var(--ok,var(--accent))">−'+money(pagado)+'</b></div>' : '')
+      + '<div class="kv"><span style="font-weight:700;color:var(--ink)">Te queda debiendo</span><b style="font-weight:700">'+money(debe)+'</b></div>';
   }
 
   const ym0 = p.desde || ymNow(), extra0 = extraDe(ym0);

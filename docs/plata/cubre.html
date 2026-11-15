@@ -281,10 +281,12 @@ function cuentaCiclo(ym, lista){
   return { ym: ym, total: redondo(total), cubre: redondo(cubre), facu: redondo(facu),
            vos: redondo(total - cubre) };
 }
+// Lo que ya se descontó de la mensualidad no vuelve a deberse.
+function yaPagado(){ return Number(S && S.plan && S.plan.pagado) || 0; }
 function deudaTotal(cuentas){
   var d = 0;
   cuentas.forEach(function(c){ if(enDeuda[c.ym]) d += c.vos; });
-  return redondo(d);
+  return redondo(Math.max(0, d - yaPagado()));
 }
 
 // Cuándo se salda, con la misma cuenta que hace la app en «Plan mamá».
@@ -515,6 +517,7 @@ function guardar(){
     };
   });
   var deuda = redondo(detalle.reduce(function(a, e){ return a + (e.total - e.cubre); }, 0));
+  var debe = redondo(Math.max(0, deuda - yaPagado()));
   if(!detalle.length){
     est('Marcá al menos un resumen como «entra en la deuda».', 'mal');
     $('guardar').disabled = false;
@@ -538,7 +541,7 @@ function guardar(){
       base = d.guardadoEn || cuerpo.updatedAt;
       S.updatedAt = base;
       sucio = false;
-      est('Guardado. La deuda quedó en <b>' + plata(deuda) + '</b>.', 'ok');
+      est('Guardado. La deuda quedó en <b>' + plata(debe) + '</b>.', 'ok');
       listo();
     })
     .catch(function(e){
