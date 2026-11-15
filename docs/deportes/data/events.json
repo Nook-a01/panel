@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T03:11:45.907Z",
+ "actualizado": "2026-11-15T01:53:01.440Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 8,
+   "total": 9,
    "proximos": 3
   },
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 23,
+   "total": 22,
    "proximos": 17
   },
   {
@@ -72,32 +72,10 @@
    "ruta": "mma",
    "liga": "ufc",
    "total": 11,
-   "proximos": 7
+   "proximos": 6
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761861",
-   "miLado": "local",
-   "idEspn": "761861",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Inter Miami CF vs New York City FC",
-   "inicio": "2026-10-14T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Nu Stadium",
-   "local": "Inter Miami CF",
-   "visitante": "New York City FC",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
-   "finalizado": true,
-   "marcador": "2 - 0"
-  },
   {
    "id": "espn-401841627",
    "miLado": "local",
@@ -573,8 +551,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 3"
   },
   {
    "id": "espn-600061400",
@@ -813,6 +791,28 @@
    "sesion": "Carrera",
    "titulo": "GP Qatar",
    "inicio": "2026-11-29T16:00:00.000Z"
+  },
+  {
+   "id": "espn-401932277",
+   "miLado": "local",
+   "idEspn": "401932277",
+   "liga": "arg.copa",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Boca Juniors vs Platense",
+   "inicio": "2026-12-02T20:00Z",
+   "horaConfirmada": false,
+   "competicion": "Copa Argentina",
+   "sede": "",
+   "local": "Boca Juniors",
+   "visitante": "Platense",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+   "finalizado": false,
+   "marcador": null
   },
   {
    "id": "espn-401933720",
