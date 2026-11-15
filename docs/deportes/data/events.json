@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T09:21:33.941Z",
+ "actualizado": "2026-11-15T17:06:52.793Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,8 +71,8 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 11,
-   "proximos": 6
+   "total": 14,
+   "proximos": 9
   }
  ],
  "eventos": [
@@ -945,6 +945,28 @@
    "marcador": null
   },
   {
+   "id": "espn-600062900",
+   "miLado": null,
+   "idEspn": "600062900",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Bonfim vs. Brady",
+   "inicio": "2027-01-23T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Meta APEX",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-600062191",
    "miLado": null,
    "idEspn": "600062191",
@@ -989,6 +1011,28 @@
    "marcador": null
   },
   {
+   "id": "espn-600062901",
+   "miLado": null,
+   "idEspn": "600062901",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC Fight Night: Pyfer vs. Nickal",
+   "inicio": "2027-02-13T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Rocket Arena",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
+   "finalizado": false,
+   "marcador": null
+  },
+  {
    "id": "espn-401932555",
    "miLado": "local",
    "idEspn": "401932555",
@@ -1007,6 +1051,28 @@
    "visitante": "FC Cincinnati",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+   "finalizado": false,
+   "marcador": null
+  },
+  {
+   "id": "espn-600062902",
+   "miLado": null,
+   "idEspn": "600062902",
+   "liga": "ufc",
+   "ruta": "mma",
+   "feedId": "ufc",
+   "feedLabel": "UFC",
+   "sport": "ufc",
+   "emoji": "🥊",
+   "titulo": "UFC 337",
+   "inicio": "2027-02-20T23:00Z",
+   "horaConfirmada": true,
+   "competicion": "Ultimate Fighting Championship",
+   "sede": "Kia Center",
+   "local": null,
+   "visitante": null,
+   "logoLocal": null,
+   "logoVisitante": null,
    "finalizado": false,
    "marcador": null
   },

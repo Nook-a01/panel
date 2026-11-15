@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T09:21:33.941Z",
+ "actualizado": "2026-11-15T17:06:52.793Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -615,9 +616,8 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -971,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1007,9 +1008,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1032,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1117,9 +1118,8 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "228393",
@@ -1575,9 +1575,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1600,9 +1599,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1613,9 +1611,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1674,9 +1671,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1687,9 +1683,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -2274,10 +2269,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2631,18 +2625,18 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
+     "fecha": "2026-11-15T13:20:58Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
      "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
      "fecha": "2026-11-14T13:27:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
-    },
-    {
-     "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
-     "fecha": "2026-11-13T13:42:19Z",
-     "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "Liam Lawson and Arvid Lindblad to continue at Racing Bulls for 2027",
@@ -2688,25 +2682,25 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Gane deserves a home fight; Nunes fought right into Harrison's hands",
-     "resumen": "Ciryl Gane deserves a chance to win over fans, while Amanda Nunes fought the wrong fight against Kayla Harrison.",
-     "fecha": "2026-11-15T08:31:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746008_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50485499/ufc-334-gane-homecoming-fight-nunes-mistakes"
-    },
-    {
      "titulo": "Ciryl Gane survives early onslaught, edges Josh Hokit in UFC 334 main event",
-     "resumen": "Ciryl Gane got all he could handle from Josh Hokit in a five-round slugfest, but took command late to defend his heavyweight title Saturday night at UFC 334.",
-     "fecha": "2026-11-15T08:08:33Z",
+     "resumen": "Ciryl Gane got all he could handle from Josh Hokit in a five-round slugfest but took command late to defend his heavyweight title at UFC 334.",
+     "fecha": "2026-11-15T15:08:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/1115/r1746000_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50488012/ciryl-gane-edges-josh-hokit-slugfest-retains-title-ufc-334"
     },
     {
      "titulo": "Kayla Harrison spoils Amanda Nunes' return, wins by submission at UFC 334",
-     "resumen": "Kayla Harrison scored the biggest victory of her career Saturday, submitting former champion Amanda Nunes by rear-naked choke in Round 4 to retain her title at UFC 334.",
-     "fecha": "2026-11-15T07:41:34Z",
+     "resumen": "Kayla Harrison scored the biggest victory of her career, submitting former champion Amanda Nunes by rear-naked choke in Round 4 to retain her title at UFC 334.",
+     "fecha": "2026-11-15T13:52:54Z",
      "imagen": "https://a.espncdn.com/photo/2026/1115/r1745993_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50487730/kayla-harrison-submits-amanda-nunes-retain-title-ufc-334"
+    },
+    {
+     "titulo": "Gane deserves a home fight; Nunes fought right into Harrison's hands",
+     "resumen": "Ciryl Gane deserves a chance to win over fans, while Amanda Nunes fought the wrong fight against Kayla Harrison.",
+     "fecha": "2026-11-15T08:31:09Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746008_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50485499/ufc-334-gane-homecoming-fight-nunes-mistakes"
     },
     {
      "titulo": "UFC 334 results: Gane defeats Hokit, Harrison submits Nunes",
