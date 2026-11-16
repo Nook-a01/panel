@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T09:38:22.873Z",
+ "actualizado": "2026-11-16T20:26:31.264Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,9 +243,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -615,8 +615,9 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -627,8 +628,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Merentiel-Palmeiras-Coritiba-out2022.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1031,8 +1033,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1151,8 +1154,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1175,9 +1179,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1255,6 +1258,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Why FIFA reelection will be a formality for Teflon-like Gianni Infantino",
+     "resumen": "Despite scandals, controversy and legal challenges, Gianni Infantino looks all but certain to secure a landslide reelection as FIFA president and another four years in charge.",
+     "fecha": "2026-11-16T14:19:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1116/r1746503_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50498344/gianni-infantino-fifa-presidency-reelection-chances"
+    },
+    {
+     "titulo": "Klopp: FIFA worse under Infantino than Blatter",
+     "resumen": "Klopp: FIFA worse under Infantino than Blatter",
+     "fecha": "2026-11-16T10:01:50Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1116/dm_261116_COM_SOC_Presser_Klopp_FIFA_worse_under_Infantino_than_Blatter_161126_GLOBAL/dm_261116_COM_SOC_Presser_Klopp_FIFA_worse_under_Infantino_than_Blatter_161126_GLOBAL.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50500125/fifa-worse-infantino-blatter"
+    },
+    {
      "titulo": "Meet Como's Nico Paz, the heir to Lionel Messi's Argentina No. 10 shirt",
      "resumen": "Como's Nico Paz has become one of the best young players in Europe, but now he faces the unenviable task of stepping into Lionel Messi's Argentina No. 10 shirt.",
      "fecha": "2026-11-16T09:02:57Z",
@@ -1311,25 +1328,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50463328/fifa-uefa-case-disclosure-new-york-court-thrive-jp-morgan"
     },
     {
-     "titulo": "Argentina coach Lionel Scaloni signs new long-term deal through 2030 World Cup",
-     "resumen": "Lionel Scaloni has signed a new contract to remain as Argentina coach heading into the 2030 World Cup.",
-     "fecha": "2026-11-12T22:36:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744634_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50451803/argentina-coach-lionel-scaloni-new-contract-2030-world-cup"
-    },
-    {
      "titulo": "Australia friendly with Jordan relocated due to player security concerns",
      "resumen": "Australia's friendly with Jordan has been moved from Amman to Doha, after Socceroos players voiced their reservations about travelling to the Jordanian capital.",
      "fecha": "2026-11-12T19:51:24Z",
      "imagen": "https://a.espncdn.com/photo/2026/1112/r1744936_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50463459/australia-friendly-jordan-relocated-player-security-concerns"
-    },
-    {
-     "titulo": "How will Argentina replace Lionel Messi ahead of 2030 World Cup?",
-     "resumen": "Argentina need several players to shoulder the responsibilities that, for two decades, were concentrated in the greatest player in their history.",
-     "fecha": "2026-11-12T10:14:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1110/soc_argentina-after-messi_16x9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50453174/argentina-replacements-lionel-messi"
     },
     {
      "titulo": "Socceroos camp in 'good spirits' as call to play in Jordan looms",
@@ -1624,8 +1627,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1649,6 +1653,18 @@
      "edad": 24,
      "pais": "Jamaica",
      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/316269.png",
+     "lesionado": false
+    },
+    {
+     "id": "199032",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+     "nombre": "Santiago Morales",
+     "dorsal": "20",
+     "posicion": "Defender",
+     "posCorta": "D",
+     "edad": 25,
+     "pais": "Argentina",
+     "foto": null,
      "lesionado": false
     },
     {
@@ -1745,18 +1761,6 @@
      "posCorta": "M",
      "edad": 23,
      "pais": "Venezuela",
-     "foto": null,
-     "lesionado": false
-    },
-    {
-     "id": "199032",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "nombre": "Santiago Morales",
-     "dorsal": "20",
-     "posicion": "Midfielder",
-     "posCorta": "M",
-     "edad": 19,
-     "pais": "USA",
      "foto": null,
      "lesionado": false
     },
@@ -1943,6 +1947,13 @@
    ],
    "noticias": [
     {
+     "titulo": "MLS Cup playoff Power Rankings: Can history-making Nashville be stopped?",
+     "resumen": "Nashville just won the Supporters' Shield with a league-record points haul, so naturally it tops ESPN's MLS Cup playoff Power Rankings.",
+     "fecha": "2026-11-16T13:50:14Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0831/r1709551_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50452764/mls-cup-playoff-power-rankings"
+    },
+    {
      "titulo": "Sources: San Jose Earthquakes sold for $625 million to Heath Freeman",
      "resumen": "Alden Global Capital co-founder Heath Freeman is purchasing the San Jose Earthquakes from John Fisher, following MLS owners' approval of the sale Thursday.",
      "fecha": "2026-11-14T05:59:42Z",
@@ -1976,13 +1987,6 @@
      "fecha": "2026-11-12T19:47:56Z",
      "imagen": "https://a.espncdn.com/photo/2026/1112/r1744942_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50463634/mls-mvp-award-2026-lionel-messi-cavan-sullivan-griezmann"
-    },
-    {
-     "titulo": "Will MLS teams' regular-season momentum last the two weeks before the playoffs start?",
-     "resumen": "The MLS regular season ended on Saturday, but it will be nearly two weeks before the playoffs begin. It's a long time for a hot team to cool off.",
-     "fecha": "2026-11-11T14:07:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1110/r1744192_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50442984/will-mls-teams-regular-season-momentum-last-two-weeks-playoffs-start"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2684,6 +2688,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Kayla Harrison could take on a familiar foe in next fight",
+     "resumen": "What options do Ciryl Gane and Kayla Harrison have after the first defenses of their titles at UFC 334?",
+     "fecha": "2026-11-16T12:48:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746333_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50494167/ufc-334-next-ciryl-gane-kayla-harrison-more"
+    },
+    {
      "titulo": "Ciryl Gane survives early onslaught, edges Josh Hokit in UFC 334 main event",
      "resumen": "Ciryl Gane got all he could handle from Josh Hokit in a five-round slugfest but took command late to defend his heavyweight title at UFC 334.",
      "fecha": "2026-11-15T15:08:04Z",
@@ -2717,13 +2728,6 @@
      "fecha": "2026-11-15T04:03:34Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1114/dm_261114_UFC_Highlight_Wonderboy_Thompson_KOs_Radtke_with_spinning_back_heel_20261115_AUS_ONLY/dm_261114_UFC_Highlight_Wonderboy_Thompson_KOs_Radtke_with_spinning_back_heel_20261115_AUS_ONLY.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50487031/wonderboy-thompson-ko-radtke-spinning-back-heel"
-    },
-    {
-     "titulo": "Stephen Thompson scores spinning-kick knockout in retirement bout at UFC 334",
-     "resumen": "Stephen \"Wonderboy\" Thompson closed his MMA career by knocking out Charles Radtke with a spinning kick to the head Saturday night at UFC 334.",
-     "fecha": "2026-11-15T03:17:07Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1745964_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50486254/stephen-thompson-caps-career-spinning-kick-ko-ufc-334"
     }
    ],
    "resultados": [
