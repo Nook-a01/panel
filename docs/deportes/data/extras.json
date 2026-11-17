@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T13:21:11.038Z",
+ "actualizado": "2026-11-17T22:19:57.943Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -971,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1007,8 +1008,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1031,8 +1033,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1224,8 +1227,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1254,9 +1258,23 @@
    ],
    "noticias": [
     {
+     "titulo": "Socceroos suffer loss, now wait for Popovic decision",
+     "resumen": "If this is to be goodbye, it was not a good one, with Tony Popovic's Socceroos deservedly beaten 2-0 in Qatar by a Jordanian side that had not previously won in 2026 but were hungrier and sharper.",
+     "fecha": "2026-11-17T19:42:58Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747203_1296x729_16-9.jpg",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401919974"
+    },
+    {
+     "titulo": "Vinícius Júnior hits hat trick as Brazil beat Singapore 7-0",
+     "resumen": "Vinícius Júnior scored a first-half hat trick on Tuesday as Brazil thrashed Singapore 7-0 in its final game of 2026.",
+     "fecha": "2026-11-17T15:08:10Z",
+     "imagen": null,
+     "link": "http://www.espn.com/soccer/report/_/gameId/401916335"
+    },
+    {
      "titulo": "France FA boss Diallo confirms bid to challenge Infantino for FIFA presidency",
      "resumen": "French Football Federation leader Philippe Diallo confirmed his intention on Tuesday to challenge Gianni Infantino for the FIFA presidency.",
-     "fecha": "2026-11-17T12:14:14Z",
+     "fecha": "2026-11-17T13:44:49Z",
      "imagen": "https://a.espncdn.com/photo/2026/0728/r1694552_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50509967/france-fa-diallo-confirms-challenge-infantino-fifa"
     },
@@ -1322,20 +1340,6 @@
      "fecha": "2026-11-14T00:19:04Z",
      "imagen": "https://a.espncdn.com/photo/2026/1113/r1745412_1296x518_5-2.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50459199/australia-qatar-friendly-socceroos-prove-the-big-dogs"
-    },
-    {
-     "titulo": "Australia friendly with Jordan relocated due to player security concerns",
-     "resumen": "Australia's friendly with Jordan has been moved from Amman to Doha, after Socceroos players voiced their reservations about travelling to the Jordanian capital.",
-     "fecha": "2026-11-12T19:51:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744936_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50463459/australia-friendly-jordan-relocated-player-security-concerns"
-    },
-    {
-     "titulo": "Socceroos camp in 'good spirits' as call to play in Jordan looms",
-     "resumen": "Socceroos coach Tony Popovic has declared players are comfortable as administrators work behind the scenes to proceed with a friendly against Jordan.",
-     "fecha": "2026-11-12T10:11:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744726_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50460432/socceroos-camp-good-spirits-call-play-jordan-looms"
     }
    ],
    "resultados": null,
@@ -1572,9 +1576,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1597,9 +1600,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1682,9 +1684,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1941,6 +1942,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Sources: MLS side FC Cincy nearing deal to acquire NWSL's Racing",
+     "resumen": "The ownership groups of MLS side FC Cincinnati and the NWSL's Racing Louisville FC are nearing an agreement that would relocate the NWSL team to Cincinnati in 2028, multiple sources told ESPN.",
+     "fecha": "2026-11-17T21:08:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747236_1024x576_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50513113/mls-fc-cincy-advanced-talks-acquire-nwsl-racing-louisville"
+    },
+    {
+     "titulo": "MLS wild card predictions: Who will emerge from Orlando-Cincinnati, Seattle-RSL?",
+     "resumen": "The wild card kicks off the MLS Cup playoffs on Thursday, so who will advance to Round 1? ESPN's U.S. soccer analysts make their predictions.",
+     "fecha": "2026-11-17T14:46:50Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747073_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50462986/mls-cup-playoff-wild-card-predictions"
+    },
+    {
      "titulo": "MLS Cup playoff Power Rankings: Can history-making Nashville be stopped?",
      "resumen": "Nashville just won the Supporters' Shield with a league-record points haul, so naturally it tops ESPN's MLS Cup playoff Power Rankings.",
      "fecha": "2026-11-16T13:50:14Z",
@@ -1967,20 +1982,6 @@
      "fecha": "2026-11-13T18:44:35Z",
      "imagen": "https://a.espncdn.com/photo/2026/1113/r1745344_1296x729_16-9.jpg",
      "link": "https://www.espn.com/espn/story/_/id/50472383/south-africa-kenya-mbekezeli-mbokazi-afcon-qualifiers"
-    },
-    {
-     "titulo": "Rapinoe, Altidore, Ertz into National Soccer Hall of Fame; Beckham gets nod",
-     "resumen": "Former United States national team standouts Megan Rapinoe, Jozy Altidore and Julie Ertz were among those elected to the National Soccer Hall of Fame on Thursday.",
-     "fecha": "2026-11-13T03:20:08Z",
-     "imagen": "https://a.espncdn.com/photo/2023/0925/r1229485_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50465897/rapinoe-altidore-ertz-national-soccer-hall-fame"
-    },
-    {
-     "titulo": "Messi up for record 3rd MLS MVP award; Sullivan, 17, gets historic nomination",
-     "resumen": "Lionel Messi has been named a finalist for the 2026 MLS MVP award, as he seeks to become the first player to win the prize on three consecutive occasions.",
-     "fecha": "2026-11-12T19:47:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744942_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50463634/mls-mvp-award-2026-lionel-messi-cavan-sullivan-griezmann"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2269,9 +2270,10 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 12,
@@ -2682,6 +2684,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Abu Dhabi court reduces sentences for 8 in Nurmagomedov-Dvalishvili brawl",
+     "resumen": "An Abu Dhabi court has reduced the sentences of eight defendants, including six members of Team Nurmagomedov, for their part in last week's wild hotel brawl in the UAE's capital city.",
+     "fecha": "2026-11-17T15:45:21Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0730/r1695561_2_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50511188/eight-nurmagomedov-dvalishvili-brawl-get-reduced-sentences"
+    },
+    {
+     "titulo": "Harrison returns to lead overhaul of women's divisional rankings",
+     "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
+     "fecha": "2026-11-17T14:30:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1116/r1746784_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-weight-class"
+    },
+    {
      "titulo": "Amanda Nunes wants rematch after submission-loss to Kayla Harrison at UFC 334",
      "resumen": "Amanda Nunes is calling for a rematch against Kayla Harrison after she tapped out and suffered a submission-loss in their bantamweight title fight at UFC 334.",
      "fecha": "2026-11-16T22:12:01Z",
@@ -2703,25 +2719,11 @@
      "link": "https://www.espn.com/mma/story/_/id/50488012/ciryl-gane-edges-josh-hokit-slugfest-retains-title-ufc-334"
     },
     {
-     "titulo": "Kayla Harrison spoils Amanda Nunes' return, wins by submission at UFC 334",
-     "resumen": "Kayla Harrison scored the biggest victory of her career, submitting former champion Amanda Nunes by rear-naked choke in Round 4 to retain her title at UFC 334.",
-     "fecha": "2026-11-15T13:52:54Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1745993_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50487730/kayla-harrison-submits-amanda-nunes-retain-title-ufc-334"
-    },
-    {
      "titulo": "Gane deserves a home fight; Nunes fought right into Harrison's hands",
      "resumen": "Ciryl Gane deserves a chance to win over fans, while Amanda Nunes fought the wrong fight against Kayla Harrison.",
      "fecha": "2026-11-15T08:31:09Z",
      "imagen": "https://a.espncdn.com/photo/2026/1115/r1746008_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50485499/ufc-334-gane-homecoming-fight-nunes-mistakes"
-    },
-    {
-     "titulo": "UFC 334 results: Gane defeats Hokit, Harrison submits Nunes",
-     "resumen": "Both champions retained their titles at UFC 334. Relive all the action from Madison Square Garden.",
-     "fecha": "2026-11-15T06:30:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746007_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50444358/ufc-334-live-results-analysis-ciryl-gane-josh-hokit"
     }
    ],
    "resultados": [
@@ -2748,12 +2750,6 @@
      "fecha": "2026-10-24T14:00Z",
      "marcador": null,
      "sede": "Etihad Arena"
-    },
-    {
-     "titulo": "UFC Fight Night: Buckley vs. Malott",
-     "fecha": "2026-10-17T21:00Z",
-     "marcador": null,
-     "sede": "Rogers Place"
     }
    ],
    "peleadores": [

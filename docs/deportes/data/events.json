@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T03:50:37.642Z",
+ "actualizado": "2026-11-17T22:19:57.943Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 14,
+   "total": 13,
    "proximos": 9
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600060773",
-   "miLado": null,
-   "idEspn": "600060773",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC Fight Night: Buckley vs. Malott",
-   "inicio": "2026-10-17T21:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Rogers Place",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "id": "espn-761880",
    "miLado": "visitante",
@@ -803,8 +781,8 @@
    "sport": "futbol",
    "emoji": "🩷",
    "titulo": "Inter Miami CF vs Columbus Crew",
-   "inicio": "2026-12-02T20:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-12-03T00:30Z",
+   "horaConfirmada": true,
    "competicion": "MLS",
    "sede": "Nu Stadium",
    "local": "Inter Miami CF",
