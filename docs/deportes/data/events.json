@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-15T17:06:52.793Z",
+ "actualizado": "2026-11-17T03:50:37.642Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 9,
+   "total": 8,
    "proximos": 3
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401841627",
-   "miLado": "local",
-   "idEspn": "401841627",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Boca Juniors vs Talleres (Córdoba)",
-   "inicio": "2026-10-17T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Alberto José Armando (La Bombonera)",
-   "local": "Boca Juniors",
-   "visitante": "Talleres (Córdoba)",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-   "finalizado": true,
-   "marcador": "2 - 1"
-  },
   {
    "id": "espn-600060773",
    "miLado": null,
