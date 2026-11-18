@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T22:19:57.943Z",
+ "actualizado": "2026-11-18T04:17:21.587Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -24,7 +24,7 @@
    "ruta": "soccer",
    "liga": "fifa.world",
    "total": 2,
-   "proximos": 1
+   "proximos": 0
   },
   {
    "id": "intermiami",
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 22,
+   "total": 21,
    "proximos": 17
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-761880",
-   "miLado": "visitante",
-   "idEspn": "761880",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Atlanta United FC vs Inter Miami CF",
-   "inicio": "2026-10-17T23:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Mercedes-Benz Stadium",
-   "local": "Atlanta United FC",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "1 - 3"
-  },
   {
    "id": "espn-401913957",
    "miLado": "visitante",
@@ -551,8 +529,8 @@
    "visitante": "Costa Rica",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "7 - 0"
   },
   {
    "feedId": "f1",
