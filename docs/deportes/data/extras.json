@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T13:55:41.159Z",
+ "actualizado": "2026-11-18T21:54:22.566Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -946,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -971,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1032,9 +1030,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1045,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1226,9 +1222,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1257,9 +1252,16 @@
    ],
    "noticias": [
     {
+     "titulo": "Mauricio Pochettino gets a winning send-off from USMNT",
+     "resumen": "Jeff Carlisle breaks down Pochettino's final game as head coach with a 2-0 win over Haiti in the Concacaf Nations League quarterfinals.",
+     "fecha": "2026-11-18T14:15:24Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1118/dm_261118_USMNT1117/dm_261118_USMNT1117.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50520502/mauricio-pochettino-gets-winning-send-usmnt"
+    },
+    {
      "titulo": "2030 World Cup Power Rankings: Who are the top 15 nations in the men's game?",
      "resumen": "England's statement win over Spain has shaken up ESPN's World Cup Power Rankings, but our experts still back La Roja as the team to beat.",
-     "fecha": "2026-11-18T13:27:25Z",
+     "fecha": "2026-11-18T14:02:00Z",
      "imagen": "https://a.espncdn.com/photo/2026/1118/r1747490_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50506499/soccer-world-cup-power-rankings-usmnt-spain"
     },
@@ -1332,13 +1334,6 @@
      "fecha": "2026-11-15T07:10:24Z",
      "imagen": "https://a.espncdn.com/photo/2026/1115/r1746023_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50488423/football-australia-says-no-cost-blowout-associated-socceroos-jordan-fixture-relocation"
-    },
-    {
-     "titulo": "Nicol: Portugal vs. Denmark was one of the worst games in a decade",
-     "resumen": "Nicol: Portugal vs. Denmark was one of the worst games in a decade",
-     "fecha": "2026-11-14T22:32:18Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1114/dm_261114_Nicol_Portugal_vs_Denmark_was_one_of_the_worst_games_in_a_decade/dm_261114_Nicol_Portugal_vs_Denmark_was_one_of_the_worst_games_in_a_decade.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50483870/portugal-vs-denmark-was-one-worst-games-decade"
     }
    ],
    "resultados": null,
@@ -1575,8 +1570,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1599,8 +1595,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1623,8 +1620,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1683,8 +1681,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1695,8 +1694,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -2625,6 +2625,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "The rebuild and redemption of Liam Lawson, F1's comeback kid",
+     "resumen": "Liam Lawson is in his fifth F1 season but has never raced a full year with the same team, yet his staying power has proved stronger than ever in 2026.",
+     "fecha": "2026-11-18T14:11:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747214_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/racing/f1/story/_/id/50512349/liam-lawson-f1-comeback"
+    },
+    {
      "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
      "fecha": "2026-11-18T07:03:26Z",
@@ -2658,13 +2665,6 @@
      "fecha": "2026-11-14T13:27:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
-    },
-    {
-     "titulo": "Liam Lawson and Arvid Lindblad to continue at Racing Bulls for 2027",
-     "resumen": "Liam Lawson will stay in Formula 1 alongside teammate Arvid Lindblad at Racing Bulls in 2027, ending weeks of speculation about the New Zealander's future.",
-     "fecha": "2026-11-12T15:40:18Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1112/r1744731_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389094/liam-lawson-arvid-lindblad-racing-bulls-formula-1"
     }
    ],
    "resultados": null,
@@ -2681,6 +2681,20 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "UFC releases Virna Jandiroba, former title challenger, current No. 3 strawweight",
+     "resumen": "Virna Jandiroba, a former title challenger and the current No. 3-ranked fighter in the women's strawweight division, has been released by the UFC.",
+     "fecha": "2026-11-18T19:29:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733054_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50523092/ufc-releases-former-strawweight-title-challenger-jandiroba"
+    },
+    {
+     "titulo": "Kayla Harrison, Amanda Nunes reclaim leading roles in women's P4P top 10",
+     "resumen": "Who do Kayla Harrison and Amanda Nunes replace in ESPN's P4P women's top 10?",
+     "fecha": "2026-11-18T16:06:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747131_608x342_16-9.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-rankings-kayla-harrison-returns-top"
+    },
     {
      "titulo": "Amanda Nunes wants rematch after submission loss to Kayla Harrison at UFC 334",
      "resumen": "Amanda Nunes is calling for a rematch against Kayla Harrison after she tapped out and suffered a submission-loss in their bantamweight title fight at UFC 334.",
@@ -2708,20 +2722,6 @@
      "fecha": "2026-11-16T12:48:11Z",
      "imagen": "https://a.espncdn.com/photo/2026/1115/r1746333_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50494167/ufc-334-next-ciryl-gane-kayla-harrison-more"
-    },
-    {
-     "titulo": "Ciryl Gane survives early onslaught, edges Josh Hokit in UFC 334 main event",
-     "resumen": "Ciryl Gane got all he could handle from Josh Hokit in a five-round slugfest but took command late to defend his heavyweight title at UFC 334.",
-     "fecha": "2026-11-15T15:08:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746000_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50488012/ciryl-gane-edges-josh-hokit-slugfest-retains-title-ufc-334"
-    },
-    {
-     "titulo": "Gane deserves a home fight; Nunes fought right into Harrison's hands",
-     "resumen": "Ciryl Gane deserves a chance to win over fans, while Amanda Nunes fought the wrong fight against Kayla Harrison.",
-     "fecha": "2026-11-15T08:31:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746008_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50485499/ufc-334-gane-homecoming-fight-nunes-mistakes"
     }
    ],
    "resultados": [
