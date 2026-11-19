@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T13:00:12.713Z",
+ "actualizado": "2026-11-19T21:29:47.947Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -291,8 +292,9 @@
      "posCorta": "D",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Lautaro_Di_Lollo_%28cropped%29.jpg/330px-Lautaro_Di_Lollo_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "290542",
@@ -1083,9 +1085,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1120,8 +1121,9 @@
      "posCorta": "M",
      "edad": 30,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg/330px-Giovani_Lo_Celso_Argentina_v_Spain_19_July_2026-058.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "228393",
@@ -1180,9 +1182,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1260,11 +1261,25 @@
    ],
    "noticias": [
     {
+     "titulo": "Infantino calls for 'fair play' in upcoming FIFA elections",
+     "resumen": "Gianni Infantino has called for \"fair play\" during the election campaign for the FIFA presidency.",
+     "fecha": "2026-11-19T18:17:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1119/r1748039_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50532452/infantino-respect-fifa-elections-rivals-diallo-tashima"
+    },
+    {
      "titulo": "FIFA confirms Infantino rivals as Diallo, Tashima for 2027 election",
      "resumen": "FIFA has named Philippe Diallo and Kohzo Tashima as Gianni Infantino's rivals in next year's presidential election.",
-     "fecha": "2026-11-19T12:33:56Z",
+     "fecha": "2026-11-19T17:03:59Z",
      "imagen": "https://a.espncdn.com/photo/2026/1110/r1743884_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50529522/fifa-gianni-infantino-phillipe-diallo-kohzo-tashima"
+    },
+    {
+     "titulo": "UEFA pressures FIFA for World Cup sell-off plan documents",
+     "resumen": "",
+     "fecha": "2026-11-19T15:55:53Z",
+     "imagen": "https://a.espncdn.com/photo/2021/1215/r951691_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50531740/uefa-pressures-fifa-world-cup-selloff-plan-documents"
     },
     {
      "titulo": "Mauricio Pochettino gets a winning send-off from USMNT",
@@ -1321,20 +1336,6 @@
      "fecha": "2026-11-17T10:47:56Z",
      "imagen": "https://a.espncdn.com/photo/2026/1117/r1747006_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50502389/usmnt-pep-guardiola-mauricio-pochettino-manchester-city"
-    },
-    {
-     "titulo": "Stoic until the end, Japan's Hajime Moriyasu can finally let emotions flow",
-     "resumen": "Even up until the eve of his final game in charge of Japan, Hajime Moriyasu remained solely focused on the task ahead.",
-     "fecha": "2026-11-17T07:02:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1746964_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50507180/hajime-moriyasu-japan-reign-ends-tuesday"
-    },
-    {
-     "titulo": "Why FIFA reelection will be a formality for Teflon-like Gianni Infantino",
-     "resumen": "Despite scandals, controversy and legal challenges, Gianni Infantino looks all but certain to secure a landslide reelection as FIFA president and another four years in charge.",
-     "fecha": "2026-11-16T14:19:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1116/r1746503_2_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50498344/gianni-infantino-fifa-presidency-reelection-chances"
     },
     {
      "titulo": "Football Australia: No cost blowout associated with Jordan fixture relocation",
@@ -1578,8 +1579,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1602,8 +1604,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1626,8 +1629,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1686,9 +1690,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1699,8 +1702,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1867,9 +1871,8 @@
      "posCorta": "F",
      "edad": 28,
      "pais": "Mexico",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315801",
@@ -1946,6 +1949,13 @@
    ],
    "noticias": [
     {
+     "titulo": "Messi leads way as MLS salaries rise; Union's Sullivan checks in at $614K",
+     "resumen": "Inter Miami CF star Lionel Messi remains the highest-paid player in MLS, though the number of players making at least $10 million grew to five.",
+     "fecha": "2026-11-19T18:29:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1728980_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50526796/messi-leads-mls-salaries-rise-sullivan-614k"
+    },
+    {
      "titulo": "Sources: MLS side FC Cincy nearing deal to acquire NWSL's Racing",
      "resumen": "The ownership groups of MLS side FC Cincinnati and the NWSL's Racing Louisville FC are nearing an agreement that would relocate the NWSL team to Cincinnati in 2028, multiple sources told ESPN.",
      "fecha": "2026-11-17T21:08:44Z",
@@ -1972,13 +1982,6 @@
      "fecha": "2026-11-14T05:59:42Z",
      "imagen": "https://a.espncdn.com/photo/2026/1113/r1745440_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50474340/san-jose-earthquakes-sold-625-million-heath-freeman"
-    },
-    {
-     "titulo": "Messi to play in Argentina Jan. 19 for Inter Miami-River friendly",
-     "resumen": "Lionel Messi will return to play at Estadio Monumental on Jan. 19 when Inter Miami travel to Buenos Aires to play River Plate.",
-     "fecha": "2026-11-13T22:21:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1108/r1742766_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50472990/messi-play-argentina-jan-19-inter-miami-river-friendly"
     },
     {
      "titulo": "South Africa need to start Mbokazi in next AFCON qualifier against Kenya",
@@ -2242,9 +2245,10 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 10,
@@ -2306,9 +2310,10 @@
       "color": "#5A5A5A",
       "numero": "87",
       "driverId": "bearman",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg/330px-2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 14,
@@ -2630,6 +2635,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen on F1 retirement, Le Mans and learning to lose: 'Stress a bit less'",
+     "resumen": "Max Verstappen spoke to ESPN on his racing ambition and life beyond Formula 1.",
+     "fecha": "2026-11-19T14:01:28Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1005/r1726235_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50432818/max-verstappen-red-bull-f1-future"
+    },
+    {
      "titulo": "Max Verstappen rejects F1's new biometric health plan for 'privacy' reasons",
      "resumen": "Max Verstappen has said he will not give permission to Formula 1 and its new partner Whoop to broadcast his biometric data during races.",
      "fecha": "2026-11-19T10:03:22Z",
@@ -2663,13 +2675,6 @@
      "fecha": "2026-11-19T07:03:57Z",
      "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "The rebuild and redemption of Liam Lawson, F1's comeback kid",
-     "resumen": "Liam Lawson is in his fifth F1 season but has never raced a full year with the same team, yet his staying power has proved stronger than ever in 2026.",
-     "fecha": "2026-11-18T14:11:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747214_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/racing/f1/story/_/id/50512349/liam-lawson-f1-comeback"
     }
    ],
    "resultados": null,
