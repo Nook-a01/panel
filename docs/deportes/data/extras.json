@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T03:23:23.207Z",
+ "actualizado": "2026-11-19T13:00:12.713Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,8 +242,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -423,8 +423,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -615,8 +616,9 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -945,8 +947,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -969,8 +972,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1029,8 +1033,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1041,8 +1046,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1077,8 +1083,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1173,8 +1180,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1221,8 +1229,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1250,6 +1259,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "FIFA confirms Infantino rivals as Diallo, Tashima for 2027 election",
+     "resumen": "FIFA has named Philippe Diallo and Kohzo Tashima as Gianni Infantino's rivals in next year's presidential election.",
+     "fecha": "2026-11-19T12:33:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1110/r1743884_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50529522/fifa-gianni-infantino-phillipe-diallo-kohzo-tashima"
+    },
     {
      "titulo": "Mauricio Pochettino gets a winning send-off from USMNT",
      "resumen": "Jeff Carlisle breaks down Pochettino's final game as head coach with a 2-0 win over Haiti in the Concacaf Nations League quarterfinals.",
@@ -1319,13 +1335,6 @@
      "fecha": "2026-11-16T14:19:31Z",
      "imagen": "https://a.espncdn.com/photo/2026/1116/r1746503_2_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50498344/gianni-infantino-fifa-presidency-reelection-chances"
-    },
-    {
-     "titulo": "Klopp: FIFA worse under Infantino than Blatter",
-     "resumen": "Klopp: FIFA worse under Infantino than Blatter",
-     "fecha": "2026-11-16T10:01:50Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1116/dm_261116_COM_SOC_Presser_Klopp_FIFA_worse_under_Infantino_than_Blatter_161126_GLOBAL/dm_261116_COM_SOC_Presser_Klopp_FIFA_worse_under_Infantino_than_Blatter_161126_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50500125/fifa-worse-infantino-blatter"
     },
     {
      "titulo": "Football Australia: No cost blowout associated with Jordan fixture relocation",
@@ -1569,9 +1578,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1594,9 +1602,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1607,9 +1614,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1620,9 +1626,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1694,9 +1699,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1863,8 +1867,9 @@
      "posCorta": "F",
      "edad": 28,
      "pais": "Mexico",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/9/97/P20260305DT-0102_President_Donald_J._Trump_hosts_MLS_Champions_Inter_Miami_CF_at_the_White_House_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "315801",
@@ -2625,46 +2630,46 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen rejects F1's new biometric health plan for 'privacy' reasons",
+     "resumen": "Max Verstappen has said he will not give permission to Formula 1 and its new partner Whoop to broadcast his biometric data during races.",
+     "fecha": "2026-11-19T10:03:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1119/r1748009_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472044/max-verstappen-privacy-las-vegas-grand-prix-formula-1"
+    },
+    {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-11-19T09:17:26Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
+     "titulo": "Lando Norris, Max Verstappen confident in F1's decision to race in Middle East",
+     "resumen": "Lando Norris is confident Formula 1 bosses are not putting the sport's 2,000-strong travelling circus at risk by ending the season in the Middle East.",
+     "fecha": "2026-11-19T08:39:01Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1119/r1747994_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472043/lando-norris-george-russell-max-verstappen-las-vegas-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Valtteri Bottas to race for Cadillac in 2027 after Colton Herta 'noise'",
+     "resumen": "Valtteri Bottas has said the announcement of his contract extension with Cadillac on Wednesday felt necessary after \"a bit too much noise\" around his future in the past few weeks.",
+     "fecha": "2026-11-19T07:30:23Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1119/r1747991_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389014/valtteri-bottas-cadillac-las-vegas-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
+     "fecha": "2026-11-19T07:03:57Z",
+     "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "The rebuild and redemption of Liam Lawson, F1's comeback kid",
      "resumen": "Liam Lawson is in his fifth F1 season but has never raced a full year with the same team, yet his staying power has proved stronger than ever in 2026.",
      "fecha": "2026-11-18T14:11:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1117/r1747214_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/50512349/liam-lawson-f1-comeback"
-    },
-    {
-     "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
-     "fecha": "2026-11-18T07:03:26Z",
-     "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Fernando Alonso confirmed for Dakar Rally with Aston Martin",
-     "resumen": "Fernando Alonso will return to the Dakar Rally in January next year as Aston Martin prepares for a surprise debut at the legendary rally raid event.",
-     "fecha": "2026-11-17T10:37:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747014_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50509240/fernando-alonso-dakar-rally-aston-martin"
-    },
-    {
-     "titulo": "Verstappen speaks to ESPN: Antonelli has more talent than most F1 drivers",
-     "resumen": "Verstappen speaks to ESPN: Antonelli has more talent than most F1 drivers",
-     "fecha": "2026-11-17T09:40:16Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1116/dm_261116_COM_F1_Interview_Verstappen_Antonelli_has_more_talent_than_most_F1_drivers_161126_GLOBAL/dm_261116_COM_F1_Interview_Verstappen_Antonelli_has_more_talent_than_most_F1_drivers_161126_GLOBAL.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50500354/antonelli-more-talent-most-f1-drivers"
-    },
-    {
-     "titulo": "Max Verstappen: I don't need Kimi Antonelli to motivate me to stay in F1",
-     "resumen": "Max Verstappen has insisted he doesn't need Kimi Antonelli chasing his records to motivate him to stay in Formula 1, saying only he will make the decision to walk away.",
-     "fecha": "2026-11-17T09:37:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1116/r1746627_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50320342/max-verstappen-f1-kimi-antonelli-exclusive"
-    },
-    {
-     "titulo": "How Kimi Antonelli overcame George Russell, Ferrari to become F1's youngest champion",
-     "resumen": "How Kimi Antonelli overcame early setbacks, teammate George Russell and a Ferrari fightback to become Formula 1's youngest-ever world champion.",
-     "fecha": "2026-11-14T13:27:31Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739911_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50196394/how-kimi-antonelli-george-russell-ferrari-f1-youngest-champion"
     }
    ],
    "resultados": null,
