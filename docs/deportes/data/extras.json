@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T11:33:42.525Z",
+ "actualizado": "2026-11-20T20:13:14.204Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -1088,9 +1090,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "320760",
@@ -1149,9 +1150,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1252,6 +1252,20 @@
    ],
    "noticias": [
     {
+     "titulo": "CONMEBOL backs Infantino's reelection as FIFA president",
+     "resumen": "Support for the reelection of FIFA president Gianni Infantino was reaffirmed by the 10 members of CONMEBOL on Friday.",
+     "fecha": "2026-11-20T19:51:36Z",
+     "imagen": "https://a.espncdn.com/photo/2025/0410/r1476780_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50542739/conmebol-backs-infantino-reelection-fifa-president"
+    },
+    {
+     "titulo": "Harry Kane sets sights on Champions League, England trophy after Ballon d'Or win",
+     "resumen": "Ballon d'Or winner Harry Kane is on a mission to claim trophies that have so far eluded him in his career, namely a Champions League and a tittle with England.",
+     "fecha": "2026-11-20T12:35:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1102/r1739991_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50540283/harry-kane-champions-league-bayern-munich-england"
+    },
+    {
      "titulo": "Infantino calls for 'fair play' in upcoming FIFA elections",
      "resumen": "Gianni Infantino has called for \"fair play\" during the election campaign for the FIFA presidency.",
      "fecha": "2026-11-19T18:17:36Z",
@@ -1313,20 +1327,6 @@
      "fecha": "2026-11-17T15:08:10Z",
      "imagen": null,
      "link": "http://www.espn.com/soccer/report/_/gameId/401916335"
-    },
-    {
-     "titulo": "France FA boss Diallo confirms bid to challenge Infantino for FIFA presidency",
-     "resumen": "French Football Federation leader Philippe Diallo confirmed his intention on Tuesday to challenge Gianni Infantino for the FIFA presidency.",
-     "fecha": "2026-11-17T13:44:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0728/r1694552_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50509967/france-fa-diallo-confirms-challenge-infantino-fifa"
-    },
-    {
-     "titulo": "The USMNT doesn't need a hero like Pep Guardiola as its next manager",
-     "resumen": "The U.S. men's national team is saying goodbye to Mauricio Pochettino while hoping to attract Pep Guardiola as its next manager. But is a superstar coach what this team really needs?",
-     "fecha": "2026-11-17T10:47:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747006_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50502389/usmnt-pep-guardiola-mauricio-pochettino-manchester-city"
     },
     {
      "titulo": "Football Australia: No cost blowout associated with Jordan fixture relocation",
@@ -1744,9 +1744,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg/330px-Rodrigo_De_Paul_Argentina_v_Egypt_7_July_2026-238_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "315594",
@@ -1943,6 +1942,27 @@
    ],
    "noticias": [
     {
+     "titulo": "Every eliminated MLS team: What worked and what didn't in 2026, what needs improving in 2027?",
+     "resumen": "After every team in MLS is eliminated from postseason contention, ESPN details the best and worst of their seasons, and their priorities for 2027.",
+     "fecha": "2026-11-20T15:40:20Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748524_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50388883/every-eliminated-mls-team-worked-didnt-2026-needs-improving-2027"
+    },
+    {
+     "titulo": "No relegation means MLS playing style more 'careless' - Whitecaps' Müller",
+     "resumen": "",
+     "fecha": "2026-11-20T15:30:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727181_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50541122/no-relegation-means-mls-style-careless-whitecaps-muller"
+    },
+    {
+     "titulo": "MLS playoff Round 1 predictions: Who will move on to the conference semifinals?",
+     "resumen": "Round 1 of the MLS Cup playoffs begins Saturday, so who will emerge from the best-of-three series? ESPN's U.S. soccer analysts make their predictions.",
+     "fecha": "2026-11-20T15:18:46Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1119/r1748180_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50520734/mls-playoff-round-1-predictions-lionel-messi"
+    },
+    {
      "titulo": "Dike exits wild card loss injured as Orlando's season ends against Cincinnati",
      "resumen": "FC Cincinnati rallied to eliminate Orlando City 3-1 in MLS Cup Eastern Conference wild card match on Thursday.",
      "fecha": "2026-11-20T08:06:09Z",
@@ -1962,27 +1982,6 @@
      "fecha": "2026-11-20T02:47:13Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1120/e5f50f03-85b2-4dbe-9ee8-b88549a7ff6a/e5f50f03-85b2-4dbe-9ee8-b88549a7ff6a.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50536803/orlando-city-sc-vs-fc-cincinnati-game-highlights"
-    },
-    {
-     "titulo": "Messi leads way as MLS salaries rise; Union's Sullivan checks in at $614K",
-     "resumen": "Inter Miami CF star Lionel Messi remains the highest-paid player in MLS, though the number of players making at least $10 million grew to five.",
-     "fecha": "2026-11-19T18:29:23Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1728980_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50526796/messi-leads-mls-salaries-rise-sullivan-614k"
-    },
-    {
-     "titulo": "Sources: MLS side FC Cincy nearing deal to acquire NWSL's Racing",
-     "resumen": "The ownership groups of MLS side FC Cincinnati and the NWSL's Racing Louisville FC are nearing an agreement that would relocate the NWSL team to Cincinnati in 2028, multiple sources told ESPN.",
-     "fecha": "2026-11-17T21:08:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747236_1024x576_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50513113/mls-fc-cincy-advanced-talks-acquire-nwsl-racing-louisville"
-    },
-    {
-     "titulo": "MLS wild card predictions: Who will emerge from Orlando-Cincinnati, Seattle-RSL?",
-     "resumen": "The wild card kicks off the MLS Cup playoffs on Thursday, so who will advance to Round 1? ESPN's U.S. soccer analysts make their predictions.",
-     "fecha": "2026-11-17T14:46:50Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747073_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50462986/mls-cup-playoff-wild-card-predictions"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2271,10 +2270,9 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 12,
@@ -2628,11 +2626,11 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Antonelli handed grid penalty for Las Vegas GP; Russell sets pace in FP2",
-     "resumen": "New world champion Kimi Antonelli will take a five-place grid penalty for the Las Vegas Grand Prix after taking a new engine, the FIA confirmed during second practice.",
-     "fecha": "2026-11-20T10:31:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748459_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472078/kimi-antonelli-george-russell-las-vegas-grand-prix-formula-1"
+     "titulo": "F1 drivers face unique Las Vegas dilemma as GTA VI arrives: Who's playing?",
+     "resumen": "Formula 1's drivers have a unique conundrum this week -- how to dovetail their racing duties at the Las Vegas Grand Prix alongside playing the newly released Grand Theft Auto VI.",
+     "fecha": "2026-11-20T12:04:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748485_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50539850/f1-las-vegas-grand-prix-gta-vi"
     },
     {
      "titulo": "F1 bosses confirm 'agreement' on V8 engine return deal",
@@ -2687,7 +2685,7 @@
     {
      "titulo": "UFC fighter Manon Fiorot banned for 3 months for violating anti-doping policy",
      "resumen": "UFC fighter Manon Fiorot of France has been banned for three months for violating its anti-doping policy, the mixed martial arts competition said.",
-     "fecha": "2026-11-20T11:28:31Z",
+     "fecha": "2026-11-20T12:13:10Z",
      "imagen": "https://a.espncdn.com/photo/2026/0825/r1706727_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50540039/ufc-fighter-manon-fiorot-banned-3-months-doping"
     },
