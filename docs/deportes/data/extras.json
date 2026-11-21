@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T01:30:07.385Z",
+ "actualizado": "2026-11-21T09:46:28.455Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -79,10 +79,10 @@
       "equipo": "Lanús",
       "abrev": "LAN",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-      "pj": "15",
-      "pts": "25",
+      "pj": "16",
+      "pts": "26",
       "g": "7",
-      "e": "4",
+      "e": "5",
       "p": "4",
       "dg": "+7",
       "mio": false,
@@ -209,10 +209,10 @@
       "equipo": "Central Córdoba (Santiago del Estero)",
       "abrev": "CTR",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-      "pj": "15",
-      "pts": "10",
+      "pj": "16",
+      "pts": "11",
       "g": "2",
-      "e": "4",
+      "e": "5",
       "p": "9",
       "dg": "-14",
       "mio": false,
@@ -424,8 +424,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -1008,8 +1009,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1082,8 +1084,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1599,8 +1602,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1731,9 +1735,8 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1876,9 +1879,8 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "387661",
@@ -2627,46 +2629,46 @@
    "plantel": null,
    "noticias": [
     {
-     "titulo": "Tom Brady tops list of athletes who became owners",
-     "resumen": "The legendary quarterback is a member of an exclusive list of athletes that includes LeBron James, Serena Williams and Wayne Gretzky.",
-     "fecha": "2026-11-20T20:47:35Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748645_608x342_16-9.jpg",
-     "link": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
+     "titulo": "Drivers limited to 27-lap tyre stint as rule reintroduced for Qatar Grand Prix",
+     "resumen": "Formula 1 drivers will be limited to a total of 27 laps on each set of tyres they use at next weekend's Qatar Grand Prix.",
+     "fecha": "2026-11-21T08:59:08Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472103/qatar-grand-prix-pirelli-formula-1"
     },
     {
-     "titulo": "F1 drivers face unique Las Vegas dilemma as GTA VI arrives: Who's playing?",
-     "resumen": "Formula 1's drivers have a unique conundrum this week -- how to dovetail their racing duties at the Las Vegas Grand Prix alongside playing the newly released Grand Theft Auto VI.",
-     "fecha": "2026-11-20T12:04:32Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748485_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50539850/f1-las-vegas-grand-prix-gta-vi"
+     "titulo": "Russell reignites Verstappen rivalry: 'Somebody has got to stand up to that guy'",
+     "resumen": "The rivalry between Max Verstappen and George Russell reignited on the streets of Las Vegas on Friday evening after Russell claimed the Red Bull driver thinks he is \"bigger and better than everyone else.\"",
+     "fecha": "2026-11-21T08:51:11Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748876_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472101/george-russell-max-verstappen-las-vegas-grand-prix-formula-1"
     },
     {
-     "titulo": "F1 bosses confirm 'agreement' on V8 engine return deal",
-     "resumen": "McLaren CEO Zak Brown has confirmed that an \"agreement in principle\" exists for Formula 1 to switch to V8 engines, with the final details being worked on ahead of a proposed introduction in 2030.",
-     "fecha": "2026-11-20T10:29:51Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748466_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472081/v8-return-las-vegas-grand-prix-formula-1"
-    },
-    {
-     "titulo": "George Russell wary of McLaren ahead of Las Vegas GP",
-     "resumen": "George Russell and Lewis Hamilton speak after the second practice session for the Las Vegas Grand Prix.",
-     "fecha": "2026-11-20T09:44:59Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1120/dm_261120_COM_F1_Presser_George_Russell_wary_of_McLaren_ahead_of_Las_Vegas_GP_20261120_GLOBAL_EX_GER/dm_261120_COM_F1_Presser_George_Russell_wary_of_McLaren_ahead_of_Las_Vegas_GP_20261120_GLOBAL_EX_GER.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50539552/george-russell-wary-mclaren-ahead-las-vegas-gp"
-    },
-    {
-     "titulo": "FIA to introduce full-time stewards to address worries over decision-making",
-     "resumen": "The FIA has announced plans to introduce full-time stewards in Formula 1 with the aim of bringing \"greater levels of consistency\" to the officiating of grands prix.",
-     "fecha": "2026-11-20T08:17:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748456_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472080/fia-stewards-las-vegas-grand-prix-formula-1"
+     "titulo": "F1 bosses reach agreement to introduce V8 engines in 2030",
+     "resumen": "Formula 1 bosses have reached a unanimous agreement to replace the current power units with V8 turbo hybrid engines in 2030.",
+     "fecha": "2026-11-21T08:39:32Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748873_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472097/v8-engine-confirmed-formula-1"
     },
     {
      "titulo": "Las Vegas Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 is back under the bright lights of Las Vegas for one of the most extravagant weekends on the calendar.",
-     "fecha": "2026-11-20T07:23:37Z",
+     "fecha": "2026-11-21T08:16:33Z",
      "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "Max Verstappen promoted to Las Vegas GP pole as Kimi Antonelli drops to sixth",
+     "resumen": "New world champion Kimi Antonelli edged out Max Verstappen to take pole position for the Las Vegas Grand Prix.",
+     "fecha": "2026-11-21T07:45:48Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748850_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472094/kimi-antonelli-max-verstappen-las-vegas-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Hamilton and Leclerc suffer shock Ferrari double blow in Las Vegas qualifying",
+     "resumen": "Charles Leclerc labeled Ferrari's qualifying performance at the Las Vegas Grand Prix as \"unbelievable\" after both cars failed to make the cut for the top-10 shootout for the first time this season.",
+     "fecha": "2026-11-21T06:51:45Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748859_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472095/lewis-hamilton-charles-leclerc-qualifying-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,
@@ -2822,7 +2824,7 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aru.png",
      "categoria": "Middleweight",
      "record": "11-1-0",
-     "peleas": 3,
+     "peleas": 4,
      "gano": 3
     },
     {
