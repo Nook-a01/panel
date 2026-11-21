@@ -1,13 +1,8 @@
 {
- "actualizado": "2026-11-20T20:13:14.204Z",
+ "actualizado": "2026-11-21T01:30:07.385Z",
  "feeds": {
   "boca": {
    "compitiendo": [
-    {
-     "nombre": "CONMEBOL Sudamericana",
-     "liga": "conmebol.sudamericana",
-     "ruta": "soccer"
-    },
     {
      "nombre": "Argentine Liga Profesional de Fútbol",
      "liga": "arg.1",
@@ -16,6 +11,11 @@
     {
      "nombre": "Copa Argentina",
      "liga": "arg.copa",
+     "ruta": "soccer"
+    },
+    {
+     "nombre": "CONMEBOL Sudamericana",
+     "liga": "conmebol.sudamericana",
      "ruta": "soccer"
     }
    ],
@@ -946,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -970,8 +971,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1030,8 +1032,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1042,8 +1045,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1222,8 +1226,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1570,9 +1575,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1595,9 +1599,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1608,9 +1611,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1621,9 +1623,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1682,9 +1683,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1695,9 +1695,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1732,8 +1731,9 @@
      "posCorta": "M",
      "edad": 34,
      "pais": "Brazil",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg/330px-Casemiro_Brazil_V_Morocco_13_June_2026-76_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1876,8 +1876,9 @@
      "posCorta": "F",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg/330px-Tadeo_Allende_NE_Revolution_Inter_Miami_7.9.25-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "387661",
@@ -1942,6 +1943,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Hirving Lozano returns to San Diego FC as LA Galaxy loan ends",
+     "resumen": "The LA Galaxy declined to exercise their purchase option for Hirving 'Chucky' Lozano, sending the Mexican forward back to San Diego FC.",
+     "fecha": "2026-11-20T22:43:56Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748714_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50544018/hirving-lozano-returns-san-diego-fc-la-galaxy-loan-ends"
+    },
+    {
+     "titulo": "Nashville coach Callaghan '100%' focused on playoffs amid USMNT links",
+     "resumen": "BJ Callaghan said he remains fully focused on leading Nashville through the MLS playoffs amid links to replacing Mauricio Pochettino as USMNT head coach.",
+     "fecha": "2026-11-20T21:49:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748697_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50543541/usa-soccer-coach-bj-callaghan-nashville-sc"
+    },
+    {
      "titulo": "Every eliminated MLS team: What worked and what didn't in 2026, what needs improving in 2027?",
      "resumen": "After every team in MLS is eliminated from postseason contention, ESPN details the best and worst of their seasons, and their priorities for 2027.",
      "fecha": "2026-11-20T15:40:20Z",
@@ -1963,25 +1978,11 @@
      "link": "https://www.espn.com/soccer/story/_/id/50520734/mls-playoff-round-1-predictions-lionel-messi"
     },
     {
-     "titulo": "Dike exits wild card loss injured as Orlando's season ends against Cincinnati",
-     "resumen": "FC Cincinnati rallied to eliminate Orlando City 3-1 in MLS Cup Eastern Conference wild card match on Thursday.",
-     "fecha": "2026-11-20T08:06:09Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748420_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50537610/dike-wild-card-loss-injured-orlando-season-ends-cincinnati"
-    },
-    {
      "titulo": "Seattle Sounders FC vs. Real Salt Lake - Game Highlights",
      "resumen": "Watch the Game Highlights from Seattle Sounders FC vs. Real Salt Lake, 11/19/2026",
      "fecha": "2026-11-20T05:46:27Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1120/e81ac17f-3267-4b3e-8968-9f7a0ebd8b75/e81ac17f-3267-4b3e-8968-9f7a0ebd8b75.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50538454/seattle-sounders-fc-vs-real-salt-lake-game-highlights"
-    },
-    {
-     "titulo": "Orlando City SC vs. FC Cincinnati - Game Highlights",
-     "resumen": "Watch the Game Highlights from Orlando City SC vs. FC Cincinnati, 11/19/2026",
-     "fecha": "2026-11-20T02:47:13Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1120/e5f50f03-85b2-4dbe-9ee8-b88549a7ff6a/e5f50f03-85b2-4dbe-9ee8-b88549a7ff6a.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50536803/orlando-city-sc-vs-fc-cincinnati-game-highlights"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2626,6 +2627,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Tom Brady tops list of athletes who became owners",
+     "resumen": "The legendary quarterback is a member of an exclusive list of athletes that includes LeBron James, Serena Williams and Wayne Gretzky.",
+     "fecha": "2026-11-20T20:47:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748645_608x342_16-9.jpg",
+     "link": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
+    },
+    {
      "titulo": "F1 drivers face unique Las Vegas dilemma as GTA VI arrives: Who's playing?",
      "resumen": "Formula 1's drivers have a unique conundrum this week -- how to dovetail their racing duties at the Las Vegas Grand Prix alongside playing the newly released Grand Theft Auto VI.",
      "fecha": "2026-11-20T12:04:32Z",
@@ -2659,13 +2667,6 @@
      "fecha": "2026-11-20T07:23:37Z",
      "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Lewis Hamilton 'not even thought' about new Ferrari contract",
-     "resumen": "Lewis Hamilton has insisted he is in no rush to sign a new deal with Ferrari and claimed he has not even thought about a renewal which will extend his stay in Formula 1 beyond 20 years.",
-     "fecha": "2026-11-20T07:08:02Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748448_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472079/lewis-hamilton-ferrari-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,

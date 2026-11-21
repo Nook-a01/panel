@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T04:17:21.587Z",
+ "actualizado": "2026-11-21T01:30:07.385Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 8,
+   "total": 7,
    "proximos": 3
   },
   {
@@ -76,28 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": "espn-401913957",
-   "miLado": "visitante",
-   "idEspn": "401913957",
-   "liga": "conmebol.sudamericana",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Vasco da Gama vs Boca Juniors",
-   "inicio": "2026-10-21T00:30Z",
-   "horaConfirmada": true,
-   "competicion": "CONMEBOL Sudamericana",
-   "sede": "Estadio do Maracana",
-   "local": "Vasco da Gama",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "1 - 3"
-  },
   {
    "id": "espn-600061267",
    "miLado": null,
