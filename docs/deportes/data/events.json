@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T17:28:55.416Z",
+ "actualizado": "2026-11-21T23:12:55.998Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 7,
-   "proximos": 3
+   "proximos": 2
   },
   {
    "id": "argentina",
@@ -36,7 +36,7 @@
    "ruta": "soccer",
    "liga": "usa.1",
    "total": 21,
-   "proximos": 17
+   "proximos": 16
   },
   {
    "id": "pumas",
@@ -550,7 +550,7 @@
    "visitante": null,
    "logoLocal": null,
    "logoVisitante": null,
-   "finalizado": false,
+   "finalizado": true,
    "marcador": null
   },
   {
