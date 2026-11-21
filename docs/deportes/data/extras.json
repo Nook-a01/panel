@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T09:46:28.455Z",
+ "actualizado": "2026-11-21T17:28:55.416Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -947,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -972,9 +970,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1034,9 +1031,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1047,9 +1043,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1084,9 +1079,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1578,8 +1572,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1602,9 +1597,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1615,8 +1609,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1687,8 +1682,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1699,8 +1695,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -2098,7 +2095,7 @@
     }
    ],
    "posiciones": {
-    "titulo": "Temporada 2026 · tras 20 carreras",
+    "titulo": "Temporada 2026 · tras 21 carreras",
     "tipo": "f1",
     "filas": [
      {
@@ -2273,9 +2270,10 @@
       "color": "#6692FF",
       "numero": "41",
       "driverId": "arvid_lindblad",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg/330px-Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 12,
@@ -2629,6 +2627,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Hamilton blames 'combination of everything' for 'nightmare' qualifying",
+     "resumen": "Ferrari's Lewis Hamilton says a 'combination of everything' led to both cars missing on making it through to Q3 for the Las Vegas Grand Prix.",
+     "fecha": "2026-11-21T14:23:54Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1121/dm_261121_Hamilton_blames_combination_of_everything_for_nightmare_qualifying/dm_261121_Hamilton_blames_combination_of_everything_for_nightmare_qualifying.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50549673/hamilton-blames-combination-everything-nightmare-qualifying"
+    },
+    {
      "titulo": "Drivers limited to 27-lap tyre stint as rule reintroduced for Qatar Grand Prix",
      "resumen": "Formula 1 drivers will be limited to a total of 27 laps on each set of tyres they use at next weekend's Qatar Grand Prix.",
      "fecha": "2026-11-21T08:59:08Z",
@@ -2662,13 +2667,6 @@
      "fecha": "2026-11-21T07:45:48Z",
      "imagen": "https://a.espncdn.com/photo/2026/1121/r1748850_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50472094/kimi-antonelli-max-verstappen-las-vegas-grand-prix-formula-1"
-    },
-    {
-     "titulo": "Hamilton and Leclerc suffer shock Ferrari double blow in Las Vegas qualifying",
-     "resumen": "Charles Leclerc labeled Ferrari's qualifying performance at the Las Vegas Grand Prix as \"unbelievable\" after both cars failed to make the cut for the top-10 shootout for the first time this season.",
-     "fecha": "2026-11-21T06:51:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748859_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472095/lewis-hamilton-charles-leclerc-qualifying-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,
@@ -2730,6 +2728,12 @@
    ],
    "resultados": [
     {
+     "titulo": "UFC Fight Night: Procházka vs. Stirling",
+     "fecha": "2026-11-21T15:00Z",
+     "marcador": null,
+     "sede": "ABHA Arena"
+    },
+    {
      "titulo": "UFC 334: Gane vs. Hokit",
      "fecha": "2026-11-14T22:00Z",
      "marcador": null,
@@ -2769,7 +2773,7 @@
      "nombre": "Alessandro Costa",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "Flyweight",
-     "record": "17-5-0",
+     "record": "17-6-0",
      "peleas": 4,
      "gano": 3
     },
@@ -2797,6 +2801,15 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
      "categoria": "Lightweight",
      "record": "13-1-0",
+     "peleas": 3,
+     "gano": 3
+    },
+    {
+     "id": "5213352",
+     "nombre": "Diyar Nurgozhay",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
+     "categoria": "Light Heavyweight",
+     "record": "13-2-0",
      "peleas": 3,
      "gano": 3
     },
@@ -3017,6 +3030,15 @@
      "gano": 2
     },
     {
+     "id": "4394753",
+     "nombre": "Tahir Abdullayev",
+     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
+     "categoria": "Welterweight",
+     "record": "21-3-0",
+     "peleas": 2,
+     "gano": 2
+    },
+    {
      "id": "4375156",
      "nombre": "Charles Johnson",
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
@@ -3094,24 +3116,6 @@
      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
      "categoria": "Featherweight",
      "record": "19-2-0",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "3948876",
-     "nombre": "Alonzo Menifield",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-     "categoria": "Light Heavyweight",
-     "record": "19-6-1",
-     "peleas": 2,
-     "gano": 2
-    },
-    {
-     "id": "5145766",
-     "nombre": "Jean Silva",
-     "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-     "categoria": "Featherweight",
-     "record": "18-3-0",
      "peleas": 2,
      "gano": 2
     }
