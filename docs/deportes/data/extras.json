@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T23:12:55.998Z",
+ "actualizado": "2026-11-22T03:09:27.087Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -424,9 +424,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -947,8 +946,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1031,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1043,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1223,8 +1225,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1252,6 +1255,13 @@
     }
    ],
    "noticias": [
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-11-22T01:28:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
     {
      "titulo": "CONMEBOL backs Infantino's reelection as FIFA president",
      "resumen": "Support for the reelection of FIFA president Gianni Infantino was reaffirmed by the 10 members of CONMEBOL on Friday.",
@@ -1293,13 +1303,6 @@
      "fecha": "2026-11-18T14:15:24Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1118/dm_261118_USMNT1117/dm_261118_USMNT1117.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50520502/mauricio-pochettino-gets-winning-send-usmnt"
-    },
-    {
-     "titulo": "2030 World Cup Power Rankings: Who are the top 15 nations in the men's game?",
-     "resumen": "England's statement win over Spain has shaken up ESPN's World Cup Power Rankings, but our experts still back La Roja as the team to beat.",
-     "fecha": "2026-11-18T14:02:00Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1118/r1747490_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50506499/soccer-world-cup-power-rankings-usmnt-spain"
     },
     {
      "titulo": "Nico Paz, Álvarez both score twice in 7-goal Argentina rout",
@@ -1571,9 +1574,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1596,9 +1598,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1609,9 +1610,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1622,9 +1622,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -1683,9 +1682,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1696,9 +1694,8 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "401415",
@@ -1943,46 +1940,46 @@
    ],
    "noticias": [
     {
-     "titulo": "Peyton Miller doubles Revs' lead with neat finish",
-     "resumen": "Peyton Miller doubles Revs' lead with neat finish",
-     "fecha": "2026-11-21T21:07:31Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1121/af322d24-232e-4cda-af78-d8273c2cf3fe/af322d24-232e-4cda-af78-d8273c2cf3fe.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50553614/peyton-miller-doubles-revs-lead-neat-finish"
+     "titulo": "Messi, Miami staring at early playoff exit after Columbus rout in Game 1",
+     "resumen": "Inter Miami and star Lionel Messi are facing the prospect of an early exit from the MLS playoffs after a 3-0 home loss to the Columbus Crew in Game 1.",
+     "fecha": "2026-11-22T03:04:31Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749372_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50556052/inter-miami-columbus-crew-lionel-messi-game-1-mls-playoffs"
     },
     {
-     "titulo": "Hirving Lozano returns to San Diego FC as LA Galaxy loan ends",
-     "resumen": "The LA Galaxy declined to exercise their purchase option for Hirving 'Chucky' Lozano, sending the Mexican forward back to San Diego FC.",
-     "fecha": "2026-11-20T22:43:56Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748714_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50544018/hirving-lozano-returns-san-diego-fc-la-galaxy-loan-ends"
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-11-22T01:28:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
-     "titulo": "Nashville coach Callaghan '100%' focused on playoffs amid USMNT links",
-     "resumen": "BJ Callaghan said he remains fully focused on leading Nashville through the MLS playoffs amid links to replacing Mauricio Pochettino as USMNT head coach.",
-     "fecha": "2026-11-20T21:49:12Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748697_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50543541/usa-soccer-coach-bj-callaghan-nashville-sc"
+     "titulo": "Taha Habroune gets on the scoresheet for Columbus Crew SC",
+     "resumen": "Taha Habroune scores goal for Columbus Crew SC",
+     "fecha": "2026-11-22T01:27:44Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1122/b078b661-102a-4f87-bb37-f437e27d392f/b078b661-102a-4f87-bb37-f437e27d392f.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50556255/taha-habroune-gets-scoresheet-columbus-crew-sc"
     },
     {
-     "titulo": "Every eliminated MLS team: What worked and what didn't in 2026, what needs improving in 2027?",
-     "resumen": "After every team in MLS is eliminated from postseason contention, ESPN details the best and worst of their seasons, and their priorities for 2027.",
-     "fecha": "2026-11-20T15:40:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748524_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50388883/every-eliminated-mls-team-worked-didnt-2026-needs-improving-2027"
+     "titulo": "FC Dallas vs. Portland Timbers - Game Highlights",
+     "resumen": "Watch the Game Highlights from FC Dallas vs. Portland Timbers, 11/21/2026",
+     "fecha": "2026-11-22T00:16:58Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1121/2028686e-4fd0-4ee1-bcfc-dfe7c19b8527/2028686e-4fd0-4ee1-bcfc-dfe7c19b8527.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50555170/fc-dallas-vs-portland-timbers-game-highlights"
     },
     {
-     "titulo": "No relegation means MLS playing style more 'careless' - Whitecaps' Müller",
-     "resumen": "",
-     "fecha": "2026-11-20T15:30:06Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1007/r1727181_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50541122/no-relegation-means-mls-style-careless-whitecaps-muller"
+     "titulo": "Valiente's brace earns Dallas Game 1 win over Timbers ",
+     "resumen": "- Joaquín Valiente scored two second-half goals in a 2-minute span, Samuel Sarver added a stoppage-time goal and FC Dallas beat the Portland Timbers 3-0 on Saturday in Game 1 of their best-of-three series in the first round of the MLS Cup playoffs.",
+     "fecha": "2026-11-21T23:57:13Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933732.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401933732"
     },
     {
-     "titulo": "MLS playoff Round 1 predictions: Who will move on to the conference semifinals?",
-     "resumen": "Round 1 of the MLS Cup playoffs begins Saturday, so who will emerge from the best-of-three series? ESPN's U.S. soccer analysts make their predictions.",
-     "fecha": "2026-11-20T15:18:46Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1119/r1748180_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50520734/mls-playoff-round-1-predictions-lionel-messi"
+     "titulo": "Teenager Miller leads Revs to win over Union in Game 1",
+     "resumen": "Peyton Miller became the fifth-youngest player to score a goal in the MLS playoffs as New England beat Philadelphia 2-0 to open a best-of-three first-round series.",
+     "fecha": "2026-11-21T23:30:43Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933733.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401933733"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2627,6 +2624,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Las Vegas Grand Prix LIVE! F1 race updates, commentary and results",
+     "resumen": "Max Verstappen and George Russell line-up on the front row for the Las Vegas Grand Prix, and you can follow live updates on ESPN.",
+     "fecha": "2026-11-22T03:06:22Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748885_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50530089/las-vegas-grand-prix-2026-live-updates-results-analysis-commentary"
+    },
+    {
      "titulo": "Hamilton blames 'combination of everything' for 'nightmare' qualifying",
      "resumen": "Ferrari's Lewis Hamilton says a 'combination of everything' led to both cars missing on making it through to Q3 for the Las Vegas Grand Prix.",
      "fecha": "2026-11-21T14:23:54Z",
@@ -2660,13 +2664,6 @@
      "fecha": "2026-11-21T08:16:33Z",
      "imagen": "https://a.espncdn.com/photo/2025/1119/r1577676_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50389130/las-vegas-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Max Verstappen promoted to Las Vegas GP pole as Kimi Antonelli drops to sixth",
-     "resumen": "New world champion Kimi Antonelli edged out Max Verstappen to take pole position for the Las Vegas Grand Prix.",
-     "fecha": "2026-11-21T07:45:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748850_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472094/kimi-antonelli-max-verstappen-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,
@@ -2683,6 +2680,13 @@
    "posiciones": null,
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Stirling's superstar ascension continues with Prochazka KO",
+     "resumen": "New Zealand's Navajo Stirling floors Jiri Prochazka with a devastating right hand in Round 2 at UFC Qatar to extend his unbeaten record to 12-0.",
+     "fecha": "2026-11-21T23:14:55Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1121/dm_261121_UFC_Highlight_Stirlings_superstar_ascension_continues_with_Prochazka_KO_20261122_AUS_ONLY/dm_261121_UFC_Highlight_Stirlings_superstar_ascension_continues_with_Prochazka_KO_20261122_AUS_ONLY.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50555180/stirling-superstar-ascension-continues-prochazka-ko"
+    },
     {
      "titulo": "Stirling's superstar ascension continues with Prochazka KO",
      "resumen": "New Zealand's Navajo Stirling floors Jiri Prochazka with a devastating right hand in Round 2 at UFC Qatar to extend his unbeaten record to 12-0.",
@@ -2717,13 +2721,6 @@
      "fecha": "2026-11-18T19:29:08Z",
      "imagen": "https://a.espncdn.com/photo/2026/1019/r1733054_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/story/_/id/50523092/ufc-releases-former-strawweight-title-challenger-jandiroba"
-    },
-    {
-     "titulo": "Kayla Harrison, Amanda Nunes reclaim leading roles in women's P4P top 10",
-     "resumen": "Who do Kayla Harrison and Amanda Nunes replace in ESPN's P4P women's top 10?",
-     "fecha": "2026-11-18T16:06:01Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1117/r1747131_608x342_16-9.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/24067525/mma-pound-rankings-kayla-harrison-returns-top"
     }
    ],
    "resultados": [

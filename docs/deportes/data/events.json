@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T23:12:55.998Z",
+ "actualizado": "2026-11-22T03:09:27.087Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -572,8 +572,8 @@
    "visitante": "Boca Juniors",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 2"
   },
   {
    "id": "espn-401933739",
@@ -594,8 +594,8 @@
    "visitante": "Columbus Crew",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "0 - 3"
   },
   {
    "feedId": "f1",
