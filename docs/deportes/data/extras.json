@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T00:49:31.752Z",
+ "actualizado": "2026-11-23T08:59:37.505Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -243,9 +242,8 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "335580",
@@ -946,9 +944,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -1045,9 +1042,8 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249663",
@@ -1575,8 +1571,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1599,8 +1596,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1611,8 +1609,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1623,8 +1622,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -1683,8 +1683,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -1695,8 +1696,9 @@
      "posCorta": "D",
      "edad": 21,
      "pais": "Dominican Republic",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg/330px-Inter_Miami_vs._Real_Salt_Lake_24_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "401415",
@@ -1941,6 +1943,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Vancouver Whitecaps vs. Real Salt Lake - Game Highlights",
+     "resumen": "Watch the Game Highlights from Vancouver Whitecaps vs. Real Salt Lake, 11/22/2026",
+     "fecha": "2026-11-23T04:39:30Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1123/c6f7bc61-7151-4d3a-8ce8-f32b6afaeae5/c6f7bc61-7151-4d3a-8ce8-f32b6afaeae5.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50569414/vancouver-whitecaps-vs-real-salt-lake-game-highlights"
+    },
+    {
+     "titulo": "VAR gives Charlotte late penalty in series-opening win over Chicago",
+     "resumen": "Pep Biel scored off a rebound from his own penalty kick in the 11th minute of stoppage time after a handball on Jack Elliot to give Charlotte FC a 2-1 win over the Chicago Fire on Sunday.",
+     "fecha": "2026-11-23T02:26:52Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933730.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401933730"
+    },
+    {
      "titulo": "Cincinnati stuns Shield-winners Nashville to start best-of-3 series",
      "resumen": "Roman Celentano made six saves for his fourth clean sheet of the season as FC Cincinnati took advantage of an early own goal to earn a 1-0 victory over Nashville SC on Sunday.",
      "fecha": "2026-11-22T23:57:21Z",
@@ -1967,20 +1983,6 @@
      "fecha": "2026-11-22T04:39:28Z",
      "imagen": "https://a.espncdn.com/photo/2026/1122/r1749450_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50558763/lionel-messi-throw-red-card-inter-miami-columbus-crew"
-    },
-    {
-     "titulo": "Inter Miami CF vs. Columbus Crew SC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Inter Miami CF vs. Columbus Crew SC, 11/21/2026",
-     "fecha": "2026-11-22T03:14:03Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1122/6f3499de-a924-4b73-a30d-9446d81efc65/6f3499de-a924-4b73-a30d-9446d81efc65.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50556694/inter-miami-cf-vs-columbus-crew-sc-game-highlights"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-11-22T01:28:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2093,535 +2095,7 @@
      "ruta": null
     }
    ],
-   "posiciones": {
-    "titulo": "Temporada 2026 · tras 21 carreras",
-    "tipo": "f1",
-    "filas": [
-     {
-      "pos": 1,
-      "equipo": "Andrea Kimi Antonelli",
-      "abrev": "ANT",
-      "detalle": "Mercedes",
-      "pts": "402",
-      "g": "9",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-      "nacionalidad": "Italian",
-      "color": "#00D2BE",
-      "numero": "12",
-      "driverId": "antonelli",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 2,
-      "equipo": "Max Verstappen",
-      "abrev": "VER",
-      "detalle": "Red Bull",
-      "pts": "304",
-      "g": "4",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
-      "nacionalidad": "Dutch",
-      "color": "#00327D",
-      "numero": "3",
-      "driverId": "max_verstappen",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 3,
-      "equipo": "Lewis Hamilton",
-      "abrev": "HAM",
-      "detalle": "Ferrari",
-      "pts": "267",
-      "g": "1",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#DC0000",
-      "numero": "44",
-      "driverId": "hamilton",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/868.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 4,
-      "equipo": "George Russell",
-      "abrev": "RUS",
-      "detalle": "Mercedes",
-      "pts": "264",
-      "g": "3",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#00D2BE",
-      "numero": "63",
-      "driverId": "russell",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5503.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 5,
-      "equipo": "Lando Norris",
-      "abrev": "NOR",
-      "detalle": "McLaren",
-      "pts": "264",
-      "g": "3",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#FF8700",
-      "numero": "1",
-      "driverId": "norris",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5579.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 6,
-      "equipo": "Charles Leclerc",
-      "abrev": "LEC",
-      "detalle": "Ferrari",
-      "pts": "250",
-      "g": "1",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
-      "nacionalidad": "Monegasque",
-      "color": "#DC0000",
-      "numero": "16",
-      "driverId": "leclerc",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5498.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 7,
-      "equipo": "Oscar Piastri",
-      "abrev": "PIA",
-      "detalle": "McLaren",
-      "pts": "167",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
-      "nacionalidad": "Australian",
-      "color": "#FF8700",
-      "numero": "81",
-      "driverId": "piastri",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 8,
-      "equipo": "Isack Hadjar",
-      "abrev": "HAD",
-      "detalle": "Red Bull",
-      "pts": "122",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-      "nacionalidad": "French",
-      "color": "#00327D",
-      "numero": "6",
-      "driverId": "hadjar",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 9,
-      "equipo": "Liam Lawson",
-      "abrev": "LAW",
-      "detalle": "RB F1 Team",
-      "pts": "89",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
-      "nacionalidad": "New Zealander",
-      "color": "#6692FF",
-      "numero": "30",
-      "driverId": "lawson",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 10,
-      "equipo": "Pierre Gasly",
-      "abrev": "GAS",
-      "detalle": "Alpine F1 Team",
-      "pts": "52",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-      "nacionalidad": "French",
-      "color": "#FFF500",
-      "numero": "10",
-      "driverId": "gasly",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5501.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 11,
-      "equipo": "Arvid Lindblad",
-      "abrev": "LIN",
-      "detalle": "RB F1 Team",
-      "pts": "38",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#6692FF",
-      "numero": "41",
-      "driverId": "arvid_lindblad",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 12,
-      "equipo": "Franco Colapinto",
-      "abrev": "COL",
-      "detalle": "Alpine F1 Team",
-      "pts": "35",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
-      "nacionalidad": "Argentine",
-      "color": "#FFF500",
-      "numero": "43",
-      "driverId": "colapinto",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 13,
-      "equipo": "Oliver Bearman",
-      "abrev": "BEA",
-      "detalle": "Haas F1 Team",
-      "pts": "23",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "nacionalidad": "British",
-      "color": "#5A5A5A",
-      "numero": "87",
-      "driverId": "bearman",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 14,
-      "equipo": "Gabriel Bortoleto",
-      "abrev": "BOR",
-      "detalle": "Audi",
-      "pts": "14",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-      "nacionalidad": "Brazilian",
-      "color": "#FF2D00",
-      "numero": "5",
-      "driverId": "bortoleto",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 15,
-      "equipo": "Nico Hülkenberg",
-      "abrev": "HUL",
-      "detalle": "Audi",
-      "pts": "14",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-      "nacionalidad": "German",
-      "color": "#FF2D00",
-      "numero": "27",
-      "driverId": "hulkenberg",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 16,
-      "equipo": "Carlos Sainz",
-      "abrev": "SAI",
-      "detalle": "Williams",
-      "pts": "11",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-      "nacionalidad": "Spanish",
-      "color": "#FFFFFF",
-      "numero": "55",
-      "driverId": "sainz",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4686.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 17,
-      "equipo": "Esteban Ocon",
-      "abrev": "OCO",
-      "detalle": "Haas F1 Team",
-      "pts": "7",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-      "nacionalidad": "French",
-      "color": "#5A5A5A",
-      "numero": "31",
-      "driverId": "ocon",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4678.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 18,
-      "equipo": "Fernando Alonso",
-      "abrev": "ALO",
-      "detalle": "Aston Martin",
-      "pts": "7",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
-      "nacionalidad": "Spanish",
-      "color": "#006F62",
-      "numero": "14",
-      "driverId": "alonso",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/348.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 19,
-      "equipo": "Alexander Albon",
-      "abrev": "ALB",
-      "detalle": "Williams",
-      "pts": "5",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/tha.png",
-      "nacionalidad": "Thai",
-      "color": "#FFFFFF",
-      "numero": "23",
-      "driverId": "albon",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5592.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 20,
-      "equipo": "Yuki Tsunoda",
-      "abrev": "TSU",
-      "detalle": "RB F1 Team",
-      "pts": "1",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-      "nacionalidad": "Japanese",
-      "color": "#6692FF",
-      "numero": "22",
-      "driverId": "tsunoda",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5652.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 21,
-      "equipo": "Ryo Hirakawa",
-      "abrev": "HIR",
-      "detalle": "Haas F1 Team",
-      "pts": "1",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
-      "nacionalidad": "Japanese",
-      "color": "#5A5A5A",
-      "numero": "50",
-      "driverId": "ryo_hirakawa",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 22,
-      "equipo": "Lance Stroll",
-      "abrev": "STR",
-      "detalle": "Aston Martin",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
-      "nacionalidad": "Canadian",
-      "color": "#006F62",
-      "numero": "18",
-      "driverId": "stroll",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4775.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 23,
-      "equipo": "Valtteri Bottas",
-      "abrev": "BOT",
-      "detalle": "Cadillac F1 Team",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fin.png",
-      "nacionalidad": "Finnish",
-      "color": "#A2AAAD",
-      "numero": "77",
-      "driverId": "bottas",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4520.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 24,
-      "equipo": "Sergio Pérez",
-      "abrev": "PER",
-      "detalle": "Cadillac F1 Team",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
-      "nacionalidad": "Mexican",
-      "color": "#A2AAAD",
-      "numero": "11",
-      "driverId": "perez",
-      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 25,
-      "equipo": "Rafael Camara",
-      "abrev": "CAM",
-      "detalle": "Haas F1 Team",
-      "pts": "0",
-      "g": "0",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
-      "nacionalidad": "Brazilian",
-      "color": "#5A5A5A",
-      "numero": "51",
-      "driverId": "rafael_camara",
-      "foto": null,
-      "logo": null,
-      "mio": false
-     }
-    ],
-    "escuderias": [
-     {
-      "pos": 1,
-      "equipo": "Mercedes",
-      "detalle": "German",
-      "pts": "666",
-      "g": "12",
-      "color": "#00D2BE",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 2,
-      "equipo": "Ferrari",
-      "detalle": "Italian",
-      "pts": "517",
-      "g": "2",
-      "color": "#DC0000",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 3,
-      "equipo": "Red Bull",
-      "detalle": "Austrian",
-      "pts": "440",
-      "g": "4",
-      "color": "#00327D",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 4,
-      "equipo": "McLaren",
-      "detalle": "British",
-      "pts": "431",
-      "g": "3",
-      "color": "#FF8700",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 5,
-      "equipo": "RB F1 Team",
-      "detalle": "Italian",
-      "pts": "114",
-      "g": "0",
-      "color": "#6692FF",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 6,
-      "equipo": "Alpine F1 Team",
-      "detalle": "French",
-      "pts": "87",
-      "g": "0",
-      "color": "#FFF500",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 7,
-      "equipo": "Haas F1 Team",
-      "detalle": "American",
-      "pts": "31",
-      "g": "0",
-      "color": "#5A5A5A",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 8,
-      "equipo": "Audi",
-      "detalle": "German",
-      "pts": "28",
-      "g": "0",
-      "color": "#FF2D00",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 9,
-      "equipo": "Williams",
-      "detalle": "British",
-      "pts": "16",
-      "g": "0",
-      "color": "#FFFFFF",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 10,
-      "equipo": "Aston Martin",
-      "detalle": "British",
-      "pts": "7",
-      "g": "0",
-      "color": "#006F62",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
-      "logo": null,
-      "mio": false
-     },
-     {
-      "pos": 11,
-      "equipo": "Cadillac F1 Team",
-      "detalle": "American",
-      "pts": "0",
-      "g": "0",
-      "color": "#A2AAAD",
-      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
-      "logo": null,
-      "mio": false
-     }
-    ]
-   },
+   "posiciones": null,
    "plantel": null,
    "noticias": [
     {
