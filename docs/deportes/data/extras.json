@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T08:59:37.505Z",
+ "actualizado": "2026-11-23T21:18:43.391Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -1005,8 +1007,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233937",
@@ -1029,9 +1032,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "119289",
@@ -1066,8 +1068,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1102,8 +1105,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "207343",
@@ -1126,8 +1130,9 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277208",
@@ -1174,8 +1179,9 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277206",
@@ -1222,9 +1228,8 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "311743",
@@ -1943,6 +1948,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Son Heung-Min: Thomas Müller spot-on about lack of pressure in MLS",
+     "resumen": "LAFC forward Son Heung-Min has backed Thomas Müller's comments about the \"careless\" playing style in the MLS and the lack of pressure that players feel due to the absence of a promotion/relegation system.",
+     "fecha": "2026-11-23T17:20:26Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750187_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50574293/son-heung-min-thomas-muller-mls-no-pressure-relegation"
+    },
+    {
+     "titulo": "Philadelphia's Cavan Sullivan wins MLS Young Player of the Year award",
+     "resumen": "Philadelphia Union midfielder Cavan Sullivan has been selected as the MLS Young Player of the Year for his breakthrough performance as a 17-year-old.",
+     "fecha": "2026-11-23T16:21:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1023/r1735106_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50573882/philadelphia-cavan-sullivan-mls-young-player-year"
+    },
+    {
+     "titulo": "Chicago Fire FC vs. Charlotte FC - Game Highlights",
+     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Charlotte FC, 11/22/2026",
+     "fecha": "2026-11-23T16:14:13Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1123/93e56765-68d5-4acb-89c7-97b2822e9872/93e56765-68d5-4acb-89c7-97b2822e9872.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50568474/chicago-fire-fc-vs-charlotte-fc-game-highlights"
+    },
+    {
+     "titulo": "How B.J. Callaghan's long, winding coaching journey led to Nashville success",
+     "resumen": "B.J. Callaghan was a fairly unassuming hire when he took over Nashville. Now he's a Supporters' Shield-winning coach being linked with the USMNT job.",
+     "fecha": "2026-11-23T14:57:49Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748740_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50542113/bj-callaghan-nashville-usmnt-coach"
+    },
+    {
      "titulo": "Vancouver Whitecaps vs. Real Salt Lake - Game Highlights",
      "resumen": "Watch the Game Highlights from Vancouver Whitecaps vs. Real Salt Lake, 11/22/2026",
      "fecha": "2026-11-23T04:39:30Z",
@@ -1955,34 +1988,6 @@
      "fecha": "2026-11-23T02:26:52Z",
      "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933730.png?templateId=espn.applewatch.awayhome.1",
      "link": "http://www.espn.com/soccer/report/_/gameId/401933730"
-    },
-    {
-     "titulo": "Cincinnati stuns Shield-winners Nashville to start best-of-3 series",
-     "resumen": "Roman Celentano made six saves for his fourth clean sheet of the season as FC Cincinnati took advantage of an early own goal to earn a 1-0 victory over Nashville SC on Sunday.",
-     "fecha": "2026-11-22T23:57:21Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933731.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/401933731"
-    },
-    {
-     "titulo": "Reports: Dynamo's Herrera charged with DWI, club aware of 'incident'",
-     "resumen": "Houston Dynamo FC midfielder Héctor Herrera was charged with driving while intoxicated on Saturday in Montgomery County, Texas, according to multiple reports.",
-     "fecha": "2026-11-22T23:56:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749866_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50566274/dynamo-herrera-charged-dwi-club-aware"
-    },
-    {
-     "titulo": "Nashville SC vs. FC Cincinnati - Game Highlights",
-     "resumen": "Watch the Game Highlights from Nashville SC vs. FC Cincinnati, 11/22/2026",
-     "fecha": "2026-11-22T23:48:25Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1122/e69420a5-3fa2-4e71-83b9-4761c2ace1be/e69420a5-3fa2-4e71-83b9-4761c2ace1be.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50566848/nashville-sc-vs-fc-cincinnati-game-highlights"
-    },
-    {
-     "titulo": "Columbus coach says Messi should've got red card in Miami loss: 'Everyone knows'",
-     "resumen": "Columbus Crew head coach Laurent Courtois said Lionel Messi should have received a red card for taking a throw-in straight into the face of Gonzalo Tapia.",
-     "fecha": "2026-11-22T04:39:28Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749450_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50558763/lionel-messi-throw-red-card-inter-miami-columbus-crew"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2095,9 +2100,558 @@
      "ruta": null
     }
    ],
-   "posiciones": null,
+   "posiciones": {
+    "titulo": "Temporada 2026 · tras 21 carreras",
+    "tipo": "f1",
+    "filas": [
+     {
+      "pos": 1,
+      "equipo": "Andrea Kimi Antonelli",
+      "abrev": "ANT",
+      "detalle": "Mercedes",
+      "pts": "402",
+      "g": "9",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "nacionalidad": "Italian",
+      "color": "#00D2BE",
+      "numero": "12",
+      "driverId": "antonelli",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 2,
+      "equipo": "Max Verstappen",
+      "abrev": "VER",
+      "detalle": "Red Bull",
+      "pts": "304",
+      "g": "4",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+      "nacionalidad": "Dutch",
+      "color": "#00327D",
+      "numero": "3",
+      "driverId": "max_verstappen",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4665.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 3,
+      "equipo": "Lewis Hamilton",
+      "abrev": "HAM",
+      "detalle": "Ferrari",
+      "pts": "267",
+      "g": "1",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#DC0000",
+      "numero": "44",
+      "driverId": "hamilton",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/868.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 4,
+      "equipo": "George Russell",
+      "abrev": "RUS",
+      "detalle": "Mercedes",
+      "pts": "264",
+      "g": "3",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#00D2BE",
+      "numero": "63",
+      "driverId": "russell",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5503.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 5,
+      "equipo": "Lando Norris",
+      "abrev": "NOR",
+      "detalle": "McLaren",
+      "pts": "264",
+      "g": "3",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#FF8700",
+      "numero": "1",
+      "driverId": "norris",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5579.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 6,
+      "equipo": "Charles Leclerc",
+      "abrev": "LEC",
+      "detalle": "Ferrari",
+      "pts": "250",
+      "g": "1",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mon.png",
+      "nacionalidad": "Monegasque",
+      "color": "#DC0000",
+      "numero": "16",
+      "driverId": "leclerc",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5498.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 7,
+      "equipo": "Oscar Piastri",
+      "abrev": "PIA",
+      "detalle": "McLaren",
+      "pts": "167",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+      "nacionalidad": "Australian",
+      "color": "#FF8700",
+      "numero": "81",
+      "driverId": "piastri",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 8,
+      "equipo": "Isack Hadjar",
+      "abrev": "HAD",
+      "detalle": "Red Bull",
+      "pts": "122",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#00327D",
+      "numero": "6",
+      "driverId": "hadjar",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 9,
+      "equipo": "Liam Lawson",
+      "abrev": "LAW",
+      "detalle": "RB F1 Team",
+      "pts": "89",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+      "nacionalidad": "New Zealander",
+      "color": "#6692FF",
+      "numero": "30",
+      "driverId": "lawson",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 10,
+      "equipo": "Pierre Gasly",
+      "abrev": "GAS",
+      "detalle": "Alpine F1 Team",
+      "pts": "52",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#FFF500",
+      "numero": "10",
+      "driverId": "gasly",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5501.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 11,
+      "equipo": "Arvid Lindblad",
+      "abrev": "LIN",
+      "detalle": "RB F1 Team",
+      "pts": "38",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#6692FF",
+      "numero": "41",
+      "driverId": "arvid_lindblad",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 12,
+      "equipo": "Franco Colapinto",
+      "abrev": "COL",
+      "detalle": "Alpine F1 Team",
+      "pts": "35",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+      "nacionalidad": "Argentine",
+      "color": "#FFF500",
+      "numero": "43",
+      "driverId": "colapinto",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 13,
+      "equipo": "Oliver Bearman",
+      "abrev": "BEA",
+      "detalle": "Haas F1 Team",
+      "pts": "23",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "nacionalidad": "British",
+      "color": "#5A5A5A",
+      "numero": "87",
+      "driverId": "bearman",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 14,
+      "equipo": "Gabriel Bortoleto",
+      "abrev": "BOR",
+      "detalle": "Audi",
+      "pts": "14",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "nacionalidad": "Brazilian",
+      "color": "#FF2D00",
+      "numero": "5",
+      "driverId": "bortoleto",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 15,
+      "equipo": "Nico Hülkenberg",
+      "abrev": "HUL",
+      "detalle": "Audi",
+      "pts": "14",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "nacionalidad": "German",
+      "color": "#FF2D00",
+      "numero": "27",
+      "driverId": "hulkenberg",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4396.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 16,
+      "equipo": "Carlos Sainz",
+      "abrev": "SAI",
+      "detalle": "Williams",
+      "pts": "11",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "nacionalidad": "Spanish",
+      "color": "#FFFFFF",
+      "numero": "55",
+      "driverId": "sainz",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4686.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 17,
+      "equipo": "Esteban Ocon",
+      "abrev": "OCO",
+      "detalle": "Haas F1 Team",
+      "pts": "7",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "nacionalidad": "French",
+      "color": "#5A5A5A",
+      "numero": "31",
+      "driverId": "ocon",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4678.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 18,
+      "equipo": "Fernando Alonso",
+      "abrev": "ALO",
+      "detalle": "Aston Martin",
+      "pts": "7",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "nacionalidad": "Spanish",
+      "color": "#006F62",
+      "numero": "14",
+      "driverId": "alonso",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/348.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 19,
+      "equipo": "Alexander Albon",
+      "abrev": "ALB",
+      "detalle": "Williams",
+      "pts": "5",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/tha.png",
+      "nacionalidad": "Thai",
+      "color": "#FFFFFF",
+      "numero": "23",
+      "driverId": "albon",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5592.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 20,
+      "equipo": "Yuki Tsunoda",
+      "abrev": "TSU",
+      "detalle": "RB F1 Team",
+      "pts": "1",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+      "nacionalidad": "Japanese",
+      "color": "#6692FF",
+      "numero": "22",
+      "driverId": "tsunoda",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/5652.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 21,
+      "equipo": "Ryo Hirakawa",
+      "abrev": "HIR",
+      "detalle": "Haas F1 Team",
+      "pts": "1",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+      "nacionalidad": "Japanese",
+      "color": "#5A5A5A",
+      "numero": "50",
+      "driverId": "ryo_hirakawa",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 22,
+      "equipo": "Lance Stroll",
+      "abrev": "STR",
+      "detalle": "Aston Martin",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+      "nacionalidad": "Canadian",
+      "color": "#006F62",
+      "numero": "18",
+      "driverId": "stroll",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4775.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 23,
+      "equipo": "Valtteri Bottas",
+      "abrev": "BOT",
+      "detalle": "Cadillac F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fin.png",
+      "nacionalidad": "Finnish",
+      "color": "#A2AAAD",
+      "numero": "77",
+      "driverId": "bottas",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4520.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 24,
+      "equipo": "Sergio Pérez",
+      "abrev": "PER",
+      "detalle": "Cadillac F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+      "nacionalidad": "Mexican",
+      "color": "#A2AAAD",
+      "numero": "11",
+      "driverId": "perez",
+      "foto": "https://a.espncdn.com/i/headshots/f1/players/full/4472.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 25,
+      "equipo": "Rafael Camara",
+      "abrev": "CAM",
+      "detalle": "Haas F1 Team",
+      "pts": "0",
+      "g": "0",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+      "nacionalidad": "Brazilian",
+      "color": "#5A5A5A",
+      "numero": "51",
+      "driverId": "rafael_camara",
+      "foto": null,
+      "logo": null,
+      "mio": false
+     }
+    ],
+    "escuderias": [
+     {
+      "pos": 1,
+      "equipo": "Mercedes",
+      "detalle": "German",
+      "pts": "666",
+      "g": "12",
+      "color": "#00D2BE",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 2,
+      "equipo": "Ferrari",
+      "detalle": "Italian",
+      "pts": "517",
+      "g": "2",
+      "color": "#DC0000",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 3,
+      "equipo": "Red Bull",
+      "detalle": "Austrian",
+      "pts": "440",
+      "g": "4",
+      "color": "#00327D",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 4,
+      "equipo": "McLaren",
+      "detalle": "British",
+      "pts": "431",
+      "g": "3",
+      "color": "#FF8700",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 5,
+      "equipo": "RB F1 Team",
+      "detalle": "Italian",
+      "pts": "114",
+      "g": "0",
+      "color": "#6692FF",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 6,
+      "equipo": "Alpine F1 Team",
+      "detalle": "French",
+      "pts": "87",
+      "g": "0",
+      "color": "#FFF500",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 7,
+      "equipo": "Haas F1 Team",
+      "detalle": "American",
+      "pts": "31",
+      "g": "0",
+      "color": "#5A5A5A",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 8,
+      "equipo": "Audi",
+      "detalle": "German",
+      "pts": "28",
+      "g": "0",
+      "color": "#FF2D00",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 9,
+      "equipo": "Williams",
+      "detalle": "British",
+      "pts": "16",
+      "g": "0",
+      "color": "#FFFFFF",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 10,
+      "equipo": "Aston Martin",
+      "detalle": "British",
+      "pts": "7",
+      "g": "0",
+      "color": "#006F62",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/gbr.png",
+      "logo": null,
+      "mio": false
+     },
+     {
+      "pos": 11,
+      "equipo": "Cadillac F1 Team",
+      "detalle": "American",
+      "pts": "0",
+      "g": "0",
+      "color": "#A2AAAD",
+      "bandera": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+      "logo": null,
+      "mio": false
+     }
+    ]
+   },
    "plantel": null,
    "noticias": [
+    {
+     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
+     "fecha": "2026-11-23T11:55:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
+     "titulo": "Lewis Hamilton: I could have beaten Kimi Antonelli if I was Ferrari No. 1",
+     "resumen": "Lewis Hamilton has said he believes he could have won a record eighth world championship this season if Ferrari had prioritised him over teammate Charles Leclerc.",
+     "fecha": "2026-11-23T10:37:42Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750084_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472141/lewis-hamilton-ferrari-las-vegas-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Lewis Hamilton, Charles Leclerc 'unmanageable' - Ferrari boss",
+     "resumen": "Fred Vasseur has admitted Charles Leclerc and Lewis Hamilton's situation is becoming \"unmanageable\" and hinted at regret at making them teammates in the first place.",
+     "fecha": "2026-11-23T09:20:38Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749521_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472137/ferrari-charles-leclerc-lewis-hamilton-las-vegas-grand-prix-formula-1"
+    },
     {
      "titulo": "Haas confirm Rafa Camara will finish 2026 season with the team",
      "resumen": "Brazilian driver Rafa Camara will complete the 2026 season with Haas ahead of his full rookie season in 2027, the team confirmed on Sunday.",
@@ -2118,27 +2672,6 @@
      "fecha": "2026-11-22T13:21:18Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1122/dm_261122_Verstappen_reacts_to_winning_crazy_Las_Vegas_Grand_Prix/dm_261122_Verstappen_reacts_to_winning_crazy_Las_Vegas_Grand_Prix.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50561391/verstappen-reacts-winning-crazy-las-vegas-grand-prix"
-    },
-    {
-     "titulo": "F1 2026 results: Winners, podium, final positions from every race",
-     "resumen": "The 2026 Formula 1 season has been full of twists and turns with the new rules and regulations shaking things up.",
-     "fecha": "2026-11-22T10:32:48Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1012/r1729600_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535228/formula-1-2026-results-kimi-antonelli-lewis-hamilton-george-russell-winners-podium-final-positions-every-race"
-    },
-    {
-     "titulo": "Formula 1 start times: When does each 2026 race begin?",
-     "resumen": "The first half of the Formula 1 2026 season has been full of ups and downs for teams and drivers across the grid.",
-     "fecha": "2026-11-22T10:25:20Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0906/r1712379_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/49535006/formula-1-start-s-does-2026-race-begin"
-    },
-    {
-     "titulo": "Max Verstappen likens Las Vegas Grand Prix to Mario Kart after victory",
-     "resumen": "In a career spanning 25 years in go-karts, Formula 3 and Formula 1, Max Verstappen said he has only ever experienced a race as chaotic as the 2026 Las Vegas Grand Prix while playing Nintendo's Mario Kart.",
-     "fecha": "2026-11-22T10:06:45Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749518_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472136/max-verstappen-mario-kart-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,
