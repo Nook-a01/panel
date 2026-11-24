@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T21:18:43.391Z",
+ "actualizado": "2026-11-24T05:59:18.851Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -970,9 +969,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1007,9 +1005,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg/330px-Gonzalo_Montiel_Argentina_v_Spain_19_July_2026-265.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233937",
@@ -1068,9 +1065,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1105,9 +1101,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg/330px-Valentin_Barco_Argentina_v_Spain_19_July_2026-027.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "207343",
@@ -1130,9 +1125,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1179,9 +1173,8 @@
      "posCorta": "M",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg/330px-Enzo_Fernandez_Argentina_v_Spain_19_July_2026-161_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277206",
@@ -1948,6 +1941,34 @@
    ],
    "noticias": [
     {
+     "titulo": "St. Louis City holds off LAFC in 3-2 victory to take first-round lead",
+     "resumen": "St. Louis City never trailed in a 3-2 victory over Los Angeles FC in the MLS Cup Western Conference first-round opener.",
+     "fecha": "2026-11-24T05:20:25Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933728.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401933728"
+    },
+    {
+     "titulo": "St. Louis CITY SC vs. LAFC - Game Highlights",
+     "resumen": "Watch the Game Highlights from St. Louis CITY SC vs. LAFC, 11/23/2026",
+     "fecha": "2026-11-24T03:36:27Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1124/0647a9c1-517d-4432-8758-cc2aa2f15ce8/0647a9c1-517d-4432-8758-cc2aa2f15ce8.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50579151/st-louis-city-sc-vs-lafc-game-highlights"
+    },
+    {
+     "titulo": "Houston says Herrera available for Dynamo playoff opener amid MLS probe",
+     "resumen": "MLS is gathering information regarding the reported arrest of Houston Dynamo FC midfielder Héctor Herrera for suspicion of driving while intoxicated ahead of the team's first game of the playoffs.",
+     "fecha": "2026-11-24T00:55:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750418_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50577651/houston-herrera-available-dynamo-playoff-opener-mls-probe"
+    },
+    {
+     "titulo": "Orlando City fires interim coach Perelman, assistant Setti after playoff exit",
+     "resumen": "Orlando City SC has fired interim head coach Martín Perelman and interim assistant coach Sebastián Setti after losing to FC Cincinnati in an MLS Cup Eastern Conference wild-card match.",
+     "fecha": "2026-11-23T21:37:43Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750351_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50576429/orlando-city-fires-perelman-playoff-exit"
+    },
+    {
      "titulo": "Son Heung-Min: Thomas Müller spot-on about lack of pressure in MLS",
      "resumen": "LAFC forward Son Heung-Min has backed Thomas Müller's comments about the \"careless\" playing style in the MLS and the lack of pressure that players feel due to the absence of a promotion/relegation system.",
      "fecha": "2026-11-23T17:20:26Z",
@@ -1960,34 +1981,6 @@
      "fecha": "2026-11-23T16:21:36Z",
      "imagen": "https://a.espncdn.com/photo/2026/1023/r1735106_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50573882/philadelphia-cavan-sullivan-mls-young-player-year"
-    },
-    {
-     "titulo": "Chicago Fire FC vs. Charlotte FC - Game Highlights",
-     "resumen": "Watch the Game Highlights from Chicago Fire FC vs. Charlotte FC, 11/22/2026",
-     "fecha": "2026-11-23T16:14:13Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1123/93e56765-68d5-4acb-89c7-97b2822e9872/93e56765-68d5-4acb-89c7-97b2822e9872.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50568474/chicago-fire-fc-vs-charlotte-fc-game-highlights"
-    },
-    {
-     "titulo": "How B.J. Callaghan's long, winding coaching journey led to Nashville success",
-     "resumen": "B.J. Callaghan was a fairly unassuming hire when he took over Nashville. Now he's a Supporters' Shield-winning coach being linked with the USMNT job.",
-     "fecha": "2026-11-23T14:57:49Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1120/r1748740_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50542113/bj-callaghan-nashville-usmnt-coach"
-    },
-    {
-     "titulo": "Vancouver Whitecaps vs. Real Salt Lake - Game Highlights",
-     "resumen": "Watch the Game Highlights from Vancouver Whitecaps vs. Real Salt Lake, 11/22/2026",
-     "fecha": "2026-11-23T04:39:30Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1123/c6f7bc61-7151-4d3a-8ce8-f32b6afaeae5/c6f7bc61-7151-4d3a-8ce8-f32b6afaeae5.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50569414/vancouver-whitecaps-vs-real-salt-lake-game-highlights"
-    },
-    {
-     "titulo": "VAR gives Charlotte late penalty in series-opening win over Chicago",
-     "resumen": "Pep Biel scored off a rebound from his own penalty kick in the 11th minute of stoppage time after a handball on Jack Elliot to give Charlotte FC a 2-1 win over the Chicago Fire on Sunday.",
-     "fecha": "2026-11-23T02:26:52Z",
-     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933730.png?templateId=espn.applewatch.awayhome.1",
-     "link": "http://www.espn.com/soccer/report/_/gameId/401933730"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
