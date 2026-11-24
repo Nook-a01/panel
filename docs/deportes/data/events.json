@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T11:18:37.922Z",
+ "actualizado": "2026-11-24T17:39:44.916Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -71,33 +71,11 @@
    "color": "#ffb300",
    "ruta": "mma",
    "liga": "ufc",
-   "total": 13,
+   "total": 12,
    "proximos": 8
   }
  ],
  "eventos": [
-  {
-   "id": "espn-600061267",
-   "miLado": null,
-   "idEspn": "600061267",
-   "liga": "ufc",
-   "ruta": "mma",
-   "feedId": "ufc",
-   "feedLabel": "UFC",
-   "sport": "ufc",
-   "emoji": "🥊",
-   "titulo": "UFC 333: Volkanovski vs. Evloev",
-   "inicio": "2026-10-24T14:00Z",
-   "horaConfirmada": true,
-   "competicion": "Ultimate Fighting Championship",
-   "sede": "Etihad Arena",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
