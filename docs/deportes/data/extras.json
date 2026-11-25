@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T02:24:09.171Z",
+ "actualizado": "2026-11-25T12:49:40.484Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -266,8 +266,9 @@
      "posCorta": "G",
      "edad": 39,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Javi-garcia.jpg/330px-Javi-garcia.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421345",
@@ -944,8 +945,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1029,8 +1031,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1041,8 +1044,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1065,8 +1069,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1222,8 +1227,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1246,8 +1252,9 @@
      "posCorta": "F",
      "edad": 29,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg/330px-Lautaro_Martinez_Argentina_v_Spain_19_July_2026-049_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     }
    ],
    "noticias": [
@@ -1936,9 +1943,23 @@
    ],
    "noticias": [
     {
+     "titulo": "Is your team out of the MLS playoffs? Adopt these chaos clubs as your 2nd side",
+     "resumen": "Your favorite team isn't going to win MLS Cup, so we dug into our catalog of statistics to pinpoint three chaos clubs to follow for the postseason.",
+     "fecha": "2026-11-25T12:33:05Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1124/r1750771_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50585229/mls-cup-playoffs-chaos-clubs"
+    },
+    {
+     "titulo": "San Jose Earthquakes vs. Houston Dynamo - Game Highlights",
+     "resumen": "Watch the Game Highlights from San Jose Earthquakes vs. Houston Dynamo, 11/24/2026",
+     "fecha": "2026-11-25T07:59:51Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1125/116c52eb-d35b-4043-9585-561738ae98a5/116c52eb-d35b-4043-9585-561738ae98a5.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50590163/san-jose-earthquakes-vs-houston-dynamo-game-highlights"
+    },
+    {
      "titulo": "Fiona the hippo to be honored by FC Cincinnati with tifo after untimely death",
      "resumen": "FC Cincinnati will honor Cincinnati Zoo's famous hippo, Fiona, following her unexpected death last week.",
-     "fecha": "2026-11-24T13:19:03Z",
+     "fecha": "2026-11-25T03:08:03Z",
      "imagen": "https://a.espncdn.com/photo/2026/1124/r1750546_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50581745/fiona-hippo-fc-cincinnati-tifo-death-honoured-mls"
     },
@@ -1962,20 +1983,6 @@
      "fecha": "2026-11-24T03:36:27Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1124/0647a9c1-517d-4432-8758-cc2aa2f15ce8/0647a9c1-517d-4432-8758-cc2aa2f15ce8.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50579151/st-louis-city-sc-vs-lafc-game-highlights"
-    },
-    {
-     "titulo": "Houston says Herrera available for Dynamo playoff opener amid MLS probe",
-     "resumen": "MLS is gathering information regarding the reported arrest of Houston Dynamo FC midfielder Héctor Herrera for suspicion of driving while intoxicated ahead of the team's first game of the playoffs.",
-     "fecha": "2026-11-24T00:55:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750418_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50577651/houston-herrera-available-dynamo-playoff-opener-mls-probe"
-    },
-    {
-     "titulo": "Orlando City fires interim coach Perelman, assistant Setti after playoff exit",
-     "resumen": "Orlando City SC has fired interim head coach Martín Perelman and interim assistant coach Sebastián Setti after losing to FC Cincinnati in an MLS Cup Eastern Conference wild-card match.",
-     "fecha": "2026-11-23T21:37:43Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750351_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50576429/orlando-city-fires-perelman-playoff-exit"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
@@ -2104,9 +2111,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2200,9 +2208,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2216,9 +2225,10 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 9,
@@ -2620,6 +2630,13 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Max Verstappen admits to 40-hour GTA VI spree as he won Las Vegas GP",
+     "resumen": "Max Verstappen claims he had already clocked 40 hours of Grand Theft Auto VI before his brilliant Las Vegas Grand Prix win at the weekend.",
+     "fecha": "2026-11-25T11:06:44Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748885_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472144/max-verstappen-gta-vi-las-vegas-grand-prix-formula-1"
+    },
+    {
      "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
      "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
      "fecha": "2026-11-24T10:00:57Z",
@@ -2653,13 +2670,6 @@
      "fecha": "2026-11-22T16:50:27Z",
      "imagen": "https://a.espncdn.com/photo/2026/1122/r1749630_1296x729_16-9.jpg",
      "link": "https://www.espn.com/racing/f1/story/_/id/50562576/verstappen-russell-feud-f1-las-vegas"
-    },
-    {
-     "titulo": "Verstappen reacts to winning 'crazy' Las Vegas Grand Prix",
-     "resumen": "Max Verstappen speaks after winning the Las Vegas Grand Prix for the third time in four years",
-     "fecha": "2026-11-22T13:21:18Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1122/dm_261122_Verstappen_reacts_to_winning_crazy_Las_Vegas_Grand_Prix/dm_261122_Verstappen_reacts_to_winning_crazy_Las_Vegas_Grand_Prix.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50561391/verstappen-reacts-winning-crazy-las-vegas-grand-prix"
     }
    ],
    "resultados": null,
