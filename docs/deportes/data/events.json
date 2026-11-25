@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T02:24:09.171Z",
+ "actualizado": "2026-11-25T22:29:26.570Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,7 +11,7 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 7,
+   "total": 6,
    "proximos": 2
   },
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 11,
+   "total": 10,
    "proximos": 4
   },
   {
@@ -76,49 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 18",
-   "sede": "Circuit of the Americas, USA",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-18",
-   "anio": 2026,
-   "ronda": "18",
-   "sesion": "Carrera",
-   "titulo": "GP United States",
-   "inicio": "2026-10-25T20:00:00.000Z"
-  },
-  {
-   "id": "espn-401841636",
-   "miLado": "visitante",
-   "idEspn": "401841636",
-   "liga": "arg.1",
-   "ruta": "soccer",
-   "feedId": "boca",
-   "feedLabel": "Boca Juniors",
-   "sport": "futbol",
-   "emoji": "⚽",
-   "titulo": "Independiente vs Boca Juniors",
-   "inicio": "2026-10-25T20:00Z",
-   "horaConfirmada": true,
-   "competicion": "Argentine Liga Profesional de Fútbol",
-   "sede": "Estadio Libertadores de América",
-   "local": "Independiente",
-   "visitante": "Boca Juniors",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-   "finalizado": true,
-   "marcador": "0 - 1"
-  },
   {
    "id": "espn-761908",
    "miLado": "local",
@@ -650,10 +607,10 @@
    "sport": "futbol",
    "emoji": "⚽",
    "titulo": "Boca Juniors vs Platense",
-   "inicio": "2026-12-02T20:00Z",
-   "horaConfirmada": false,
+   "inicio": "2026-12-02T23:00Z",
+   "horaConfirmada": true,
    "competicion": "Copa Argentina",
-   "sede": "",
+   "sede": "'Estadio Único Madre de Ciudades",
    "local": "Boca Juniors",
    "visitante": "Platense",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
