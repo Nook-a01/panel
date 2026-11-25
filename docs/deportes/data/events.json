@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24T17:39:44.916Z",
+ "actualizado": "2026-11-25T02:24:09.171Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -35,7 +35,7 @@
    "color": "#f7b5cd",
    "ruta": "soccer",
    "liga": "usa.1",
-   "total": 21,
+   "total": 20,
    "proximos": 16
   },
   {
@@ -59,7 +59,7 @@
    "color": "#ff2d2d",
    "ruta": null,
    "liga": null,
-   "total": 12,
+   "total": 11,
    "proximos": 4
   },
   {
@@ -76,49 +76,6 @@
   }
  ],
  "eventos": [
-  {
-   "feedId": "f1",
-   "feedLabel": "Fórmula 1",
-   "sport": "f1",
-   "emoji": "🏎️",
-   "competicion": "Fórmula 1 2026 · Ronda 18",
-   "sede": "Circuit of the Americas, USA",
-   "local": null,
-   "visitante": null,
-   "logoLocal": null,
-   "logoVisitante": null,
-   "finalizado": true,
-   "marcador": null,
-   "horaConfirmada": true,
-   "id": "f1-2026-18-q",
-   "anio": 2026,
-   "ronda": "18",
-   "sesion": "Clasificación",
-   "titulo": "GP United States · Clasificación",
-   "inicio": "2026-10-24T21:00:00.000Z"
-  },
-  {
-   "id": "espn-761891",
-   "miLado": "visitante",
-   "idEspn": "761891",
-   "liga": "usa.1",
-   "ruta": "soccer",
-   "feedId": "intermiami",
-   "feedLabel": "Inter Miami",
-   "sport": "futbol",
-   "emoji": "🩷",
-   "titulo": "Red Bull New York vs Inter Miami CF",
-   "inicio": "2026-10-24T21:30Z",
-   "horaConfirmada": true,
-   "competicion": "MLS",
-   "sede": "Sports Illustrated Stadium",
-   "local": "Red Bull New York",
-   "visitante": "Inter Miami CF",
-   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
-   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
-   "finalizado": true,
-   "marcador": "2 - 0"
-  },
   {
    "feedId": "f1",
    "feedLabel": "Fórmula 1",
