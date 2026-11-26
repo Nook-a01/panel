@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T15:11:12.431Z",
+ "actualizado": "2026-11-26T23:49:51.711Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -256,8 +256,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Leandro-brey.jpg/330px-Leandro-brey.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "145617",
@@ -352,9 +353,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/-ayrton-costa.jpg/330px--ayrton-costa.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "400357",
@@ -365,9 +365,8 @@
      "posCorta": "D",
      "edad": 20,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Jagger.png/330px-Jagger.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "403948",
@@ -618,8 +617,9 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -973,9 +973,8 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "233945",
@@ -1034,8 +1033,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1071,9 +1071,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1132,8 +1131,9 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "277208",
@@ -1613,8 +1613,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -1625,8 +1626,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "402696",
@@ -2111,9 +2113,10 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 2,
@@ -2239,9 +2242,10 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 10,
@@ -2627,6 +2631,27 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "George Russell breaks silence on Max Verstappen criticism: 'Amusing'",
+     "resumen": "George Russell has laughed off Max Verstappen's \"quite amusing\" put-down of him in Las Vegas, saying he is ready to move on from the latest exchange in their long-running feud.",
+     "fecha": "2026-11-26T21:44:35Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1126/r1751680_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50472135/george-russell-max-verstappen-rivalry-qatar-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Russell: Not important to get along with other drivers",
+     "resumen": "George Russell isn't looking to make friends on the grid after his clash with Max Verstappen in Las Vegas.",
+     "fecha": "2026-11-26T21:43:20Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1126/dm_261126_Russell_Not_important_to_get_along_with_other_drivers/dm_261126_Russell_Not_important_to_get_along_with_other_drivers.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50606254/not-important-get-other-drivers"
+    },
+    {
+     "titulo": "Charles Leclerc urges Ferrari to find 'solution' after clash with Lewis Hamilton",
+     "resumen": "Charles Leclerc has said he and Ferrari teammate Lewis Hamilton must find a \"solution\" for their run of recent on-track incidents, after admitting it has damaged the atmosphere within the team.",
+     "fecha": "2026-11-26T18:37:59Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1126/r1751694_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50603941/charles-leclerc-lewis-hamilton-ferrari-qatar-grand-prix-formula-1"
+    },
+    {
      "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
      "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
      "fecha": "2026-11-26T12:47:36Z",
@@ -2646,27 +2671,6 @@
      "fecha": "2026-11-26T09:55:06Z",
      "imagen": "https://a.espncdn.com/photo/2026/1126/r1751562_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50603078/ollie-bearman-haas-f1-2027"
-    },
-    {
-     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
-     "fecha": "2026-11-26T07:38:17Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Williams, Alpine fined £627k by FIA for breaching F1's cost cap",
-     "resumen": "The FIA has announced that Williams overspent by £627,000 under F1's cost cap last year, while Williams and Alpine both committed \"procedural\" breaches.",
-     "fecha": "2026-11-25T17:29:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1125/r1751158_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50594939/williams-alpine-fined-627k-fia-f1-cap"
-    },
-    {
-     "titulo": "Max Verstappen admits to 40-hour GTA VI spree as he won Las Vegas GP",
-     "resumen": "Max Verstappen claims he had already clocked 40 hours of Grand Theft Auto VI before his brilliant Las Vegas Grand Prix win at the weekend.",
-     "fecha": "2026-11-25T11:06:44Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748885_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472144/max-verstappen-gta-vi-las-vegas-grand-prix-formula-1"
     }
    ],
    "resultados": null,
