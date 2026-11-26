@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T04:59:55.801Z",
+ "actualizado": "2026-11-26T15:11:12.431Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -11,8 +11,8 @@
    "color": "#f2c400",
    "ruta": "soccer",
    "liga": "arg.1",
-   "total": 6,
-   "proximos": 1
+   "total": 7,
+   "proximos": 2
   },
   {
    "id": "argentina",
@@ -595,6 +595,28 @@
    "sesion": "Carrera",
    "titulo": "GP Qatar",
    "inicio": "2026-11-29T16:00:00.000Z"
+  },
+  {
+   "id": "espn-401936657",
+   "miLado": "local",
+   "idEspn": "401936657",
+   "liga": "arg.1",
+   "ruta": "soccer",
+   "feedId": "boca",
+   "feedLabel": "Boca Juniors",
+   "sport": "futbol",
+   "emoji": "⚽",
+   "titulo": "Boca Juniors vs Gimnasia La Plata",
+   "inicio": "2026-11-29T23:30Z",
+   "horaConfirmada": true,
+   "competicion": "Argentine Liga Profesional de Fútbol",
+   "sede": "Alberto José Armando (La Bombonera)",
+   "local": "Boca Juniors",
+   "visitante": "Gimnasia La Plata",
+   "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+   "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+   "finalizado": false,
+   "marcador": null
   },
   {
    "id": "espn-401932277",

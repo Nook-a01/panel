@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T04:59:55.801Z",
+ "actualizado": "2026-11-26T15:11:12.431Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -256,9 +256,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Leandro-brey.jpg/330px-Leandro-brey.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "145617",
@@ -341,9 +340,8 @@
      "posCorta": "D",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Marco-pelle.jpg/330px-Marco-pelle.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "286902",
@@ -367,8 +365,9 @@
      "posCorta": "D",
      "edad": 20,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Jagger.png/330px-Jagger.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "403948",
@@ -427,9 +426,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "152706",
@@ -644,9 +642,8 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Sebastian-villa.webp/330px-Sebastian-villa.webp?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "252629",
@@ -717,9 +714,8 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Leo_flores.jpg/330px-Leo_flores.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "421348",
@@ -952,8 +948,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -1049,8 +1046,9 @@
      "posCorta": "D",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg/330px-Nicolas_Otamendi_Argentina_v_Spain_19_July_2026-059_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249663",
@@ -1073,8 +1071,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "153115",
@@ -1085,9 +1084,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1158,9 +1156,8 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "249299",
@@ -1580,9 +1577,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1617,9 +1613,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -2212,10 +2207,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2633,6 +2627,34 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "F1 2027 driver lineups: Who has a seat - and who's out of contract?",
+     "resumen": "The 2026 rule changes threw Formula 1 into a new era of challenges and uncertainty, but the real moments of unpredictability are still to come.",
+     "fecha": "2026-11-26T12:47:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0814/r1701677_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/49515865/f1-2027-driver-lineups-lewis-hamilton-max-verstappen-seat-contract"
+    },
+    {
+     "titulo": "Min Woo Lee blames F1's Carlos Sainz, Lance Stroll for missing golf club, shoots 68",
+     "resumen": "Min Woo Lee has jokingly blamed Formula 1 drivers Carlos Sainz and Lance Stroll for leaving him without an eight-iron at the Australian PGA Championship after giving the pair a golf lesson in Las Vegas last week.",
+     "fecha": "2026-11-26T12:01:37Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1126/r1751578_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/golf/story/_/id/50603493/min-woo-lee-carlos-sainz-lance-stroll-f1"
+    },
+    {
+     "titulo": "Haas confirm Ollie Bearman will stay for F1 2027 after 'strange' contract delay",
+     "resumen": "Ollie Bearman will continue as a Haas driver next year, the American team confirmed on Thursday, putting an end to a brief period of speculation over his future.",
+     "fecha": "2026-11-26T09:55:06Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1126/r1751562_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50603078/ollie-bearman-haas-f1-2027"
+    },
+    {
+     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
+     "fecha": "2026-11-26T07:38:17Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
+    },
+    {
      "titulo": "Williams, Alpine fined £627k by FIA for breaching F1's cost cap",
      "resumen": "The FIA has announced that Williams overspent by £627,000 under F1's cost cap last year, while Williams and Alpine both committed \"procedural\" breaches.",
      "fecha": "2026-11-25T17:29:22Z",
@@ -2645,34 +2667,6 @@
      "fecha": "2026-11-25T11:06:44Z",
      "imagen": "https://a.espncdn.com/photo/2026/1121/r1748885_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50472144/max-verstappen-gta-vi-las-vegas-grand-prix-formula-1"
-    },
-    {
-     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
-     "fecha": "2026-11-24T10:00:57Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
-     "titulo": "Lewis Hamilton: I could have beaten Kimi Antonelli if I was Ferrari No. 1",
-     "resumen": "Lewis Hamilton has said he believes he could have won a record eighth world championship this season if Ferrari had prioritised him over teammate Charles Leclerc.",
-     "fecha": "2026-11-23T10:37:42Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1123/r1750084_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472141/lewis-hamilton-ferrari-las-vegas-grand-prix-formula-1"
-    },
-    {
-     "titulo": "Lewis Hamilton, Charles Leclerc 'unmanageable' - Ferrari boss",
-     "resumen": "Fred Vasseur has admitted Charles Leclerc and Lewis Hamilton's situation is becoming \"unmanageable\" and hinted at regret at making them teammates in the first place.",
-     "fecha": "2026-11-23T09:20:38Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749521_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50472137/ferrari-charles-leclerc-lewis-hamilton-las-vegas-grand-prix-formula-1"
-    },
-    {
-     "titulo": "Haas confirm Rafa Camara will finish 2026 season with the team",
-     "resumen": "Brazilian driver Rafa Camara will complete the 2026 season with Haas ahead of his full rookie season in 2027, the team confirmed on Sunday.",
-     "fecha": "2026-11-22T19:39:40Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1122/r1749720_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50563772/formula-1-haas-rafa-camara-esteban-ocon"
     }
    ],
    "resultados": null,
