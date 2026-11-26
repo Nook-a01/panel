@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T22:29:26.570Z",
+ "actualizado": "2026-11-26T04:59:55.801Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,8 +230,9 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "195663",
@@ -242,8 +243,9 @@
      "posCorta": "G",
      "edad": 38,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Agustin-Marchesin.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "335580",
@@ -254,8 +256,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Leandro-brey.jpg/330px-Leandro-brey.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "145617",
@@ -338,8 +341,9 @@
      "posCorta": "D",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Marco-pelle.jpg/330px-Marco-pelle.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "286902",
@@ -350,8 +354,9 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/-ayrton-costa.jpg/330px--ayrton-costa.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "400357",
@@ -422,8 +427,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "152706",
@@ -638,8 +644,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Colombia",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Sebastian-villa.webp/330px-Sebastian-villa.webp?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "252629",
@@ -710,8 +717,9 @@
      "posCorta": "F",
      "edad": 19,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Leo_flores.jpg/330px-Leo_flores.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "421348",
@@ -968,8 +976,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1076,8 +1085,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1148,8 +1158,9 @@
      "posCorta": "M",
      "edad": 22,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg/330px-Nico_Paz_Argentina_v_Spain_19_July_2026-057.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "249299",
@@ -1220,8 +1231,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1568,8 +1580,9 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231059",
@@ -1604,8 +1617,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "285473",
@@ -2198,9 +2212,10 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": null,
+      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "logo": null,
-      "mio": false
+      "mio": false,
+      "fotoDeWiki": true
      },
      {
       "pos": 8,
@@ -2675,6 +2690,20 @@
    "plantel": null,
    "noticias": [
     {
+     "titulo": "Kiwis Carlos Ulberg, Navajo Stirling won't fight each other for UFC title",
+     "resumen": "City Kickboxing coach Eugene Bareman has confirmed his star light heavyweights Carlos Ulberg and Navajo Stirling won't ever fight each other for the UFC title.",
+     "fecha": "2026-11-26T02:34:36Z",
+     "imagen": null,
+     "link": "https://www.espn.com/mma/story/_/id/50600403/carlos-ulberg-navajo-stirling-ufc-title"
+    },
+    {
+     "titulo": "Felony charges dropped against ex-UFC fighter Anthony Smith",
+     "resumen": "Former UFC light heavyweight Anthony Smith will not face criminal charges after an alleged domestic violence incident in Nebraska earlier this year.",
+     "fecha": "2026-11-26T01:07:34Z",
+     "imagen": "https://a.espncdn.com/photo/2026/0729/r1694919_600x400_3-2.jpg",
+     "link": "https://www.espn.com/mma/story/_/id/50599581/former-ufc-fighter-anthony-smith-felony-charges-dropped"
+    },
+    {
      "titulo": "Navajo Stirling belts another former champ, moves up in rankings",
      "resumen": "Here's a look at every weight class to determine the best of the best in UFC, PFL and beyond.",
      "fecha": "2026-11-24T14:17:54Z",
@@ -2701,20 +2730,6 @@
      "fecha": "2026-11-21T21:57:01Z",
      "imagen": "https://a.espncdn.com/photo/2026/1121/r1749161_600x400_3-2.jpg",
      "link": "https://www.espn.com/mma/ufc/story/_/id/50553944/navajo-stirling-kos-another-ex-champ-jiri-prochazka"
-    },
-    {
-     "titulo": "UFC fighter Manon Fiorot banned for 3 months for violating anti-doping policy",
-     "resumen": "UFC fighter Manon Fiorot of France has been banned for three months for violating its anti-doping policy, the mixed martial arts competition said.",
-     "fecha": "2026-11-20T12:13:10Z",
-     "imagen": "https://a.espncdn.com/photo/2026/0825/r1706727_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50540039/ufc-fighter-manon-fiorot-banned-3-months-doping"
-    },
-    {
-     "titulo": "UFC releases Virna Jandiroba, former title challenger, current No. 3 strawweight",
-     "resumen": "Virna Jandiroba, a former title challenger and the current No. 3-ranked fighter in the women's strawweight division, has been released by the UFC.",
-     "fecha": "2026-11-18T19:29:08Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1019/r1733054_600x400_3-2.jpg",
-     "link": "https://www.espn.com/mma/story/_/id/50523092/ufc-releases-former-strawweight-title-challenger-jandiroba"
     }
    ],
    "resultados": [

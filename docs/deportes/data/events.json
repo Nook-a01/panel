@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T22:29:26.570Z",
+ "actualizado": "2026-11-26T04:59:55.801Z",
  "timezone": "America/Argentina/Buenos_Aires",
  "feeds": [
   {
@@ -12,7 +12,7 @@
    "ruta": "soccer",
    "liga": "arg.1",
    "total": 6,
-   "proximos": 2
+   "proximos": 1
   },
   {
    "id": "argentina",
@@ -529,8 +529,8 @@
    "visitante": "Independiente Rivadavia",
    "logoLocal": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
    "logoVisitante": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
-   "finalizado": false,
-   "marcador": null
+   "finalizado": true,
+   "marcador": "2 - 0"
   },
   {
    "id": "espn-401933727",
