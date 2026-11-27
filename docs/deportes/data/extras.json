@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T23:49:51.711Z",
+ "actualizado": "2026-11-27T08:25:17.206Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -230,9 +230,8 @@
      "posCorta": "G",
      "edad": 31,
      "pais": "Colombia",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Alvaro_montero_in_2024.jpg/330px-Alvaro_montero_in_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "195663",
@@ -617,9 +616,8 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "260812",
@@ -948,9 +946,8 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "167192",
@@ -973,8 +970,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1083,8 +1081,9 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "174466",
@@ -1131,9 +1130,8 @@
      "posCorta": "M",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg/330px-Exequiel_Palacios_Argentina_v_Spain_19_July_2026-022.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "277208",
@@ -1601,8 +1599,9 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "231241",
@@ -1626,9 +1625,8 @@
      "posCorta": "D",
      "edad": 27,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/11/Facundo_Mura.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "402696",
@@ -2113,10 +2111,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2242,10 +2239,9 @@
       "color": "#6692FF",
       "numero": "30",
       "driverId": "lawson",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg/330px-Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7795%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 10,
