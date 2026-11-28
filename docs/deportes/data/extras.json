@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T01:57:26.238Z",
+ "actualizado": "2026-11-28T10:22:49.516Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -366,8 +366,9 @@
      "posCorta": "D",
      "edad": 20,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Jagger.png/330px-Jagger.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "403948",
@@ -618,8 +619,9 @@
      "posCorta": "F",
      "edad": 37,
      "pais": "Ecuador",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg/330px-Enner_Valencia_Cote_D%27Ivoire_v_Ecuador_14_June_2026-95.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "260812",
@@ -630,8 +632,9 @@
      "posCorta": "F",
      "edad": 30,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Merentiel_jugando_para_Boca_Juniors.jpg/330px-Merentiel_jugando_para_Boca_Juniors.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "141790",
@@ -1259,6 +1262,20 @@
    ],
    "noticias": [
     {
+     "titulo": "Hot start in Canberra as the Matildas and Colombia trade goals",
+     "resumen": "Alanna Kennedy scores first for Australia following a beautiful team move before Linda Caicedo equalises with a lovely solo effort.",
+     "fecha": "2026-11-28T09:47:25Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1128/dm_261128_Soccer_HIGHLIGHT_Hot_start_in_Canberra_as_the_Matildas_and_Colombia_trade_goals_20261128_AUS/dm_261128_Soccer_HIGHLIGHT_Hot_start_in_Canberra_as_the_Matildas_and_Colombia_trade_goals_20261128_AUS.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50620057/hot-start-canberra-matildas-colombia-trade-goals"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-11-28T04:17:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
      "titulo": "Ronaldo on Harry Kane's 'deserved' Ballon d'Or: 'The No. 9 is back'",
      "resumen": "Ronaldo has said that Harry Kane's Ballon d'Or was \"well deserved\" and that he was delighted to see a fellow No. 9 win the award.",
      "fecha": "2026-11-27T10:57:21Z",
@@ -1285,13 +1302,6 @@
      "fecha": "2026-11-24T23:07:05Z",
      "imagen": "https://a.espncdn.com/photo/2026/0731/r1695859_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50585622/leaked-fifa-documents-96-year-world-cup-selloff"
-    },
-    {
-     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
-     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
-     "fecha": "2026-11-22T01:28:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
     },
     {
      "titulo": "CONMEBOL backs Infantino's reelection as FIFA president",
@@ -1334,13 +1344,6 @@
      "fecha": "2026-11-17T15:08:10Z",
      "imagen": null,
      "link": "http://www.espn.com/soccer/report/_/gameId/401916335"
-    },
-    {
-     "titulo": "Football Australia: No cost blowout associated with Jordan fixture relocation",
-     "resumen": "Football Australia chief executive Martin Kugeler has told ESPN the federation won't face a cost blowout after the Socceroos friendly with Jordan was moved from Amman to Doha in Qatar.",
-     "fecha": "2026-11-15T07:10:24Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1115/r1746023_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50488423/football-australia-says-no-cost-blowout-associated-socceroos-jordan-fixture-relocation"
     }
    ],
    "resultados": null,
@@ -1577,9 +1580,8 @@
      "posCorta": "G",
      "edad": 24,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg/330px-Rocco_R%C3%ADos_Novo_NYCFC_Miami_24_Sep_2025-002_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231059",
@@ -1602,9 +1604,8 @@
      "posCorta": "D",
      "edad": 25,
      "pais": "Argentina",
-     "foto": "https://upload.wikimedia.org/wikipedia/commons/1/15/Inter_Miami_CF_0-3_Orlando_City_SC_%2818_May_2025%29_134_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "231241",
@@ -1615,9 +1616,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Spain",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sergio_Reguil%C3%B3n_2018.jpg/330px-Sergio_Reguil%C3%B3n_2018.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "285473",
@@ -1688,9 +1688,8 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "359239",
@@ -1947,6 +1946,34 @@
    ],
    "noticias": [
     {
+     "titulo": "Columbus eliminates Miami, Messi from MLS playoffs with stoppage-time winner",
+     "resumen": "Defending champions Inter Miami and Lionel Messi were eliminated from the 2026 MLS playoffs after a 1-0 loss against the Columbus Crew in the second game of the Round 1, best-of-three series Friday night.",
+     "fecha": "2026-11-28T05:22:52Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1128/r1752326_1024x576_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/50617897/columbus-eliminates-inter-miami-messi-mls-playoffs"
+    },
+    {
+     "titulo": "Messi tracker: Goals, assists, key moments in 2026",
+     "resumen": "ESPN provides game-by-game analysis of Lionel Messi's performances for Inter Miami and Argentina.",
+     "fecha": "2026-11-28T04:17:12Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1011/r1729118_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/soccer/story/_/id/47978642/lionel-messi-2026-tracker-inter-miami-argentina-games-goals-assists-stats"
+    },
+    {
+     "titulo": "Crew eliminate defending champion Inter Miami, Messi from playoffs",
+     "resumen": "Santiago Rodríguez scored two minutes into stoppage time and Patrick Schulte finished off a clean sheet as the Columbus Crew knocked defending champions Inter Miami out of the MLS Cup playoffs with a 1-0 victory Friday night.",
+     "fecha": "2026-11-28T04:03:00Z",
+     "imagen": "https://s.espncdn.com/stitcher/sports/soccer/usa.1/events/401933727.png?templateId=espn.applewatch.awayhome.1",
+     "link": "http://www.espn.com/soccer/report/_/gameId/401933727"
+    },
+    {
+     "titulo": "Columbus Crew SC vs. Inter Miami CF - Game Highlights",
+     "resumen": "Watch the Game Highlights from Columbus Crew SC vs. Inter Miami CF, 11/27/2026",
+     "fecha": "2026-11-28T03:21:09Z",
+     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1128/3f6bc2f9-5063-481f-a9cd-b42446a3f9fd/3f6bc2f9-5063-481f-a9cd-b42446a3f9fd.jpg",
+     "link": "https://www.espn.com/video/clip/_/id/50617937/columbus-crew-sc-vs-inter-miami-cf-game-highlights"
+    },
+    {
      "titulo": "How do MLS' European-bred stars adjust to the playoffs? 'It's a challenge'",
      "resumen": "For MLS' biggest stars, they've spent their careers crowning champions based on the table. For them, adapting to the idea of the playoffs isn't easy.",
      "fecha": "2026-11-27T10:16:50Z",
@@ -1959,34 +1986,6 @@
      "fecha": "2026-11-25T19:35:17Z",
      "imagen": "https://a.espncdn.com/photo/2026/1125/r1751211_1296x729_16-9.jpg",
      "link": "https://www.espn.com/soccer/story/_/id/50595745/mls-playoff-format-new-2027-2028-change-owners"
-    },
-    {
-     "titulo": "Luis Suárez says 'no excuses left' as Miami looks to avoid early playoff exit",
-     "resumen": "Luis Suárez said there are \"no excuses left\" for Inter Miami as the defending MLS Cup champion stares at a possible first-round playoff exit.",
-     "fecha": "2026-11-25T19:12:22Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1125/r1751196_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50594966/inter-miami-mls-playoffs-columbus-crews-luis-suarez"
-    },
-    {
-     "titulo": "Is your team out of the MLS playoffs? Adopt these chaos clubs as your 2nd side",
-     "resumen": "Your favorite team isn't going to win MLS Cup, so we dug into our catalog of statistics to pinpoint three chaos clubs to follow for the postseason.",
-     "fecha": "2026-11-25T12:33:05Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1124/r1750771_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50585229/mls-cup-playoffs-chaos-clubs"
-    },
-    {
-     "titulo": "San Jose Earthquakes vs. Houston Dynamo - Game Highlights",
-     "resumen": "Watch the Game Highlights from San Jose Earthquakes vs. Houston Dynamo, 11/24/2026",
-     "fecha": "2026-11-25T07:59:51Z",
-     "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1125/116c52eb-d35b-4043-9585-561738ae98a5/116c52eb-d35b-4043-9585-561738ae98a5.jpg",
-     "link": "https://www.espn.com/video/clip/_/id/50590163/san-jose-earthquakes-vs-houston-dynamo-game-highlights"
-    },
-    {
-     "titulo": "Fiona the hippo to be honored by FC Cincinnati with tifo after untimely death",
-     "resumen": "FC Cincinnati will honor Cincinnati Zoo's famous hippo, Fiona, following her unexpected death last week.",
-     "fecha": "2026-11-25T03:08:03Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1124/r1750546_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/soccer/story/_/id/50581745/fiona-hippo-fc-cincinnati-tifo-death-honoured-mls"
     },
     {
      "titulo": "St. Louis GK Bürki stretchered off after collision in Open Cup final",
