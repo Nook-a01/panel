@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T18:56:19.526Z",
+ "actualizado": "2026-11-28T01:57:26.238Z",
  "feeds": {
   "boca": {
    "compitiendo": [
@@ -948,8 +948,9 @@
      "posCorta": "G",
      "edad": 32,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg/330px-Juan_Musso_Argentina_v_Spain_19_July_2026-261.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "167192",
@@ -972,8 +973,9 @@
      "posCorta": "G",
      "edad": 34,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg/330px-Emiliano_Martinez_Argentina_v_Egypt_7_July_2026-093_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "233945",
@@ -1032,8 +1034,9 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg/330px-Cristian_Romero_Argentina_v_Egypt_7_July_2026-108.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "119289",
@@ -1069,9 +1072,8 @@
      "posCorta": "D",
      "edad": 28,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg/330px-Nahuel_Molina_Argentina_v_Spain_19_July_2026-023.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "153115",
@@ -1082,9 +1084,8 @@
      "posCorta": "M",
      "edad": 32,
      "pais": "Argentina",
-     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg/330px-Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-     "lesionado": false,
-     "fotoDeWiki": true
+     "foto": null,
+     "lesionado": false
     },
     {
      "id": "174466",
@@ -1227,8 +1228,9 @@
      "posCorta": "F",
      "edad": 23,
      "pais": "Argentina",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg/330px-Giuliano_Simeone_Argentina_v_Spain_19_July_2026-268.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "311743",
@@ -1686,8 +1688,9 @@
      "posCorta": "D",
      "edad": 29,
      "pais": "Uruguay",
-     "foto": null,
-     "lesionado": false
+     "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg/330px-Maximiliano_Falc%C3%B3n_Everton_v_Colo-Colo_20230806_04.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+     "lesionado": false,
+     "fotoDeWiki": true
     },
     {
      "id": "359239",
@@ -2112,10 +2115,9 @@
       "color": "#00D2BE",
       "numero": "12",
       "driverId": "antonelli",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg/330px-2026-08-23_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2026_STP_3010.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 2,
@@ -2209,10 +2211,9 @@
       "color": "#FF8700",
       "numero": "81",
       "driverId": "piastri",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg/330px-2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 8,
@@ -2226,10 +2227,9 @@
       "color": "#00327D",
       "numero": "6",
       "driverId": "hadjar",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg/330px-Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8749%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 9,
@@ -2291,10 +2291,9 @@
       "color": "#FFF500",
       "numero": "43",
       "driverId": "colapinto",
-      "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg/330px-Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8698%29_cropped.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "foto": null,
       "logo": null,
-      "mio": false,
-      "fotoDeWiki": true
+      "mio": false
      },
      {
       "pos": 13,
@@ -2633,10 +2632,24 @@
    "noticias": [
     {
      "titulo": "Qatar Grand Prix: Kimi Antonelli quickest in disrupted second practice",
-     "resumen": "Mercedes' Kimi Antonelli topped back-to-back practice sessions on Friday at the Qatar Grand Prix.",
-     "fecha": "2026-11-27T18:54:22Z",
+     "resumen": "Mercedes' Kimi Antonelli topped back-to-back practice sessions Friday at the Qatar Grand Prix.",
+     "fecha": "2026-11-27T20:44:55Z",
      "imagen": "https://a.espncdn.com/photo/2026/1127/r1752105_1296x729_16-9.jpg",
      "link": "https://www.espn.com/f1/story/_/id/50603962/kimi-antonelli-second-practice-qatar-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Williams F1 boss admits 'shocking year' and explains budget cap breach",
+     "resumen": "Williams team principal James Vowles has labelled 2026 as an \"absolutely shocking year\" for his team, but believes the recent pain was necessary to lay groundwork for long-term progress.",
+     "fecha": "2026-11-27T20:02:36Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1127/r1752152_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50603963/williams-budget-cap-breach-qatar-grand-prix-formula-1"
+    },
+    {
+     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
+     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
+     "fecha": "2026-11-27T19:34:18Z",
+     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
+     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
     },
     {
      "titulo": "Qatar Grand Prix: Kimi Antonelli leads George Russell in first practice",
@@ -2653,25 +2666,11 @@
      "link": "https://www.espn.com/f1/story/_/id/50603960/qatar-grand-prix-organisers-formula-1"
     },
     {
-     "titulo": "Qatar Grand Prix 2026: Race start time, how to watch, full schedule, predictions",
-     "resumen": "Formula 1 heads to Qatar for the second leg of its final triple header of the 2026 season.",
-     "fecha": "2026-11-27T08:35:04Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1121/r1748880_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50530095/qatar-grand-prix-2026-race-f1-start-s-how-watch-schedule-tv-channel-live-stream-predictions"
-    },
-    {
      "titulo": "Russell: Not important to get along with other drivers",
      "resumen": "George Russell isn't looking to make friends on the grid after his clash with Max Verstappen in Las Vegas.",
      "fecha": "2026-11-26T21:43:20Z",
      "imagen": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1126/dm_261126_Russell_Not_important_to_get_along_with_other_drivers/dm_261126_Russell_Not_important_to_get_along_with_other_drivers.jpg",
      "link": "https://www.espn.com/video/clip/_/id/50606254/not-important-get-other-drivers"
-    },
-    {
-     "titulo": "Charles Leclerc urges Ferrari to find 'solution' after clash with Lewis Hamilton",
-     "resumen": "Charles Leclerc has said he and Ferrari teammate Lewis Hamilton must find a \"solution\" for their run of recent on-track incidents, after admitting it has damaged the atmosphere within the team.",
-     "fecha": "2026-11-26T18:37:59Z",
-     "imagen": "https://a.espncdn.com/photo/2026/1126/r1751694_1296x729_16-9.jpg",
-     "link": "https://www.espn.com/f1/story/_/id/50603941/charles-leclerc-lewis-hamilton-ferrari-qatar-grand-prix-formula-1"
     }
    ],
    "resultados": null,
